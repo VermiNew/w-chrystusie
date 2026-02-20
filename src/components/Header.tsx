@@ -9,6 +9,7 @@ export default function Header() {
           <li><NavLink to="/modlitwy">Modlitwy</NavLink></li>
           <li><NavLink to="/pismo-swiete">Pismo Święte</NavLink></li>
           <li><NavLink to="/spiewnik">Śpiewnik</NavLink></li>
+          <li><NavLink to="/szukaj">Szukaj</NavLink></li>
         </ul>
       </nav>
     </header>
