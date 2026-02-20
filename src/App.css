@@ -97,3 +97,74 @@
 .back-button:hover {
   text-decoration: underline;
 }
+
+/* Scripture */
+
+.testament-heading {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #1a3a5c;
+}
+
+.book-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.book-item {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.book-item:hover {
+  background-color: #eef2ff;
+  border-color: #a5b4fc;
+}
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
+  gap: 0.5rem;
+}
+
+.chapter-button {
+  padding: 0.6rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.chapter-button:hover {
+  background-color: #eef2ff;
+  border-color: #a5b4fc;
+}
+
+.verses {
+  line-height: 1.8;
+}
+
+.verse {
+  margin-bottom: 0.4rem;
+}
+
+.verse-number {
+  font-weight: 700;
+  color: #1a3a5c;
+  font-size: 0.85rem;
+  margin-right: 0.25rem;
+}
