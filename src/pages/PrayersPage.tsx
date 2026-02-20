@@ -1,8 +1,33 @@
+import { useState } from 'react'
+import { prayers, type Prayer } from '../data/prayers'
+
 export default function PrayersPage() {
+  const [selected, setSelected] = useState<Prayer | null>(null)
+
+  if (selected) {
+    return (
+      <div className="page">
+        <button className="back-button" onClick={() => setSelected(null)}>
+          ← Powrót do listy
+        </button>
+        <h1>{selected.title}</h1>
+        <p className="prayer-text">{selected.text}</p>
+      </div>
+    )
+  }
+
   return (
     <div className="page">
       <h1>Modlitwy</h1>
-      <p>Tu pojawią się modlitwy.</p>
+      <ul className="prayer-list">
+        {prayers.map((prayer) => (
+          <li key={prayer.id}>
+            <button className="prayer-item" onClick={() => setSelected(prayer)}>
+              {prayer.title}
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
