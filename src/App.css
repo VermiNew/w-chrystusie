@@ -220,6 +220,30 @@
   vertical-align: super;
 }
 
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 65ch;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.chapter-nav-button {
+  background: none;
+  border: none;
+  color: #1a3a5c;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
+.chapter-nav-button:hover {
+  text-decoration: underline;
+}
+
 /* Songbook */
 
 .song-list {

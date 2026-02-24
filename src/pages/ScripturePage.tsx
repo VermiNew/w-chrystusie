@@ -25,6 +25,8 @@ export default function ScripturePage() {
 
   if (selectedBook && selectedChapter !== null) {
     const chapter = selectedBook.chapters.find((c) => c.number === selectedChapter)
+    const hasPrev = selectedChapter > 1
+    const hasNext = selectedBook.chapters.some((c) => c.number === selectedChapter + 1)
     return (
       <div className="page scripture-reader">
         <button className="back-button" onClick={() => setSelectedChapter(null)}>
@@ -40,6 +42,18 @@ export default function ScripturePage() {
               <span className="verse-number">{verse.number}</span> {verse.text}
             </p>
           ))}
+        </div>
+        <div className="chapter-nav">
+          {hasPrev ? (
+            <button className="chapter-nav-button" onClick={() => { setSelectedChapter(selectedChapter - 1); window.scrollTo(0, 0) }}>
+              ← Rozdział {selectedChapter - 1}
+            </button>
+          ) : <span />}
+          {hasNext && (
+            <button className="chapter-nav-button" onClick={() => { setSelectedChapter(selectedChapter + 1); window.scrollTo(0, 0) }}>
+              Rozdział {selectedChapter + 1} →
+            </button>
+          )}
         </div>
       </div>
     )
