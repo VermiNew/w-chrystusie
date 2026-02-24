@@ -26,11 +26,14 @@ export default function ScripturePage() {
   if (selectedBook && selectedChapter !== null) {
     const chapter = selectedBook.chapters.find((c) => c.number === selectedChapter)
     return (
-      <div className="page">
+      <div className="page scripture-reader">
         <button className="back-button" onClick={() => setSelectedChapter(null)}>
-          ← {selectedBook.name}
+          ← Powrót do rozdziałów
         </button>
-        <h1>Rozdział {selectedChapter}</h1>
+        <div className="scripture-header">
+          <span className="scripture-book-label">{selectedBook.name}</span>
+          <h1>Rozdział {selectedChapter}</h1>
+        </div>
         <div className="verses">
           {chapter?.verses.map((verse) => (
             <p key={verse.number} className="verse">

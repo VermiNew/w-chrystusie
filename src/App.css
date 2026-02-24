@@ -110,6 +110,31 @@
 
 /* Scripture */
 
+.scripture-reader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scripture-reader .back-button {
+  align-self: flex-start;
+}
+
+.scripture-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.scripture-book-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+
 .scripture-copyright {
   font-size: 0.85rem;
   color: #64748b;
@@ -176,19 +201,23 @@
 }
 
 .verses {
-  line-height: 1.8;
+  line-height: 2;
   font-family: 'Literata', Georgia, serif;
+  font-size: 1.05rem;
+  max-width: 65ch;
+  margin: 0 auto;
 }
 
 .verse {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
 }
 
 .verse-number {
-  font-weight: 700;
-  color: #1a3a5c;
-  font-size: 0.85rem;
-  margin-right: 0.25rem;
+  font-weight: 600;
+  color: #94a3b8;
+  font-size: 0.7rem;
+  margin-right: 0.15rem;
+  vertical-align: super;
 }
 
 /* Songbook */
