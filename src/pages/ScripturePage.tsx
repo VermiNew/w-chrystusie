@@ -71,6 +71,13 @@ export default function ScripturePage() {
     <div className="page">
       <h1>Pismo Święte</h1>
 
+      <p className="scripture-copyright">
+        Copyright © 2018 Fundacja Wrota Nadziei. Released under the{' '}
+        <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener noreferrer">
+          Creative Commons Attribution No Derivatives License 4.0
+        </a>.
+      </p>
+
       <h2 className="testament-heading">Stary Testament</h2>
       <ul className="book-list">
         {oldTestament.map((book) => (

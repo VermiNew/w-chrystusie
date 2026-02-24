@@ -110,6 +110,17 @@
 
 /* Scripture */
 
+.scripture-copyright {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+.scripture-copyright a {
+  color: #1a3a5c;
+  text-decoration: underline;
+}
+
 .testament-heading {
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
