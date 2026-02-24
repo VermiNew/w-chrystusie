@@ -18,6 +18,7 @@
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
 }
 
 .nav-links {
@@ -51,6 +52,11 @@
 
 .page h1 {
   margin-top: 0;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+.page h2 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
 }
 
 /* Prayers */
@@ -84,6 +90,7 @@
   white-space: pre-line;
   line-height: 1.8;
   font-size: 1.1rem;
+  font-family: 'Literata', Georgia, serif;
 }
 
 .back-button {
@@ -159,6 +166,7 @@
 
 .verses {
   line-height: 1.8;
+  font-family: 'Literata', Georgia, serif;
 }
 
 .verse {
@@ -203,6 +211,7 @@
   white-space: pre-line;
   line-height: 1.8;
   font-size: 1.1rem;
+  font-family: 'Literata', Georgia, serif;
 }
 
 /* Search */
