@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FaCross, FaBookBible, FaMusic, FaMagnifyingGlass, FaBars, FaXmark } from 'react-icons/fa6'
 
@@ -7,8 +7,14 @@ export default function Header() {
 
   const closeMenu = () => setMenuOpen(false)
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
+
   return (
     <header className="header">
+      {menuOpen && <div className="nav-overlay" onClick={closeMenu} />}
       <nav className="nav">
         <NavLink to="/" className="nav-brand" onClick={closeMenu}>✝ Słowo Życia</NavLink>
         <button
