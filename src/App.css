@@ -44,6 +44,47 @@
   color: #ffffff;
 }
 
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+@media (max-width: 640px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #1a3a5c;
+    padding: 1rem 2rem;
+    gap: 0.25rem;
+  }
+
+  .nav-links--open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+  }
+
+  .header {
+    position: relative;
+  }
+}
+
 .main {
   max-width: 960px;
   margin: 0 auto;
