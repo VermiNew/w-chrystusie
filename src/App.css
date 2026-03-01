@@ -162,6 +162,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  animation: content-fade-in 0.4s ease both;
 }
 
 .prayer-item {
@@ -186,6 +187,7 @@
   line-height: 1.8;
   font-size: 1.1rem;
   font-family: var(--font-reading);
+  animation: content-fade-in 0.4s ease both;
 }
 
 .back-button {
@@ -284,6 +286,7 @@
   flex-direction: column;
   gap: 0.4rem;
   margin-bottom: 1rem;
+  animation: content-fade-in 0.4s ease both;
 }
 
 .book-item {
@@ -307,6 +310,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
   gap: 0.5rem;
+  animation: content-fade-in 0.4s ease both;
 }
 
 .chapter-button {
@@ -331,6 +335,7 @@
   font-size: 1.05rem;
   max-width: 65ch;
   margin: 0 auto;
+  animation: content-fade-in 0.4s ease both;
 }
 
 .verse {
@@ -377,6 +382,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  animation: content-fade-in 0.4s ease both;
 }
 
 .song-item {
@@ -401,6 +407,7 @@
   line-height: 1.8;
   font-size: 1.1rem;
   font-family: var(--font-reading);
+  animation: content-fade-in 0.4s ease both;
 }
 
 /* Search */
@@ -491,6 +498,17 @@
   color: var(--color-text-muted);
   margin: 0;
   animation: hero-fade-in 0.6s ease 0.15s both;
+}
+
+@keyframes content-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes hero-fade-in {
