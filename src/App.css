@@ -1,6 +1,8 @@
+@import './index.css';
+
 .header {
-  background-color: #1a3a5c;
-  color: #ffffff;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   padding: 0 2rem;
 }
 
@@ -16,9 +18,9 @@
 .nav-brand {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-white);
   text-decoration: none;
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-heading);
 }
 
 .nav-links {
@@ -30,7 +32,7 @@
 }
 
 .nav-links a {
-  color: #cbd5e1;
+  color: var(--color-nav-link);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
@@ -41,7 +43,7 @@
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .nav-overlay {
@@ -52,7 +54,7 @@
   display: none;
   background: none;
   border: none;
-  color: #ffffff;
+  color: var(--color-white);
   font-size: 1.4rem;
   cursor: pointer;
   padding: 0.5rem;
@@ -85,7 +87,7 @@
     right: 0;
     bottom: 0;
     z-index: 20;
-    background-color: rgba(26, 58, 92, 0.85);
+    background-color: rgba(var(--color-primary-rgb), 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 1.5rem 1.5rem;
@@ -120,7 +122,7 @@
   .nav-links a {
     padding: 1rem 1.25rem;
     font-size: 1.15rem;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(var(--color-white-rgb), 0.15);
     border-radius: 10px;
     justify-content: center;
     transition: background-color 0.2s, border-color 0.2s, color 0.2s;
@@ -128,8 +130,8 @@
 
   .nav-links a:hover,
   .nav-links a.active {
-    background-color: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(var(--color-white-rgb), 0.08);
+    border-color: rgba(var(--color-white-rgb), 0.3);
   }
 
   .header {
@@ -145,11 +147,11 @@
 
 .page h1 {
   margin-top: 0;
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-heading);
 }
 
 .page h2 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-heading);
 }
 
 /* Prayers */
@@ -166,8 +168,8 @@
   width: 100%;
   text-align: left;
   padding: 1rem 1.25rem;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
@@ -175,21 +177,21 @@
 }
 
 .prayer-item:hover {
-  background-color: #eef2ff;
-  border-color: #a5b4fc;
+  background-color: var(--color-hover-bg);
+  border-color: var(--color-hover-border);
 }
 
 .prayer-text {
   white-space: pre-line;
   line-height: 1.8;
   font-size: 1.1rem;
-  font-family: 'Literata', Georgia, serif;
+  font-family: var(--font-reading);
 }
 
 .back-button {
   background: none;
   border: none;
-  color: #1a3a5c;
+  color: var(--color-primary);
   font-size: 1rem;
   cursor: pointer;
   padding: 0.5rem 0;
@@ -224,25 +226,55 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #64748b;
+  color: var(--color-text-muted);
   margin-bottom: 0.25rem;
 }
 
 .scripture-copyright {
   font-size: 0.85rem;
-  color: #64748b;
+  color: var(--color-text-muted);
   margin-bottom: 1.5rem;
 }
 
 .scripture-copyright a {
-  color: #1a3a5c;
+  color: var(--color-primary);
   text-decoration: underline;
+}
+
+.scripture-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.scripture-refresh {
+  background: none;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 6px;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.scripture-refresh:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.scripture-refresh:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .testament-heading {
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
-  color: #1a3a5c;
+  color: var(--color-primary);
 }
 
 .book-list {
@@ -258,8 +290,8 @@
   width: 100%;
   text-align: left;
   padding: 0.75rem 1rem;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
@@ -267,8 +299,8 @@
 }
 
 .book-item:hover {
-  background-color: #eef2ff;
-  border-color: #a5b4fc;
+  background-color: var(--color-hover-bg);
+  border-color: var(--color-hover-border);
 }
 
 .chapter-grid {
@@ -279,8 +311,8 @@
 
 .chapter-button {
   padding: 0.6rem;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
@@ -289,13 +321,13 @@
 }
 
 .chapter-button:hover {
-  background-color: #eef2ff;
-  border-color: #a5b4fc;
+  background-color: var(--color-hover-bg);
+  border-color: var(--color-hover-border);
 }
 
 .verses {
   line-height: 2;
-  font-family: 'Literata', Georgia, serif;
+  font-family: var(--font-reading);
   font-size: 1.05rem;
   max-width: 65ch;
   margin: 0 auto;
@@ -307,7 +339,7 @@
 
 .verse-number {
   font-weight: 600;
-  color: #94a3b8;
+  color: var(--color-text-subtle);
   font-size: 0.7rem;
   margin-right: 0.15rem;
   vertical-align: super;
@@ -320,13 +352,13 @@
   max-width: 65ch;
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid var(--color-border);
 }
 
 .chapter-nav-button {
   background: none;
   border: none;
-  color: #1a3a5c;
+  color: var(--color-primary);
   font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
@@ -351,8 +383,8 @@
   width: 100%;
   text-align: left;
   padding: 1rem 1.25rem;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
@@ -360,15 +392,15 @@
 }
 
 .song-item:hover {
-  background-color: #eef2ff;
-  border-color: #a5b4fc;
+  background-color: var(--color-hover-bg);
+  border-color: var(--color-hover-border);
 }
 
 .song-text {
   white-space: pre-line;
   line-height: 1.8;
   font-size: 1.1rem;
-  font-family: 'Literata', Georgia, serif;
+  font-family: var(--font-reading);
 }
 
 /* Search */
@@ -377,24 +409,24 @@
   width: 100%;
   padding: 0.75rem 1rem;
   font-size: 1.1rem;
-  border: 1px solid #cbd5e1;
+  border: 1px solid var(--color-border-strong);
   border-radius: 8px;
   outline: none;
   transition: border-color 0.2s;
 }
 
 .search-input:focus {
-  border-color: #1a3a5c;
+  border-color: var(--color-primary);
 }
 
 .search-loading {
-  color: #64748b;
+  color: var(--color-text-muted);
   margin-top: 0.75rem;
   font-style: italic;
 }
 
 .search-count {
-  color: #64748b;
+  color: var(--color-text-muted);
   margin-top: 0.75rem;
   margin-bottom: 0.5rem;
 }
@@ -409,8 +441,8 @@
 
 .search-result {
   padding: 1rem 1.25rem;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
 }
 
@@ -419,8 +451,8 @@
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #ffffff;
-  background-color: #1a3a5c;
+  color: var(--color-white);
+  background-color: var(--color-primary);
   padding: 0.15rem 0.5rem;
   border-radius: 4px;
   margin-bottom: 0.4rem;
@@ -433,7 +465,7 @@
 }
 
 .search-result-snippet {
-  color: #64748b;
+  color: var(--color-text-muted);
   font-size: 0.9rem;
   margin: 0;
 }
@@ -446,17 +478,17 @@
 }
 
 .hero-title {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-heading);
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1a3a5c;
+  color: var(--color-primary);
   margin: 0 0 0.75rem;
   animation: hero-fade-in 0.6s ease both;
 }
 
 .hero-subtitle {
   font-size: 1.15rem;
-  color: #64748b;
+  color: var(--color-text-muted);
   margin: 0;
   animation: hero-fade-in 0.6s ease 0.15s both;
 }
@@ -485,8 +517,8 @@
   align-items: center;
   text-align: center;
   padding: 2rem 1.25rem;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 12px;
   text-decoration: none;
   color: inherit;
@@ -504,28 +536,28 @@
 }
 
 .section-tile:hover {
-  border-color: #a5b4fc;
-  box-shadow: 0 4px 16px rgba(26, 58, 92, 0.08);
+  border-color: var(--color-hover-border);
+  box-shadow: 0 4px 16px rgba(var(--color-primary-rgb), 0.08);
   translate: 0 -3px;
 }
 
 .section-tile-icon {
   font-size: 2rem;
-  color: #1a3a5c;
+  color: var(--color-primary);
   margin-bottom: 0.75rem;
 }
 
 .section-tile-title {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.2rem;
   font-weight: 600;
   margin: 0 0 0.4rem;
-  color: #1a3a5c;
+  color: var(--color-primary);
 }
 
 .section-tile-desc {
   font-size: 0.9rem;
-  color: #64748b;
+  color: var(--color-text-muted);
   margin: 0;
 }
 

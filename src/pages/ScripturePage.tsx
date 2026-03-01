@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
-import { loadBible, type Book } from '../data/scripture'
+import { loadBible, refreshBible, type Book } from '../data/scripture'
 
 export default function ScripturePage() {
   const [books, setBooks] = useState<Book[]>([])
   const [loading, setLoading] = useState(true)
+  const [refreshing, setRefreshing] = useState(false)
   const [selectedBook, setSelectedBook] = useState<Book | null>(null)
   const [selectedChapter, setSelectedChapter] = useState<number | null>(null)
 
@@ -14,11 +15,18 @@ export default function ScripturePage() {
     })
   }, [])
 
+  const handleRefresh = async () => {
+    setRefreshing(true)
+    const data = await refreshBible()
+    setBooks(data)
+    setRefreshing(false)
+  }
+
   if (loading) {
     return (
       <div className="page">
         <h1>Pismo Święte</h1>
-        <p>Ładowanie...</p>
+        <p>Trwa ładowanie...</p>
       </div>
     )
   }
@@ -88,12 +96,17 @@ export default function ScripturePage() {
     <div className="page">
       <h1>Pismo Święte</h1>
 
-      <p className="scripture-copyright">
-        Copyright © 2018 Fundacja Wrota Nadziei. Released under the{' '}
-        <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener noreferrer">
-          Creative Commons Attribution No Derivatives License 4.0
-        </a>.
-      </p>
+      <div className="scripture-meta">
+        <p className="scripture-copyright">
+          Copyright © 2018 Fundacja Wrota Nadziei. Released under the{' '}
+          <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener noreferrer">
+            Creative Commons Attribution No Derivatives License 4.0
+          </a>.
+        </p>
+        <button className="scripture-refresh" onClick={handleRefresh} disabled={refreshing}>
+          {refreshing ? 'Odświeżanie…' : '↻ Odśwież dane'}
+        </button>
+      </div>
 
       <h2 className="testament-heading">Stary Testament</h2>
       <ul className="book-list">
