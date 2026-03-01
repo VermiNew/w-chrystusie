@@ -34,7 +34,7 @@ Use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 ### Format
 
-```
+```plaintext
 <type>(scope): <description>
 ```
 
@@ -59,7 +59,7 @@ Use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 ### Examples
 
-```
+```plaintext
 feat(ui): add layout with header and navigation
 feat(prayers): add prayer list page with sample data
 feat(scripture): load and parse XML bible data
