@@ -1,5 +1,29 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { loadBible, refreshBible, type Book } from '../data/scripture'
+
+const PROGRESS_KEY = 'scripture-progress'
+
+type ProgressMap = Record<string, number>
+
+function loadProgress(): ProgressMap {
+  try {
+    return JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}')
+  } catch {
+    return {}
+  }
+}
+
+function saveProgress(bookNum: number, chapter: number, percent: number) {
+  const map = loadProgress()
+  const key = `${bookNum}:${chapter}`
+  map[key] = Math.max(map[key] ?? 0, Math.round(percent))
+  localStorage.setItem(PROGRESS_KEY, JSON.stringify(map))
+}
+
+function getProgress(bookNum: number, chapter: number): number {
+  const map = loadProgress()
+  return map[`${bookNum}:${chapter}`] ?? 0
+}
 
 export default function ScripturePage() {
   const [books, setBooks] = useState<Book[]>([])
@@ -14,6 +38,22 @@ export default function ScripturePage() {
       setLoading(false)
     })
   }, [])
+
+  const handleScroll = useCallback(() => {
+    if (!selectedBook || selectedChapter === null) return
+    const scrollTop = window.scrollY
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight
+    if (docHeight <= 0) return
+    const percent = Math.min(100, (scrollTop / docHeight) * 100)
+    saveProgress(selectedBook.number, selectedChapter, percent)
+  }, [selectedBook, selectedChapter])
+
+  useEffect(() => {
+    if (selectedBook && selectedChapter !== null) {
+      window.addEventListener('scroll', handleScroll, { passive: true })
+      return () => window.removeEventListener('scroll', handleScroll)
+    }
+  }, [selectedBook, selectedChapter, handleScroll])
 
   const handleRefresh = async () => {
     setRefreshing(true)
@@ -75,15 +115,24 @@ export default function ScripturePage() {
         </button>
         <h1>{selectedBook.name}</h1>
         <div className="chapter-grid">
-          {selectedBook.chapters.map((chapter) => (
-            <button
-              key={chapter.number}
-              className="chapter-button"
-              onClick={() => setSelectedChapter(chapter.number)}
-            >
-              {chapter.number}
-            </button>
-          ))}
+          {selectedBook.chapters.map((chapter) => {
+            const progress = getProgress(selectedBook.number, chapter.number)
+            return (
+              <button
+                key={chapter.number}
+                className="chapter-button"
+                onClick={() => setSelectedChapter(chapter.number)}
+              >
+                {chapter.number}
+                {progress > 0 && (
+                  <span
+                    className={`chapter-progress${progress >= 100 ? ' chapter-progress--full' : ''}`}
+                    style={{ width: `${progress}%` }}
+                  />
+                )}
+              </button>
+            )
+          })}
         </div>
       </div>
     )

@@ -308,13 +308,15 @@
 
 .chapter-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
   animation: content-fade-in 0.4s ease both;
 }
 
 .chapter-button {
-  padding: 0.6rem;
+  position: relative;
+  overflow: hidden;
+  padding: 0.75rem;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 8px;
@@ -322,6 +324,22 @@
   cursor: pointer;
   text-align: center;
   transition: background-color 0.2s, border-color 0.2s;
+}
+
+.chapter-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--color-progress);
+  opacity: 0.5;
+  border-radius: 0 0 0 8px;
+  transition: width 0.3s ease;
+}
+
+.chapter-progress--full {
+  opacity: 0.6;
+  border-radius: 0 0 8px 8px;
 }
 
 .chapter-button:hover {
