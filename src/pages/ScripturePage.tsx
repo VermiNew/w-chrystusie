@@ -25,6 +25,15 @@ function getProgress(bookNum: number, chapter: number): number {
   return map[`${bookNum}:${chapter}`] ?? 0
 }
 
+function getBookProgress(bookNum: number, totalChapters: number): number {
+  const map = loadProgress()
+  let sum = 0
+  for (let i = 1; i <= totalChapters; i++) {
+    sum += map[`${bookNum}:${i}`] ?? 0
+  }
+  return totalChapters > 0 ? Math.round(sum / totalChapters) : 0
+}
+
 export default function ScripturePage() {
   const [books, setBooks] = useState<Book[]>([])
   const [loading, setLoading] = useState(true)
@@ -159,24 +168,42 @@ export default function ScripturePage() {
 
       <h2 className="testament-heading">Stary Testament</h2>
       <ul className="book-list">
-        {oldTestament.map((book) => (
-          <li key={book.number}>
-            <button className="book-item" onClick={() => setSelectedBook(book)}>
-              {book.name}
-            </button>
-          </li>
-        ))}
+        {oldTestament.map((book) => {
+          const progress = getBookProgress(book.number, book.chapters.length)
+          return (
+            <li key={book.number}>
+              <button className="book-item" onClick={() => setSelectedBook(book)}>
+                {book.name}
+                {progress > 0 && (
+                  <span
+                    className={`chapter-progress${progress >= 100 ? ' chapter-progress--full' : ''}`}
+                    style={{ width: `${progress}%` }}
+                  />
+                )}
+              </button>
+            </li>
+          )
+        })}
       </ul>
 
       <h2 className="testament-heading">Nowy Testament</h2>
       <ul className="book-list">
-        {newTestament.map((book) => (
-          <li key={book.number}>
-            <button className="book-item" onClick={() => setSelectedBook(book)}>
-              {book.name}
-            </button>
-          </li>
-        ))}
+        {newTestament.map((book) => {
+          const progress = getBookProgress(book.number, book.chapters.length)
+          return (
+            <li key={book.number}>
+              <button className="book-item" onClick={() => setSelectedBook(book)}>
+                {book.name}
+                {progress > 0 && (
+                  <span
+                    className={`chapter-progress${progress >= 100 ? ' chapter-progress--full' : ''}`}
+                    style={{ width: `${progress}%` }}
+                  />
+                )}
+              </button>
+            </li>
+          )
+        })}
       </ul>
     </div>
   )

@@ -290,6 +290,8 @@
 }
 
 .book-item {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   text-align: left;
   padding: 0.75rem 1rem;
