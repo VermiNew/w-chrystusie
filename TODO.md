@@ -36,6 +36,11 @@
 - [x] Responsive design (hamburger menu, fullscreen mobile menu)
 - [X] CSS variables — replace all hardcoded colors with custom properties (`--color-navy`, `--color-accent`, `--color-rubric`, etc.)
 - [X] Font variables — add `--font-display`, `--font-body`, `--font-ui` CSS vars
+- [ ] Mobile responsiveness — fix layout issues on small screens (375px+)
+  - [ ] Scripture copyright + refresh button — stack vertically on mobile
+  - [ ] Reduce `.main` padding on mobile (2rem → 1rem)
+  - [ ] Reduce hero padding-top on mobile (4rem → 2.5rem)
+  - [ ] Touch-friendly button sizes (min 44px tap targets)
 - [ ] Color accents — violet for hover/active states, rubric red (`#b11a1a`) for decorative elements
 - [ ] Reading column width — set `max-width: 72ch` on `.prayer-text` and `.song-text`
 - [ ] Small caps labels — `font-variant: small-caps` for category labels (MODLITWA, PIEŚŃ, PSALM)
