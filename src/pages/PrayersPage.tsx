@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Markdown from 'react-markdown'
 import { prayers, type Prayer } from '../data/prayers'
 
 export default function PrayersPage() {
@@ -11,7 +12,9 @@ export default function PrayersPage() {
           ← Powrót do listy
         </button>
         <h1>{selected.title}</h1>
-        <p className="prayer-text">{selected.text}</p>
+        <div className="prayer-text">
+          <Markdown>{selected.body}</Markdown>
+        </div>
       </div>
     )
   }

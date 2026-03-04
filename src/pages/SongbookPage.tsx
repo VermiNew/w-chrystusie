@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Markdown from 'react-markdown'
 import { songs, type Song } from '../data/songs'
 
 export default function SongbookPage() {
@@ -11,7 +12,9 @@ export default function SongbookPage() {
           ← Powrót do listy
         </button>
         <h1>{selected.title}</h1>
-        <p className="song-text">{selected.text}</p>
+        <div className="song-text">
+          <Markdown>{selected.body}</Markdown>
+        </div>
       </div>
     )
   }

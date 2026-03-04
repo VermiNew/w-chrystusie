@@ -13,11 +13,11 @@ interface SearchResult {
 function searchPrayers(query: string): SearchResult[] {
   const q = query.toLowerCase()
   return (prayers as Prayer[])
-    .filter((p) => p.title.toLowerCase().includes(q) || p.text.toLowerCase().includes(q))
+    .filter((p) => p.title.toLowerCase().includes(q) || p.body.toLowerCase().includes(q))
     .map((p) => ({
       type: 'prayer' as const,
       title: p.title,
-      snippet: p.text.slice(0, 120) + (p.text.length > 120 ? '…' : ''),
+      snippet: p.body.slice(0, 120) + (p.body.length > 120 ? '…' : ''),
       data: p,
     }))
 }
@@ -25,11 +25,11 @@ function searchPrayers(query: string): SearchResult[] {
 function searchSongs(query: string): SearchResult[] {
   const q = query.toLowerCase()
   return (songs as Song[])
-    .filter((s) => s.title.toLowerCase().includes(q) || s.text.toLowerCase().includes(q))
+    .filter((s) => s.title.toLowerCase().includes(q) || s.body.toLowerCase().includes(q))
     .map((s) => ({
       type: 'song' as const,
       title: s.title,
-      snippet: s.text.slice(0, 120) + (s.text.length > 120 ? '…' : ''),
+      snippet: s.body.slice(0, 120) + (s.body.length > 120 ? '…' : ''),
       data: s,
     }))
 }
