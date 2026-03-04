@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage'
 import PrayersPage from './pages/PrayersPage'
 import ScripturePage from './pages/ScripturePage'
 import SongbookPage from './pages/SongbookPage'
+import RosaryPage from './pages/RosaryPage'
 import SearchPage from './pages/SearchPage'
 import './App.css'
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/modlitwy" element={<PrayersPage />} />
           <Route path="/pismo-swiete" element={<ScripturePage />} />
           <Route path="/spiewnik" element={<SongbookPage />} />
+          <Route path="/rozaniec" element={<RosaryPage />} />
           <Route path="/szukaj" element={<SearchPage />} />
         </Routes>
       </main>
