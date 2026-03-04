@@ -1,210 +1,234 @@
-import { useCallback, useEffect, useState } from 'react'
-import { loadBible, refreshBible, type Book } from '../data/scripture'
+// import { useCallback, useEffect, useState } from 'react'
+// import { loadBible, refreshBible, type Book } from '../data/scripture'
 
-const PROGRESS_KEY = 'scripture-progress'
+// const PROGRESS_KEY = 'scripture-progress'
 
-type ProgressMap = Record<string, number>
+// type ProgressMap = Record<string, number>
 
-function loadProgress(): ProgressMap {
-  try {
-    return JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}')
-  } catch {
-    return {}
-  }
-}
+// function loadProgress(): ProgressMap {
+//   try {
+//     return JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}')
+//   } catch {
+//     return {}
+//   }
+// }
 
-function saveProgress(bookNum: number, chapter: number, percent: number) {
-  const map = loadProgress()
-  const key = `${bookNum}:${chapter}`
-  map[key] = Math.max(map[key] ?? 0, Math.round(percent))
-  localStorage.setItem(PROGRESS_KEY, JSON.stringify(map))
-}
+// function saveProgress(bookNum: number, chapter: number, percent: number) {
+//   const map = loadProgress()
+//   const key = `${bookNum}:${chapter}`
+//   map[key] = Math.max(map[key] ?? 0, Math.round(percent))
+//   localStorage.setItem(PROGRESS_KEY, JSON.stringify(map))
+// }
 
-function getProgress(bookNum: number, chapter: number): number {
-  const map = loadProgress()
-  return map[`${bookNum}:${chapter}`] ?? 0
-}
+// function getProgress(bookNum: number, chapter: number): number {
+//   const map = loadProgress()
+//   return map[`${bookNum}:${chapter}`] ?? 0
+// }
 
-function getBookProgress(bookNum: number, totalChapters: number): number {
-  const map = loadProgress()
-  let sum = 0
-  for (let i = 1; i <= totalChapters; i++) {
-    sum += map[`${bookNum}:${i}`] ?? 0
-  }
-  return totalChapters > 0 ? Math.round(sum / totalChapters) : 0
-}
+// function getBookProgress(bookNum: number, totalChapters: number): number {
+//   const map = loadProgress()
+//   let sum = 0
+//   for (let i = 1; i <= totalChapters; i++) {
+//     sum += map[`${bookNum}:${i}`] ?? 0
+//   }
+//   return totalChapters > 0 ? Math.round(sum / totalChapters) : 0
+// }
+
+// export default function ScripturePage() {
+//   const [books, setBooks] = useState<Book[]>([])
+//   const [loading, setLoading] = useState(true)
+//   const [refreshing, setRefreshing] = useState(false)
+//   const [selectedBook, setSelectedBook] = useState<Book | null>(null)
+//   const [selectedChapter, setSelectedChapter] = useState<number | null>(null)
+
+//   useEffect(() => {
+//     loadBible().then((data) => {
+//       setBooks(data)
+//       setLoading(false)
+//     })
+//   }, [])
+
+//   const handleScroll = useCallback(() => {
+//     if (!selectedBook || selectedChapter === null) return
+//     const scrollTop = window.scrollY
+//     const docHeight = document.documentElement.scrollHeight - window.innerHeight
+//     if (docHeight <= 0) return
+//     const percent = Math.min(100, (scrollTop / docHeight) * 100)
+//     saveProgress(selectedBook.number, selectedChapter, percent)
+//   }, [selectedBook, selectedChapter])
+
+//   useEffect(() => {
+//     if (selectedBook && selectedChapter !== null) {
+//       window.addEventListener('scroll', handleScroll, { passive: true })
+//       return () => window.removeEventListener('scroll', handleScroll)
+//     }
+//   }, [selectedBook, selectedChapter, handleScroll])
+
+//   const handleRefresh = async () => {
+//     setRefreshing(true)
+//     const data = await refreshBible()
+//     setBooks(data)
+//     setRefreshing(false)
+//   }
+
+//   if (loading) {
+//     return (
+//       <div className="page">
+//         <h1>Pismo Święte</h1>
+//         <p>Trwa ładowanie...</p>
+//       </div>
+//     )
+//   }
+
+//   if (selectedBook && selectedChapter !== null) {
+//     const chapter = selectedBook.chapters.find((c) => c.number === selectedChapter)
+//     const hasPrev = selectedChapter > 1
+//     const hasNext = selectedBook.chapters.some((c) => c.number === selectedChapter + 1)
+//     return (
+//       <div className="page scripture-reader">
+//         <button className="back-button" onClick={() => setSelectedChapter(null)}>
+//           ← Powrót do rozdziałów
+//         </button>
+//         <div className="scripture-header">
+//           <span className="scripture-book-label">{selectedBook.name}</span>
+//           <h1>Rozdział {selectedChapter}</h1>
+//         </div>
+//         <div className="verses">
+//           {chapter?.verses.map((verse) => (
+//             <p key={verse.number} className="verse">
+//               <span className="verse-number">{verse.number}</span> {verse.text}
+//             </p>
+//           ))}
+//         </div>
+//         <div className="chapter-nav">
+//           {hasPrev ? (
+//             <button className="chapter-nav-button" onClick={() => { setSelectedChapter(selectedChapter - 1); window.scrollTo(0, 0) }}>
+//               ← Rozdział {selectedChapter - 1}
+//             </button>
+//           ) : <span />}
+//           {hasNext && (
+//             <button className="chapter-nav-button" onClick={() => { setSelectedChapter(selectedChapter + 1); window.scrollTo(0, 0) }}>
+//               Rozdział {selectedChapter + 1} →
+//             </button>
+//           )}
+//         </div>
+//       </div>
+//     )
+//   }
+
+//   if (selectedBook) {
+//     return (
+//       <div className="page">
+//         <button className="back-button" onClick={() => setSelectedBook(null)}>
+//           ← Powrót do ksiąg
+//         </button>
+//         <h1>{selectedBook.name}</h1>
+//         <div className="chapter-grid">
+//           {selectedBook.chapters.map((chapter) => {
+//             const progress = getProgress(selectedBook.number, chapter.number)
+//             return (
+//               <button
+//                 key={chapter.number}
+//                 className="chapter-button"
+//                 onClick={() => setSelectedChapter(chapter.number)}
+//               >
+//                 {chapter.number}
+//                 {progress > 0 && (
+//                   <span
+//                     className={`chapter-progress${progress >= 100 ? ' chapter-progress--full' : ''}`}
+//                     style={{ width: `${progress}%` }}
+//                   />
+//                 )}
+//               </button>
+//             )
+//           })}
+//         </div>
+//       </div>
+//     )
+//   }
+
+//   const oldTestament = books.filter((b) => b.testament === 'Old')
+//   const newTestament = books.filter((b) => b.testament === 'New')
+
+//   return (
+//     <div className="page">
+//       <h1>Pismo Święte</h1>
+
+//       <div className="scripture-meta">
+//         <p className="scripture-copyright">
+//           Copyright © 2018 Fundacja Wrota Nadziei. Released under the{' '}
+//           <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener noreferrer">
+//             Creative Commons Attribution No Derivatives License 4.0
+//           </a>.
+//         </p>
+//         <button className="scripture-refresh" onClick={handleRefresh} disabled={refreshing}>
+//           {refreshing ? 'Odświeżanie…' : '↻ Odśwież dane'}
+//         </button>
+//       </div>
+
+//       <h2 className="testament-heading">Stary Testament</h2>
+//       <ul className="book-list">
+//         {oldTestament.map((book) => {
+//           const progress = getBookProgress(book.number, book.chapters.length)
+//           return (
+//             <li key={book.number}>
+//               <button className="book-item" onClick={() => setSelectedBook(book)}>
+//                 {book.name}
+//                 {progress > 0 && (
+//                   <span
+//                     className={`chapter-progress${progress >= 100 ? ' chapter-progress--full' : ''}`}
+//                     style={{ width: `${progress}%` }}
+//                   />
+//                 )}
+//               </button>
+//             </li>
+//           )
+//         })}
+//       </ul>
+
+//       <h2 className="testament-heading">Nowy Testament</h2>
+//       <ul className="book-list">
+//         {newTestament.map((book) => {
+//           const progress = getBookProgress(book.number, book.chapters.length)
+//           return (
+//             <li key={book.number}>
+//               <button className="book-item" onClick={() => setSelectedBook(book)}>
+//                 {book.name}
+//                 {progress > 0 && (
+//                   <span
+//                     className={`chapter-progress${progress >= 100 ? ' chapter-progress--full' : ''}`}
+//                     style={{ width: `${progress}%` }}
+//                   />
+//                 )}
+//               </button>
+//             </li>
+//           )
+//         })}
+//       </ul>
+//     </div>
+//   )
+// }
 
 export default function ScripturePage() {
-  const [books, setBooks] = useState<Book[]>([])
-  const [loading, setLoading] = useState(true)
-  const [refreshing, setRefreshing] = useState(false)
-  const [selectedBook, setSelectedBook] = useState<Book | null>(null)
-  const [selectedChapter, setSelectedChapter] = useState<number | null>(null)
-
-  useEffect(() => {
-    loadBible().then((data) => {
-      setBooks(data)
-      setLoading(false)
-    })
-  }, [])
-
-  const handleScroll = useCallback(() => {
-    if (!selectedBook || selectedChapter === null) return
-    const scrollTop = window.scrollY
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight
-    if (docHeight <= 0) return
-    const percent = Math.min(100, (scrollTop / docHeight) * 100)
-    saveProgress(selectedBook.number, selectedChapter, percent)
-  }, [selectedBook, selectedChapter])
-
-  useEffect(() => {
-    if (selectedBook && selectedChapter !== null) {
-      window.addEventListener('scroll', handleScroll, { passive: true })
-      return () => window.removeEventListener('scroll', handleScroll)
-    }
-  }, [selectedBook, selectedChapter, handleScroll])
-
-  const handleRefresh = async () => {
-    setRefreshing(true)
-    const data = await refreshBible()
-    setBooks(data)
-    setRefreshing(false)
-  }
-
-  if (loading) {
-    return (
-      <div className="page">
-        <h1>Pismo Święte</h1>
-        <p>Trwa ładowanie...</p>
-      </div>
-    )
-  }
-
-  if (selectedBook && selectedChapter !== null) {
-    const chapter = selectedBook.chapters.find((c) => c.number === selectedChapter)
-    const hasPrev = selectedChapter > 1
-    const hasNext = selectedBook.chapters.some((c) => c.number === selectedChapter + 1)
-    return (
-      <div className="page scripture-reader">
-        <button className="back-button" onClick={() => setSelectedChapter(null)}>
-          ← Powrót do rozdziałów
-        </button>
-        <div className="scripture-header">
-          <span className="scripture-book-label">{selectedBook.name}</span>
-          <h1>Rozdział {selectedChapter}</h1>
-        </div>
-        <div className="verses">
-          {chapter?.verses.map((verse) => (
-            <p key={verse.number} className="verse">
-              <span className="verse-number">{verse.number}</span> {verse.text}
-            </p>
-          ))}
-        </div>
-        <div className="chapter-nav">
-          {hasPrev ? (
-            <button className="chapter-nav-button" onClick={() => { setSelectedChapter(selectedChapter - 1); window.scrollTo(0, 0) }}>
-              ← Rozdział {selectedChapter - 1}
-            </button>
-          ) : <span />}
-          {hasNext && (
-            <button className="chapter-nav-button" onClick={() => { setSelectedChapter(selectedChapter + 1); window.scrollTo(0, 0) }}>
-              Rozdział {selectedChapter + 1} →
-            </button>
-          )}
-        </div>
-      </div>
-    )
-  }
-
-  if (selectedBook) {
-    return (
-      <div className="page">
-        <button className="back-button" onClick={() => setSelectedBook(null)}>
-          ← Powrót do ksiąg
-        </button>
-        <h1>{selectedBook.name}</h1>
-        <div className="chapter-grid">
-          {selectedBook.chapters.map((chapter) => {
-            const progress = getProgress(selectedBook.number, chapter.number)
-            return (
-              <button
-                key={chapter.number}
-                className="chapter-button"
-                onClick={() => setSelectedChapter(chapter.number)}
-              >
-                {chapter.number}
-                {progress > 0 && (
-                  <span
-                    className={`chapter-progress${progress >= 100 ? ' chapter-progress--full' : ''}`}
-                    style={{ width: `${progress}%` }}
-                  />
-                )}
-              </button>
-            )
-          })}
-        </div>
-      </div>
-    )
-  }
-
-  const oldTestament = books.filter((b) => b.testament === 'Old')
-  const newTestament = books.filter((b) => b.testament === 'New')
-
   return (
     <div className="page">
       <h1>Pismo Święte</h1>
-
-      <div className="scripture-meta">
-        <p className="scripture-copyright">
-          Copyright © 2018 Fundacja Wrota Nadziei. Released under the{' '}
-          <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener noreferrer">
-            Creative Commons Attribution No Derivatives License 4.0
-          </a>.
+      <div className="scripture-notice">
+        <p>
+          Pismo Święte zostało wycofane ze strony. Wykorzystywana dotychczas wersja
+          (Uwspółcześniona Biblia Gdańska) jest przekładem protestanckim i nie zawiera pełnego
+          kanonu katolickiego.
         </p>
-        <button className="scripture-refresh" onClick={handleRefresh} disabled={refreshing}>
-          {refreshing ? 'Odświeżanie…' : '↻ Odśwież dane'}
-        </button>
+        <p>
+          Sekcja zostanie przywrócona, gdy uda się pozyskać <strong>pełną katolicką wersję
+          Pisma Świętego</strong> w formacie nadającym się do parsowania (XML, JSON lub innym),
+          z licencją pozwalającą na wykorzystanie w projektach open-source (MIT).
+        </p>
+        <p>
+          Jeśli posiadasz lub znasz taki zasób - napisz na{' '}
+          <a href="mailto:verminewfey@gmail.com">verminewfey@gmail.com</a>.
+        </p>
       </div>
-
-      <h2 className="testament-heading">Stary Testament</h2>
-      <ul className="book-list">
-        {oldTestament.map((book) => {
-          const progress = getBookProgress(book.number, book.chapters.length)
-          return (
-            <li key={book.number}>
-              <button className="book-item" onClick={() => setSelectedBook(book)}>
-                {book.name}
-                {progress > 0 && (
-                  <span
-                    className={`chapter-progress${progress >= 100 ? ' chapter-progress--full' : ''}`}
-                    style={{ width: `${progress}%` }}
-                  />
-                )}
-              </button>
-            </li>
-          )
-        })}
-      </ul>
-
-      <h2 className="testament-heading">Nowy Testament</h2>
-      <ul className="book-list">
-        {newTestament.map((book) => {
-          const progress = getBookProgress(book.number, book.chapters.length)
-          return (
-            <li key={book.number}>
-              <button className="book-item" onClick={() => setSelectedBook(book)}>
-                {book.name}
-                {progress > 0 && (
-                  <span
-                    className={`chapter-progress${progress >= 100 ? ' chapter-progress--full' : ''}`}
-                    style={{ width: `${progress}%` }}
-                  />
-                )}
-              </button>
-            </li>
-          )
-        })}
-      </ul>
     </div>
   )
 }
