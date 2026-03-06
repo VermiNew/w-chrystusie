@@ -16,7 +16,7 @@ export default function Header() {
     <header className="header">
       {menuOpen && <div className="nav-overlay" onClick={closeMenu} />}
       <nav className="nav">
-        <NavLink to="/" className="nav-brand" onClick={closeMenu}>✝ Słowo Życia</NavLink>
+        <NavLink to="/" className="nav-brand" onClick={closeMenu}>✝ W Chrystusie</NavLink>
         <button
           className="nav-toggle"
           onClick={() => setMenuOpen(!menuOpen)}

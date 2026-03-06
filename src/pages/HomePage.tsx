@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <div className="home">
       <section className="hero">
-        <h1 className="hero-title">✝ Słowo Życia</h1>
+        <h1 className="hero-title">✝ W Chrystusie</h1>
         <p className="hero-subtitle">Modlitwa, Pismo Święte i pieśni - wszystko w jednym miejscu.</p>
       </section>
       <section className="section-tiles">
