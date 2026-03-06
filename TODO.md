@@ -1,48 +1,29 @@
-# Słowo Życia — Roadmap
+# W Chrystusie — Roadmap
 
-## Stage 1 — Skeleton
+## Ukończone
 
-- [x] Install react-router-dom
-- [x] Create layout with Header and navigation
-- [x] Create placeholder pages: Home, Prayers, Scripture, Songbook
-- [x] Set up routing
+- [x] Router, layout, nawigacja z ikonami
+- [x] Modlitwy — lista i widok szczegółowy (Markdown)
+- [x] Śpiewnik — lista i widok szczegółowy (Markdown)
+- [x] Pismo Święte — parser XML, przeglądanie ksiąg/rozdziałów/wersetów (wycofane — wersja protestancka)
+- [x] Wyszukiwarka globalna
+- [x] Strona główna (hero, kafelki sekcji, animacje)
+- [x] Responsywny hamburger menu (fullscreen, backdrop blur, staggered animations)
+- [x] Czcionki: Space Grotesk, Literata, Poppins (Google Fonts)
+- [x] CSS variables — kolory i czcionki
+- [x] Migracja danych z JSON na Markdown z frontmatter
+- [x] Interaktywny różaniec — wybór tajemnic, krok po kroku, pasek postępu
+- [x] Zmiana nazwy na „W Chrystusie"
 
-## Stage 2 — Prayers
+## Do zrobienia
 
-- [x] Add prayer data (manual, Polish)
-- [x] Prayer list page
-- [x] Prayer detail view
-
-## Stage 3 — Scripture
-
-- [x] Load and parse XML Bible data
-- [x] Book/chapter/verse browsing
-- [x] Chapter navigation
-
-## Stage 4 — Songbook
-
-- [x] Add song data (manual, Polish)
-- [x] Song list page
-- [x] Song lyrics view
-
-## Stage 5 — Search
-
-- [x] Global search across all sections
-- [x] Search results page
-
-## Stage 6 — Polish
-
-- [x] Home page (hero section, section tiles, entrance animations)
-- [x] Responsive design (hamburger menu, fullscreen mobile menu)
-- [X] CSS variables — replace all hardcoded colors with custom properties (`--color-navy`, `--color-accent`, `--color-rubric`, etc.)
-- [X] Font variables — add `--font-display`, `--font-body`, `--font-ui` CSS vars
-- [ ] Mobile responsiveness — fix layout issues on small screens (375px+)
-  - [ ] Scripture copyright + refresh button — stack vertically on mobile
-  - [ ] Reduce `.main` padding on mobile (2rem → 1rem)
-  - [ ] Reduce hero padding-top on mobile (4rem → 2.5rem)
-  - [ ] Touch-friendly button sizes (min 44px tap targets)
-- [ ] Color accents — violet for hover/active states, rubric red (`#b11a1a`) for decorative elements
-- [ ] Reading column width — set `max-width: 72ch` on `.prayer-text` and `.song-text`
-- [ ] Small caps labels — `font-variant: small-caps` for category labels (MODLITWA, PIEŚŃ, PSALM)
-- [ ] Reading containers — subtle border/shadow page-like wrapper for verse, prayer and song detail views
-- [ ] Final visual polish
+- [ ] Logo i favicon
+- [ ] Pismo Święte — pozyskać katolicką wersję z otwartą licencją
+- [ ] Mobile responsiveness — poprawki layoutu na 375px+
+- [ ] Akcenty kolorystyczne — violet dla hover/active, rubric red dla dekoracji
+- [ ] Kolumna czytania — `max-width: 72ch` na prayer-text i song-text
+- [ ] Small caps — `font-variant: small-caps` dla etykiet kategorii
+- [ ] Kontenery czytania — subtelne obramowanie/cień dla widoków szczegółowych
+- [ ] Różaniec — wizualizacja paciorków
+- [ ] Różaniec — automatyczny dobór tajemnic wg dnia tygodnia
+- [ ] Pieśni — uzupełnienie treści
