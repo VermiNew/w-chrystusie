@@ -1,5 +1,5 @@
 ---
-title: Skład-Apostolski
+title: Skład Apostolski
 source: https://niezbednik.niedziela.pl/artykul/247/Sklad-apostolski-Wyznanie-wiary
 ---
 
