@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { prayers, type Prayer } from '../data/prayers'
 import { songs, type Song } from '../data/songs'
 import { loadBible, type Book } from '../data/scripture'
@@ -64,6 +65,7 @@ const typeLabels: Record<string, string> = {
 }
 
 export default function SearchPage() {
+  const navigate = useNavigate()
   const [query, setQuery] = useState('')
   const [books, setBooks] = useState<Book[]>([])
   const [bibleLoading, setBibleLoading] = useState(true)
@@ -102,7 +104,14 @@ export default function SearchPage() {
       )}
       <ul className="search-results">
         {results.map((r, i) => (
-          <li key={i} className="search-result">
+          <li
+            key={i}
+            className="search-result search-result-clickable"
+            onClick={() => {
+              if (r.type === 'prayer') navigate('/modlitwy', { state: { selectedId: (r.data as Prayer).id } })
+              else if (r.type === 'song') navigate('/spiewnik', { state: { selectedId: (r.data as Song).id } })
+            }}
+          >
             <span className="search-result-type">{typeLabels[r.type]}</span>
             <strong className="search-result-title">{r.title}</strong>
             <p className="search-result-snippet">{r.snippet}</p>

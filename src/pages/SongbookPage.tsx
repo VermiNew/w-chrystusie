@@ -1,9 +1,13 @@
 import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import Markdown from 'react-markdown'
 import { songs, type Song } from '../data/songs'
 
 export default function SongbookPage() {
-  const [selected, setSelected] = useState<Song | null>(null)
+  const location = useLocation()
+  const initialId = (location.state as { selectedId?: string })?.selectedId
+  const initial = initialId ? songs.find((s) => s.id === initialId) ?? null : null
+  const [selected, setSelected] = useState<Song | null>(initial)
 
   if (selected) {
     return (
