@@ -15,19 +15,17 @@
 - [x] Interaktywny różaniec — wybór tajemnic, krok po kroku, pasek postępu
 - [x] Zmiana nazwy na „W Chrystusie"
 - [x] Logo i favicon
+- [x] Wyświetlanie źródła (link) w modlitwach i śpiewniku
+- [x] Klikalne wyniki wyszukiwania — przenoszenie do widoku szczegółowego
 
 ## Do zrobienia
 
 - [ ] Pismo Święte — pozyskać katolicką wersję z otwartą licencją
 - [ ] Mobile responsiveness — poprawki layoutu na 375px+
 - [ ] Akcenty kolorystyczne — violet dla hover/active, rubric red dla dekoracji
-- [ ] Kolumna czytania — `max-width: 72ch` na prayer-text i song-text
 - [ ] Small caps — `font-variant: small-caps` dla etykiet kategorii
 - [ ] Kontenery czytania — subtelne obramowanie/cień dla widoków szczegółowych
 - [ ] Różaniec — wizualizacja paciorków
 - [ ] Różaniec — automatyczny dobór tajemnic wg dnia tygodnia
 - [ ] Pieśni — uzupełnienie treści
 
-## Na już (prawie)
-- Dodać wyświetlanie źródła do modlitw i śpiewnika.
-- Dodać, że kliknięcie na entry w wyszukiwarce przenosi od razu do pliku. (Na razie nie ma reakcji na klik).
