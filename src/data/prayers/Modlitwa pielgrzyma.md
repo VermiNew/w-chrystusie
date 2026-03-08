@@ -1,4 +1,5 @@
 ---
+category: Modlitwy w podróży
 title: Modlitwa pielgrzyma
 source: https://niezbednik.niedziela.pl/artykul/191/Modlitwa-pielgrzyma
 ---

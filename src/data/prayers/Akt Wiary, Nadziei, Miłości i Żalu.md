@@ -1,4 +1,5 @@
 ---
+category: Katechizm
 title: Akt Wiary, Nadziei, Miłości i Żalu
 source: http://modlitwa.katolicki.net/index.php/modlitewnik/15-modlitewnik/350-wiara-nadzieja-i-milosc.html
 ---

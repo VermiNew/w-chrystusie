@@ -1,4 +1,5 @@
 ---
+category: Katechizm
 title: Pięć Przykazań Kościelnych
 source: https://niezbednik.niedziela.pl/artykul/4834/Piec-Przykazan-Koscielnych
 ---

@@ -1,4 +1,5 @@
 ---
+category: Modlitwy za rodzinę
 title: Modlitwa dzieci za rodziców
 source: https://niezbednik.niedziela.pl/artykul/251/Modlitwa-dzieci-za-rodzicow
 ---

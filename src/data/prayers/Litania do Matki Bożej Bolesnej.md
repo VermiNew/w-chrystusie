@@ -1,4 +1,5 @@
 ---
+category: Litanie
 title: Litania do Matki Bożej Bolesnej
 ---
 

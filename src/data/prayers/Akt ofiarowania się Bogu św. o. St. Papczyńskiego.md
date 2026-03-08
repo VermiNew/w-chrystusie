@@ -1,4 +1,5 @@
 ---
+category: Modlitwy za wstawiennictwem świętych
 title: Akt ofiarowania się Bogu św. o. St. Papczyńskiego
 source: https://niezbednik.niedziela.pl/artykul/205/Akt-ofiarowania-sie-Bogu-sw-o-St
 ---

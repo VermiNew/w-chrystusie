@@ -1,4 +1,5 @@
 ---
+category: Litanie
 title: Litania do św. Stanisława Kostki
 source: https://www.niedziela.pl/artykul/104318
 ---

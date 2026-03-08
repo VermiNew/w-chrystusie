@@ -1,4 +1,5 @@
 ---
+category: Modlitwy codzienne
 source: https://modlitwy24.pl/modlitwa-chwala-ojcu/
 title: Chwała Ojcu
 ---

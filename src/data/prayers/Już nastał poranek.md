@@ -1,4 +1,5 @@
 ---
+category: Modlitwy codzienne
 title: Już nastał poranek
 source: https://niezbednik.niedziela.pl/artykul/172/Juz-nastal-poranek
 ---

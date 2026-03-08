@@ -3,6 +3,7 @@ export interface MarkdownEntry {
   title: string
   body: string
   source?: string
+  category?: string
 }
 
 export function parseMarkdown(filename: string, raw: string): MarkdownEntry {
@@ -20,6 +21,7 @@ export function parseMarkdown(filename: string, raw: string): MarkdownEntry {
     title: attrs['title'] ?? filename,
     body: match[2].trim(),
     source: attrs['source'] || undefined,
+    category: attrs['category'] || undefined,
   }
 }
 

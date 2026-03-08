@@ -1,4 +1,5 @@
 ---
+category: Katechizm
 title: Główne Prawdy Wiary
 source: https://niezbednik.niedziela.pl/artykul/4832/Glowne-Prawdy-Wiary
 ---

@@ -1,4 +1,5 @@
 ---
+category: Litanie
 title: Litania Narodu Polskiego
 source: https://niezbednik.niedziela.pl/artykul/686/Litania-Narodu-Polskiego
 ---

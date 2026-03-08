@@ -1,4 +1,5 @@
 ---
+category: Modlitwy codzienne
 title: Przykładowy pacierz
 ---
 

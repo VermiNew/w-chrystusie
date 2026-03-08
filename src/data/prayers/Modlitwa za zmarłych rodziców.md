@@ -1,4 +1,5 @@
 ---
+category: Modlitwy za zmarłych
 title: Modlitwa za zmarłych rodziców
 source: https://niezbednik.niedziela.pl/artykul/262/Modlitwa-za-zmarlych-rodzicow
 ---

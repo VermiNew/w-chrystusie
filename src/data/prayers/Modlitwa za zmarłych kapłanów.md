@@ -1,4 +1,5 @@
 ---
+category: Modlitwy za zmarłych
 title: Modlitwa za zmarłych kapłanów
 source: https://niezbednik.niedziela.pl/artykul/257/Modlitwa-za-zmarlych-kaplanow
 ---

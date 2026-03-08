@@ -1,4 +1,5 @@
 ---
+category: Litanie
 title: Litania do św. Lidii
 source: https://www.niedziela.pl/artykul/774/Litania-do-sw-Lidii
 ---

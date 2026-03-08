@@ -1,4 +1,5 @@
 ---
+category: Nabożeństwa
 title: Gorzkie żale - Całość
 source: https://niezbednik.niedziela.pl/artykul/781/Gorzkie-zale
 ---

@@ -1,4 +1,5 @@
 ---
+category: Modlitwy za rodzinę
 title: Modlitwa o dobrego męża i dobrą żonę
 source: https://niezbednik.niedziela.pl/artykul/269/Modlitwa-o-dobrego-mezadobra-zone
 ---

@@ -1,4 +1,5 @@
 ---
+category: Modlitwy za rodzinę
 title: Modlitwa o dobrego męża & żonę (do św. Józefa)
 source: https://niezbednik.niedziela.pl/artykul/270/Modlitwa-o-dobrego-mezazone-do-sw-Jozefa
 ---

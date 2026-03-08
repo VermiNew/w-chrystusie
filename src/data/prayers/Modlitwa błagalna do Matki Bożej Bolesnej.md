@@ -1,4 +1,5 @@
 ---
+category: Modlitwy maryjne
 title: Modlitwa błagalna do Matki Bożej Bolesnej
 ---
 

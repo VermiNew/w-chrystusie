@@ -1,4 +1,5 @@
 ---
+category: Modlitwy codzienne
 title: Przykładowe Modlitwy poranne
 source: https://niezbednik.niedziela.pl/artykul/170/Modlitwy-poranne
 ---

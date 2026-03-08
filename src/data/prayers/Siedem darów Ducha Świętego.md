@@ -1,4 +1,5 @@
 ---
+category: Katechizm
 title: Siedem darów Ducha Świętego
 source: https://niezbednik.niedziela.pl/artykul/4839/Siedem-darow-Ducha-Swietego
 ---

@@ -1,4 +1,5 @@
 ---
+category: Modlitwy codzienne
 title: Przykładowa Modlitwa na koniec dnia
 source: https://niezbednik.niedziela.pl/artykul/186/Modlitwa-na-koniec-dnia
 ---

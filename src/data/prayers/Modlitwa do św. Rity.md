@@ -1,4 +1,5 @@
 ---
+category: Modlitwy za wstawiennictwem świętych
 title: Modlitwa do św. Rity
 source: https://niezbednik.niedziela.pl/artykul/250/Modlitwa-do-sw-Rity
 ---

@@ -1,4 +1,5 @@
 ---
+category: Litanie
 title: Litania Loretańska do Najświętszej Maryi Panny
 source: https://niezbednik.niedziela.pl/artykul/281/Litania-Loretanska-do-Najswietszej-Maryi
 ---

@@ -1,4 +1,5 @@
 ---
+category: Modlitwy za rodzinę
 title: Modlitwa za narzeczoną
 source: https://niezbednik.niedziela.pl/artykul/266/Modlitwa-za-narzeczona
 ---

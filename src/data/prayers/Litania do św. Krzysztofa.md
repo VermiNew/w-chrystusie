@@ -1,4 +1,5 @@
 ---
+category: Litanie
 title: Litania do św. Krzysztofa
 source: https://niezbednik.niedziela.pl/artykul/4934/Litania-do-sw-Krzysztofa
 ---

@@ -1,4 +1,5 @@
 ---
+category: Katechizm
 title: Dziesięć przykazań Bożych
 source: https://niezbednik.niedziela.pl/artykul/4833/Dziesiec-przykazan-Bozych
 ---

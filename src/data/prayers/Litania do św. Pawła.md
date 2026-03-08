@@ -1,4 +1,5 @@
 ---
+category: Litanie
 title: Litania do św. Pawła
 source: https://niezbednik.niedziela.pl/artykul/2761/Litania-do-sw-Pawla
 ---

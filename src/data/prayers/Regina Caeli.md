@@ -1,4 +1,5 @@
 ---
+category: Modlitwy maryjne
 title: Regina Caeli
 source: https://niezbednik.niedziela.pl/artykul/246/Regina-caeli-w-okresie-wielkanocnym
 ---

@@ -1,4 +1,5 @@
 ---
+category: Litanie
 title: Litania do św. Andrzeja Boboli
 source: https://niezbednik.niedziela.pl/artykul/4794/Litania-do-sw-Andrzeja-Boboli
 ---

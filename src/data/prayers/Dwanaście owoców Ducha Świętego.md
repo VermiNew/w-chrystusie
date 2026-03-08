@@ -1,4 +1,5 @@
 ---
+category: Katechizm
 title: Dwanaście owoców Ducha Świętego
 source: https://niezbednik.niedziela.pl/artykul/4840/Dwanascie-owocow-Ducha-Swietego
 ---

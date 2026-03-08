@@ -1,4 +1,5 @@
 ---
+category: Litanie
 title: Litania do św. Zygmunta Szczęsnego Felińskiego
 source: https://niezbednik.niedziela.pl/artykul/3186/Litania-do-sw-Zygmunta-Szczesnego
 ---

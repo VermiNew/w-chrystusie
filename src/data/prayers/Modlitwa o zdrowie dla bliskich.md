@@ -1,4 +1,5 @@
 ---
+category: Modlitwy o zdrowie
 title: Modlitwa o zdrowie dla bliskich
 source: https://www.spm.org.pl/modlitwy-o-zdrowie
 ---

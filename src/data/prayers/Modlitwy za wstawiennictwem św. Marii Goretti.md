@@ -1,4 +1,5 @@
 ---
+category: Modlitwy za wstawiennictwem świętych
 title: Modlitwy za wstawiennictwem św. Marii Goretti
 source: https://www.niedziela.pl/artykul/80790
 ---
