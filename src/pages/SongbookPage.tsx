@@ -15,6 +15,11 @@ export default function SongbookPage() {
         <div className="song-text">
           <Markdown>{selected.body}</Markdown>
         </div>
+        {selected.source && (
+          <a className="source-link" href={selected.source} target="_blank" rel="noopener noreferrer">
+            Źródło
+          </a>
+        )}
       </div>
     )
   }
