@@ -1,4 +1,5 @@
 ---
+category: Modlitwy za rodzinę
 title: Modlitwa za narzeczonego
 source: https://niezbednik.niedziela.pl/artykul/265/Modlitwa-za-narzeczonego
 ---

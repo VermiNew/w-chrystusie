@@ -1,4 +1,5 @@
 ---
+category: Litanie
 title: Litania do św. Rity
 source: https://niezbednik.niedziela.pl/artykul/278/Litania-do-sw-Rity
 ---

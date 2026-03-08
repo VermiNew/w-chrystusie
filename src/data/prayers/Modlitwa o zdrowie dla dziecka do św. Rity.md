@@ -1,4 +1,5 @@
 ---
+category: Modlitwy o zdrowie
 title: Modlitwa o zdrowie dla dziecka do św. Rity
 source: https://www.spm.org.pl/modlitwy-o-zdrowie
 ---

@@ -1,4 +1,5 @@
 ---
+category: Katechizm
 title: Siedem sakramentów świętych
 source: https://niezbednik.niedziela.pl/artykul/4835/Siedem-sakramentow-swietych
 ---

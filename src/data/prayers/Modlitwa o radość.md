@@ -1,4 +1,5 @@
 ---
+category: Modlitwy osobiste
 title: Modlitwa o radość
 source: https://niezbednik.niedziela.pl/artykul/195/Modlitwa-o-radosc
 ---

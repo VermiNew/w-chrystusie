@@ -1,4 +1,5 @@
 ---
+category: Litanie
 title: Litania do Najdroższej Krwi Pana Jezusa
 source: https://niezbednik.niedziela.pl/artykul/283/Litania-do-Najdrozszej-Krwi-Pana-Jezusa
 ---

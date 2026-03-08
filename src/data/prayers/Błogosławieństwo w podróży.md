@@ -1,4 +1,5 @@
 ---
+category: Modlitwy w podróży
 title: Błogosławieństwo w podróży
 source: https://niezbednik.niedziela.pl/artykul/194/Blogoslawienstwo-w-podrozy
 ---

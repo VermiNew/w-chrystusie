@@ -1,4 +1,5 @@
 ---
+category: Modlitwy za rodzinę
 title: Modlitwy za osoby poszukujące męża żony
 source: https://niezbednik.niedziela.pl/artykul/267/Modlitwy-za-osoby-poszukujace-mezazony
 ---

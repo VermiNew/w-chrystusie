@@ -1,4 +1,5 @@
 ---
+category: Litanie
 title: Litania do św. Antoniego z Padwy
 source: https://niezbednik.niedziela.pl/artykul/279/Litania-do-sw-Antoniego-z-Padwy
 ---

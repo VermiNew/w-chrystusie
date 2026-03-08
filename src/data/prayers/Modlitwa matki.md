@@ -1,4 +1,5 @@
 ---
+category: Modlitwy za rodzinę
 title: Modlitwa matki
 source: https://niezbednik.niedziela.pl/artykul/261/Modlitwa-matki
 ---

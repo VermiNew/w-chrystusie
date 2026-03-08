@@ -1,4 +1,5 @@
 ---
+category: Litanie
 title: Litania do Niepokalanego Serca Maryi
 source: https://niezbednik.niedziela.pl/artykul/5366/Litania-do-Niepokalanego-Serca-Maryi
 ---

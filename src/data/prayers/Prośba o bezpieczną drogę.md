@@ -1,4 +1,5 @@
 ---
+category: Modlitwy w podróży
 title: Prośba o bezpieczną drogę
 source: https://niezbednik.niedziela.pl/artykul/193/Prosba-o-bezpieczna-droge
 ---

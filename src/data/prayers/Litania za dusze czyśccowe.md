@@ -1,4 +1,5 @@
 ---
+category: Litanie
 title: Litania za dusze czyśccowe
 source: https://niezbednik.niedziela.pl/artykul/2818/Litania-za-dusze-czysccowe
 ---

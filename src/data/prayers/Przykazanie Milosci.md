@@ -1,4 +1,5 @@
 ---
+category: Katechizm
 title: Przykazanie Milosci
 source: https://niezbednik.niedziela.pl/artykul/183/Przykazanie-Milosci
 ---

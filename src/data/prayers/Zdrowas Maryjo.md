@@ -1,4 +1,5 @@
 ---
+category: Modlitwy codzienne
 source: https://www.biblijni.pl/modlitwy/4_zdrowas_maryjo.html
 title: Zdrowaś Maryjo
 ---

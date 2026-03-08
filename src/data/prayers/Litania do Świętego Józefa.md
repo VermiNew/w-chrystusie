@@ -1,4 +1,5 @@
 ---
+category: Litanie
 title: Litania do Świętego Józefa
 source: https://niezbednik.niedziela.pl/artykul/280/Litania-do-Swietego-Jozefa
 ---

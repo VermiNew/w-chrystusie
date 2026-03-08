@@ -1,4 +1,5 @@
 ---
+category: Katechizm
 title: Dwa przykazania miłości
 source: https://niezbednik.niedziela.pl/artykul/4849/Dwa-przykazania-milosci
 ---

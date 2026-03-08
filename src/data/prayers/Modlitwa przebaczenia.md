@@ -1,4 +1,5 @@
 ---
+category: Modlitwy osobiste
 title: Modlitwa przebaczenia
 source: https://niezbednik.niedziela.pl/artykul/2821/Modlitwa-przebaczenia
 ---

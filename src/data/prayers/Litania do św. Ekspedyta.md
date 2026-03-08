@@ -1,4 +1,5 @@
 ---
+category: Litanie
 title: Litania do św. Ekspedyta
 source: https://niezbednik.niedziela.pl/artykul/3451/Litania-do-sw-Ekspedyta
 ---

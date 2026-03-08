@@ -1,4 +1,5 @@
 ---
+category: Modlitwy maryjne
 title: Akt zawierzenia Matce Bożej Fatimskiej
 source: https://niezbednik.niedziela.pl/artykul/313/Akt-zawierzenia-Matce-Bozej-Fatimskiej
 ---

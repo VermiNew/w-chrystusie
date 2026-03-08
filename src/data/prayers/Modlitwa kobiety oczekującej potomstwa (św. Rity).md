@@ -1,4 +1,5 @@
 ---
+category: Modlitwy za wstawiennictwem świętych
 title: Modlitwa kobiety oczekującej potomstwa (św. Rity)
 source: https://niezbednik.niedziela.pl/artykul/252/Modlitwa-kobiety-oczekujacej-potomstwa-sw
 ---

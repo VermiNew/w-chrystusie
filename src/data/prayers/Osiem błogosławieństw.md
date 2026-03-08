@@ -1,4 +1,5 @@
 ---
+category: Katechizm
 title: Osiem błogosławieństw
 source: https://niezbednik.niedziela.pl/artykul/4838/Osiem-blogoslawienstw
 ---

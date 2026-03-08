@@ -1,4 +1,5 @@
 ---
+category: Modlitwy codzienne
 title: Nowy dzień dajesz mi, Panie
 source: https://niezbednik.niedziela.pl/artykul/174/Nowy-dzien-dajesz-mi-Panie
 ---

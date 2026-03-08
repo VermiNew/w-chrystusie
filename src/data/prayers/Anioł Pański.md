@@ -1,4 +1,5 @@
 ---
+category: Modlitwy maryjne
 title: Anioł Pański
 source: https://modlitwy24.pl/aniol-panski/
 ---

@@ -1,4 +1,5 @@
 ---
+category: Modlitwy codzienne
 title: Przykładowa modlitwa wieczorna
 source: https://niezbednik.niedziela.pl/artykul/178/Modlitwa-wieczorna
 ---

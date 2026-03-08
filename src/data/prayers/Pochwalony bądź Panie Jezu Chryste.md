@@ -1,4 +1,5 @@
 ---
+category: Modlitwy codzienne
 title: Pochwalony bądź Panie Jezu Chryste
 source: https://niezbednik.niedziela.pl/artykul/171/Pochwalony-badz-Panie-Jezu-Chryste
 ---

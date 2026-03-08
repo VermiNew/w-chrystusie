@@ -1,4 +1,5 @@
 ---
+category: Modlitwy za rodzinę
 title: Modlitwa o błogosławieństwo domowe
 source: https://niezbednik.niedziela.pl/artykul/264/Modlitwa-o-blogoslawienstwo-domowe
 ---

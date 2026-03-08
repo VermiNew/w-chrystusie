@@ -1,4 +1,5 @@
 ---
+category: Modlitwy za rodzinę
 title: Modlitwa w kryzysie małżeńskim
 source: https://niezbednik.niedziela.pl/artykul/263/Modlitwa-w-kryzysie-malzenskim
 ---

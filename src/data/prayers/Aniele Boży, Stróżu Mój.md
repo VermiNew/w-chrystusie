@@ -1,4 +1,5 @@
 ---
+category: Modlitwy codzienne
 title: Aniele Boży, Stróżu Mój
 source: https://niezbednik.niedziela.pl/artykul/181/Aniele-Bozy-Strozu-moj
 ---

@@ -1,4 +1,5 @@
 ---
+category: Modlitwy codzienne
 title: Boże mój i Ojcze!
 source: https://niezbednik.niedziela.pl/artykul/176/Boze-moj-i-Ojcze
 ---

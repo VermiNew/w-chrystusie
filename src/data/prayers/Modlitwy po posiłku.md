@@ -1,4 +1,5 @@
 ---
+category: Modlitwy codzienne
 title: Modlitwy po posiłku
 source: https://niezbednik.niedziela.pl/artykul/240/Modlitwy-po-posilku
 ---

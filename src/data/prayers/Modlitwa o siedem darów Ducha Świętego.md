@@ -1,4 +1,5 @@
 ---
+category: Modlitwy do Ducha Świętego
 title: Modlitwa o siedem darów Ducha Świętego
 source: https://niezbednik.niedziela.pl/artykul/342/Modlitwa-o-siedem-darow-Ducha-Swietego
 ---
