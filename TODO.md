@@ -14,10 +14,10 @@
 - [x] Migracja danych z JSON na Markdown z frontmatter
 - [x] Interaktywny różaniec — wybór tajemnic, krok po kroku, pasek postępu
 - [x] Zmiana nazwy na „W Chrystusie"
+- [x] Logo i favicon
 
 ## Do zrobienia
 
-- [ ] Logo i favicon
 - [ ] Pismo Święte — pozyskać katolicką wersję z otwartą licencją
 - [ ] Mobile responsiveness — poprawki layoutu na 375px+
 - [ ] Akcenty kolorystyczne — violet dla hover/active, rubric red dla dekoracji
@@ -27,3 +27,7 @@
 - [ ] Różaniec — wizualizacja paciorków
 - [ ] Różaniec — automatyczny dobór tajemnic wg dnia tygodnia
 - [ ] Pieśni — uzupełnienie treści
+
+## Na już (prawie)
+- Dodać wyświetlanie źródła do modlitw i śpiewnika.
+- Dodać, że kliknięcie na entry w wyszukiwarce przenosi od razu do pliku. (Na razie nie ma reakcji na klik).
