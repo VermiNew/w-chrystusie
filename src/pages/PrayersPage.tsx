@@ -1,9 +1,13 @@
 import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import Markdown from 'react-markdown'
 import { prayers, type Prayer } from '../data/prayers'
 
 export default function PrayersPage() {
-  const [selected, setSelected] = useState<Prayer | null>(null)
+  const location = useLocation()
+  const initialId = (location.state as { selectedId?: string })?.selectedId
+  const initial = initialId ? prayers.find((p) => p.id === initialId) ?? null : null
+  const [selected, setSelected] = useState<Prayer | null>(initial)
 
   if (selected) {
     return (
