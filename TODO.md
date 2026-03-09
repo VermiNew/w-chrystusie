@@ -23,9 +23,8 @@
 - [ ] Pismo Święte — pozyskać katolicką wersję z otwartą licencją
 - [ ] Mobile responsiveness — poprawki layoutu na 375px+
 - [ ] Akcenty kolorystyczne — violet dla hover/active, rubric red dla dekoracji
-- [ ] Small caps — `font-variant: small-caps` dla etykiet kategorii
 - [ ] Kontenery czytania — subtelne obramowanie/cień dla widoków szczegółowych
 - [ ] Różaniec — wizualizacja paciorków
-- [ ] Różaniec — automatyczny dobór tajemnic wg dnia tygodnia
+- [ ] Różaniec — podświetlanie tajemnic wg dnia tygodnia
 - [ ] Pieśni — uzupełnienie treści
 
