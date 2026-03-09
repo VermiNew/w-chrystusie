@@ -8,6 +8,7 @@ interface SearchResult {
   type: 'prayer' | 'song' | 'verse'
   title: string
   snippet: string
+  category?: string
   data: Prayer | Song | { book: string; chapter: number; verse: number }
 }
 
@@ -19,6 +20,7 @@ function searchPrayers(query: string): SearchResult[] {
       type: 'prayer' as const,
       title: p.title,
       snippet: p.body.slice(0, 120) + (p.body.length > 120 ? '…' : ''),
+      category: p.category,
       data: p,
     }))
 }
@@ -31,6 +33,7 @@ function searchSongs(query: string): SearchResult[] {
       type: 'song' as const,
       title: s.title,
       snippet: s.body.slice(0, 120) + (s.body.length > 120 ? '…' : ''),
+      category: s.category,
       data: s,
     }))
 }
@@ -113,6 +116,7 @@ export default function SearchPage() {
             }}
           >
             <span className="search-result-type">{typeLabels[r.type]}</span>
+            {r.category && <span className="search-result-category">{r.category}</span>}
             <strong className="search-result-title">{r.title}</strong>
             <p className="search-result-snippet">{r.snippet}</p>
           </li>
