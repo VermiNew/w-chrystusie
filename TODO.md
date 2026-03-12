@@ -22,7 +22,7 @@
 
 - [ ] Rozbicie monolitycznego `App.css` na osobne pliki CSS per komponent/strona (bez zmiany styli)
 - [ ] Wyłączenie wyszukiwania Biblii w SearchPage (zakomentować/pominąć)
-- [ ] Routing URL dla modlitw i pieśni (`/modlitwy/:id`, `/spiewnik/:id`)
+- [x] Routing URL dla modlitw i pieśni (`/modlitwy/:id`, `/spiewnik/:id`)
 - [x] Strona 404
 - [x] Kafelek Różańca na stronie głównej
 - [x] Meta tagi (`description`, `theme-color`) + `manifest.json` (PWA)
