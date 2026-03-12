@@ -25,7 +25,7 @@
 - [ ] Routing URL dla modlitw i pieśni (`/modlitwy/:id`, `/spiewnik/:id`)
 - [x] Strona 404
 - [ ] Kafelek Różańca na stronie głównej
-- [ ] Meta tagi (`description`, `theme-color`) + `manifest.json` (PWA)
+- [x] Meta tagi (`description`, `theme-color`) + `manifest.json` (PWA)
 - [x] Kategorie pieśni (grupowanie jak w modlitwach)
 
 ## Do zrobienia — treść i design
