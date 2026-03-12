@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useMemo } from 'react'
+import { useParams, Link } from 'react-router-dom'
 import Markdown from 'react-markdown'
 import { prayers, type Prayer } from '../data/prayers'
 
@@ -21,10 +21,8 @@ const categoryOrder = [
 ]
 
 export default function PrayersPage() {
-  const location = useLocation()
-  const initialId = (location.state as { selectedId?: string })?.selectedId
-  const initial = initialId ? prayers.find((p) => p.id === initialId) ?? null : null
-  const [selected, setSelected] = useState<Prayer | null>(initial)
+  const { id } = useParams()
+  const selected = id ? prayers.find((p) => p.id === id) ?? null : null
 
   const grouped = useMemo(() => {
     const map = new Map<string, Prayer[]>()
@@ -41,9 +39,9 @@ export default function PrayersPage() {
   if (selected) {
     return (
       <div className="page">
-        <button className="back-button" onClick={() => setSelected(null)}>
+        <Link to="/modlitwy" className="back-button">
           ← Powrót do listy
-        </button>
+        </Link>
         <h1>{selected.title}</h1>
         <div className="prayer-text">
           <Markdown>{selected.body}</Markdown>
@@ -66,9 +64,9 @@ export default function PrayersPage() {
           <ul className="prayer-list">
             {items.map((prayer) => (
               <li key={prayer.id}>
-                <button className="prayer-item" onClick={() => setSelected(prayer)}>
+                <Link to={`/modlitwy/${prayer.id}`} className="prayer-item">
                   {prayer.title}
-                </button>
+                </Link>
               </li>
             ))}
           </ul>

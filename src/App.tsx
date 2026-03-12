@@ -17,8 +17,10 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/modlitwy" element={<PrayersPage />} />
+          <Route path="/modlitwy/:id" element={<PrayersPage />} />
           <Route path="/pismo-swiete" element={<ScripturePage />} />
           <Route path="/spiewnik" element={<SongbookPage />} />
+          <Route path="/spiewnik/:id" element={<SongbookPage />} />
           <Route path="/rozaniec" element={<RosaryPage />} />
           <Route path="/szukaj" element={<SearchPage />} />
           <Route path="*" element={<NotFoundPage />} />

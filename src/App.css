@@ -177,6 +177,7 @@
 }
 
 .prayer-item {
+  display: block;
   width: 100%;
   text-align: left;
   padding: 1rem 1.25rem;
@@ -458,6 +459,7 @@
 }
 
 .song-item {
+  display: block;
   width: 100%;
   text-align: left;
   padding: 1rem 1.25rem;
