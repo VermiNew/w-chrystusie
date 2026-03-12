@@ -24,7 +24,7 @@
 - [ ] Wyłączenie wyszukiwania Biblii w SearchPage (zakomentować/pominąć)
 - [ ] Routing URL dla modlitw i pieśni (`/modlitwy/:id`, `/spiewnik/:id`)
 - [x] Strona 404
-- [ ] Kafelek Różańca na stronie głównej
+- [x] Kafelek Różańca na stronie głównej
 - [x] Meta tagi (`description`, `theme-color`) + `manifest.json` (PWA)
 - [x] Kategorie pieśni (grupowanie jak w modlitwach)
 
