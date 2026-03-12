@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
-import { FaCross, FaBookBible, FaMusic } from 'react-icons/fa6'
+import { FaCross, FaBookBible, FaMusic, FaHandsPraying } from 'react-icons/fa6'
 
 const sections = [
   { to: '/modlitwy', icon: <FaCross />, title: 'Modlitwy', description: 'Modlitwy codzienne i tradycyjne' },
   { to: '/pismo-swiete', icon: <FaBookBible />, title: 'Pismo Święte', description: 'Uwspółcześniona Biblia Gdańska' },
   { to: '/spiewnik', icon: <FaMusic />, title: 'Śpiewnik', description: 'Pieśni i hymny kościelne' },
-  { to: '/rozaniec', icon: <FaCross />, title: 'Różaniec', description: 'Interaktywny przewodnik krok po kroku' },
+  { to: '/rozaniec', icon: <FaHandsPraying />, title: 'Różaniec', description: 'Interaktywny przewodnik krok po kroku' },
 ]
 
 export default function HomePage() {

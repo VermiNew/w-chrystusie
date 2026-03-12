@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import { FaCross, FaBookBible, FaMusic, FaMagnifyingGlass, FaBars, FaXmark } from 'react-icons/fa6'
+import { FaCross, FaBookBible, FaMusic, FaMagnifyingGlass, FaBars, FaXmark, FaHandsPraying } from 'react-icons/fa6'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -29,7 +29,7 @@ export default function Header() {
           <li><NavLink to="/modlitwy" onClick={closeMenu}><FaCross /> Modlitwy</NavLink></li>
           <li><NavLink to="/pismo-swiete" onClick={closeMenu}><FaBookBible /> Pismo Święte</NavLink></li>
           <li><NavLink to="/spiewnik" onClick={closeMenu}><FaMusic /> Śpiewnik</NavLink></li>
-          <li><NavLink to="/rozaniec" onClick={closeMenu}><FaCross /> Różaniec</NavLink></li>
+          <li><NavLink to="/rozaniec" onClick={closeMenu}><FaHandsPraying /> Różaniec</NavLink></li>
           <li><NavLink to="/szukaj" onClick={closeMenu}><FaMagnifyingGlass /> Szukaj</NavLink></li>
         </ul>
       </nav>
