@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useMemo } from 'react'
+import { useParams, Link } from 'react-router-dom'
 import Markdown from 'react-markdown'
 import { songs, type Song } from '../data/songs'
 
@@ -10,10 +10,8 @@ const categoryOrder = [
 ]
 
 export default function SongbookPage() {
-  const location = useLocation()
-  const initialId = (location.state as { selectedId?: string })?.selectedId
-  const initial = initialId ? songs.find((s) => s.id === initialId) ?? null : null
-  const [selected, setSelected] = useState<Song | null>(initial)
+  const { id } = useParams()
+  const selected = id ? songs.find((s) => s.id === id) ?? null : null
 
   const grouped = useMemo(() => {
     const map = new Map<string, Song[]>()
@@ -30,9 +28,9 @@ export default function SongbookPage() {
   if (selected) {
     return (
       <div className="page">
-        <button className="back-button" onClick={() => setSelected(null)}>
+        <Link to="/spiewnik" className="back-button">
           ← Powrót do listy
-        </button>
+        </Link>
         <h1>{selected.title}</h1>
         <div className="song-text">
           <Markdown>{selected.body}</Markdown>
@@ -55,9 +53,9 @@ export default function SongbookPage() {
           <ul className="song-list">
             {items.map((song) => (
               <li key={song.id}>
-                <button className="song-item" onClick={() => setSelected(song)}>
+                <Link to={`/spiewnik/${song.id}`} className="song-item">
                   {song.title}
-                </button>
+                </Link>
               </li>
             ))}
           </ul>
