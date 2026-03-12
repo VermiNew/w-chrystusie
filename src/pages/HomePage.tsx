@@ -5,6 +5,7 @@ const sections = [
   { to: '/modlitwy', icon: <FaCross />, title: 'Modlitwy', description: 'Modlitwy codzienne i tradycyjne' },
   { to: '/pismo-swiete', icon: <FaBookBible />, title: 'Pismo Święte', description: 'Uwspółcześniona Biblia Gdańska' },
   { to: '/spiewnik', icon: <FaMusic />, title: 'Śpiewnik', description: 'Pieśni i hymny kościelne' },
+  { to: '/rozaniec', icon: <FaCross />, title: 'Różaniec', description: 'Interaktywny przewodnik krok po kroku' },
 ]
 
 export default function HomePage() {
