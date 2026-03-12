@@ -6,6 +6,7 @@ import ScripturePage from './pages/ScripturePage'
 import SongbookPage from './pages/SongbookPage'
 import RosaryPage from './pages/RosaryPage'
 import SearchPage from './pages/SearchPage'
+import NotFoundPage from './pages/NotFoundPage'
 import './App.css'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/spiewnik" element={<SongbookPage />} />
           <Route path="/rozaniec" element={<RosaryPage />} />
           <Route path="/szukaj" element={<SearchPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
     </BrowserRouter>
