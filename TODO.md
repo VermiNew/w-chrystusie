@@ -17,11 +17,12 @@
 - [x] Logo i favicon
 - [x] Wyświetlanie źródła (link) w modlitwach i śpiewniku
 - [x] Klikalne wyniki wyszukiwania — przenoszenie do widoku szczegółowego
+- [x] Cytat biblijny (Mt 7,7–8) na stronie głównej
+- [x] Ikona FaHandsPraying dla Różańca (navbar + kafelek)
 
 ## Do zrobienia — refaktor
 
 - [ ] Rozbicie monolitycznego `App.css` na osobne pliki CSS per komponent/strona (bez zmiany styli)
-- [ ] Wyłączenie wyszukiwania Biblii w SearchPage (zakomentować/pominąć)
 - [x] Routing URL dla modlitw i pieśni (`/modlitwy/:id`, `/spiewnik/:id`)
 - [x] Strona 404
 - [x] Kafelek Różańca na stronie głównej
@@ -37,4 +38,3 @@
 - [ ] Różaniec — wizualizacja paciorków
 - [ ] Różaniec — podświetlanie tajemnic wg dnia tygodnia
 - [ ] Pieśni — uzupełnienie treści
-
