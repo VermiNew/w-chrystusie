@@ -703,7 +703,13 @@
   }
 
   .hero {
-    padding-top: 2.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .hero-quote {
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    margin-bottom: 0;
   }
 
   .section-tiles {
