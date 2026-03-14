@@ -697,7 +697,7 @@
   margin: 0;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 850px) {
   .main {
     padding: 1.5rem 1rem;
   }
@@ -707,9 +707,19 @@
   }
 
   .hero-quote {
-    font-size: 0.9rem;
-    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
     margin-bottom: 0;
+    max-width: 100%;
+    line-height: 1.6;
+  }
+
+  .hero-quote p {
+    margin: 0 0 0.35rem;
+  }
+
+  .hero-quote cite {
+    font-size: 0.8rem;
   }
 
   .section-tiles {
