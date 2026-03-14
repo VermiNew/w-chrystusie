@@ -38,3 +38,6 @@
 - [ ] Różaniec — wizualizacja paciorków
 - [ ] Różaniec — podświetlanie tajemnic wg dnia tygodnia
 - [ ] Pieśni — uzupełnienie treści
+- [ ] Jeśli mniej jak 850px to włączyć już tryb z hamburgerem do nawigacji
+- [ ] Dokończyć cytat na urządzenia mobilne (stylowanie)
+- [ ] Minimalna szerokość strony to: 265px (nie mniej)
