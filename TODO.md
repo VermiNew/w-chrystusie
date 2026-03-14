@@ -19,6 +19,9 @@
 - [x] Klikalne wyniki wyszukiwania — przenoszenie do widoku szczegółowego
 - [x] Cytat biblijny (Mt 7,7–8) na stronie głównej
 - [x] Ikona FaHandsPraying dla Różańca (navbar + kafelek)
+- [x] Jeśli mniej jak 850px to włączyć już tryb z hamburgerem do nawigacji
+- [x] Dokończyć cytat na urządzenia mobilne (stylowanie)
+- [x] Minimalna szerokość strony to: 265px (nie mniej)
 
 ## Do zrobienia — refaktor
 
@@ -38,6 +41,3 @@
 - [ ] Różaniec — wizualizacja paciorków
 - [ ] Różaniec — podświetlanie tajemnic wg dnia tygodnia
 - [ ] Pieśni — uzupełnienie treści
-- [ ] Jeśli mniej jak 850px to włączyć już tryb z hamburgerem do nawigacji
-- [ ] Dokończyć cytat na urządzenia mobilne (stylowanie)
-- [ ] Minimalna szerokość strony to: 265px (nie mniej)
