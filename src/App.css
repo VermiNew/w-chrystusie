@@ -61,7 +61,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 850px) {
   .nav-overlay {
     display: block;
     position: fixed;
