@@ -48,24 +48,21 @@ Use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 - `chore` — tooling, dependencies, config
 - `test` — adding or updating tests
 
-### Scopes for this project
+## Safety & Communication
 
-- `ui` — layout, header, navigation, shared components
-- `prayers` — Modlitwy section
-- `scripture` — Pismo Święte section
-- `songbook` — Śpiewnik section
-- `search` — search functionality
-- `data` — data files, XML parsing
+- **Never `git add .` or `git add -A`** — always review changed files first (`git status`, `git diff`) and stage only the files relevant to the current task.
+- **Be careful and deliberate** — double-check actions before executing them, especially destructive ones.
+- **Ask before deleting** — never remove files, components, or significant code without asking the user first.
+- **Discuss before acting** — explain what you plan to do and wait for confirmation. Exception: trivial, low-risk changes (e.g., fixing a typo) can proceed without asking.
 
-### Examples
+## Code Hygiene
 
-```plaintext
-feat(ui): add layout with header and navigation
-feat(prayers): add prayer list page with sample data
-feat(scripture): load and parse XML bible data
-fix(scripture): correct chapter navigation bug
-style(ui): polish color palette and responsiveness
-```
+- **No new dependencies without asking** — never add new npm packages or libraries without the user's approval.
+- **Comments are welcome** — add meaningful comments where they help understand the code; avoid obvious or redundant ones.
+- **Don't refactor unrelated code** — only touch code that is part of the current task. Don't "improve" or reorganize things that already work.
+- **Don't write tests unless asked** — you may suggest writing tests, but don't create them on your own.
+- **Read before writing** — always read existing code before modifying it. Understand conventions, patterns, and context first.
+- **Don't over-engineer** — do exactly what was asked. Don't add extra features, abstractions, or "improvements" that weren't requested.
 
 ## Project Language
 
