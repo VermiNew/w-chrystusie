@@ -4,6 +4,18 @@
   background-color: var(--color-primary);
   color: var(--color-white);
   padding: 0 2rem;
+  animation: header-slide-down 0.4s ease both;
+}
+
+@keyframes header-slide-down {
+  from {
+    opacity: 0;
+    margin-top: -60px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
 }
 
 .nav {
@@ -87,9 +99,9 @@
     right: 0;
     bottom: 0;
     z-index: 20;
-    background-color: rgba(var(--color-primary-rgb), 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(var(--color-primary-rgb), 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     padding: 1.5rem 1.5rem;
     gap: 0.75rem;
     opacity: 0;
@@ -144,15 +156,25 @@
   max-width: 960px;
   margin: 0 auto;
   padding: 2rem;
+  animation: page-fade-in 0.35s ease both;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes page-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .page h1 {
   margin-top: 0;
   font-family: var(--font-heading);
+  animation: content-fade-in 0.5s ease both;
 }
 
 .page h2 {
   font-family: var(--font-heading);
+  animation: content-fade-in 0.4s ease 0.1s both;
 }
 
 /* Prayers */
@@ -174,7 +196,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  animation: content-fade-in 0.4s ease both;
 }
 
 .prayer-item {
@@ -200,7 +221,20 @@
   line-height: 1.8;
   font-size: 1.1rem;
   font-family: var(--font-reading);
-  animation: content-fade-in 0.4s ease both;
+  animation: text-reveal 0.6s ease both;
+}
+
+@keyframes text-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 .back-button {
@@ -212,6 +246,18 @@
   padding: 0.5rem 0;
   margin-bottom: 1rem;
   font-weight: 500;
+  animation: slide-in-left 0.3s ease both;
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .back-button:hover {
@@ -341,7 +387,6 @@
   flex-direction: column;
   gap: 0.4rem;
   margin-bottom: 1rem;
-  animation: content-fade-in 0.4s ease both;
 }
 
 .book-item {
@@ -367,7 +412,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
-  animation: content-fade-in 0.4s ease both;
 }
 
 .chapter-button {
@@ -381,6 +425,7 @@
   cursor: pointer;
   text-align: center;
   transition: background-color 0.2s, border-color 0.2s;
+  animation: list-item-in 0.3s ease both;
 }
 
 .chapter-progress {
@@ -457,7 +502,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  animation: content-fade-in 0.4s ease both;
 }
 
 .song-item {
@@ -483,7 +527,7 @@
   line-height: 1.8;
   font-size: 1.1rem;
   font-family: var(--font-reading);
-  animation: content-fade-in 0.4s ease both;
+  animation: text-reveal 0.6s ease both;
 }
 
 /* Search */
@@ -496,6 +540,7 @@
   border-radius: 8px;
   outline: none;
   transition: border-color 0.2s;
+  animation: content-fade-in 0.4s ease 0.1s both;
 }
 
 .search-input:focus {
@@ -630,14 +675,49 @@
   }
 }
 
-@keyframes hero-fade-in {
+@keyframes list-item-in {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(12px) scale(0.98);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Staggered delays for list items — target <li> inside lists */
+.prayer-list li, .song-list li, .book-list li, .rosary-sets li, .search-results li {
+  animation: list-item-in 0.4s ease both;
+}
+
+.prayer-list li:nth-child(1), .song-list li:nth-child(1), .book-list li:nth-child(1), .rosary-sets li:nth-child(1), .search-results li:nth-child(1) { animation-delay: 0.03s; }
+.prayer-list li:nth-child(2), .song-list li:nth-child(2), .book-list li:nth-child(2), .rosary-sets li:nth-child(2), .search-results li:nth-child(2) { animation-delay: 0.06s; }
+.prayer-list li:nth-child(3), .song-list li:nth-child(3), .book-list li:nth-child(3), .rosary-sets li:nth-child(3), .search-results li:nth-child(3) { animation-delay: 0.09s; }
+.prayer-list li:nth-child(4), .song-list li:nth-child(4), .book-list li:nth-child(4), .rosary-sets li:nth-child(4), .search-results li:nth-child(4) { animation-delay: 0.12s; }
+.prayer-list li:nth-child(5), .song-list li:nth-child(5), .book-list li:nth-child(5), .rosary-sets li:nth-child(5), .search-results li:nth-child(5) { animation-delay: 0.15s; }
+.prayer-list li:nth-child(6), .song-list li:nth-child(6), .book-list li:nth-child(6), .rosary-sets li:nth-child(6), .search-results li:nth-child(6) { animation-delay: 0.18s; }
+.prayer-list li:nth-child(7), .song-list li:nth-child(7), .book-list li:nth-child(7), .rosary-sets li:nth-child(7), .search-results li:nth-child(7) { animation-delay: 0.21s; }
+.prayer-list li:nth-child(8), .song-list li:nth-child(8), .book-list li:nth-child(8), .rosary-sets li:nth-child(8), .search-results li:nth-child(8) { animation-delay: 0.24s; }
+.prayer-list li:nth-child(n+9), .song-list li:nth-child(n+9), .book-list li:nth-child(n+9), .rosary-sets li:nth-child(n+9), .search-results li:nth-child(n+9) { animation-delay: 0.27s; }
+
+/* Chapter grid stagger */
+.chapter-grid .chapter-button:nth-child(1) { animation-delay: 0.02s; }
+.chapter-grid .chapter-button:nth-child(2) { animation-delay: 0.04s; }
+.chapter-grid .chapter-button:nth-child(3) { animation-delay: 0.06s; }
+.chapter-grid .chapter-button:nth-child(4) { animation-delay: 0.08s; }
+.chapter-grid .chapter-button:nth-child(5) { animation-delay: 0.10s; }
+.chapter-grid .chapter-button:nth-child(6) { animation-delay: 0.12s; }
+.chapter-grid .chapter-button:nth-child(n+7) { animation-delay: 0.14s; }
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -660,23 +740,30 @@
   text-decoration: none;
   color: inherit;
   transition: border-color 0.2s, box-shadow 0.2s, translate 0.2s;
-  animation: tile-fade-in 0.5s ease both;
+  animation: tile-slide-left 0.5s ease both;
 }
 
+.section-tile:nth-child(odd) { animation-name: tile-slide-left; }
+.section-tile:nth-child(even) { animation-name: tile-slide-right; }
 .section-tile:nth-child(1) { animation-delay: 0.25s; }
 .section-tile:nth-child(2) { animation-delay: 0.35s; }
 .section-tile:nth-child(3) { animation-delay: 0.45s; }
 .section-tile:nth-child(4) { animation-delay: 0.55s; }
 
-@keyframes tile-fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes tile-slide-left {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes tile-slide-right {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 .section-tile:hover {
   border-color: var(--color-hover-border);
-  box-shadow: 0 4px 16px rgba(var(--color-primary-rgb), 0.08);
-  translate: 0 -3px;
+  box-shadow: 0 6px 24px rgba(var(--color-primary-rgb), 0.12), 0 0 0 3px rgba(var(--color-primary-rgb), 0.06);
+  translate: 0 -4px;
 }
 
 .section-tile-icon {
@@ -728,6 +815,15 @@
     grid-template-columns: 1fr;
   }
 
+  .section-tile {
+    animation-name: list-item-in !important;
+  }
+
+  .section-tile:nth-child(1) { animation-delay: 0.1s; }
+  .section-tile:nth-child(2) { animation-delay: 0.17s; }
+  .section-tile:nth-child(3) { animation-delay: 0.24s; }
+  .section-tile:nth-child(4) { animation-delay: 0.31s; }
+
   .hero-title {
     font-size: 2rem;
   }
@@ -759,6 +855,7 @@
 .rosary-intro {
   color: var(--color-text-muted);
   margin-bottom: 1rem;
+  animation: content-fade-in 0.4s ease 0.1s both;
 }
 
 .rosary-sets {
@@ -767,7 +864,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  animation: content-fade-in 0.4s ease both;
 }
 
 .rosary-set-button {
