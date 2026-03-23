@@ -67,7 +67,7 @@ export default function RosaryPage() {
         </div>
       </div>
 
-      <div className="rosary-step">
+      <div className="rosary-step" key={currentStep}>
         {step.mystery && (
           <p className="rosary-mystery">{step.mystery}</p>
         )}
