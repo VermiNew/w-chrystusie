@@ -1,7 +1,9 @@
-import { useMemo } from 'react'
+import { useMemo, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import Markdown from 'react-markdown'
 import { prayers, type Prayer } from '../data/prayers'
+
+const SCROLL_KEY = 'prayers-scroll'
 
 const categoryOrder = [
   'Modlitwy codzienne',
@@ -23,6 +25,21 @@ const categoryOrder = [
 export default function PrayersPage() {
   const { id } = useParams()
   const selected = id ? prayers.find((p) => p.id === id) ?? null : null
+  // Restore scroll position when returning to list (runs after App's scrollTo(0,0))
+  useEffect(() => {
+    if (!selected) {
+      const saved = sessionStorage.getItem(SCROLL_KEY)
+      if (saved) {
+        const y = parseInt(saved, 10)
+        sessionStorage.removeItem(SCROLL_KEY)
+        requestAnimationFrame(() => window.scrollTo(0, y))
+      }
+    }
+  }, [selected])
+
+  const saveScroll = () => {
+    sessionStorage.setItem(SCROLL_KEY, String(window.scrollY))
+  }
 
   const grouped = useMemo(() => {
     const map = new Map<string, Prayer[]>()
@@ -64,7 +81,7 @@ export default function PrayersPage() {
           <ul className="prayer-list">
             {items.map((prayer) => (
               <li key={prayer.id}>
-                <Link to={`/modlitwy/${prayer.id}`} className="prayer-item">
+                <Link to={`/modlitwy/${prayer.id}`} className="prayer-item" onClick={saveScroll}>
                   {prayer.title}
                 </Link>
               </li>

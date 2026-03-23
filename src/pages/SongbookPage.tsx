@@ -1,7 +1,9 @@
-import { useMemo } from 'react'
+import { useMemo, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import Markdown from 'react-markdown'
 import { songs, type Song } from '../data/songs'
+
+const SCROLL_KEY = 'songbook-scroll'
 
 const categoryOrder = [
   'Pieśni uwielbienia',
@@ -12,6 +14,21 @@ const categoryOrder = [
 export default function SongbookPage() {
   const { id } = useParams()
   const selected = id ? songs.find((s) => s.id === id) ?? null : null
+  // Restore scroll position when returning to list (runs after App's scrollTo(0,0))
+  useEffect(() => {
+    if (!selected) {
+      const saved = sessionStorage.getItem(SCROLL_KEY)
+      if (saved) {
+        const y = parseInt(saved, 10)
+        sessionStorage.removeItem(SCROLL_KEY)
+        requestAnimationFrame(() => window.scrollTo(0, y))
+      }
+    }
+  }, [selected])
+
+  const saveScroll = () => {
+    sessionStorage.setItem(SCROLL_KEY, String(window.scrollY))
+  }
 
   const grouped = useMemo(() => {
     const map = new Map<string, Song[]>()
@@ -53,7 +70,7 @@ export default function SongbookPage() {
           <ul className="song-list">
             {items.map((song) => (
               <li key={song.id}>
-                <Link to={`/spiewnik/${song.id}`} className="song-item">
+                <Link to={`/spiewnik/${song.id}`} className="song-item" onClick={saveScroll}>
                   {song.title}
                 </Link>
               </li>
