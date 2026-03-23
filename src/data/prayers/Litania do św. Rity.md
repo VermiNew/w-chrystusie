@@ -4,22 +4,20 @@ title: Litania do św. Rity
 source: https://niezbednik.niedziela.pl/artykul/278/Litania-do-sw-Rity
 ---
 
-Litania do św. Rity
+Kyrie eleison. Chryste eleison. Kyrie eleison.
 
+Chryste, usłysz nas. Chryste, wysłuchaj nas.
 
-Kyrie eleison, Chryste eleison, Kyrie eleison.
-Chryste, usłysz nas.
-Chryste, wysłuchaj nas.
-Ojcze z nieba Boże, zmiłuj się nad nami.
-Synu, Odkupicielu świata, Boże
-Duchu Święty, Boże
-Święta Trójco, jedyny Boże
+Ojcze z nieba, Boże, — zmiłuj się nad nami.
+Synu, Odkupicielu świata, Boże, — zmiłuj się nad nami.
+Duchu Święty, Boże, — zmiłuj się nad nami.
+Święta Trójco, Jedyny Boże, — zmiłuj się nad nami.
 
-Święta Maryjo, Matko Dobrej Rady, módl się za nami.
+Święta Maryjo, Matko Dobrej Rady, — módl się za nami.
 Święty Józefie,
 Święty Augustynie,
 Święta Moniko,
-Święta Rito,
+Święta Rito, — módl się za nami.
 Orędowniczko w sytuacjach beznadziejnych,
 Pocieszycielko zasmuconych,
 Obrono i ucieczko opuszczonych,
@@ -39,7 +37,7 @@ Oblubienico Jezusa cierpiącego,
 Święta Rito, cudami przez Boga wsławiona,
 Święta Rito, zawsze przez Boga wysłuchana,
 
-Abyśmy się wyrzekli miłości własnej, uproś nam, św. Rito.
+Abyśmy się wyrzekli miłości własnej, — uproś nam, święta Rito.
 Abyśmy ćwiczyli się w pokorze,
 Abyśmy nasz krzyż cierpliwie nieśli,
 Abyśmy Boga ponad wszystko kochali,
@@ -48,15 +46,16 @@ Abyśmy naszym winowajcom chętnie wybaczali,
 Abyśmy bliźnich jak samych siebie kochali,
 Abyśmy Twoje cnoty naśladowali,
 
-We wszystkich prośbach, wspomagaj nas, św. Rito.
+We wszystkich prośbach, — wspomagaj nas, święta Rito.
 We wszystkich niebezpieczeństwach,
 We wszystkich potrzebach i uciskach,
 W każdym smutku i przeciwności,
 W krzyżu i cierpieniu,
 W godzinę śmierci,
-Baranku Boży, który gładzisz grzechy świata, przepuść nam Panie.
-Baranku Boży, który gładzisz grzechy świata, wysłuchaj nas Panie.
-Baranku Boży, który gładzisz grzechy świata, zmiłuj się nad nami.
 
-P. Módl się za nami święta Rito.
-W. Abyśmy się stali godnymi obietnic Chrystusowych.
+Baranku Boży, który gładzisz grzechy świata, — przepuść nam, Panie.
+Baranku Boży, który gładzisz grzechy świata, — wysłuchaj nas, Panie.
+Baranku Boży, który gładzisz grzechy świata, — zmiłuj się nad nami.
+
+P.: Módl się za nami, święta Rito.
+W.: Abyśmy się stali godnymi obietnic Chrystusowych.

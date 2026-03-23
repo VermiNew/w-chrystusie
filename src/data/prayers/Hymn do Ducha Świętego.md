@@ -1,12 +1,13 @@
 ---
 category: Modlitwy do Ducha Świętego
-title: Hymn do Ducha Świętego
+title: Hymn do Ducha Świętego (Veni Creator Spiritus)
 source: https://niezbednik.niedziela.pl/artykul/339/Hymn-do-Ducha-Swietego
 ---
 
-Hymn do Ducha Świętego
+## Po polsku
+
 O Stworzycielu, Duchu, przyjdź,
-Nawiedz dusz wiernych Tobie krąg.
+Nawiedź dusz wiernych Tobie krąg.
 Niebieską łaskę zesłać racz
 Sercom, co dziełem są Twych rąk.
 
@@ -39,14 +40,17 @@ Niech Bogu Ojcu chwała brzmi,
 Synowi, który zmartwychwstał,
 I Temu, co pociesza nas,
 Niech hołd wieczystych płynie chwał.
+
 Amen.
 
-Veni Creator Spiritus
+---
 
-1.Veni, Creator Spiritus,
+## Po łacinie
+
+1. Veni, Creator Spiritus,
 Mentes tuorum visita,
 Imple superna gratia,
-Que tu creasti pectora.
+Quae tu creasti pectora.
 
 2. Qui diceris Paraclitus,
 Altissimi donum Dei,
@@ -60,7 +64,7 @@ Sermone ditans guttura.
 
 4. Accende lumen sensibus:
 Infunde amorem cordibus:
-Infirma nostri coporis
+Infirma nostri corporis
 Virtute firmans perpeti.
 
 5. Hostem repellas longius,
@@ -77,4 +81,5 @@ Credamus omni tempore.
 Et Filio, qui a mortuis
 surrexit, ac Paraclito,
 In saeculorum saecula.
-Amen
+
+Amen.

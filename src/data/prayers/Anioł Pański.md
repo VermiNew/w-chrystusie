@@ -4,45 +4,57 @@ title: Anioł Pański
 source: https://modlitwy24.pl/aniol-panski/
 ---
 
-Modlitwa Anioł Pański (Pełny Tekst)
-Całą modlitwę odmawiamy w następujący sposób:
+*Odmawiana o wschodzie, południu i zachodzie słońca. Całą modlitwę odmawiamy w następujący sposób:*
 
-Anioł Pański
-P: Anioł Pański zwiastował Pannie Maryi.
-R: I poczęła z Ducha Świętego.
+---
 
-Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i w godzinę śmierci naszej.
-P: Oto ja Służebnica Pańska.
-R: Niech mi się stanie według słowa Twego.
+P.: Anioł Pański zwiastował Pannie Maryi.
+W.: I poczęła z Ducha Świętego.
 
-Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i w godzinę śmierci naszej.
-P: A Słowo Ciałem się stało.
-R: I zamieszkało między nami.
+Zdrowaś Maryjo, łaski pełna, Pan z Tobą.
+Błogosławionaś Ty między niewiastami
+i błogosławiony owoc żywota Twojego, Jezus.
+Święta Maryjo, Matko Boża,
+módl się za nami grzesznymi,
+teraz i w godzinę śmierci naszej. Amen.
 
-Zdrowaś Maryjo, łaski pełna, Pan z Tobą, błogosławionaś Ty między niewiastami i błogosławiony owoc żywota Twojego, Jezus. Święta Maryjo, Matko Boża, módl się za nami grzesznymi teraz i w godzinę śmierci naszej.
-P: Módl się za nami święta Boża Rodzicielko,
-R: abyśmy się stali godnymi obietnic Chrystusowych.
+P.: Oto ja Służebnica Pańska.
+W.: Niech mi się stanie według słowa Twego.
+
+Zdrowaś Maryjo…
+
+P.: A Słowo Ciałem się stało.
+W.: I zamieszkało między nami.
+
+Zdrowaś Maryjo…
+
+P.: Módl się za nami, święta Boża Rodzicielko.
+W.: Abyśmy się stali godnymi obietnic Chrystusowych.
+
+---
 
 Módlmy się:
-Łaskę Twoją prosimy Cię, Panie, racz wlać w serca nasze, abyśmy którzy za zwiastowaniem anielskim Wcielenie Chrystusa, Syna Twego poznali, przez Mękę Jego i Krzyż do chwały zmartwychwstania byli doprowadzeni. Przez Chrystusa Pana naszego. Amen.
+Łaskę Twoją prosimy Cię, Panie, racz wlać w serca nasze, abyśmy — którzy za zwiastowaniem anielskim Wcielenie Chrystusa, Syna Twego, poznali — przez Mękę Jego i Krzyż do chwały zmartwychwstania byli doprowadzeni. Przez Chrystusa Pana naszego. Amen.
 
-lub inny wariant modlitwy końcowej:
+---
+
+*Inny wariant modlitwy końcowej:*
 
 Módlmy się:
-Boże, z Twojej woli w łonie Maryi Dziewicy odwieczne Słowo przyjęło ludzkie ciało; spraw, abyśmy wyznając, że nasz Odkupiciel jest prawdziwym Bogiem i prawdziwym człowiekiem, zasłużyli na udział w Jego boskiej naturze. Przez Chrystusa, Pana naszego. Amen.
+Boże, z Twojej woli w łonie Maryi Dziewicy odwieczne Słowo przyjęło ludzkie ciało. Spraw, abyśmy wyznając, że nasz Odkupiciel jest prawdziwym Bogiem i prawdziwym człowiekiem, zasłużyli na udział w Jego Boskiej naturze. Przez Chrystusa, Pana naszego. Amen.
 
-opcjonalnie można dodać jeszcze:
+---
 
-P: Chwała Ojcu i Synowi i Duchowi Świętemu.
-R: Jak była na początku, teraz i zawsze i na wieki wieków. Amen. (3x)
+*Opcjonalnie:*
 
-P: Wieczny odpoczynek racz im dać Panie
-R: A światłość wiekuista niechaj im świeci
-P: Niech odpoczywają w pokoju wiecznym
-R: Amen.
+P.: Chwała Ojcu i Synowi, i Duchowi Świętemu.
+W.: Jak była na początku, teraz i zawsze, i na wieki wieków. Amen. *(3×)*
 
+P.: Wieczny odpoczynek racz im dać, Panie.
+W.: A światłość wiekuista niechaj im świeci.
+P.: Niech odpoczywają w pokoju wiecznym.
+W.: Amen.
 
-Legenda:
-P – Osoba prowadząca modlitwę.
-R – Reszta osób, które w niej uczestniczą.
-Jeśli modlimy się sami, wówczas odmawiamy wszystko po kolei.
+---
+
+*Legenda: P. — osoba prowadząca modlitwę; W. — wszyscy uczestnicy. Jeśli modlimy się sami, odmawiamy wszystko po kolei.*

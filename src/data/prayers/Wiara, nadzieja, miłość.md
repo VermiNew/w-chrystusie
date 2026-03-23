@@ -4,31 +4,30 @@ title: Wiara, nadzieja, miłość
 source: https://niezbednik.niedziela.pl/artykul/169/Wiara-nadzieja-milosc
 ---
 
-Wiara, nadzieja, miłość
 Wierzę w Ciebie, Boże żywy,
-W Trójcy jedyny, prawdziwy
-Wierzę coś Objawił Boże,
-Twe słowo mylić nie może
+w Trójcy jedyny, prawdziwy.
+Wierzę, coś objawił, Boże,
+Twe słowo mylić się nie może.
 
-* * *
+---
 
 Ufam Tobie, boś Ty wierny,
-Wszechmocny i miłosierny
+wszechmogący i miłosierny.
 Dasz mi grzechów odpuszczenie,
-Łaskę i wieczne zbawienie.
+łaskę i wieczne zbawienie.
 
-* * *
+---
 
 Boże, choć Cię nie pojmuję,
-Jednak nad wszystko miłuję.
+jednak nad wszystko miłuję.
 Nad wszystko, co jest stworzone,
-Boś Ty dobro nieskończone.
+boś Ty dobro nieskończone.
 A jako samego siebie,
-Wszystkich miłuję dla Ciebie.
+wszystkich miłuję dla Ciebie.
 
-* * *
+---
 
-Ach, żałuję za me złości
-Jedynie dla Twej miłości
+Ach, żałuję za me złości,
+jedynie dla Twej miłości.
 Bądź miłościw mnie grzesznemu,
-Do poprawy dążącemu
+do poprawy dążącemu.

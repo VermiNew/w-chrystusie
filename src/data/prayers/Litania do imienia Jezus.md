@@ -4,15 +4,16 @@ title: Litania do imienia Jezus
 source: https://niezbednik.niedziela.pl/artykul/285/Litania-do-Imienia-Jezus
 ---
 
-Litania do Imienia Jezus
-Kyrie eleison, Christe eleison, Kyrie eleison.
-Chryste, usłysz nas. Chryste, wysłuchaj nas.
-Ojcze z nieba, Boże, - zmiłuj się nad nami.
-Synu, Odkupicielu świata, Boże,
-Duchu Święty, Boże,
-Święta Trójco, Jedyny Boże,
+Kyrie eleison. Chryste eleison. Kyrie eleison.
 
-Jezu, Synu Boga żywego, - zmiłuj się nad nami.
+Chryste, usłysz nas. Chryste, wysłuchaj nas.
+
+Ojcze z nieba, Boże, — zmiłuj się nad nami.
+Synu, Odkupicielu świata, Boże, — zmiłuj się nad nami.
+Duchu Święty, Boże, — zmiłuj się nad nami.
+Święta Trójco, Jedyny Boże, — zmiłuj się nad nami.
+
+Jezu, Synu Boga żywego, — zmiłuj się nad nami.
 Jezu, odblasku Ojca,
 Jezu, jasności światła wiecznego,
 Jezu, Królu chwały,
@@ -50,10 +51,11 @@ Jezu, męstwo Męczenników,
 Jezu, światłości Wyznawców,
 Jezu, czystości Dziewic,
 Jezu, korono Wszystkich Świętych,
-Bądź nam miłościw, - przepuść nam, Jezu.
-Bądź nam miłościw, - wysłuchaj nas, Jezu.
 
-Od zła wszelkiego, - wybaw nas, Jezu.
+Bądź nam miłościw, — przepuść nam, Jezu.
+Bądź nam miłościw, — wysłuchaj nas, Jezu.
+
+Od zła wszelkiego, — wybaw nas, Jezu.
 Od grzechu każdego,
 Od gniewu Twego,
 Od sideł szatańskich,
@@ -75,13 +77,13 @@ Przez Twoje ustanowienie Najświętszego Sakramentu,
 Przez radości Twoje,
 Przez chwałę Twoją,
 
-Baranku Boży, który gładzisz grzechy świata,
-- przepuść nam, Panie.
-Baranku Boży, który gładzisz grzechy świata,
-- wysłuchaj nas, Panie.
-Baranku Boży, który gładzisz grzechy świata,
-- zmiłuj się nad nami.
+Baranku Boży, który gładzisz grzechy świata, — przepuść nam, Panie.
+Baranku Boży, który gładzisz grzechy świata, — wysłuchaj nas, Panie.
+Baranku Boży, który gładzisz grzechy świata, — zmiłuj się nad nami.
 
 Jezu, usłysz nas! Jezu, wysłuchaj nas!
 
-Módlmy się: Panie, Jezu Chryste, któryś rzekł: „Proście, a otrzymacie; szukajcie, a znajdziecie; kołaczcie, a będzie wam otworzone”; daj nam, prosimy, uczucie swej Boskiej miłości, abyśmy Cię z całego serca, usty i uczynkiem miłowali i nigdy nie przestawali wielbić. Racz nas obdarzyć, Panie, ustawiczną bojaźnią i miłością świętego Imienia Twego, albowiem nigdy nie odmawiasz Twej opieki tym, których utwierdzasz w Twej miłości. Który żyjesz i królujesz na wieki wieków. Amen.
+Módlmy się:
+Panie, Jezu Chryste, któryś rzekł: „Proście, a otrzymacie; szukajcie, a znajdziecie; kołaczcie, a będzie wam otworzone" — daj nam, prosimy, uczucie swej Boskiej miłości, abyśmy Cię z całego serca, usty i uczynkiem miłowali i nigdy nie przestawali wielbić. Racz nas obdarzyć, Panie, ustawiczną bojaźnią i miłością świętego Imienia Twojego, albowiem nigdy nie odmawiasz Twej opieki tym, których utwierdzasz w Twej miłości. Który żyjesz i królujesz na wieki wieków.
+
+Amen.

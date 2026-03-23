@@ -4,7 +4,6 @@ title: Dwanaście owoców Ducha Świętego
 source: https://niezbednik.niedziela.pl/artykul/4840/Dwanascie-owocow-Ducha-Swietego
 ---
 
-Dwanaście owoców Ducha Świętego
 1. Miłość
 2. Wesele
 3. Pokój

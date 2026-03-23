@@ -4,105 +4,62 @@ title: Litania do św. Maksymiliana Marii Kolbego
 source: https://www.niedziela.pl/artykul/103615/Litania-do-sw-Maksymiliana-Marii-Kolbego
 ---
 
-Litania do św. Maksymiliana Marii Kolbego
+Kyrie eleison. Chryste eleison. Kyrie eleison.
 
-Kyrie elejson, Chryste elejson, Kyrie elejson.
+Chryste, usłysz nas. Chryste, wysłuchaj nas.
 
-Chryste, usłysz nas. Chryste wysłuchaj nas.
+Ojcze z nieba, Boże, — zmiłuj się nad nami.
+Synu, Odkupicielu świata, Boże, — zmiłuj się nad nami.
+Duchu Święty, Boże, — zmiłuj się nad nami.
+Święta Trójco, Jedyny Boże, — zmiłuj się nad nami.
 
-Ojcze z nieba, Boże, zmiłuj się nad nami!
+Święty Maksymilianie, — módl się za nami.
+Święty Maksymilianie, wielki miłośniku Boga,
+Święty Maksymilianie, nieustraszony rycerzu Niepokalanej,
+Święty Maksymilianie, apostole Niepokalanej Pośredniczki Łask,
+Święty Maksymilianie, założycielu Rycerstwa Niepokalanej,
+Święty Maksymilianie, apostole Cudownego Medalika,
+Święty Maksymilianie, mężny szerzyciel królestwa Niepokalanej,
+Święty Maksymilianie, wzorze życia zakonnego,
+Święty Maksymilianie, pragnący śmierci męczeńskiej,
+Święty Maksymilianie, gorliwy apostole Japonii,
+Święty Maksymilianie, pełen poświęcenia dla chorych i nieszczęśliwych,
+Święty Maksymilianie, zdobywco dusz dla Niepokalanej,
+Święty Maksymilianie, ukazujący ludziom ideał życia,
+Święty Maksymilianie, miłośniku modlitwy,
+Święty Maksymilianie, wzorze niezachwianej ufności,
+Święty Maksymilianie, pociągający ludzi dobrocią i radością,
+Święty Maksymilianie, pragnący nawrócenia grzeszników,
+Święty Maksymilianie, pragnący zjednoczenia w Kościele wszystkich wyznawców Chrystusa,
+Święty Maksymilianie, pragnący nawrócenia pogan,
+Święty Maksymilianie, kochający bliźnich dla Boga,
+Święty Maksymilianie, miłośniku umartwienia i pokuty,
+Święty Maksymilianie, przykładzie posłuszeństwa,
+Święty Maksymilianie, miłośniku ubóstwa i prostoty,
+Święty Maksymilianie, wzorze anielskiej czystości,
+Święty Maksymilianie, obrońco dobrych obyczajów,
+Święty Maksymilianie, głosicielu odrodzenia Narodu Polskiego,
+Święty Maksymilianie, obrońco wiary świętej,
+Święty Maksymilianie, apostole prasy katolickiej,
+Święty Maksymilianie, apostole dobrego przykładu,
+Święty Maksymilianie, wzorze znoszenia cierpień,
+Święty Maksymilianie, przykładzie przebaczenia wrogom,
+Święty Maksymilianie, umacniający współwięźniów na duchu,
+Święty Maksymilianie, ofiarujący swe życie za rodzinę,
+Święty Maksymilianie, spieszący z kapłańską posługą skazańcom,
+Święty Maksymilianie, męczenniku Oświęcimia,
+Święty Maksymilianie, chlubo polskiej ziemi,
+Święty Maksymilianie, wsławiony po całym świecie,
+Święty Maksymilianie, wielki nasz orędowniku w niebie,
 
-Synu odkupicielu świata Boże...
+Baranku Boży, który gładzisz grzechy świata, — przepuść nam, Panie.
+Baranku Boży, który gładzisz grzechy świata, — wysłuchaj nas, Panie.
+Baranku Boży, który gładzisz grzechy świata, — zmiłuj się nad nami.
 
-Duchu Święty, Boże...
+K.: Módl się za nami, święty Maksymilianie.
+W.: Abyśmy się stali godnymi obietnic Chrystusowych.
 
-Święta Trójco, Jedyny Boże...
+Módlmy się:
+Wszechmogący, miłosierny Boże, który serce świętego Maksymiliana rozpaliłeś miłością do Niepokalanej i uczyniłeś go wielkim Jej rycerzem i narzędziem do szerzenia Twojego Królestwa, rozpal i nasze serca podobną miłością i ofiarnością, abyśmy w życiu swoim szukali zawsze Twej chwały. Przez Chrystusa, Pana naszego.
 
-Święty Maksymilianie, módl się za nami!
-
-Święty Maksymilianie, wielki miłośniku Boga...
-
-Święty Maksymilianie, nieustraszony rycerzu Niepokalanej...
-
-Święty Maksymilianie, apostole Niepokalanej Pośredniczki Łask...
-
-Święty Maksymilianie, założycielu Rycerstwa Niepokalanej...
-
-Święty Maksymilianie, apostole Cudownego Medalika...
-
-Święty Maksymilianie, mężny szerzycielu królestwa Niepokalanej...
-
-Święty Maksymilianie, wzorze życia zakonnego...
-
-Święty Maksymilianie, pragnący śmierci męczeńskiej...
-
-Święty Maksymilianie, gorliwy apostole Japonii...
-
-Święty Maksymilianie, pełen poświęcenia dla chorych i nieszczęśliwych...
-
-Święty Maksymilianie, zdobywco dusz dla Niepokalanej...
-
-Święty Maksymilianie, ukazujący ludziom ideał życia...
-
-Święty Maksymilianie, miłośniku modlitwy...
-
-Święty Maksymilianie, wzorze niezachwianej ufności...
-
-Święty Maksymilianie, pociągający ludzi dobrocią i radością...
-
-Święty Maksymilianie, pragnący nawrócenia grzeszników...
-
-Święty Maksymilianie, pragnący zjednoczenia w Kościele wszystkich wyznawców Chrystusa...
-
-Święty Maksymilianie, pragnący nawrócenia pogan...
-
-Święty Maksymilianie, kochający bliźnich dla Boga...
-
-Święty Maksymilianie, miłośniku umartwienia i pokuty...
-
-Święty Maksymilianie, przykładzie posłuszeństwa...
-
-Święty Maksymilianie, miłośniku ubóstwa i prostoty...
-
-Święty Maksymilianie, wzorze anielskiej czystości...
-
-Święty Maksymilianie, obrońco dobrych obyczajów...
-
-Święty Maksymilianie, głosicielu odrodzenia Narodu Polskiego...
-
-Święty Maksymilianie, obrońco wiary świętej...
-
-Święty Maksymilianie, apostole prasy katolickiej...
-
-Święty Maksymilianie, apostole dobrego przykładu...
-
-Święty Maksymilianie, wzorze znoszenia cierpień...
-
-Święty Maksymilianie, przykładzie przebaczenia wrogom...
-
-Święty Maksymilianie, umacniający współwięźniów na duchu...
-
-Święty Maksymilianie, ofiarujący swe życie za rodzinę...
-
-Święty Maksymilianie, spieszący z kapłańską posługą skazańcom...
-
-Święty Maksymilianie, męczenniku Oświęcimia...
-
-Święty Maksymilianie, chlubo polskiej ziemi...
-
-Święty Maksymilianie, wsławiony po całym świecie...
-
-Święty Maksymilianie, wielki nasz orędowniku w niebie...
-
-Baranku Boży, który gładzisz grzechy świata, przepuść nam, Panie!
-
-Baranku Boży, który gładzisz grzechy świata, wysłuchaj nas, Panie!
-
-Baranku Boży, który gładzisz grzechy świata, zmiłuj się nad nami!
-
-
-K. Módl się za nami święty Maksymilianie.
-
-W. Abyśmy się stali godnymi obietnic Chrystusowych.
-
-Módlmy się. Wszechmogący, miłosierny Boże, który serce świętego Maksymiliana rozpaliłeś miłością do Niepokalanej i uczyniłeś go wielkim Jej rycerzem i narzędziem do szerzenia Twojego Królestwa, rozpal i nasze serca podobną miłością i ofiarnością, abyśmy w życiu swoim szukali zawsze Twej chwały. Przez Chrystusa Pana naszego. Amen.
+Amen.
