@@ -238,15 +238,23 @@
 }
 
 .back-button {
-  background: none;
+  background: color-mix(in srgb, var(--color-bg) 85%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: none;
+  border-bottom: 1px solid var(--color-border);
   color: var(--color-primary);
   font-size: 1rem;
   cursor: pointer;
-  padding: 0.5rem 0;
-  margin-bottom: 1rem;
+  padding: 0.75rem 2rem;
+  margin: -2rem -2rem 1rem;
   font-weight: 500;
   animation: slide-in-left 0.3s ease both;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: block;
+  text-decoration: none;
 }
 
 @keyframes slide-in-left {
@@ -848,6 +856,11 @@
   .prayer-item,
   .song-item {
     min-height: 44px;
+  }
+
+  .back-button {
+    margin: -1.5rem -1rem 1rem;
+    padding: 0.75rem 1rem;
   }
 }
 
