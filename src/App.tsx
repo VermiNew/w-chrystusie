@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import Header from './components/Header'
 import HomePage from './pages/HomePage'
 import PrayersPage from './pages/PrayersPage'
@@ -11,6 +12,10 @@ import './App.css'
 
 function AppRoutes() {
   const location = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
 
   return (
     <main className="main" key={location.pathname}>
