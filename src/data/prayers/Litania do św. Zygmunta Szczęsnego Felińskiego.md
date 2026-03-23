@@ -4,20 +4,19 @@ title: Litania do św. Zygmunta Szczęsnego Felińskiego
 source: https://niezbednik.niedziela.pl/artykul/3186/Litania-do-sw-Zygmunta-Szczesnego
 ---
 
-Litania do św. Zygmunta Szczęsnego Felińskiego
-"Módlmy się z Chrystusem, Maryją i świętymi" wyd. Jedność
-Kyrie elejson, Chryste elejson, Kyrie elejson
-Chryste usłysz nas,
-Chryste wysłuchaj nas,
-Ojcze z nieba Boże, zmiłuj się nad nami
-Synu, Odkupicielu świata, Boże,
-Duchu Święty Boże,
-Święta Trójco, Jedyny Boże,
-Święta Maryjo, módl się za nami
-Święty Józefie orędowniku nasz,
-Święty Zygmuncie Szczęsny,
+Kyrie eleison. Chryste eleison. Kyrie eleison.
 
-Uwielbiający Boga w Trójcy Przenajświętszej – módl się za nami
+Chryste, usłysz nas. Chryste, wysłuchaj nas.
+
+Ojcze z nieba, Boże, — zmiłuj się nad nami.
+Synu, Odkupicielu świata, Boże, — zmiłuj się nad nami.
+Duchu Święty, Boże, — zmiłuj się nad nami.
+Święta Trójco, Jedyny Boże, — zmiłuj się nad nami.
+
+Święta Maryjo, — módl się za nami.
+Święty Józefie, orędowniku nasz,
+Święty Zygmuncie Szczęsny, — módl się za nami.
+Uwielbiający Boga w Trójcy Przenajświętszej,
 Bezgranicznie ufający Opatrzności Bożej,
 Wierny sługo Najwyższego Kapłana,
 Gorliwy czcicielu Najświętszej Eucharystii,
@@ -31,10 +30,10 @@ Naśladowco cnót Najświętszej Rodziny,
 Mistrzu modlitwy i zjednoczenia z Bogiem,
 Wzorze posłuszeństwa Ojcu Świętemu i Stolicy Apostolskiej,
 Ozdobo Kościoła Chrystusowego,
-Założycielu i duchowy opiekunie Zgromadzenia „Rodziny Maryi”,
+Założycielu i duchowy opiekunie Zgromadzenia „Rodziny Maryi",
 Bogaty w miłosierdzie wobec potrzebujących,
 Opiekunie sierot i ubogich,
-Wierny naśladowco św. Franciszka z Asyżu,
+Wierny naśladowco świętego Franciszka z Asyżu,
 Wzorze ubóstwa, pokory i prostoty,
 Obrońco praw Kościoła i Narodu,
 Prowadzący zbłąkanych do jedności wiary,
@@ -51,9 +50,9 @@ Promieniujący na otoczenie świętością życia,
 Z ufnością czekający na wezwanie do Domu Ojca,
 Wierny wyznawco i orędowniku nasz u Boga,
 
-Baranku Boży, który gładzisz grzechy świata, przepuść nam, Panie.
-Baranku Boży, który gładzisz grzechy świata, wysłuchaj nas, Panie.
-Baranku Boży, który gładzisz grzechy świata, zmiłuj się nad nami.
+Baranku Boży, który gładzisz grzechy świata, — przepuść nam, Panie.
+Baranku Boży, który gładzisz grzechy świata, — wysłuchaj nas, Panie.
+Baranku Boży, który gładzisz grzechy świata, — zmiłuj się nad nami.
 
 Módl się za nami, święty Zygmuncie Szczęsny.
 Abyśmy się stali godnymi obietnic Chrystusowych.

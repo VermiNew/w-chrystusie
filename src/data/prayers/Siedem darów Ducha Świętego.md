@@ -4,11 +4,10 @@ title: Siedem darów Ducha Świętego
 source: https://niezbednik.niedziela.pl/artykul/4839/Siedem-darow-Ducha-Swietego
 ---
 
-Siedem darów Ducha Świętego
-Dar mądrości
-Dar rozumu
-Dar umiejętności
-Dar rady
-Dar męstwa
-Dar pobożności
-Dar bojaźni Bożej
+1. Dar mądrości
+2. Dar rozumu
+3. Dar umiejętności
+4. Dar rady
+5. Dar męstwa
+6. Dar pobożności
+7. Dar bojaźni Bożej

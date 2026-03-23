@@ -4,21 +4,20 @@ title: Litania do św. Jana Pawła II
 source: https://niezbednik.niedziela.pl/artykul/4914/Litania-do-sw-Jana-Pawla-II
 ---
 
-Litania do św. Jana Pawła II
+Kyrie eleison. Chryste eleison. Kyrie eleison.
 
+Chryste, usłysz nas. Chryste, wysłuchaj nas.
 
-Kyrie elejson, Chryste elejson, Kyrie elejson
-Chryste usłysz nas, Chryste wysłuchaj nas
-Ojcze z nieba, Boże - zmiłuj się nad nami
-Synu Odkupicielu świata, Boże - zmiłuj się nad nami
-Duchu Święty, Boże - zmiłuj się nad nami
-Święta Trójco, Jedyny Boże - zmiłuj się nad nami
+Ojcze z nieba, Boże, — zmiłuj się nad nami.
+Synu, Odkupicielu świata, Boże, — zmiłuj się nad nami.
+Duchu Święty, Boże, — zmiłuj się nad nami.
+Święta Trójco, Jedyny Boże, — zmiłuj się nad nami.
 
-Święta Maryjo - módl się za nami
-Święty Janie Pawle - módl się za nami
+Święta Maryjo, — módl się za nami.
+Święty Janie Pawle, — módl się za nami.
 Zanurzony w Ojcu, bogatym w miłosierdzie,
 Zjednoczony z Chrystusem, Odkupicielem człowieka,
-Napełniony Duchem Świętym, Panem i Ożywicielem
+Napełniony Duchem Świętym, Panem i Ożywicielem,
 Całkowicie oddany Maryi i przyodziany Jej szkaplerzem,
 Przyjacielu Świętych i Błogosławionych,
 Następco Piotra i Sługo sług Bożych,
@@ -66,11 +65,14 @@ Odwiedzający więźniów,
 Umacniający słabych,
 Uczący wszystkich solidarności,
 
-Baranku Boży, który gładzisz grzechy świata, przepuść nam Panie
-Baranku Boży, który gładzisz grzechy świata, wysłuchaj nas Panie
-Baranku Boży, który gładzisz grzechy świata, zmiłuj się nad nami
+Baranku Boży, który gładzisz grzechy świata, — przepuść nam, Panie.
+Baranku Boży, który gładzisz grzechy świata, — wysłuchaj nas, Panie.
+Baranku Boży, który gładzisz grzechy świata, — zmiłuj się nad nami.
 
-K: Módl się za nami święty Janie Pawle.
-W: Abyśmy życiem i słowem głosili światu Chrystusa, Odkupiciela człowieka.
+K.: Módl się za nami, święty Janie Pawle.
+W.: Abyśmy życiem i słowem głosili światu Chrystusa, Odkupiciela człowieka.
 
-Módlmy się: Miłosierny Boże, przyjmij nasze dziękczynienie za dar apostolskiego życia i posłannictwa świętego Jana Pawła II i za jego wstawiennictwem pomóż nam wzrastać w miłości do Ciebie i odważnie głosić miłość Chrystusa wszystkim ludziom. Przez Chrystusa, Pana naszego. Amen.
+Módlmy się:
+Miłosierny Boże, przyjmij nasze dziękczynienie za dar apostolskiego życia i posłannictwa świętego Jana Pawła II i za jego wstawiennictwem pomóż nam wzrastać w miłości do Ciebie i odważnie głosić miłość Chrystusa wszystkim ludziom. Przez Chrystusa, Pana naszego.
+
+Amen.

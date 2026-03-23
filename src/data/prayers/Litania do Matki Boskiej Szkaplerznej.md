@@ -4,14 +4,16 @@ title: Litania do Matki Boskiej Szkaplerznej
 source: https://stacja7.pl/modlitwa/piekna-litania-do-matki-bozej-szkaplerznej/
 ---
 
-Kyrie, elejson. Chryste, elejson. Kyrie, elejson.
-Chryste, usłysz nas. Chryste, wysłuchaj nas.
-Ojcze z nieba, Boże, zmiłuj się nad nami.
-Synu, Odkupicielu świata, Boże,
-Duchu Święty, Boże,
-Święta Trójco, Jedyny Boże,
+Kyrie eleison. Chryste eleison. Kyrie eleison.
 
-Dziewicza Boża Rodzicielko, módl się za nami.
+Chryste, usłysz nas. Chryste, wysłuchaj nas.
+
+Ojcze z nieba, Boże, — zmiłuj się nad nami.
+Synu, Odkupicielu świata, Boże, — zmiłuj się nad nami.
+Duchu Święty, Boże, — zmiłuj się nad nami.
+Święta Trójco, Jedyny Boże, — zmiłuj się nad nami.
+
+Dziewicza Boża Rodzicielko, — módl się za nami.
 Zapowiedziana proroczo przez Eliasza,
 Patronko i Pani Karmelu,
 Królowo, Ozdobo Karmelu,
@@ -59,15 +61,14 @@ Towarzysząca nam w pielgrzymce wiary,
 Przewodniczko na Górę Karmel,
 Królowo szkaplerza świętego,
 
-Baranku Boży, który gładzisz grzechy świata,
-przepuść nam, Panie.
-Baranku Boży, który gładzisz grzechy świata,
-wysłuchaj nas, Panie.
-Baranku Boży, który gładzisz grzechy świata,
-zmiłuj się nad nami.
+Baranku Boży, który gładzisz grzechy świata, — przepuść nam, Panie.
+Baranku Boży, który gładzisz grzechy świata, — wysłuchaj nas, Panie.
+Baranku Boży, który gładzisz grzechy świata, — zmiłuj się nad nami.
 
-P. Nasza Matko i Królowo z Góry Karmel,
-W. Daj nam znak opieki Twojej.
+P.: Nasza Matko i Królowo z Góry Karmel.
+W.: Daj nam znak opieki Twojej.
 
 Módlmy się:
-Boże, z Twojej dobroci otrzymaliśmy Niepokalaną Dziewicę Maryję za Matkę i Królową Karmelu; spraw, abyśmy będąc na świecie Jej wiernym obrazem, tak jak Ona ustawicznie rozważali Twoje słowo, Jej sercem miłowali braci i pociągali ich do Chrystusa, życie za nich oddając. Przez Chrystusa, Pana naszego. Amen.
+Boże, z Twojej dobroci otrzymaliśmy Niepokalaną Dziewicę Maryję za Matkę i Królową Karmelu; spraw, abyśmy będąc na świecie Jej wiernym obrazem, tak jak Ona ustawicznie rozważali Twoje słowo, Jej sercem miłowali braci i pociągali ich do Chrystusa, życie za nich oddając. Przez Chrystusa, Pana naszego.
+
+Amen.

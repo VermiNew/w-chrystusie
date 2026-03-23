@@ -4,18 +4,16 @@ title: Litania Loretańska do Najświętszej Maryi Panny
 source: https://niezbednik.niedziela.pl/artykul/281/Litania-Loretanska-do-Najswietszej-Maryi
 ---
 
-Litania Loretańska do Najświętszej Maryi Panny
+Kyrie eleison. Chryste eleison. Kyrie eleison.
 
-
-
-Kyrie eleison, Christe eleison, Kyrie eleison.
 Chryste, usłysz nas. Chryste, wysłuchaj nas.
-Ojcze z nieba, Boże, - zmiłuj się nad nami.
-Synu, Odkupicielu świata, Boże,
-Duchu Święty, Boże,
-Święta Trójco, Jedyny Boże,
 
-Święta Maryjo, - módl się za nami.
+Ojcze z nieba, Boże, — zmiłuj się nad nami.
+Synu, Odkupicielu świata, Boże, — zmiłuj się nad nami.
+Duchu Święty, Boże, — zmiłuj się nad nami.
+Święta Trójco, Jedyny Boże, — zmiłuj się nad nami.
+
+Święta Maryjo, — módl się za nami.
 Święta Boża Rodzicielko,
 Święta Panno nad pannami,
 Matko Chrystusowa,
@@ -71,28 +69,30 @@ Królowo rodzin,
 Królowo pokoju,
 Królowo Polski,
 
-Baranku Boży, który gładzisz grzechy świata,
-- przepuść nam, Panie.
-Baranku Boży, który gładzisz grzechy świata,
-- wysłuchaj nas, Panie.
-Baranku Boży, który gładzisz grzechy świata,
-- zmiłuj się nad nami.
+Baranku Boży, który gładzisz grzechy świata, — przepuść nam, Panie.
+Baranku Boży, który gładzisz grzechy świata, — wysłuchaj nas, Panie.
+Baranku Boży, który gładzisz grzechy świata, — zmiłuj się nad nami.
 
-W okresie wielkanocnym:
-P.: Raduj się i wesel, Panno Maryjo, Alleluja.
-W.: Bo zmartwychwstał Pan prawdziwie, Alleluja.
+---
 
-Módlmy się: Boże, który raczyłeś uweselić świat przez zmartwychwstanie Syna swego, Pana naszego Jezusa Chrystusa, daj prosimy, abyśmy przez Jego Rodzicielkę, Maryję Pannę, dostąpili radości życia wiecznego. Przez Chrystusa, Pana naszego.
+*W okresie wielkanocnym:*
 
+P.: Raduj się i wesel, Panno Maryjo, alleluja.
+W.: Bo zmartwychwstał Pan prawdziwie, alleluja.
+
+Módlmy się:
+Boże, który raczyłeś uweselić świat przez zmartwychwstanie Syna swego, Pana naszego Jezusa Chrystusa, daj prosimy, abyśmy przez Jego Rodzicielkę, Maryję Pannę, dostąpili radości życia wiecznego. Przez Chrystusa, Pana naszego.
 W.: Amen.
 
-Poza okresem wielkanocnym:
+---
 
-P: Módl się za nami, święta Boża Rodzicielko.
-W: Abyśmy się stali godnymi obietnic Chrystusowych.
+*Poza okresem wielkanocnym:*
 
-Módlmy się: Panie, nasz Boże, daj nam, sługom swoim, cieszyć się trwałym zdrowiem duszy i ciała, i za wstawiennictwem Najświętszej Maryi, zawsze Dziewicy, uwolnij nas od doczesnych utrapień i obdarz wieczną radością. Przez Chrystusa, Pana naszego.
+P.: Módl się za nami, święta Boża Rodzicielko.
+W.: Abyśmy się stali godnymi obietnic Chrystusowych.
 
-W: Amen.
+Módlmy się:
+Panie, nasz Boże, daj nam, sługom swoim, cieszyć się trwałym zdrowiem duszy i ciała, i za wstawiennictwem Najświętszej Maryi, zawsze Dziewicy, uwolnij nas od doczesnych utrapień i obdarz wieczną radością. Przez Chrystusa, Pana naszego.
+W.: Amen.
 
 Pod Twoją obronę…

@@ -4,8 +4,7 @@ title: Dziesięć przykazań Bożych
 source: https://niezbednik.niedziela.pl/artykul/4833/Dziesiec-przykazan-Bozych
 ---
 
-Dziesięć przykazań Bożych
-Ja jestem Pan, twój Bóg, który cię wywiódł z ziemi egipskiej, z domu niewoli.
+*Ja jestem Pan, twój Bóg, który cię wywiódł z ziemi egipskiej, z domu niewoli.*
 
 1. Nie będziesz miał bogów cudzych przede Mną.
 2. Nie będziesz brał imienia Pana Boga twego nadaremno.
