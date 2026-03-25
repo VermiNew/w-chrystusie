@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams, Link, Navigate } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import { FaThumbtack, FaChevronUp, FaChevronDown } from 'react-icons/fa6'
 import { announcements } from '../data/announcements'
+import { markAsRead, markAsUnread, useIsRead } from '../data/useReadAnnouncements'
 
 function formatDate(dateStr: string): string {
   const date = new Date(dateStr)
@@ -15,6 +16,11 @@ function formatDate(dateStr: string): string {
 
 function AnnouncementDetail({ id }: { id: string }) {
   const announcement = announcements.find((a) => a.id === id)
+
+  useEffect(() => {
+    if (announcement) markAsRead(id)
+  }, [id, announcement])
+
   if (!announcement) return <Navigate to="/ogloszenia" replace />
 
   return (
@@ -29,9 +35,61 @@ function AnnouncementDetail({ id }: { id: string }) {
   )
 }
 
-function AnnouncementList() {
-  const [expandedId, setExpandedId] = useState<string | null>(null)
+function AnnouncementCard({ id }: { id: string }) {
+  const announcement = announcements.find((a) => a.id === id)!
+  const [expanded, setExpanded] = useState(false)
+  const isRead = useIsRead(id)
 
+  const handleToggle = () => {
+    if (!expanded) markAsRead(id)
+    setExpanded(!expanded)
+  }
+
+  return (
+    <article
+      className={
+        'announcement-card'
+        + (announcement.pinned ? ' announcement-card--pinned' : '')
+        + (!isRead ? ' announcement-card--unread' : '')
+      }
+    >
+      <button
+        className="announcement-card-header"
+        onClick={handleToggle}
+        aria-expanded={expanded}
+      >
+        <div className="announcement-card-meta">
+          {announcement.pinned && (
+            <span className="announcement-pin">
+              <FaThumbtack size={12} /> Przypięte
+            </span>
+          )}
+          {!isRead && <span className="announcement-unread-dot" />}
+          <span className="announcement-card-date">{formatDate(announcement.date)}</span>
+        </div>
+        <h2 className="announcement-card-title">{announcement.title}</h2>
+        <span className="announcement-card-toggle">
+          {expanded ? <FaChevronUp size={12} /> : <FaChevronDown size={12} />}
+        </span>
+      </button>
+      {expanded && (
+        <div className="announcement-card-body">
+          <ReactMarkdown>{announcement.body}</ReactMarkdown>
+          {isRead && (
+            <button
+              className="announcement-mark-unread"
+              onClick={() => { markAsUnread(id); setExpanded(false) }}
+            >
+              Oznacz jako nieprzeczytane
+            </button>
+          )}
+        </div>
+      )}
+    </article>
+  )
+}
+
+function AnnouncementList() {
   const sorted = [...announcements].sort((a, b) => {
     if (a.pinned && !b.pinned) return -1
     if (!a.pinned && b.pinned) return 1
@@ -42,39 +100,9 @@ function AnnouncementList() {
     <div className="page">
       <h1>Ogłoszenia</h1>
       <div className="announcement-list">
-        {sorted.map((a) => {
-          const isExpanded = expandedId === a.id
-          return (
-            <article
-              key={a.id}
-              className={`announcement-card${a.pinned ? ' announcement-card--pinned' : ''}`}
-            >
-              <button
-                className="announcement-card-header"
-                onClick={() => setExpandedId(isExpanded ? null : a.id)}
-                aria-expanded={isExpanded}
-              >
-                <div className="announcement-card-meta">
-                  {a.pinned && (
-                    <span className="announcement-pin">
-                      <FaThumbtack size={12} /> Przypięte
-                    </span>
-                  )}
-                  <span className="announcement-card-date">{formatDate(a.date)}</span>
-                </div>
-                <h2 className="announcement-card-title">{a.title}</h2>
-                <span className="announcement-card-toggle">
-                  {isExpanded ? <FaChevronUp size={12} /> : <FaChevronDown size={12} />}
-                </span>
-              </button>
-              {isExpanded && (
-                <div className="announcement-card-body">
-                  <ReactMarkdown>{a.body}</ReactMarkdown>
-                </div>
-              )}
-            </article>
-          )
-        })}
+        {sorted.map((a) => (
+          <AnnouncementCard key={a.id} id={a.id} />
+        ))}
       </div>
     </div>
   )

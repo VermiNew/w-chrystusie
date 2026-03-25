@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FaCross, FaBookBible, FaMusic, FaMagnifyingGlass, FaBars, FaXmark, FaHandsPraying, FaBullhorn } from 'react-icons/fa6'
+import { announcements } from '../data/announcements'
+import { useUnreadCount } from '../data/useReadAnnouncements'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const unread = useUnreadCount(announcements.map((a) => a.id))
 
   const closeMenu = () => setMenuOpen(false)
 
@@ -30,7 +33,16 @@ export default function Header() {
           <li><NavLink to="/pismo-swiete" onClick={closeMenu}><FaBookBible /> Pismo Święte</NavLink></li>
           <li><NavLink to="/spiewnik" onClick={closeMenu}><FaMusic /> Śpiewnik</NavLink></li>
           <li><NavLink to="/rozaniec" onClick={closeMenu}><FaHandsPraying /> Różaniec</NavLink></li>
-          <li><NavLink to="/ogloszenia" onClick={closeMenu}><FaBullhorn /> Ogłoszenia</NavLink></li>
+          <li>
+            <NavLink
+              to="/ogloszenia"
+              onClick={closeMenu}
+              className={({ isActive }) => isActive ? 'active nav-announcements' : 'nav-announcements'}
+            >
+              <FaBullhorn /> Ogłoszenia
+              {unread > 0 && <span className="nav-badge" />}
+            </NavLink>
+          </li>
           <li><NavLink to="/szukaj" onClick={closeMenu}><FaMagnifyingGlass /> Szukaj</NavLink></li>
         </ul>
       </nav>
