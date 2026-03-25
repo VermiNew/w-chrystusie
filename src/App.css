@@ -58,6 +58,19 @@
   color: var(--color-white);
 }
 
+.nav-announcements {
+  position: relative;
+}
+
+.nav-badge {
+  width: 8px;
+  height: 8px;
+  background: #ef4444;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: -0.15rem;
+}
+
 .nav-overlay {
   display: none;
 }
@@ -1010,6 +1023,20 @@
   border-width: 1.5px;
 }
 
+.announcement-card--unread {
+  background: color-mix(in srgb, var(--color-hover-bg) 50%, var(--color-surface));
+  border-color: var(--color-hover-border);
+}
+
+.announcement-unread-dot {
+  width: 7px;
+  height: 7px;
+  background: #ef4444;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
 .announcement-card-header {
   display: flex;
   flex-wrap: wrap;
@@ -1103,6 +1130,25 @@
   display: block;
   margin: 1rem 0;
   line-height: 1.8;
+}
+
+.announcement-mark-unread {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  font-family: inherit;
+  color: var(--color-text-muted);
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.announcement-mark-unread:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .announcement-date {
