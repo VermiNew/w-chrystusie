@@ -4,6 +4,7 @@ export interface MarkdownEntry {
   body: string
   source?: string
   category?: string
+  [key: string]: string | boolean | undefined
 }
 
 export function parseMarkdown(filename: string, raw: string): MarkdownEntry {
@@ -22,6 +23,11 @@ export function parseMarkdown(filename: string, raw: string): MarkdownEntry {
     body: match[2].trim(),
     source: attrs['source'] || undefined,
     category: attrs['category'] || undefined,
+    ...Object.fromEntries(
+      Object.entries(attrs)
+        .filter(([k]) => !['title', 'source', 'category'].includes(k))
+        .map(([k, v]) => [k, v === 'true' ? true : v === 'false' ? false : v]),
+    ),
   }
 }
 
