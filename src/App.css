@@ -998,6 +998,15 @@
   text-decoration: underline;
 }
 
+.rosary-keyboard-hint {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  opacity: 0.5;
+  margin: 0.75rem auto 0;
+  letter-spacing: 0.03em;
+}
+
 .rosary-nav-button--next {
   font-weight: 600;
 }

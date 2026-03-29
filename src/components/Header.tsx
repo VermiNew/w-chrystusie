@@ -15,6 +15,14 @@ export default function Header() {
     return () => { document.body.style.overflow = '' }
   }, [menuOpen])
 
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && menuOpen) closeMenu()
+    }
+    window.addEventListener('keydown', handleKey)
+    return () => window.removeEventListener('keydown', handleKey)
+  }, [menuOpen])
+
   return (
     <header className="header">
       {menuOpen && <div className="nav-overlay" onClick={closeMenu} />}

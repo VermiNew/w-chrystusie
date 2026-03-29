@@ -46,6 +46,7 @@ export default function RosaryPage() {
         setCurrentStep(currentStep - 1)
         window.scrollTo(0, 0)
       }
+      if (e.key === 'Escape') reset()
     }
 
     window.addEventListener('keydown', handleKey)
@@ -113,6 +114,7 @@ export default function RosaryPage() {
           </button>
         )}
       </div>
+      <p className="rosary-keyboard-hint">← → klawiatura</p>
     </div>
   )
 }
