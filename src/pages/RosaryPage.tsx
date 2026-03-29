@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { mysterySets, buildRosarySteps, type MysterySet } from '../data/rosary'
 
 export default function RosaryPage() {
@@ -32,6 +32,25 @@ export default function RosaryPage() {
     setSelectedSet(null)
     setCurrentStep(0)
   }
+
+  // Arrow keys to navigate between rosary steps
+  useEffect(() => {
+    if (!selectedSet) return
+
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight' && currentStep < steps.length - 1) {
+        setCurrentStep(currentStep + 1)
+        window.scrollTo(0, 0)
+      }
+      if (e.key === 'ArrowLeft' && currentStep > 0) {
+        setCurrentStep(currentStep - 1)
+        window.scrollTo(0, 0)
+      }
+    }
+
+    window.addEventListener('keydown', handleKey)
+    return () => window.removeEventListener('keydown', handleKey)
+  }, [selectedSet, currentStep, steps.length])
 
   if (!selectedSet) {
     return (
