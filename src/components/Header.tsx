@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import { FaCross, FaBookBible, FaMusic, FaMagnifyingGlass, FaBars, FaXmark, FaHandsPraying, FaBullhorn } from 'react-icons/fa6'
+import { FaCross, FaBookBible, FaMusic, FaMagnifyingGlass, FaBars, FaXmark, FaHandsPraying, FaBullhorn, FaBell } from 'react-icons/fa6'
 import { announcements } from '../data/announcements'
 import { useUnreadCount } from '../data/useReadAnnouncements'
+import { useHasAnyReminder } from '../data/useReminders'
+import RemindersModal from './RemindersModal'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [remindersOpen, setRemindersOpen] = useState(false)
   const unread = useUnreadCount(announcements.map((a) => a.id))
+  const hasReminders = useHasAnyReminder()
 
   const closeMenu = () => setMenuOpen(false)
 
@@ -52,8 +56,20 @@ export default function Header() {
             </NavLink>
           </li>
           <li><NavLink to="/szukaj" onClick={closeMenu}><FaMagnifyingGlass /> Szukaj</NavLink></li>
+          <li className="nav-reminders-item">
+            <button
+              className={`nav-reminders-btn${hasReminders ? ' nav-reminders-btn--active' : ''}`}
+              onClick={() => { setRemindersOpen(true); closeMenu() }}
+              title="Przypomnienia o modlitwie"
+            >
+              <FaBell />
+              <span className="nav-reminders-label">Przypomnienia</span>
+              {hasReminders && <span className="nav-reminders-active-dot" />}
+            </button>
+          </li>
         </ul>
       </nav>
+      <RemindersModal open={remindersOpen} onClose={() => setRemindersOpen(false)} />
     </header>
   )
 }

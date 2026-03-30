@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import Header from './components/Header'
+import ReminderToast from './components/ReminderToast'
 import HomePage from './pages/HomePage'
 import PrayersPage from './pages/PrayersPage'
 import ScripturePage from './pages/ScripturePage'
@@ -56,6 +57,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <AppRoutes />
+      <ReminderToast />
     </BrowserRouter>
   )
 }
