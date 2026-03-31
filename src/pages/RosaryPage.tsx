@@ -1,6 +1,12 @@
 import { useState, useMemo, useEffect } from 'react'
 import { mysterySets, buildRosarySteps, type MysterySet } from '../data/rosary'
 
+const DAY_NAMES = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota']
+
+function formatDays(days: number[]): string {
+  return days.map((d) => DAY_NAMES[d]).join(', ')
+}
+
 export default function RosaryPage() {
   const [selectedSet, setSelectedSet] = useState<MysterySet | null>(null)
   const [currentStep, setCurrentStep] = useState(0)
@@ -53,19 +59,31 @@ export default function RosaryPage() {
     return () => window.removeEventListener('keydown', handleKey)
   }, [selectedSet, currentStep, steps.length])
 
+  const today = new Date().getDay()
+
   if (!selectedSet) {
     return (
       <div className="page">
         <h1>Różaniec</h1>
         <p className="rosary-intro">Wybierz tajemnice, które chcesz odmówić:</p>
         <ul className="rosary-sets">
-          {mysterySets.map((set) => (
-            <li key={set.name}>
-              <button className="rosary-set-button" onClick={() => setSelectedSet(set)}>
-                {set.name}
-              </button>
-            </li>
-          ))}
+          {mysterySets.map((set) => {
+            const isToday = set.days.includes(today)
+            return (
+              <li key={set.name}>
+                <button
+                  className={`rosary-set-button${isToday ? ' rosary-set-button--today' : ''}`}
+                  onClick={() => setSelectedSet(set)}
+                >
+                  {set.name}
+                  <span className="rosary-set-days">
+                    {formatDays(set.days)}
+                    {isToday && <span className="rosary-set-today-badge">dziś</span>}
+                  </span>
+                </button>
+              </li>
+            )
+          })}
         </ul>
       </div>
     )

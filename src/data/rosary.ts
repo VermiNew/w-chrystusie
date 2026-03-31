@@ -49,12 +49,15 @@ export const prayers = {
 
 export interface MysterySet {
   name: string
+  /** Days of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday) */
+  days: number[]
   mysteries: string[]
 }
 
 export const mysterySets: MysterySet[] = [
   {
     name: 'Tajemnice Radosne',
+    days: [1, 6], // Monday, Saturday
     mysteries: [
       'Zwiastowanie Najświętszej Maryi Pannie',
       'Nawiedzenie Świętej Elżbiety',
@@ -65,6 +68,7 @@ export const mysterySets: MysterySet[] = [
   },
   {
     name: 'Tajemnice Światła',
+    days: [4], // Thursday
     mysteries: [
       'Chrzest Pana Jezusa w Jordanie',
       'Objawienie się Pana Jezusa na weselu w Kanie',
@@ -75,6 +79,7 @@ export const mysterySets: MysterySet[] = [
   },
   {
     name: 'Tajemnice Bolesne',
+    days: [2, 5], // Tuesday, Friday
     mysteries: [
       'Modlitwa Pana Jezusa w Ogrójcu',
       'Biczowanie Pana Jezusa',
@@ -85,6 +90,7 @@ export const mysterySets: MysterySet[] = [
   },
   {
     name: 'Tajemnice Chwalebne',
+    days: [0, 3], // Sunday, Wednesday
     mysteries: [
       'Zmartwychwstanie Pana Jezusa',
       'Wniebowstąpienie Pana Jezusa',
