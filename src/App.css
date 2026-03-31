@@ -1590,8 +1590,14 @@
   border-radius: 8px;
   line-height: 1.6;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
+}
+
+.reminders-dialog-note svg {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  min-height: 1em;
 }
 
 /* Bulk actions */
