@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import { FaCross, FaBookBible, FaMusic, FaMagnifyingGlass, FaBars, FaXmark, FaHandsPraying, FaBullhorn, FaBell } from 'react-icons/fa6'
+import { FaCross, FaBookBible, FaMusic, FaMagnifyingGlass, FaBars, FaXmark, FaHandsPraying, FaBullhorn, FaBell, FaCircleInfo } from 'react-icons/fa6'
 import { announcements } from '../data/announcements'
 import { useUnreadCount } from '../data/useReadAnnouncements'
 import { useHasAnyReminder } from '../data/useReminders'
 import RemindersModal from './RemindersModal'
+import AboutModal from './AboutModal'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [remindersOpen, setRemindersOpen] = useState(false)
+  const [aboutOpen, setAboutOpen] = useState(false)
   const unread = useUnreadCount(announcements.map((a) => a.id))
   const hasReminders = useHasAnyReminder()
 
@@ -67,9 +69,20 @@ export default function Header() {
               {hasReminders && <span className="nav-reminders-active-dot" />}
             </button>
           </li>
+          <li className="nav-about-item">
+            <button
+              className="nav-about-btn"
+              onClick={() => { setAboutOpen(true); closeMenu() }}
+              title="O projekcie"
+            >
+              <FaCircleInfo />
+              <span className="nav-about-label">O projekcie</span>
+            </button>
+          </li>
         </ul>
       </nav>
       <RemindersModal open={remindersOpen} onClose={() => setRemindersOpen(false)} />
+      <AboutModal open={aboutOpen} onClose={() => setAboutOpen(false)} />
     </header>
   )
 }
