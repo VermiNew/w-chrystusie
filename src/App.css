@@ -1,7 +1,7 @@
 @import './index.css';
 
 .header {
-  background-color: var(--color-primary);
+  background-color: var(--color-header-bg);
   color: var(--color-white);
   padding: 0 2rem;
   animation: header-slide-down 0.4s ease both;
@@ -86,6 +86,13 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Hide labels on desktop — must be BEFORE media query so mobile can override */
+.nav-reminders-label,
+.nav-theme-label,
+.nav-about-label {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .nav-overlay {
     display: block;
@@ -112,7 +119,7 @@
     right: 0;
     bottom: 0;
     z-index: 20;
-    background-color: rgba(var(--color-primary-rgb), 0.97);
+    background-color: rgba(var(--color-header-bg-rgb), 0.97);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     padding: 1.5rem 1.5rem;
@@ -147,8 +154,10 @@
   .nav-links--open li:nth-child(6) { transition-delay: 0.45s; }
   .nav-links--open li:nth-child(7) { transition-delay: 0.52s; }
   .nav-links--open li:nth-child(8) { transition-delay: 0.59s; }
+  .nav-links--open li:nth-child(9) { transition-delay: 0.66s; }
 
   .nav-reminders-label,
+  .nav-theme-label,
   .nav-about-label {
     display: inline;
   }
@@ -156,6 +165,7 @@
   .nav-reminders-btn {
     padding: 1rem 1.25rem;
     font-size: 1.15rem;
+    color: var(--color-white);
     border: 1px solid rgba(var(--color-white-rgb), 0.15);
     border-radius: 10px;
     justify-content: center;
@@ -178,6 +188,7 @@
   .nav-about-btn {
     padding: 1rem 1.25rem;
     font-size: 1.15rem;
+    color: var(--color-white);
     border: 1px solid rgba(var(--color-white-rgb), 0.15);
     border-radius: 10px;
     justify-content: center;
@@ -186,6 +197,22 @@
   }
 
   .nav-about-btn:hover {
+    background-color: rgba(var(--color-white-rgb), 0.08);
+    border-color: rgba(var(--color-white-rgb), 0.3);
+  }
+
+  .nav-theme-btn {
+    padding: 1rem 1.25rem;
+    font-size: 1.15rem;
+    color: var(--color-white);
+    border: 1px solid rgba(var(--color-white-rgb), 0.15);
+    border-radius: 10px;
+    justify-content: center;
+    width: 100%;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+  }
+
+  .nav-theme-btn:hover {
     background-color: rgba(var(--color-white-rgb), 0.08);
     border-color: rgba(var(--color-white-rgb), 0.3);
   }
@@ -1398,6 +1425,8 @@
   width: calc(100vw - 2rem);
   max-height: calc(100vh - 4rem);
   overflow: hidden;
+  background: var(--color-surface);
+  color: var(--color-text);
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.22), 0 4px 16px rgba(0, 0, 0, 0.10);
   /* Center on screen */
   position: fixed;
@@ -1769,11 +1798,6 @@
   color: var(--color-white);
 }
 
-/* Hide text label on desktop, show only icon */
-.nav-reminders-label {
-  display: none;
-}
-
 .nav-reminders-active-dot {
   position: absolute;
   top: -2px;
@@ -1810,10 +1834,6 @@
   color: var(--color-white);
 }
 
-.nav-about-label {
-  display: none;
-}
-
 /* ---- About Modal ---- */
 
 .about-dialog {
@@ -1823,6 +1843,8 @@
   max-width: 400px;
   width: calc(100vw - 2rem);
   overflow: hidden;
+  background: var(--color-surface);
+  color: var(--color-text);
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.22), 0 4px 16px rgba(0, 0, 0, 0.10);
   position: fixed;
   top: 50%;
@@ -1983,4 +2005,30 @@
 
 .about-license {
   font-weight: 600;
+}
+
+/* Theme toggle button in nav-links — icon-only on desktop */
+.nav-theme-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-theme-btn {
+  background: none;
+  border: none;
+  color: var(--color-nav-link);
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-theme-btn:hover {
+  color: var(--color-white);
 }

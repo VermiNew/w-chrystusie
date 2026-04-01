@@ -15,11 +15,33 @@
   --color-hover-bg: #eef2ff;
   --color-hover-border: #a5b4fc;
   --color-progress: #818cf8;
+  --color-header-bg: var(--color-primary);
+  --color-header-bg-rgb: var(--color-primary-rgb);
 
   /* Fonts */
   --font-body: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-heading: 'Space Grotesk', system-ui, sans-serif;
   --font-reading: 'Literata', Georgia, serif;
+}
+
+[data-theme="dark"] {
+  --color-primary: #5b8db8;
+  --color-primary-rgb: 91, 141, 184;
+  --color-text: #dce4ec;
+  --color-text-muted: #9baab8;
+  --color-text-subtle: #6b7f8e;
+  --color-white: #ffffff;
+  --color-white-rgb: 255, 255, 255;
+  --color-bg: #1b2433;
+  --color-surface: #243040;
+  --color-border: #34445a;
+  --color-border-strong: #4a5e76;
+  --color-nav-link: #d5dee6;
+  --color-hover-bg: #2a3a4e;
+  --color-hover-border: #5b8db8;
+  --color-progress: #7ba4c9;
+  --color-header-bg: #1a3a5c;
+  --color-header-bg-rgb: 26, 58, 92;
 }
 
 *,

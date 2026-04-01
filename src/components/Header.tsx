@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import { FaCross, FaBookBible, FaMusic, FaMagnifyingGlass, FaBars, FaXmark, FaHandsPraying, FaBullhorn, FaBell, FaCircleInfo } from 'react-icons/fa6'
+import { FaCross, FaBookBible, FaMusic, FaMagnifyingGlass, FaBars, FaXmark, FaHandsPraying, FaBullhorn, FaBell, FaCircleInfo, FaMoon, FaSun } from 'react-icons/fa6'
 import { announcements } from '../data/announcements'
 import { useUnreadCount } from '../data/useReadAnnouncements'
 import { useHasAnyReminder } from '../data/useReminders'
+import { useTheme, toggleTheme } from '../data/useTheme'
 import RemindersModal from './RemindersModal'
 import AboutModal from './AboutModal'
 
@@ -13,6 +14,7 @@ export default function Header() {
   const [aboutOpen, setAboutOpen] = useState(false)
   const unread = useUnreadCount(announcements.map((a) => a.id))
   const hasReminders = useHasAnyReminder()
+  const theme = useTheme()
 
   const closeMenu = () => setMenuOpen(false)
 
@@ -67,6 +69,16 @@ export default function Header() {
               <FaBell />
               <span className="nav-reminders-label">Przypomnienia</span>
               {hasReminders && <span className="nav-reminders-active-dot" />}
+            </button>
+          </li>
+          <li className="nav-theme-item">
+            <button
+              className="nav-theme-btn"
+              onClick={() => { toggleTheme(); closeMenu() }}
+              title={theme === 'light' ? 'Tryb ciemny' : 'Tryb jasny'}
+            >
+              {theme === 'light' ? <FaMoon /> : <FaSun />}
+              <span className="nav-theme-label">{theme === 'light' ? 'Tryb ciemny' : 'Tryb jasny'}</span>
             </button>
           </li>
           <li className="nav-about-item">
