@@ -30,9 +30,15 @@
 .nav-brand {
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--color-white);
+  color: rgba(var(--color-white-rgb), 0.85);
   text-decoration: none;
   font-family: var(--font-heading);
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-brand:hover {
+  color: var(--color-white);
+  text-shadow: 0 0 14px rgba(var(--color-white-rgb), 0.45);
 }
 
 .nav-links {
@@ -725,15 +731,29 @@
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--color-primary);
-  margin: 0 0 0.75rem;
+  margin: 0 auto 0.75rem;
+  width: fit-content;
   animation: hero-fade-in 0.6s ease both;
+  transition: text-shadow 0.3s;
+  cursor: default;
+}
+
+.hero-title:hover {
+  text-shadow: 0 0 20px rgba(var(--color-primary-rgb), 0.4);
 }
 
 .hero-subtitle {
   font-size: 1.15rem;
   color: var(--color-text-muted);
-  margin: 0;
+  margin: 0 auto;
+  width: fit-content;
   animation: hero-fade-in 0.6s ease 0.15s both;
+  transition: color 0.3s;
+  cursor: default;
+}
+
+.hero-subtitle:hover {
+  color: var(--color-text);
 }
 
 .hero-quote {
@@ -751,7 +771,14 @@
 }
 
 .hero-quote p {
-  margin: 0 0 0.5rem;
+  margin: 0 auto 0.5rem;
+  width: fit-content;
+  transition: color 0.3s;
+  cursor: default;
+}
+
+.hero-quote p:hover {
+  color: var(--color-text);
 }
 
 .hero-quote cite {
@@ -759,6 +786,13 @@
   font-style: normal;
   font-weight: 600;
   color: var(--color-primary);
+  transition: color 0.3s, text-shadow 0.3s;
+  cursor: default;
+}
+
+.hero-quote cite:hover {
+  color: var(--color-text);
+  text-shadow: 0 0 16px rgba(var(--color-primary-rgb), 0.4);
 }
 
 @keyframes content-fade-in {
