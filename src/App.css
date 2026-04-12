@@ -1012,8 +1012,163 @@
     padding: 0.75rem 1rem;
   }
 }
+/* Chaplet */
+
+.chaplet-progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.chaplet-progress-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--color-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.chaplet-progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.chaplet-step {
+  text-align: center;
+  max-width: 55ch;
+  margin: 0 auto 2rem;
+  animation: content-fade-in 0.3s ease both;
+}
+
+.chaplet-label {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem;
+  color: var(--color-primary);
+}
+
+.chaplet-counter {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}
+
+.chaplet-prayer {
+  font-family: var(--font-reading);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.chaplet-nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 55ch;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.chaplet-nav-button {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
+.chaplet-nav-button:hover {
+  text-decoration: underline;
+}
+
+.chaplet-nav-button--next {
+  font-weight: 600;
+}
+
+.chaplet-keyboard-hint {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  opacity: 0.5;
+  margin: 0.75rem auto 0;
+  letter-spacing: 0.03em;
+}
+
+.chaplet-intro {
+  max-width: 55ch;
+  margin: 0 auto;
+  text-align: center;
+  animation: content-fade-in 0.5s ease both;
+}
+
+.chaplet-intro-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+  animation: content-fade-in 0.5s ease 0.1s both;
+}
+
+.chaplet-intro-lead {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+  animation: content-fade-in 0.5s ease 0.15s both;
+}
+
+.chaplet-intro-quote {
+  font-family: var(--font-reading);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  border-left: 3px solid var(--color-primary);
+  padding: 0.5rem 1rem;
+  margin: 0 auto 2rem;
+  text-align: left;
+  line-height: 1.75;
+  animation: content-fade-in 0.5s ease 0.2s both;
+}
+
+.chaplet-intro-quote cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.chaplet-intro-start {
+  display: inline-block;
+  padding: 0.85rem 2.5rem;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s, translate 0.2s;
+  animation: content-fade-in 0.5s ease 0.25s both;
+}
+
+.chaplet-intro-start:hover {
+  background-color: color-mix(in srgb, var(--color-primary) 85%, black);
+  box-shadow: 0 4px 16px rgba(var(--color-primary-rgb), 0.3);
+  translate: 0 -2px;
+}
+
 
 /* Rosary */
+
 
 .rosary-intro {
   color: var(--color-text-muted);

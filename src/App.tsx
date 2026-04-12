@@ -7,6 +7,7 @@ import PrayersPage from './pages/PrayersPage'
 import ScripturePage from './pages/ScripturePage'
 import SongbookPage from './pages/SongbookPage'
 import RosaryPage from './pages/RosaryPage'
+import ChapletPage from './pages/ChapletPage'
 import AnnouncementsPage from './pages/AnnouncementsPage'
 import SearchPage from './pages/SearchPage'
 import NotFoundPage from './pages/NotFoundPage'
@@ -43,6 +44,7 @@ function AppRoutes() {
         <Route path="/spiewnik" element={<SongbookPage />} />
         <Route path="/spiewnik/:id" element={<SongbookPage />} />
         <Route path="/rozaniec" element={<RosaryPage />} />
+        <Route path="/koronka" element={<ChapletPage />} />
         <Route path="/ogloszenia" element={<AnnouncementsPage />} />
         <Route path="/ogloszenia/:id" element={<AnnouncementsPage />} />
         <Route path="/szukaj" element={<SearchPage />} />

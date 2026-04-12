@@ -49,6 +49,7 @@ export default function Header() {
           <li><NavLink to="/pismo-swiete" onClick={closeMenu}><FaBookBible /> Pismo Święte</NavLink></li>
           <li><NavLink to="/spiewnik" onClick={closeMenu}><FaMusic /> Śpiewnik</NavLink></li>
           <li><NavLink to="/rozaniec" onClick={closeMenu}><FaHandsPraying /> Różaniec</NavLink></li>
+          <li><NavLink to="/koronka" onClick={closeMenu}><FaHandsPraying /> Koronka</NavLink></li>
           <li>
             <NavLink
               to="/ogloszenia"
