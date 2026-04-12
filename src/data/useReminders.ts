@@ -147,12 +147,23 @@ export function disableBrowserNotifications() {
   notifyNotifListeners()
 }
 
-/** Send a native browser notification if enabled and permission granted. */
-export function sendBrowserNotification(title: string, body: string) {
+/** Send a native browser notification if enabled and permission granted.
+ *  Uses ServiceWorker.showNotification in PWA standalone mode (where `new Notification()` is blocked),
+ *  falling back to the regular Notification API. */
+export function sendBrowserNotification(title: string, body: string, href?: string) {
   if (!getNotifEnabled()) return
   if (!('Notification' in window)) return
   if (Notification.permission !== 'granted') return
-  new Notification(title, { body, icon: '/cross.svg' })
+
+  const options = { body, icon: '/icon-192.png', data: { href } }
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.ready
+      .then((reg) => reg.showNotification(title, options))
+      .catch(() => new Notification(title, options))
+  } else {
+    new Notification(title, options)
+  }
 }
 
 // ---- Reset all ----

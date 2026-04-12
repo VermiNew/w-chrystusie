@@ -46,4 +46,11 @@ export const REMINDERS: Reminder[] = [
     times: ['20:00'],
     href: '/rozaniec',
   },
+  {
+    id: 'duchowa-adopcja',
+    label: 'Duchowa adopcja dziecka poczętego',
+    description: 'Codzienna modlitwa w intencji dziecka zagrożonego aborcją.',
+    times: ['21:00'],
+    href: '/modlitwy/Duchowa adopcja dziecka poczętego - codzienna modlitwa',
+  },
 ]

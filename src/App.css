@@ -633,6 +633,9 @@
   border: 1px solid var(--color-border-strong);
   border-radius: 8px;
   outline: none;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: inherit;
   transition: border-color 0.2s;
   animation: content-fade-in 0.4s ease 0.1s both;
 }

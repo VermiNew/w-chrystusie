@@ -42,6 +42,7 @@
   --color-progress: #7ba4c9;
   --color-header-bg: #1a3a5c;
   --color-header-bg-rgb: 26, 58, 92;
+  color-scheme: dark;
 }
 
 *,
