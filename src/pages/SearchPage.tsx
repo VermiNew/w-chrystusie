@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { FaKeyboard } from 'react-icons/fa6'
 import { prayers, type Prayer } from '../data/prayers'
 import { songs, type Song } from '../data/songs'
 import { loadBible, type Book } from '../data/scripture'
@@ -97,6 +98,9 @@ export default function SearchPage() {
         onChange={(e) => setQuery(e.target.value)}
         autoFocus
       />
+      {!trimmed && (
+        <p className="search-hint"><FaKeyboard /> Naciśnij <kbd>/</kbd> z dowolnej strony, aby szybko przejść do wyszukiwania.</p>
+      )}
       {bibleLoading && trimmed.length >= 2 && (
         <p className="search-loading">Ładowanie Pisma Świętego…</p>
       )}

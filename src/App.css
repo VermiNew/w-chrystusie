@@ -650,6 +650,29 @@
   border-color: var(--color-primary);
 }
 
+.search-hint {
+  font-size: 0.82rem;
+  color: var(--color-text-subtle);
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  animation: content-fade-in 0.6s ease 0.3s both;
+}
+
+.search-hint kbd {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 4px;
+  box-shadow: 0 1px 0 var(--color-border);
+}
+
 .search-loading {
   color: var(--color-text-muted);
   margin-top: 0.75rem;
