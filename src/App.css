@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1080px;
+  max-width: 1160px;
   margin: 0 auto;
   height: 60px;
 }
@@ -99,7 +99,7 @@
   display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .nav-overlay {
     display: block;
     position: fixed;
