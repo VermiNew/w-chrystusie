@@ -67,9 +67,11 @@ export default function Header() {
               onClick={() => { setRemindersOpen(true); closeMenu() }}
               title="Przypomnienia o modlitwie"
             >
-              <FaBell />
+              <span className="nav-reminders-icon-wrap">
+                <FaBell />
+                {hasReminders && <span className="nav-reminders-active-dot" />}
+              </span>
               <span className="nav-reminders-label">Przypomnienia</span>
-              {hasReminders && <span className="nav-reminders-active-dot" />}
             </button>
           </li>
           <li className="nav-theme-item">

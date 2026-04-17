@@ -161,8 +161,8 @@
   .nav-links--open li:nth-child(7) { transition-delay: 0.52s; }
   .nav-links--open li:nth-child(8) { transition-delay: 0.59s; }
   .nav-links--open li:nth-child(9) { transition-delay: 0.66s; }
+  .nav-links--open li:nth-child(10) { transition-delay: 0.73s; }
 
-  .nav-reminders-label,
   .nav-theme-label,
   .nav-about-label {
     display: inline;
@@ -185,10 +185,8 @@
     border-color: rgba(var(--color-white-rgb), 0.3);
   }
 
-  .nav-reminders-active-dot {
-    position: static;
-    display: inline-block;
-    margin-left: -0.1rem;
+  .nav-reminders-label {
+    display: inline;
   }
 
   .nav-about-btn {
@@ -2006,6 +2004,12 @@
   transition: color 0.2s;
   padding: 0;
   -webkit-tap-highlight-color: transparent;
+}
+
+.nav-reminders-icon-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .nav-reminders-btn:hover,
