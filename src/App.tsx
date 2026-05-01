@@ -9,6 +9,7 @@ import SongbookPage from './pages/SongbookPage'
 import RosaryPage from './pages/RosaryPage'
 import ChapletPage from './pages/ChapletPage'
 import AnnouncementsPage from './pages/AnnouncementsPage'
+import MayDevotionPage from './pages/MayDevotionPage'
 import SearchPage from './pages/SearchPage'
 import NotFoundPage from './pages/NotFoundPage'
 import './App.css'
@@ -47,6 +48,7 @@ function AppRoutes() {
         <Route path="/koronka" element={<ChapletPage />} />
         <Route path="/ogloszenia" element={<AnnouncementsPage />} />
         <Route path="/ogloszenia/:id" element={<AnnouncementsPage />} />
+        <Route path="/nabozenstwo-majowe" element={<MayDevotionPage />} />
         <Route path="/szukaj" element={<SearchPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
