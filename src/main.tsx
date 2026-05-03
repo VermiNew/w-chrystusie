@@ -9,9 +9,12 @@ createRoot(document.getElementById('root')!).render(
   </StrictMode>,
 )
 
-// Register service worker for PWA notifications
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js').catch(() => {
-    // SW registration failed — notifications will fall back to in-app toasts
+// Register service worker for PWA offline cache + notifications.
+// Disabled in dev to avoid interfering with Vite HMR.
+if ('serviceWorker' in navigator && import.meta.env.PROD) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {
+      // SW registration failed — app falls back to network-only mode
+    })
   })
 }
