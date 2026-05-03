@@ -337,6 +337,11 @@
   z-index: 1;
 }
 
+/* Suspense fallback — invisible placeholder to avoid flash while route chunk loads */
+.page-loading {
+  min-height: 60vh;
+}
+
 @keyframes page-fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
