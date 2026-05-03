@@ -22,6 +22,9 @@
   --font-body: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-heading: 'Space Grotesk', system-ui, sans-serif;
   --font-reading: 'Literata', Georgia, serif;
+
+  /* Layout */
+  --header-height: 60px;
 }
 
 [data-theme="dark"] {
