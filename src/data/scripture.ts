@@ -17,7 +17,7 @@ export interface Book {
   chapters: Chapter[]
 }
 
-const DB_NAME = 'slowo-zycia'
+const DB_NAME = 'w-chrystusie'
 const STORE_NAME = 'cache'
 const BIBLE_KEY = 'bible-xml'
 
