@@ -14,7 +14,10 @@ export default function HomePage() {
   return (
     <div className="home">
       <section className="hero">
-        <h1 className="hero-title">✝ W Chrystusie</h1>
+        <h1 className="hero-title">
+          <FaCross className="hero-title-icon" aria-hidden="true" />
+          <span>W Chrystusie</span>
+        </h1>
         <p className="hero-subtitle">Modlitwa, Pismo Święte i pieśni - wszystko w jednym miejscu.</p>
       </section>
       <blockquote className="hero-quote">
