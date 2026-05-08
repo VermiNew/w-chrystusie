@@ -1266,7 +1266,7 @@
 }
 
 .chaplet-intro-start:hover {
-  background-color: color-mix(in srgb, var(--color-primary) 85%, black);
+  background-color: color-mix(in srgb, var(--color-primary) 85%, var(--color-darken));
   box-shadow: 0 4px 16px rgba(var(--color-primary-rgb), 0.3);
   translate: 0 -2px;
 }
@@ -1730,7 +1730,7 @@
 }
 
 .reminder-toast-btn--primary:hover {
-  background: color-mix(in srgb, var(--color-primary) 85%, black);
+  background: color-mix(in srgb, var(--color-primary) 85%, var(--color-darken));
   border-color: transparent;
   color: var(--color-white);
 }
