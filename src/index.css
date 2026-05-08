@@ -15,6 +15,9 @@
   --color-hover-bg: #eef2ff;
   --color-hover-border: #a5b4fc;
   --color-progress: #818cf8;
+  --color-danger: #ef4444;
+  --color-success: #22c55e;
+  --color-shadow-rgb: 0, 0, 0;
   --color-header-bg: var(--color-primary);
   --color-header-bg-rgb: var(--color-primary-rgb);
 
@@ -43,6 +46,9 @@
   --color-hover-bg: #2a3a4e;
   --color-hover-border: #5b8db8;
   --color-progress: #7ba4c9;
+  --color-danger: #f87171;
+  --color-success: #4ade80;
+  --color-shadow-rgb: 0, 0, 0;
   --color-header-bg: #1a3a5c;
   --color-header-bg-rgb: 26, 58, 92;
   color-scheme: dark;
