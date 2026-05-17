@@ -1,4 +1,5 @@
 ---
+category: Modlitwy osobiste
 title: Modlitwa dziękczynna (św. Faustyna)
 source: https://www.biblijni.pl/modlitwy/23_modlitwa_dziekczynna.html
 ---

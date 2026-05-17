@@ -1,4 +1,5 @@
-﻿---
+---
+category: Modlitwy za wstawiennictwem świętych
 title: Modlitwa o uproszenie łask za przyczyną św. Faustyny
 source: https://www.biblijni.pl/modlitwy/34_modlitwa_o_uproszenie_lask_za_przyczyna_swietej_siostry_faustyny.html
 ---

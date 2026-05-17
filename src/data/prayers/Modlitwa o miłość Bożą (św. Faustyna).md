@@ -1,4 +1,5 @@
-﻿---
+---
+category: Modlitwy osobiste
 title: Modlitwa o miłość Bożą (św. Faustyna)
 source: https://www.biblijni.pl/modlitwy/25_modlitwa_o_milosc_boza.html
 ---

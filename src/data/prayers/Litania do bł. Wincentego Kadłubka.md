@@ -1,4 +1,5 @@
-﻿---
+---
+category: Litanie
 title: Litania do bł. Wincentego Kadłubka
 source: https://www.biblijni.pl/modlitwy/37_litania_do_bl_wincentego_kadlubka.html
 ---

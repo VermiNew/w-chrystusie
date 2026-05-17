@@ -1,4 +1,5 @@
-﻿---
+---
+category: Modlitwy za bliźnich
 title: Modlitwy za grzeszników (św. Faustyna)
 source: https://www.biblijni.pl/modlitwy/30_modlitwy_za_grzesznikow.html
 ---

@@ -1,4 +1,5 @@
-﻿---
+---
+category: Modlitwy osobiste
 title: Przed Najświętszym Sakramentem (św. Faustyna)
 source: https://www.biblijni.pl/modlitwy/21_przed_najswietszym_sakramentem.html
 ---

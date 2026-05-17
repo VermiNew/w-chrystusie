@@ -1,4 +1,5 @@
-﻿---
+---
+category: Modlitwy osobiste
 title: Modlitwa ufności (św. Faustyna)
 source: https://www.biblijni.pl/modlitwy/28_modlitwa_ufnosci.html
 ---

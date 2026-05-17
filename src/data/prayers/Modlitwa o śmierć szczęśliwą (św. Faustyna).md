@@ -1,4 +1,5 @@
-﻿---
+---
+category: Modlitwy osobiste
 title: Modlitwa o śmierć szczęśliwą (św. Faustyna)
 source: https://www.biblijni.pl/modlitwy/32_modlitwa_o_smierc_szczesliwa.html
 ---

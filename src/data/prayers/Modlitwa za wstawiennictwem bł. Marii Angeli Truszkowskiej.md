@@ -1,4 +1,5 @@
 ---
+category: Modlitwy za wstawiennictwem świętych
 title: Modlitwa za wstawiennictwem bł. Marii Angeli Truszkowskiej
 source: https://www.biblijni.pl/modlitwy/38_modlitwa_za_wstawiennictwem_marii_ageli_truszkowskiej.html
 ---

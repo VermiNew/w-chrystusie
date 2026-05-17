@@ -1,4 +1,5 @@
-﻿---
+---
+category: Modlitwy osobiste
 title: Modlitwa o mądrość Bożą (św. Faustyna)
 source: https://www.biblijni.pl/modlitwy/26_modlitwa_o_madrosc_boza.html
 ---

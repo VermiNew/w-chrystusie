@@ -1,4 +1,5 @@
-﻿---
+---
+category: Modlitwy osobiste
 title: Modlitwy w cierpieniu (św. Faustyna)
 source: https://www.biblijni.pl/modlitwy/31_modlitwy_w_cierpieniu.html
 ---

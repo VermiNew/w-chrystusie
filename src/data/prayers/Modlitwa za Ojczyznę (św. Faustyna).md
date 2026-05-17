@@ -1,4 +1,5 @@
-﻿---
+---
+category: Modlitwy za bliźnich
 title: Modlitwa za Ojczyznę (św. Faustyna)
 source: https://www.biblijni.pl/modlitwy/24_modlitwa_za_ojczyzne.html
 ---

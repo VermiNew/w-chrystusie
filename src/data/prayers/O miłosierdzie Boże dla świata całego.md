@@ -1,4 +1,5 @@
-﻿---
+---
+category: Modlitwy za bliźnich
 title: O miłosierdzie Boże dla świata całego
 source: https://www.biblijni.pl/modlitwy/22_o_milosierdzie_boze_dla_swiata_calego.html
 ---

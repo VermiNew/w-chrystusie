@@ -1,4 +1,5 @@
-﻿---
+---
+category: Litanie
 title: Litania do bł. Jana Beyzyma SJ
 source: https://www.biblijni.pl/modlitwy/41_litania_do_bl_ojca_jana_beyzyma_sj.html
 ---

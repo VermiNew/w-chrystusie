@@ -1,4 +1,5 @@
-﻿---
+---
+category: Modlitwy za bliźnich
 title: Modlitwa o łaskę pełnienia miłosierdzia względem bliźnich
 source: https://www.biblijni.pl/modlitwy/29_modlitwa_o_laske_pelnienia_milosierdzia_wzgledem_bliznich.html
 ---

@@ -1,4 +1,5 @@
-﻿---
+---
+category: Modlitwy osobiste
 title: Akty ufności (św. Faustyna)
 source: https://www.biblijni.pl/modlitwy/27_akty_ufnosci.html
 ---

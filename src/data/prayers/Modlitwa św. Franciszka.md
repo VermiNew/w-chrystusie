@@ -1,4 +1,5 @@
-﻿---
+---
+category: Modlitwy osobiste
 title: Modlitwa św. Franciszka
 source: https://www.biblijni.pl/modlitwy/20_modlitwa_sw_franciszka.html
 ---

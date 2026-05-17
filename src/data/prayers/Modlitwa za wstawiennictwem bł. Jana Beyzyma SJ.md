@@ -1,4 +1,5 @@
-﻿---
+---
+category: Modlitwy za wstawiennictwem świętych
 title: Modlitwa za wstawiennictwem bł. Jana Beyzyma SJ
 source: https://www.biblijni.pl/modlitwy/40_modlitwa_za_wstawiennictwem_bl_ojca_jana_beyzyma_sj.html
 ---

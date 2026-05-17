@@ -1,4 +1,5 @@
-﻿---
+---
+category: Modlitwy maryjne
 title: Modlitwy do Matki Bożej (św. Faustyna)
 source: https://www.biblijni.pl/modlitwy/33_modlitwy_do_matki_bozej.html
 ---
