@@ -6,9 +6,16 @@ import { songs, type Song } from '../data/songs'
 const SCROLL_KEY = 'songbook-scroll'
 
 const categoryOrder = [
+  'Pieśni adwentowe',
+  'Kolędy',
+  'Pieśni wielkopostne',
+  'Pieśni Maryjne',
+  'Pieśni do Ducha Świętego',
+  'Pieśni mszalne',
   'Pieśni uwielbienia',
-  'Pieśni maryjne',
   'Pieśni pokutne',
+  'Pieśni patriotyczne',
+  'Pieśni okolicznościowe',
 ]
 
 export default function SongbookPage() {

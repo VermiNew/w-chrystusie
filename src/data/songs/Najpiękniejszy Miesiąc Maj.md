@@ -1,6 +1,6 @@
----
+﻿---
 title: Najpiękniejszy Miesiąc Maj
-category: Pieśni maryjne
+category: Pieśni Maryjne
 ---
 
 **1.** Najpiękniejszy miesiąc maj

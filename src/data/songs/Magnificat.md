@@ -1,6 +1,6 @@
----
+﻿---
 title: Magnificat
-category: Pieśni maryjne
+category: Pieśni Maryjne
 ---
 
 Treść pieśni Magnificat.

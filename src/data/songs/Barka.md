@@ -1,6 +1,6 @@
----
+﻿---
 title: Barka
-category: Pieśni maryjne
+category: Pieśni Maryjne
 ---
 
 Treść pieśni Barka.

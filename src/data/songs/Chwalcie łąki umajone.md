@@ -1,6 +1,6 @@
----
+﻿---
 title: Chwalcie łąki umajone
-category: Pieśni maryjne
+category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1159/Chwalcie-laki-umajone
 ---
 
