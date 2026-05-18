@@ -9,6 +9,7 @@ const categoryOrder = [
   'Modlitwy codzienne',
   'Litanie',
   'Modlitwy maryjne',
+  'Modlitwy do Matki Bożej Szkaplerznej',
   'Modlitwy do Ducha Świętego',
   'Modlitwy o zdrowie',
   'Modlitwy za zmarłych',
@@ -19,6 +20,7 @@ const categoryOrder = [
   'Modlitwy w podróży',
   'Akty i ofiarowania',
   'Nabożeństwa',
+  'Sakramenty',
   'Katechizm',
 ]
 
