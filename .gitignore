@@ -25,3 +25,6 @@ dist-ssr
 
 # Agent context (local only)
 .agents/
+
+# Working files (temp HTML cache, JSON scratch, etc.)
+.work/
