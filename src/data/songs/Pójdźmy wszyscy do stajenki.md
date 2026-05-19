@@ -1,0 +1,21 @@
+---
+title: Pójdźmy wszyscy do stajenki
+category: Kolędy
+source: https://niezbednik.niedziela.pl/artykul/134/Pojdzmy-wszyscy-do-stajenki
+---
+
+Pójdźmy wszyscy do stajenki, do Jezusa i Panienki  
+Powitajmy Maleńkiego i Maryję Matkę Jego  
+Powitajmy Maleńkiego i Maryję Matkę Jego
+
+Witaj, Jezu ukochany, od Patriarchów czekany  
+Od Proroków ogłoszony, od narodów upragniony  
+Od Proroków ogłoszony, od narodów upragniony
+
+Witaj, Dzieciąteczko w żłobie, wyznajemy Boga w Tobie  
+Coś się narodził tej nocy, byś nas wyrwał z czarta mocy  
+Coś się narodził tej nocy, byś nas wyrwał z czarta mocy
+
+Witaj Jezu nam zjawiony, witaj dwakroć narodzony  
+Raz z Ojca przed wieków wiekiem, a teraz z matki człowiekiem  
+Raz z Ojca przed wieków wiekiem, a teraz z matki człowiekiem
