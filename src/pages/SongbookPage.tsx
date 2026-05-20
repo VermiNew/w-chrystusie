@@ -15,6 +15,7 @@ const categoryOrder = [
   'Pieśni uwielbienia',
   'Pieśni pokutne',
   'Pieśni patriotyczne',
+  'Pieśni papieskie',
   'Pieśni okolicznościowe',
 ]
 
