@@ -8,6 +8,7 @@ const SCROLL_KEY = 'prayers-scroll'
 const categoryOrder = [
   'Modlitwy codzienne',
   'Litanie',
+  'Koronki',
   'Modlitwy maryjne',
   'Modlitwy do Matki Bożej Szkaplerznej',
   'Modlitwy do Ducha Świętego',
