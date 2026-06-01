@@ -3,7 +3,7 @@ import Markdown from 'react-markdown'
 import { FaChurch, FaHeart } from 'react-icons/fa6'
 import { songs } from '../data/songs'
 
-const SONG_ID = 'najpiekniejszy-miesiac-maj'
+const SONG_ID = 'Najpiękniejszy Miesiąc Maj'
 
 export default function MayDevotionPage() {
   const song = songs.find((s) => s.id === SONG_ID)

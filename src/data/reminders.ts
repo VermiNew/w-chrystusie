@@ -16,14 +16,14 @@ export const REMINDERS: Reminder[] = [
     label: 'Anioł Pański',
     description: 'Modlitwa maryjna odmawiana trzy razy dziennie.',
     times: ['06:00', '12:00', '18:00'],
-    href: '/modlitwy/aniol-panski',
+    href: '/modlitwy/Anioł Pański',
   },
   {
     id: 'koronka',
     label: 'Koronka do Bożego Miłosierdzia',
     description: 'Modlitwa o godzinie miłosierdzia – godz. 15:00.',
     times: ['15:00'],
-    href: '/modlitwy/koronka-do-bozego-milosierdzia',
+    href: '/koronka',
   },
   {
     id: 'jutrznia',
