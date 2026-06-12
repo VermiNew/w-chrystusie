@@ -3,7 +3,7 @@
 //   1. Cache app shell + runtime assets for offline access
 //   2. Handle notification display and click actions
 
-const CACHE_VERSION = 'v1-2026-05-01'
+const CACHE_VERSION = 'v1'
 const STATIC_CACHE = `wch-static-${CACHE_VERSION}`
 const RUNTIME_CACHE = `wch-runtime-${CACHE_VERSION}`
 
@@ -39,8 +39,34 @@ self.addEventListener('activate', (event) => {
           .map((k) => caches.delete(k)),
       )
       await self.clients.claim()
+      const clients = await self.clients.matchAll({ type: 'window', includeUncontrolled: true })
+      clients.forEach((client) => client.postMessage({ type: 'SW_ACTIVATED', version: CACHE_VERSION }))
     })(),
   )
+})
+
+self.addEventListener('message', (event) => {
+  const message = event.data
+  if (!message || typeof message !== 'object') return
+
+  if (message.type === 'SKIP_WAITING') {
+    self.skipWaiting()
+    return
+  }
+
+  if (message.type === 'SHOW_NOTIFICATION') {
+    const title = message.title || 'W Chrystusie'
+    const href = message.href ? new URL(message.href, self.location.origin).href : self.location.origin
+    const options = {
+      body: message.body || '',
+      icon: '/icon-192.png',
+      badge: '/favicon-32x32.png',
+      tag: message.tag || 'wch-notification',
+      renotify: Boolean(message.renotify),
+      data: { href },
+    }
+    event.waitUntil(self.registration.showNotification(title, options))
+  }
 })
 
 // Fetch strategy:
@@ -53,6 +79,13 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET') return
 
   const url = new URL(request.url)
+
+  // Always fetch the service worker itself from the network so updates are not
+  // hidden behind the runtime cache.
+  if (url.origin === self.location.origin && url.pathname === '/sw.js') {
+    event.respondWith(fetch(request))
+    return
+  }
 
   // SPA navigation requests
   if (request.mode === 'navigate') {
@@ -124,8 +157,13 @@ async function staleWhileRevalidate(request, cacheName) {
 // Handle notification clicks — navigate to the prayer page
 self.addEventListener('notificationclick', (event) => {
   event.notification.close()
-  const url = event.notification.data?.href
-  if (!url) return
+  const href = event.notification.data?.href || '/'
+  let targetUrl
+  try {
+    targetUrl = new URL(href, self.location.origin).href
+  } catch {
+    targetUrl = self.location.origin + '/'
+  }
 
   event.waitUntil(
     self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((clients) => {
@@ -133,12 +171,12 @@ self.addEventListener('notificationclick', (event) => {
       for (const client of clients) {
         if (new URL(client.url).origin === self.location.origin) {
           client.focus()
-          client.navigate(url)
+          client.navigate(targetUrl)
           return
         }
       }
       // Otherwise open a new window
-      return self.clients.openWindow(url)
+      return self.clients.openWindow(targetUrl)
     }),
   )
 })

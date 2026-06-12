@@ -4,6 +4,23 @@ import { REMINDERS } from './reminders'
 const STORAGE_KEY = 'prayer-reminders'
 const TIMES_STORAGE_KEY = 'prayer-reminders-times'
 const NOTIF_KEY = 'prayer-reminders-notif'
+const SW_READY_TIMEOUT_MS = 1_500
+
+export interface BrowserNotificationStatus {
+  supported: boolean
+  enabled: boolean
+  permission: NotificationPermission | 'unsupported'
+  serviceWorkerSupported: boolean
+  serviceWorkerControlled: boolean
+  serviceWorkerReady: boolean
+  standalone: boolean
+}
+
+export interface BrowserNotificationResult {
+  ok: boolean
+  channel?: 'service-worker' | 'notification-api'
+  reason?: string
+}
 
 // ---- Storage helpers ----
 
@@ -137,6 +154,9 @@ export async function enableBrowserNotifications(): Promise<boolean> {
   if (!('Notification' in window)) return false
   const result = await Notification.requestPermission()
   const granted = result === 'granted'
+  if (granted) {
+    await ensureServiceWorkerRegistration()
+  }
   localStorage.setItem(NOTIF_KEY, String(granted))
   notifyNotifListeners()
   return granted
@@ -147,22 +167,92 @@ export function disableBrowserNotifications() {
   notifyNotifListeners()
 }
 
+export async function getBrowserNotificationStatus(): Promise<BrowserNotificationStatus> {
+  const serviceWorkerSupported = 'serviceWorker' in navigator
+  const registration = serviceWorkerSupported ? await getReadyServiceWorkerRegistration() : null
+
+  return {
+    supported: 'Notification' in window,
+    enabled: getNotifEnabled(),
+    permission: 'Notification' in window ? Notification.permission : 'unsupported',
+    serviceWorkerSupported,
+    serviceWorkerControlled: Boolean(serviceWorkerSupported && navigator.serviceWorker.controller),
+    serviceWorkerReady: Boolean(registration?.active),
+    standalone: isStandaloneDisplayMode(),
+  }
+}
+
+export async function ensureServiceWorkerRegistration(): Promise<ServiceWorkerRegistration | null> {
+  if (!('serviceWorker' in navigator)) return null
+  // Mirror the guard from main.tsx: avoid registering the SW in dev unless running as an installed PWA,
+  // which would intercept Vite HMR fetches and serve stale cached assets.
+  if (!import.meta.env.PROD && !isStandaloneDisplayMode()) return null
+  try {
+    const existing = await navigator.serviceWorker.getRegistration()
+    if (existing) return existing
+    return await navigator.serviceWorker.register('/sw.js')
+  } catch {
+    return null
+  }
+}
+
 /** Send a native browser notification if enabled and permission granted.
- *  Uses ServiceWorker.showNotification in PWA standalone mode (where `new Notification()` is blocked),
- *  falling back to the regular Notification API. */
-export function sendBrowserNotification(title: string, body: string, href?: string) {
-  if (!getNotifEnabled()) return
-  if (!('Notification' in window)) return
-  if (Notification.permission !== 'granted') return
+ *  ServiceWorker.showNotification is preferred for installed PWAs; if no
+ *  service worker becomes ready quickly, fall back to the Notification API.
+ */
+export async function sendBrowserNotification(
+  title: string,
+  body: string,
+  href?: string,
+): Promise<BrowserNotificationResult> {
+  if (!getNotifEnabled()) return { ok: false, reason: 'disabled' }
+  if (!('Notification' in window)) return { ok: false, reason: 'unsupported' }
+  if (Notification.permission !== 'granted') return { ok: false, reason: Notification.permission }
 
-  const options = { body, icon: '/icon-192.png', data: { href } }
+  const notificationHref = href ? new URL(href, window.location.origin).href : window.location.origin
+  const options: NotificationOptions = {
+    body,
+    icon: '/icon-192.png',
+    badge: '/favicon-32x32.png',
+    tag: href ? `prayer-reminder:${href}` : 'prayer-reminder',
+    data: { href: notificationHref },
+  }
 
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.ready
-      .then((reg) => reg.showNotification(title, options))
-      .catch(() => new Notification(title, options))
-  } else {
+  const registration = await getReadyServiceWorkerRegistration()
+  if (registration?.active) {
+    try {
+      await registration.showNotification(title, options)
+      return { ok: true, channel: 'service-worker' }
+    } catch {
+      // Fall through to Notification API.
+    }
+  }
+
+  try {
     new Notification(title, options)
+    return { ok: true, channel: 'notification-api' }
+  } catch {
+    return { ok: false, reason: 'blocked' }
+  }
+}
+
+function isStandaloneDisplayMode(): boolean {
+  const nav = navigator as Navigator & { standalone?: boolean }
+  return window.matchMedia?.('(display-mode: standalone)').matches || nav.standalone === true
+}
+
+async function getReadyServiceWorkerRegistration(): Promise<ServiceWorkerRegistration | null> {
+  if (!('serviceWorker' in navigator)) return null
+
+  try {
+    const ready = await Promise.race<ServiceWorkerRegistration | null>([
+      navigator.serviceWorker.ready,
+      new Promise((resolve) => window.setTimeout(() => resolve(null), SW_READY_TIMEOUT_MS)),
+    ])
+    if (ready) return ready
+    return (await navigator.serviceWorker.getRegistration()) ?? null
+  } catch {
+    return null
   }
 }
 
