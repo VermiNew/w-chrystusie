@@ -245,10 +245,14 @@ async function getReadyServiceWorkerRegistration(): Promise<ServiceWorkerRegistr
   if (!('serviceWorker' in navigator)) return null
 
   try {
+    let timerId: ReturnType<typeof window.setTimeout> | undefined
     const ready = await Promise.race<ServiceWorkerRegistration | null>([
       navigator.serviceWorker.ready,
-      new Promise((resolve) => window.setTimeout(() => resolve(null), SW_READY_TIMEOUT_MS)),
+      new Promise((resolve) => {
+        timerId = window.setTimeout(() => resolve(null), SW_READY_TIMEOUT_MS)
+      }),
     ])
+    window.clearTimeout(timerId)
     if (ready) return ready
     return (await navigator.serviceWorker.getRegistration()) ?? null
   } catch {

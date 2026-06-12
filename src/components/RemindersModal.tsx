@@ -33,6 +33,7 @@ export default function RemindersModal({ open, onClose }: Props) {
   const [notificationStatus, setNotificationStatus] = useState<BrowserNotificationStatus | null>(null)
   const [testStatus, setTestStatus] = useState<string | null>(null)
   const [testingNotification, setTestingNotification] = useState(false)
+  const notifTogglingRef = useRef(false)
 
   const allEnabled = REMINDERS.length > 0 && REMINDERS.every((r) => enabledIds.includes(r.id))
   const browserNotif = useBrowserNotifications()
@@ -109,33 +110,39 @@ export default function RemindersModal({ open, onClose }: Props) {
   }
 
   const handleBrowserNotificationsChange = async () => {
+    if (notifTogglingRef.current) return
+    notifTogglingRef.current = true
     setTestStatus(null)
-    if (browserNotif) {
-      disableBrowserNotifications()
-      refreshNotificationStatus()
-    } else {
-      const granted = await enableBrowserNotifications()
-      if (!granted) {
-        setTestStatus('Brak zgody na powiadomienia.')
+    try {
+      if (browserNotif) {
+        disableBrowserNotifications()
         refreshNotificationStatus()
-        return
-      }
-      // Wait for the SW to become active before reading status — avoids showing
-      // "Service worker: nieaktywny" right after a fresh registration.
-      const reg = await navigator.serviceWorker?.getRegistration()
-      const worker = reg?.installing ?? reg?.waiting
-      if (worker) {
-        await new Promise<void>((resolve) => {
-          const onStateChange = () => {
-            if (worker.state === 'activated' || worker.state === 'redundant') {
-              worker.removeEventListener('statechange', onStateChange)
-              resolve()
+      } else {
+        const granted = await enableBrowserNotifications()
+        if (!granted) {
+          setTestStatus('Brak zgody na powiadomienia.')
+          refreshNotificationStatus()
+          return
+        }
+        // Wait for the SW to become active before reading status — avoids a false
+        // "inactive" state immediately after a fresh registration.
+        const reg = await navigator.serviceWorker?.getRegistration()
+        const worker = reg?.installing ?? reg?.waiting
+        if (worker) {
+          await new Promise<void>((resolve) => {
+            const onStateChange = () => {
+              if (worker.state === 'activated' || worker.state === 'redundant') {
+                worker.removeEventListener('statechange', onStateChange)
+                resolve()
+              }
             }
-          }
-          worker.addEventListener('statechange', onStateChange)
-        })
+            worker.addEventListener('statechange', onStateChange)
+          })
+        }
+        refreshNotificationStatus()
       }
-      refreshNotificationStatus()
+    } finally {
+      notifTogglingRef.current = false
     }
   }
 
@@ -213,6 +220,7 @@ export default function RemindersModal({ open, onClose }: Props) {
               id="browser-notif-toggle"
               className="reminders-item-checkbox"
               checked={browserNotif}
+              disabled={notifTogglingRef.current}
               onChange={handleBrowserNotificationsChange}
             />
           </label>
