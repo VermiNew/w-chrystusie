@@ -59,7 +59,7 @@ export default function ReminderToast() {
         firedRef.current.add(fireKey)
         setToast({ reminderId: reminder.id, label: reminder.label, href: reminder.href })
         setVisible(true)
-        sendBrowserNotification('Czas na modlitwę', reminder.label, reminder.href)
+        void sendBrowserNotification('Czas na modlitwę', reminder.label, reminder.href)
         break // show one toast at a time
       }
     }
