@@ -39,8 +39,6 @@ self.addEventListener('activate', (event) => {
           .map((k) => caches.delete(k)),
       )
       await self.clients.claim()
-      const clients = await self.clients.matchAll({ type: 'window', includeUncontrolled: true })
-      clients.forEach((client) => client.postMessage({ type: 'SW_ACTIVATED', version: CACHE_VERSION }))
     })(),
   )
 })
@@ -54,19 +52,6 @@ self.addEventListener('message', (event) => {
     return
   }
 
-  if (message.type === 'SHOW_NOTIFICATION') {
-    const title = message.title || 'W Chrystusie'
-    const href = message.href ? new URL(message.href, self.location.origin).href : self.location.origin
-    const options = {
-      body: message.body || '',
-      icon: '/icon-192.png',
-      badge: '/favicon-32x32.png',
-      tag: message.tag || 'wch-notification',
-      renotify: Boolean(message.renotify),
-      data: { href },
-    }
-    event.waitUntil(self.registration.showNotification(title, options))
-  }
 })
 
 // Fetch strategy:

@@ -5,6 +5,7 @@ import {
   useEnabledReminders,
   useCustomTimes,
   getEffectiveTimes,
+  getBrowserNotificationStatus,
   toggleReminder,
   enableAll,
   disableAll,
@@ -13,6 +14,8 @@ import {
   useBrowserNotifications,
   enableBrowserNotifications,
   disableBrowserNotifications,
+  sendBrowserNotification,
+  type BrowserNotificationStatus,
 } from '../data/useReminders'
 
 interface Props {
@@ -27,10 +30,17 @@ export default function RemindersModal({ open, onClose }: Props) {
   const customTimesMap = useCustomTimes()
   const dialogRef = useRef<HTMLDialogElement>(null)
   const [closing, setClosing] = useState(false)
+  const [notificationStatus, setNotificationStatus] = useState<BrowserNotificationStatus | null>(null)
+  const [testStatus, setTestStatus] = useState<string | null>(null)
+  const [testingNotification, setTestingNotification] = useState(false)
 
   const allEnabled = REMINDERS.length > 0 && REMINDERS.every((r) => enabledIds.includes(r.id))
   const browserNotif = useBrowserNotifications()
   const notifSupported = 'Notification' in window
+
+  const refreshNotificationStatus = useCallback(() => {
+    void getBrowserNotificationStatus().then(setNotificationStatus)
+  }, [])
 
   const handleClose = useCallback(() => {
     if (closing) return
@@ -48,8 +58,20 @@ export default function RemindersModal({ open, onClose }: Props) {
     if (!dialog) return
     if (open && !dialog.open) {
       dialog.showModal()
+      refreshNotificationStatus()
     }
-  }, [open])
+  }, [open, refreshNotificationStatus])
+
+  useEffect(() => {
+    if (!open) return
+    const refresh = () => refreshNotificationStatus()
+    document.addEventListener('visibilitychange', refresh)
+    navigator.serviceWorker?.addEventListener('controllerchange', refresh)
+    return () => {
+      document.removeEventListener('visibilitychange', refresh)
+      navigator.serviceWorker?.removeEventListener('controllerchange', refresh)
+    }
+  }, [open, refreshNotificationStatus])
 
   // Close on backdrop click
   const handleDialogClick = (e: React.MouseEvent<HTMLDialogElement>) => {
@@ -85,6 +107,64 @@ export default function RemindersModal({ open, onClose }: Props) {
     if (current.length <= 1) return
     setCustomTimes(id, current.filter((_, i) => i !== index))
   }
+
+  const handleBrowserNotificationsChange = async () => {
+    setTestStatus(null)
+    if (browserNotif) {
+      disableBrowserNotifications()
+      refreshNotificationStatus()
+    } else {
+      const granted = await enableBrowserNotifications()
+      if (!granted) {
+        setTestStatus('Brak zgody na powiadomienia.')
+        refreshNotificationStatus()
+        return
+      }
+      // Wait for the SW to become active before reading status — avoids showing
+      // "Service worker: nieaktywny" right after a fresh registration.
+      const reg = await navigator.serviceWorker?.getRegistration()
+      const worker = reg?.installing ?? reg?.waiting
+      if (worker) {
+        await new Promise<void>((resolve) => {
+          const onStateChange = () => {
+            if (worker.state === 'activated' || worker.state === 'redundant') {
+              worker.removeEventListener('statechange', onStateChange)
+              resolve()
+            }
+          }
+          worker.addEventListener('statechange', onStateChange)
+        })
+      }
+      refreshNotificationStatus()
+    }
+  }
+
+  const handleTestNotification = async () => {
+    setTestingNotification(true)
+    setTestStatus(null)
+    const result = await sendBrowserNotification(
+      'Test powiadomień',
+      'Powiadomienia w aplikacji działają.',
+      '/modlitwy',
+    )
+    setTestingNotification(false)
+    setTestStatus(result.ok ? 'Wysłano testowe powiadomienie.' : 'Nie udało się wysłać powiadomienia.')
+    refreshNotificationStatus()
+  }
+
+  const permissionLabel = !notificationStatus
+    ? 'sprawdzanie…'
+    : notificationStatus.permission === 'granted'
+      ? 'zgoda'
+      : notificationStatus.permission === 'denied'
+        ? 'zablokowane'
+        : notificationStatus.permission === 'default'
+          ? 'nieustawione'
+          : 'brak wsparcia'
+  const serviceWorkerLabel = !notificationStatus
+    ? 'sprawdzanie…'
+    : notificationStatus.serviceWorkerReady ? 'aktywny' : 'nieaktywny'
+  const pwaLabel = !notificationStatus ? 'sprawdzanie…' : notificationStatus.standalone ? 'tak' : 'nie'
 
   return (
     <dialog
@@ -133,9 +213,27 @@ export default function RemindersModal({ open, onClose }: Props) {
               id="browser-notif-toggle"
               className="reminders-item-checkbox"
               checked={browserNotif}
-              onChange={() => browserNotif ? disableBrowserNotifications() : enableBrowserNotifications()}
+              onChange={handleBrowserNotificationsChange}
             />
           </label>
+        )}
+
+        {notifSupported && (
+          <div className="reminders-notif-diagnostics">
+            <div className="reminders-notif-status-grid">
+              <span>Zgoda: {permissionLabel}</span>
+              <span>Service worker: {serviceWorkerLabel}</span>
+              <span>PWA: {pwaLabel}</span>
+            </div>
+            <button
+              className="reminders-test-btn"
+              onClick={handleTestNotification}
+              disabled={!browserNotif || testingNotification || notificationStatus?.permission !== 'granted'}
+            >
+              {testingNotification ? 'Wysyłanie…' : 'Wyślij test'}
+            </button>
+            {testStatus && <p className="reminders-test-status">{testStatus}</p>}
+          </div>
         )}
 
         <ul className="reminders-list">
@@ -193,7 +291,7 @@ export default function RemindersModal({ open, onClose }: Props) {
         </ul>
 
         <p className="reminders-dialog-note">
-          <FaCircleInfo /> Przypomnienia działają gdy aplikacja jest otwarta. Włącz powiadomienia przeglądarki, aby zobaczyć je także poza kartą.
+          <FaCircleInfo /> Przypomnienia lokalne działają gdy aplikacja jest otwarta. Powiadomienia przeglądarki używają service workera w PWA, a gdy aplikacja jest całkowicie zamknięta, wymagają Web Push z serwerem.
         </p>
       </div>
     </dialog>
