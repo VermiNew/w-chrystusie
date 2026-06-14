@@ -9,6 +9,7 @@ const categoryOrder = [
   'Pieśni adwentowe',
   'Kolędy',
   'Pieśni wielkopostne',
+  'Pieśni wielkanocne',
   'Pieśni Maryjne',
   'Pieśni do Ducha Świętego',
   'Pieśni mszalne',
