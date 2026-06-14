@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo, useEffect, useCallback } from 'react'
 import { buildChapletSteps } from '../data/chaplet'
 
 type Screen = 'intro' | 'prayer'
@@ -33,11 +33,11 @@ export default function ChapletPage() {
     }
   }
 
-  const reset = () => {
+  const reset = useCallback(() => {
     setScreen('intro')
     setCurrentStep(0)
     window.scrollTo(0, 0)
-  }
+  }, [])
 
   // Arrow keys during prayer
   useEffect(() => {
@@ -57,7 +57,7 @@ export default function ChapletPage() {
 
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
-  }, [screen, currentStep, steps.length])
+  }, [screen, currentStep, steps.length, reset])
 
   // Intro screen
   if (screen === 'intro') {

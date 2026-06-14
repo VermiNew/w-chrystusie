@@ -60,6 +60,7 @@ export default function RemindersModal({ open, onClose }: Props) {
     if (open && !dialog.open) {
       dialog.showModal()
       refreshNotificationStatus()
+      setTestStatus(null)
     }
   }, [open, refreshNotificationStatus])
 

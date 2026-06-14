@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo, useEffect, useCallback } from 'react'
 import { mysterySets, buildRosarySteps, type MysterySet } from '../data/rosary'
 
 const DAY_NAMES = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota']
@@ -34,10 +34,10 @@ export default function RosaryPage() {
     }
   }
 
-  const reset = () => {
+  const reset = useCallback(() => {
     setSelectedSet(null)
     setCurrentStep(0)
-  }
+  }, [])
 
   // Arrow keys to navigate between rosary steps
   useEffect(() => {
@@ -57,7 +57,7 @@ export default function RosaryPage() {
 
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
-  }, [selectedSet, currentStep, steps.length])
+  }, [selectedSet, currentStep, steps.length, reset])
 
   const today = new Date().getDay()
 

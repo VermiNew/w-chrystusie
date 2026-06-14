@@ -112,7 +112,7 @@ export default function SearchPage() {
       <ul className="search-results">
         {results.map((r, i) => (
           <li
-            key={i}
+            key={`${r.type}-${r.title}-${i}`}
             className="search-result search-result-clickable"
             onClick={() => {
               if (r.type === 'prayer') navigate(`/modlitwy/${(r.data as Prayer).id}`)
