@@ -25,6 +25,10 @@ const categoryOrder = [
   'Katechizm',
 ]
 
+const fallbackCategory = 'Bez kategorii'
+
+const byTitle = (a: Prayer, b: Prayer) => a.title.localeCompare(b.title, 'pl')
+
 export default function PrayersPage() {
   const { id } = useParams()
   const selected = id ? prayers.find((p) => p.id === id) ?? null : null
@@ -47,13 +51,13 @@ export default function PrayersPage() {
   const grouped = useMemo(() => {
     const map = new Map<string, Prayer[]>()
     for (const prayer of prayers) {
-      const cat = prayer.category ?? 'Bez kategorii'
+      const cat = prayer.category && categoryOrder.includes(prayer.category) ? prayer.category : fallbackCategory
       if (!map.has(cat)) map.set(cat, [])
       map.get(cat)!.push(prayer)
     }
-    return categoryOrder
+    return [...categoryOrder, fallbackCategory]
       .filter((cat) => map.has(cat))
-      .map((cat) => ({ category: cat, items: map.get(cat)! }))
+      .map((cat) => ({ category: cat, items: [...map.get(cat)!].sort(byTitle) }))
   }, [])
 
   if (selected) {
@@ -80,7 +84,7 @@ export default function PrayersPage() {
       <h1>Modlitwy</h1>
       {grouped.map(({ category, items }) => (
         <section key={category} className="prayer-category">
-          <h2 className="prayer-category-title">{category}</h2>
+          <h2 className="prayer-category-title">{category} ({items.length})</h2>
           <ul className="prayer-list">
             {items.map((prayer) => (
               <li key={prayer.id}>

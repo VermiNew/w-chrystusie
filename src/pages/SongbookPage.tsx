@@ -20,6 +20,10 @@ const categoryOrder = [
   'Pieśni okolicznościowe',
 ]
 
+const fallbackCategory = 'Bez kategorii'
+
+const byTitle = (a: Song, b: Song) => a.title.localeCompare(b.title, 'pl')
+
 export default function SongbookPage() {
   const { id } = useParams()
   const selected = id ? songs.find((s) => s.id === id) ?? null : null
@@ -42,13 +46,13 @@ export default function SongbookPage() {
   const grouped = useMemo(() => {
     const map = new Map<string, Song[]>()
     for (const song of songs) {
-      const cat = song.category ?? 'Bez kategorii'
+      const cat = song.category && categoryOrder.includes(song.category) ? song.category : fallbackCategory
       if (!map.has(cat)) map.set(cat, [])
       map.get(cat)!.push(song)
     }
-    return categoryOrder
+    return [...categoryOrder, fallbackCategory]
       .filter((cat) => map.has(cat))
-      .map((cat) => ({ category: cat, items: map.get(cat)! }))
+      .map((cat) => ({ category: cat, items: [...map.get(cat)!].sort(byTitle) }))
   }, [])
 
   if (selected) {
@@ -75,7 +79,7 @@ export default function SongbookPage() {
       <h1>Śpiewnik</h1>
       {grouped.map(({ category, items }) => (
         <section key={category} className="prayer-category">
-          <h2 className="prayer-category-title">{category}</h2>
+          <h2 className="prayer-category-title">{category} ({items.length})</h2>
           <ul className="song-list">
             {items.map((song) => (
               <li key={song.id}>
