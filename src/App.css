@@ -371,6 +371,33 @@
   color: var(--color-primary);
 }
 
+.list-filter-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  outline: none;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: inherit;
+  transition: border-color 0.2s;
+  animation: content-fade-in 0.4s ease 0.1s both;
+}
+
+.list-filter-input:focus {
+  border-color: var(--color-primary);
+}
+
+.list-filter-count,
+.list-filter-empty {
+  margin: 0 0 1.25rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  animation: content-fade-in 0.3s ease both;
+}
+
 .prayer-list {
   list-style: none;
   padding: 0;

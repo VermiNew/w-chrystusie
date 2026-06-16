@@ -1,5 +1,5 @@
-import { useMemo, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useMemo, useEffect, useState } from 'react'
+import { useLocation, useParams, Link } from 'react-router-dom'
 import Markdown from 'react-markdown'
 import { prayers, type Prayer } from '../data/prayers'
 
@@ -29,9 +29,29 @@ const fallbackCategory = 'Bez kategorii'
 
 const byTitle = (a: Prayer, b: Prayer) => a.title.localeCompare(b.title, 'pl')
 
+const decodeRouteId = (routeId: string) => {
+  try {
+    return decodeURIComponent(routeId)
+  } catch {
+    return routeId
+  }
+}
+
+const encodeRouteId = (routeId: string) => encodeURIComponent(routeId)
+
+const getSelectedId = (routeId: string | undefined, pathname: string) => {
+  if (routeId) return decodeRouteId(routeId)
+  if (!pathname.startsWith('/modlitwy/')) return null
+
+  return decodeRouteId(pathname.slice('/modlitwy/'.length))
+}
+
 export default function PrayersPage() {
   const { id } = useParams()
-  const selected = id ? prayers.find((p) => p.id === id) ?? null : null
+  const location = useLocation()
+  const [query, setQuery] = useState('')
+  const selectedId = getSelectedId(id, location.pathname)
+  const selected = selectedId ? prayers.find((p) => p.id === selectedId) ?? null : null
   // Restore scroll position when returning to list (runs after App's scrollTo(0,0))
   useEffect(() => {
     if (!selected) {
@@ -49,8 +69,12 @@ export default function PrayersPage() {
   }
 
   const grouped = useMemo(() => {
+    const normalizedQuery = query.trim().toLowerCase()
     const map = new Map<string, Prayer[]>()
     for (const prayer of prayers) {
+      const searchableText = `${prayer.title} ${prayer.category ?? ''} ${prayer.body}`.toLowerCase()
+      if (normalizedQuery && !searchableText.includes(normalizedQuery)) continue
+
       const cat = prayer.category && categoryOrder.includes(prayer.category) ? prayer.category : fallbackCategory
       if (!map.has(cat)) map.set(cat, [])
       map.get(cat)!.push(prayer)
@@ -58,7 +82,9 @@ export default function PrayersPage() {
     return [...categoryOrder, fallbackCategory]
       .filter((cat) => map.has(cat))
       .map((cat) => ({ category: cat, items: [...map.get(cat)!].sort(byTitle) }))
-  }, [])
+  }, [query])
+
+  const resultCount = grouped.reduce((sum, group) => sum + group.items.length, 0)
 
   if (selected) {
     return (
@@ -82,13 +108,26 @@ export default function PrayersPage() {
   return (
     <div className="page">
       <h1>Modlitwy</h1>
+      <input
+        className="list-filter-input"
+        type="text"
+        placeholder="Szukaj w modlitwach..."
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
+      {query.trim() && (
+        <p className="list-filter-count">
+          Znaleziono: {resultCount} {resultCount === 1 ? 'pozycję' : 'pozycji'}
+        </p>
+      )}
+      {resultCount === 0 && <p className="list-filter-empty">Brak modlitw pasujących do wyszukiwania.</p>}
       {grouped.map(({ category, items }) => (
         <section key={category} className="prayer-category">
           <h2 className="prayer-category-title">{category} ({items.length})</h2>
           <ul className="prayer-list">
             {items.map((prayer) => (
               <li key={prayer.id}>
-                <Link to={`/modlitwy/${prayer.id}`} className="prayer-item" onClick={saveScroll}>
+                <Link to={`/modlitwy/${encodeRouteId(prayer.id)}`} className="prayer-item" onClick={saveScroll}>
                   {prayer.title}
                 </Link>
               </li>

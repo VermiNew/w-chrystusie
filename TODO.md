@@ -34,11 +34,11 @@
 
 ## Do zrobienia — listy modlitw i pieśni
 
-- [ ] Pozycje z kategorią spoza `categoryOrder` są cicho pomijane — dodać fallback `'Bez kategorii'` na końcu
-- [ ] Liczba pozycji przy każdej kategorii (np. „Koronki (63)")
-- [ ] Filtrowanie/wyszukiwanie bezpośrednio na stronie (bez wychodzenia na `/szukaj`)
+- [x] Pozycje z kategorią spoza `categoryOrder` są cicho pomijane — dodać fallback `'Bez kategorii'` na końcu
+- [x] Liczba pozycji przy każdej kategorii (np. „Koronki (63)")
+- [x] Filtrowanie/wyszukiwanie bezpośrednio na stronie (bez wychodzenia na `/szukaj`)
 - [ ] Zwijanie kategorii (accordion) — lista jest bardzo długa przy 224/230 pozycjach
-- [ ] Sortowanie alfabetyczne wewnątrz kategorii
+- [x] Sortowanie alfabetyczne wewnątrz kategorii
 - [ ] Nawigacja prev/next między pozycjami w widoku szczegółu
 - [ ] Breadcrumb w widoku szczegółu — widoczna kategoria podczas czytania
 - [ ] Zastąpić `←` ikoną z react-icons (spójność z resztą UI)

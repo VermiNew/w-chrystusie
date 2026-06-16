@@ -68,6 +68,8 @@ const typeLabels: Record<string, string> = {
   verse: 'Pismo Święte',
 }
 
+const encodeRouteId = (routeId: string) => encodeURIComponent(routeId)
+
 export default function SearchPage() {
   const navigate = useNavigate()
   const [query, setQuery] = useState('')
@@ -115,8 +117,8 @@ export default function SearchPage() {
             key={`${r.type}-${r.title}-${i}`}
             className="search-result search-result-clickable"
             onClick={() => {
-              if (r.type === 'prayer') navigate(`/modlitwy/${(r.data as Prayer).id}`)
-              else if (r.type === 'song') navigate(`/spiewnik/${(r.data as Song).id}`)
+              if (r.type === 'prayer') navigate(`/modlitwy/${encodeRouteId((r.data as Prayer).id)}`)
+              else if (r.type === 'song') navigate(`/spiewnik/${encodeRouteId((r.data as Song).id)}`)
             }}
           >
             <span className="search-result-type">{typeLabels[r.type]}</span>
