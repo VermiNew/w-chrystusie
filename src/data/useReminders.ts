@@ -4,6 +4,9 @@ import { REMINDERS } from './reminders'
 const STORAGE_KEY = 'prayer-reminders'
 const TIMES_STORAGE_KEY = 'prayer-reminders-times'
 const NOTIF_KEY = 'prayer-reminders-notif'
+// How long to wait for the SW to become ready before falling back to
+// navigator.serviceWorker.getRegistration(). 1.5 s is enough for a
+// freshly installed worker to activate while not blocking the UI.
 const SW_READY_TIMEOUT_MS = 1_500
 
 export interface BrowserNotificationStatus {
@@ -246,6 +249,9 @@ async function getReadyServiceWorkerRegistration(): Promise<ServiceWorkerRegistr
 
   try {
     let timerId: ReturnType<typeof window.setTimeout> | undefined
+    // Race navigator.serviceWorker.ready (resolves when SW is active) against a
+    // timeout. If the SW is not ready in time we fall back to getRegistration(),
+    // which returns whatever is currently installed even if not yet activated.
     const ready = await Promise.race<ServiceWorkerRegistration | null>([
       navigator.serviceWorker.ready,
       new Promise((resolve) => {
