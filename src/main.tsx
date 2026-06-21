@@ -23,7 +23,7 @@ if ('serviceWorker' in navigator && (import.meta.env.PROD || isStandalonePwa)) {
           if (!worker) return
           worker.addEventListener('statechange', () => {
             // On first install controller is null — only skip waiting on updates (existing SW in control)
-          if (worker.state === 'installed' && navigator.serviceWorker.controller) {
+            if (worker.state === 'installed' && navigator.serviceWorker.controller) {
               worker.postMessage({ type: 'SKIP_WAITING' })
             }
           })
