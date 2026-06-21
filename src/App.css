@@ -228,43 +228,8 @@
     display: inline;
   }
 
-  .nav-reminders-btn {
-    padding: 1rem 1.25rem;
-    font-size: 1.15rem;
-    color: var(--color-white);
-    border: 1px solid rgba(var(--color-white-rgb), 0.15);
-    border-radius: 10px;
-    justify-content: center;
-    width: 100%;
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
-  }
-
-  .nav-reminders-btn:hover,
-  .nav-reminders-btn--active {
-    background-color: rgba(var(--color-white-rgb), 0.08);
-    border-color: rgba(var(--color-white-rgb), 0.3);
-  }
-
-  .nav-reminders-label {
-    display: inline;
-  }
-
-  .nav-about-btn {
-    padding: 1rem 1.25rem;
-    font-size: 1.15rem;
-    color: var(--color-white);
-    border: 1px solid rgba(var(--color-white-rgb), 0.15);
-    border-radius: 10px;
-    justify-content: center;
-    width: 100%;
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
-  }
-
-  .nav-about-btn:hover {
-    background-color: rgba(var(--color-white-rgb), 0.08);
-    border-color: rgba(var(--color-white-rgb), 0.3);
-  }
-
+  .nav-reminders-btn,
+  .nav-about-btn,
   .nav-theme-btn {
     padding: 1rem 1.25rem;
     font-size: 1.15rem;
@@ -276,9 +241,16 @@
     transition: background-color 0.2s, border-color 0.2s, color 0.2s;
   }
 
+  .nav-reminders-btn:hover,
+  .nav-reminders-btn--active,
+  .nav-about-btn:hover,
   .nav-theme-btn:hover {
     background-color: rgba(var(--color-white-rgb), 0.08);
     border-color: rgba(var(--color-white-rgb), 0.3);
+  }
+
+  .nav-reminders-label {
+    display: inline;
   }
 
   .nav-links a {
