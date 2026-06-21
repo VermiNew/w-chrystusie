@@ -8,6 +8,8 @@ export interface MarkdownEntry {
 }
 
 export function parseMarkdown(filename: string, raw: string): MarkdownEntry {
+  // Matches YAML frontmatter block (--- ... ---) followed by the body.
+  // \r?\n handles both LF and CRLF line endings.
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/)
   if (!match) return { id: filename, title: filename, body: raw.trim() }
 
