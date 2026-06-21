@@ -12,12 +12,13 @@ const CLOSE_DURATION_MS = 250
 
 export default function AboutModal({ open, onClose }: Props) {
   const dialogRef = useRef<HTMLDialogElement>(null)
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const [closing, setClosing] = useState(false)
 
   const handleClose = useCallback(() => {
     if (closing) return
     setClosing(true)
-    setTimeout(() => {
+    closeTimerRef.current = setTimeout(() => {
       dialogRef.current?.close()
       setClosing(false)
       onClose()
@@ -27,8 +28,13 @@ export default function AboutModal({ open, onClose }: Props) {
   useEffect(() => {
     const dialog = dialogRef.current
     if (!dialog) return
-    if (open && !dialog.open) {
-      dialog.showModal()
+    if (open) {
+      if (closeTimerRef.current) {
+        clearTimeout(closeTimerRef.current)
+        closeTimerRef.current = null
+        setClosing(false)
+      }
+      if (!dialog.open) dialog.showModal()
     }
   }, [open])
 
