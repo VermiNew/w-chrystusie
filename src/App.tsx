@@ -38,6 +38,7 @@ function AppRoutes() {
   }, [navigate])
 
   return (
+    // key forces a full remount on route change, resetting all page-level state
     <main className="main" key={location.pathname}>
       <Suspense fallback={<div className="page-loading" aria-hidden="true" />}>
         <Routes location={location}>
