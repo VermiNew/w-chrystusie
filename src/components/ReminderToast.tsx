@@ -26,7 +26,8 @@ export default function ReminderToast() {
   const navigate = useNavigate()
   const [toast, setToast] = useState<ActiveToast | null>(null)
   const [visible, setVisible] = useState(false)
-  // Track which "reminderId@HH:MM" keys have already fired to avoid duplicates
+  // Tracks fired reminders as "reminderId@YYYY-MM-DD@HH:MM" keys.
+  // The date component ensures each reminder fires at most once per calendar day.
   const firedRef = useRef<Set<string>>(new Set())
 
   const dismiss = useCallback(() => {
@@ -59,7 +60,7 @@ export default function ReminderToast() {
         firedRef.current.add(fireKey)
         setToast({ reminderId: reminder.id, label: reminder.label, href: reminder.href })
         setVisible(true)
-        void sendBrowserNotification('Czas na modlitwę', reminder.label, reminder.href)
+        void sendBrowserNotification('Czas na modlitwę', reminder.label, reminder.href) // fire-and-forget
         break // show one toast at a time
       }
     }
