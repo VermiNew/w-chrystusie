@@ -974,7 +974,8 @@
   }
 }
 
-/* Staggered delays for list items — target <li> inside lists */
+/* Staggered entry delays for list items. Items 1–8 get individual delays;
+   items 9+ share the last delay value to cap the total wait time. */
 .prayer-list li, .song-list li, .book-list li, .rosary-sets li, .search-results li {
   animation: list-item-in 0.4s ease both;
 }
