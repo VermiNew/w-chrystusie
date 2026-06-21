@@ -104,6 +104,8 @@
 
 /* Visual separator between content links and tools (Reminders/Theme/About) on desktop */
 .nav-reminders-item {
+  display: flex;
+  align-items: center;
   margin-left: 0.4rem;
   padding-left: 1.1rem;
   border-left: 1px solid rgba(var(--color-white-rgb), 0.18);
@@ -2146,11 +2148,6 @@
 }
 
 /* Bell button in nav-links — icon-only on desktop */
-.nav-reminders-item {
-  display: flex;
-  align-items: center;
-}
-
 .nav-reminders-btn {
   background: none;
   border: none;
