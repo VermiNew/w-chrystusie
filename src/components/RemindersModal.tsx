@@ -59,6 +59,10 @@ export default function RemindersModal({ open, onClose }: Props) {
     const dialog = dialogRef.current
     if (!dialog) return
     if (open) {
+      // Cancel an in-progress close animation when the modal is reopened
+      // before the 250ms timer fires. Without this, the pending setTimeout
+      // would call dialog.close() on an already-open dialog and leave
+      // closing=true, freezing all future close attempts.
       if (closeTimerRef.current) {
         clearTimeout(closeTimerRef.current)
         closeTimerRef.current = null
