@@ -61,7 +61,7 @@ export default function MayDevotionPage() {
           <div className="song-text">
             <Markdown>{song.body}</Markdown>
           </div>
-          <Link to={`/spiewnik/${song.id}`} className="source-link">
+          <Link to={`/spiewnik/${encodeURIComponent(song.id)}`} className="source-link">
             Otwórz w śpiewniku
           </Link>
         </section>
