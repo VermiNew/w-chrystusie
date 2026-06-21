@@ -29,6 +29,7 @@ export default function RemindersModal({ open, onClose }: Props) {
   const enabledIds = useEnabledReminders()
   const customTimesMap = useCustomTimes()
   const dialogRef = useRef<HTMLDialogElement>(null)
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const [closing, setClosing] = useState(false)
   const [notificationStatus, setNotificationStatus] = useState<BrowserNotificationStatus | null>(null)
   const [testStatus, setTestStatus] = useState<string | null>(null)
@@ -46,7 +47,7 @@ export default function RemindersModal({ open, onClose }: Props) {
   const handleClose = useCallback(() => {
     if (closing) return
     setClosing(true)
-    setTimeout(() => {
+    closeTimerRef.current = setTimeout(() => {
       dialogRef.current?.close()
       setClosing(false)
       onClose()
@@ -57,8 +58,13 @@ export default function RemindersModal({ open, onClose }: Props) {
   useEffect(() => {
     const dialog = dialogRef.current
     if (!dialog) return
-    if (open && !dialog.open) {
-      dialog.showModal()
+    if (open) {
+      if (closeTimerRef.current) {
+        clearTimeout(closeTimerRef.current)
+        closeTimerRef.current = null
+        setClosing(false)
+      }
+      if (!dialog.open) dialog.showModal()
       refreshNotificationStatus()
       setTestStatus(null)
     }
