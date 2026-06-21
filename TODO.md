@@ -41,7 +41,7 @@
 - [x] Sortowanie alfabetyczne wewnątrz kategorii
 - [ ] Nawigacja prev/next między pozycjami w widoku szczegółu
 - [ ] Breadcrumb w widoku szczegółu — widoczna kategoria podczas czytania
-- [ ] Zastąpić `←` ikoną z react-icons (spójność z resztą UI)
+- [x] Zastąpić `←` ikoną z react-icons (spójność z resztą UI)
 - [ ] PrayersPage i SongbookPage mają niemal identyczny kod — rozważyć wspólny komponent
 
 ## Do zrobienia — śpiewnik

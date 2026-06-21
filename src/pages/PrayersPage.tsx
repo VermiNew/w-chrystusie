@@ -1,5 +1,6 @@
 import { useMemo, useEffect, useState } from 'react'
 import { useLocation, useParams, Link } from 'react-router-dom'
+import { FaArrowLeft } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
 import { prayers, type Prayer } from '../data/prayers'
 
@@ -90,7 +91,7 @@ export default function PrayersPage() {
     return (
       <div className="page">
         <Link to="/modlitwy" className="back-button">
-          ← Powrót do listy
+          <FaArrowLeft /> Powrót do listy
         </Link>
         <h1>{selected.title}</h1>
         <div className="prayer-text">

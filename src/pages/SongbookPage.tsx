@@ -1,5 +1,6 @@
 import { useMemo, useEffect, useState } from 'react'
 import { useLocation, useParams, Link } from 'react-router-dom'
+import { FaArrowLeft } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
 import { songs, type Song } from '../data/songs'
 
@@ -85,7 +86,7 @@ export default function SongbookPage() {
     return (
       <div className="page">
         <Link to="/spiewnik" className="back-button">
-          ← Powrót do listy
+          <FaArrowLeft /> Powrót do listy
         </Link>
         <h1>{selected.title}</h1>
         <div className="song-text">

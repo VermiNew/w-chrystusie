@@ -461,7 +461,9 @@
   position: sticky;
   top: var(--header-height);
   z-index: 10;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
   text-decoration: none;
 }
 
