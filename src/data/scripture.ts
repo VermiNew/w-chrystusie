@@ -112,6 +112,7 @@ function parseBibleXML(text: string): Book[] {
 
 async function fetchAndCacheBibleXML(): Promise<string> {
   const response = await fetch('/bible.xml')
+  if (!response.ok) throw new Error(`Failed to fetch bible.xml: ${response.status}`)
   const text = await response.text()
   await setCachedXML(text)
   return text
