@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FaKeyboard } from 'react-icons/fa6'
 import { prayers, type Prayer } from '../data/prayers'
@@ -70,9 +70,12 @@ const typeLabels: Record<string, string> = {
 
 const encodeRouteId = (routeId: string) => encodeURIComponent(routeId)
 
+const DEBOUNCE_MS = 200
+
 export default function SearchPage() {
   const navigate = useNavigate()
   const [query, setQuery] = useState('')
+  const [debouncedQuery, setDebouncedQuery] = useState('')
   const [books, setBooks] = useState<Book[]>([])
   const [bibleLoading, setBibleLoading] = useState(true)
 
@@ -89,11 +92,19 @@ export default function SearchPage() {
       })
   }, [])
 
-  const trimmed = query.trim()
-  const results =
-    trimmed.length >= 2
-      ? [...searchPrayers(trimmed), ...searchSongs(trimmed), ...searchScripture(trimmed, books)]
-      : []
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedQuery(query), DEBOUNCE_MS)
+    return () => clearTimeout(timer)
+  }, [query])
+
+  const trimmed = debouncedQuery.trim()
+  const results = useMemo(
+    () =>
+      trimmed.length >= 2
+        ? [...searchPrayers(trimmed), ...searchSongs(trimmed), ...searchScripture(trimmed, books)]
+        : [],
+    [trimmed, books],
+  )
 
   return (
     <div className="page">
@@ -106,7 +117,7 @@ export default function SearchPage() {
         onChange={(e) => setQuery(e.target.value)}
         autoFocus
       />
-      {!trimmed && (
+      {!query.trim() && (
         <p className="search-hint"><FaKeyboard /> Naciśnij <kbd>/</kbd> z dowolnej strony, aby szybko przejść do wyszukiwania.</p>
       )}
       {bibleLoading && trimmed.length >= 2 && (
@@ -118,9 +129,13 @@ export default function SearchPage() {
         </p>
       )}
       <ul className="search-results">
-        {results.map((r, i) => (
+        {results.map((r) => {
+          const key = r.type === 'verse'
+            ? `verse-${r.title}`
+            : `${r.type}-${(r.data as { id: string }).id}`
+          return (
           <li
-            key={`${r.type}-${r.title}-${i}`}
+            key={key}
             className="search-result search-result-clickable"
             onClick={() => {
               if (r.type === 'prayer') navigate(`/modlitwy/${encodeRouteId((r.data as Prayer).id)}`)
@@ -132,7 +147,8 @@ export default function SearchPage() {
             <strong className="search-result-title">{r.title}</strong>
             <p className="search-result-snippet">{r.snippet}</p>
           </li>
-        ))}
+          )
+        })}
       </ul>
     </div>
   )
