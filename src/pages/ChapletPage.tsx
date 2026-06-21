@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect, useCallback } from 'react'
 import { buildChapletSteps } from '../data/chaplet'
+import { hapticLight, hapticMedium } from '../data/haptics'
 
 type Screen = 'intro' | 'prayer'
 
@@ -13,27 +14,29 @@ export default function ChapletPage() {
   const isFirst = currentStep === 0
   const isLast = currentStep === steps.length - 1
 
-  const start = () => {
+  const start = useCallback(() => {
+    hapticMedium()
     setCurrentStep(0)
     setScreen('prayer')
     window.scrollTo(0, 0)
-  }
+  }, [])
 
-  const goNext = () => {
-    if (!isLast) {
-      setCurrentStep(currentStep + 1)
-      window.scrollTo(0, 0)
-    }
-  }
+  const goNext = useCallback(() => {
+    if (isLast) return
+    hapticLight()
+    setCurrentStep((s) => s + 1)
+    window.scrollTo(0, 0)
+  }, [isLast])
 
-  const goPrev = () => {
-    if (!isFirst) {
-      setCurrentStep(currentStep - 1)
-      window.scrollTo(0, 0)
-    }
-  }
+  const goPrev = useCallback(() => {
+    if (isFirst) return
+    hapticLight()
+    setCurrentStep((s) => s - 1)
+    window.scrollTo(0, 0)
+  }, [isFirst])
 
   const reset = useCallback(() => {
+    hapticMedium()
     setScreen('intro')
     setCurrentStep(0)
     window.scrollTo(0, 0)
@@ -44,20 +47,14 @@ export default function ChapletPage() {
     if (screen !== 'prayer') return
 
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowRight' && currentStep < steps.length - 1) {
-        setCurrentStep(currentStep + 1)
-        window.scrollTo(0, 0)
-      }
-      if (e.key === 'ArrowLeft' && currentStep > 0) {
-        setCurrentStep(currentStep - 1)
-        window.scrollTo(0, 0)
-      }
+      if (e.key === 'ArrowRight') goNext()
+      if (e.key === 'ArrowLeft') goPrev()
       if (e.key === 'Escape') reset()
     }
 
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
-  }, [screen, currentStep, steps.length, reset])
+  }, [screen, goNext, goPrev, reset])
 
   // Intro screen
   if (screen === 'intro') {

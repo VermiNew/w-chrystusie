@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect, useCallback } from 'react'
 import { mysterySets, buildRosarySteps, type MysterySet } from '../data/rosary'
+import { hapticLight, hapticMedium } from '../data/haptics'
 
 const DAY_NAMES = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota']
 
@@ -20,21 +21,22 @@ export default function RosaryPage() {
   const isFirst = currentStep === 0
   const isLast = currentStep === steps.length - 1
 
-  const goNext = () => {
-    if (!isLast) {
-      setCurrentStep(currentStep + 1)
-      window.scrollTo(0, 0)
-    }
-  }
+  const goNext = useCallback(() => {
+    if (isLast) return
+    hapticLight()
+    setCurrentStep((s) => s + 1)
+    window.scrollTo(0, 0)
+  }, [isLast])
 
-  const goPrev = () => {
-    if (!isFirst) {
-      setCurrentStep(currentStep - 1)
-      window.scrollTo(0, 0)
-    }
-  }
+  const goPrev = useCallback(() => {
+    if (isFirst) return
+    hapticLight()
+    setCurrentStep((s) => s - 1)
+    window.scrollTo(0, 0)
+  }, [isFirst])
 
   const reset = useCallback(() => {
+    hapticMedium()
     setSelectedSet(null)
     setCurrentStep(0)
   }, [])
@@ -44,20 +46,14 @@ export default function RosaryPage() {
     if (!selectedSet) return
 
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowRight' && currentStep < steps.length - 1) {
-        setCurrentStep(currentStep + 1)
-        window.scrollTo(0, 0)
-      }
-      if (e.key === 'ArrowLeft' && currentStep > 0) {
-        setCurrentStep(currentStep - 1)
-        window.scrollTo(0, 0)
-      }
+      if (e.key === 'ArrowRight') goNext()
+      if (e.key === 'ArrowLeft') goPrev()
       if (e.key === 'Escape') reset()
     }
 
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
-  }, [selectedSet, currentStep, steps.length, reset])
+  }, [selectedSet, goNext, goPrev, reset])
 
   const today = new Date().getDay()
 
