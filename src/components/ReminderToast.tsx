@@ -89,7 +89,7 @@ export default function ReminderToast() {
         {toast.href && (
           <button
             className="reminder-toast-btn reminder-toast-btn--primary"
-            onClick={() => goToPrayer(toast.href!)}
+            onClick={() => { if (toast.href) goToPrayer(toast.href) }}
           >
             Otwórz
           </button>
