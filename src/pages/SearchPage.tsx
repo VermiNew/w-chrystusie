@@ -77,10 +77,16 @@ export default function SearchPage() {
   const [bibleLoading, setBibleLoading] = useState(true)
 
   useEffect(() => {
-    loadBible().then((data) => {
-      setBooks(data)
-      setBibleLoading(false)
-    })
+    loadBible()
+      .then((data) => {
+        setBooks(data)
+      })
+      .catch(() => {
+        setBooks([])
+      })
+      .finally(() => {
+        setBibleLoading(false)
+      })
   }, [])
 
   const trimmed = query.trim()
