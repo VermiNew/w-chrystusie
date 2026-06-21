@@ -20,6 +20,14 @@ let snapshot: Theme = getStoredTheme()
 // Apply on load
 applyTheme(snapshot)
 
+// React to OS-level theme changes when the user hasn't set a manual preference
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+  if (localStorage.getItem(STORAGE_KEY)) return
+  snapshot = e.matches ? 'dark' : 'light'
+  applyTheme(snapshot)
+  listeners.forEach((l) => l())
+})
+
 function subscribe(listener: () => void) {
   listeners = [...listeners, listener]
   return () => { listeners = listeners.filter((l) => l !== listener) }
