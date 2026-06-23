@@ -1,6 +1,6 @@
 ---
 title: Dzięki, o Panie, składamy dzięki
-category: Pieśni mszalne
+category: Pieśni uwielbienia
 source: https://niezbednik.niedziela.pl/artykul/836/Dzieki-o-Panie-skladamy-dzieki
 ---
 

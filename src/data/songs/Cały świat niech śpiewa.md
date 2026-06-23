@@ -1,6 +1,6 @@
 ---
 title: Cały świat niech śpiewa
-category: Pieśni mszalne
+category: Pieśni uwielbienia
 source: https://niezbednik.niedziela.pl/artykul/834/Caly-swiat-niech-spiewa
 ---
 
