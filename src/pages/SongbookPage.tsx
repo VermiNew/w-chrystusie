@@ -19,6 +19,7 @@ const categoryOrder = [
   'Pieśni patriotyczne',
   'Pieśni papieskie',
   'Pieśni okolicznościowe',
+  'Pieśni za zmarłych',
 ]
 
 const fallbackCategory = 'Bez kategorii'
