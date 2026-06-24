@@ -1,0 +1,44 @@
+---
+title: Nowenna do Ducha Świętego
+category: Modlitwy do Ducha Świętego
+source: https://dolinamodlitwy.pl/nowenna-do-ducha-sw/
+---
+
+*Hymn Veni Creator Spiritus odmawia się przez 9 kolejnych dni jako nowennę do Ducha Świętego.*
+
+O Stworzycielu, Duchu, przyjdź,
+Nawiedź dusz wiernych Tobie krąg.
+Niebieską łaskę zesłać racz
+Sercom, co dziełem są Twych rąk.
+
+Pocieszycielem jesteś zwan
+I najwyższego Boga dar.
+Tyś namaszczeniem naszych dusz,
+Zdrój żywy, miłość, ognia żar.
+
+Ty darzysz łaską siedemkroć,
+Bo moc z prawicy Ojca masz,
+Przez Boga obiecany nam,
+Mową wzbogacasz język nasz.
+
+Światłem rozjaśnij naszą myśl,
+W serca nam miłość świętą wlej
+I wątłą słabość naszych ciał
+Pokrzep stałością mocy Twej.
+
+Nieprzyjaciela odpędź w dal
+I Twym pokojem obdarz wraz.
+Niech w drodze za przewodem Twym
+Miniemy zło, co kusi nas.
+
+Daj nam przez Ciebie Ojca znać,
+Daj, by i Syn poznany był.
+I Ciebie, jedno tchnienie Dwóch,
+Niech wyznajemy z wszystkich sił.
+
+Niech Bogu Ojcu chwała brzmi,
+Synowi, który zmartwychwstał,
+I Temu, co pociesza nas,
+Niech hołd wieczystych płynie chwał.
+
+Amen.
