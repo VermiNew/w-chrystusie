@@ -422,6 +422,8 @@
 }
 
 .prayer-text {
+  width: 100%;
+  max-width: 65ch;
   white-space: pre-line;
   line-height: 1.8;
   font-size: 1.1rem;
@@ -738,6 +740,8 @@
 }
 
 .song-text {
+  width: 100%;
+  max-width: 65ch;
   white-space: pre-line;
   line-height: 1.8;
   font-size: 1.1rem;

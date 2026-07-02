@@ -96,7 +96,7 @@ export default function SongbookPage() {
           <FaArrowLeft /> Powrót do listy
         </Link>
         <h1>{selected.title}</h1>
-        <div className="song-text">
+        <div className="song-text" lang="pl">
           <Markdown>{selected.body}</Markdown>
         </div>
         {selected.source && (

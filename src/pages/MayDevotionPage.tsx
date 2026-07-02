@@ -58,7 +58,7 @@ export default function MayDevotionPage() {
       {song && (
         <section className="devotion-song">
           <h2>{song.title}</h2>
-          <div className="song-text">
+          <div className="song-text" lang="pl">
             <Markdown>{song.body}</Markdown>
           </div>
           <Link to={`/spiewnik/${encodeURIComponent(song.id)}`} className="source-link">
