@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, Link, Navigate } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import { FaThumbtack, FaChevronUp, FaChevronDown } from 'react-icons/fa6'
-import { announcements } from '../data/announcements'
+import { announcements, type Announcement } from '../data/announcements'
 import { markAsRead, markAsUnread, useIsRead } from '../data/useReadAnnouncements'
 
 function formatDate(dateStr: string): string {
@@ -35,15 +35,12 @@ function AnnouncementDetail({ id }: { id: string }) {
   )
 }
 
-function AnnouncementCard({ id }: { id: string }) {
-  const announcement = announcements.find((a) => a.id === id)
+function AnnouncementCard({ announcement }: { announcement: Announcement }) {
   const [expanded, setExpanded] = useState(false)
-  const isRead = useIsRead(id)
-
-  if (!announcement) return null
+  const isRead = useIsRead(announcement.id)
 
   const handleToggle = () => {
-    if (!expanded) markAsRead(id)
+    if (!expanded) markAsRead(announcement.id)
     setExpanded(!expanded)
   }
 
@@ -80,7 +77,7 @@ function AnnouncementCard({ id }: { id: string }) {
           {isRead && (
             <button
               className="announcement-mark-unread"
-              onClick={() => { markAsUnread(id); setExpanded(false) }}
+              onClick={() => { markAsUnread(announcement.id); setExpanded(false) }}
             >
               Oznacz jako nieprzeczytane
             </button>
@@ -103,7 +100,7 @@ function AnnouncementList() {
       <h1>Ogłoszenia</h1>
       <div className="announcement-list">
         {sorted.map((a) => (
-          <AnnouncementCard key={a.id} id={a.id} />
+          <AnnouncementCard key={a.id} announcement={a} />
         ))}
       </div>
     </div>
