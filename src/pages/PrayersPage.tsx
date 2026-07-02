@@ -51,6 +51,7 @@ export default function PrayersPage() {
   const { id } = useParams()
   const location = useLocation()
   const [query, setQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const selectedId = getSelectedId(id, location.pathname)
   const selected = selectedId ? prayers.find((p) => p.id === selectedId) ?? null : null
   // Restore scroll position when returning to list (runs after App's scrollTo(0,0))
@@ -73,19 +74,24 @@ export default function PrayersPage() {
     const normalizedQuery = query.trim().toLowerCase()
     const map = new Map<string, Prayer[]>()
     for (const prayer of prayers) {
+      const category = prayer.category && categoryOrder.includes(prayer.category)
+        ? prayer.category
+        : fallbackCategory
+      if (selectedCategory !== 'all' && category !== selectedCategory) continue
+
       const searchableText = `${prayer.title} ${prayer.category ?? ''} ${prayer.body}`.toLowerCase()
       if (normalizedQuery && !searchableText.includes(normalizedQuery)) continue
 
-      const cat = prayer.category && categoryOrder.includes(prayer.category) ? prayer.category : fallbackCategory
-      if (!map.has(cat)) map.set(cat, [])
-      map.get(cat)!.push(prayer)
+      if (!map.has(category)) map.set(category, [])
+      map.get(category)!.push(prayer)
     }
     return [...categoryOrder, fallbackCategory]
       .filter((cat) => map.has(cat))
       .map((cat) => ({ category: cat, items: [...map.get(cat)!].sort(byTitle) }))
-  }, [query])
+  }, [query, selectedCategory])
 
   const resultCount = grouped.reduce((sum, group) => sum + group.items.length, 0)
+  const hasActiveFilters = query.trim().length > 0 || selectedCategory !== 'all'
 
   if (selected) {
     return (
@@ -109,19 +115,34 @@ export default function PrayersPage() {
   return (
     <div className="page">
       <h1>Modlitwy</h1>
-      <input
-        className="list-filter-input"
-        type="text"
-        placeholder="Szukaj w modlitwach..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      {query.trim() && (
+      <div className="list-filter-controls">
+        <label>
+          Szukaj
+          <input
+            className="list-filter-input"
+            type="search"
+            placeholder="Tytuł lub treść modlitwy..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+        </label>
+        <label>
+          Kategoria
+          <select value={selectedCategory} onChange={(event) => setSelectedCategory(event.target.value)}>
+            <option value="all">Wszystkie kategorie</option>
+            {categoryOrder.map((category) => (
+              <option key={category} value={category}>{category}</option>
+            ))}
+            <option value={fallbackCategory}>{fallbackCategory}</option>
+          </select>
+        </label>
+      </div>
+      {hasActiveFilters && (
         <p className="list-filter-count">
-          Znaleziono: {resultCount} {resultCount === 1 ? 'pozycję' : 'pozycji'}
+          Wyświetlono: {resultCount} {resultCount === 1 ? 'pozycję' : 'pozycji'}
         </p>
       )}
-      {resultCount === 0 && <p className="list-filter-empty">Brak modlitw pasujących do wyszukiwania.</p>}
+      {resultCount === 0 && <p className="list-filter-empty">Brak modlitw pasujących do wybranych filtrów.</p>}
       {grouped.map(({ category, items }) => (
         <section key={category} className="prayer-category">
           <h2 className="prayer-category-title">{category} ({items.length})</h2>

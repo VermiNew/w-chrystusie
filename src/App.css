@@ -345,10 +345,27 @@
   color: var(--color-primary);
 }
 
-.list-filter-input {
+.list-filter-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.list-filter-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.list-filter-input,
+.list-filter-controls select {
   width: 100%;
   padding: 0.75rem 1rem;
-  margin-bottom: 0.75rem;
+  min-height: 48px;
   font-size: 1rem;
   border: 1px solid var(--color-border-strong);
   border-radius: 8px;
@@ -360,7 +377,8 @@
   animation: content-fade-in 0.4s ease 0.1s both;
 }
 
-.list-filter-input:focus {
+.list-filter-input:focus,
+.list-filter-controls select:focus {
   border-color: var(--color-primary);
 }
 
@@ -370,6 +388,12 @@
   color: var(--color-text-muted);
   font-size: 0.95rem;
   animation: content-fade-in 0.3s ease both;
+}
+
+@media (max-width: 640px) {
+  .list-filter-controls {
+    grid-template-columns: 1fr;
+  }
 }
 
 .prayer-list {
