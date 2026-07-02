@@ -8,9 +8,11 @@ export interface MarkdownEntry {
 }
 
 export function parseMarkdown(filename: string, raw: string): MarkdownEntry {
-  // Matches YAML frontmatter block (--- ... ---) followed by the body.
-  // \r?\n handles both LF and CRLF line endings.
-  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/)
+  // Extracts the metadata block between the opening and closing `---`,
+  // leaving the remaining Markdown as the entry body. Some imported files
+  // start with a UTF-8 BOM, so the parser accepts it before the opening marker.
+  // Both LF and Windows CRLF line endings are supported.
+  const match = raw.match(/^\uFEFF?---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/)
   if (!match) return { id: filename, title: filename, body: raw.trim() }
 
   const attrs: Record<string, string> = {}
