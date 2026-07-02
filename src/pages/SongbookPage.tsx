@@ -140,8 +140,8 @@ export default function SongbookPage() {
       )}
       {resultCount === 0 && <p className="list-filter-empty">Brak pieśni pasujących do wybranych filtrów.</p>}
       {grouped.map(({ category, items }) => (
-        <section key={category} className="prayer-category">
-          <h2 className="prayer-category-title">{category} ({items.length})</h2>
+        <details key={category} className="prayer-category" open={hasActiveFilters || undefined}>
+          <summary className="prayer-category-title">{category} <span>({items.length})</span></summary>
           <ul className="song-list">
             {items.map((song) => (
               <li key={song.id}>
@@ -151,7 +151,7 @@ export default function SongbookPage() {
               </li>
             ))}
           </ul>
-        </section>
+        </details>
       ))}
     </div>
   )

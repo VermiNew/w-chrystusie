@@ -339,10 +339,27 @@
 }
 
 .prayer-category-title {
+  cursor: pointer;
+  list-style-position: outside;
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 0.75rem;
   color: var(--color-primary);
+}
+
+.prayer-category-title span {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.prayer-category[open] .prayer-category-title {
+  margin-bottom: 0.75rem;
+}
+
+.prayer-category-title:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 .list-filter-controls {
