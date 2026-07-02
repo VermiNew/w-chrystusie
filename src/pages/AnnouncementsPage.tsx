@@ -38,9 +38,9 @@ function AnnouncementDetail({ id }: { id: string }) {
 function AnnouncementCard({ id }: { id: string }) {
   const announcement = announcements.find((a) => a.id === id)
   const [expanded, setExpanded] = useState(false)
+  const isRead = useIsRead(id)
 
   if (!announcement) return null
-  const isRead = useIsRead(id)
 
   const handleToggle = () => {
     if (!expanded) markAsRead(id)

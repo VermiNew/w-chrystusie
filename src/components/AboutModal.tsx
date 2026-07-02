@@ -28,13 +28,19 @@ export default function AboutModal({ open, onClose }: Props) {
   useEffect(() => {
     const dialog = dialogRef.current
     if (!dialog) return
+    let resetClosingFrame: number | undefined
+
     if (open) {
       if (closeTimerRef.current) {
         clearTimeout(closeTimerRef.current)
         closeTimerRef.current = null
-        setClosing(false)
+        resetClosingFrame = requestAnimationFrame(() => setClosing(false))
       }
       if (!dialog.open) dialog.showModal()
+    }
+
+    return () => {
+      if (resetClosingFrame !== undefined) cancelAnimationFrame(resetClosingFrame)
     }
   }, [open])
 
