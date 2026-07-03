@@ -42,12 +42,9 @@
 - [ ] Nawigacja prev/next między pozycjami w widoku szczegółu
 - [ ] Breadcrumb w widoku szczegółu — widoczna kategoria podczas czytania
 - [x] Zastąpić `←` ikoną z react-icons (spójność z resztą UI)
-- [ ] PrayersPage i SongbookPage mają niemal identyczny kod — rozważyć wspólny komponent
 
 ## Do zrobienia — śpiewnik
 
-- [ ] Brak odtwarzacza / podglądu melodii — tylko tekst, nie wiadomo jak pieśń brzmi
-- [ ] Brak transpozycji tonacji dla akordów (jeśli pieśni mają akordy w treści)
 - [ ] Brak oznaczenia liturgicznego okresu przy kafelkach na liście (Adwent, Wielki Post itp.)
 - [ ] Brak trybu „powiększonej czcionki" do śpiewania z odległości (użycie na ekranie podczas Mszy)
 
@@ -59,7 +56,6 @@
 - [ ] Podświetlanie tajemnic wg dnia tygodnia działa, ale brak informacji o tym że można odmówić inny zestaw w każdy dzień — brak tooltipa/opisu przy przyciskach
 - [ ] `← →` na klawiaturze nie działa gdy focus jest na przycisku nawigacyjnym (event listener na `window`, ale `button` może przechwycić `ArrowKey` przed scrollem)
 - [ ] Brak Litanii Loretańskiej i innych modlitw opcjonalnych na zakończenie
-- [ ] `←` i `→` w przyciskach nawigacyjnych jako zwykły znak zamiast ikony react-icons
 
 ## Do zrobienia — koronka
 
@@ -73,7 +69,6 @@
 - [ ] `AnnouncementCard` robi `announcements.find()` po każdym renderze zamiast dostać gotowy obiekt jako prop
 - [ ] Brak filtrowania po kategorii/tagu ogłoszeń
 - [ ] Brak licznika nieprzeczytanych widocznego na liście (tylko badge w nav)
-- [ ] `← Ogłoszenia` w widoku szczegółu jako zwykły znak zamiast ikony
 
 ## Do zrobienia — ustawienia / powiadomienia (RemindersModal)
 
@@ -162,15 +157,10 @@
 ## Do zrobienia — ogólny wygląd
 
 ### Ikony i grafika
-- [ ] Gołębica (Duch Święty) — własne zdjęcie/grafika zamiast emoji `🕊️` (ChapletPage i inne miejsca)
 - [ ] `✝` w AboutModal jako zwykły znak — zastąpić ikoną lub SVG z logo aplikacji
-- [ ] `vite.svg` w `/public` — do usunięcia (pozostałość po scaffoldzie)
-- [ ] Logo (`/public/logo.png`) — sprawdzić czy jest używane gdziekolwiek poza manifest/ikonami
 
 ### Strona główna
-- [ ] Kafelki sekcji mają stały opis tekstowy — dodać dynamiczne liczniki (np. „224 modlitwy")
 - [ ] Brak wizualnego wyróżnienia aktualnego okresu liturgicznego (Adwent, Wielkanoc itp.)
-- [ ] Hero subtitle jest statyczny — rozważyć rotację cytatów lub cytat dnia
 
 ### Typografia i spacing
 - [ ] `font-reading` (Literata) używana w widokach treści — sprawdzić czy załadowana dla wszystkich widoków szczegółowych (modlitwy, pieśni, koronka)
@@ -184,17 +174,14 @@
 
 ### Dark mode
 - [ ] `--color-darken: black` — niezmienna w dark mode, prawdopodobnie nieużywana lub błędna
-- [ ] Obrazy (np. `NMP_PIC_MAJ_0.png`) nie mają filtru w dark mode — mogą razić jasnością
 - [ ] Brak `color-scheme: light` na `:root` (jest tylko `color-scheme: dark` w `[data-theme="dark"]`)
 
 ### PWA / meta
-- [ ] `vite.svg` w `<head>` jako domyślny favicon Vite — sprawdzić czy nadpisany przez własne favicony
 - [ ] Brak `<meta name="apple-mobile-web-app-status-bar-style">` — pasek statusu iOS nie dopasowany do motywu
 
 ## Do zrobienia — UX modlitewny (charakter aplikacji)
 
 ### Atmosfera i klimat
-- [ ] Tło strony głównej — subtelna tekstura (lniane płótno, pergamin) lub bardzo delikatny gradient zamiast płaskiego `--color-bg`; coś co nie krzyczy "web app" a "miejsce skupienia"
 - [ ] Ikona krzyża w hero animuje się przy hover — ale brak analogicznego ciepła w reszcie UI; rozważyć delikatne złote/bursztynowe akcenty kolorystyczne w miejscach modlitewnych (nagłówki treści, separatory)
 - [ ] Widok modlitwy/pieśni: tekst na `font-reading` (Literata) — sprawdzić czy `line-height` jest wystarczający do komfortowego czytania (rekomendowane 1.8–2.0 dla tekstu modlitewnego)
 - [ ] Odstęp między wersami w litaniach — Markdown renderuje je jako jeden blok; rozważyć CSS `p + p { margin-top: ... }` w `.prayer-text` dla rytmu czytania
