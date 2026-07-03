@@ -1,6 +1,6 @@
 import { useMemo, useEffect, useState } from 'react'
 import { useLocation, useParams, Link } from 'react-router-dom'
-import { FaArrowLeft } from 'react-icons/fa6'
+import { FaArrowLeft, FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
 import { songs, type Song } from '../data/songs'
 
@@ -50,6 +50,24 @@ export default function SongbookPage() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const selectedId = getSelectedId(id, location.pathname)
   const selected = selectedId ? songs.find((s) => s.id === selectedId) ?? null : null
+  const detailCategory = selected?.category && categoryOrder.includes(selected.category)
+    ? selected.category
+    : fallbackCategory
+  const siblingItems = selected
+    ? songs
+      .filter((song) => {
+        const category = song.category && categoryOrder.includes(song.category)
+          ? song.category
+          : fallbackCategory
+        return category === detailCategory
+      })
+      .sort(byTitle)
+    : []
+  const detailIndex = selected ? siblingItems.findIndex((song) => song.id === selected.id) : -1
+  const previousItem = detailIndex > 0 ? siblingItems[detailIndex - 1] : null
+  const nextItem = detailIndex >= 0 && detailIndex < siblingItems.length - 1
+    ? siblingItems[detailIndex + 1]
+    : null
   // Restore scroll position when returning to list (runs after App's scrollTo(0,0))
   useEffect(() => {
     if (!selected) {
@@ -95,6 +113,11 @@ export default function SongbookPage() {
         <Link to="/spiewnik" className="back-button">
           <FaArrowLeft /> Powrót do listy
         </Link>
+        <nav className="content-breadcrumb" aria-label="Okruszki">
+          <Link to="/spiewnik">Śpiewnik</Link>
+          <span aria-hidden="true">/</span>
+          <span>{detailCategory}</span>
+        </nav>
         <h1>{selected.title}</h1>
         <div className="song-text" lang="pl">
           <Markdown>{selected.body}</Markdown>
@@ -104,6 +127,26 @@ export default function SongbookPage() {
             Źródło
           </a>
         )}
+        <nav className="content-sibling-nav" aria-label="Nawigacja między pieśniami">
+          {previousItem ? (
+            <Link to={`/spiewnik/${encodeRouteId(previousItem.id)}`}>
+              <FaChevronLeft />
+              <span className="content-sibling-copy">
+                <small>Poprzednia</small>
+                <span>{previousItem.title}</span>
+              </span>
+            </Link>
+          ) : <span />}
+          {nextItem && (
+            <Link className="content-sibling-next" to={`/spiewnik/${encodeRouteId(nextItem.id)}`}>
+              <span className="content-sibling-copy">
+                <small>Następna</small>
+                <span>{nextItem.title}</span>
+              </span>
+              <FaChevronRight />
+            </Link>
+          )}
+        </nav>
       </div>
     )
   }

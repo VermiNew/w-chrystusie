@@ -1,6 +1,6 @@
 import { useMemo, useEffect, useState } from 'react'
 import { useLocation, useParams, Link } from 'react-router-dom'
-import { FaArrowLeft } from 'react-icons/fa6'
+import { FaArrowLeft, FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
 import { prayers, type Prayer } from '../data/prayers'
 
@@ -54,6 +54,24 @@ export default function PrayersPage() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const selectedId = getSelectedId(id, location.pathname)
   const selected = selectedId ? prayers.find((p) => p.id === selectedId) ?? null : null
+  const detailCategory = selected?.category && categoryOrder.includes(selected.category)
+    ? selected.category
+    : fallbackCategory
+  const siblingItems = selected
+    ? prayers
+      .filter((prayer) => {
+        const category = prayer.category && categoryOrder.includes(prayer.category)
+          ? prayer.category
+          : fallbackCategory
+        return category === detailCategory
+      })
+      .sort(byTitle)
+    : []
+  const detailIndex = selected ? siblingItems.findIndex((prayer) => prayer.id === selected.id) : -1
+  const previousItem = detailIndex > 0 ? siblingItems[detailIndex - 1] : null
+  const nextItem = detailIndex >= 0 && detailIndex < siblingItems.length - 1
+    ? siblingItems[detailIndex + 1]
+    : null
   // Restore scroll position when returning to list (runs after App's scrollTo(0,0))
   useEffect(() => {
     if (!selected) {
@@ -99,6 +117,11 @@ export default function PrayersPage() {
         <Link to="/modlitwy" className="back-button">
           <FaArrowLeft /> Powrót do listy
         </Link>
+        <nav className="content-breadcrumb" aria-label="Okruszki">
+          <Link to="/modlitwy">Modlitwy</Link>
+          <span aria-hidden="true">/</span>
+          <span>{detailCategory}</span>
+        </nav>
         <h1>{selected.title}</h1>
         <div className="prayer-text" lang="pl">
           <Markdown>{selected.body}</Markdown>
@@ -108,6 +131,26 @@ export default function PrayersPage() {
             Źródło
           </a>
         )}
+        <nav className="content-sibling-nav" aria-label="Nawigacja między modlitwami">
+          {previousItem ? (
+            <Link to={`/modlitwy/${encodeRouteId(previousItem.id)}`}>
+              <FaChevronLeft />
+              <span className="content-sibling-copy">
+                <small>Poprzednia</small>
+                <span>{previousItem.title}</span>
+              </span>
+            </Link>
+          ) : <span />}
+          {nextItem && (
+            <Link className="content-sibling-next" to={`/modlitwy/${encodeRouteId(nextItem.id)}`}>
+              <span className="content-sibling-copy">
+                <small>Następna</small>
+                <span>{nextItem.title}</span>
+              </span>
+              <FaChevronRight />
+            </Link>
+          )}
+        </nav>
       </div>
     )
   }

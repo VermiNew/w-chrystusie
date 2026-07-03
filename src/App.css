@@ -513,6 +513,84 @@
   text-decoration: underline;
 }
 
+.content-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.content-breadcrumb a {
+  color: var(--color-primary);
+}
+
+.content-sibling-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 65ch;
+  margin-top: 2.5rem;
+}
+
+.content-sibling-nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 64px;
+  padding: 0.75rem 1rem;
+  color: var(--color-primary);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.content-sibling-nav a > svg {
+  flex: 0 0 auto;
+}
+
+.content-sibling-nav a:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.content-sibling-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.15rem;
+  line-height: 1.3;
+}
+
+.content-sibling-copy small {
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.content-sibling-next {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.content-sibling-next .content-sibling-copy {
+  align-items: flex-end;
+}
+
+@media (max-width: 540px) {
+  .content-sibling-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .content-sibling-nav > span:empty {
+    display: none;
+  }
+}
+
 /* Scripture */
 
 .scripture-notice {
