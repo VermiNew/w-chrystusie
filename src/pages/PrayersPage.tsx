@@ -5,6 +5,7 @@ import Markdown from 'react-markdown'
 import { prayers, type Prayer } from '../data/prayers'
 
 const SCROLL_KEY = 'prayers-scroll'
+const CATEGORY_KEY = 'prayers-category'
 
 const categoryOrder = [
   'Modlitwy codzienne',
@@ -39,6 +40,7 @@ const decodeRouteId = (routeId: string) => {
 }
 
 const encodeRouteId = (routeId: string) => encodeURIComponent(routeId)
+const getCategoryAnchorId = (category: string) => `prayer-category-${encodeURIComponent(category)}`
 
 const getSelectedId = (routeId: string | undefined, pathname: string) => {
   if (routeId) return decodeRouteId(routeId)
@@ -52,6 +54,7 @@ export default function PrayersPage() {
   const location = useLocation()
   const [query, setQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
+  const [returnCategory] = useState(() => sessionStorage.getItem(CATEGORY_KEY))
   const selectedId = getSelectedId(id, location.pathname)
   const selected = selectedId ? prayers.find((p) => p.id === selectedId) ?? null : null
   const detailCategory = selected?.category && categoryOrder.includes(selected.category)
@@ -72,20 +75,34 @@ export default function PrayersPage() {
   const nextItem = detailIndex >= 0 && detailIndex < siblingItems.length - 1
     ? siblingItems[detailIndex + 1]
     : null
-  // Restore scroll position when returning to list (runs after App's scrollTo(0,0))
+  // Restore the expanded category first, then the saved list position.
   useEffect(() => {
-    if (!selected) {
-      const saved = sessionStorage.getItem(SCROLL_KEY)
-      if (saved) {
-        const y = parseInt(saved, 10)
-        sessionStorage.removeItem(SCROLL_KEY)
-        requestAnimationFrame(() => window.scrollTo(0, y))
-      }
-    }
-  }, [selected])
+    if (selected) return
 
-  const saveScroll = () => {
+    const savedScroll = sessionStorage.getItem(SCROLL_KEY)
+    if (!savedScroll && !returnCategory) return
+
+    const frame = requestAnimationFrame(() => {
+      const y = savedScroll ? Number.parseInt(savedScroll, 10) : Number.NaN
+      if (Number.isFinite(y)) {
+        window.scrollTo(0, y)
+      } else if (returnCategory) {
+        document.getElementById(getCategoryAnchorId(returnCategory))?.scrollIntoView({ block: 'start' })
+      }
+      sessionStorage.removeItem(SCROLL_KEY)
+      sessionStorage.removeItem(CATEGORY_KEY)
+    })
+
+    return () => cancelAnimationFrame(frame)
+  }, [selected, returnCategory])
+
+  const saveListPosition = (category: string) => {
     sessionStorage.setItem(SCROLL_KEY, String(window.scrollY))
+    sessionStorage.setItem(CATEGORY_KEY, category)
+  }
+
+  const prepareListReturn = () => {
+    sessionStorage.setItem(CATEGORY_KEY, detailCategory)
   }
 
   const grouped = useMemo(() => {
@@ -114,13 +131,13 @@ export default function PrayersPage() {
   if (selected) {
     return (
       <div className="page content-detail-page">
-        <Link to="/modlitwy" className="back-button">
+        <Link to="/modlitwy" className="back-button" onClick={prepareListReturn}>
           <FaArrowLeft /> Powrót do listy
         </Link>
         <nav className="content-breadcrumb" aria-label="Okruszki">
-          <Link to="/modlitwy">Modlitwy</Link>
+          <Link to="/modlitwy" onClick={prepareListReturn}>Modlitwy</Link>
           <span aria-hidden="true">/</span>
-          <span>{detailCategory}</span>
+          <Link to="/modlitwy" onClick={prepareListReturn}>{detailCategory}</Link>
         </nav>
         <h1>{selected.title}</h1>
         <div className="prayer-text" lang="pl">
@@ -187,12 +204,21 @@ export default function PrayersPage() {
       )}
       {resultCount === 0 && <p className="list-filter-empty">Brak modlitw pasujących do wybranych filtrów.</p>}
       {grouped.map(({ category, items }) => (
-        <details key={category} className="prayer-category" open={hasActiveFilters || undefined}>
+        <details
+          key={category}
+          id={getCategoryAnchorId(category)}
+          className="prayer-category"
+          open={hasActiveFilters || returnCategory === category || undefined}
+        >
           <summary className="prayer-category-title">{category} <span>({items.length})</span></summary>
           <ul className="prayer-list">
             {items.map((prayer) => (
               <li key={prayer.id}>
-                <Link to={`/modlitwy/${encodeRouteId(prayer.id)}`} className="prayer-item" onClick={saveScroll}>
+                <Link
+                  to={`/modlitwy/${encodeRouteId(prayer.id)}`}
+                  className="prayer-item"
+                  onClick={() => saveListPosition(category)}
+                >
                   {prayer.title}
                 </Link>
               </li>
