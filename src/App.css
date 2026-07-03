@@ -584,6 +584,17 @@
   color: var(--color-primary);
 }
 
+.content-breadcrumb a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.content-breadcrumb a:focus-visible,
+.content-detail-page .back-button:focus-visible {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
+  outline-offset: 2px;
+}
+
 .content-detail-page > h1 {
   max-width: 28ch;
   margin-bottom: 1.25rem;
@@ -965,12 +976,13 @@
   background: var(--color-surface);
   color: var(--color-text);
   font-family: inherit;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
   animation: content-fade-in 0.4s ease 0.1s both;
 }
 
-.search-input:focus {
+.search-input:focus-visible {
   border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.18);
 }
 
 .search-filters {
@@ -991,17 +1003,20 @@
 
 .search-filters select {
   width: 100%;
-  min-height: 44px;
+  min-height: 48px;
   padding: 0.65rem 2.25rem 0.65rem 0.75rem;
   color: var(--color-text);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 8px;
+  outline: none;
   font: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.search-filters select:focus {
+.search-filters select:focus-visible {
   border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.18);
 }
 
 .search-filters select:disabled {
@@ -1091,6 +1106,11 @@
 .search-result-clickable:hover {
   border-color: var(--color-primary);
   box-shadow: 0 2px 8px rgba(var(--color-shadow-rgb), 0.08);
+}
+
+.search-result-clickable:focus-visible {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
+  outline-offset: 2px;
 }
 
 .search-result-type {
