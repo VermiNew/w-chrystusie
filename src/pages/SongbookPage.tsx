@@ -1,6 +1,6 @@
 import { useMemo, useEffect, useState } from 'react'
 import { useLocation, useParams, Link } from 'react-router-dom'
-import { FaArrowLeft, FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
+import { FaArrowLeft, FaArrowUpRightFromSquare, FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
 import { songs, type Song } from '../data/songs'
 
@@ -109,7 +109,7 @@ export default function SongbookPage() {
 
   if (selected) {
     return (
-      <div className="page">
+      <div className="page content-detail-page">
         <Link to="/spiewnik" className="back-button">
           <FaArrowLeft /> Powrót do listy
         </Link>
@@ -124,7 +124,7 @@ export default function SongbookPage() {
         </div>
         {selected.source && (
           <a className="source-link" href={selected.source} target="_blank" rel="noopener noreferrer">
-            Źródło
+            Źródło <FaArrowUpRightFromSquare aria-hidden="true" />
           </a>
         )}
         <nav className="content-sibling-nav" aria-label="Nawigacja między pieśniami">

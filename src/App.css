@@ -474,10 +474,27 @@
   width: 100%;
   max-width: 65ch;
   white-space: pre-line;
-  line-height: 1.8;
-  font-size: 1.1rem;
+  line-height: 1.9;
+  font-size: clamp(1.05rem, 0.98rem + 0.25vw, 1.15rem);
   font-family: var(--font-reading);
   animation: text-reveal 0.6s ease both;
+}
+
+.prayer-text > * + *,
+.song-text > * + * {
+  margin-top: 1.25em;
+}
+
+.prayer-text :is(ul, ol),
+.song-text :is(ul, ol) {
+  padding-left: 1.5rem;
+}
+
+.prayer-text blockquote,
+.song-text blockquote {
+  padding-left: 1rem;
+  color: var(--color-text-muted);
+  border-left: 3px solid var(--color-primary);
 }
 
 @keyframes text-reveal {
@@ -531,18 +548,27 @@
 }
 
 .source-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   margin-top: 1.5rem;
+  padding: 0.45rem 0.65rem;
   font-size: 0.9rem;
   color: var(--color-primary);
   text-decoration: none;
-  opacity: 0.7;
-  transition: opacity 0.2s;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  transition: background-color 0.2s, border-color 0.2s;
 }
 
 .source-link:hover {
-  opacity: 1;
-  text-decoration: underline;
+  background: var(--color-surface);
+  border-color: var(--color-primary);
+}
+
+.source-link:focus-visible {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
+  outline-offset: 2px;
 }
 
 .content-breadcrumb {
@@ -556,6 +582,28 @@
 
 .content-breadcrumb a {
   color: var(--color-primary);
+}
+
+.content-detail-page > h1 {
+  max-width: 28ch;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.content-detail-page .back-button {
+  position: static;
+  width: fit-content;
+  margin: 0 0 1rem;
+  padding: 0.55rem 0.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  backdrop-filter: none;
+}
+
+.content-detail-page .back-button:hover {
+  text-decoration: none;
+  border-color: var(--color-primary);
 }
 
 .content-sibling-nav {
@@ -586,6 +634,11 @@
 .content-sibling-nav a:hover {
   border-color: var(--color-primary);
   transform: translateY(-1px);
+}
+
+.content-sibling-nav a:focus-visible {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
+  outline-offset: 2px;
 }
 
 .content-sibling-copy {
@@ -869,9 +922,8 @@
 .song-text {
   width: 100%;
   max-width: 65ch;
-  white-space: pre-line;
-  line-height: 1.8;
-  font-size: 1.1rem;
+  line-height: 1.9;
+  font-size: clamp(1.05rem, 0.98rem + 0.25vw, 1.15rem);
   font-family: var(--font-reading);
   animation: text-reveal 0.6s ease both;
 }
