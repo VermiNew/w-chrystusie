@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useCallback } from 'react'
-import { FaArrowLeft, FaArrowRight, FaCheck } from 'react-icons/fa6'
+import { FaArrowLeft, FaArrowRight, FaCheck, FaCircleInfo } from 'react-icons/fa6'
 import { mysterySets, buildRosarySteps, type MysterySet } from '../data/rosary'
 import { hapticLight, hapticMedium } from '../data/haptics'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
@@ -163,7 +163,14 @@ export default function RosaryPage() {
       <div className="page">
         <h1>Różaniec</h1>
         <p className="rosary-intro">Wybierz tajemnice, które chcesz odmówić:</p>
-        <ul className="rosary-sets">
+        <p className="rosary-choice-note" id="rosary-choice-note">
+          <FaCircleInfo aria-hidden="true" />
+          <span>
+            Oznaczenie „dziś” wskazuje tradycyjny zestaw na dany dzień tygodnia.
+            To podpowiedź — możesz wybrać dowolne tajemnice.
+          </span>
+        </p>
+        <ul className="rosary-sets" aria-describedby="rosary-choice-note">
           {mysterySets.map((set) => {
             const isToday = set.days.includes(today)
             return (

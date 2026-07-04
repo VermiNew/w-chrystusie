@@ -1702,6 +1702,29 @@
   animation: content-fade-in 0.4s ease 0.1s both;
 }
 
+.rosary-choice-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin: 0 0 1.25rem;
+  padding: 0.75rem 0.9rem;
+  color: var(--color-text-muted);
+  background: rgba(var(--color-primary-rgb), 0.06);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.14);
+  border-radius: 9px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  animation: content-fade-in 0.45s ease 0.16s both;
+}
+
+.rosary-choice-note svg {
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.2rem;
+  color: var(--color-primary);
+}
+
 .rosary-sets {
   list-style: none;
   padding: 0;
@@ -1709,6 +1732,11 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+
+.rosary-sets li:nth-child(1) { animation-delay: 0.24s; }
+.rosary-sets li:nth-child(2) { animation-delay: 0.3s; }
+.rosary-sets li:nth-child(3) { animation-delay: 0.36s; }
+.rosary-sets li:nth-child(4) { animation-delay: 0.42s; }
 
 .rosary-set-button {
   width: 100%;
