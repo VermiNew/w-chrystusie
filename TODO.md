@@ -53,7 +53,7 @@
 ## Do zrobienia — różaniec
 
 - [x] `reset()` użyte wewnątrz `useEffect` bez `useCallback` — przy każdym render tworzy nową referencję, może powodować niechciane re-subskrypcje listenera klawiatury
-- [ ] Brak możliwości wznowienia modlitwy po opuszczeniu strony — wybrany zestaw i krok nie są persystowane (sessionStorage / URL param)
+- [x] Brak możliwości wznowienia modlitwy po opuszczeniu strony — wybrany zestaw i krok nie są persystowane (sessionStorage / URL param)
 - [ ] Brak wizualizacji paciorków (już w TODO ogólnym, potwierdzenie)
 - [ ] Podświetlanie tajemnic wg dnia tygodnia działa, ale brak informacji o tym że można odmówić inny zestaw w każdy dzień — brak tooltipa/opisu przy przyciskach
 - [ ] `← →` na klawiaturze nie działa gdy focus jest na przycisku nawigacyjnym (event listener na `window`, ale `button` może przechwycić `ArrowKey` przed scrollem)

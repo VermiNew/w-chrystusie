@@ -4,14 +4,57 @@ import { mysterySets, buildRosarySteps, type MysterySet } from '../data/rosary'
 import { hapticLight, hapticMedium } from '../data/haptics'
 
 const DAY_NAMES = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota']
+const ROSARY_PROGRESS_KEY = 'rosary-progress'
+
+interface RosaryProgress {
+  selectedSet: MysterySet | null
+  currentStep: number
+}
+
+function readRosaryProgress(): RosaryProgress {
+  const emptyProgress = { selectedSet: null, currentStep: 0 }
+
+  try {
+    const storedProgress = sessionStorage.getItem(ROSARY_PROGRESS_KEY)
+    if (!storedProgress) return emptyProgress
+
+    const parsedProgress: unknown = JSON.parse(storedProgress)
+    if (
+      typeof parsedProgress !== 'object'
+      || parsedProgress === null
+      || !('mysterySetName' in parsedProgress)
+      || !('currentStep' in parsedProgress)
+      || typeof parsedProgress.mysterySetName !== 'string'
+      || typeof parsedProgress.currentStep !== 'number'
+      || !Number.isInteger(parsedProgress.currentStep)
+    ) {
+      return emptyProgress
+    }
+
+    const selectedSet = mysterySets.find((set) => set.name === parsedProgress.mysterySetName)
+    if (
+      !selectedSet
+      || parsedProgress.currentStep < 0
+      || parsedProgress.currentStep >= buildRosarySteps(selectedSet).length
+    ) {
+      return emptyProgress
+    }
+
+    return { selectedSet, currentStep: parsedProgress.currentStep }
+  } catch {
+    // Storage may be unavailable or contain malformed JSON; neither should block prayer.
+    return emptyProgress
+  }
+}
 
 function formatDays(days: number[]): string {
   return days.map((d) => DAY_NAMES[d]).join(', ')
 }
 
 export default function RosaryPage() {
-  const [selectedSet, setSelectedSet] = useState<MysterySet | null>(null)
-  const [currentStep, setCurrentStep] = useState(0)
+  const [restoredProgress] = useState(readRosaryProgress)
+  const [selectedSet, setSelectedSet] = useState<MysterySet | null>(restoredProgress.selectedSet)
+  const [currentStep, setCurrentStep] = useState(restoredProgress.currentStep)
 
   const steps = useMemo(
     () => (selectedSet ? buildRosarySteps(selectedSet) : []),
@@ -38,9 +81,27 @@ export default function RosaryPage() {
 
   const reset = useCallback(() => {
     hapticMedium()
+    try {
+      sessionStorage.removeItem(ROSARY_PROGRESS_KEY)
+    } catch {
+      // Reset must still work when browser storage is unavailable.
+    }
     setSelectedSet(null)
     setCurrentStep(0)
   }, [])
+
+  useEffect(() => {
+    if (!selectedSet) return
+
+    try {
+      sessionStorage.setItem(ROSARY_PROGRESS_KEY, JSON.stringify({
+        mysterySetName: selectedSet.name,
+        currentStep,
+      }))
+    } catch {
+      // Prayer navigation remains usable when browser storage is unavailable.
+    }
+  }, [selectedSet, currentStep])
 
   // Arrow keys to navigate between rosary steps
   useEffect(() => {
@@ -70,7 +131,10 @@ export default function RosaryPage() {
               <li key={set.name}>
                 <button
                   className={`rosary-set-button${isToday ? ' rosary-set-button--today' : ''}`}
-                  onClick={() => setSelectedSet(set)}
+                  onClick={() => {
+                    setCurrentStep(0)
+                    setSelectedSet(set)
+                  }}
                 >
                   {set.name}
                   <span className="rosary-set-days">
