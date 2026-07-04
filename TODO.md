@@ -22,6 +22,8 @@
 - [x] Jeśli mniej jak 850px to włączyć już tryb z hamburgerem do nawigacji
 - [x] Dokończyć cytat na urządzenia mobilne (stylowanie)
 - [x] Minimalna szerokość strony to: 265px (nie mniej)
+- [x] Zaawansowane filtrowanie i ranking wyników wyszukiwarki globalnej
+- [x] Powrót z widoku szczegółowego z rozwiniętą kategorią i przywróconym scrollem
 
 ## Do zrobienia — refaktor
 
@@ -37,10 +39,10 @@
 - [x] Pozycje z kategorią spoza `categoryOrder` są cicho pomijane — dodać fallback `'Bez kategorii'` na końcu
 - [x] Liczba pozycji przy każdej kategorii (np. „Koronki (63)")
 - [x] Filtrowanie/wyszukiwanie bezpośrednio na stronie (bez wychodzenia na `/szukaj`)
-- [ ] Zwijanie kategorii (accordion) — lista jest bardzo długa przy 224/230 pozycjach
+- [x] Zwijanie kategorii (accordion) — lista jest bardzo długa przy 224/230 pozycjach
 - [x] Sortowanie alfabetyczne wewnątrz kategorii
-- [ ] Nawigacja prev/next między pozycjami w widoku szczegółu
-- [ ] Breadcrumb w widoku szczegółu — widoczna kategoria podczas czytania
+- [x] Nawigacja prev/next między pozycjami w widoku szczegółu
+- [x] Breadcrumb w widoku szczegółu — widoczna kategoria podczas czytania
 - [x] Zastąpić `←` ikoną z react-icons (spójność z resztą UI)
 
 ## Do zrobienia — śpiewnik
@@ -50,7 +52,7 @@
 
 ## Do zrobienia — różaniec
 
-- [ ] `reset()` użyte wewnątrz `useEffect` bez `useCallback` — przy każdym render tworzy nową referencję, może powodować niechciane re-subskrypcje listenera klawiatury
+- [x] `reset()` użyte wewnątrz `useEffect` bez `useCallback` — przy każdym render tworzy nową referencję, może powodować niechciane re-subskrypcje listenera klawiatury
 - [ ] Brak możliwości wznowienia modlitwy po opuszczeniu strony — wybrany zestaw i krok nie są persystowane (sessionStorage / URL param)
 - [ ] Brak wizualizacji paciorków (już w TODO ogólnym, potwierdzenie)
 - [ ] Podświetlanie tajemnic wg dnia tygodnia działa, ale brak informacji o tym że można odmówić inny zestaw w każdy dzień — brak tooltipa/opisu przy przyciskach
@@ -59,14 +61,14 @@
 
 ## Do zrobienia — koronka
 
-- [ ] Ten sam bug co różaniec: `reset()` bez `useCallback` w `useEffect` — nowa referencja przy każdym renderze
+- [x] Ten sam bug co różaniec: `reset()` bez `useCallback` w `useEffect` — nowa referencja przy każdym renderze
 - [ ] Brak persystencji kroku po opuszczeniu strony
 - [ ] Brak intro-screen dla różańca (koronka ma ładny ekran wprowadzający, różaniec nie — niespójność)
 
 ## Do zrobienia — ogłoszenia
 
 - [ ] Brak paginacji / lazy load — przy rosnącej liczbie ogłoszeń lista ładuje wszystko naraz
-- [ ] `AnnouncementCard` robi `announcements.find()` po każdym renderze zamiast dostać gotowy obiekt jako prop
+- [x] `AnnouncementCard` robi `announcements.find()` po każdym renderze zamiast dostać gotowy obiekt jako prop
 - [ ] Brak filtrowania po kategorii/tagu ogłoszeń
 - [ ] Brak licznika nieprzeczytanych widocznego na liście (tylko badge w nav)
 
@@ -74,7 +76,7 @@
 
 - [ ] Brak ustawień globalnych poza przypomnieniami — motyw, czcionka, język mogłyby być tu
 - [ ] Brak eksportu/importu ustawień przypomnień (np. JSON)
-- [ ] Po zamknięciu i ponownym otwarciu modalu `testStatus` nie jest czyszczony — widać stary wynik testu
+- [x] Po zamknięciu i ponownym otwarciu modalu `testStatus` nie jest czyszczony — widać stary wynik testu
 - [ ] Diagnostyka powiadomień jest zawsze widoczna — mogłaby być schowana za "Pokaż szczegóły"
 - [ ] Brak Web Push — powiadomienia działają tylko gdy aplikacja jest otwarta (info jest w stopce, ale brak planu implementacji)
 
@@ -89,20 +91,20 @@
 ## Do zrobienia — motywy
 
 - [ ] Tylko dwa motywy (light/dark) — brak np. "Sepia" dla trybu nocnego czytania
-- [ ] Przełącznik motywu nie reaguje na zmianę systemową `prefers-color-scheme` w trakcie sesji (brak nasłuchiwania na `MediaQueryList.change`)
+- [x] Przełącznik motywu nie reaguje na zmianę systemową `prefers-color-scheme` w trakcie sesji (brak nasłuchiwania na `MediaQueryList.change`)
 - [ ] Brak płynnej animacji przejścia między motywami (teraz zmiana jest natychmiastowa)
 - [ ] Ikona motywu w nav nie animuje się przy przełączaniu
 
 ## Do zrobienia — wyszukiwarka
 
 - [ ] Wyniki nie są sortowane — modlitwy, pieśni i wersety wyświetlają się w kolejności dodania, nie trafności
-- [ ] Brak podświetlenia frazy w snippecie wyników
-- [ ] Snippet zawsze obcina od początku (`body.slice(0, 120)`) — powinien pokazywać kontekst wokół dopasowania
-- [ ] Pismo Święte ma hardcoded limit 50 wyników, modlitwy i pieśni nie mają żadnego limitu
-- [ ] Brak debounce na input — search odpala się przy każdym keystroke, dla 224+230 pozycji może być odczuwalne
+- [x] Brak podświetlenia frazy w snippecie wyników
+- [x] Snippet zawsze obcina od początku (`body.slice(0, 120)`) — powinien pokazywać kontekst wokół dopasowania
+- [x] Pismo Święte ma hardcoded limit 50 wyników, modlitwy i pieśni nie mają żadnego limitu
+- [x] Brak debounce na input — search odpala się przy każdym keystroke, dla 224+230 pozycji może być odczuwalne
 - [ ] Wersety Pisma Świętego nie są klikalne (brak nawigacji do ScripturePage)
 - [ ] Brak historii ostatnich wyszukiwań
-- [ ] `key={i}` (indeks) na elementach listy wyników — powinien być unikalny string
+- [x] `key={i}` (indeks) na elementach listy wyników — powinien być unikalny string
 
 ## Do zrobienia — tryb czytania z głosem (duży feature)
 
@@ -163,50 +165,50 @@
 - [ ] Brak wizualnego wyróżnienia aktualnego okresu liturgicznego (Adwent, Wielkanoc itp.)
 
 ### Typografia i spacing
-- [ ] `font-reading` (Literata) używana w widokach treści — sprawdzić czy załadowana dla wszystkich widoków szczegółowych (modlitwy, pieśni, koronka)
-- [ ] Brak `font-display: swap` w imporcie Google Fonts — może powodować FOUT przy wolnym połączeniu
+- [x] `font-reading` (Literata) używana w widokach treści — sprawdzić czy załadowana dla wszystkich widoków szczegółowych (modlitwy, pieśni, koronka)
+- [x] Brak `font-display: swap` w imporcie Google Fonts — może powodować FOUT przy wolnym połączeniu
 - [ ] Rozmiary czcionek niespójne między sekcjami (np. `.prayer-text` vs `.chaplet-prayer` vs `.song-text`)
 
 ### Animacje i interakcje
-- [ ] Staggered delay listy (`list-item-in`) hardcoded do 10 elementów — przy 224 modlitwach elementy po 10. nie mają animacji wejścia
-- [ ] Brak `prefers-reduced-motion` — wszystkie animacje powinny być wyłączone dla użytkowników z tą preferencją
+- [x] Staggered delay listy (`list-item-in`) hardcoded do 10 elementów — przy 224 modlitwach elementy po 10. nie mają animacji wejścia
+- [x] Brak `prefers-reduced-motion` — wszystkie animacje powinny być wyłączone dla użytkowników z tą preferencją
 - [ ] Hover na kafelkach strony głównej tylko na desktop — brak analogicznego efektu tap na mobile
 
 ### Dark mode
 - [ ] `--color-darken: black` — niezmienna w dark mode, prawdopodobnie nieużywana lub błędna
-- [ ] Brak `color-scheme: light` na `:root` (jest tylko `color-scheme: dark` w `[data-theme="dark"]`)
+- [x] Brak `color-scheme: light` na `:root` (jest tylko `color-scheme: dark` w `[data-theme="dark"]`)
 
 ### PWA / meta
-- [ ] Brak `<meta name="apple-mobile-web-app-status-bar-style">` — pasek statusu iOS nie dopasowany do motywu
+- [x] Brak `<meta name="apple-mobile-web-app-status-bar-style">` — pasek statusu iOS nie dopasowany do motywu
 
 ## Do zrobienia — UX modlitewny (charakter aplikacji)
 
 ### Atmosfera i klimat
 - [ ] Ikona krzyża w hero animuje się przy hover — ale brak analogicznego ciepła w reszcie UI; rozważyć delikatne złote/bursztynowe akcenty kolorystyczne w miejscach modlitewnych (nagłówki treści, separatory)
-- [ ] Widok modlitwy/pieśni: tekst na `font-reading` (Literata) — sprawdzić czy `line-height` jest wystarczający do komfortowego czytania (rekomendowane 1.8–2.0 dla tekstu modlitewnego)
+- [x] Widok modlitwy/pieśni: tekst na `font-reading` (Literata) — sprawdzić czy `line-height` jest wystarczający do komfortowego czytania (rekomendowane 1.8–2.0 dla tekstu modlitewnego)
 - [ ] Odstęp między wersami w litaniach — Markdown renderuje je jako jeden blok; rozważyć CSS `p + p { margin-top: ... }` w `.prayer-text` dla rytmu czytania
 - [ ] Brak chwili ciszy — po zakończeniu różańca/koronki (`Zakończ ✓`) brak ekranu zakończenia; pojawia się intro bez żadnego "Amen" / podsumowania / momentu zatrzymania
 
 ### Nawigacja i orientacja
-- [ ] Użytkownik nie wie gdzie jest w aplikacji — brak breadcrumba ani aktywnego stanu w nav dla podstron (modlitwa szczegółowa, pieśń szczegółowa)
+- [x] Użytkownik nie wie gdzie jest w aplikacji — brak breadcrumba ani aktywnego stanu w nav dla podstron (modlitwa szczegółowa, pieśń szczegółowa)
 - [ ] Back-button jest jedyną drogą powrotu — brak sugestii "co dalej" po przeczytaniu modlitwy (powiązane modlitwy, różaniec, koronka)
 - [ ] Strona główna nie zmienia się przy kolejnych wizytach — rozważyć "modlitwę dnia" lub "pieśń tygodnia" jako żywy element
 
 ### Desktop — komfort czytania
-- [ ] Szerokość tekstu modlitwy nieograniczona powyżej 960px — na szerokich monitorach linijki są za długie; `max-width: 65ch` na `.prayer-text` / `.song-text`
+- [x] Szerokość tekstu modlitwy nieograniczona powyżej 960px — na szerokich monitorach linijki są za długie; `max-width: 65ch` na `.prayer-text` / `.song-text`
 - [ ] Brak trybu czytania fullwidth — możliwość ukrycia listy kategorii i czytania tylko tekstu (szczególnie przy długich modlitwach jak Różaniec Święty)
-- [ ] Przyciski akcji (Powrót, Źródło) są małe i blade — na desktop można sobie pozwolić na bardziej widoczne CTA
+- [x] Przyciski akcji (Powrót, Źródło) są małe i blade — na desktop można sobie pozwolić na bardziej widoczne CTA
 
 ### Mobile — komfort modlitwy
 - [ ] Brak "keep screen awake" (`WakeLock API`) — ekran gaśnie w trakcie modlitwy różańcowej; użytkownik musi dotykać ekranu żeby go obudzić, co przerywa skupienie
 - [ ] Czcionka treści modlitwy na mobile — rozważyć `font-size: 1.1rem` zamiast domyślnego `1rem`; modlitwy czyta się trzymając telefon z odległości
-- [ ] Brak haptic feedback przy przejściu do następnego kroku różańca/koronki (`navigator.vibrate(10)`) — subtelna odpowiedź dotykowa
+- [x] Brak haptic feedback przy przejściu do następnego kroku różańca/koronki (`navigator.vibrate(10)`) — subtelna odpowiedź dotykowa
 - [ ] Po wejściu w modlitwę/pieśń telefon scrolluje do góry (App.tsx `scrollTo(0,0)`) ale header jest sticky — pierwsze słowo tekstu jest częściowo przysłonięte
 
 ### Dostępność (a11y)
 - [ ] Brak `aria-label` na przyciskach Wstecz/Dalej w różańcu i koronce — czytniki ekranowe mówią tylko "button"
-- [ ] Brak `lang="pl"` na elementach z tekstem modlitwy — czytniki ekranowe mogą źle akcentować
-- [ ] Kontrast `--color-text-muted` na `--color-bg` — sprawdzić czy spełnia WCAG AA (4.5:1) dla małych tekstów
+- [x] Brak `lang="pl"` na elementach z tekstem modlitwy — czytniki ekranowe mogą źle akcentować
+- [x] Kontrast `--color-text-muted` na `--color-bg` — sprawdzić czy spełnia WCAG AA (4.5:1) dla małych tekstów
 - [ ] Brak `focus-visible` stylów na przyciskach nawigacyjnych różańca/koronki — klawiatura nie daje wizualnej informacji gdzie jest focus
 
 ## Do zrobienia — treść i design
@@ -216,5 +218,5 @@
 - [ ] Akcenty kolorystyczne — violet dla hover/active, rubric red dla dekoracji
 - [ ] Kontenery czytania — subtelne obramowanie/cień dla widoków szczegółowych
 - [ ] Różaniec — wizualizacja paciorków
-- [ ] Różaniec — podświetlanie tajemnic wg dnia tygodnia
+- [x] Różaniec — podświetlanie tajemnic wg dnia tygodnia
 - [ ] Pieśni — uzupełnienie treści
