@@ -1523,6 +1523,13 @@
   color: var(--color-text-muted);
 }
 
+.chaplet-progress > span,
+.rosary-progress > span {
+  flex: 0 0 7ch;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
 .chaplet-progress-bar {
   flex: 1;
   height: 4px;
