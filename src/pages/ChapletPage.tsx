@@ -4,10 +4,44 @@ import { buildChapletSteps } from '../data/chaplet'
 import { hapticLight, hapticMedium } from '../data/haptics'
 
 type Screen = 'intro' | 'prayer'
+const CHAPLET_PROGRESS_KEY = 'chaplet-progress'
+
+interface ChapletProgress {
+  screen: Screen
+  currentStep: number
+}
+
+function readChapletProgress(): ChapletProgress {
+  const emptyProgress: ChapletProgress = { screen: 'intro', currentStep: 0 }
+
+  try {
+    const storedProgress = sessionStorage.getItem(CHAPLET_PROGRESS_KEY)
+    if (!storedProgress) return emptyProgress
+
+    const parsedProgress: unknown = JSON.parse(storedProgress)
+    if (
+      typeof parsedProgress !== 'object'
+      || parsedProgress === null
+      || !('currentStep' in parsedProgress)
+      || typeof parsedProgress.currentStep !== 'number'
+      || !Number.isInteger(parsedProgress.currentStep)
+      || parsedProgress.currentStep < 0
+      || parsedProgress.currentStep >= buildChapletSteps().length
+    ) {
+      return emptyProgress
+    }
+
+    return { screen: 'prayer', currentStep: parsedProgress.currentStep }
+  } catch {
+    // Storage may be unavailable or contain malformed JSON; neither should block prayer.
+    return emptyProgress
+  }
+}
 
 export default function ChapletPage() {
-  const [screen, setScreen] = useState<Screen>('intro')
-  const [currentStep, setCurrentStep] = useState(0)
+  const [restoredProgress] = useState(readChapletProgress)
+  const [screen, setScreen] = useState<Screen>(restoredProgress.screen)
+  const [currentStep, setCurrentStep] = useState(restoredProgress.currentStep)
 
   const steps = useMemo(() => buildChapletSteps(), [])
 
@@ -38,10 +72,25 @@ export default function ChapletPage() {
 
   const reset = useCallback(() => {
     hapticMedium()
+    try {
+      sessionStorage.removeItem(CHAPLET_PROGRESS_KEY)
+    } catch {
+      // Reset must still work when browser storage is unavailable.
+    }
     setScreen('intro')
     setCurrentStep(0)
     window.scrollTo(0, 0)
   }, [])
+
+  useEffect(() => {
+    if (screen !== 'prayer') return
+
+    try {
+      sessionStorage.setItem(CHAPLET_PROGRESS_KEY, JSON.stringify({ currentStep }))
+    } catch {
+      // Prayer navigation remains usable when browser storage is unavailable.
+    }
+  }, [screen, currentStep])
 
   // Arrow keys during prayer
   useEffect(() => {

@@ -62,7 +62,7 @@
 ## Do zrobienia — koronka
 
 - [x] Ten sam bug co różaniec: `reset()` bez `useCallback` w `useEffect` — nowa referencja przy każdym renderze
-- [ ] Brak persystencji kroku po opuszczeniu strony
+- [x] Brak persystencji kroku po opuszczeniu strony
 - [ ] Brak intro-screen dla różańca (koronka ma ładny ekran wprowadzający, różaniec nie — niespójność)
 
 ## Do zrobienia — ogłoszenia
