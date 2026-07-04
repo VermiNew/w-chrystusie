@@ -206,10 +206,10 @@
 - [ ] Po wejściu w modlitwę/pieśń telefon scrolluje do góry (App.tsx `scrollTo(0,0)`) ale header jest sticky — pierwsze słowo tekstu jest częściowo przysłonięte
 
 ### Dostępność (a11y)
-- [ ] Brak `aria-label` na przyciskach Wstecz/Dalej w różańcu i koronce — czytniki ekranowe mówią tylko "button"
+- [x] Brak `aria-label` na przyciskach Wstecz/Dalej w różańcu i koronce — czytniki ekranowe mówią tylko "button"
 - [x] Brak `lang="pl"` na elementach z tekstem modlitwy — czytniki ekranowe mogą źle akcentować
 - [x] Kontrast `--color-text-muted` na `--color-bg` — sprawdzić czy spełnia WCAG AA (4.5:1) dla małych tekstów
-- [ ] Brak `focus-visible` stylów na przyciskach nawigacyjnych różańca/koronki — klawiatura nie daje wizualnej informacji gdzie jest focus
+- [x] Brak `focus-visible` stylów na przyciskach nawigacyjnych różańca/koronki — klawiatura nie daje wizualnej informacji gdzie jest focus
 
 ## Do zrobienia — treść i design
 

@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect, useCallback } from 'react'
+import { FaArrowLeft, FaArrowRight, FaCheck } from 'react-icons/fa6'
 import { mysterySets, buildRosarySteps, type MysterySet } from '../data/rosary'
 import { hapticLight, hapticMedium } from '../data/haptics'
 
@@ -88,7 +89,8 @@ export default function RosaryPage() {
   return (
     <div className="page">
       <button className="back-button" onClick={reset}>
-        ← Powrót do wyboru tajemnic
+        <FaArrowLeft className="prayer-nav-icon" aria-hidden="true" />
+        <span>Powrót do wyboru tajemnic</span>
       </button>
 
       <div className="rosary-progress">
@@ -114,17 +116,20 @@ export default function RosaryPage() {
 
       <div className="rosary-nav">
         {!isFirst ? (
-          <button className="rosary-nav-button" onClick={goPrev}>
-            ← Wstecz
+          <button className="rosary-nav-button" onClick={goPrev} aria-label="Poprzedni krok różańca">
+            <FaArrowLeft className="prayer-nav-icon" aria-hidden="true" />
+            <span>Wstecz</span>
           </button>
         ) : <span />}
         {!isLast ? (
-          <button className="rosary-nav-button rosary-nav-button--next" onClick={goNext}>
-            Dalej →
+          <button className="rosary-nav-button rosary-nav-button--next" onClick={goNext} aria-label="Następny krok różańca">
+            <span>Dalej</span>
+            <FaArrowRight className="prayer-nav-icon" aria-hidden="true" />
           </button>
         ) : (
-          <button className="rosary-nav-button rosary-nav-button--next" onClick={reset}>
-            Zakończ ✓
+          <button className="rosary-nav-button rosary-nav-button--next" onClick={reset} aria-label="Zakończ różaniec">
+            <span>Zakończ</span>
+            <FaCheck className="prayer-nav-icon" aria-hidden="true" />
           </button>
         )}
       </div>

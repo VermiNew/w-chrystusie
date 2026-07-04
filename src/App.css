@@ -1535,17 +1535,30 @@
 }
 
 .chaplet-nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
   background: none;
   border: none;
   color: var(--color-primary);
   font-size: 1rem;
+  line-height: 1.2;
   font-weight: 500;
   cursor: pointer;
-  padding: 0.5rem 0;
+  min-height: 44px;
+  padding: 0.5rem 0.25rem;
+  touch-action: manipulation;
 }
 
 .chaplet-nav-button:hover {
   text-decoration: underline;
+}
+
+.chaplet-nav-button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 .chaplet-nav-button--next {
@@ -1759,17 +1772,37 @@
 }
 
 .rosary-nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
   background: none;
   border: none;
   color: var(--color-primary);
   font-size: 1rem;
+  line-height: 1.2;
   font-weight: 500;
   cursor: pointer;
-  padding: 0.5rem 0;
+  min-height: 44px;
+  padding: 0.5rem 0.25rem;
+  touch-action: manipulation;
 }
 
 .rosary-nav-button:hover {
   text-decoration: underline;
+}
+
+.rosary-nav-button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.prayer-nav-icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 0.9em;
+  height: 0.9em;
 }
 
 .rosary-keyboard-hint {
@@ -1783,6 +1816,13 @@
 
 .rosary-nav-button--next {
   font-weight: 600;
+}
+
+@media (pointer: coarse) {
+  .chaplet-keyboard-hint,
+  .rosary-keyboard-hint {
+    display: none;
+  }
 }
 
 /* Announcements */
