@@ -55,6 +55,9 @@ export default function RosaryPage() {
   const [restoredProgress] = useState(readRosaryProgress)
   const [selectedSet, setSelectedSet] = useState<MysterySet | null>(restoredProgress.selectedSet)
   const [currentStep, setCurrentStep] = useState(restoredProgress.currentStep)
+  const [showKeyboardHint, setShowKeyboardHint] = useState(
+    () => window.matchMedia('(hover: hover) and (pointer: fine)').matches,
+  )
 
   const steps = useMemo(
     () => (selectedSet ? buildRosarySteps(selectedSet) : []),
@@ -108,6 +111,7 @@ export default function RosaryPage() {
     if (!selectedSet) return
 
     const handleKey = (e: KeyboardEvent) => {
+      setShowKeyboardHint(true)
       if (e.key === 'ArrowRight') goNext()
       if (e.key === 'ArrowLeft') goPrev()
       if (e.key === 'Escape') reset()
@@ -151,7 +155,7 @@ export default function RosaryPage() {
   }
 
   return (
-    <div className="page">
+    <div className="page prayer-sequence-page">
       <button className="back-button" onClick={reset}>
         <FaArrowLeft className="prayer-nav-icon" aria-hidden="true" />
         <span>Powrót do wyboru tajemnic</span>
@@ -178,26 +182,33 @@ export default function RosaryPage() {
         <p className="rosary-prayer">{step.prayer}</p>
       </div>
 
-      <div className="rosary-nav">
-        {!isFirst ? (
-          <button className="rosary-nav-button" onClick={goPrev} aria-label="Poprzedni krok różańca">
-            <FaArrowLeft className="prayer-nav-icon" aria-hidden="true" />
-            <span>Wstecz</span>
-          </button>
-        ) : <span />}
-        {!isLast ? (
-          <button className="rosary-nav-button rosary-nav-button--next" onClick={goNext} aria-label="Następny krok różańca">
-            <span>Dalej</span>
-            <FaArrowRight className="prayer-nav-icon" aria-hidden="true" />
-          </button>
-        ) : (
-          <button className="rosary-nav-button rosary-nav-button--next" onClick={reset} aria-label="Zakończ różaniec">
-            <span>Zakończ</span>
-            <FaCheck className="prayer-nav-icon" aria-hidden="true" />
-          </button>
-        )}
+      <div className="prayer-sequence-controls">
+        <div className="rosary-nav">
+          {!isFirst ? (
+            <button className="rosary-nav-button" onClick={goPrev} aria-label="Poprzedni krok różańca">
+              <FaArrowLeft className="prayer-nav-icon" aria-hidden="true" />
+              <span>Wstecz</span>
+            </button>
+          ) : <span />}
+          {!isLast ? (
+            <button className="rosary-nav-button rosary-nav-button--next" onClick={goNext} aria-label="Następny krok różańca">
+              <span>Dalej</span>
+              <FaArrowRight className="prayer-nav-icon" aria-hidden="true" />
+            </button>
+          ) : (
+            <button className="rosary-nav-button rosary-nav-button--next" onClick={reset} aria-label="Zakończ różaniec">
+              <span>Zakończ</span>
+              <FaCheck className="prayer-nav-icon" aria-hidden="true" />
+            </button>
+          )}
+        </div>
+        <p
+          className={`rosary-keyboard-hint${showKeyboardHint ? '' : ' prayer-keyboard-hint--hidden'}`}
+          aria-hidden={!showKeyboardHint}
+        >
+          ← → klawiatura
+        </p>
       </div>
-      <p className="rosary-keyboard-hint">← → klawiatura</p>
     </div>
   )
 }

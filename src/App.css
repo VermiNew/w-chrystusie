@@ -1474,6 +1474,23 @@
 
 /* Chaplet */
 
+.prayer-sequence-page {
+  padding-bottom: 7.5rem;
+}
+
+.prayer-sequence-controls {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  z-index: 15;
+  width: min(calc(100% - 4rem), 55ch);
+  padding: 0.5rem 0 max(0.75rem, env(safe-area-inset-bottom));
+  background: color-mix(in srgb, var(--color-bg) 94%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: translateX(-50%);
+}
+
 .chaplet-progress {
   display: flex;
   align-items: center;
@@ -1818,10 +1835,13 @@
   font-weight: 600;
 }
 
-@media (pointer: coarse) {
-  .chaplet-keyboard-hint,
-  .rosary-keyboard-hint {
-    display: none;
+.prayer-keyboard-hint--hidden {
+  visibility: hidden;
+}
+
+@media (max-width: 850px) {
+  .prayer-sequence-controls {
+    width: min(calc(100% - 2rem), 55ch);
   }
 }
 

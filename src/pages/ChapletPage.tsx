@@ -42,6 +42,9 @@ export default function ChapletPage() {
   const [restoredProgress] = useState(readChapletProgress)
   const [screen, setScreen] = useState<Screen>(restoredProgress.screen)
   const [currentStep, setCurrentStep] = useState(restoredProgress.currentStep)
+  const [showKeyboardHint, setShowKeyboardHint] = useState(
+    () => window.matchMedia('(hover: hover) and (pointer: fine)').matches,
+  )
 
   const steps = useMemo(() => buildChapletSteps(), [])
 
@@ -97,6 +100,7 @@ export default function ChapletPage() {
     if (screen !== 'prayer') return
 
     const handleKey = (e: KeyboardEvent) => {
+      setShowKeyboardHint(true)
       if (e.key === 'ArrowRight') goNext()
       if (e.key === 'ArrowLeft') goPrev()
       if (e.key === 'Escape') reset()
@@ -132,7 +136,7 @@ export default function ChapletPage() {
 
   // Prayer screen
   return (
-    <div className="page">
+    <div className="page prayer-sequence-page">
       <button className="back-button" onClick={reset}>
         <FaArrowLeft className="prayer-nav-icon" aria-hidden="true" />
         <span>Powrót</span>
@@ -156,26 +160,33 @@ export default function ChapletPage() {
         <p className="chaplet-prayer">{step.prayer}</p>
       </div>
 
-      <div className="chaplet-nav">
-        {!isFirst ? (
-          <button className="chaplet-nav-button" onClick={goPrev} aria-label="Poprzedni krok koronki">
-            <FaArrowLeft className="prayer-nav-icon" aria-hidden="true" />
-            <span>Wstecz</span>
-          </button>
-        ) : <span />}
-        {!isLast ? (
-          <button className="chaplet-nav-button chaplet-nav-button--next" onClick={goNext} aria-label="Następny krok koronki">
-            <span>Dalej</span>
-            <FaArrowRight className="prayer-nav-icon" aria-hidden="true" />
-          </button>
-        ) : (
-          <button className="chaplet-nav-button chaplet-nav-button--next" onClick={reset} aria-label="Zakończ koronkę">
-            <span>Zakończ</span>
-            <FaCheck className="prayer-nav-icon" aria-hidden="true" />
-          </button>
-        )}
+      <div className="prayer-sequence-controls">
+        <div className="chaplet-nav">
+          {!isFirst ? (
+            <button className="chaplet-nav-button" onClick={goPrev} aria-label="Poprzedni krok koronki">
+              <FaArrowLeft className="prayer-nav-icon" aria-hidden="true" />
+              <span>Wstecz</span>
+            </button>
+          ) : <span />}
+          {!isLast ? (
+            <button className="chaplet-nav-button chaplet-nav-button--next" onClick={goNext} aria-label="Następny krok koronki">
+              <span>Dalej</span>
+              <FaArrowRight className="prayer-nav-icon" aria-hidden="true" />
+            </button>
+          ) : (
+            <button className="chaplet-nav-button chaplet-nav-button--next" onClick={reset} aria-label="Zakończ koronkę">
+              <span>Zakończ</span>
+              <FaCheck className="prayer-nav-icon" aria-hidden="true" />
+            </button>
+          )}
+        </div>
+        <p
+          className={`chaplet-keyboard-hint${showKeyboardHint ? '' : ' prayer-keyboard-hint--hidden'}`}
+          aria-hidden={!showKeyboardHint}
+        >
+          ← → klawiatura
+        </p>
       </div>
-      <p className="chaplet-keyboard-hint">← → klawiatura</p>
     </div>
   )
 }
