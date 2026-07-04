@@ -337,6 +337,28 @@
 .prayer-category {
   margin-bottom: 0.6rem;
   scroll-margin-top: calc(var(--header-height) + 1rem);
+  animation: category-item-in 0.35s ease both;
+}
+
+.prayer-category:nth-of-type(1) { animation-delay: 0.03s; }
+.prayer-category:nth-of-type(2) { animation-delay: 0.06s; }
+.prayer-category:nth-of-type(3) { animation-delay: 0.09s; }
+.prayer-category:nth-of-type(4) { animation-delay: 0.12s; }
+.prayer-category:nth-of-type(5) { animation-delay: 0.15s; }
+.prayer-category:nth-of-type(6) { animation-delay: 0.18s; }
+.prayer-category:nth-of-type(7) { animation-delay: 0.21s; }
+.prayer-category:nth-of-type(8) { animation-delay: 0.24s; }
+.prayer-category:nth-of-type(n+9) { animation-delay: 0.27s; }
+
+@keyframes category-item-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .prayer-category-title {
@@ -1273,7 +1295,12 @@
 
 /* Staggered entry delays for list items. Items 1–8 get individual delays;
    items 9+ share the last delay value to cap the total wait time. */
-.prayer-list li, .song-list li, .book-list li, .rosary-sets li, .search-results li {
+.book-list li, .rosary-sets li, .search-results li {
+  animation: list-item-in 0.4s ease both;
+}
+
+.prayer-category[open] .prayer-list li,
+.prayer-category[open] .song-list li {
   animation: list-item-in 0.4s ease both;
 }
 
