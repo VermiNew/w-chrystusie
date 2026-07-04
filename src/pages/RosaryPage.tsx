@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect, useCallback } from 'react'
 import { FaArrowLeft, FaArrowRight, FaCheck } from 'react-icons/fa6'
 import { mysterySets, buildRosarySteps, type MysterySet } from '../data/rosary'
 import { hapticLight, hapticMedium } from '../data/haptics'
+import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
 
 const DAY_NAMES = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota']
 const ROSARY_PROGRESS_KEY = 'rosary-progress'
@@ -58,6 +59,7 @@ export default function RosaryPage() {
   const [showKeyboardHint, setShowKeyboardHint] = useState(
     () => window.matchMedia('(hover: hover) and (pointer: fine)').matches,
   )
+  useScreenWakeLock(selectedSet !== null)
 
   const steps = useMemo(
     () => (selectedSet ? buildRosarySteps(selectedSet) : []),

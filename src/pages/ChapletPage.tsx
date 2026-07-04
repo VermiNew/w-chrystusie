@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect, useCallback } from 'react'
 import { FaArrowLeft, FaArrowRight, FaCheck } from 'react-icons/fa6'
 import { buildChapletSteps } from '../data/chaplet'
 import { hapticLight, hapticMedium } from '../data/haptics'
+import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
 
 type Screen = 'intro' | 'prayer'
 const CHAPLET_PROGRESS_KEY = 'chaplet-progress'
@@ -45,6 +46,7 @@ export default function ChapletPage() {
   const [showKeyboardHint, setShowKeyboardHint] = useState(
     () => window.matchMedia('(hover: hover) and (pointer: fine)').matches,
   )
+  useScreenWakeLock(screen === 'prayer')
 
   const steps = useMemo(() => buildChapletSteps(), [])
 
