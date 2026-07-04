@@ -1,6 +1,6 @@
-import { useMemo, useEffect, useState } from 'react'
+import { useMemo, useEffect, useState, type CSSProperties } from 'react'
 import { useLocation, useParams, Link } from 'react-router-dom'
-import { FaArrowLeft, FaArrowUpRightFromSquare, FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
+import { FaArrowLeft, FaArrowUpRightFromSquare, FaChevronDown, FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
 import { songs, type Song } from '../data/songs'
 
@@ -184,13 +184,16 @@ export default function SongbookPage() {
         </label>
         <label>
           Kategoria
-          <select value={selectedCategory} onChange={(event) => setSelectedCategory(event.target.value)}>
-            <option value="all">Wszystkie kategorie</option>
-            {categoryOrder.map((category) => (
-              <option key={category} value={category}>{category}</option>
-            ))}
-            <option value={fallbackCategory}>{fallbackCategory}</option>
-          </select>
+          <span className="list-filter-select">
+            <select value={selectedCategory} onChange={(event) => setSelectedCategory(event.target.value)}>
+              <option value="all">Wszystkie kategorie</option>
+              {categoryOrder.map((category) => (
+                <option key={category} value={category}>{category}</option>
+              ))}
+              <option value={fallbackCategory}>{fallbackCategory}</option>
+            </select>
+            <FaChevronDown aria-hidden="true" />
+          </span>
         </label>
       </div>
       {hasActiveFilters && (
@@ -208,8 +211,8 @@ export default function SongbookPage() {
         >
           <summary className="prayer-category-title">{category} <span>({items.length})</span></summary>
           <ul className="song-list">
-            {items.map((song) => (
-              <li key={song.id}>
+            {items.map((song, index) => (
+              <li key={song.id} style={{ '--item-index': index } as CSSProperties}>
                 <Link
                   to={`/spiewnik/${encodeRouteId(song.id)}`}
                   className="song-item"

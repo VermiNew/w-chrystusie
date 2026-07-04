@@ -448,6 +448,28 @@
   animation: content-fade-in 0.4s ease 0.1s both;
 }
 
+.list-filter-select {
+  position: relative;
+  display: block;
+}
+
+.list-filter-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 3rem;
+}
+
+.list-filter-select > svg {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  color: var(--color-text-muted);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
 .list-filter-input:focus-visible,
 .list-filter-controls select:focus-visible {
   border-color: var(--color-primary);
@@ -1301,18 +1323,19 @@
 
 .prayer-category[open] .prayer-list li,
 .prayer-category[open] .song-list li {
-  animation: list-item-in 0.4s ease both;
+  /* The index keeps the wave visible for every item and is reapplied on each open. */
+  animation: list-item-in 0.4s ease calc(0.03s + var(--item-index) * 0.025s) both;
 }
 
-.prayer-list li:nth-child(1), .song-list li:nth-child(1), .book-list li:nth-child(1), .rosary-sets li:nth-child(1), .search-results li:nth-child(1) { animation-delay: 0.03s; }
-.prayer-list li:nth-child(2), .song-list li:nth-child(2), .book-list li:nth-child(2), .rosary-sets li:nth-child(2), .search-results li:nth-child(2) { animation-delay: 0.06s; }
-.prayer-list li:nth-child(3), .song-list li:nth-child(3), .book-list li:nth-child(3), .rosary-sets li:nth-child(3), .search-results li:nth-child(3) { animation-delay: 0.09s; }
-.prayer-list li:nth-child(4), .song-list li:nth-child(4), .book-list li:nth-child(4), .rosary-sets li:nth-child(4), .search-results li:nth-child(4) { animation-delay: 0.12s; }
-.prayer-list li:nth-child(5), .song-list li:nth-child(5), .book-list li:nth-child(5), .rosary-sets li:nth-child(5), .search-results li:nth-child(5) { animation-delay: 0.15s; }
-.prayer-list li:nth-child(6), .song-list li:nth-child(6), .book-list li:nth-child(6), .rosary-sets li:nth-child(6), .search-results li:nth-child(6) { animation-delay: 0.18s; }
-.prayer-list li:nth-child(7), .song-list li:nth-child(7), .book-list li:nth-child(7), .rosary-sets li:nth-child(7), .search-results li:nth-child(7) { animation-delay: 0.21s; }
-.prayer-list li:nth-child(8), .song-list li:nth-child(8), .book-list li:nth-child(8), .rosary-sets li:nth-child(8), .search-results li:nth-child(8) { animation-delay: 0.24s; }
-.prayer-list li:nth-child(n+9), .song-list li:nth-child(n+9), .book-list li:nth-child(n+9), .rosary-sets li:nth-child(n+9), .search-results li:nth-child(n+9) { animation-delay: 0.27s; }
+.book-list li:nth-child(1), .rosary-sets li:nth-child(1), .search-results li:nth-child(1) { animation-delay: 0.03s; }
+.book-list li:nth-child(2), .rosary-sets li:nth-child(2), .search-results li:nth-child(2) { animation-delay: 0.06s; }
+.book-list li:nth-child(3), .rosary-sets li:nth-child(3), .search-results li:nth-child(3) { animation-delay: 0.09s; }
+.book-list li:nth-child(4), .rosary-sets li:nth-child(4), .search-results li:nth-child(4) { animation-delay: 0.12s; }
+.book-list li:nth-child(5), .rosary-sets li:nth-child(5), .search-results li:nth-child(5) { animation-delay: 0.15s; }
+.book-list li:nth-child(6), .rosary-sets li:nth-child(6), .search-results li:nth-child(6) { animation-delay: 0.18s; }
+.book-list li:nth-child(7), .rosary-sets li:nth-child(7), .search-results li:nth-child(7) { animation-delay: 0.21s; }
+.book-list li:nth-child(8), .rosary-sets li:nth-child(8), .search-results li:nth-child(8) { animation-delay: 0.24s; }
+.book-list li:nth-child(n+9), .rosary-sets li:nth-child(n+9), .search-results li:nth-child(n+9) { animation-delay: 0.27s; }
 
 /* Chapter grid stagger */
 .chapter-grid .chapter-button:nth-child(1) { animation-delay: 0.02s; }
