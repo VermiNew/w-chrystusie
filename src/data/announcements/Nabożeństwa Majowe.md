@@ -1,7 +1,7 @@
 ---
 title: Nabożeństwa Majowe
 date: 2026-05-01
-pinned: true
+pinned: false
 ---
 
 Kochani bracia i siostry, zachęcam z serca do uczestnictwa w **nabożeństwach majowych**, **Mszach Świętych** i przyjmowania **Komunii** właśnie w tej intencji.
