@@ -56,7 +56,7 @@
 - [x] Brak możliwości wznowienia modlitwy po opuszczeniu strony — wybrany zestaw i krok nie są persystowane (sessionStorage / URL param)
 - [ ] Brak wizualizacji paciorków (już w TODO ogólnym, potwierdzenie)
 - [x] Podświetlanie tajemnic wg dnia tygodnia działa, ale brak informacji o tym że można odmówić inny zestaw w każdy dzień — brak tooltipa/opisu przy przyciskach
-- [ ] `← →` na klawiaturze nie działa gdy focus jest na przycisku nawigacyjnym (event listener na `window`, ale `button` może przechwycić `ArrowKey` przed scrollem)
+- [x] `← →` na klawiaturze nie działa gdy focus jest na przycisku nawigacyjnym (event listener na `window`, ale `button` może przechwycić `ArrowKey` przed scrollem)
 - [ ] Brak Litanii Loretańskiej i innych modlitw opcjonalnych na zakończenie
 
 ## Do zrobienia — koronka
@@ -145,10 +145,10 @@
 ### Różaniec i Koronka — nawigacja krok po kroku
 - [ ] `.rosary-nav-button` / `.chaplet-nav-button` — `background: none; border: none` — przyciski Wstecz/Dalej są tekstem, nie widocznymi przyciskami; na mobile trudno trafić
 - [ ] Brak minimalnej wysokości touch target na przyciskach nawigacyjnych (mają `padding: 0.5rem 0` — to za mało)
-- [ ] `← → klawiatura` hint widoczny na mobile — bezużyteczny tekst na touchscreen, powinien być ukryty na urządzeniach bez klawiatury (`@media (pointer: coarse)`)
+- [x] `← → klawiatura` hint widoczny na mobile — bezużyteczny tekst na touchscreen, powinien być ukryty na urządzeniach bez klawiatury (`@media (pointer: coarse)`)
 - [ ] Cały obszar kroku (`rosary-step`, `chaplet-step`) nie jest swipeable — brak obsługi gestów swipe left/right do nawigacji (standardowy gest na mobile)
-- [ ] Przyciski Wstecz/Dalej są na dole strony — przy długich modlitwach użytkownik musi scrollować do dołu żeby przejść dalej; rozważyć floating nav lub sticky footer
-- [ ] `max-width: 55ch` na `.rosary-nav` / `.chaplet-nav` — na bardzo małych ekranach (320px) może być za szeroki
+- [x] Przyciski Wstecz/Dalej są na dole strony — przy długich modlitwach użytkownik musi scrollować do dołu żeby przejść dalej; rozważyć floating nav lub sticky footer
+- [x] `max-width: 55ch` na `.rosary-nav` / `.chaplet-nav` — na bardzo małych ekranach (320px) może być za szeroki
 
 ### Ogólne mobile
 - [ ] Brak `touch-action: manipulation` na interaktywnych elementach — 300ms tap delay na starszych iOS
