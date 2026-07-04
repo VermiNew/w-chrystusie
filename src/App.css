@@ -430,7 +430,11 @@
   color: var(--color-text-muted);
   font-size: 0.82rem;
   font-weight: 600;
+  animation: content-fade-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
+
+.list-filter-controls label:nth-child(1) { animation-delay: 0.1s; }
+.list-filter-controls label:nth-child(2) { animation-delay: 0.2s; }
 
 .list-filter-input,
 .list-filter-controls select {
@@ -445,7 +449,6 @@
   color: var(--color-text);
   font-family: inherit;
   transition: border-color 0.2s, box-shadow 0.2s;
-  animation: content-fade-in 0.4s ease 0.1s both;
 }
 
 .list-filter-select {
@@ -1044,7 +1047,12 @@
   color: var(--color-text-muted);
   font-size: 0.82rem;
   font-weight: 600;
+  animation: content-fade-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
+
+.search-filters label:nth-child(1) { animation-delay: 0.16s; }
+.search-filters label:nth-child(2) { animation-delay: 0.24s; }
+.search-filters label:nth-child(3) { animation-delay: 0.32s; }
 
 .search-filters select {
   width: 100%;
@@ -1076,7 +1084,7 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  animation: content-fade-in 0.6s ease 0.3s both;
+  animation: content-fade-in 0.6s ease 0.44s both;
 }
 
 .search-hint kbd {
