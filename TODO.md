@@ -187,7 +187,7 @@
 - [ ] Ikona krzyża w hero animuje się przy hover — ale brak analogicznego ciepła w reszcie UI; rozważyć delikatne złote/bursztynowe akcenty kolorystyczne w miejscach modlitewnych (nagłówki treści, separatory)
 - [x] Widok modlitwy/pieśni: tekst na `font-reading` (Literata) — sprawdzić czy `line-height` jest wystarczający do komfortowego czytania (rekomendowane 1.8–2.0 dla tekstu modlitewnego)
 - [ ] Odstęp między wersami w litaniach — Markdown renderuje je jako jeden blok; rozważyć CSS `p + p { margin-top: ... }` w `.prayer-text` dla rytmu czytania
-- [ ] Brak chwili ciszy — po zakończeniu różańca/koronki (`Zakończ ✓`) brak ekranu zakończenia; pojawia się intro bez żadnego "Amen" / podsumowania / momentu zatrzymania
+- [x] Brak chwili ciszy — po zakończeniu różańca/koronki (`Zakończ ✓`) brak ekranu zakończenia; pojawia się intro bez żadnego "Amen" / podsumowania / momentu zatrzymania
 
 ### Nawigacja i orientacja
 - [x] Użytkownik nie wie gdzie jest w aplikacji — brak breadcrumba ani aktywnego stanu w nav dla podstron (modlitwa szczegółowa, pieśń szczegółowa)

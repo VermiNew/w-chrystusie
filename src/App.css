@@ -1883,6 +1883,147 @@
   }
 }
 
+.prayer-completion-page {
+  min-height: calc(100dvh - var(--header-height) - 4rem);
+  display: grid;
+  place-items: center;
+}
+
+.prayer-completion {
+  width: min(100%, 38rem);
+  padding: clamp(2rem, 6vw, 3.5rem);
+  text-align: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  box-shadow: 0 16px 48px rgba(var(--color-shadow-rgb), 0.08);
+  animation: content-fade-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.prayer-completion-icon {
+  display: grid;
+  place-items: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.25rem;
+  color: var(--color-primary);
+  background: rgba(var(--color-primary-rgb), 0.1);
+  border-radius: 50%;
+}
+
+.prayer-completion-icon svg {
+  display: block;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.prayer-completion-eyebrow {
+  margin: 0 0 0.4rem;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.prayer-completion h1 {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  font-size: clamp(2.25rem, 8vw, 3.25rem);
+  animation: none;
+}
+
+.prayer-completion-message {
+  margin: 0;
+  font-family: var(--font-reading);
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.prayer-completion-silence {
+  margin: 1.5rem 0 0;
+  padding-top: 1.5rem;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+  line-height: 1.7;
+}
+
+.prayer-completion-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.prayer-completion-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  padding: 0.7rem 1rem;
+  color: var(--color-primary);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 9px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  transition: border-color 0.2s, background-color 0.2s, transform 0.2s;
+}
+
+.prayer-completion-button svg {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.prayer-completion-button:hover {
+  border-color: var(--color-primary);
+  background: var(--color-hover-bg);
+  transform: translateY(-1px);
+}
+
+.prayer-completion-button:focus-visible {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
+  outline-offset: 2px;
+}
+
+.prayer-completion-button--primary {
+  color: var(--color-white);
+  background: var(--color-header-bg);
+  border-color: var(--color-header-bg);
+}
+
+.prayer-completion-button--primary:hover {
+  color: var(--color-white);
+  background: color-mix(in srgb, var(--color-header-bg) 88%, var(--color-white));
+  border-color: var(--color-header-bg);
+}
+
+@media (max-width: 850px) {
+  .prayer-completion-page {
+    min-height: calc(100dvh - var(--header-height) - 3rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .prayer-completion {
+    padding: 2rem 1.25rem;
+    border-radius: 14px;
+  }
+
+  .prayer-completion-actions {
+    flex-direction: column;
+  }
+
+  .prayer-completion-button {
+    width: 100%;
+  }
+}
+
 /* Announcements */
 
 .announcement-list {

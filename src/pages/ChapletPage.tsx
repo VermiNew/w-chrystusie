@@ -3,8 +3,9 @@ import { FaArrowLeft, FaArrowRight, FaCheck } from 'react-icons/fa6'
 import { buildChapletSteps } from '../data/chaplet'
 import { hapticLight, hapticMedium } from '../data/haptics'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
+import PrayerCompletion from '../components/PrayerCompletion'
 
-type Screen = 'intro' | 'prayer'
+type Screen = 'intro' | 'prayer' | 'complete'
 const CHAPLET_PROGRESS_KEY = 'chaplet-progress'
 
 interface ChapletProgress {
@@ -87,6 +88,17 @@ export default function ChapletPage() {
     window.scrollTo(0, 0)
   }, [])
 
+  const complete = useCallback(() => {
+    hapticMedium()
+    try {
+      sessionStorage.removeItem(CHAPLET_PROGRESS_KEY)
+    } catch {
+      // Completion must still work when browser storage is unavailable.
+    }
+    setScreen('complete')
+    window.scrollTo(0, 0)
+  }, [])
+
   useEffect(() => {
     if (screen !== 'prayer') return
 
@@ -136,6 +148,17 @@ export default function ChapletPage() {
     )
   }
 
+  if (screen === 'complete') {
+    return (
+      <PrayerCompletion
+        message="Koronka do Bożego Miłosierdzia dobiegła końca."
+        exitLabel="Wróć do początku"
+        onRepeat={start}
+        onExit={reset}
+      />
+    )
+  }
+
   // Prayer screen
   return (
     <div className="page prayer-sequence-page">
@@ -176,7 +199,7 @@ export default function ChapletPage() {
               <FaArrowRight className="prayer-nav-icon" aria-hidden="true" />
             </button>
           ) : (
-            <button className="chaplet-nav-button chaplet-nav-button--next" onClick={reset} aria-label="Zakończ koronkę">
+            <button className="chaplet-nav-button chaplet-nav-button--next" onClick={complete} aria-label="Zakończ koronkę">
               <span>Zakończ</span>
               <FaCheck className="prayer-nav-icon" aria-hidden="true" />
             </button>

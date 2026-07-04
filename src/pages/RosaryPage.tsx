@@ -3,6 +3,7 @@ import { FaArrowLeft, FaArrowRight, FaCheck } from 'react-icons/fa6'
 import { mysterySets, buildRosarySteps, type MysterySet } from '../data/rosary'
 import { hapticLight, hapticMedium } from '../data/haptics'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
+import PrayerCompletion from '../components/PrayerCompletion'
 
 const DAY_NAMES = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota']
 const ROSARY_PROGRESS_KEY = 'rosary-progress'
@@ -56,10 +57,11 @@ export default function RosaryPage() {
   const [restoredProgress] = useState(readRosaryProgress)
   const [selectedSet, setSelectedSet] = useState<MysterySet | null>(restoredProgress.selectedSet)
   const [currentStep, setCurrentStep] = useState(restoredProgress.currentStep)
+  const [isComplete, setIsComplete] = useState(false)
   const [showKeyboardHint, setShowKeyboardHint] = useState(
     () => window.matchMedia('(hover: hover) and (pointer: fine)').matches,
   )
-  useScreenWakeLock(selectedSet !== null)
+  useScreenWakeLock(selectedSet !== null && !isComplete)
 
   const steps = useMemo(
     () => (selectedSet ? buildRosarySteps(selectedSet) : []),
@@ -93,10 +95,30 @@ export default function RosaryPage() {
     }
     setSelectedSet(null)
     setCurrentStep(0)
+    setIsComplete(false)
+    window.scrollTo(0, 0)
+  }, [])
+
+  const repeat = useCallback(() => {
+    hapticMedium()
+    setCurrentStep(0)
+    setIsComplete(false)
+    window.scrollTo(0, 0)
+  }, [])
+
+  const complete = useCallback(() => {
+    hapticMedium()
+    try {
+      sessionStorage.removeItem(ROSARY_PROGRESS_KEY)
+    } catch {
+      // Completion must still work when browser storage is unavailable.
+    }
+    setIsComplete(true)
+    window.scrollTo(0, 0)
   }, [])
 
   useEffect(() => {
-    if (!selectedSet) return
+    if (!selectedSet || isComplete) return
 
     try {
       sessionStorage.setItem(ROSARY_PROGRESS_KEY, JSON.stringify({
@@ -106,11 +128,11 @@ export default function RosaryPage() {
     } catch {
       // Prayer navigation remains usable when browser storage is unavailable.
     }
-  }, [selectedSet, currentStep])
+  }, [selectedSet, currentStep, isComplete])
 
   // Arrow keys to navigate between rosary steps
   useEffect(() => {
-    if (!selectedSet) return
+    if (!selectedSet || isComplete) return
 
     const handleKey = (e: KeyboardEvent) => {
       setShowKeyboardHint(true)
@@ -121,9 +143,20 @@ export default function RosaryPage() {
 
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
-  }, [selectedSet, goNext, goPrev, reset])
+  }, [selectedSet, isComplete, goNext, goPrev, reset])
 
   const today = new Date().getDay()
+
+  if (isComplete && selectedSet) {
+    return (
+      <PrayerCompletion
+        message={`Ukończono: ${selectedSet.name}.`}
+        exitLabel="Wybierz inne tajemnice"
+        onRepeat={repeat}
+        onExit={reset}
+      />
+    )
+  }
 
   if (!selectedSet) {
     return (
@@ -139,6 +172,7 @@ export default function RosaryPage() {
                   className={`rosary-set-button${isToday ? ' rosary-set-button--today' : ''}`}
                   onClick={() => {
                     setCurrentStep(0)
+                    setIsComplete(false)
                     setSelectedSet(set)
                   }}
                 >
@@ -198,7 +232,7 @@ export default function RosaryPage() {
               <FaArrowRight className="prayer-nav-icon" aria-hidden="true" />
             </button>
           ) : (
-            <button className="rosary-nav-button rosary-nav-button--next" onClick={reset} aria-label="Zakończ różaniec">
+            <button className="rosary-nav-button rosary-nav-button--next" onClick={complete} aria-label="Zakończ różaniec">
               <span>Zakończ</span>
               <FaCheck className="prayer-nav-icon" aria-hidden="true" />
             </button>
