@@ -987,7 +987,7 @@
   animation: text-reveal 0.6s ease both;
 }
 
-.song-reading-toggle {
+.content-reading-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1007,42 +1007,42 @@
   transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
 }
 
-.song-reading-toggle svg {
+.content-reading-toggle svg {
   display: block;
   flex: 0 0 auto;
 }
 
-.song-reading-toggle:hover {
+.content-reading-toggle:hover {
   background: var(--color-hover-bg);
   border-color: var(--color-primary);
   transform: translateY(-1px);
 }
 
-.song-reading-toggle:focus-visible {
+.content-reading-toggle:focus-visible {
   outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
   outline-offset: 2px;
 }
 
-html.song-reading-mode .header {
+html.content-reading-mode .header {
   display: none;
 }
 
-html.song-reading-mode .main {
+html.content-reading-mode .main {
   max-width: none;
   padding: clamp(1rem, 4vw, 3rem);
   animation: none;
 }
 
-html.song-reading-mode .content-detail-page {
+html.content-reading-mode .content-detail-page {
   width: min(100%, 90rem);
   margin: 0 auto;
 }
 
-html.song-reading-mode .content-detail-page > :is(.back-button, .content-breadcrumb, .source-link, .content-sibling-nav) {
+html.content-reading-mode .content-detail-page > :is(.back-button, .content-breadcrumb, .source-link, .content-sibling-nav) {
   display: none;
 }
 
-html.song-reading-mode .song-reading-toggle {
+html.content-reading-mode .content-reading-toggle {
   position: fixed;
   top: max(1rem, env(safe-area-inset-top));
   right: max(1rem, env(safe-area-inset-right));
@@ -1054,7 +1054,7 @@ html.song-reading-mode .song-reading-toggle {
   -webkit-backdrop-filter: blur(10px);
 }
 
-html.song-reading-mode .content-detail-page > h1 {
+html.content-reading-mode .content-detail-page > h1 {
   max-width: 32ch;
   margin: 4.5rem auto 2rem;
   text-align: center;
@@ -1062,7 +1062,7 @@ html.song-reading-mode .content-detail-page > h1 {
   animation: none;
 }
 
-html.song-reading-mode .song-text {
+html.content-reading-mode :is(.prayer-text, .song-text) {
   max-width: 46rem;
   margin: 0 auto;
   font-size: clamp(1.35rem, 1.1rem + 1.2vw, 1.8rem);
@@ -1071,11 +1071,11 @@ html.song-reading-mode .song-text {
 }
 
 @media (max-width: 480px) {
-  html.song-reading-mode .main {
+  html.content-reading-mode .main {
     padding: 1rem;
   }
 
-  html.song-reading-mode .content-detail-page > h1 {
+  html.content-reading-mode .content-detail-page > h1 {
     margin-top: 4.25rem;
     font-size: 2rem;
   }

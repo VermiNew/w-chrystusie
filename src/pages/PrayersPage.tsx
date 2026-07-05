@@ -3,6 +3,7 @@ import { useLocation, useParams, Link } from 'react-router-dom'
 import { FaArrowLeft, FaArrowUpRightFromSquare, FaChevronDown, FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
 import { prayers, type Prayer } from '../data/prayers'
+import ReadingModeToggle from '../components/ReadingModeToggle'
 
 const SCROLL_KEY = 'prayers-scroll'
 const CATEGORY_KEY = 'prayers-category'
@@ -139,6 +140,7 @@ export default function PrayersPage() {
           <span aria-hidden="true">/</span>
           <Link to="/modlitwy" onClick={prepareListReturn}>{detailCategory}</Link>
         </nav>
+        <ReadingModeToggle />
         <h1>{selected.title}</h1>
         <div className="prayer-text" lang="pl">
           <Markdown>{selected.body}</Markdown>
