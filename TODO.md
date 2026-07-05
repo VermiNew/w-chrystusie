@@ -48,7 +48,7 @@
 ## Do zrobienia — śpiewnik
 
 - [ ] Brak oznaczenia liturgicznego okresu przy kafelkach na liście (Adwent, Wielki Post itp.)
-- [ ] Brak trybu „powiększonej czcionki" do śpiewania z odległości (użycie na ekranie podczas Mszy)
+- [x] Brak trybu „powiększonej czcionki" do śpiewania z odległości (użycie na ekranie podczas Mszy)
 
 ## Do zrobienia — różaniec
 

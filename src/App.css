@@ -987,6 +987,100 @@
   animation: text-reveal 0.6s ease both;
 }
 
+.song-reading-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  margin-bottom: 1rem;
+  padding: 0.65rem 0.9rem;
+  color: var(--color-primary);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 9px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.song-reading-toggle svg {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.song-reading-toggle:hover {
+  background: var(--color-hover-bg);
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.song-reading-toggle:focus-visible {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
+  outline-offset: 2px;
+}
+
+html.song-reading-mode .header {
+  display: none;
+}
+
+html.song-reading-mode .main {
+  max-width: none;
+  padding: clamp(1rem, 4vw, 3rem);
+  animation: none;
+}
+
+html.song-reading-mode .content-detail-page {
+  width: min(100%, 90rem);
+  margin: 0 auto;
+}
+
+html.song-reading-mode .content-detail-page > :is(.back-button, .content-breadcrumb, .source-link, .content-sibling-nav) {
+  display: none;
+}
+
+html.song-reading-mode .song-reading-toggle {
+  position: fixed;
+  top: max(1rem, env(safe-area-inset-top));
+  right: max(1rem, env(safe-area-inset-right));
+  z-index: 40;
+  margin: 0;
+  background: color-mix(in srgb, var(--color-surface) 92%, transparent);
+  box-shadow: 0 4px 18px rgba(var(--color-shadow-rgb), 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+html.song-reading-mode .content-detail-page > h1 {
+  max-width: 32ch;
+  margin: 4.5rem auto 2rem;
+  text-align: center;
+  font-size: clamp(2rem, 1.6rem + 2vw, 3.25rem);
+  animation: none;
+}
+
+html.song-reading-mode .song-text {
+  max-width: 46rem;
+  margin: 0 auto;
+  font-size: clamp(1.35rem, 1.1rem + 1.2vw, 1.8rem);
+  line-height: 2;
+  animation: none;
+}
+
+@media (max-width: 480px) {
+  html.song-reading-mode .main {
+    padding: 1rem;
+  }
+
+  html.song-reading-mode .content-detail-page > h1 {
+    margin-top: 4.25rem;
+    font-size: 2rem;
+  }
+}
+
 .prayer-list,
 .song-list {
   gap: 0.4rem;

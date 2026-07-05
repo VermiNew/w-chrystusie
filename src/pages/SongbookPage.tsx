@@ -1,8 +1,9 @@
 import { useMemo, useEffect, useState, type CSSProperties } from 'react'
 import { useLocation, useParams, Link } from 'react-router-dom'
-import { FaArrowLeft, FaArrowUpRightFromSquare, FaChevronDown, FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
+import { FaArrowLeft, FaArrowUpRightFromSquare, FaChevronDown, FaChevronLeft, FaChevronRight, FaCompress, FaExpand } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
 import { songs, type Song } from '../data/songs'
+import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
 
 const SCROLL_KEY = 'songbook-scroll'
 const CATEGORY_KEY = 'songbook-category'
@@ -50,6 +51,7 @@ export default function SongbookPage() {
   const location = useLocation()
   const [query, setQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
+  const [isLargeTextMode, setIsLargeTextMode] = useState(false)
   const [returnCategory] = useState(() => sessionStorage.getItem(CATEGORY_KEY))
   const selectedId = getSelectedId(id, location.pathname)
   const selected = selectedId ? songs.find((s) => s.id === selectedId) ?? null : null
@@ -71,6 +73,24 @@ export default function SongbookPage() {
   const nextItem = detailIndex >= 0 && detailIndex < siblingItems.length - 1
     ? siblingItems[detailIndex + 1]
     : null
+  useScreenWakeLock(Boolean(selected) && isLargeTextMode)
+
+  useEffect(() => {
+    if (!isLargeTextMode) return
+
+    document.documentElement.classList.add('song-reading-mode')
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsLargeTextMode(false)
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+      document.documentElement.classList.remove('song-reading-mode')
+    }
+  }, [isLargeTextMode])
+
   // Restore the expanded category first, then the saved list position.
   useEffect(() => {
     if (selected) return
@@ -135,6 +155,19 @@ export default function SongbookPage() {
           <span aria-hidden="true">/</span>
           <Link to="/spiewnik" onClick={prepareListReturn}>{detailCategory}</Link>
         </nav>
+        <button
+          className="song-reading-toggle"
+          type="button"
+          aria-pressed={isLargeTextMode}
+          title={isLargeTextMode ? 'Wróć do zwykłego widoku' : 'Włącz tryb dużej czcionki'}
+          onClick={() => {
+            setIsLargeTextMode((active) => !active)
+            window.scrollTo(0, 0)
+          }}
+        >
+          {isLargeTextMode ? <FaCompress aria-hidden="true" /> : <FaExpand aria-hidden="true" />}
+          <span>{isLargeTextMode ? 'Zakończ tryb' : 'Duża czcionka'}</span>
+        </button>
         <h1>{selected.title}</h1>
         <div className="song-text" lang="pl">
           <Markdown>{selected.body}</Markdown>
