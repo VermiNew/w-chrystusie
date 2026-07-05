@@ -3,6 +3,7 @@ import { FaArrowLeft, FaArrowRight, FaCheck } from 'react-icons/fa6'
 import { buildChapletSteps } from '../data/chaplet'
 import { hapticLight, hapticMedium } from '../data/haptics'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
+import { useHorizontalSwipe } from '../hooks/useHorizontalSwipe'
 import PrayerCompletion from '../components/PrayerCompletion'
 
 type Screen = 'intro' | 'prayer' | 'complete'
@@ -75,6 +76,7 @@ export default function ChapletPage() {
     setCurrentStep((s) => s - 1)
     window.scrollTo(0, 0)
   }, [isFirst])
+  const swipeHandlers = useHorizontalSwipe(goNext, goPrev)
 
   const reset = useCallback(() => {
     hapticMedium()
@@ -177,7 +179,7 @@ export default function ChapletPage() {
         </div>
       </div>
 
-      <div className="chaplet-step" key={currentStep}>
+      <div className="chaplet-step" key={currentStep} {...swipeHandlers}>
         <h2 className="chaplet-label">
           {step.label}
           {step.counter && <span className="chaplet-counter"> ({step.counter})</span>}

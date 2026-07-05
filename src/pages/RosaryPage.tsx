@@ -3,6 +3,7 @@ import { FaArrowLeft, FaArrowRight, FaCheck, FaCircleInfo } from 'react-icons/fa
 import { mysterySets, buildRosarySteps, type MysterySet } from '../data/rosary'
 import { hapticLight, hapticMedium } from '../data/haptics'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
+import { useHorizontalSwipe } from '../hooks/useHorizontalSwipe'
 import PrayerCompletion from '../components/PrayerCompletion'
 
 const DAY_NAMES = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota']
@@ -85,6 +86,7 @@ export default function RosaryPage() {
     setCurrentStep((s) => s - 1)
     window.scrollTo(0, 0)
   }, [isFirst])
+  const swipeHandlers = useHorizontalSwipe(goNext, goPrev)
 
   const reset = useCallback(() => {
     hapticMedium()
@@ -214,7 +216,7 @@ export default function RosaryPage() {
         </div>
       </div>
 
-      <div className="rosary-step" key={currentStep}>
+      <div className="rosary-step" key={currentStep} {...swipeHandlers}>
         {step.mystery && (
           <p className="rosary-mystery">{step.mystery}</p>
         )}

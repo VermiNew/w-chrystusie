@@ -146,7 +146,7 @@
 - [ ] `.rosary-nav-button` / `.chaplet-nav-button` — `background: none; border: none` — przyciski Wstecz/Dalej są tekstem, nie widocznymi przyciskami; na mobile trudno trafić
 - [ ] Brak minimalnej wysokości touch target na przyciskach nawigacyjnych (mają `padding: 0.5rem 0` — to za mało)
 - [x] `← → klawiatura` hint widoczny na mobile — bezużyteczny tekst na touchscreen, powinien być ukryty na urządzeniach bez klawiatury (`@media (pointer: coarse)`)
-- [ ] Cały obszar kroku (`rosary-step`, `chaplet-step`) nie jest swipeable — brak obsługi gestów swipe left/right do nawigacji (standardowy gest na mobile)
+- [x] Cały obszar kroku (`rosary-step`, `chaplet-step`) nie jest swipeable — brak obsługi gestów swipe left/right do nawigacji (standardowy gest na mobile)
 - [x] Przyciski Wstecz/Dalej są na dole strony — przy długich modlitwach użytkownik musi scrollować do dołu żeby przejść dalej; rozważyć floating nav lub sticky footer
 - [x] `max-width: 55ch` na `.rosary-nav` / `.chaplet-nav` — na bardzo małych ekranach (320px) może być za szeroki
 
