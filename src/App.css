@@ -3010,7 +3010,7 @@ body[data-nav-menu='open'] {
 .about-hero-cross {
   font-size: 2.5rem;
   display: block;
-  margin-bottom: 0.25rem;
+  margin: 0 auto 0.25rem;
   color: var(--color-primary);
 }
 
@@ -3047,6 +3047,62 @@ body[data-nav-menu='open'] {
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--color-primary);
+}
+
+.about-author {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  max-width: 100%;
+  margin: 0 0 1.35rem;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+}
+
+.about-author-logo {
+  width: 3.25rem;
+  height: 3.25rem;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.about-author-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.about-author-label {
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.about-author-copy strong {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+}
+
+.about-author-copy a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--color-primary);
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.about-author-copy a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .about-stats {
@@ -3087,6 +3143,7 @@ body[data-nav-menu='open'] {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1rem;
   padding-top: 1rem;
   border-top: 1px solid var(--color-border);

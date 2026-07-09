@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
-import { FaXmark, FaGithub, FaCross, FaMusic } from 'react-icons/fa6'
+import { FaXmark, FaGithub, FaCross, FaMusic, FaGlobe } from 'react-icons/fa6'
 import { prayers } from '../data/prayers'
 import { songs } from '../data/songs'
+import logoUrl from '../assets/logo-about.png'
 
 interface Props {
   open: boolean
@@ -84,6 +85,17 @@ export default function AboutModal({ open, onClose }: Props) {
           <p>„Proście, a będzie wam dane; szukajcie, a znajdziecie; kołaczcie, a otworzą wam."</p>
           <cite>Mt 7,7–8</cite>
         </blockquote>
+
+        <section className="about-author" aria-label="Autor projektu">
+          <img className="about-author-logo" src={logoUrl} alt="" aria-hidden="true" />
+          <div className="about-author-copy">
+            <span className="about-author-label">Autor</span>
+            <strong>Verminew</strong>
+            <a href="https://verminew.github.io" target="_blank" rel="noopener noreferrer">
+              <FaGlobe /> Portfolio
+            </a>
+          </div>
+        </section>
 
         <div className="about-stats">
           <div className="about-stat">
