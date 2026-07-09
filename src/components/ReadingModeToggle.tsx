@@ -9,8 +9,8 @@ export default function ReadingModeToggle() {
   useEffect(() => {
     if (!isActive) return
 
-    // The root class lets reading mode adjust the shared layout without coupling Header to page state.
-    document.documentElement.classList.add('content-reading-mode')
+    // Root state lets reading mode adjust the shared layout without coupling Header to page state.
+    document.documentElement.dataset.readingMode = 'true'
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') setIsActive(false)
@@ -19,7 +19,7 @@ export default function ReadingModeToggle() {
     window.addEventListener('keydown', handleKeyDown)
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
-      document.documentElement.classList.remove('content-reading-mode')
+      delete document.documentElement.dataset.readingMode
     }
   }, [isActive])
 

@@ -82,7 +82,7 @@
 
 ## Do zrobienia — informacje o aplikacji (AboutModal)
 
-- [ ] `✝` jako zwykły znak HTML zamiast ikony react-icons `FaCross` — niespójność
+- [x] `✝` jako zwykły znak HTML zamiast ikony react-icons `FaCross` — niespójność
 - [ ] Brak wersji aplikacji (np. z `package.json`)
 - [ ] Brak informacji o ostatniej aktualizacji treści
 - [ ] Brak linku do strony parafii / twórcy
@@ -159,7 +159,7 @@
 ## Do zrobienia — ogólny wygląd
 
 ### Ikony i grafika
-- [ ] `✝` w AboutModal jako zwykły znak — zastąpić ikoną lub SVG z logo aplikacji
+- [x] `✝` w AboutModal jako zwykły znak — zastąpić ikoną lub SVG z logo aplikacji
 
 ### Strona główna
 - [ ] Brak wizualnego wyróżnienia aktualnego okresu liturgicznego (Adwent, Wielkanoc itp.)

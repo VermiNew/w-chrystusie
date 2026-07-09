@@ -71,7 +71,7 @@ export default function AboutModal({ open, onClose }: Props) {
         </button>
 
         <div className="about-hero">
-          <span className="about-hero-cross">✝</span>
+          <FaCross className="about-hero-cross" aria-hidden="true" />
           <h2 className="about-hero-title">W Chrystusie</h2>
         </div>
 

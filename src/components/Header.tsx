@@ -19,8 +19,13 @@ export default function Header() {
   const closeMenu = () => setMenuOpen(false)
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
+    if (menuOpen) {
+      document.body.dataset.navMenu = 'open'
+    } else {
+      delete document.body.dataset.navMenu
+    }
+
+    return () => { delete document.body.dataset.navMenu }
   }, [menuOpen])
 
   useEffect(() => {

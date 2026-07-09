@@ -1,5 +1,9 @@
 @import './index.css';
 
+body[data-nav-menu='open'] {
+  overflow: hidden;
+}
+
 .header {
   background-color: var(--color-header-bg);
   color: var(--color-white);
@@ -1023,26 +1027,26 @@
   outline-offset: 2px;
 }
 
-html.content-reading-mode .header {
+:root[data-reading-mode='true'] .header {
   display: none;
 }
 
-html.content-reading-mode .main {
+:root[data-reading-mode='true'] .main {
   max-width: none;
   padding: clamp(1rem, 4vw, 3rem);
   animation: none;
 }
 
-html.content-reading-mode .content-detail-page {
+:root[data-reading-mode='true'] .content-detail-page {
   width: min(100%, 90rem);
   margin: 0 auto;
 }
 
-html.content-reading-mode .content-detail-page > :is(.back-button, .content-breadcrumb, .source-link, .content-sibling-nav) {
+:root[data-reading-mode='true'] .content-detail-page > :is(.back-button, .content-breadcrumb, .source-link, .content-sibling-nav) {
   display: none;
 }
 
-html.content-reading-mode .content-reading-toggle {
+:root[data-reading-mode='true'] .content-reading-toggle {
   position: fixed;
   top: max(1rem, env(safe-area-inset-top));
   right: max(1rem, env(safe-area-inset-right));
@@ -1054,7 +1058,7 @@ html.content-reading-mode .content-reading-toggle {
   -webkit-backdrop-filter: blur(10px);
 }
 
-html.content-reading-mode .content-detail-page > h1 {
+:root[data-reading-mode='true'] .content-detail-page > h1 {
   max-width: 32ch;
   margin: 4.5rem auto 2rem;
   text-align: center;
@@ -1062,7 +1066,7 @@ html.content-reading-mode .content-detail-page > h1 {
   animation: none;
 }
 
-html.content-reading-mode :is(.prayer-text, .song-text) {
+:root[data-reading-mode='true'] :is(.prayer-text, .song-text) {
   max-width: 46rem;
   margin: 0 auto;
   font-size: clamp(1.35rem, 1.1rem + 1.2vw, 1.8rem);
@@ -1070,12 +1074,37 @@ html.content-reading-mode :is(.prayer-text, .song-text) {
   animation: none;
 }
 
+@media (min-width: 900px) {
+  :root[data-reading-mode='true'] .main {
+    padding-block: clamp(3rem, 6vh, 5rem) clamp(7rem, 14vh, 10rem);
+  }
+
+  :root[data-reading-mode='true'] .content-detail-page {
+    width: min(100%, 74rem);
+  }
+
+  :root[data-reading-mode='true'] .content-detail-page > h1 {
+    margin-top: 3.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  :root[data-reading-mode='true'] :is(.prayer-text, .song-text) {
+    max-width: 60ch;
+    font-size: clamp(1.45rem, 1.2rem + 0.85vw, 1.95rem);
+    line-height: 2.05;
+  }
+
+  :root[data-reading-mode='true'] :is(.prayer-text, .song-text) > * + * {
+    margin-top: 1.6em;
+  }
+}
+
 @media (max-width: 480px) {
-  html.content-reading-mode .main {
+  :root[data-reading-mode='true'] .main {
     padding: 1rem;
   }
 
-  html.content-reading-mode .content-detail-page > h1 {
+  :root[data-reading-mode='true'] .content-detail-page > h1 {
     margin-top: 4.25rem;
     font-size: 2rem;
   }
@@ -3213,3 +3242,4 @@ html.content-reading-mode :is(.prayer-text, .song-text) {
     transform: translateY(0);
   }
 }
+
