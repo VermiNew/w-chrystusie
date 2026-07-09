@@ -143,8 +143,8 @@
 - [ ] Wygląd niespójny z resztą UI — inne przyciski (chaplet, rosary nav) mają inny styl; brak wspólnego języka designu
 
 ### Różaniec i Koronka — nawigacja krok po kroku
-- [ ] `.rosary-nav-button` / `.chaplet-nav-button` — `background: none; border: none` — przyciski Wstecz/Dalej są tekstem, nie widocznymi przyciskami; na mobile trudno trafić
-- [ ] Brak minimalnej wysokości touch target na przyciskach nawigacyjnych (mają `padding: 0.5rem 0` — to za mało)
+- [x] `.rosary-nav-button` / `.chaplet-nav-button` — `background: none; border: none` — przyciski Wstecz/Dalej są tekstem, nie widocznymi przyciskami; na mobile trudno trafić
+- [x] Brak minimalnej wysokości touch target na przyciskach nawigacyjnych (mają `padding: 0.5rem 0` — to za mało)
 - [x] `← → klawiatura` hint widoczny na mobile — bezużyteczny tekst na touchscreen, powinien być ukryty na urządzeniach bez klawiatury (`@media (pointer: coarse)`)
 - [x] Cały obszar kroku (`rosary-step`, `chaplet-step`) nie jest swipeable — brak obsługi gestów swipe left/right do nawigacji (standardowy gest na mobile)
 - [x] Przyciski Wstecz/Dalej są na dole strony — przy długich modlitwach użytkownik musi scrollować do dołu żeby przejść dalej; rozważyć floating nav lub sticky footer
@@ -152,7 +152,7 @@
 
 ### Ogólne mobile
 - [ ] Brak `touch-action: manipulation` na interaktywnych elementach — 300ms tap delay na starszych iOS
-- [ ] Brak `user-select: none` na przyciskach nawigacyjnych — przypadkowe zaznaczanie tekstu podczas szybkiego tapowania
+- [x] Brak `user-select: none` na przyciskach nawigacyjnych — przypadkowe zaznaczanie tekstu podczas szybkiego tapowania
 - [ ] Modalne (`RemindersModal`, `AboutModal`) — brak obsługi swipe-down do zamknięcia na mobile
 - [ ] Listy modlitw/pieśni na mobile — elementy listy mają `min-height: 44px` ale padding może być niewystarczający na bardzo małych ekranach
 
