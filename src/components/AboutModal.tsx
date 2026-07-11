@@ -119,7 +119,7 @@ export default function AboutModal({ open, onClose }: Props) {
           >
             <FaGithub /> GitHub
           </a>
-          <span className="about-version">build {__APP_COMMIT__}</span>
+          <span className="about-build">build {__APP_COMMIT__}</span>
           <span className="about-tech">React · TypeScript · Vite</span>
           <span className="about-license">MIT</span>
         </div>

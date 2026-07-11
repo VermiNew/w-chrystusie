@@ -3226,6 +3226,11 @@ body[data-nav-menu='open'] {
   letter-spacing: 0.03em;
 }
 
+.about-build {
+  font-family: var(--font-ui);
+  letter-spacing: 0.03em;
+}
+
 .about-license {
   font-weight: 600;
 }
