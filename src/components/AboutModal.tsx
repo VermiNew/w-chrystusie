@@ -3,7 +3,6 @@ import { FaXmark, FaGithub, FaCross, FaMusic, FaGlobe } from 'react-icons/fa6'
 import { prayers } from '../data/prayers'
 import { songs } from '../data/songs'
 import logoUrl from '../assets/logo-about.png'
-import { version } from '../../package.json'
 
 interface Props {
   open: boolean
@@ -120,7 +119,7 @@ export default function AboutModal({ open, onClose }: Props) {
           >
             <FaGithub /> GitHub
           </a>
-          <span className="about-version">v{version}</span>
+          <span className="about-version">build {__APP_COMMIT__}</span>
           <span className="about-tech">React · TypeScript · Vite</span>
           <span className="about-license">MIT</span>
         </div>
