@@ -23,8 +23,6 @@ Módlmy się: Panie Jezu Chryste, który wśród oziębłości świata wyryłeś
 
 Módlmy się: Zbawicielu mój, w Twojej szkole nauczył się święty Franciszek największej pokory. Na tej drodze osiągnął nadzwyczajną doskonałość. A ja, grzeszny, nie potrafię zwyciężyć swej pychy. Spraw, Boże, abym naśladując świętego Franciszka mocno stał przy krzyżu Twego Syna. Święty Ojcze Franciszku, niech pokora twoja służy mi za wzór, bym pamiętał, że moje prawdziwe dobro nie polega na zaszczytach światowych, ale na radosnym znoszeniu wszelkich przeciwności życia dla Ukrzyżowanego Zbawiciela. Amen.
 
-
-
 Święty Ojcze Franciszku, przebity świętymi ranami Chrystusa. Błagaj Dawcę drogocennego daru stygmatów, aby nas raczył oczyścić i odnowić w swoich świętych ranach.
 
 K. Módl się za nami, święty Franciszku.
@@ -72,21 +70,3 @@ Panie Jezu, Chryste, błagam Cię przez zasługi świętego Ojca Franciszka, daj
 ## Dzień dziewiąty: Błogosławiona śmierć
 
 Panie Jezu Chryste, daj mi łaskę radosnego pokoju w ostatniej chwili mojego życia. A ponieważ zwykle śmierć jest taka, jakim było życie, daj mi moc i wytrwałość w Twej służbie, abym zasłużył sobie na szczęśliwą śmierć. Święty mój Ojcze, Twoja cudowna śmierć napełnia mnie gorącym pragnieniem zbawienia. Jakże szczęśliwie umiera ten, który żył podobnie jak ty. Wyjednaj mi łaskę, bym mógł zasnąć w Panu śmiercią sprawiedliwych. Amen.
-4 październikaśw. Franciszek
-
-		
- Poprzedni
-
-## Litania do św. Franciszka z Asyżu
-
-		
-Nowsze 
-
-## Modlitwa św. Jana Pawła II do św. Franciszka
-
-Kontakt z nami
-
-## Strony
-Akty strzelisteDroga KrzyżowaEgzorcyzmyInne modlitwy MaryjneKatechizmKoronkiKrucjatyLitanieModlitwa małżeńskaModlitwy do AniołówModlitwy do Ducha ŚwiętegoModlitwy do świętychModlitwy nadesłaneModlitwy po Komunii świętejModlitwy pokutneModlitwy poranneModlitwy ułożone przez świętychModlitwy wieczorneModlitwy za kapłanówModlitwy żołnierskieNowennyPacierzPomoc duchowaPozostałeŚwięci i błogosławieni
-## Kategorie
-Akty strzelisteDroga krzyżowaEgzorcyzmy<a href="h

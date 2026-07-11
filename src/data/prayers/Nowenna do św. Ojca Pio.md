@@ -99,22 +99,3 @@ Maryja była ci «Matką najmilszą», Ją wysławiałeś «najbardziej spośró
 na niebie i na ziemi»,  przez twoje oddanie Bożej Matce proszę o pomoc w mojej potrzebie…
 
 Ojcze nasz… Zdrowaś… Chwała Ojcu…
-
-23 wrześnianowennaśw. O.Pio
-
-		
- Poprzedni
-
-## Nowenna do św. Judy Tadeusza, 19 - 27 października
-
-		
-Nowsze 
-
-## Modlitwa św. Elżbiety od Trójcy Przenajświętszej
-
-Kontakt z nami
-
-## Strony
-Akty strzelisteDroga KrzyżowaEgzorcyzmyInne modlitwy MaryjneKatechizmKoronkiKrucjatyLitanieModlitwa małżeńskaModlitwy do AniołówModlitwy do Ducha ŚwiętegoModlitwy do świętychModlitwy nadesłaneModlitwy po Komunii świętejModlitwy pokutneModlitwy poranneModlitwy ułożone przez świętychModlitwy wieczorneModlitwy za kapłanówModlitwy żołnierskieNowennyPacierzPomoc duchowaPozostałeŚwięci i błogosławieni
-## Kategorie
-Akty strzelisteDroga krzyżowaEgzorcyzmyInne modlitwy MaryjneJan Paweł IIKatechizmKolędyKoronkiKrucjata modlitwyLitaniamodlitwa małżeńskaModlitwy chorychModlitwy do AniołówModlitwy do Ducha ŚwiętegoModlitwy do świętychModlitwy po Komunii świętejModlitwy pokutne<li cla

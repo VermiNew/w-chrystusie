@@ -102,7 +102,3 @@ Modlitwa na zakończenie
 Módlmy się: Boże, Ty otwierasz bramy swojego Królestwa pokornym i małym, spraw, abyśmy z ufnością wstępowali w ślady świętej Teresy od Dzieciątka Jezus i za jej wstawiennictwem osiągnęli Twoją wieczną chwałę. Przez Chrystusa, Pana naszego. Amen.
 
 / Dominik Wider OCD /
-1 październikaśw Teresa z Lisieuxśw. Teresa od dzieciątka Jezus
-
-		
- Poprzedni

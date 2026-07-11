@@ -77,7 +77,3 @@ Ojcze nasz... Zdrowaś Maryjo (3 razy)... Chwała Ojcu...
 Święta Rito, patronko od spraw beznadziejnych i niemożliwych, ufam w twoje potężne wstawiennictwo u Pana. Wyproś mi u Boga wiarę, nadzieję, miłość oraz pragnienie dóbr wiecznych. Proszę cię w tej nowennie, abyś wybłagała mi też łaskę (wymień prośbę).
 Ojcze nasz... Zdrowaś Maryjo (3 razy)... Chwała Ojcu...
 Święta Rito, módl się za nami.
-
- 
-Święta Rita
-Modlitwy do św. Rity

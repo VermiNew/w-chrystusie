@@ -157,7 +157,3 @@ W. Oddajmy cześć świętemu Wojciechowi, patronowi Polski.
 O. Przez zasługi świętego Wojciecha wysłuchaj nas Chryste.
 
 MÓDLMY SIĘ: Święty Wojciechu, patronie naszej Ojczyzny, użyźniłeś siejbą słowa Bożego krwią swoją a w sercach naszych zaszczepiłeś miłość do Bogurodzicy. Bądź nam nadal przewodnikiem do nieba i uproś nam u Boga potrzebny hart ducha, abyśmy za twoją pomocą mężnie wyznawali swą wiarę i przez nią otrzymali nagrodę wieczną. Amen.
-św. Wojciech
-
-		
- Poprzedni

@@ -81,8 +81,3 @@ Siostra Faustyna:: O słodka Matko Boża, Na Tobie wzoruję me życie, Tyś mi �
 
 Święta Faustyno, najwierniejsza córko Matki miłosierdzia, ukryj mnie pod Jej płaszczem, aby prowadziła mnie do Jezusa, uczyła uczestniczyć w Jego życiu i misji ukazywania światu miłosierdzia Ojca niebieskiego. Chcę – jak Maryj – dawać ludziom Miłosierdzie Wcielone – i przygotować świat na powtórne przyjście Jezusa Chrystusa. Amen.
 
-5 październikanowennaśw. Faustyna
-
-		
- Poprzedni
-
