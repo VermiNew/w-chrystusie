@@ -1,5 +1,5 @@
 ---
-title: Nowenna do Ducha Świętego
+title: Nowenna do Ducha Świętego (Veni Creator)
 category: Modlitwy do Ducha Świętego
 source: https://dolinamodlitwy.pl/nowenna-do-ducha-sw/
 ---
