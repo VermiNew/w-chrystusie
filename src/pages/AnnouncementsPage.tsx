@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link, Navigate } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
-import { FaThumbtack, FaChevronUp, FaChevronDown } from 'react-icons/fa6'
+import { FaArrowLeft, FaThumbtack, FaChevronUp, FaChevronDown } from 'react-icons/fa6'
 import { announcements, type Announcement } from '../data/announcements'
 import { markAsRead, markAsUnread, useIsRead } from '../data/useReadAnnouncements'
 
@@ -25,7 +25,7 @@ function AnnouncementDetail({ id }: { id: string }) {
 
   return (
     <div className="page">
-      <Link to="/ogloszenia" className="back-button">← Ogłoszenia</Link>
+      <Link to="/ogloszenia" className="back-button"><FaArrowLeft /> Ogłoszenia</Link>
       <h1>{announcement.title}</h1>
       <p className="announcement-date">{formatDate(announcement.date)}</p>
       <div className="announcement-body">

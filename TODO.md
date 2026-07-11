@@ -137,10 +137,10 @@
 ## Do zrobienia — mobile UX
 
 ### Przycisk "Powrót" (back-button)
-- [ ] Wygląda jak link z podkreśleniem (`text-decoration: underline` on hover) — nie jak przycisk; brak tła, brak obramowania, brak ikony strzałki z react-icons
-- [ ] Na mobile (`max-width: 480px`) ma tylko `padding: 0.75rem 1rem` — obszar dotyku za mały na urządzeniach z grubymi palcami (min. 48×48px rekomendowane przez WCAG)
-- [ ] `position: sticky; top: var(--header-height)` — przyklejony do headera, ale na małych ekranach przysłania część treści podczas scrollowania
-- [ ] Wygląd niespójny z resztą UI — inne przyciski (chaplet, rosary nav) mają inny styl; brak wspólnego języka designu
+- [x] Wygląda jak link z podkreśleniem (`text-decoration: underline` on hover) — nie jak przycisk; brak tła, brak obramowania, brak ikony strzałki z react-icons
+- [x] Na mobile (`max-width: 480px`) ma tylko `padding: 0.75rem 1rem` — obszar dotyku za mały na urządzeniach z grubymi palcami (min. 48×48px rekomendowane przez WCAG)
+- [x] `position: sticky; top: var(--header-height)` — przyklejony do headera, ale na małych ekranach przysłania część treści podczas scrollowania
+- [x] Wygląd niespójny z resztą UI — inne przyciski (chaplet, rosary nav) mają inny styl; brak wspólnego języka designu
 
 ### Różaniec i Koronka — nawigacja krok po kroku
 - [x] `.rosary-nav-button` / `.chaplet-nav-button` — `background: none; border: none` — przyciski Wstecz/Dalej są tekstem, nie widocznymi przyciskami; na mobile trudno trafić

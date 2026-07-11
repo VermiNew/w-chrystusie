@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Markdown from 'react-markdown'
-import { FaChurch, FaHeart } from 'react-icons/fa6'
+import { FaArrowLeft, FaChurch, FaHeart } from 'react-icons/fa6'
 import { songs } from '../data/songs'
 
 const SONG_ID = 'Najpiękniejszy Miesiąc Maj'
@@ -10,7 +10,7 @@ export default function MayDevotionPage() {
 
   return (
     <div className="page">
-      <Link to="/" className="back-button">← Strona główna</Link>
+      <Link to="/" className="back-button"><FaArrowLeft /> Strona główna</Link>
       <h1>Nabożeństwo Majowe</h1>
       <p className="page-lead">
         Maj jest miesiącem szczególnie poświęconym <strong>Najświętszej Maryi Pannie</strong>.
