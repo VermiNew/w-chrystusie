@@ -77,7 +77,7 @@
 - [ ] Brak ustawień globalnych poza przypomnieniami — motyw, czcionka, język mogłyby być tu
 - [ ] Brak eksportu/importu ustawień przypomnień (np. JSON)
 - [x] Po zamknięciu i ponownym otwarciu modalu `testStatus` nie jest czyszczony — widać stary wynik testu
-- [ ] Diagnostyka powiadomień jest zawsze widoczna — mogłaby być schowana za "Pokaż szczegóły"
+- [x] Diagnostyka powiadomień jest zawsze widoczna — mogłaby być schowana za "Pokaż szczegóły"
 - [ ] Brak Web Push — powiadomienia działają tylko gdy aplikacja jest otwarta (info jest w stopce, ale brak planu implementacji)
 
 ## Do zrobienia — informacje o aplikacji (AboutModal)

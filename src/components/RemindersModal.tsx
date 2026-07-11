@@ -34,6 +34,7 @@ export default function RemindersModal({ open, onClose }: Props) {
   const [notificationStatus, setNotificationStatus] = useState<BrowserNotificationStatus | null>(null)
   const [testStatus, setTestStatus] = useState<string | null>(null)
   const [testingNotification, setTestingNotification] = useState(false)
+  const [showDiagnostics, setShowDiagnostics] = useState(false)
   const notifTogglingRef = useRef(false)
 
   const allEnabled = REMINDERS.length > 0 && REMINDERS.every((r) => enabledIds.includes(r.id))
@@ -71,6 +72,7 @@ export default function RemindersModal({ open, onClose }: Props) {
       if (!dialog.open) dialog.showModal()
       refreshNotificationStatus()
       setTestStatus(null)
+      setShowDiagnostics(false)
     }
   }, [open, refreshNotificationStatus])
 
@@ -238,21 +240,34 @@ export default function RemindersModal({ open, onClose }: Props) {
         )}
 
         {notifSupported && (
-          <div className="reminders-notif-diagnostics">
-            <div className="reminders-notif-status-grid">
-              <span>Zgoda: {permissionLabel}</span>
-              <span>Service worker: {serviceWorkerLabel}</span>
-              <span>PWA: {pwaLabel}</span>
-            </div>
+          <>
             <button
-              className="reminders-test-btn"
-              onClick={handleTestNotification}
-              disabled={!browserNotif || testingNotification || notificationStatus?.permission !== 'granted'}
+              className="reminders-details-toggle"
+              type="button"
+              aria-expanded={showDiagnostics}
+              onClick={() => setShowDiagnostics((visible) => !visible)}
             >
-              {testingNotification ? 'Wysyłanie…' : 'Wyślij test'}
+              {showDiagnostics ? 'Ukryj szczegóły' : 'Pokaż szczegóły'}
             </button>
-            {testStatus && <p className="reminders-test-status">{testStatus}</p>}
-          </div>
+
+            {showDiagnostics && (
+              <div className="reminders-notif-diagnostics">
+                <div className="reminders-notif-status-grid">
+                  <span>Zgoda: {permissionLabel}</span>
+                  <span>Service worker: {serviceWorkerLabel}</span>
+                  <span>PWA: {pwaLabel}</span>
+                </div>
+                <button
+                  className="reminders-test-btn"
+                  onClick={handleTestNotification}
+                  disabled={!browserNotif || testingNotification || notificationStatus?.permission !== 'granted'}
+                >
+                  {testingNotification ? 'Wysyłanie…' : 'Wyślij test'}
+                </button>
+                {testStatus && <p className="reminders-test-status">{testStatus}</p>}
+              </div>
+            )}
+          </>
         )}
 
         <ul className="reminders-list">

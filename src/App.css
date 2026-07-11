@@ -2704,6 +2704,34 @@ body[data-nav-menu='open'] {
   color: var(--color-text);
 }
 
+.reminders-details-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: -0.4rem 0 1rem;
+  padding: 0.35rem 0.7rem;
+  color: var(--color-text-muted);
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.reminders-details-toggle:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background: var(--color-surface);
+}
+
+.reminders-details-toggle:focus-visible {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
+  outline-offset: 2px;
+}
+
 .reminders-notif-diagnostics {
   display: grid;
   gap: 0.65rem;
