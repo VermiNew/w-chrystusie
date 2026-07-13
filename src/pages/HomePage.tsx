@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { FaArrowRight, FaCross, FaBookBible, FaMusic, FaHandsPraying, FaBullhorn, FaMagnifyingGlass } from 'react-icons/fa6'
-import { prayers } from '../data/prayers'
+import { getPrayerOfDay, prayers } from '../data/prayers'
 import { songs } from '../data/songs'
 import { useContentLibrary } from '../hooks/useContentLibrary'
 
@@ -24,6 +24,7 @@ export default function HomePage() {
   const continuePath = latestRecent
     ? `${latestRecent.kind === 'prayer' ? '/modlitwy' : '/spiewnik'}/${encodeURIComponent(latestRecent.id)}`
     : null
+  const prayerOfDay = getPrayerOfDay()
 
   return (
     <div className="home">
@@ -38,15 +39,24 @@ export default function HomePage() {
         <p>„Proście, a będzie wam dane; szukajcie, a znajdziecie; kołaczcie, a otworzą wam. Albowiem każdy, kto prosi, otrzymuje; kto szuka, znajdzie; a kołaczącemu otworzą."</p>
         <cite>Mt 7,7–8</cite>
       </blockquote>
-      {recentContent && continuePath && Number.isFinite(savedPosition) && savedPosition >= 40 && (
-        <Link className="continue-reading" to={continuePath}>
+      <section className="home-shortcuts" aria-label="Skróty">
+        <Link className="home-shortcut" to={`/modlitwy/${encodeURIComponent(prayerOfDay.id)}`}>
           <span>
-            <small>Kontynuuj czytanie</small>
-            <strong>{recentContent.title}</strong>
+            <small>Modlitwa dnia</small>
+            <strong>{prayerOfDay.title}</strong>
           </span>
           <FaArrowRight aria-hidden="true" />
         </Link>
-      )}
+        {recentContent && continuePath && Number.isFinite(savedPosition) && savedPosition >= 40 && (
+          <Link className="home-shortcut" to={continuePath}>
+            <span>
+              <small>Kontynuuj czytanie</small>
+              <strong>{recentContent.title}</strong>
+            </span>
+            <FaArrowRight aria-hidden="true" />
+          </Link>
+        )}
+      </section>
       <section className="section-tiles">
         {sections.map((s) => (
           <Link to={s.to} key={s.to} className="section-tile">
