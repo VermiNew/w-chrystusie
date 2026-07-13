@@ -2,12 +2,26 @@ import { useCallback, useEffect, useState } from 'react'
 
 export type ContentKind = 'prayer' | 'song'
 
+export interface RecentContent {
+  kind: ContentKind
+  id: string
+}
+
 const FAVORITES_KEY = 'content-favorites'
 const RECENT_KEY = 'content-recent'
 const CHANGE_EVENT = 'content-library-change'
 const RECENT_LIMIT = 5
 
 const makeKey = (kind: ContentKind, id: string) => `${kind}:${id}`
+
+const parseKey = (key: string | undefined): RecentContent | null => {
+  if (!key) return null
+  const separatorIndex = key.indexOf(':')
+  const kind = key.slice(0, separatorIndex)
+  const id = key.slice(separatorIndex + 1)
+  if ((kind !== 'prayer' && kind !== 'song') || !id) return null
+  return { kind, id }
+}
 
 const readKeys = (storageKey: string) => {
   try {
@@ -74,6 +88,7 @@ export function useContentLibrary(kind: ContentKind, activeId?: string) {
   return {
     favoriteIds: keysFor(favorites, kind),
     recentIds: keysFor(recent, kind),
+    latestRecent: parseKey(recent[0]),
     isFavorite: activeId ? favorites.includes(makeKey(kind, activeId)) : false,
     toggleFavorite,
     removeFavorite,

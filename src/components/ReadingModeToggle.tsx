@@ -31,6 +31,7 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
   const [fontSize, setFontSize] = useState(readFontSize)
   const [fontControlsOpen, setFontControlsOpen] = useState(false)
   const [shareStatus, setShareStatus] = useState('')
+  const [resumeStatusHiddenFor, setResumeStatusHiddenFor] = useState('')
   const animationFrameRef = useRef<number | null>(null)
   const stepStartedAtRef = useRef<number | null>(null)
   const pendingReadingProgressRef = useRef<number | null>(null)
@@ -55,6 +56,12 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
     const timer = window.setTimeout(() => setShareStatus(''), 2500)
     return () => window.clearTimeout(timer)
   }, [shareStatus])
+
+  useEffect(() => {
+    if (!wasRestored) return
+    const timer = window.setTimeout(() => setResumeStatusHiddenFor(contentKey), 6000)
+    return () => window.clearTimeout(timer)
+  }, [contentKey, wasRestored])
 
   useEffect(() => {
     if (!fontControlsOpen) return
@@ -291,7 +298,7 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
         </button>
       )}
 
-      {wasRestored && !isActive && (
+      {wasRestored && resumeStatusHiddenFor !== contentKey && !isActive && (
         <span className="content-reading-resume" role="status">
           Wrócono do miejsca czytania
           <button type="button" onClick={restart}>

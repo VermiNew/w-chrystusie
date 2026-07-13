@@ -2032,6 +2032,57 @@ body[data-nav-menu='open'] {
   }
 }
 
+.continue-reading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(100%, 42rem);
+  min-height: 64px;
+  margin: 1.5rem auto 0;
+  padding: 0.75rem 1rem;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.continue-reading span {
+  display: grid;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.continue-reading small {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+}
+
+.continue-reading strong {
+  overflow: hidden;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.continue-reading > svg {
+  flex: 0 0 auto;
+}
+
+.continue-reading:hover {
+  background: var(--color-hover-bg);
+  border-color: var(--color-hover-border);
+}
+
+.continue-reading:focus-visible {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
+  outline-offset: 3px;
+}
+
 /* Chaplet */
 
 .prayer-sequence-page {
