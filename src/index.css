@@ -77,26 +77,30 @@ body {
 /* Scrollbar */
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-bg);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-text-subtle);
-  border-radius: 4px;
+  background: rgba(var(--color-primary-rgb), 0.42);
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-text-muted);
+  background: rgba(var(--color-primary-rgb), 0.7);
+  background-clip: padding-box;
 }
 
 /* Firefox */
 html {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-text-subtle) var(--color-bg);
+  scrollbar-color: rgba(var(--color-primary-rgb), 0.55) transparent;
 }
 
 a {
