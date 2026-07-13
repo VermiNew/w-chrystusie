@@ -1,9 +1,10 @@
 import { useMemo, useEffect, useState, type CSSProperties } from 'react'
 import { useLocation, useParams, Link } from 'react-router-dom'
-import { FaArrowLeft, FaArrowUpRightFromSquare, FaChevronDown, FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
+import { FaArrowLeft, FaArrowUpRightFromSquare, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaStar } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
 import { prayers, type Prayer } from '../data/prayers'
 import ReadingModeToggle from '../components/ReadingModeToggle'
+import { useContentLibrary } from '../hooks/useContentLibrary'
 
 const SCROLL_KEY = 'prayers-scroll'
 const CATEGORY_KEY = 'prayers-category'
@@ -58,6 +59,14 @@ export default function PrayersPage() {
   const [returnCategory] = useState(() => sessionStorage.getItem(CATEGORY_KEY))
   const selectedId = getSelectedId(id, location.pathname)
   const selected = selectedId ? prayers.find((p) => p.id === selectedId) ?? null : null
+  const { favoriteIds, recentIds, isFavorite, toggleFavorite } = useContentLibrary('prayer', selected?.id)
+  const favoritePrayers = favoriteIds
+    .map((favoriteId) => prayers.find((prayer) => prayer.id === favoriteId))
+    .filter((prayer): prayer is Prayer => Boolean(prayer))
+  const recentPrayers = recentIds
+    .filter(Boolean)
+    .map((recentId) => prayers.find((prayer) => prayer.id === recentId))
+    .filter((prayer): prayer is Prayer => Boolean(prayer))
   const detailCategory = selected?.category && categoryOrder.includes(selected.category)
     ? selected.category
     : fallbackCategory
@@ -140,7 +149,11 @@ export default function PrayersPage() {
           <span aria-hidden="true">/</span>
           <Link to="/modlitwy" onClick={prepareListReturn}>{detailCategory}</Link>
         </nav>
-        <ReadingModeToggle contentKey={`prayer:${selected.id}`} />
+        <ReadingModeToggle
+          contentKey={`prayer:${selected.id}`}
+          isFavorite={isFavorite}
+          onToggleFavorite={() => toggleFavorite('prayer', selected.id)}
+        />
         <h1>{selected.title}</h1>
         <div className="prayer-text" lang="pl">
           <Markdown>{selected.body}</Markdown>
@@ -177,6 +190,30 @@ export default function PrayersPage() {
   return (
     <div className="page">
       <h1>Modlitwy</h1>
+      {favoritePrayers.length > 0 && (
+        <details className="prayer-category saved-content-category">
+          <summary className="prayer-category-title"><FaStar aria-hidden="true" /> Ulubione <span>({favoritePrayers.length})</span></summary>
+          <ul className="prayer-list">
+            {favoritePrayers.map((prayer) => (
+              <li key={prayer.id}>
+                <Link to={`/modlitwy/${encodeRouteId(prayer.id)}`} className="prayer-item">{prayer.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
+      {recentPrayers.length > 0 && (
+        <details className="prayer-category saved-content-category">
+          <summary className="prayer-category-title"><FaClock aria-hidden="true" /> Ostatnio otwierane <span>({recentPrayers.length})</span></summary>
+          <ul className="prayer-list">
+            {recentPrayers.map((prayer) => (
+              <li key={prayer.id}>
+                <Link to={`/modlitwy/${encodeRouteId(prayer.id)}`} className="prayer-item">{prayer.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
       <div className="list-filter-controls">
         <label>
           Szukaj

@@ -1,9 +1,10 @@
 import { useMemo, useEffect, useState, type CSSProperties } from 'react'
 import { useLocation, useParams, Link } from 'react-router-dom'
-import { FaArrowLeft, FaArrowUpRightFromSquare, FaChevronDown, FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
+import { FaArrowLeft, FaArrowUpRightFromSquare, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaStar } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
 import { songs, type Song } from '../data/songs'
 import ReadingModeToggle from '../components/ReadingModeToggle'
+import { useContentLibrary } from '../hooks/useContentLibrary'
 
 const SCROLL_KEY = 'songbook-scroll'
 const CATEGORY_KEY = 'songbook-category'
@@ -54,6 +55,14 @@ export default function SongbookPage() {
   const [returnCategory] = useState(() => sessionStorage.getItem(CATEGORY_KEY))
   const selectedId = getSelectedId(id, location.pathname)
   const selected = selectedId ? songs.find((s) => s.id === selectedId) ?? null : null
+  const { favoriteIds, recentIds, isFavorite, toggleFavorite } = useContentLibrary('song', selected?.id)
+  const favoriteSongs = favoriteIds
+    .map((favoriteId) => songs.find((song) => song.id === favoriteId))
+    .filter((song): song is Song => Boolean(song))
+  const recentSongs = recentIds
+    .filter(Boolean)
+    .map((recentId) => songs.find((song) => song.id === recentId))
+    .filter((song): song is Song => Boolean(song))
   const detailCategory = selected?.category && categoryOrder.includes(selected.category)
     ? selected.category
     : fallbackCategory
@@ -137,7 +146,11 @@ export default function SongbookPage() {
           <span aria-hidden="true">/</span>
           <Link to="/spiewnik" onClick={prepareListReturn}>{detailCategory}</Link>
         </nav>
-        <ReadingModeToggle contentKey={`song:${selected.id}`} />
+        <ReadingModeToggle
+          contentKey={`song:${selected.id}`}
+          isFavorite={isFavorite}
+          onToggleFavorite={() => toggleFavorite('song', selected.id)}
+        />
         <h1>{selected.title}</h1>
         <div className="song-text" lang="pl">
           <Markdown>{selected.body}</Markdown>
@@ -174,6 +187,30 @@ export default function SongbookPage() {
   return (
     <div className="page">
       <h1>Śpiewnik</h1>
+      {favoriteSongs.length > 0 && (
+        <details className="prayer-category saved-content-category">
+          <summary className="prayer-category-title"><FaStar aria-hidden="true" /> Ulubione <span>({favoriteSongs.length})</span></summary>
+          <ul className="song-list">
+            {favoriteSongs.map((song) => (
+              <li key={song.id}>
+                <Link to={`/spiewnik/${encodeRouteId(song.id)}`} className="song-item">{song.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
+      {recentSongs.length > 0 && (
+        <details className="prayer-category saved-content-category">
+          <summary className="prayer-category-title"><FaClock aria-hidden="true" /> Ostatnio otwierane <span>({recentSongs.length})</span></summary>
+          <ul className="song-list">
+            {recentSongs.map((song) => (
+              <li key={song.id}>
+                <Link to={`/spiewnik/${encodeRouteId(song.id)}`} className="song-item">{song.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
       <div className="list-filter-controls">
         <label>
           Szukaj

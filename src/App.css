@@ -1051,6 +1051,25 @@ body[data-nav-menu='open'] {
   outline-offset: 2px;
 }
 
+.content-reading-toggle[aria-pressed='true'] {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.saved-content-category {
+  margin-bottom: 0.75rem;
+}
+
+.saved-content-category .prayer-category-title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.saved-content-category .prayer-category-title span {
+  margin-left: auto;
+}
+
 .content-reading-resume {
   display: inline-flex;
   align-items: center;

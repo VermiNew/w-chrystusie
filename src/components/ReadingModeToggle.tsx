@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { FaArrowRotateLeft, FaCompress, FaExpand, FaPause, FaPlay } from 'react-icons/fa6'
+import { FaArrowRotateLeft, FaCompress, FaExpand, FaPause, FaPlay, FaRegStar, FaStar } from 'react-icons/fa6'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
 import { useReadingPosition } from '../hooks/useReadingPosition'
 
@@ -11,9 +11,11 @@ const AUTO_SCROLL_STEPS = [
 
 interface Props {
   contentKey: string
+  isFavorite: boolean
+  onToggleFavorite: () => void
 }
 
-export default function ReadingModeToggle({ contentKey }: Props) {
+export default function ReadingModeToggle({ contentKey, isFavorite, onToggleFavorite }: Props) {
   const [isActive, setIsActive] = useState(false)
   const [autoScrollActive, setAutoScrollActive] = useState(false)
   const [speedIndex, setSpeedIndex] = useState(1)
@@ -118,6 +120,17 @@ export default function ReadingModeToggle({ contentKey }: Props) {
       >
         {isActive ? <FaCompress aria-hidden="true" /> : <FaExpand aria-hidden="true" />}
         <span>{isActive ? 'Zakończ tryb' : 'Duża czcionka'}</span>
+      </button>
+
+      <button
+        className="content-reading-toggle"
+        type="button"
+        aria-pressed={isFavorite}
+        title={isFavorite ? 'Usuń z ulubionych' : 'Dodaj do ulubionych'}
+        onClick={onToggleFavorite}
+      >
+        {isFavorite ? <FaStar aria-hidden="true" /> : <FaRegStar aria-hidden="true" />}
+        <span>{isFavorite ? 'W ulubionych' : 'Do ulubionych'}</span>
       </button>
 
       {isActive && (
