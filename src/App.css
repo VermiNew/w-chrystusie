@@ -2074,7 +2074,11 @@ body[data-nav-menu='open'] {
   border-radius: 8px;
   text-decoration: none;
   transition: border-color 0.2s, background-color 0.2s;
+  animation: tile-slide-left 0.5s ease both;
 }
+
+.home-shortcut:nth-child(1) { animation-delay: 0.2s; }
+.home-shortcut:nth-child(2) { animation-delay: 0.3s; }
 
 .home-shortcut span {
   display: grid;
