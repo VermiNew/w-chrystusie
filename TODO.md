@@ -24,6 +24,12 @@
 - [x] Minimalna szerokość strony to: 265px (nie mniej)
 - [x] Zaawansowane filtrowanie i ranking wyników wyszukiwarki globalnej
 - [x] Powrót z widoku szczegółowego z rozwiniętą kategorią i przywróconym scrollem
+- [x] Ulubione, ostatnio otwierane i przywracanie pozycji czytania
+- [x] Udostępnianie bezpośrednich linków do modlitw i pieśni
+- [x] Tryb skupienia z dużą czcionką, zmianą rozmiaru i automatycznym przewijaniem
+- [x] Modlitwa dnia i skrót „Kontynuuj” na stronie głównej
+- [x] Zaplanowane ogłoszenia ukrywane do dnia publikacji
+- [x] Dynamiczny identyfikator buildu i data ostatniej aktualizacji treści
 
 ## Do zrobienia — refaktor
 
@@ -39,7 +45,7 @@
 - [x] Pozycje z kategorią spoza `categoryOrder` są cicho pomijane — dodać fallback `'Bez kategorii'` na końcu
 - [x] Liczba pozycji przy każdej kategorii (np. „Koronki (63)")
 - [x] Filtrowanie/wyszukiwanie bezpośrednio na stronie (bez wychodzenia na `/szukaj`)
-- [x] Zwijanie kategorii (accordion) — lista jest bardzo długa przy 224/230 pozycjach
+- [x] Zwijanie kategorii (accordion) — listy zawierają setki pozycji
 - [x] Sortowanie alfabetyczne wewnątrz kategorii
 - [x] Nawigacja prev/next między pozycjami w widoku szczegółu
 - [x] Breadcrumb w widoku szczegółu — widoczna kategoria podczas czytania
@@ -47,7 +53,7 @@
 
 ## Do zrobienia — śpiewnik
 
-- [ ] Brak oznaczenia liturgicznego okresu przy kafelkach na liście (Adwent, Wielki Post itp.)
+- [x] Brak oznaczenia liturgicznego okresu przy kafelkach na liście (Adwent, Wielki Post itp.)
 - [x] Brak trybu „powiększonej czcionki" do śpiewania z odległości (użycie na ekranie podczas Mszy)
 
 ## Do zrobienia — różaniec
@@ -69,7 +75,7 @@
 
 - [ ] Brak paginacji / lazy load — przy rosnącej liczbie ogłoszeń lista ładuje wszystko naraz
 - [x] `AnnouncementCard` robi `announcements.find()` po każdym renderze zamiast dostać gotowy obiekt jako prop
-- [ ] Brak filtrowania po kategorii/tagu ogłoszeń
+- [x] Brak filtrowania po kategorii/tagu ogłoszeń
 - [ ] Brak licznika nieprzeczytanych widocznego na liście (tylko badge w nav)
 
 ## Do zrobienia — ustawienia / powiadomienia (RemindersModal)
@@ -93,12 +99,12 @@
 
 - [ ] Tylko dwa motywy (light/dark) — brak np. "Sepia" dla trybu nocnego czytania
 - [x] Przełącznik motywu nie reaguje na zmianę systemową `prefers-color-scheme` w trakcie sesji (brak nasłuchiwania na `MediaQueryList.change`)
-- [ ] Brak płynnej animacji przejścia między motywami (teraz zmiana jest natychmiastowa)
+- [x] Brak płynnej animacji przejścia między motywami (teraz zmiana jest natychmiastowa)
 - [ ] Ikona motywu w nav nie animuje się przy przełączaniu
 
 ## Do zrobienia — wyszukiwarka
 
-- [ ] Wyniki nie są sortowane — modlitwy, pieśni i wersety wyświetlają się w kolejności dodania, nie trafności
+- [x] Wyniki nie są sortowane — modlitwy, pieśni i wersety wyświetlają się w kolejności dodania, nie trafności
 - [x] Brak podświetlenia frazy w snippecie wyników
 - [x] Snippet zawsze obcina od początku (`body.slice(0, 120)`) — powinien pokazywać kontekst wokół dopasowania
 - [x] Pismo Święte ma hardcoded limit 50 wyników, modlitwy i pieśni nie mają żadnego limitu
@@ -193,11 +199,11 @@
 ### Nawigacja i orientacja
 - [x] Użytkownik nie wie gdzie jest w aplikacji — brak breadcrumba ani aktywnego stanu w nav dla podstron (modlitwa szczegółowa, pieśń szczegółowa)
 - [ ] Back-button jest jedyną drogą powrotu — brak sugestii "co dalej" po przeczytaniu modlitwy (powiązane modlitwy, różaniec, koronka)
-- [ ] Strona główna nie zmienia się przy kolejnych wizytach — rozważyć "modlitwę dnia" lub "pieśń tygodnia" jako żywy element
+- [x] Strona główna nie zmienia się przy kolejnych wizytach — rozważyć "modlitwę dnia" lub "pieśń tygodnia" jako żywy element
 
 ### Desktop — komfort czytania
 - [x] Szerokość tekstu modlitwy nieograniczona powyżej 960px — na szerokich monitorach linijki są za długie; `max-width: 65ch` na `.prayer-text` / `.song-text`
-- [ ] Brak trybu czytania fullwidth — możliwość ukrycia listy kategorii i czytania tylko tekstu (szczególnie przy długich modlitwach jak Różaniec Święty)
+- [x] Brak trybu czytania fullwidth — możliwość ukrycia listy kategorii i czytania tylko tekstu (szczególnie przy długich modlitwach jak Różaniec Święty)
 - [x] Przyciski akcji (Powrót, Źródło) są małe i blade — na desktop można sobie pozwolić na bardziej widoczne CTA
 
 ### Mobile — komfort modlitwy
