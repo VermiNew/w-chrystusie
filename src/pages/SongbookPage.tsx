@@ -137,7 +137,7 @@ export default function SongbookPage() {
           <span aria-hidden="true">/</span>
           <Link to="/spiewnik" onClick={prepareListReturn}>{detailCategory}</Link>
         </nav>
-        <ReadingModeToggle />
+        <ReadingModeToggle contentKey={`song:${selected.id}`} />
         <h1>{selected.title}</h1>
         <div className="song-text" lang="pl">
           <Markdown>{selected.body}</Markdown>

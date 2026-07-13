@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import { FaCompress, FaExpand, FaPause, FaPlay } from 'react-icons/fa6'
+import { FaArrowRotateLeft, FaCompress, FaExpand, FaPause, FaPlay } from 'react-icons/fa6'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
+import { useReadingPosition } from '../hooks/useReadingPosition'
 
 const AUTO_SCROLL_STEPS = [
   { intervalMs: 4200, distance: 120 },
@@ -8,12 +9,17 @@ const AUTO_SCROLL_STEPS = [
   { intervalMs: 2400, distance: 210 },
 ]
 
-export default function ReadingModeToggle() {
+interface Props {
+  contentKey: string
+}
+
+export default function ReadingModeToggle({ contentKey }: Props) {
   const [isActive, setIsActive] = useState(false)
   const [autoScrollActive, setAutoScrollActive] = useState(false)
   const [speedIndex, setSpeedIndex] = useState(1)
   const animationFrameRef = useRef<number | null>(null)
   const stepStartedAtRef = useRef<number | null>(null)
+  const { wasRestored, restart } = useReadingPosition(contentKey)
   useScreenWakeLock(isActive)
 
   useEffect(() => {
@@ -126,6 +132,15 @@ export default function ReadingModeToggle() {
           <span>{autoScrollActive ? 'Pauza' : 'Przewijaj'}</span>
           <small>{speedIndex + 1}x</small>
         </button>
+      )}
+
+      {wasRestored && !isActive && (
+        <span className="content-reading-resume" role="status">
+          Wrócono do miejsca czytania
+          <button type="button" onClick={restart}>
+            <FaArrowRotateLeft aria-hidden="true" /> Od początku
+          </button>
+        </span>
       )}
     </div>
   )

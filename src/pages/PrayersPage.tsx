@@ -140,7 +140,7 @@ export default function PrayersPage() {
           <span aria-hidden="true">/</span>
           <Link to="/modlitwy" onClick={prepareListReturn}>{detailCategory}</Link>
         </nav>
-        <ReadingModeToggle />
+        <ReadingModeToggle contentKey={`prayer:${selected.id}`} />
         <h1>{selected.title}</h1>
         <div className="prayer-text" lang="pl">
           <Markdown>{selected.body}</Markdown>

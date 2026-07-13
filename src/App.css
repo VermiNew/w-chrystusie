@@ -1051,6 +1051,43 @@ body[data-nav-menu='open'] {
   outline-offset: 2px;
 }
 
+.content-reading-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 48px;
+  padding: 0.45rem 0.65rem 0.45rem 0.8rem;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.content-reading-resume button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 34px;
+  padding: 0.35rem 0.55rem;
+  color: var(--color-primary);
+  font: inherit;
+  font-weight: 700;
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.content-reading-resume button:hover {
+  background: var(--color-hover-bg);
+}
+
+.content-reading-resume button:focus-visible {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
+  outline-offset: 1px;
+}
+
 :root[data-reading-mode='true'] .header {
   display: none;
 }
