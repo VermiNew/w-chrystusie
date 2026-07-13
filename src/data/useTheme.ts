@@ -16,6 +16,7 @@ function applyTheme(theme: Theme) {
 
 let listeners: (() => void)[] = []
 let snapshot: Theme = getStoredTheme()
+let themeTransitionTimer: number | undefined
 
 // Apply on load
 applyTheme(snapshot)
@@ -39,10 +40,25 @@ function notify() {
   listeners.forEach((l) => l())
 }
 
+function applyThemeWithTransition(theme: Theme) {
+  const root = document.documentElement
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    applyTheme(theme)
+    return
+  }
+
+  window.clearTimeout(themeTransitionTimer)
+  root.dataset.themeTransition = 'true'
+  applyTheme(theme)
+  themeTransitionTimer = window.setTimeout(() => {
+    delete root.dataset.themeTransition
+  }, 260)
+}
+
 export function toggleTheme() {
   snapshot = snapshot === 'light' ? 'dark' : 'light'
   localStorage.setItem(STORAGE_KEY, snapshot)
-  applyTheme(snapshot)
+  applyThemeWithTransition(snapshot)
   notify()
 }
 
