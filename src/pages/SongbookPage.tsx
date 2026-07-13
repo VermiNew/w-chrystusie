@@ -1,10 +1,11 @@
 import { useMemo, useEffect, useState, type CSSProperties } from 'react'
 import { useLocation, useParams, Link } from 'react-router-dom'
-import { FaArrowLeft, FaArrowUpRightFromSquare, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaStar } from 'react-icons/fa6'
+import { FaArrowLeft, FaArrowUpRightFromSquare, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaStar, FaTrash, FaXmark } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
 import { songs, type Song } from '../data/songs'
 import ReadingModeToggle from '../components/ReadingModeToggle'
 import { useContentLibrary } from '../hooks/useContentLibrary'
+import ConfirmDialog from '../components/ConfirmDialog'
 
 const SCROLL_KEY = 'songbook-scroll'
 const CATEGORY_KEY = 'songbook-category'
@@ -52,10 +53,12 @@ export default function SongbookPage() {
   const location = useLocation()
   const [query, setQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
+  const [favoriteToRemove, setFavoriteToRemove] = useState<Song | null>(null)
+  const [clearHistoryOpen, setClearHistoryOpen] = useState(false)
   const [returnCategory] = useState(() => sessionStorage.getItem(CATEGORY_KEY))
   const selectedId = getSelectedId(id, location.pathname)
   const selected = selectedId ? songs.find((s) => s.id === selectedId) ?? null : null
-  const { favoriteIds, recentIds, isFavorite, toggleFavorite } = useContentLibrary('song', selected?.id)
+  const { favoriteIds, recentIds, isFavorite, toggleFavorite, removeFavorite, clearRecent } = useContentLibrary('song', selected?.id)
   const favoriteSongs = favoriteIds
     .map((favoriteId) => songs.find((song) => song.id === favoriteId))
     .filter((song): song is Song => Boolean(song))
@@ -193,8 +196,17 @@ export default function SongbookPage() {
           <summary className="prayer-category-title"><FaStar aria-hidden="true" /> Ulubione <span>({favoriteSongs.length})</span></summary>
           <ul className="song-list">
             {favoriteSongs.map((song) => (
-              <li key={song.id}>
+              <li key={song.id} className="saved-content-item">
                 <Link to={`/spiewnik/${encodeRouteId(song.id)}`} className="song-item">{song.title}</Link>
+                <button
+                  type="button"
+                  className="saved-content-remove"
+                  aria-label={`Usuń „${song.title}” z ulubionych`}
+                  title="Usuń z ulubionych"
+                  onClick={() => setFavoriteToRemove(song)}
+                >
+                  <FaXmark aria-hidden="true" />
+                </button>
               </li>
             ))}
           </ul>
@@ -210,6 +222,9 @@ export default function SongbookPage() {
               </li>
             ))}
           </ul>
+          <button type="button" className="saved-content-clear" onClick={() => setClearHistoryOpen(true)}>
+            <FaTrash aria-hidden="true" /> Wyczyść historię
+          </button>
         </details>
       )}
       <div className="list-filter-controls">
@@ -266,6 +281,28 @@ export default function SongbookPage() {
           </ul>
         </details>
       ))}
+      <ConfirmDialog
+        open={favoriteToRemove !== null}
+        title="Usunąć z ulubionych?"
+        description={favoriteToRemove ? `Pozycja „${favoriteToRemove.title}” zniknie z ulubionych.` : ''}
+        confirmLabel="Usuń"
+        onCancel={() => setFavoriteToRemove(null)}
+        onConfirm={() => {
+          if (favoriteToRemove) removeFavorite('song', favoriteToRemove.id)
+          setFavoriteToRemove(null)
+        }}
+      />
+      <ConfirmDialog
+        open={clearHistoryOpen}
+        title="Wyczyścić historię?"
+        description="Usunięta zostanie historia ostatnio otwieranych modlitw i pieśni."
+        confirmLabel="Wyczyść"
+        onCancel={() => setClearHistoryOpen(false)}
+        onConfirm={() => {
+          clearRecent()
+          setClearHistoryOpen(false)
+        }}
+      />
     </div>
   )
 }

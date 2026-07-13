@@ -57,6 +57,15 @@ export function useContentLibrary(kind: ContentKind, activeId?: string) {
     writeKeys(FAVORITES_KEY, next)
   }, [])
 
+  const removeFavorite = useCallback((kind: ContentKind, id: string) => {
+    const key = makeKey(kind, id)
+    writeKeys(FAVORITES_KEY, readKeys(FAVORITES_KEY).filter((item) => item !== key))
+  }, [])
+
+  const clearRecent = useCallback(() => {
+    writeKeys(RECENT_KEY, [])
+  }, [])
+
   const keysFor = useCallback((keys: string[], kind: ContentKind) => {
     const prefix = `${kind}:`
     return keys.filter((key) => key.startsWith(prefix)).map((key) => key.slice(prefix.length))
@@ -67,5 +76,7 @@ export function useContentLibrary(kind: ContentKind, activeId?: string) {
     recentIds: keysFor(recent, kind),
     isFavorite: activeId ? favorites.includes(makeKey(kind, activeId)) : false,
     toggleFavorite,
+    removeFavorite,
+    clearRecent,
   }
 }

@@ -1,10 +1,11 @@
 import { useMemo, useEffect, useState, type CSSProperties } from 'react'
 import { useLocation, useParams, Link } from 'react-router-dom'
-import { FaArrowLeft, FaArrowUpRightFromSquare, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaStar } from 'react-icons/fa6'
+import { FaArrowLeft, FaArrowUpRightFromSquare, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaStar, FaTrash, FaXmark } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
 import { prayers, type Prayer } from '../data/prayers'
 import ReadingModeToggle from '../components/ReadingModeToggle'
 import { useContentLibrary } from '../hooks/useContentLibrary'
+import ConfirmDialog from '../components/ConfirmDialog'
 
 const SCROLL_KEY = 'prayers-scroll'
 const CATEGORY_KEY = 'prayers-category'
@@ -56,10 +57,12 @@ export default function PrayersPage() {
   const location = useLocation()
   const [query, setQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
+  const [favoriteToRemove, setFavoriteToRemove] = useState<Prayer | null>(null)
+  const [clearHistoryOpen, setClearHistoryOpen] = useState(false)
   const [returnCategory] = useState(() => sessionStorage.getItem(CATEGORY_KEY))
   const selectedId = getSelectedId(id, location.pathname)
   const selected = selectedId ? prayers.find((p) => p.id === selectedId) ?? null : null
-  const { favoriteIds, recentIds, isFavorite, toggleFavorite } = useContentLibrary('prayer', selected?.id)
+  const { favoriteIds, recentIds, isFavorite, toggleFavorite, removeFavorite, clearRecent } = useContentLibrary('prayer', selected?.id)
   const favoritePrayers = favoriteIds
     .map((favoriteId) => prayers.find((prayer) => prayer.id === favoriteId))
     .filter((prayer): prayer is Prayer => Boolean(prayer))
@@ -196,8 +199,17 @@ export default function PrayersPage() {
           <summary className="prayer-category-title"><FaStar aria-hidden="true" /> Ulubione <span>({favoritePrayers.length})</span></summary>
           <ul className="prayer-list">
             {favoritePrayers.map((prayer) => (
-              <li key={prayer.id}>
+              <li key={prayer.id} className="saved-content-item">
                 <Link to={`/modlitwy/${encodeRouteId(prayer.id)}`} className="prayer-item">{prayer.title}</Link>
+                <button
+                  type="button"
+                  className="saved-content-remove"
+                  aria-label={`Usuń „${prayer.title}” z ulubionych`}
+                  title="Usuń z ulubionych"
+                  onClick={() => setFavoriteToRemove(prayer)}
+                >
+                  <FaXmark aria-hidden="true" />
+                </button>
               </li>
             ))}
           </ul>
@@ -213,6 +225,9 @@ export default function PrayersPage() {
               </li>
             ))}
           </ul>
+          <button type="button" className="saved-content-clear" onClick={() => setClearHistoryOpen(true)}>
+            <FaTrash aria-hidden="true" /> Wyczyść historię
+          </button>
         </details>
       )}
       <div className="list-filter-controls">
@@ -269,6 +284,28 @@ export default function PrayersPage() {
           </ul>
         </details>
       ))}
+      <ConfirmDialog
+        open={favoriteToRemove !== null}
+        title="Usunąć z ulubionych?"
+        description={favoriteToRemove ? `Pozycja „${favoriteToRemove.title}” zniknie z ulubionych.` : ''}
+        confirmLabel="Usuń"
+        onCancel={() => setFavoriteToRemove(null)}
+        onConfirm={() => {
+          if (favoriteToRemove) removeFavorite('prayer', favoriteToRemove.id)
+          setFavoriteToRemove(null)
+        }}
+      />
+      <ConfirmDialog
+        open={clearHistoryOpen}
+        title="Wyczyścić historię?"
+        description="Usunięta zostanie historia ostatnio otwieranych modlitw i pieśni."
+        confirmLabel="Wyczyść"
+        onCancel={() => setClearHistoryOpen(false)}
+        onConfirm={() => {
+          clearRecent()
+          setClearHistoryOpen(false)
+        }}
+      />
     </div>
   )
 }
