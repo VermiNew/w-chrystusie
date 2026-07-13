@@ -76,7 +76,7 @@
 - [ ] Brak paginacji / lazy load — przy rosnącej liczbie ogłoszeń lista ładuje wszystko naraz
 - [x] `AnnouncementCard` robi `announcements.find()` po każdym renderze zamiast dostać gotowy obiekt jako prop
 - [x] Brak filtrowania po kategorii/tagu ogłoszeń
-- [ ] Brak licznika nieprzeczytanych widocznego na liście (tylko badge w nav)
+- [x] Brak licznika nieprzeczytanych widocznego na liście (tylko badge w nav)
 
 ## Do zrobienia — ustawienia / powiadomienia (RemindersModal)
 

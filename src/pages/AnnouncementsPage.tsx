@@ -3,7 +3,7 @@ import { useParams, Link, Navigate } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import { FaArrowLeft, FaThumbtack, FaChevronUp, FaChevronDown } from 'react-icons/fa6'
 import { announcements, type Announcement } from '../data/announcements'
-import { markAsRead, markAsUnread, useIsRead } from '../data/useReadAnnouncements'
+import { markAsRead, markAsUnread, useIsRead, useUnreadCount } from '../data/useReadAnnouncements'
 
 function formatDate(dateStr: string): string {
   const date = new Date(dateStr)
@@ -94,6 +94,7 @@ function AnnouncementCard({ announcement }: { announcement: Announcement }) {
 
 function AnnouncementList() {
   const [selectedCategory, setSelectedCategory] = useState('Wszystkie')
+  const unreadCount = useUnreadCount(announcements.map((announcement) => announcement.id))
   const categories = [...new Set(announcements.map((announcement) => announcement.category))]
     .sort((a, b) => a.localeCompare(b, 'pl'))
   const sorted = [...announcements].sort((a, b) => {
@@ -104,7 +105,10 @@ function AnnouncementList() {
 
   return (
     <div className="page">
-      <h1>Ogłoszenia</h1>
+      <div className="announcement-heading">
+        <h1>Ogłoszenia</h1>
+        <span>Nieprzeczytane: {unreadCount}</span>
+      </div>
       <div className="announcement-filters">
         <label htmlFor="announcement-category">Filtruj ogłoszenia</label>
         <select
