@@ -202,21 +202,33 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
         <span>{shareStatus || 'Udostępnij'}</span>
       </button>
 
-      <label className="content-font-size-control content-reading-secondary">
-        <FaTextHeight aria-hidden="true" />
-        <span className="sr-only">Wielkość tekstu</span>
-        <input
-          type="range"
-          min="90"
-          max="140"
-          step="10"
-          value={fontSize}
-          style={{ '--range-progress': `${((fontSize - 90) / 50) * 100}%` } as CSSProperties}
-          aria-label="Wielkość tekstu"
-          onChange={(event) => setFontSize(Number(event.target.value))}
-        />
-        <output>{fontSize}%</output>
-      </label>
+      <div className="content-font-size-group content-reading-secondary">
+        <label className="content-font-size-control">
+          <FaTextHeight aria-hidden="true" />
+          <span className="sr-only">Wielkość tekstu</span>
+          <input
+            type="range"
+            min="90"
+            max="140"
+            step="10"
+            value={fontSize}
+            style={{ '--range-progress': `${((fontSize - 90) / 50) * 100}%` } as CSSProperties}
+            aria-label="Wielkość tekstu"
+            onChange={(event) => setFontSize(Number(event.target.value))}
+          />
+          <output>{fontSize}%</output>
+        </label>
+        <button
+          className="content-font-size-reset"
+          type="button"
+          title="Przywróć wielkość tekstu do 100%"
+          aria-label="Przywróć wielkość tekstu do 100%"
+          disabled={fontSize === DEFAULT_FONT_SIZE}
+          onClick={() => setFontSize(DEFAULT_FONT_SIZE)}
+        >
+          <FaArrowRotateLeft aria-hidden="true" />
+        </button>
+      </div>
 
       <button
         className="content-reading-toggle content-reading-toggle--secondary"
