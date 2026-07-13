@@ -21,6 +21,11 @@ function AppRoutes() {
   const navigate = useNavigate()
 
   useEffect(() => {
+    const isContentDetail = ['/modlitwy/', '/spiewnik/'].some(
+      (prefix) => location.pathname.startsWith(prefix) && location.pathname.length > prefix.length,
+    )
+    if (isContentDetail) return
+
     window.scrollTo(0, 0)
   }, [location.pathname])
 

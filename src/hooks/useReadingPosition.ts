@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 
 const STORAGE_PREFIX = 'reading-position:'
-const MIN_RESTORABLE_SCROLL = 120
+const MIN_RESTORABLE_SCROLL = 40
 
 export function useReadingPosition(contentKey: string) {
   const storageKey = `${STORAGE_PREFIX}${contentKey}`
@@ -10,26 +10,14 @@ export function useReadingPosition(contentKey: string) {
 
   useEffect(() => {
     const savedPosition = Number.parseInt(localStorage.getItem(storageKey) ?? '', 10)
+    const shouldRestore = Number.isFinite(savedPosition) && savedPosition >= MIN_RESTORABLE_SCROLL
+    let ready = false
     let innerFrame: number | null = null
 
-    const outerFrame = requestAnimationFrame(() => {
-      innerFrame = requestAnimationFrame(() => {
-        if (Number.isFinite(savedPosition) && savedPosition >= MIN_RESTORABLE_SCROLL) {
-          window.scrollTo(0, savedPosition)
-          setWasRestored(true)
-        }
-      })
-    })
-
-    return () => {
-      cancelAnimationFrame(outerFrame)
-      if (innerFrame !== null) cancelAnimationFrame(innerFrame)
-    }
-  }, [storageKey])
-
-  useEffect(() => {
     const savePosition = () => {
       frameRef.current = null
+      if (!ready) return
+
       if (window.scrollY >= MIN_RESTORABLE_SCROLL) {
         localStorage.setItem(storageKey, String(Math.round(window.scrollY)))
       } else {
@@ -38,12 +26,24 @@ export function useReadingPosition(contentKey: string) {
     }
 
     const handleScroll = () => {
-      if (frameRef.current === null) frameRef.current = requestAnimationFrame(savePosition)
+      if (!ready || frameRef.current !== null) return
+      frameRef.current = requestAnimationFrame(savePosition)
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
+
+    const outerFrame = requestAnimationFrame(() => {
+      innerFrame = requestAnimationFrame(() => {
+        window.scrollTo(0, shouldRestore ? savedPosition : 0)
+        ready = true
+        setWasRestored(shouldRestore)
+      })
+    })
+
     return () => {
       window.removeEventListener('scroll', handleScroll)
+      cancelAnimationFrame(outerFrame)
+      if (innerFrame !== null) cancelAnimationFrame(innerFrame)
       if (frameRef.current !== null) cancelAnimationFrame(frameRef.current)
       savePosition()
     }

@@ -32,6 +32,7 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
   const [shareStatus, setShareStatus] = useState('')
   const animationFrameRef = useRef<number | null>(null)
   const stepStartedAtRef = useRef<number | null>(null)
+  const pendingReadingProgressRef = useRef<number | null>(null)
   const { wasRestored, restart } = useReadingPosition(contentKey)
   useScreenWakeLock(isActive)
 
@@ -132,10 +133,33 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
     }
   }, [autoScrollActive, isActive, speedIndex])
 
+  useEffect(() => {
+    const readingProgress = pendingReadingProgressRef.current
+    if (readingProgress === null) return
+
+    let innerFrame: number | null = null
+    const outerFrame = requestAnimationFrame(() => {
+      innerFrame = requestAnimationFrame(() => {
+        const scrollRoot = document.scrollingElement ?? document.documentElement
+        const maxScroll = Math.max(0, scrollRoot.scrollHeight - window.innerHeight)
+        window.scrollTo(0, readingProgress * maxScroll)
+        pendingReadingProgressRef.current = null
+      })
+    })
+
+    return () => {
+      cancelAnimationFrame(outerFrame)
+      if (innerFrame !== null) cancelAnimationFrame(innerFrame)
+    }
+  }, [isActive])
+
   const toggleReadingMode = () => {
+    const scrollRoot = document.scrollingElement ?? document.documentElement
+    const maxScroll = Math.max(1, scrollRoot.scrollHeight - window.innerHeight)
+    pendingReadingProgressRef.current = scrollRoot.scrollTop / maxScroll
+
     if (isActive) setAutoScrollActive(false)
     setIsActive(!isActive)
-    window.scrollTo(0, 0)
   }
 
   const shareContent = async () => {
