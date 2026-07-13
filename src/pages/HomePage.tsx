@@ -24,6 +24,9 @@ export default function HomePage() {
   const continuePath = latestRecent
     ? `${latestRecent.kind === 'prayer' ? '/modlitwy' : '/spiewnik'}/${encodeURIComponent(latestRecent.id)}`
     : null
+  const continueLabel = latestRecent?.kind === 'prayer'
+    ? 'Kontynuuj modlitwę'
+    : 'Kontynuuj śpiew'
   const prayerOfDay = getPrayerOfDay()
 
   return (
@@ -50,7 +53,7 @@ export default function HomePage() {
         {recentContent && continuePath && Number.isFinite(savedPosition) && savedPosition >= 40 && (
           <Link className="home-shortcut" to={continuePath}>
             <span>
-              <small>Kontynuuj czytanie</small>
+              <small>{continueLabel}</small>
               <strong>{recentContent.title}</strong>
             </span>
             <FaArrowRight aria-hidden="true" />

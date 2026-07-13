@@ -1917,8 +1917,9 @@ body[data-nav-menu='open'] {
 .section-tiles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  margin-top: 1.5rem;
+  gap: 1rem;
+  width: min(100%, 52rem);
+  margin: 1.25rem auto 0;
 }
 
 .section-tile {
@@ -1926,7 +1927,7 @@ body[data-nav-menu='open'] {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem 1.25rem;
+  padding: 1.4rem 1rem;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 12px;
@@ -1962,21 +1963,21 @@ body[data-nav-menu='open'] {
 }
 
 .section-tile-icon {
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: var(--color-primary);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.55rem;
 }
 
 .section-tile-title {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   margin: 0 0 0.4rem;
   color: var(--color-primary);
 }
 
 .section-tile-desc {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--color-text-muted);
   margin: 0;
 }
@@ -2056,6 +2057,7 @@ body[data-nav-menu='open'] {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
   gap: 0.75rem;
+  width: min(100%, 52rem);
   margin: 1.5rem auto 0;
 }
 
