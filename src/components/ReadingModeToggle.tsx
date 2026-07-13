@@ -29,10 +29,12 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
   const [autoScrollActive, setAutoScrollActive] = useState(false)
   const [speedIndex, setSpeedIndex] = useState(1)
   const [fontSize, setFontSize] = useState(readFontSize)
+  const [fontControlsOpen, setFontControlsOpen] = useState(false)
   const [shareStatus, setShareStatus] = useState('')
   const animationFrameRef = useRef<number | null>(null)
   const stepStartedAtRef = useRef<number | null>(null)
   const pendingReadingProgressRef = useRef<number | null>(null)
+  const fontControlsRef = useRef<HTMLDivElement>(null)
   const { wasRestored, restart } = useReadingPosition(contentKey)
   useScreenWakeLock(isActive)
 
@@ -53,6 +55,24 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
     const timer = window.setTimeout(() => setShareStatus(''), 2500)
     return () => window.clearTimeout(timer)
   }, [shareStatus])
+
+  useEffect(() => {
+    if (!fontControlsOpen) return
+
+    const handlePointerDown = (event: PointerEvent) => {
+      if (!fontControlsRef.current?.contains(event.target as Node)) setFontControlsOpen(false)
+    }
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setFontControlsOpen(false)
+    }
+
+    document.addEventListener('pointerdown', handlePointerDown)
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown)
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [fontControlsOpen])
 
   useEffect(() => {
     if (!isActive) return
@@ -159,6 +179,7 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
     pendingReadingProgressRef.current = scrollRoot.scrollTop / maxScroll
 
     if (isActive) setAutoScrollActive(false)
+    setFontControlsOpen(false)
     setIsActive(!isActive)
   }
 
@@ -202,32 +223,47 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
         <span>{shareStatus || 'Udostępnij'}</span>
       </button>
 
-      <div className="content-font-size-group content-reading-secondary">
-        <label className="content-font-size-control">
-          <FaTextHeight aria-hidden="true" />
-          <span className="sr-only">Wielkość tekstu</span>
-          <input
-            type="range"
-            min="90"
-            max="140"
-            step="10"
-            value={fontSize}
-            style={{ '--range-progress': `${((fontSize - 90) / 50) * 100}%` } as CSSProperties}
-            aria-label="Wielkość tekstu"
-            onChange={(event) => setFontSize(Number(event.target.value))}
-          />
-          <output>{fontSize}%</output>
-        </label>
+      <div ref={fontControlsRef} className="content-font-size-menu content-reading-secondary">
         <button
-          className="content-font-size-reset"
+          className="content-reading-toggle content-font-size-trigger"
           type="button"
-          title="Przywróć wielkość tekstu do 100%"
-          aria-label="Przywróć wielkość tekstu do 100%"
-          disabled={fontSize === DEFAULT_FONT_SIZE}
-          onClick={() => setFontSize(DEFAULT_FONT_SIZE)}
+          aria-expanded={fontControlsOpen}
+          aria-controls="content-font-size-panel"
+          title="Ustaw wielkość tekstu"
+          onClick={() => setFontControlsOpen((open) => !open)}
         >
-          <FaArrowRotateLeft aria-hidden="true" />
+          <FaTextHeight aria-hidden="true" />
+          <span>Tekst</span>
+          <small>{fontSize}%</small>
         </button>
+        {fontControlsOpen && (
+          <div id="content-font-size-panel" className="content-font-size-popover">
+            <label className="content-font-size-control">
+              <span className="sr-only">Wielkość tekstu</span>
+              <input
+                type="range"
+                min="90"
+                max="140"
+                step="10"
+                value={fontSize}
+                style={{ '--range-progress': `${((fontSize - 90) / 50) * 100}%` } as CSSProperties}
+                aria-label="Wielkość tekstu"
+                onChange={(event) => setFontSize(Number(event.target.value))}
+              />
+              <output>{fontSize}%</output>
+            </label>
+            <button
+              className="content-font-size-reset"
+              type="button"
+              title="Przywróć wielkość tekstu do 100%"
+              aria-label="Przywróć wielkość tekstu do 100%"
+              disabled={fontSize === DEFAULT_FONT_SIZE}
+              onClick={() => setFontSize(DEFAULT_FONT_SIZE)}
+            >
+              <FaArrowRotateLeft aria-hidden="true" />
+            </button>
+          </div>
+        )}
       </div>
 
       <button
