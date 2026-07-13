@@ -1104,6 +1104,11 @@ body[data-nav-menu='open'] {
   margin-left: auto;
 }
 
+.saved-content-recent-icon {
+  flex: 0 0 auto;
+  font-size: 0.9rem;
+}
+
 .content-reading-resume {
   display: inline-flex;
   align-items: center;

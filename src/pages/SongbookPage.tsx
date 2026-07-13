@@ -202,7 +202,7 @@ export default function SongbookPage() {
       )}
       {recentSongs.length > 0 && (
         <details className="prayer-category saved-content-category">
-          <summary className="prayer-category-title"><FaClock aria-hidden="true" /> Ostatnio otwierane <span>({recentSongs.length})</span></summary>
+          <summary className="prayer-category-title"><FaClock className="saved-content-recent-icon" aria-hidden="true" /> Ostatnio otwierane <span>({recentSongs.length})</span></summary>
           <ul className="song-list">
             {recentSongs.map((song) => (
               <li key={song.id}>

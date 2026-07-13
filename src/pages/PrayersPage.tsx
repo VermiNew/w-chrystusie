@@ -205,7 +205,7 @@ export default function PrayersPage() {
       )}
       {recentPrayers.length > 0 && (
         <details className="prayer-category saved-content-category">
-          <summary className="prayer-category-title"><FaClock aria-hidden="true" /> Ostatnio otwierane <span>({recentPrayers.length})</span></summary>
+          <summary className="prayer-category-title"><FaClock className="saved-content-recent-icon" aria-hidden="true" /> Ostatnio otwierane <span>({recentPrayers.length})</span></summary>
           <ul className="prayer-list">
             {recentPrayers.map((prayer) => (
               <li key={prayer.id}>
