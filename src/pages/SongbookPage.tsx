@@ -6,6 +6,7 @@ import { songs, type Song } from '../data/songs'
 import ReadingModeToggle from '../components/ReadingModeToggle'
 import { useContentLibrary } from '../hooks/useContentLibrary'
 import ConfirmDialog from '../components/ConfirmDialog'
+import { getLiturgicalSeason } from '../data/liturgicalSeason'
 
 const SCROLL_KEY = 'songbook-scroll'
 const CATEGORY_KEY = 'songbook-category'
@@ -56,6 +57,7 @@ export default function SongbookPage() {
   const [favoriteToRemove, setFavoriteToRemove] = useState<Song | null>(null)
   const [clearHistoryOpen, setClearHistoryOpen] = useState(false)
   const [returnCategory] = useState(() => sessionStorage.getItem(CATEGORY_KEY))
+  const liturgicalSeason = getLiturgicalSeason()
   const selectedId = getSelectedId(id, location.pathname)
   const selected = selectedId ? songs.find((s) => s.id === selectedId) ?? null : null
   const { favoriteIds, recentIds, isFavorite, toggleFavorite, removeFavorite, clearRecent } = useContentLibrary('song', selected?.id)
@@ -191,6 +193,9 @@ export default function SongbookPage() {
   return (
     <div className="page">
       <h1>Śpiewnik</h1>
+      <p className="liturgical-season-status">
+        Aktualnie: <strong>{liturgicalSeason.name}</strong>
+      </p>
       {favoriteSongs.length > 0 && (
         <details className="prayer-category saved-content-category">
           <summary className="prayer-category-title"><FaStar aria-hidden="true" /> Ulubione <span>({favoriteSongs.length})</span></summary>
@@ -265,7 +270,13 @@ export default function SongbookPage() {
           className="prayer-category"
           open={hasActiveFilters || returnCategory === category || undefined}
         >
-          <summary className="prayer-category-title">{category} <span>({items.length})</span></summary>
+          <summary className="prayer-category-title">
+            {category}
+            {category === liturgicalSeason.songCategory && (
+              <span className="liturgical-category-badge">Aktualny okres</span>
+            )}
+            <span>({items.length})</span>
+          </summary>
           <ul className="song-list">
             {items.map((song, index) => (
               <li key={song.id} style={{ '--item-index': index } as CSSProperties}>
