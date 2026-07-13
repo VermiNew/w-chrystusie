@@ -1,6 +1,8 @@
 import { useState, useMemo, useEffect, useCallback } from 'react'
-import { FaArrowLeft, FaArrowRight, FaCheck, FaCircleInfo } from 'react-icons/fa6'
+import { FaArrowLeft, FaArrowRight, FaArrowUpRightFromSquare, FaCheck, FaCircleInfo } from 'react-icons/fa6'
+import Markdown from 'react-markdown'
 import { mysterySets, buildRosarySteps, type MysterySet } from '../data/rosary'
+import { prayers } from '../data/prayers'
 import { hapticLight, hapticMedium } from '../data/haptics'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
 import { useHorizontalSwipe } from '../hooks/useHorizontalSwipe'
@@ -8,6 +10,7 @@ import PrayerCompletion from '../components/PrayerCompletion'
 
 const DAY_NAMES = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota']
 const ROSARY_PROGRESS_KEY = 'rosary-progress'
+const loretoLitany = prayers.find((prayer) => prayer.id === 'Litania Loretańska do Najświętszej Maryi Panny')
 
 interface RosaryProgress {
   selectedSet: MysterySet | null
@@ -59,6 +62,8 @@ export default function RosaryPage() {
   const [selectedSet, setSelectedSet] = useState<MysterySet | null>(restoredProgress.selectedSet)
   const [currentStep, setCurrentStep] = useState(restoredProgress.currentStep)
   const [isComplete, setIsComplete] = useState(false)
+  const [includeLitany, setIncludeLitany] = useState(false)
+  const [showLitany, setShowLitany] = useState(false)
   const [showKeyboardHint, setShowKeyboardHint] = useState(
     () => window.matchMedia('(hover: hover) and (pointer: fine)').matches,
   )
@@ -98,6 +103,8 @@ export default function RosaryPage() {
     setSelectedSet(null)
     setCurrentStep(0)
     setIsComplete(false)
+    setIncludeLitany(false)
+    setShowLitany(false)
     window.scrollTo(0, 0)
   }, [])
 
@@ -105,6 +112,8 @@ export default function RosaryPage() {
     hapticMedium()
     setCurrentStep(0)
     setIsComplete(false)
+    setIncludeLitany(false)
+    setShowLitany(false)
     window.scrollTo(0, 0)
   }, [])
 
@@ -116,11 +125,21 @@ export default function RosaryPage() {
       // Completion must still work when browser storage is unavailable.
     }
     setIsComplete(true)
+    setShowLitany(false)
     window.scrollTo(0, 0)
   }, [])
 
+  const finishRosary = useCallback(() => {
+    if (includeLitany && loretoLitany) {
+      setShowLitany(true)
+      window.scrollTo(0, 0)
+      return
+    }
+    complete()
+  }, [complete, includeLitany])
+
   useEffect(() => {
-    if (!selectedSet || isComplete) return
+    if (!selectedSet || isComplete || showLitany) return
 
     try {
       sessionStorage.setItem(ROSARY_PROGRESS_KEY, JSON.stringify({
@@ -130,11 +149,11 @@ export default function RosaryPage() {
     } catch {
       // Prayer navigation remains usable when browser storage is unavailable.
     }
-  }, [selectedSet, currentStep, isComplete])
+  }, [selectedSet, currentStep, isComplete, showLitany])
 
   // Arrow keys to navigate between rosary steps
   useEffect(() => {
-    if (!selectedSet || isComplete) return
+    if (!selectedSet || isComplete || showLitany) return
 
     const handleKey = (e: KeyboardEvent) => {
       setShowKeyboardHint(true)
@@ -145,7 +164,7 @@ export default function RosaryPage() {
 
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
-  }, [selectedSet, isComplete, goNext, goPrev, reset])
+  }, [selectedSet, isComplete, showLitany, goNext, goPrev, reset])
 
   const today = new Date().getDay()
 
@@ -182,6 +201,8 @@ export default function RosaryPage() {
                   onClick={() => {
                     setCurrentStep(0)
                     setIsComplete(false)
+                    setIncludeLitany(false)
+                    setShowLitany(false)
                     setSelectedSet(set)
                   }}
                 >
@@ -195,6 +216,29 @@ export default function RosaryPage() {
             )
           })}
         </ul>
+      </div>
+    )
+  }
+
+  if (showLitany && loretoLitany) {
+    return (
+      <div className="page content-detail-page optional-rosary-ending">
+        <button className="back-button" onClick={() => setShowLitany(false)}>
+          <FaArrowLeft aria-hidden="true" /> Wróć do ostatniego kroku
+        </button>
+        <p className="optional-rosary-ending-label">Opcjonalne zakończenie różańca</p>
+        <h1>{loretoLitany.title}</h1>
+        <div className="prayer-text" lang="pl">
+          <Markdown>{loretoLitany.body}</Markdown>
+        </div>
+        {loretoLitany.source && (
+          <a className="source-link" href={loretoLitany.source} target="_blank" rel="noopener noreferrer">
+            Źródło <FaArrowUpRightFromSquare aria-hidden="true" />
+          </a>
+        )}
+        <button className="optional-rosary-ending-complete" onClick={complete}>
+          <FaCheck aria-hidden="true" /> Zakończ różaniec
+        </button>
       </div>
     )
   }
@@ -227,6 +271,20 @@ export default function RosaryPage() {
         <p className="rosary-prayer">{step.prayer}</p>
       </div>
 
+      {isLast && loretoLitany && (
+        <label className="rosary-optional-ending">
+          <input
+            type="checkbox"
+            checked={includeLitany}
+            onChange={(event) => setIncludeLitany(event.target.checked)}
+          />
+          <span>
+            <strong>Litania Loretańska</strong>
+            <small>Dodaj jako opcjonalne zakończenie</small>
+          </span>
+        </label>
+      )}
+
       <div className="prayer-sequence-controls">
         <div className="rosary-nav">
           {!isFirst ? (
@@ -241,7 +299,7 @@ export default function RosaryPage() {
               <FaArrowRight className="prayer-nav-icon" aria-hidden="true" />
             </button>
           ) : (
-            <button className="rosary-nav-button rosary-nav-button--next" onClick={complete} aria-label="Zakończ różaniec">
+            <button className="rosary-nav-button rosary-nav-button--next" onClick={finishRosary} aria-label="Zakończ różaniec">
               <span>Zakończ</span>
               <FaCheck className="prayer-nav-icon" aria-hidden="true" />
             </button>
