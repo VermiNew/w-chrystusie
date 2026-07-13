@@ -1073,9 +1073,75 @@ body[data-nav-menu='open'] {
 }
 
 .content-font-size-control input {
+  --range-progress: 20%;
+  appearance: none;
+  height: 28px;
   width: 6rem;
-  accent-color: var(--color-primary);
+  margin: 0;
+  padding: 0;
+  background: transparent;
   cursor: pointer;
+}
+
+.content-font-size-control input::-webkit-slider-runnable-track {
+  height: 5px;
+  background: linear-gradient(
+    to right,
+    var(--color-primary) 0 var(--range-progress),
+    var(--color-border) var(--range-progress) 100%
+  );
+  border-radius: 999px;
+}
+
+.content-font-size-control input::-webkit-slider-thumb {
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  margin-top: -6px;
+  background: var(--color-primary);
+  border: 3px solid var(--color-surface);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--color-primary), 0 2px 5px rgba(var(--color-shadow-rgb), 0.18);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.content-font-size-control input::-moz-range-track {
+  height: 5px;
+  background: var(--color-border);
+  border: 0;
+  border-radius: 999px;
+}
+
+.content-font-size-control input::-moz-range-progress {
+  height: 5px;
+  background: var(--color-primary);
+  border-radius: 999px;
+}
+
+.content-font-size-control input::-moz-range-thumb {
+  width: 11px;
+  height: 11px;
+  background: var(--color-primary);
+  border: 3px solid var(--color-surface);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--color-primary), 0 2px 5px rgba(var(--color-shadow-rgb), 0.18);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.content-font-size-control input:hover::-webkit-slider-thumb,
+.content-font-size-control input:focus-visible::-webkit-slider-thumb {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.18), 0 2px 6px rgba(var(--color-shadow-rgb), 0.22);
+}
+
+.content-font-size-control input:hover::-moz-range-thumb,
+.content-font-size-control input:focus-visible::-moz-range-thumb {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.18), 0 2px 6px rgba(var(--color-shadow-rgb), 0.22);
+}
+
+.content-font-size-control input:focus-visible {
+  outline: none;
 }
 
 .content-font-size-control output {

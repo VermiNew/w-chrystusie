@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import { FaArrowRotateLeft, FaCompress, FaExpand, FaPause, FaPlay, FaRegStar, FaShareNodes, FaStar, FaTextHeight } from 'react-icons/fa6'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
 import { useReadingPosition } from '../hooks/useReadingPosition'
@@ -211,6 +211,7 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
           max="140"
           step="10"
           value={fontSize}
+          style={{ '--range-progress': `${((fontSize - 90) / 50) * 100}%` } as CSSProperties}
           aria-label="Wielkość tekstu"
           onChange={(event) => setFontSize(Number(event.target.value))}
         />
