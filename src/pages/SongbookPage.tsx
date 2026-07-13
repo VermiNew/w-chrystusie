@@ -148,6 +148,7 @@ export default function SongbookPage() {
         </nav>
         <ReadingModeToggle
           contentKey={`song:${selected.id}`}
+          contentTitle={selected.title}
           isFavorite={isFavorite}
           onToggleFavorite={() => toggleFavorite('song', selected.id)}
         />

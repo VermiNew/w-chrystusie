@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { FaArrowRotateLeft, FaCompress, FaExpand, FaPause, FaPlay, FaRegStar, FaStar } from 'react-icons/fa6'
+import { FaArrowRotateLeft, FaCompress, FaExpand, FaPause, FaPlay, FaRegStar, FaShareNodes, FaStar, FaTextHeight } from 'react-icons/fa6'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
 import { useReadingPosition } from '../hooks/useReadingPosition'
 
@@ -9,20 +9,49 @@ const AUTO_SCROLL_STEPS = [
   { intervalMs: 2400, distance: 210 },
 ]
 
+const FONT_SIZE_KEY = 'content-font-size'
+const DEFAULT_FONT_SIZE = 100
+
+const readFontSize = () => {
+  const stored = Number.parseInt(localStorage.getItem(FONT_SIZE_KEY) ?? '', 10)
+  return Number.isFinite(stored) && stored >= 90 && stored <= 140 ? stored : DEFAULT_FONT_SIZE
+}
+
 interface Props {
   contentKey: string
+  contentTitle: string
   isFavorite: boolean
   onToggleFavorite: () => void
 }
 
-export default function ReadingModeToggle({ contentKey, isFavorite, onToggleFavorite }: Props) {
+export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite, onToggleFavorite }: Props) {
   const [isActive, setIsActive] = useState(false)
   const [autoScrollActive, setAutoScrollActive] = useState(false)
   const [speedIndex, setSpeedIndex] = useState(1)
+  const [fontSize, setFontSize] = useState(readFontSize)
+  const [shareStatus, setShareStatus] = useState('')
   const animationFrameRef = useRef<number | null>(null)
   const stepStartedAtRef = useRef<number | null>(null)
   const { wasRestored, restart } = useReadingPosition(contentKey)
   useScreenWakeLock(isActive)
+
+  useEffect(() => {
+    const scale = fontSize / 100
+    localStorage.setItem(FONT_SIZE_KEY, String(fontSize))
+    document.documentElement.style.setProperty('--content-reading-font-size', `${1.1 * scale}rem`)
+    document.documentElement.style.setProperty('--content-focus-font-size', `${1.8 * scale}rem`)
+
+    return () => {
+      document.documentElement.style.removeProperty('--content-reading-font-size')
+      document.documentElement.style.removeProperty('--content-focus-font-size')
+    }
+  }, [fontSize])
+
+  useEffect(() => {
+    if (!shareStatus) return
+    const timer = window.setTimeout(() => setShareStatus(''), 2500)
+    return () => window.clearTimeout(timer)
+  }, [shareStatus])
 
   useEffect(() => {
     if (!isActive) return
@@ -109,6 +138,23 @@ export default function ReadingModeToggle({ contentKey, isFavorite, onToggleFavo
     window.scrollTo(0, 0)
   }
 
+  const shareContent = async () => {
+    const shareData = { title: contentTitle, url: window.location.href }
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData)
+        return
+      }
+
+      await navigator.clipboard.writeText(shareData.url)
+      setShareStatus('Skopiowano')
+    } catch (error) {
+      if (error instanceof DOMException && error.name === 'AbortError') return
+      setShareStatus('Błąd')
+    }
+  }
+
   return (
     <div className="content-reading-controls">
       <button
@@ -123,7 +169,32 @@ export default function ReadingModeToggle({ contentKey, isFavorite, onToggleFavo
       </button>
 
       <button
-        className="content-reading-toggle"
+        className="content-reading-toggle content-reading-toggle--secondary content-reading-toggle--share"
+        type="button"
+        title="Udostępnij bezpośredni link"
+        onClick={() => void shareContent()}
+      >
+        <FaShareNodes aria-hidden="true" />
+        <span>{shareStatus || 'Udostępnij'}</span>
+      </button>
+
+      <label className="content-font-size-control content-reading-secondary">
+        <FaTextHeight aria-hidden="true" />
+        <span className="sr-only">Wielkość tekstu</span>
+        <input
+          type="range"
+          min="90"
+          max="140"
+          step="10"
+          value={fontSize}
+          aria-label="Wielkość tekstu"
+          onChange={(event) => setFontSize(Number(event.target.value))}
+        />
+        <output>{fontSize}%</output>
+      </label>
+
+      <button
+        className="content-reading-toggle content-reading-toggle--secondary"
         type="button"
         aria-pressed={isFavorite}
         title={isFavorite ? 'Usuń z ulubionych' : 'Dodaj do ulubionych'}

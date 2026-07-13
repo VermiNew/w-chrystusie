@@ -535,7 +535,7 @@ body[data-nav-menu='open'] {
   max-width: 65ch;
   white-space: pre-line;
   line-height: 1.9;
-  font-size: clamp(1.05rem, 0.98rem + 0.25vw, 1.15rem);
+  font-size: var(--content-reading-font-size, 1.1rem);
   font-family: var(--font-reading);
   animation: text-reveal 0.6s ease both;
 }
@@ -997,7 +997,7 @@ body[data-nav-menu='open'] {
   width: 100%;
   max-width: 65ch;
   line-height: 1.9;
-  font-size: clamp(1.05rem, 0.98rem + 0.25vw, 1.15rem);
+  font-size: var(--content-reading-font-size, 1.1rem);
   font-family: var(--font-reading);
   animation: text-reveal 0.6s ease both;
 }
@@ -1054,6 +1054,40 @@ body[data-nav-menu='open'] {
 .content-reading-toggle[aria-pressed='true'] {
   color: var(--color-primary);
   border-color: var(--color-primary);
+}
+
+.content-reading-toggle--share {
+  min-width: 7.75rem;
+}
+
+.content-font-size-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  padding: 0.55rem 0.7rem;
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.content-font-size-control input {
+  width: 6rem;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.content-font-size-control output {
+  min-width: 3ch;
+  color: var(--color-text);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.content-font-size-control:focus-within {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
+  outline-offset: 2px;
 }
 
 .saved-content-category {
@@ -1141,6 +1175,10 @@ body[data-nav-menu='open'] {
   -webkit-backdrop-filter: blur(10px);
 }
 
+:root[data-reading-mode='true'] :is(.content-reading-toggle--secondary, .content-reading-secondary) {
+  display: none;
+}
+
 :root[data-reading-mode='true'] .content-reading-toggle--auto[aria-pressed='true'] {
   color: var(--color-white);
   background: var(--color-primary);
@@ -1162,7 +1200,7 @@ body[data-nav-menu='open'] {
 :root[data-reading-mode='true'] :is(.prayer-text, .song-text) {
   max-width: 46rem;
   margin: 0 auto;
-  font-size: clamp(1.35rem, 1.1rem + 1.2vw, 1.8rem);
+  font-size: var(--content-focus-font-size, 1.8rem);
   line-height: 2;
   animation: none;
 }
@@ -1183,7 +1221,7 @@ body[data-nav-menu='open'] {
 
   :root[data-reading-mode='true'] :is(.prayer-text, .song-text) {
     max-width: 60ch;
-    font-size: clamp(1.45rem, 1.2rem + 0.85vw, 1.95rem);
+    font-size: var(--content-focus-font-size, 1.8rem);
     line-height: 2.05;
   }
 

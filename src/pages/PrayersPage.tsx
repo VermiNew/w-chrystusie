@@ -151,6 +151,7 @@ export default function PrayersPage() {
         </nav>
         <ReadingModeToggle
           contentKey={`prayer:${selected.id}`}
+          contentTitle={selected.title}
           isFavorite={isFavorite}
           onToggleFavorite={() => toggleFavorite('prayer', selected.id)}
         />
