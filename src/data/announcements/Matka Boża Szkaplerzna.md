@@ -2,6 +2,7 @@
 title: Matka Boża Szkaplerzna — 16 lipca
 date: 2026-07-16
 pinned: false
+category: Święta i wspomnienia
 ---
 
 16 lipca Kościół wspomina **Najświętszą Maryję Pannę z Góry Karmel**, nazywaną również Matką Bożą Szkaplerzną.

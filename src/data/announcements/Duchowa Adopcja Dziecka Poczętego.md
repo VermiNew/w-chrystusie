@@ -2,6 +2,7 @@
 title: Duchowa Adopcja Dziecka Poczętego
 date: 2026-03-25
 pinned: true
+category: Inicjatywy
 ---
 
 Jeśli chcesz, możesz dołączyć do **Duchowej Adopcji Dziecka Poczętego**!

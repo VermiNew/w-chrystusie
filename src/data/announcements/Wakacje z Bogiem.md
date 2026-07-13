@@ -2,6 +2,7 @@
 title: Wakacje z Bogiem
 date: 2026-07-04
 pinned: false
+category: Formacja
 ---
 
 Wakacyjny odpoczynek jest potrzebny. Zmiana miejsca i codziennego rytmu nie musi jednak oznaczać przerwy w relacji z Bogiem. To dobry czas, aby zwolnić, odzyskać pokój serca i na nowo zauważyć Jego obecność.

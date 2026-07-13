@@ -27,7 +27,10 @@ function AnnouncementDetail({ id }: { id: string }) {
     <div className="page">
       <Link to="/ogloszenia" className="back-button"><FaArrowLeft /> Ogłoszenia</Link>
       <h1>{announcement.title}</h1>
-      <p className="announcement-date">{formatDate(announcement.date)}</p>
+      <p className="announcement-date">
+        {formatDate(announcement.date)}
+        <span className="announcement-category">{announcement.category}</span>
+      </p>
       <div className="announcement-body">
         <ReactMarkdown>{announcement.body}</ReactMarkdown>
       </div>
@@ -64,6 +67,7 @@ function AnnouncementCard({ announcement }: { announcement: Announcement }) {
             </span>
           )}
           {!isRead && <span className="announcement-unread-dot" />}
+          <span className="announcement-category">{announcement.category}</span>
           <span className="announcement-card-date">{formatDate(announcement.date)}</span>
         </div>
         <h2 className="announcement-card-title">{announcement.title}</h2>
@@ -89,6 +93,9 @@ function AnnouncementCard({ announcement }: { announcement: Announcement }) {
 }
 
 function AnnouncementList() {
+  const [selectedCategory, setSelectedCategory] = useState('Wszystkie')
+  const categories = [...new Set(announcements.map((announcement) => announcement.category))]
+    .sort((a, b) => a.localeCompare(b, 'pl'))
   const sorted = [...announcements].sort((a, b) => {
     if (a.pinned && !b.pinned) return -1
     if (!a.pinned && b.pinned) return 1
@@ -98,10 +105,23 @@ function AnnouncementList() {
   return (
     <div className="page">
       <h1>Ogłoszenia</h1>
+      <div className="announcement-filters">
+        <label htmlFor="announcement-category">Filtruj ogłoszenia</label>
+        <select
+          id="announcement-category"
+          value={selectedCategory}
+          onChange={(event) => setSelectedCategory(event.target.value)}
+        >
+          <option>Wszystkie</option>
+          {categories.map((category) => <option key={category}>{category}</option>)}
+        </select>
+      </div>
       <div className="announcement-list">
-        {sorted.map((a) => (
-          <AnnouncementCard key={a.id} announcement={a} />
-        ))}
+        {sorted
+          .filter((announcement) => selectedCategory === 'Wszystkie' || announcement.category === selectedCategory)
+          .map((a) => (
+            <AnnouncementCard key={a.id} announcement={a} />
+          ))}
       </div>
     </div>
   )

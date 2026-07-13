@@ -2,6 +2,7 @@
 title: Koronka o godzinie 15:00
 date: 2026-07-04
 pinned: false
+category: Modlitwa
 ---
 
 Godzina **15:00** przypomina o śmierci Pana Jezusa na krzyżu i jest nazywana **Godziną Miłosierdzia**. Jeśli możesz, zatrzymaj się wtedy choć na chwilę i powierz Bożemu Miłosierdziu siebie oraz cały świat.

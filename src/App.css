@@ -3135,6 +3135,62 @@ body[data-nav-menu='open'] {
   color: var(--color-text);
 }
 
+.announcement-filters {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.announcement-filters label {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.announcement-filters select {
+  min-height: 42px;
+  padding: 0.45rem 2.25rem 0.45rem 0.75rem;
+  color: var(--color-text);
+  font: inherit;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+
+.announcement-filters select:focus-visible {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
+  outline-offset: 2px;
+}
+
+.announcement-category {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0.15rem 0.45rem;
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--color-hover-bg);
+  border-radius: 4px;
+}
+
+.announcement-date .announcement-category {
+  margin-left: 0.65rem;
+}
+
+@media (max-width: 600px) {
+  .announcement-filters {
+    display: grid;
+    justify-content: stretch;
+  }
+
+  .announcement-filters select {
+    width: 100%;
+  }
+}
+
 .reminders-details-toggle {
   display: inline-flex;
   align-items: center;

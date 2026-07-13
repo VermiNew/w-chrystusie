@@ -2,6 +2,7 @@
 title: Pierwszy piątek miesiąca — blisko Serca Jezusa
 date: 2026-08-07
 pinned: false
+category: Nabożeństwa
 ---
 
 Najbliższy pierwszy piątek miesiąca przypada **7 sierpnia**. To szczególny dzień modlitwy przy Najświętszym Sercu Pana Jezusa, wdzięczności za Jego miłość oraz wynagrodzenia za grzechy.

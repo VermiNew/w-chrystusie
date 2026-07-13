@@ -2,6 +2,7 @@
 title: Nabożeństwa Majowe
 date: 2026-05-01
 pinned: false
+category: Nabożeństwa
 ---
 
 Kochani bracia i siostry, zachęcam z serca do uczestnictwa w **nabożeństwach majowych**, **Mszach Świętych** i przyjmowania **Komunii** właśnie w tej intencji.

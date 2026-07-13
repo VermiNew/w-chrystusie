@@ -2,6 +2,7 @@
 title: Jak spokojnie przygotować się do spowiedzi?
 date: 2026-07-04
 pinned: false
+category: Formacja
 ---
 
 Spowiedź nie jest egzaminem z bezbłędnej pamięci. Jest spotkaniem z miłosiernym Bogiem, który zna człowieka, pragnie jego nawrócenia i daje łaskę nowego początku.

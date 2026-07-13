@@ -2,6 +2,7 @@
 title: Ze świętym Krzysztofem w drogę
 date: 2026-07-25
 pinned: false
+category: Święta i wspomnienia
 ---
 
 25 lipca wspominamy **świętego Krzysztofa**, patrona kierowców i podróżujących. To dobry moment, aby modlić się o bezpieczeństwo na drogach oraz przypomnieć sobie, że odpowiedzialność za innych jest również konkretnym sposobem okazywania miłości bliźniego.

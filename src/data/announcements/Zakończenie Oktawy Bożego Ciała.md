@@ -2,6 +2,7 @@
 title: Zakończenie Oktawy Bożego Ciała i błogosławieństwo dzieci
 date: 2026-06-11
 pinned: false
+category: Nabożeństwa
 ---
 
 Dziś, w **czwartek**, przeżywamy **zakończenie oktawy Bożego Ciała** — ostatni, ósmy dzień świętowania obecności Pana Jezusa w **Najświętszym Sakramencie**. Na zakończenie udzielane jest też **błogosławieństwo dzieci**.
