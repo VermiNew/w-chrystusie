@@ -10,11 +10,20 @@ function getCommitHash() {
   }
 }
 
+function getContentUpdatedAt() {
+  try {
+    return execSync('git log -1 --format=%cs -- src/data', { encoding: 'utf8' }).trim()
+  } catch {
+    return ''
+  }
+}
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   define: {
     __APP_COMMIT__: JSON.stringify(getCommitHash()),
+    __CONTENT_UPDATED_AT__: JSON.stringify(getContentUpdatedAt()),
   },
   build: {
     rollupOptions: {

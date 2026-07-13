@@ -84,9 +84,10 @@
 
 - [x] `✝` jako zwykły znak HTML zamiast ikony react-icons `FaCross` — niespójność
 - [x] Brak wersji aplikacji (np. z `package.json`)
-- [ ] Brak informacji o ostatniej aktualizacji treści
+- [x] Brak informacji o ostatniej aktualizacji treści
 - [x] Brak linku do strony parafii / twórcy
-- [ ] Stats tylko modlitwy i pieśni — brakuje koronek, różańca, ogłoszeń
+- [x] Stats — dodać liczbę ogłoszeń obok modlitw i pieśni
+- [ ] Stats — rozważyć osobne uwzględnienie koronki i różańca
 
 ## Do zrobienia — motywy
 

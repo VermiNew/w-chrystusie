@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
-import { FaXmark, FaGithub, FaCross, FaMusic, FaGlobe } from 'react-icons/fa6'
+import { FaXmark, FaGithub, FaCross, FaMusic, FaGlobe, FaBullhorn } from 'react-icons/fa6'
 import { prayers } from '../data/prayers'
 import { songs } from '../data/songs'
+import { announcements } from '../data/announcements'
 import logoUrl from '../assets/logo-about.png'
 
 interface Props {
@@ -10,6 +11,11 @@ interface Props {
 }
 
 const CLOSE_DURATION_MS = 250
+
+const formatContentDate = (date: string) => {
+  const [year, month, day] = date.split('-')
+  return year && month && day ? `${day}.${month}.${year}` : ''
+}
 
 export default function AboutModal({ open, onClose }: Props) {
   const dialogRef = useRef<HTMLDialogElement>(null)
@@ -108,6 +114,11 @@ export default function AboutModal({ open, onClose }: Props) {
             <span className="about-stat-value">{songs.length}</span>
             <span className="about-stat-label">pieśni</span>
           </div>
+          <div className="about-stat">
+            <FaBullhorn className="about-stat-icon" />
+            <span className="about-stat-value">{announcements.length}</span>
+            <span className="about-stat-label">ogłoszeń</span>
+          </div>
         </div>
 
         <div className="about-footer">
@@ -119,9 +130,12 @@ export default function AboutModal({ open, onClose }: Props) {
           >
             <FaGithub /> GitHub
           </a>
-          <span className="about-build">build {__APP_COMMIT__}</span>
+          {__CONTENT_UPDATED_AT__ && (
+            <span className="about-updated">Treść zaktualizowana: {formatContentDate(__CONTENT_UPDATED_AT__)}</span>
+          )}
           <span className="about-tech">React · TypeScript · Vite</span>
           <span className="about-license">MIT</span>
+          <span className="about-build">build {__APP_COMMIT__}</span>
         </div>
       </div>
     </dialog>
