@@ -198,7 +198,7 @@
 
 ### Nawigacja i orientacja
 - [x] Użytkownik nie wie gdzie jest w aplikacji — brak breadcrumba ani aktywnego stanu w nav dla podstron (modlitwa szczegółowa, pieśń szczegółowa)
-- [ ] Back-button jest jedyną drogą powrotu — brak sugestii "co dalej" po przeczytaniu modlitwy (powiązane modlitwy, różaniec, koronka)
+- [x] Back-button jest jedyną drogą powrotu — brak sugestii "co dalej" po przeczytaniu modlitwy (powiązane modlitwy, różaniec, koronka)
 - [x] Strona główna nie zmienia się przy kolejnych wizytach — rozważyć "modlitwę dnia" lub "pieśń tygodnia" jako żywy element
 
 ### Desktop — komfort czytania

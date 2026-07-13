@@ -1,8 +1,8 @@
 import { useMemo, useEffect, useState, type CSSProperties } from 'react'
 import { useLocation, useParams, Link } from 'react-router-dom'
-import { FaArrowLeft, FaArrowUpRightFromSquare, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaStar, FaTrash, FaXmark } from 'react-icons/fa6'
+import { FaArrowLeft, FaArrowUpRightFromSquare, FaCalendarDay, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaHandsPraying, FaList, FaStar, FaTrash, FaXmark } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
-import { prayers, type Prayer } from '../data/prayers'
+import { getPrayerOfDay, prayers, type Prayer } from '../data/prayers'
 import ReadingModeToggle from '../components/ReadingModeToggle'
 import { useContentLibrary } from '../hooks/useContentLibrary'
 import ConfirmDialog from '../components/ConfirmDialog'
@@ -88,6 +88,7 @@ export default function PrayersPage() {
   const nextItem = detailIndex >= 0 && detailIndex < siblingItems.length - 1
     ? siblingItems[detailIndex + 1]
     : null
+  const prayerOfDay = getPrayerOfDay()
   // Restore the expanded category first, then the saved list position.
   useEffect(() => {
     if (selected) return
@@ -186,6 +187,25 @@ export default function PrayersPage() {
               <FaChevronRight />
             </Link>
           )}
+        </nav>
+        <nav className="content-next-actions" aria-labelledby="content-next-actions-title">
+          <h2 id="content-next-actions-title">Co dalej?</h2>
+          <div>
+            <Link to="/modlitwy" onClick={prepareListReturn}>
+              <FaList aria-hidden="true" /> Wróć do modlitw
+            </Link>
+            <Link to="/rozaniec">
+              <FaHandsPraying aria-hidden="true" /> Różaniec
+            </Link>
+            <Link to="/koronka">
+              <FaHandsPraying aria-hidden="true" /> Koronka
+            </Link>
+            {selected.id !== prayerOfDay.id && (
+              <Link to={`/modlitwy/${encodeRouteId(prayerOfDay.id)}`}>
+                <FaCalendarDay aria-hidden="true" /> Modlitwa dnia
+              </Link>
+            )}
+          </div>
         </nav>
       </div>
     )
