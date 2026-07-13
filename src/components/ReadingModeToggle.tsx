@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
-import { FaArrowRotateLeft, FaCompress, FaExpand, FaPause, FaPlay, FaRegStar, FaShareNodes, FaStar, FaTextHeight } from 'react-icons/fa6'
+import { FaArrowRotateLeft, FaCompress, FaExpand, FaPause, FaPlay, FaRegStar, FaShareNodes, FaStar, FaStop, FaTextHeight, FaVolumeHigh } from 'react-icons/fa6'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
 import { useReadingPosition } from '../hooks/useReadingPosition'
+import { useSpeechSynthesis } from '../hooks/useSpeechSynthesis'
 
 const AUTO_SCROLL_STEPS = [
   { intervalMs: 4200, distance: 120 },
@@ -36,8 +37,10 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
   const stepStartedAtRef = useRef<number | null>(null)
   const pendingReadingProgressRef = useRef<number | null>(null)
   const fontControlsRef = useRef<HTMLDivElement>(null)
+  const controlsRef = useRef<HTMLDivElement>(null)
   const { wasRestored, restart } = useReadingPosition(contentKey)
-  useScreenWakeLock(isActive)
+  const speech = useSpeechSynthesis()
+  useScreenWakeLock(isActive || speech.status !== 'idle')
 
   useEffect(() => {
     const scale = fontSize / 100
@@ -207,8 +210,24 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
     }
   }
 
+  const toggleSpeech = () => {
+    if (speech.status === 'speaking') {
+      speech.pause()
+      return
+    }
+    if (speech.status === 'paused') {
+      speech.resume()
+      return
+    }
+
+    const content = controlsRef.current
+      ?.closest('.content-detail-page')
+      ?.querySelector<HTMLElement>('.prayer-text, .song-text')
+    speech.start(content?.innerText.trim() ?? '')
+  }
+
   return (
-    <div className="content-reading-controls">
+    <div ref={controlsRef} className="content-reading-controls">
       <button
         className="content-reading-toggle"
         type="button"
@@ -229,6 +248,32 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
         <FaShareNodes aria-hidden="true" />
         <span>{shareStatus || 'Udostępnij'}</span>
       </button>
+
+      <button
+        className="content-reading-toggle content-reading-toggle--speech"
+        type="button"
+        aria-pressed={speech.status !== 'idle'}
+        disabled={!speech.supported}
+        title={speech.supported ? 'Czytaj treść na głos' : 'Czytanie na głos nie jest obsługiwane'}
+        onClick={toggleSpeech}
+      >
+        {speech.status === 'speaking' && <FaPause aria-hidden="true" />}
+        {speech.status === 'paused' && <FaPlay aria-hidden="true" />}
+        {speech.status === 'idle' && <FaVolumeHigh aria-hidden="true" />}
+        <span>{speech.status === 'speaking' ? 'Pauza' : speech.status === 'paused' ? 'Wznów' : 'Czytaj'}</span>
+      </button>
+
+      {speech.status !== 'idle' && (
+        <button
+          className="content-reading-toggle content-reading-toggle--speech-stop"
+          type="button"
+          title="Zatrzymaj czytanie"
+          aria-label="Zatrzymaj czytanie"
+          onClick={speech.stop}
+        >
+          <FaStop aria-hidden="true" />
+        </button>
+      )}
 
       <div ref={fontControlsRef} className="content-font-size-menu content-reading-secondary">
         <button

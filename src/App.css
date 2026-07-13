@@ -1126,6 +1126,22 @@ body[data-nav-menu='open'] {
   min-width: 7.75rem;
 }
 
+.content-reading-toggle--speech {
+  min-width: 6.75rem;
+}
+
+.content-reading-toggle--speech-stop {
+  width: 48px;
+  padding-inline: 0;
+  color: var(--color-danger);
+}
+
+.content-reading-toggle:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
 .content-font-size-menu {
   position: relative;
 }

@@ -117,9 +117,9 @@
 ## Do zrobienia — tryb czytania z głosem (duży feature)
 
 ### Faza 1 — TTS (Web Speech API, zero zależności)
-- [ ] Przycisk "Czytaj" w widoku modlitwy/pieśni uruchamia `window.speechSynthesis`
-- [ ] Wybór głosu polskiego (`SpeechSynthesisVoice` z `lang: 'pl-PL'`) — `speechSynthesis.getVoices()` filtrowane po języku
-- [ ] Przyciski: Start / Pause / Stop; synchronizacja ze stanem komponentu
+- [x] Przycisk "Czytaj" w widoku modlitwy/pieśni uruchamia `window.speechSynthesis`
+- [x] Wybór głosu polskiego (`SpeechSynthesisVoice` z `lang: 'pl-PL'`) — `speechSynthesis.getVoices()` filtrowane po języku
+- [x] Przyciski: Start / Pause / Stop; synchronizacja ze stanem komponentu
 - [ ] Przed podpięciem Whisper: `SpeechSynthesisUtterance.onboundary` daje eventy słowo-po-słowie (`charIndex`, `charLength`) — wystarczy do podświetlania słów przy TTS bez żadnego modelu
 
 ### Faza 2 — tryb skupienia (3 linie)
@@ -139,7 +139,7 @@
 ### Uwagi architektoniczne
 - [ ] Tryb skupienia i TTS to osobny `mode` w stanie widoku (`'normal' | 'focus' | 'reading'`) — nie mieszać z głównym layoutem
 - [ ] Na mobile: tryb skupienia powinien ukrywać header i back-button (fullscreen feel) z przyciskiem wyjścia
-- [ ] `speechSynthesis` jest globalny — trzeba `cancel()` przy odmontowaniu komponentu i przy nawigacji
+- [x] `speechSynthesis` jest globalny — trzeba `cancel()` przy odmontowaniu komponentu i przy nawigacji
 - [ ] Faza 1 jest warta zrobienia samodzielnie (małe nakłady, duża wartość); Faza 3 Wariant B to osobny projekt
 
 ## Do zrobienia — mobile UX
