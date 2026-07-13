@@ -2283,7 +2283,32 @@ body[data-nav-menu='open'] {
   cursor: pointer;
   touch-action: manipulation;
   user-select: none;
-  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  opacity: 1;
+  visibility: visible;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s, opacity 0.22s, transform 0.22s, visibility 0s;
+}
+
+.prayer-nav-next-slot {
+  display: grid;
+}
+
+.prayer-nav-next-slot > button {
+  grid-area: 1 / 1;
+}
+
+.prayer-nav-button--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition-delay: 0s, 0s, 0s, 0s, 0s, 0.22s;
+}
+
+.prayer-nav-button--previous.prayer-nav-button--hidden {
+  transform: translateX(-12px);
+}
+
+.prayer-nav-button--next.prayer-nav-button--hidden {
+  transform: translateX(12px);
 }
 
 @media (hover: hover) {

@@ -189,23 +189,41 @@ export default function ChapletPage() {
 
       <div className="prayer-sequence-controls">
         <div className="chaplet-nav">
-          {!isFirst ? (
-            <button className="chaplet-nav-button" onClick={goPrev} aria-label="Poprzedni krok koronki">
-              <FaArrowLeft className="prayer-nav-icon" aria-hidden="true" />
-              <span>Wstecz</span>
-            </button>
-          ) : <span />}
-          {!isLast ? (
-            <button className="chaplet-nav-button chaplet-nav-button--next" onClick={goNext} aria-label="Następny krok koronki">
+          <button
+            className={`chaplet-nav-button prayer-nav-button--previous${isFirst ? ' prayer-nav-button--hidden' : ''}`}
+            onClick={goPrev}
+            aria-label="Poprzedni krok koronki"
+            aria-hidden={isFirst}
+            disabled={isFirst}
+            tabIndex={isFirst ? -1 : 0}
+          >
+            <FaArrowLeft className="prayer-nav-icon" aria-hidden="true" />
+            <span>Wstecz</span>
+          </button>
+          <span className="prayer-nav-next-slot">
+            <button
+              className={`chaplet-nav-button chaplet-nav-button--next prayer-nav-button--next${isLast ? ' prayer-nav-button--hidden' : ''}`}
+              onClick={goNext}
+              aria-label="Następny krok koronki"
+              aria-hidden={isLast}
+              disabled={isLast}
+              tabIndex={isLast ? -1 : 0}
+            >
               <span>Dalej</span>
               <FaArrowRight className="prayer-nav-icon" aria-hidden="true" />
             </button>
-          ) : (
-            <button className="chaplet-nav-button chaplet-nav-button--next" onClick={complete} aria-label="Zakończ koronkę">
+            <button
+              className={`chaplet-nav-button chaplet-nav-button--next prayer-nav-button--next${isLast ? '' : ' prayer-nav-button--hidden'}`}
+              onClick={complete}
+              aria-label="Zakończ koronkę"
+              aria-hidden={!isLast}
+              disabled={!isLast}
+              tabIndex={isLast ? 0 : -1}
+            >
               <span>Zakończ</span>
               <FaCheck className="prayer-nav-icon" aria-hidden="true" />
             </button>
-          )}
+          </span>
         </div>
         <p
           className={`chaplet-keyboard-hint${showKeyboardHint ? '' : ' prayer-keyboard-hint--hidden'}`}

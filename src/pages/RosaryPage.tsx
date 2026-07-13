@@ -287,23 +287,41 @@ export default function RosaryPage() {
 
       <div className="prayer-sequence-controls">
         <div className="rosary-nav">
-          {!isFirst ? (
-            <button className="rosary-nav-button" onClick={goPrev} aria-label="Poprzedni krok różańca">
-              <FaArrowLeft className="prayer-nav-icon" aria-hidden="true" />
-              <span>Wstecz</span>
-            </button>
-          ) : <span />}
-          {!isLast ? (
-            <button className="rosary-nav-button rosary-nav-button--next" onClick={goNext} aria-label="Następny krok różańca">
+          <button
+            className={`rosary-nav-button prayer-nav-button--previous${isFirst ? ' prayer-nav-button--hidden' : ''}`}
+            onClick={goPrev}
+            aria-label="Poprzedni krok różańca"
+            aria-hidden={isFirst}
+            disabled={isFirst}
+            tabIndex={isFirst ? -1 : 0}
+          >
+            <FaArrowLeft className="prayer-nav-icon" aria-hidden="true" />
+            <span>Wstecz</span>
+          </button>
+          <span className="prayer-nav-next-slot">
+            <button
+              className={`rosary-nav-button rosary-nav-button--next prayer-nav-button--next${isLast ? ' prayer-nav-button--hidden' : ''}`}
+              onClick={goNext}
+              aria-label="Następny krok różańca"
+              aria-hidden={isLast}
+              disabled={isLast}
+              tabIndex={isLast ? -1 : 0}
+            >
               <span>Dalej</span>
               <FaArrowRight className="prayer-nav-icon" aria-hidden="true" />
             </button>
-          ) : (
-            <button className="rosary-nav-button rosary-nav-button--next" onClick={finishRosary} aria-label="Zakończ różaniec">
+            <button
+              className={`rosary-nav-button rosary-nav-button--next prayer-nav-button--next${isLast ? '' : ' prayer-nav-button--hidden'}`}
+              onClick={finishRosary}
+              aria-label="Zakończ różaniec"
+              aria-hidden={!isLast}
+              disabled={!isLast}
+              tabIndex={isLast ? 0 : -1}
+            >
               <span>Zakończ</span>
               <FaCheck className="prayer-nav-icon" aria-hidden="true" />
             </button>
-          )}
+          </span>
         </div>
         <p
           className={`rosary-keyboard-hint${showKeyboardHint ? '' : ' prayer-keyboard-hint--hidden'}`}
