@@ -3,11 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>W Chrystusie</title>
-    <script>
-      sessionStorage.setItem('spa-redirect', window.location.href)
-      window.location.replace('/')
-    </script>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#1a3a5c" />
+    <title>Nie znaleziono strony | W Chrystusie</title>
+    <style>
+      :root {
+        color: #172033;
+        background: #f7f9fc;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: grid;
+        min-height: 100vh;
+        min-height: 100svh;
+        margin: 0;
+        place-items: center;
+        padding: 1.5rem;
+      }
+
+      main {
+        width: min(100%, 36rem);
+        padding: clamp(2rem, 8vw, 4rem);
+        border: 1px solid #dbe3ee;
+        border-radius: 1rem;
+        background: #fff;
+        box-shadow: 0 1rem 3rem rgb(26 58 92 / 8%);
+        text-align: center;
+      }
+
+      .symbol {
+        margin: 0;
+        color: #1a3a5c;
+        font-size: 3rem;
+        line-height: 1;
+      }
+
+      .eyebrow {
+        margin: 1.5rem 0 0.5rem;
+        color: #526b86;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        color: #172033;
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+        line-height: 1.2;
+      }
+
+      p {
+        margin: 1rem auto 0;
+        color: #60748e;
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      a {
+        display: inline-flex;
+        min-height: 2.75rem;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        padding: 0.75rem 1.25rem;
+        border-radius: 0.625rem;
+        background: #1a3a5c;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      a:hover {
+        background: #244d78;
+      }
+
+      a:focus-visible {
+        outline: 3px solid #f1c75b;
+        outline-offset: 3px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <p class="symbol" aria-hidden="true">✝</p>
+      <p class="eyebrow">Błąd 404</p>
+      <h1>Nie znaleziono strony</h1>
+      <p>Podany adres może być nieprawidłowy albo strona została przeniesiona.</p>
+      <a href="/">Wróć na stronę główną</a>
+    </main>
+  </body>
 </html>

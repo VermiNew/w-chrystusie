@@ -239,7 +239,7 @@
 - [x] Ustawić docelowy `VITE_SITE_URL` dla `https://w-chrystusie.pages.dev/`; generator i Vite korzystają z tej samej konfiguracji produkcyjnej
 - [x] Potwierdzić wdrożenie w katalogu głównym Cloudflare Pages; domyślne `base` Vite i router bez `basename` są właściwe
 - [x] Dostosować manifest, service worker i ścieżki ikon do adresu bazowego oraz objąć zasoby buildu wersjonowanym cache offline
-- [ ] Zastąpić przekierowanie GitHub Pages w `404.html` prawdziwą stroną błędu z `noindex`, zachowując poprawny HTTP 404 dla nieznanych adresów
+- [x] Zastąpić przekierowanie GitHub Pages w `404.html` prawdziwą stroną błędu z `noindex`, zachowując poprawny HTTP 404 dla nieznanych adresów
 - [ ] Dodać automatyczne wdrożenie, które publikuje kompletne `dist/` razem ze statycznymi wejściami tras
 - [ ] Po wdrożeniu zweryfikować statusy HTTP bezpośrednich adresów, canonical i Open Graph na publicznej domenie
 - [ ] Zgłosić `sitemap.xml` w Google Search Console i Bing Webmaster Tools oraz monitorować błędy indeksowania
