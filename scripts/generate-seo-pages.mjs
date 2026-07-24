@@ -34,6 +34,11 @@ const staticPages = [
     noIndex: true,
   },
   {
+    path: '/psalmy',
+    title: 'Psalmy — katalog tekstów | W Chrystusie',
+    description: 'Katalog Psalmów z dokładnymi adresami tekstów źródłowych i informacją o prawach publikacji.',
+  },
+  {
     path: '/spiewnik',
     title: 'Śpiewnik katolicki | W Chrystusie',
     description: 'Teksty polskich pieśni kościelnych, hymnów, kolęd oraz pieśni na okresy liturgiczne.',

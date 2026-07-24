@@ -35,6 +35,11 @@ const staticRoutes: Record<string, RouteMetadata> = {
     canonicalPath: '/pismo-swiete',
     noIndex: true,
   },
+  '/psalmy': {
+    title: 'Psalmy — katalog tekstów | W Chrystusie',
+    description: 'Katalog Psalmów z dokładnymi adresami tekstów źródłowych i informacją o prawach publikacji.',
+    canonicalPath: '/psalmy',
+  },
   '/spiewnik': {
     title: 'Śpiewnik katolicki | W Chrystusie',
     description: 'Teksty polskich pieśni kościelnych, hymnów, kolęd oraz pieśni na okresy liturgiczne.',

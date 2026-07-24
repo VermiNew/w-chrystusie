@@ -275,6 +275,7 @@
 - [ ] Zaimportować po weryfikacji sekcję „Pieśni” z `modlitwa7.pl/piesni/`
 - [ ] Zaimportować po weryfikacji sekcję „Teksty” z `modlitwa7.pl/teksty/`
 - [ ] Zaimportować po weryfikacji 4 strony psalmów z `modlitwa7.pl/psalmy/`
+  - [x] Skatalogować stronę 1/4 jako bezpieczne odsyłacze z dokładnym URL-em i statusem praw
 - [ ] Przeanalizować śpiewnik `katolicki.net/index.php/modlitwa/modlitwa-spiewnik.html` jako źródło indeksu; pełne teksty dodać tylko z potwierdzonym prawem publikacji
 - [ ] Przy imporcie zachować dokładny URL każdej pozycji, kategorię, autora i informację o pochodzeniu
 - [ ] Znormalizować polskie znaki, cudzysłowy, wielokrotne spacje, encje HTML i błędne kodowanie

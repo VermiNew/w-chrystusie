@@ -243,6 +243,7 @@ body[data-nav-menu='open'] {
   .nav-links--open li:nth-child(9) { transition-delay: 0.66s; }
   .nav-links--open li:nth-child(10) { transition-delay: 0.73s; }
   .nav-links--open li:nth-child(11) { transition-delay: 0.8s; }
+  .nav-links--open li:nth-child(12) { transition-delay: 0.87s; }
 
   .nav-theme-label,
   .nav-about-label {
@@ -910,6 +911,129 @@ body[data-nav-menu='open'] {
   color: var(--color-primary);
   font-weight: 600;
   text-decoration: underline;
+}
+
+/* Psalms */
+
+.psalms-page {
+  max-width: 58rem;
+}
+
+.psalms-header {
+  margin-bottom: 1.5rem;
+}
+
+.psalms-eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.psalms-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.psalms-header > p:last-child {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.psalms-rights-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+}
+
+.psalms-rights-notice > svg {
+  flex: 0 0 auto;
+  margin-top: 0.2rem;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+.psalms-rights-notice h2 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+}
+
+.psalms-rights-notice p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.psalm-catalog-list {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.psalm-catalog-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 76px;
+  padding: 0.8rem 1rem;
+  color: inherit;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.psalm-catalog-list a > svg {
+  flex: 0 0 auto;
+  color: var(--color-primary);
+}
+
+.psalm-catalog-copy {
+  display: grid;
+  min-width: 0;
+  gap: 0.2rem;
+}
+
+.psalm-catalog-copy small {
+  color: var(--color-text-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.psalm-catalog-copy strong {
+  color: var(--color-primary);
+  line-height: 1.35;
+}
+
+.psalm-source-url {
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  overflow-wrap: anywhere;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .psalm-catalog-list a:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-1px);
+  }
+}
+
+.psalm-catalog-list a:focus-visible {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
+  outline-offset: 2px;
 }
 
 .scripture-reader {
@@ -2074,6 +2198,8 @@ body[data-nav-menu='open'] {
 .section-tile:nth-child(4) { animation-name: tile-slide-left; animation-delay: 0.35s; }
 .section-tile:nth-child(5) { animation-delay: 0.45s; }
 .section-tile:nth-child(6) { animation-name: tile-slide-right; animation-delay: 0.55s; }
+/* Row 3 */
+.section-tile:nth-child(7) { animation-delay: 0.5s; }
 
 @keyframes tile-slide-left {
   from { opacity: 0; transform: translateX(-20px); }
@@ -2150,6 +2276,7 @@ body[data-nav-menu='open'] {
   .section-tile:nth-child(4) { animation-delay: 0.31s; }
   .section-tile:nth-child(5) { animation-delay: 0.38s; }
   .section-tile:nth-child(6) { animation-delay: 0.45s; }
+  .section-tile:nth-child(7) { animation-delay: 0.52s; }
 
   .hero-title {
     font-size: 2rem;

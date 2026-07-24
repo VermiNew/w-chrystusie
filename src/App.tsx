@@ -9,6 +9,7 @@ import './App.css'
 const HomePage = lazy(() => import('./pages/HomePage'))
 const PrayersPage = lazy(() => import('./pages/PrayersPage'))
 const ScripturePage = lazy(() => import('./pages/ScripturePage'))
+const PsalmsPage = lazy(() => import('./pages/PsalmsPage'))
 const SongbookPage = lazy(() => import('./pages/SongbookPage'))
 const RosaryPage = lazy(() => import('./pages/RosaryPage'))
 const ChapletPage = lazy(() => import('./pages/ChapletPage'))
@@ -55,6 +56,7 @@ function AppRoutes() {
             <Route path="/modlitwy" element={<PrayersPage />} />
             <Route path="/modlitwy/:id" element={<PrayersPage />} />
             <Route path="/pismo-swiete" element={<ScripturePage />} />
+            <Route path="/psalmy" element={<PsalmsPage />} />
             <Route path="/spiewnik" element={<SongbookPage />} />
             <Route path="/spiewnik/:id" element={<SongbookPage />} />
             <Route path="/rozaniec" element={<RosaryPage />} />
