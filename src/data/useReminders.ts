@@ -4,6 +4,8 @@ import { REMINDERS } from './reminders'
 const STORAGE_KEY = 'prayer-reminders'
 const TIMES_STORAGE_KEY = 'prayer-reminders-times'
 const NOTIF_KEY = 'prayer-reminders-notif'
+const VALID_TIME_PATTERN = /^(?:[01]\d|2[0-3]):[0-5]\d$/
+const reminderIds = new Set(REMINDERS.map((reminder) => reminder.id))
 // How long to wait for the SW to become ready before falling back to
 // navigator.serviceWorker.getRegistration(). 1.5 s is enough for a
 // freshly installed worker to activate while not blocking the UI.
@@ -29,28 +31,55 @@ export interface BrowserNotificationResult {
 
 function getEnabledIds(): string[] {
   try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
+    const value: unknown = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
+    if (!Array.isArray(value)) return []
+    return [...new Set(
+      value.filter((id): id is string => typeof id === 'string' && reminderIds.has(id)),
+    )]
   } catch {
     return []
   }
 }
 
 function saveEnabledIds(ids: string[]) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(ids))
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(ids))
+  } catch {
+    // Storage can be unavailable in private or restricted browsing contexts.
+  }
 }
 
 type CustomTimesMap = Record<string, string[]>
 
+function normalizeCustomTimesMap(value: unknown): CustomTimesMap {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return {}
+
+  const map: CustomTimesMap = {}
+  for (const [id, times] of Object.entries(value)) {
+    if (!reminderIds.has(id) || !Array.isArray(times)) continue
+    const validTimes = [...new Set(
+      times.filter((time): time is string => typeof time === 'string' && VALID_TIME_PATTERN.test(time)),
+    )]
+    if (validTimes.length > 0) map[id] = validTimes
+  }
+  return map
+}
+
 function getCustomTimesMap(): CustomTimesMap {
   try {
-    return JSON.parse(localStorage.getItem(TIMES_STORAGE_KEY) || '{}')
+    const value: unknown = JSON.parse(localStorage.getItem(TIMES_STORAGE_KEY) || '{}')
+    return normalizeCustomTimesMap(value)
   } catch {
     return {}
   }
 }
 
 function saveCustomTimesMap(map: CustomTimesMap) {
-  localStorage.setItem(TIMES_STORAGE_KEY, JSON.stringify(map))
+  try {
+    localStorage.setItem(TIMES_STORAGE_KEY, JSON.stringify(normalizeCustomTimesMap(map)))
+  } catch {
+    // Keep defaults when persistent storage is unavailable.
+  }
 }
 
 // ---- External store: enabled IDs ----
@@ -122,10 +151,11 @@ export function disableAll() {
 /** Set custom times for a single reminder. Pass `null` to reset to defaults. */
 export function setCustomTimes(id: string, times: string[] | null) {
   const map = getCustomTimesMap()
-  if (times === null) {
+  const validTimes = times?.filter((time) => VALID_TIME_PATTERN.test(time)) ?? []
+  if (!reminderIds.has(id) || validTimes.length === 0) {
     delete map[id]
   } else {
-    map[id] = times
+    map[id] = [...new Set(validTimes)]
   }
   saveCustomTimesMap(map)
   notifyTimes()
@@ -134,7 +164,19 @@ export function setCustomTimes(id: string, times: string[] | null) {
 // ---- Browser notifications ----
 
 function getNotifEnabled(): boolean {
-  return localStorage.getItem(NOTIF_KEY) === 'true'
+  try {
+    return localStorage.getItem(NOTIF_KEY) === 'true'
+  } catch {
+    return false
+  }
+}
+
+function saveNotifEnabled(enabled: boolean) {
+  try {
+    localStorage.setItem(NOTIF_KEY, String(enabled))
+  } catch {
+    // Notifications remain disabled when the preference cannot be persisted.
+  }
 }
 
 let notifListeners: (() => void)[] = []
@@ -160,13 +202,13 @@ export async function enableBrowserNotifications(): Promise<boolean> {
   if (granted) {
     await ensureServiceWorkerRegistration()
   }
-  localStorage.setItem(NOTIF_KEY, String(granted))
+  saveNotifEnabled(granted)
   notifyNotifListeners()
   return granted
 }
 
 export function disableBrowserNotifications() {
-  localStorage.setItem(NOTIF_KEY, 'false')
+  saveNotifEnabled(false)
   notifyNotifListeners()
 }
 
@@ -272,7 +314,7 @@ async function getReadyServiceWorkerRegistration(): Promise<ServiceWorkerRegistr
 export function resetAll() {
   saveEnabledIds([])
   saveCustomTimesMap({})
-  localStorage.setItem(NOTIF_KEY, 'false')
+  saveNotifEnabled(false)
   notifyEnabled()
   notifyTimes()
   notifyNotifListeners()
