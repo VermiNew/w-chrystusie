@@ -1,7 +1,7 @@
 ---
 title: Nowenna do św. Katarzyny ze Sieny (I)
 category: Nabożeństwa
-source: dolinamodlitwy.pl
+source: https://dolinamodlitwy.pl/nowenna-do-sw-katarzyny-ze-sieny-20-28-kwietnia-i/
 ---
 
 Nowennę odmawia się 20–28 kwietnia (wspomnienie 29 kwietnia).

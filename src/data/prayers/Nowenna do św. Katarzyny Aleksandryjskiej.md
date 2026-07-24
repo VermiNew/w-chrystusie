@@ -1,7 +1,7 @@
 ---
 title: Nowenna do św. Katarzyny Aleksandryjskiej
 category: Nabożeństwa
-source: dolinamodlitwy.pl
+source: https://dolinamodlitwy.pl/nowenna-do-sw-katarzyny-aleksandryjskiej-16-24-listopada/
 ---
 
 Nowennę odmawia się 16–24 listopada (wspomnienie 25 listopada).

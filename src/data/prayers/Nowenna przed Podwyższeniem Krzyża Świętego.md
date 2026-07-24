@@ -1,7 +1,7 @@
 ---
 title: Nowenna przed Podwyższeniem Krzyża Świętego
 category: Nabożeństwa
-source: dolinamodlitwy.pl
+source: https://dolinamodlitwy.pl/nowenna-przed-swietem-podwyzszenia-krzyza-swietego-5-13-wrzesnia/
 ---
 
 Nowennę odmawia się 5–13 września (święto Podwyższenia Krzyża Świętego 14 września).

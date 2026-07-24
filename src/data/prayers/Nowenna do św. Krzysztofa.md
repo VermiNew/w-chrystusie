@@ -1,7 +1,7 @@
 ---
 title: Nowenna do św. Krzysztofa
 category: Nabożeństwa
-source: dolinamodlitwy.pl
+source: https://dolinamodlitwy.pl/nowenna-do-sw-krzysztofa-16-24-lipca/
 ---
 
 Nowennę odmawia się 16–24 lipca (wspomnienie 25 lipca).

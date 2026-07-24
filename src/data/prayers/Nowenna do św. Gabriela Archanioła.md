@@ -1,7 +1,7 @@
 ---
 title: Nowenna do św. Gabriela Archanioła
 category: Nabożeństwa
-source: dolinamodlitwy.pl
+source: https://dolinamodlitwy.pl/nowenna-do-sw-gabriela-archaniola/
 ---
 
 Nowennę odmawia się 9 dni przed wspomnieniem (29 września).

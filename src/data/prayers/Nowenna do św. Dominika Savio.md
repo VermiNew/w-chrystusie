@@ -1,7 +1,7 @@
 ---
 title: Nowenna do św. Dominika Savio
 category: Nabożeństwa
-source: dolinamodlitwy.pl
+source: https://dolinamodlitwy.pl/nowenna-do-sw-dominika-savio-29-luty-8-marca/
 ---
 
 Nowennę odmawia się 29 lutego – 8 marca (lub 9 dni przed 9 marca, wspomnienie 9 marca).

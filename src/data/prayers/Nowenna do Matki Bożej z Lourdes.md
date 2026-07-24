@@ -1,7 +1,7 @@
 ---
 title: Nowenna do Matki Bożej z Lourdes
 category: Nabożeństwa
-source: dolinamodlitwy.pl
+source: https://dolinamodlitwy.pl/nowenna-do-matki-bozej-z-lourdes-2-12-lutego/
 ---
 
 Nowennę odmawia się 2–10 lutego przed Świętem Najświętszej Maryi Panny z Lourdes i Światowym Dniem Chorego (11 lutego).

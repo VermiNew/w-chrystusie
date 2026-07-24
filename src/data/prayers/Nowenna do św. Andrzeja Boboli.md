@@ -1,7 +1,7 @@
 ---
 title: Nowenna do św. Andrzeja Boboli
 category: Nabożeństwa
-source: dolinamodlitwy.pl
+source: https://dolinamodlitwy.pl/nowenna-do-sw-andrzeja-boboli-7-maja-15-maja/
 ---
 
 Nowennę odmawia się 7–15 maja (wspomnienie 16 maja). Św. Andrzej Bobola — patron Polski.

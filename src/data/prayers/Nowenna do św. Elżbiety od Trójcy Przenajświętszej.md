@@ -1,7 +1,7 @@
 ---
 title: Nowenna do św. Elżbiety od Trójcy Przenajświętszej
 category: Nabożeństwa
-source: dolinamodlitwy.pl
+source: https://dolinamodlitwy.pl/nowenna-do-sw-elzbiety-od-trojcy-przenajswietszej-30-pazdziernika-7-listopada/
 ---
 
 Nowennę odmawia się 31 października – 8 listopada (wspomnienie 9 listopada).
