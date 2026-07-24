@@ -143,6 +143,7 @@ export interface RosaryStep {
   label: string
   prayer: string
   counter?: string
+  context?: string
   mystery?: string
 }
 
@@ -161,16 +162,23 @@ export function buildRosarySteps(mysterySet: MysterySet): RosaryStep[] {
 
   for (let decade = 0; decade < 5; decade++) {
     const mystery = mysterySet.mysteries[decade]
+    const context = `Dziesiątek ${decade + 1} z 5`
 
     steps.push({ label: `Tajemnica ${decade + 1}`, prayer: mystery, mystery })
-    steps.push({ label: 'Ojcze Nasz', prayer: prayers.ourFather, mystery })
+    steps.push({ label: 'Ojcze Nasz', prayer: prayers.ourFather, context, mystery })
 
     for (let i = 1; i <= 10; i++) {
-      steps.push({ label: 'Zdrowaś Mario', prayer: prayers.hailMary, counter: `${i}/10`, mystery })
+      steps.push({
+        label: 'Zdrowaś Mario',
+        prayer: prayers.hailMary,
+        counter: `${i}/10`,
+        context,
+        mystery,
+      })
     }
 
-    steps.push({ label: 'Chwała Ojcu', prayer: prayers.gloryBe, mystery })
-    steps.push({ label: 'Modlitwa Fatimska', prayer: prayers.fatima, mystery })
+    steps.push({ label: 'Chwała Ojcu', prayer: prayers.gloryBe, context, mystery })
+    steps.push({ label: 'Modlitwa Fatimska', prayer: prayers.fatima, context, mystery })
   }
 
   steps.push({ label: 'Pod Twoją Obronę', prayer: prayers.subTuumPraesidium })

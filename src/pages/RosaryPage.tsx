@@ -321,6 +321,7 @@ export default function RosaryPage() {
         <h2 className="rosary-label">
           {step.label}
           {step.counter && <span className="rosary-counter"> ({step.counter})</span>}
+          {step.context && <span className="rosary-context">{step.context}</span>}
         </h2>
         <p className="rosary-prayer">{step.prayer}</p>
       </div>
