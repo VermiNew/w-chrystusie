@@ -237,13 +237,18 @@
 ## Do zrobienia — SEO, indeksowanie i wdrożenie produkcyjne
 
 - [x] Ustawić docelowy `VITE_SITE_URL` dla `https://w-chrystusie.pages.dev/`; generator i Vite korzystają z tej samej konfiguracji produkcyjnej
-- [ ] Ustawić produkcyjny `base` Vite i `basename` routera, jeśli aplikacja będzie działać w podkatalogu (np. GitHub Project Pages)
-- [ ] Dostosować `404.html`, manifest, service worker i ścieżki ikon do wybranego adresu bazowego
+- [x] Potwierdzić wdrożenie w katalogu głównym Cloudflare Pages; domyślne `base` Vite i router bez `basename` są właściwe
+- [x] Dostosować manifest, service worker i ścieżki ikon do adresu bazowego oraz objąć zasoby buildu wersjonowanym cache offline
+- [ ] Zastąpić przekierowanie GitHub Pages w `404.html` prawdziwą stroną błędu z `noindex`, zachowując poprawny HTTP 404 dla nieznanych adresów
 - [ ] Dodać automatyczne wdrożenie, które publikuje kompletne `dist/` razem ze statycznymi wejściami tras
 - [ ] Po wdrożeniu zweryfikować statusy HTTP bezpośrednich adresów, canonical i Open Graph na publicznej domenie
 - [ ] Zgłosić `sitemap.xml` w Google Search Console i Bing Webmaster Tools oraz monitorować błędy indeksowania
 - [ ] Dodać automatyczną kontrolę niedziałających linków wewnętrznych i zewnętrznych przed publikacją
 - [ ] Zmniejszyć główny pakiet JavaScript (obecnie około 1,55 MB przed gzip) przez podział danych treści na fragmenty ładowane per sekcja
+- [x] Zaktualizować zależności produkcyjne i deweloperskie; `npm audit` oraz `npm audit --omit=dev` zwracają 0 podatności
+- [x] Nadać dialogom dostępne nazwy, opisy i przewidywalny fokus początkowy
+- [x] Walidować ustawienia przypomnień odczytywane z `localStorage` i bezpiecznie obsługiwać błędy pamięci przeglądarki
+- [ ] Przenieść fonty Google do lokalnych zasobów, aby typografia działała w pełni offline i nie wymagała zewnętrznego żądania
 
 ## Do zrobienia — źródła treści i wiarygodność
 
