@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
-import { FaXmark, FaGithub, FaCross, FaMusic, FaGlobe, FaBullhorn } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
+import { FaXmark, FaGithub, FaCross, FaMusic, FaGlobe, FaBullhorn, FaLink } from 'react-icons/fa6'
 import { prayers } from '../data/prayers'
 import { songs } from '../data/songs'
 import { announcements } from '../data/announcements'
@@ -120,6 +121,10 @@ export default function AboutModal({ open, onClose }: Props) {
             <span className="about-stat-label">ogłoszeń</span>
           </div>
         </div>
+
+        <Link className="about-sources-link" to="/zrodla" onClick={handleClose}>
+          <FaLink aria-hidden="true" /> Źródła i materiały
+        </Link>
 
         <div className="about-footer">
           <a

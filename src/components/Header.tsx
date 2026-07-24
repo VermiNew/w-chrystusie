@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import { FaCross, FaBookBible, FaMusic, FaMagnifyingGlass, FaBars, FaXmark, FaHandsPraying, FaBullhorn, FaBell, FaCircleInfo, FaMoon, FaSun } from 'react-icons/fa6'
+import { FaCross, FaBookBible, FaMusic, FaMagnifyingGlass, FaBars, FaXmark, FaHandsPraying, FaBullhorn, FaBell, FaCircleInfo, FaLink, FaMoon, FaSun } from 'react-icons/fa6'
 import { announcements } from '../data/announcements'
 import { useUnreadCount } from '../data/useReadAnnouncements'
 import { useHasAnyReminder } from '../data/useReminders'
@@ -69,6 +69,7 @@ export default function Header() {
             </NavLink>
           </li>
           <li><NavLink to="/szukaj" onClick={closeMenu}><FaMagnifyingGlass /> Szukaj</NavLink></li>
+          <li><NavLink to="/zrodla" onClick={closeMenu}><FaLink /> Źródła</NavLink></li>
           <li className="nav-reminders-item">
             <button
               className={`nav-reminders-btn${hasReminders ? ' nav-reminders-btn--active' : ''}`}
