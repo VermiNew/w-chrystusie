@@ -236,7 +236,7 @@
 
 ## Do zrobienia — SEO, indeksowanie i wdrożenie produkcyjne
 
-- [ ] Ustawić docelowy `VITE_SITE_URL` w środowisku produkcyjnym; bez znanej domeny build używa wyłącznie lokalnego adresu do weryfikacji
+- [x] Ustawić docelowy `VITE_SITE_URL` dla `https://w-chrystusie.pages.dev/`; generator i Vite korzystają z tej samej konfiguracji produkcyjnej
 - [ ] Ustawić produkcyjny `base` Vite i `basename` routera, jeśli aplikacja będzie działać w podkatalogu (np. GitHub Project Pages)
 - [ ] Dostosować `404.html`, manifest, service worker i ścieżki ikon do wybranego adresu bazowego
 - [ ] Dodać automatyczne wdrożenie, które publikuje kompletne `dist/` razem ze statycznymi wejściami tras

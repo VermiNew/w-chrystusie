@@ -2,13 +2,15 @@ import { execFileSync } from 'node:child_process'
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { loadEnv } from 'vite'
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const distDirectory = path.join(projectRoot, 'dist')
 const siteName = 'W Chrystusie'
 const defaultDescription = 'Polska katolicka aplikacja webowa — modlitwy, pieśni kościelne i interaktywny różaniec w jednym miejscu.'
-const configuredSiteUrl = process.env.VITE_SITE_URL?.trim()
-const siteUrl = new URL(configuredSiteUrl || 'http://localhost:4173/')
+const productionEnv = loadEnv('production', projectRoot, 'VITE_')
+const configuredSiteUrl = process.env.VITE_SITE_URL?.trim() || productionEnv.VITE_SITE_URL?.trim()
+const siteUrl = new URL(configuredSiteUrl ? `${configuredSiteUrl.replace(/\/+$/, '')}/` : 'http://localhost:4173/')
 
 if (!configuredSiteUrl) {
   console.warn('[seo] Brak VITE_SITE_URL. Wygenerowano lokalne adresy; ustaw zmienną przed wdrożeniem produkcyjnym.')
