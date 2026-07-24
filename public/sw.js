@@ -3,15 +3,17 @@
 //   1. Cache app shell + runtime assets for offline access
 //   2. Handle notification display and click actions
 
-const CACHE_VERSION = 'v1'
+const CACHE_VERSION = new URL(self.location.href).searchParams.get('v') || 'dev'
 const STATIC_CACHE = `wch-static-${CACHE_VERSION}`
 const RUNTIME_CACHE = `wch-runtime-${CACHE_VERSION}`
+const MAX_RUNTIME_ENTRIES = 80
 
-// Files known to exist at deploy time (Vite-hashed JS/CSS are not listed —
-// they are picked up at runtime via the fetch handler).
+// Files known to exist at deploy time. Vite-hashed JS/CSS are listed in the
+// generated asset manifest and added to the same cache during installation.
 const APP_SHELL = [
   '/',
   '/index.html',
+  '/asset-manifest.json',
   '/manifest.json',
   '/favicon-16x16.png',
   '/favicon-32x32.png',
@@ -22,9 +24,7 @@ const APP_SHELL = [
 ]
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(STATIC_CACHE).then((cache) => cache.addAll(APP_SHELL)),
-  )
+  event.waitUntil(precacheAppShell())
   self.skipWaiting()
 })
 
@@ -97,11 +97,14 @@ self.addEventListener('fetch', (event) => {
 async function networkFirstHTML(request) {
   try {
     const fresh = await fetch(request)
-    const cache = await caches.open(STATIC_CACHE)
-    cache.put('/index.html', fresh.clone()).catch(() => {})
+    if (fresh.ok && fresh.type !== 'opaque') {
+      const cache = await caches.open(RUNTIME_CACHE)
+      await cache.put(request, fresh.clone())
+      await trimCache(RUNTIME_CACHE, MAX_RUNTIME_ENTRIES)
+    }
     return fresh
   } catch {
-    const cached = await caches.match('/index.html')
+    const cached = await caches.match(request) || await caches.match('/index.html')
     if (cached) return cached
     return new Response('<h1>Offline</h1>', {
       status: 503,
@@ -115,9 +118,10 @@ async function cacheFirst(request, cacheName) {
   if (cached) return cached
   try {
     const fresh = await fetch(request)
-    if (fresh && fresh.status === 200) {
+    if (isCacheableResponse(fresh, true)) {
       const cache = await caches.open(cacheName)
-      cache.put(request, fresh.clone()).catch(() => {})
+      await cache.put(request, fresh.clone())
+      await trimCache(cacheName, MAX_RUNTIME_ENTRIES)
     }
     return fresh
   } catch {
@@ -129,14 +133,42 @@ async function staleWhileRevalidate(request, cacheName) {
   const cache = await caches.open(cacheName)
   const cached = await cache.match(request)
   const network = fetch(request)
-    .then((response) => {
-      if (response && response.status === 200) {
-        cache.put(request, response.clone()).catch(() => {})
+    .then(async (response) => {
+      if (isCacheableResponse(response)) {
+        await cache.put(request, response.clone())
+        await trimCache(cacheName, MAX_RUNTIME_ENTRIES)
       }
       return response
     })
     .catch(() => null)
   return cached || (await network) || new Response('', { status: 504 })
+}
+
+async function precacheAppShell() {
+  const cache = await caches.open(STATIC_CACHE)
+  await cache.addAll(APP_SHELL)
+
+  const manifestResponse = await cache.match('/asset-manifest.json')
+  if (!manifestResponse) return
+
+  const manifest = await manifestResponse.json()
+  if (!Array.isArray(manifest)) return
+  const assetPaths = manifest.filter(
+    (assetPath) => typeof assetPath === 'string' && assetPath.startsWith('/assets/'),
+  )
+  if (assetPaths.length > 0) await cache.addAll(assetPaths)
+}
+
+function isCacheableResponse(response, allowOpaque = false) {
+  return Boolean(response && (response.ok || (allowOpaque && response.type === 'opaque')))
+}
+
+async function trimCache(cacheName, maxEntries) {
+  const cache = await caches.open(cacheName)
+  const keys = await cache.keys()
+  const excessEntries = keys.length - maxEntries
+  if (excessEntries <= 0) return
+  await Promise.all(keys.slice(0, excessEntries).map((key) => cache.delete(key)))
 }
 
 // Handle notification clicks — navigate to the prayer page

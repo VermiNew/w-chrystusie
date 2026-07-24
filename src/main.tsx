@@ -16,7 +16,7 @@ const isStandalonePwa = window.matchMedia?.('(display-mode: standalone)').matche
 
 if ('serviceWorker' in navigator && (import.meta.env.PROD || isStandalonePwa)) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register(`/sw.js?v=${encodeURIComponent(__APP_COMMIT__)}`)
       .then((registration) => {
         registration.addEventListener('updatefound', () => {
           const worker = registration.installing

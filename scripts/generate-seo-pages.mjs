@@ -238,6 +238,18 @@ function getContentUpdatedAt() {
   }
 }
 
+async function collectAssetPaths(directory, publicDirectory = '/assets') {
+  const entries = await readdir(directory, { withFileTypes: true })
+  const paths = await Promise.all(entries.map(async (entry) => {
+    const filePath = path.join(directory, entry.name)
+    const publicPath = `${publicDirectory}/${entry.name}`
+    return entry.isDirectory()
+      ? collectAssetPaths(filePath, publicPath)
+      : [publicPath]
+  }))
+  return paths.flat()
+}
+
 const [template, prayers, songs, announcements] = await Promise.all([
   readFile(path.join(distDirectory, 'index.html'), 'utf8'),
   loadEntries('prayers'),
@@ -303,10 +315,12 @@ Allow: /
 
 Sitemap: ${new URL('sitemap.xml', siteUrl).href}
 `
+const assetPaths = (await collectAssetPaths(path.join(distDirectory, 'assets'))).sort()
 
 await Promise.all([
   writeFile(path.join(distDirectory, 'sitemap.xml'), sitemap, 'utf8'),
   writeFile(path.join(distDirectory, 'robots.txt'), robots, 'utf8'),
+  writeFile(path.join(distDirectory, 'asset-manifest.json'), `${JSON.stringify(assetPaths, null, 2)}\n`, 'utf8'),
 ])
 
 console.log(`[seo] Wygenerowano ${pages.length} stron HTML i ${sitemapPages.length} adresów w sitemap.xml.`)

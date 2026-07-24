@@ -235,7 +235,7 @@ export async function ensureServiceWorkerRegistration(): Promise<ServiceWorkerRe
   try {
     const existing = await navigator.serviceWorker.getRegistration()
     if (existing) return existing
-    return await navigator.serviceWorker.register('/sw.js')
+    return await navigator.serviceWorker.register(`/sw.js?v=${encodeURIComponent(__APP_COMMIT__)}`)
   } catch {
     return null
   }
