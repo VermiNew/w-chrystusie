@@ -2265,9 +2265,18 @@ body[data-nav-menu='open'] {
 }
 
 .chaplet-counter {
+  white-space: nowrap;
   font-weight: 400;
   font-size: 1rem;
   color: var(--color-text-muted);
+}
+
+.chaplet-context {
+  display: block;
+  margin-top: 0.65rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  font-weight: 400;
 }
 
 .chaplet-prayer {
@@ -3105,6 +3114,11 @@ body[data-nav-menu='open'] {
 @media (max-width: 850px) {
   .prayer-sequence-controls {
     width: min(calc(100% - 2rem), 55ch);
+  }
+
+  .chaplet-keyboard-hint,
+  .rosary-keyboard-hint {
+    display: none;
   }
 }
 

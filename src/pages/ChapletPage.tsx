@@ -183,6 +183,7 @@ export default function ChapletPage() {
         <h2 className="chaplet-label">
           {step.label}
           {step.counter && <span className="chaplet-counter"> ({step.counter})</span>}
+          {step.context && <span className="chaplet-context">{step.context}</span>}
         </h2>
         <p className="chaplet-prayer">{step.prayer}</p>
       </div>

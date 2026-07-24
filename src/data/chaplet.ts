@@ -2,6 +2,7 @@ export interface ChapletStep {
   label: string
   prayer: string
   counter?: string
+  context?: string
 }
 
 const prayers = {
@@ -77,7 +78,8 @@ export function buildChapletSteps(): ChapletStep[] {
       steps.push({
         label: 'Dla Jego bolesnej męki',
         prayer: prayers.forTheSakeOf,
-        counter: `${i}/10 (dziesiątek ${decade}/5)`,
+        counter: `${i}/10`,
+        context: `Dziesiątek ${decade} z 5`,
       })
     }
   }
