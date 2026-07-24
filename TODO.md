@@ -252,7 +252,7 @@
 
 ## Do zrobienia — źródła treści i wiarygodność
 
-- [ ] Utworzyć centralny rejestr źródeł: nazwa, logo lokalne, adres strony, rodzaj treści, warunki użycia i data ostatniej weryfikacji
+- [x] Utworzyć centralny rejestr źródeł: nazwa, logo lokalne, adres strony, rodzaj treści, warunki użycia i data ostatniej weryfikacji
 - [ ] Każdej modlitwie, pieśni, psalmowi i tekstowi przypisać dokładny adres źródłowy, a nie tylko domenę główną
 - [ ] Przed importem zapisać podstawę wykorzystania treści: domena publiczna, licencja, zgoda autora/wydawcy albo dozwolony krótki cytat
 - [ ] Przeprowadzić przegląd praw autorskich istniejącego śpiewnika; współczesnych tekstów pieśni nie publikować bez licencji lub zgody
@@ -262,10 +262,10 @@
 
 ## Do zrobienia — polecane materiały innych twórców
 
-- [ ] Rozbudować model polecanego materiału o autora, wydawcę, kategorię, opis, zdjęcie lokalne, link zakupu i datę sprawdzenia linku
+- [x] Rozbudować model polecanego materiału o autora, wydawcę, kategorię, opis, zdjęcie lokalne, link zakupu i datę sprawdzenia linku
 - [ ] Potwierdzić możliwość lokalnego użycia zdjęć okładek albo zastąpić je materiałami udostępnionymi przez wydawcę
 - [ ] Dodać kolejne wartościowe książki, Biblie i pomoce modlitewne dopiero po ręcznej weryfikacji redakcyjnej
-- [ ] Wyraźnie oznaczać linki afiliacyjne lub sponsorowane; przy zwykłych poleceniach informować, że aplikacja nie otrzymuje wynagrodzenia
+- [x] Wyraźnie oznaczać linki afiliacyjne lub sponsorowane; przy zwykłych poleceniach informować, że aplikacja nie otrzymuje wynagrodzenia
 - [ ] Dodać obsługę niedostępnego produktu: ukrycie nieaktualnej ceny, alternatywny link lub oznaczenie „nakład wyczerpany”
 
 ## Do zrobienia — nowe modlitwy, pieśni, psalmy i teksty

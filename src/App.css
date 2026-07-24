@@ -2969,10 +2969,24 @@ body[data-nav-menu='open'] {
   border-radius: 4px;
 }
 
-.source-card-copy > span:last-child {
+.source-card-description {
   color: var(--color-text-muted);
   font-size: 0.82rem;
   line-height: 1.5;
+}
+
+.source-card-meta {
+  color: var(--color-text-muted);
+  font-size: 0.68rem;
+  line-height: 1.45;
+  opacity: 0.8;
+}
+
+.sources-note {
+  margin: 1rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  line-height: 1.65;
 }
 
 .source-card > svg {
@@ -3044,6 +3058,17 @@ body[data-nav-menu='open'] {
 .material-card-copy > p:not(.material-card-label) {
   color: var(--color-text-muted);
   line-height: 1.6;
+}
+
+.material-card-copy .material-card-author {
+  margin-bottom: 0.35rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.material-card-copy .material-card-publisher {
+  margin-top: 0.4rem;
+  font-size: 0.82rem;
 }
 
 .material-buy-link {

@@ -4,64 +4,22 @@ import {
   FaArrowUpRightFromSquare,
   FaCartShopping,
 } from 'react-icons/fa6'
+import {
+  contentSources,
+  recommendedMaterials,
+  SOURCE_VERIFICATION_DATE,
+} from '../data/sources'
 
-const sources = [
-  {
-    name: 'Niedziela',
-    url: 'https://www.niedziela.pl/',
-    logo: '/sources/niedziela.png',
-    description: 'Katolicki tygodnik i portal informacyjny.',
-  },
-  {
-    name: 'Dolina Modlitwy',
-    url: 'https://dolinamodlitwy.pl/',
-    logo: '/sources/dolina-modlitwy.jpeg',
-    description: 'Baza modlitw, litanii, nowenn i nabożeństw.',
-  },
-  {
-    name: 'Modlitwa7',
-    url: 'https://modlitwa7.pl/',
-    logo: '/sources/modlitwa7.png',
-    description: 'Modlitwy, pieśni, teksty i psalmy.',
-  },
-  {
-    name: 'Katolicki.net',
-    url: 'https://www.katolicki.net/index.php/modlitwa/modlitwa-spiewnik.html',
-    logo: '/sources/katolicki-net.jpg',
-    description: 'Śpiewnik z tekstami pieśni religijnych.',
-    wideLogo: true,
-  },
-  {
-    name: 'Romcal',
-    url: 'https://romcal.js.org/',
-    logo: '/sources/romcal.png',
-    description: 'Planowane źródło danych kalendarza liturgicznego.',
-    badge: 'planowane',
-  },
-] as const
+const verificationDateFormatter = new Intl.DateTimeFormat('pl-PL', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+})
 
-const materials = [
-  {
-    title: 'Pismo Święte Starego i Nowego Testamentu',
-    subtitle: 'Format 16 × 22 cm, twarda oprawa, paginatory',
-    image: '/materials/pismo-swiete-standard.jpg',
-    imageWidth: 700,
-    imageHeight: 700,
-    imageAlt: 'Okładka polecanego wydania Pisma Świętego',
-    url: 'https://edycja.pl/pismo-swiete/format-duzy-2972/pismo-sw-st-i-nt-standard-format-twarda-oprawa-paginatory-1320200202.html',
-    shop: 'Edycja Świętego Pawła',
-  },
-  {
-    title: 'Słowo ma MOC',
-    subtitle: 'ks. Łukasz Brus',
-    image: '/materials/slowo-ma-moc.webp',
-    imageWidth: 360,
-    imageHeight: 540,
-    imageAlt: 'Okładka książki Słowo ma MOC',
-    url: 'https://www.esprit.com.pl/950/slowo-ma-moc.html',
-    shop: 'Księgarnia Esprit',
-  },
-] as const
+function formatVerificationDate(date: string) {
+  return verificationDateFormatter.format(new Date(`${date}T00:00:00Z`))
+}
 
 export default function SourcesPage() {
   return (
@@ -82,11 +40,11 @@ export default function SourcesPage() {
       <section className="sources-section" aria-labelledby="sources-title">
         <h2 id="sources-title">Źródła</h2>
         <div className="source-cards">
-          {sources.map((source) => (
+          {contentSources.map((source) => (
             <a
-              className={`source-card${'wideLogo' in source ? ' source-card--wide-logo' : ''}`}
+              className={`source-card${source.wideLogo ? ' source-card--wide-logo' : ''}`}
               href={source.url}
-              key={source.name}
+              key={source.id}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -94,21 +52,30 @@ export default function SourcesPage() {
               <span className="source-card-copy">
                 <span className="source-card-title">
                   <strong>{source.name}</strong>
-                  {'badge' in source && <small>{source.badge}</small>}
+                  {source.status === 'planned' && <small>planowane</small>}
                 </span>
-                <span>{source.description}</span>
+                <span className="source-card-description">{source.description}</span>
+                <span className="source-card-meta">
+                  {source.contentKinds.join(' · ')} · sprawdzono{' '}
+                  {formatVerificationDate(source.verifiedAt)}
+                </span>
               </span>
               <FaArrowUpRightFromSquare aria-hidden="true" />
             </a>
           ))}
         </div>
+        <p className="sources-note">
+          Rejestr wskazuje pochodzenie informacji, ale nie oznacza zgody na kopiowanie
+          pełnych tekstów. Przy każdej pozycji zachowuję dokładny adres, a przed importem
+          sprawdzam licencję lub zgodę właściciela.
+        </p>
       </section>
 
       <section className="sources-section materials-section" aria-labelledby="materials-title">
         <h2 id="materials-title">Polecane materiały</h2>
         <div className="material-cards">
-          {materials.map((material) => (
-            <article className="material-card" key={material.title}>
+          {recommendedMaterials.map((material) => (
+            <article className="material-card" key={material.id}>
               <div className="material-card-image">
                 <img
                   src={material.image}
@@ -118,26 +85,30 @@ export default function SourcesPage() {
                 />
               </div>
               <div className="material-card-copy">
-                <p className="material-card-label">
-                  {material.title.startsWith('Pismo') ? 'Pismo Święte, które polecam' : 'Książka'}
-                </p>
+                <p className="material-card-label">{material.category}</p>
                 <h3>{material.title}</h3>
-                <p>{material.subtitle}</p>
+                {material.author && <p className="material-card-author">{material.author}</p>}
+                <p>{material.description}</p>
+                <p className="material-card-publisher">{material.publisher}</p>
                 <a
                   className="material-buy-link"
-                  href={material.url}
+                  href={material.purchaseUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaCartShopping aria-hidden="true" />
-                  Kup w: {material.shop}
+                  Kup w: {material.retailer}
                   <FaArrowUpRightFromSquare aria-hidden="true" />
                 </a>
               </div>
             </article>
           ))}
         </div>
-        <p className="materials-note">Linki prowadzą do zewnętrznych stron sprzedawców.</p>
+        <p className="materials-note">
+          Linki prowadzą do zewnętrznych stron sprzedawców, zostały sprawdzone{' '}
+          {formatVerificationDate(SOURCE_VERIFICATION_DATE)} i nie są afiliacyjne.
+          Aplikacja nie otrzymuje wynagrodzenia za zakupy.
+        </p>
       </section>
     </div>
   )
