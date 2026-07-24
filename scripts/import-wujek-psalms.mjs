@@ -58,6 +58,7 @@ function parsePsalm(number, html) {
     `<span[^>]*id="${number}:(\\d+)"[^>]*>[\\s\\S]*?<\\/span>`,
     'i',
   )
+  const sourceMarkerPattern = new RegExp(`id="${number}:(\\d+)"`, 'g')
   const verses = []
 
   for (const paragraphMatch of html.matchAll(verseParagraphPattern)) {
@@ -82,6 +83,18 @@ function parsePsalm(number, html) {
   const uniqueVerseNumbers = new Set(verses.map((verse) => verse.number))
   if (uniqueVerseNumbers.size !== verses.length) {
     throw new Error(`Psalm ${number}: wykryto powtórzone numery wersetów.`)
+  }
+
+  const sourceVerseNumbers = [...html.matchAll(sourceMarkerPattern)].map((match) =>
+    Number(match[1]),
+  )
+  const missingVerseNumbers = sourceVerseNumbers.filter(
+    (verseNumber) => !uniqueVerseNumbers.has(verseNumber),
+  )
+  if (sourceVerseNumbers.length !== verses.length || missingVerseNumbers.length > 0) {
+    throw new Error(
+      `Psalm ${number}: importer odczytał ${verses.length} z ${sourceVerseNumbers.length} znaczników wersetów.`,
+    )
   }
 
   return {
