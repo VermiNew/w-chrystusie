@@ -14,6 +14,7 @@ const ChapletPage = lazy(() => import('./pages/ChapletPage'))
 const AnnouncementsPage = lazy(() => import('./pages/AnnouncementsPage'))
 const MayDevotionPage = lazy(() => import('./pages/MayDevotionPage'))
 const SearchPage = lazy(() => import('./pages/SearchPage'))
+const SourcesPage = lazy(() => import('./pages/SourcesPage'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 
 function AppRoutes() {
@@ -59,6 +60,7 @@ function AppRoutes() {
           <Route path="/ogloszenia/:id" element={<AnnouncementsPage />} />
           <Route path="/nabozenstwo-majowe" element={<MayDevotionPage />} />
           <Route path="/szukaj" element={<SearchPage />} />
+          <Route path="/zrodla" element={<SourcesPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
