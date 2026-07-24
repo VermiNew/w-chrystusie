@@ -1,7 +1,14 @@
 import { useState, useMemo, useEffect, useCallback } from 'react'
-import { FaArrowLeft, FaArrowRight, FaArrowUpRightFromSquare, FaCheck, FaCircleInfo } from 'react-icons/fa6'
+import { FaArrowLeft, FaArrowRight, FaArrowUpRightFromSquare, FaCheck, FaChevronDown, FaCircleInfo } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
-import { mysterySets, buildRosarySteps, type MysterySet } from '../data/rosary'
+import {
+  mysterySets,
+  buildRosarySteps,
+  rosaryPrayerGuide,
+  rosaryPromises,
+  rosaryPromisesIntroduction,
+  type MysterySet,
+} from '../data/rosary'
 import { prayers } from '../data/prayers'
 import { hapticLight, hapticMedium } from '../data/haptics'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
@@ -216,6 +223,53 @@ export default function RosaryPage() {
             )
           })}
         </ul>
+        <section className="rosary-reference-section" aria-labelledby="rosary-reference-title">
+          <h2 id="rosary-reference-title">Modlitwy i tradycja różańcowa</h2>
+          <details className="rosary-reference">
+            <summary>
+              <span>
+                <strong>Modlitwy różańcowe</strong>
+                <small>Pełne teksty modlitw odmawianych przy Różańcu</small>
+              </span>
+              <FaChevronDown aria-hidden="true" />
+            </summary>
+            <div className="rosary-reference-content">
+              <dl className="rosary-prayer-guide">
+                {rosaryPrayerGuide.map((prayer) => (
+                  <div key={prayer.name}>
+                    <dt>{prayer.name}</dt>
+                    <dd>{prayer.text}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </details>
+          <details className="rosary-reference">
+            <summary>
+              <span>
+                <strong>Piętnaście obietnic za odmawianie Różańca Świętego</strong>
+                <small>Tradycyjny przekaz przypisywany bł. Alanowi de la Roche</small>
+              </span>
+              <FaChevronDown aria-hidden="true" />
+            </summary>
+            <div className="rosary-reference-content rosary-promises">
+              {rosaryPromisesIntroduction.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+              <ol>
+                {rosaryPromises.map((promise) => <li key={promise}>{promise}</li>)}
+              </ol>
+              <a
+                className="source-link"
+                href="https://modlitwa7.pl/rozaniec/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Źródło: Modlitwa7 <FaArrowUpRightFromSquare aria-hidden="true" />
+              </a>
+            </div>
+          </details>
+        </section>
       </div>
     )
   }

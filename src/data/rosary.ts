@@ -45,7 +45,45 @@ export const prayers = {
     'O Pani nasza, Orędowniczko nasza, Pośredniczko nasza, Pocieszycielko nasza. ' +
     'Z Synem swoim nas pojednaj, Synowi swojemu nas polecaj, ' +
     'swojemu Synowi nas oddawaj.',
+
+  eternalRest:
+    'Wieczny odpoczynek racz im dać, Panie, a światłość wiekuista niechaj im świeci ' +
+    'na wieki wieków. I niechaj ich dusze i wszystkie dusze wiernych zmarłych, ' +
+    'z pomocą łaski Bożej odpoczywają w pokoju. Amen.',
 } as const
+
+export const rosaryPrayerGuide = [
+  { name: 'Wierzę w Boga', text: prayers.creed },
+  { name: 'Ojcze nasz', text: prayers.ourFather },
+  { name: 'Zdrowaś Maryjo', text: prayers.hailMary },
+  { name: 'Chwała Ojcu', text: prayers.gloryBe },
+  { name: 'O mój Jezu', text: prayers.fatima },
+  { name: 'Pod Twoją obronę', text: prayers.subTuumPraesidium },
+  { name: 'Wieczny odpoczynek', text: prayers.eternalRest },
+] as const
+
+export const rosaryPromisesIntroduction = [
+  'Różaniec w postaci wielokrotnego odmawiania Pozdrowienia Anielskiego upowszechniał św. Dominik, założyciel Zakonu Kaznodziejskiego (dominikanów), dlatego nazywa się go ojcem różańca do Najświętszej Maryi Panny.',
+  'Obecna forma Różańca ustaliła się w XV wieku dzięki innemu dominikaninowi, bł. Alanowi de la Roche (1428–1475). Ustalił on nazwę „Psałterz Maryi” oraz liczbę 150 modlitw „Zdrowaś Maryjo”, podzielonych na dziesiątki i przeplatanych Modlitwą Pańską. Założył również pierwsze bractwo różańcowe w Douai w 1470 roku. Według przekazu przywołanego przez źródło Maryja powierzyła mu piętnaście obietnic dla osób odmawiających Różaniec:',
+] as const
+
+export const rosaryPromises = [
+  'Ktokolwiek będzie mi służył przez odmawianie Różańca Świętego, otrzyma wyjątkowe łaski.',
+  'Obiecuję moją specjalną obronę i największe łaski wszystkim tym, którzy będą odmawiać Różaniec.',
+  'Różaniec stanie się bronią przeciw piekłu, zniszczy występki, pomniejszy grzechy i zwycięży herezje.',
+  'Spowoduje on, że cnoty i dobre dzieła zakwitną; otrzyma od Boga obfite przebaczenie dla dusz; odciągnie serca ludzi od umiłowania świata i jego marności oraz podniesie je do pragnienia rzeczy wiecznych.',
+  'Dusza, która poleci mi się przez odmawianie Różańca, nie zginie.',
+  'Ktokolwiek będzie pobożnie odmawiać Różaniec Święty, rozważając równocześnie święte tajemnice, nie dozna nieszczęść, nie doświadczy gniewu Bożego ani nie umrze nagłą śmiercią; nawróci się, jeśli jest grzesznikiem, jeśli zaś jest sprawiedliwy — wytrwa w łasce i osiągnie życie wieczne.',
+  'Ktokolwiek będzie miał prawdziwe nabożeństwo do Różańca, nie umrze bez sakramentów Kościoła.',
+  'Wierni w odmawianiu Różańca będą mieli w życiu i przy śmierci światło Boże oraz pełnię Jego łaski.',
+  'Uwolnię z czyśćca tych, którzy mieli nabożeństwo do Różańca Świętego.',
+  'Wierne dzieci Różańca zasłużą na wysoki stopień chwały w niebie.',
+  'Otrzymacie wszystko, o co prosicie przez odmawianie Różańca.',
+  'Wszystkich, którzy rozpowszechniają Różaniec, będę wspomagała w ich potrzebach.',
+  'Otrzymałam od mojego Boskiego Syna obietnicę, że wszyscy obrońcy Różańca będą mieli za wstawienników cały Dwór Niebieski w czasie życia i w godzinę śmierci.',
+  'Wszyscy, którzy odmawiają Różaniec, są moimi synami i braćmi mojego Jedynego Syna Jezusa Chrystusa.',
+  'Nabożeństwo do mojego Różańca jest wielkim znakiem przeznaczenia do nieba.',
+] as const
 
 export interface MysterySet {
   name: string
