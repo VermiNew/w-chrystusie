@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from 'react'
+import { useEffect, useId, useRef, useState, useCallback } from 'react'
 import { FaBell, FaXmark, FaCircleInfo, FaPlus, FaTrash, FaArrowRotateLeft, FaGlobe } from 'react-icons/fa6'
 import { REMINDERS } from '../data/reminders'
 import {
@@ -29,7 +29,9 @@ export default function RemindersModal({ open, onClose }: Props) {
   const enabledIds = useEnabledReminders()
   const customTimesMap = useCustomTimes()
   const dialogRef = useRef<HTMLDialogElement>(null)
+  const closeButtonRef = useRef<HTMLButtonElement>(null)
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const titleId = useId()
   const [closing, setClosing] = useState(false)
   const [notificationStatus, setNotificationStatus] = useState<BrowserNotificationStatus | null>(null)
   const [testStatus, setTestStatus] = useState<string | null>(null)
@@ -59,6 +61,7 @@ export default function RemindersModal({ open, onClose }: Props) {
   useEffect(() => {
     const dialog = dialogRef.current
     if (!dialog) return
+    let focusFrame: number | undefined
     if (open) {
       // Cancel an in-progress close animation when the modal is reopened
       // before the 250ms timer fires. Without this, the pending setTimeout
@@ -73,6 +76,10 @@ export default function RemindersModal({ open, onClose }: Props) {
       refreshNotificationStatus()
       setTestStatus(null)
       setShowDiagnostics(false)
+      focusFrame = requestAnimationFrame(() => closeButtonRef.current?.focus())
+    }
+    return () => {
+      if (focusFrame !== undefined) cancelAnimationFrame(focusFrame)
     }
   }, [open, refreshNotificationStatus])
 
@@ -191,11 +198,12 @@ export default function RemindersModal({ open, onClose }: Props) {
       ref={dialogRef}
       className={`reminders-dialog${closing ? ' reminders-dialog--closing' : ''}`}
       onClick={handleDialogClick}
+      aria-labelledby={titleId}
     >
       <div className="reminders-dialog-inner">
         <header className="reminders-dialog-header">
-          <h2 className="reminders-dialog-title"><FaBell /> Przypomnienia o modlitwie</h2>
-          <button className="reminders-dialog-close" onClick={handleClose} aria-label="Zamknij">
+          <h2 id={titleId} className="reminders-dialog-title"><FaBell /> Przypomnienia o modlitwie</h2>
+          <button ref={closeButtonRef} className="reminders-dialog-close" onClick={handleClose} aria-label="Zamknij">
             <FaXmark />
           </button>
         </header>

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from 'react'
+import { useEffect, useId, useRef, useState, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import { FaXmark, FaGithub, FaCross, FaMusic, FaGlobe, FaBullhorn, FaLink } from 'react-icons/fa6'
 import { prayers } from '../data/prayers'
@@ -20,7 +20,9 @@ const formatContentDate = (date: string) => {
 
 export default function AboutModal({ open, onClose }: Props) {
   const dialogRef = useRef<HTMLDialogElement>(null)
+  const closeButtonRef = useRef<HTMLButtonElement>(null)
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const titleId = useId()
   const [closing, setClosing] = useState(false)
 
   const handleClose = useCallback(() => {
@@ -36,6 +38,7 @@ export default function AboutModal({ open, onClose }: Props) {
   useEffect(() => {
     const dialog = dialogRef.current
     if (!dialog) return
+    let focusFrame: number | undefined
     let resetClosingFrame: number | undefined
 
     if (open) {
@@ -45,9 +48,11 @@ export default function AboutModal({ open, onClose }: Props) {
         resetClosingFrame = requestAnimationFrame(() => setClosing(false))
       }
       if (!dialog.open) dialog.showModal()
+      focusFrame = requestAnimationFrame(() => closeButtonRef.current?.focus())
     }
 
     return () => {
+      if (focusFrame !== undefined) cancelAnimationFrame(focusFrame)
       if (resetClosingFrame !== undefined) cancelAnimationFrame(resetClosingFrame)
     }
   }, [open])
@@ -72,15 +77,16 @@ export default function AboutModal({ open, onClose }: Props) {
       ref={dialogRef}
       className={`about-dialog${closing ? ' about-dialog--closing' : ''}`}
       onClick={handleDialogClick}
+      aria-labelledby={titleId}
     >
       <div className="about-dialog-inner">
-        <button className="about-dialog-close" onClick={handleClose} aria-label="Zamknij">
+        <button ref={closeButtonRef} className="about-dialog-close" onClick={handleClose} aria-label="Zamknij">
           <FaXmark />
         </button>
 
         <div className="about-hero">
           <FaCross className="about-hero-cross" aria-hidden="true" />
-          <h2 className="about-hero-title">W Chrystusie</h2>
+          <h2 id={titleId} className="about-hero-title">W Chrystusie</h2>
         </div>
 
         <p className="about-desc">
