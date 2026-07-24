@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FaCross, FaBookBible, FaMusic, FaMagnifyingGlass, FaBars, FaXmark, FaHandsPraying, FaBullhorn, FaBell, FaCircleInfo, FaLink, FaMoon, FaSun } from 'react-icons/fa6'
 import { announcements } from '../data/announcements'
@@ -12,6 +12,8 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [remindersOpen, setRemindersOpen] = useState(false)
   const [aboutOpen, setAboutOpen] = useState(false)
+  const navRef = useRef<HTMLElement>(null)
+  const menuToggleRef = useRef<HTMLButtonElement>(null)
   const unread = useUnreadCount(announcements.map((a) => a.id))
   const hasReminders = useHasAnyReminder()
   const theme = useTheme()
@@ -29,17 +31,60 @@ export default function Header() {
   }, [menuOpen])
 
   useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && menuOpen) closeMenu()
+    if (!menuOpen) return
+
+    const mainContent = document.querySelector<HTMLElement>('.main')
+    const menuToggle = menuToggleRef.current
+    const focusableSelector = 'a[href], button:not([disabled])'
+    const getFocusableElements = () => Array.from(
+      navRef.current?.querySelectorAll<HTMLElement>(focusableSelector) ?? [],
+    ).filter((element) => element.offsetParent !== null)
+
+    mainContent?.setAttribute('inert', '')
+
+    const focusFrame = window.requestAnimationFrame(() => {
+      navRef.current
+        ?.querySelector<HTMLElement>('.nav-links a, .nav-links button')
+        ?.focus()
+    })
+
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setMenuOpen(false)
+        return
+      }
+
+      if (event.key !== 'Tab') return
+
+      const focusableElements = getFocusableElements()
+      const firstElement = focusableElements[0]
+      const lastElement = focusableElements.at(-1)
+
+      if (!firstElement || !lastElement) return
+
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault()
+        lastElement.focus()
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault()
+        firstElement.focus()
+      }
     }
-    window.addEventListener('keydown', handleKey)
-    return () => window.removeEventListener('keydown', handleKey)
+
+    document.addEventListener('keydown', handleKey)
+
+    return () => {
+      window.cancelAnimationFrame(focusFrame)
+      document.removeEventListener('keydown', handleKey)
+      mainContent?.removeAttribute('inert')
+      window.requestAnimationFrame(() => menuToggle?.focus())
+    }
   }, [menuOpen])
 
   return (
     <header className="header">
       {menuOpen && <div className="nav-overlay" onClick={closeMenu} />}
-      <nav className="nav">
+      <nav className="nav" aria-label="Główna nawigacja" ref={navRef}>
         <NavLink to="/" className="nav-brand" onClick={closeMenu}>
           <FaCross className="nav-brand-icon" aria-hidden="true" />
           <span>W Chrystusie</span>
@@ -47,12 +92,17 @@ export default function Header() {
         <button
           className="nav-toggle"
           onClick={() => setMenuOpen(!menuOpen)}
+          ref={menuToggleRef}
           aria-label={menuOpen ? 'Zamknij menu' : 'Otwórz menu'}
           aria-expanded={menuOpen}
+          aria-controls="primary-navigation"
         >
           {menuOpen ? <FaXmark /> : <FaBars />}
         </button>
-        <ul className={`nav-links${menuOpen ? ' nav-links--open' : ''}`}>
+        <ul
+          className={`nav-links${menuOpen ? ' nav-links--open' : ''}`}
+          id="primary-navigation"
+        >
           <li><NavLink to="/modlitwy" onClick={closeMenu}><FaCross /> Modlitwy</NavLink></li>
           <li><NavLink to="/pismo-swiete" onClick={closeMenu}><FaBookBible /> Pismo Święte</NavLink></li>
           <li><NavLink to="/spiewnik" onClick={closeMenu}><FaMusic /> Śpiewnik</NavLink></li>
