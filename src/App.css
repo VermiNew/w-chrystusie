@@ -2906,6 +2906,16 @@ body[data-nav-menu='open'] {
   border-radius: 12px;
 }
 
+.source-card--wide-logo {
+  grid-template-columns: 88px minmax(0, 1fr) auto;
+}
+
+.source-card--wide-logo > img {
+  width: 88px;
+  object-fit: contain;
+  background: #fff;
+}
+
 .source-card-copy {
   display: grid;
   gap: 0.25rem;

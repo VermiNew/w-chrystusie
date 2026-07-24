@@ -25,6 +25,13 @@ const sources = [
     description: 'Modlitwy, pieśni, teksty i psalmy.',
   },
   {
+    name: 'Katolicki.net',
+    url: 'https://www.katolicki.net/index.php/modlitwa/modlitwa-spiewnik.html',
+    logo: '/sources/katolicki-net.jpg',
+    description: 'Śpiewnik z tekstami pieśni religijnych.',
+    wideLogo: true,
+  },
+  {
     name: 'Romcal',
     url: 'https://romcal.js.org/',
     logo: '/sources/romcal.png',
@@ -77,7 +84,7 @@ export default function SourcesPage() {
         <div className="source-cards">
           {sources.map((source) => (
             <a
-              className="source-card"
+              className={`source-card${'wideLogo' in source ? ' source-card--wide-logo' : ''}`}
               href={source.url}
               key={source.name}
               target="_blank"
