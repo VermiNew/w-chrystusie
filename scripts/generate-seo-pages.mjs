@@ -35,8 +35,8 @@ const staticPages = [
   },
   {
     path: '/psalmy',
-    title: 'Psalmy — katalog tekstów | W Chrystusie',
-    description: 'Katalog Psalmów z dokładnymi adresami tekstów źródłowych i informacją o prawach publikacji.',
+    title: 'Psalmy — pełne teksty | W Chrystusie',
+    description: 'Pełne teksty 150 Psalmów w publicznodomenowym przekładzie Jakuba Wujka, ze źródłem i dokładnym URL-em.',
   },
   {
     path: '/spiewnik',
@@ -255,12 +255,14 @@ async function collectAssetPaths(directory, publicDirectory = '/assets') {
   return paths.flat()
 }
 
-const [template, prayers, songs, announcements] = await Promise.all([
+const [template, prayers, songs, announcements, psalmsRaw] = await Promise.all([
   readFile(path.join(distDirectory, 'index.html'), 'utf8'),
   loadEntries('prayers'),
   loadEntries('songs'),
   loadEntries('announcements'),
+  readFile(path.join(projectRoot, 'src', 'data', 'generated', 'psalms-wujek.json'), 'utf8'),
 ])
+const psalms = JSON.parse(psalmsRaw)
 
 const now = new Date()
 const today = [
@@ -285,6 +287,21 @@ const pages = [
     titleSuffix: 'pieśń kościelna',
     section: 'Śpiewnik',
   }),
+  ...createDetailPages(
+    psalms.map((psalm) => ({
+      id: String(psalm.number),
+      title: psalm.title,
+      body: psalm.verses.map((verse) => verse.text).join(' '),
+      category: 'Psalmy',
+    })),
+    {
+      prefix: '/psalmy',
+      outputDirectory: 'psalmy',
+      contentType: 'Psalm w przekładzie Jakuba Wujka',
+      titleSuffix: 'pełny tekst',
+      section: 'Psalmy',
+    },
+  ),
   ...createDetailPages(publishedAnnouncements, {
     prefix: '/ogloszenia',
     outputDirectory: 'ogloszenia',

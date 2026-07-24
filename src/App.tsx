@@ -57,6 +57,7 @@ function AppRoutes() {
             <Route path="/modlitwy/:id" element={<PrayersPage />} />
             <Route path="/pismo-swiete" element={<ScripturePage />} />
             <Route path="/psalmy" element={<PsalmsPage />} />
+            <Route path="/psalmy/:id" element={<PsalmsPage />} />
             <Route path="/spiewnik" element={<SongbookPage />} />
             <Route path="/spiewnik/:id" element={<SongbookPage />} />
             <Route path="/rozaniec" element={<RosaryPage />} />

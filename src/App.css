@@ -972,15 +972,16 @@ body[data-nav-menu='open'] {
   line-height: 1.6;
 }
 
-.psalm-catalog-list {
+.psalm-index-grid {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.65rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.psalm-catalog-list a {
+.psalm-index-grid a {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -994,18 +995,18 @@ body[data-nav-menu='open'] {
   transition: border-color 0.2s, transform 0.2s;
 }
 
-.psalm-catalog-list a > svg {
+.psalm-index-grid a > svg {
   flex: 0 0 auto;
   color: var(--color-primary);
 }
 
-.psalm-catalog-copy {
+.psalm-index-grid a > span {
   display: grid;
   min-width: 0;
   gap: 0.2rem;
 }
 
-.psalm-catalog-copy small {
+.psalm-index-grid small {
   color: var(--color-text-muted);
   font-size: 0.68rem;
   font-weight: 700;
@@ -1013,27 +1014,172 @@ body[data-nav-menu='open'] {
   text-transform: uppercase;
 }
 
-.psalm-catalog-copy strong {
+.psalm-index-grid strong {
   color: var(--color-primary);
   line-height: 1.35;
 }
 
-.psalm-source-url {
+.psalm-index-grid strong + span {
   color: var(--color-text-muted);
-  font-size: 0.72rem;
-  overflow-wrap: anywhere;
+  font-size: 0.78rem;
+  line-height: 1.45;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .psalm-catalog-list a:hover {
+  .psalm-index-grid a:hover {
     border-color: var(--color-primary);
     transform: translateY(-1px);
   }
 }
 
-.psalm-catalog-list a:focus-visible {
+.psalm-index-grid a:focus-visible {
   outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
   outline-offset: 2px;
+}
+
+.psalm-reader {
+  max-width: 50rem;
+}
+
+.psalm-reader-header {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.psalm-reader-header h1 {
+  margin: 0.35rem 0 0.75rem;
+}
+
+.psalm-reader-header > p:last-child {
+  max-width: 38rem;
+  margin: 0 auto;
+  color: var(--color-text-muted);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.65;
+}
+
+.psalm-verses {
+  max-width: 42rem;
+  margin: 0 auto 2rem;
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+
+.psalm-verses p {
+  margin: 0 0 1rem;
+}
+
+.psalm-verses sup {
+  display: inline-block;
+  min-width: 1.75rem;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 0.68em;
+  font-weight: 700;
+  vertical-align: super;
+}
+
+.psalm-source-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin: 0 auto 1.5rem;
+  padding: 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+}
+
+.psalm-source-card > svg {
+  flex: 0 0 auto;
+  margin-top: 0.2rem;
+  color: var(--color-primary);
+}
+
+.psalm-source-card h2 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+}
+
+.psalm-source-card p {
+  margin: 0 0 0.6rem;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.psalm-source-card a {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  overflow-wrap: anywhere;
+}
+
+.psalm-source-card a svg {
+  flex: 0 0 auto;
+  margin-top: 0.2rem;
+}
+
+.psalm-reader-navigation {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.psalm-reader-navigation a {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.8rem 1rem;
+  color: var(--color-primary);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  font-weight: 700;
+}
+
+.psalm-reader-navigation a:last-child {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.psalm-reader-navigation span {
+  display: grid;
+}
+
+.psalm-reader-navigation small {
+  color: var(--color-text-muted);
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+@media (max-width: 650px) {
+  .psalm-index-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .psalm-reader-header {
+    margin: 1.5rem auto;
+  }
+
+  .psalm-verses {
+    font-size: 1.03rem;
+  }
+
+  .psalm-reader-navigation {
+    grid-template-columns: 1fr;
+  }
+
+  .psalm-reader-navigation > span {
+    display: none;
+  }
 }
 
 .scripture-reader {

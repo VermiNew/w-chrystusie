@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "playwright": "playwright",
     "playwright:test": "playwright test",
-    "playwright:ui": "playwright test --ui"
+    "playwright:ui": "playwright test --ui",
+    "content:psalms": "node scripts/import-wujek-psalms.mjs"
   },
   "dependencies": {
     "react": "^19.2.0",

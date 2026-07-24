@@ -7,7 +7,7 @@ import { useContentLibrary } from '../hooks/useContentLibrary'
 const sections = [
   { to: '/modlitwy', icon: <FaCross />, title: 'Modlitwy', description: 'Modlitwy codzienne i tradycyjne' },
   { to: '/pismo-swiete', icon: <FaBookBible />, title: 'Pismo Święte', description: 'Tymczasowo wycofane - potrzebuję katolickiej wersji' },
-  { to: '/psalmy', icon: <FaBookBible />, title: 'Psalmy', description: 'Zweryfikowany katalog tekstów źródłowych' },
+  { to: '/psalmy', icon: <FaBookBible />, title: 'Psalmy', description: 'Pełne teksty w przekładzie Jakuba Wujka' },
   { to: '/spiewnik', icon: <FaMusic />, title: 'Śpiewnik', description: 'Pieśni i hymny kościelne' },
   { to: '/rozaniec', icon: <FaHandsPraying />, title: 'Różaniec', description: 'Interaktywny przewodnik krok po kroku' },
   { to: '/ogloszenia', icon: <FaBullhorn />, title: 'Ogłoszenia', description: 'Aktualności i inicjatywy parafialne' },

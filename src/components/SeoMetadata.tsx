@@ -2,6 +2,7 @@ import { useEffect, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
 import { announcements } from '../data/announcements'
 import { prayers } from '../data/prayers'
+import { psalms } from '../data/psalms'
 import { songs } from '../data/songs'
 
 const SITE_NAME = 'W Chrystusie'
@@ -36,8 +37,8 @@ const staticRoutes: Record<string, RouteMetadata> = {
     noIndex: true,
   },
   '/psalmy': {
-    title: 'Psalmy — katalog tekstów | W Chrystusie',
-    description: 'Katalog Psalmów z dokładnymi adresami tekstów źródłowych i informacją o prawach publikacji.',
+    title: 'Psalmy — pełne teksty | W Chrystusie',
+    description: 'Pełne teksty 150 Psalmów w publicznodomenowym przekładzie Jakuba Wujka, ze źródłem i dokładnym URL-em.',
     canonicalPath: '/psalmy',
   },
   '/spiewnik': {
@@ -133,6 +134,24 @@ function findDetailMetadata(pathname: string): RouteMetadata | null {
       canonicalPath: `${route.prefix}${encodeURIComponent(entry.id)}`,
       type: 'article',
       section: entry.category ?? route.section,
+    }
+  }
+
+  if (pathname.startsWith('/psalmy/')) {
+    const psalmNumber = Number(decodeRouteId(pathname.slice('/psalmy/'.length)))
+    const psalm = psalms.find((entry) => entry.number === psalmNumber)
+    if (!psalm) return null
+
+    return {
+      title: `${psalm.title} — pełny tekst | ${SITE_NAME}`,
+      description: createDescription(
+        psalm.title,
+        psalm.verses.map((verse) => verse.text).join(' '),
+        'Psalm w przekładzie Jakuba Wujka',
+      ),
+      canonicalPath: `/psalmy/${psalm.number}`,
+      type: 'article',
+      section: 'Psalmy',
     }
   }
 
