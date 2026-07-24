@@ -30,6 +30,11 @@
 - [x] Modlitwa dnia i skrót „Kontynuuj” na stronie głównej
 - [x] Zaplanowane ogłoszenia ukrywane do dnia publikacji
 - [x] Dynamiczny identyfikator buildu i data ostatniej aktualizacji treści
+- [x] Dostępne mobilne menu — focus trap, `inert`, przywracanie fokusu i obsługa niskich ekranów
+- [x] Dostępna nazwa głównego pola wyszukiwarki
+- [x] Unikalne metadane tras i treści — canonical, Open Graph, Twitter Card i JSON-LD
+- [x] Statyczne wejścia HTML dla znanych tras, `sitemap.xml` i `robots.txt`
+- [x] Strona „Źródła i materiały” z logotypami źródeł oraz polecanymi publikacjami
 
 ## Do zrobienia — refaktor
 
@@ -228,3 +233,58 @@
 - [ ] Różaniec — wizualizacja paciorków
 - [x] Różaniec — podświetlanie tajemnic wg dnia tygodnia
 - [ ] Pieśni — uzupełnienie treści
+
+## Do zrobienia — SEO, indeksowanie i wdrożenie produkcyjne
+
+- [ ] Ustawić docelowy `VITE_SITE_URL` w środowisku produkcyjnym; bez znanej domeny build używa wyłącznie lokalnego adresu do weryfikacji
+- [ ] Ustawić produkcyjny `base` Vite i `basename` routera, jeśli aplikacja będzie działać w podkatalogu (np. GitHub Project Pages)
+- [ ] Dostosować `404.html`, manifest, service worker i ścieżki ikon do wybranego adresu bazowego
+- [ ] Dodać automatyczne wdrożenie, które publikuje kompletne `dist/` razem ze statycznymi wejściami tras
+- [ ] Po wdrożeniu zweryfikować statusy HTTP bezpośrednich adresów, canonical i Open Graph na publicznej domenie
+- [ ] Zgłosić `sitemap.xml` w Google Search Console i Bing Webmaster Tools oraz monitorować błędy indeksowania
+- [ ] Dodać automatyczną kontrolę niedziałających linków wewnętrznych i zewnętrznych przed publikacją
+- [ ] Zmniejszyć główny pakiet JavaScript (obecnie około 1,55 MB przed gzip) przez podział danych treści na fragmenty ładowane per sekcja
+
+## Do zrobienia — źródła treści i wiarygodność
+
+- [ ] Utworzyć centralny rejestr źródeł: nazwa, logo lokalne, adres strony, rodzaj treści, warunki użycia i data ostatniej weryfikacji
+- [ ] Każdej modlitwie, pieśni, psalmowi i tekstowi przypisać dokładny adres źródłowy, a nie tylko domenę główną
+- [ ] Przed importem zapisać podstawę wykorzystania treści: domena publiczna, licencja, zgoda autora/wydawcy albo dozwolony krótki cytat
+- [ ] Przeprowadzić przegląd praw autorskich istniejącego śpiewnika; współczesnych tekstów pieśni nie publikować bez licencji lub zgody
+- [ ] Dodać datę weryfikacji i opcjonalną informację o autorze/redakcji do frontmatter plików Markdown
+- [ ] Wykrywać duplikaty po znormalizowanym tytule i adresie źródłowym przed dodaniem treści
+- [ ] Dodać panel lub raport brakujących źródeł, błędnych adresów i niekompletnych metadanych
+
+## Do zrobienia — polecane materiały innych twórców
+
+- [ ] Rozbudować model polecanego materiału o autora, wydawcę, kategorię, opis, zdjęcie lokalne, link zakupu i datę sprawdzenia linku
+- [ ] Potwierdzić możliwość lokalnego użycia zdjęć okładek albo zastąpić je materiałami udostępnionymi przez wydawcę
+- [ ] Dodać kolejne wartościowe książki, Biblie i pomoce modlitewne dopiero po ręcznej weryfikacji redakcyjnej
+- [ ] Wyraźnie oznaczać linki afiliacyjne lub sponsorowane; przy zwykłych poleceniach informować, że aplikacja nie otrzymuje wynagrodzenia
+- [ ] Dodać obsługę niedostępnego produktu: ukrycie nieaktualnej ceny, alternatywny link lub oznaczenie „nakład wyczerpany”
+
+## Do zrobienia — nowe modlitwy, pieśni, psalmy i teksty
+
+- [ ] Przygotować kontrolowany importer listy modlitw z Doliny Modlitwy przekazanej w materiale źródłowym
+- [ ] Zaimportować po weryfikacji 11 stron sekcji „Modlitwy” z `modlitwa7.pl/modlitwy/`
+- [ ] Zaimportować po weryfikacji sekcję „Pieśni” z `modlitwa7.pl/piesni/`
+- [ ] Zaimportować po weryfikacji sekcję „Teksty” z `modlitwa7.pl/teksty/`
+- [ ] Zaimportować po weryfikacji 4 strony psalmów z `modlitwa7.pl/psalmy/`
+- [ ] Przeanalizować śpiewnik `katolicki.net/index.php/modlitwa/modlitwa-spiewnik.html` jako źródło indeksu; pełne teksty dodać tylko z potwierdzonym prawem publikacji
+- [ ] Przy imporcie zachować dokładny URL każdej pozycji, kategorię, autora i informację o pochodzeniu
+- [ ] Znormalizować polskie znaki, cudzysłowy, wielokrotne spacje, encje HTML i błędne kodowanie
+- [ ] Ręcznie sprawdzić każdą serię importu pod kątem kompletności, duplikatów, jakości językowej i zgodności doktrynalnej
+- [ ] Rozbudować filtry o typ treści: koronka, litania, nowenna, psalm, pieśń, rozważanie i modlitwa okolicznościowa
+
+## Do zrobienia — kalendarz liturgiczny i czytania na dziś
+
+- [ ] Zweryfikować Romcal jako źródło dat i obchodów liturgicznych oraz zakres polskiego kalendarza i lokalizacji
+- [ ] Zaprojektować warstwę kalendarza niezależną od interfejsu: data, okres liturgiczny, kolor, ranga, obchód i wspomnienia
+- [ ] Uwzględnić strefę `Europe/Warsaw`, zmianę dnia o północy, lata przestępne i ruchome uroczystości
+- [ ] Dodać widok „Dzisiaj w liturgii” na stronie głównej i pełny kalendarz z nawigacją po dniach
+- [ ] Pozyskać osobne, legalne źródło polskich czytań mszalnych; Romcal nie powinien być traktowany jako źródło tekstów czytań
+- [ ] Ustalić zakres danych czytań: pierwsze czytanie, psalm responsoryjny, drugie czytanie, aklamacja i Ewangelia
+- [ ] Zapisać przy każdym czytaniu źródło, siglum, tłumaczenie, licencję i adres oryginalnej publikacji
+- [ ] Dodać cache ostatnich i najbliższych dni oraz czytelny stan awarii źródła z możliwością ponowienia
+- [ ] Zapewnić działanie offline dla wcześniej pobranych danych bez pokazywania nieaktualnych czytań jako bieżących
+- [ ] Połączyć obchody z pasującymi modlitwami, pieśniami i psalmami z lokalnej biblioteki
