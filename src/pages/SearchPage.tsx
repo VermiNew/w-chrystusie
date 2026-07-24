@@ -233,6 +233,7 @@ export default function SearchPage() {
       <input
         className="search-input"
         type="text"
+        aria-label="Szukana fraza"
         placeholder="Wpisz frazę…"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
