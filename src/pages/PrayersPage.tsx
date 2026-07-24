@@ -1,11 +1,12 @@
 import { useMemo, useEffect, useState, type CSSProperties } from 'react'
 import { useLocation, useParams, Link } from 'react-router-dom'
-import { FaArrowLeft, FaArrowUpRightFromSquare, FaCalendarDay, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaHandsPraying, FaList, FaStar, FaTrash, FaXmark } from 'react-icons/fa6'
+import { FaArrowLeft, FaCalendarDay, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaHandsPraying, FaList, FaStar, FaTrash, FaXmark } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
 import { getPrayerOfDay, prayers, type Prayer } from '../data/prayers'
 import ReadingModeToggle from '../components/ReadingModeToggle'
 import { useContentLibrary } from '../hooks/useContentLibrary'
 import ConfirmDialog from '../components/ConfirmDialog'
+import SourceAttributionLink from '../components/SourceAttributionLink'
 
 const SCROLL_KEY = 'prayers-scroll'
 const CATEGORY_KEY = 'prayers-category'
@@ -164,9 +165,7 @@ export default function PrayersPage() {
           <Markdown>{selected.body}</Markdown>
         </div>
         {selected.source && (
-          <a className="source-link" href={selected.source} target="_blank" rel="noopener noreferrer">
-            Źródło <FaArrowUpRightFromSquare aria-hidden="true" />
-          </a>
+          <SourceAttributionLink url={selected.source} />
         )}
         <nav className="content-sibling-nav" aria-label="Nawigacja między modlitwami">
           {previousItem ? (

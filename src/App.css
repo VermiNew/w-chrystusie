@@ -677,6 +677,50 @@ body[data-nav-menu='open'] {
   outline-offset: 2px;
 }
 
+.content-source-link {
+  gap: 0.6rem;
+  min-height: 52px;
+  padding: 0.5rem 0.7rem;
+}
+
+.content-source-logo {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.content-source-logo--wide {
+  object-fit: contain;
+  background: #fff;
+}
+
+.content-source-copy {
+  display: grid;
+  gap: 0.08rem;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.content-source-copy small {
+  color: var(--color-text-muted);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.content-source-copy strong {
+  color: var(--color-primary);
+  font-size: 0.86rem;
+}
+
+.content-source-link > svg {
+  margin-left: 0.1rem;
+  font-size: 0.75rem;
+}
+
 .content-breadcrumb {
   display: flex;
   align-items: center;

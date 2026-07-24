@@ -1,12 +1,13 @@
 import { useMemo, useEffect, useState, type CSSProperties } from 'react'
 import { useLocation, useParams, Link } from 'react-router-dom'
-import { FaArrowLeft, FaArrowUpRightFromSquare, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaStar, FaTrash, FaXmark } from 'react-icons/fa6'
+import { FaArrowLeft, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaStar, FaTrash, FaXmark } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
 import { songs, type Song } from '../data/songs'
 import ReadingModeToggle from '../components/ReadingModeToggle'
 import { useContentLibrary } from '../hooks/useContentLibrary'
 import ConfirmDialog from '../components/ConfirmDialog'
 import { getLiturgicalSeason } from '../data/liturgicalSeason'
+import SourceAttributionLink from '../components/SourceAttributionLink'
 
 const SCROLL_KEY = 'songbook-scroll'
 const CATEGORY_KEY = 'songbook-category'
@@ -162,9 +163,7 @@ export default function SongbookPage() {
           <Markdown>{selected.body}</Markdown>
         </div>
         {selected.source && (
-          <a className="source-link" href={selected.source} target="_blank" rel="noopener noreferrer">
-            Źródło <FaArrowUpRightFromSquare aria-hidden="true" />
-          </a>
+          <SourceAttributionLink url={selected.source} />
         )}
         <nav className="content-sibling-nav" aria-label="Nawigacja między pieśniami">
           {previousItem ? (

@@ -163,3 +163,31 @@ export const recommendedMaterials: readonly RecommendedMaterial[] = [
     imageRightsStatus: 'verification-required',
   },
 ]
+
+function normalizeHostname(hostname: string) {
+  return hostname.toLowerCase().replace(/^www\./, '')
+}
+
+export function findContentSourceByUrl(url: string) {
+  try {
+    const hostname = normalizeHostname(new URL(url).hostname)
+
+    return contentSources.find((source) => {
+      const sourceHostname = normalizeHostname(new URL(source.url).hostname)
+      return hostname === sourceHostname || hostname.endsWith(`.${sourceHostname}`)
+    })
+  } catch {
+    return undefined
+  }
+}
+
+export function getSourceDisplayName(url: string) {
+  const source = findContentSourceByUrl(url)
+  if (source) return source.name
+
+  try {
+    return normalizeHostname(new URL(url).hostname)
+  } catch {
+    return 'Źródło zewnętrzne'
+  }
+}
