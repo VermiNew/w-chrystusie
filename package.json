@@ -11,7 +11,8 @@
     "playwright": "playwright",
     "playwright:test": "playwright test",
     "playwright:ui": "playwright test --ui",
-    "content:psalms": "node scripts/import-wujek-psalms.mjs"
+    "content:psalms": "node scripts/import-wujek-psalms.mjs",
+    "content:audit": "node scripts/audit-content-rights.mjs"
   },
   "dependencies": {
     "react": "^19.2.0",
