@@ -89,8 +89,8 @@ function PsalmsIndex() {
         <p className="psalms-eyebrow">Pełne teksty · domena publiczna</p>
         <h1>Psalmy</h1>
         <p>
-          {psalms.length} z 150 Psalmów w historycznym przekładzie Jakuba Wujka, z podanym
-          źródłem i dokładnym URL-em.
+          Wszystkie {psalms.length} Psalmów w historycznym przekładzie Jakuba Wujka,
+          z podanym źródłem i dokładnym URL-em.
         </p>
       </header>
 

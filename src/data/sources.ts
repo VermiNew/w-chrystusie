@@ -108,6 +108,29 @@ export const contentSources: readonly ContentSource[] = [
     wideLogo: true,
   },
   {
+    id: 'wikisource',
+    name: 'Wikiźródła',
+    url: 'https://pl.wikisource.org/',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg',
+    description:
+      'Cyfrowe źródło publicznodomenowego wydania Biblii Jakuba Wujka z 1923 roku.',
+    contentKinds: ['pełne teksty 150 Psalmów'],
+    sections: [
+      {
+        label: 'Biblia Wujka (1923)',
+        url: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29',
+      },
+      {
+        label: 'Logo i licencja',
+        url: 'https://commons.wikimedia.org/wiki/File:Wikisource-logo.svg',
+      },
+    ],
+    status: 'active',
+    verifiedAt: '2026-07-25',
+    usageNote:
+      'Tekst wydania jest oznaczony jako domena publiczna. Logo Wikiźródeł: CC BY-SA 3.0; Wikimedia Foundation, Inc.',
+  },
+  {
     id: 'romcal',
     name: 'Romcal',
     url: 'https://romcal.js.org/',
