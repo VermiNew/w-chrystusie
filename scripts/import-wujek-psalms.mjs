@@ -54,11 +54,8 @@ function textFromHtml(value) {
 
 function parsePsalm(number, html) {
   const verseParagraphPattern = /<p>([\s\S]*?)<\/p>/gi
-  const markerPattern = new RegExp(
-    `<span[^>]*id="${number}:(\\d+)"[^>]*>[\\s\\S]*?<\\/span>`,
-    'i',
-  )
-  const sourceMarkerPattern = new RegExp(`id="${number}:(\\d+)"`, 'g')
+  const markerPattern = /<span[^>]*id="\d+:(\d+)\.?"[^>]*>[\s\S]*?<\/span>/i
+  const sourceMarkerPattern = /id="\d+:(\d+)\.?"/g
   const verses = []
 
   for (const paragraphMatch of html.matchAll(verseParagraphPattern)) {
@@ -83,6 +80,16 @@ function parsePsalm(number, html) {
   const uniqueVerseNumbers = new Set(verses.map((verse) => verse.number))
   if (uniqueVerseNumbers.size !== verses.length) {
     throw new Error(`Psalm ${number}: wykryto powtórzone numery wersetów.`)
+  }
+
+  const expectedVerseNumbers = Array.from({ length: verses.length }, (_, index) => index + 1)
+  const hasCompleteSequence = expectedVerseNumbers.every(
+    (verseNumber, index) => verses[index]?.number === verseNumber,
+  )
+  if (!hasCompleteSequence) {
+    throw new Error(
+      `Psalm ${number}: wersety nie tworzą pełnej sekwencji od 1 (${verses.map((verse) => verse.number).join(', ')}).`,
+    )
   }
 
   const sourceVerseNumbers = [...html.matchAll(sourceMarkerPattern)].map((match) =>

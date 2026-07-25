@@ -2,7 +2,6 @@ import { useEffect, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
 import { announcements } from '../data/announcements'
 import { prayers } from '../data/prayers'
-import { psalms } from '../data/psalms'
 import { songs } from '../data/songs'
 
 const SITE_NAME = 'W Chrystusie'
@@ -139,17 +138,12 @@ function findDetailMetadata(pathname: string): RouteMetadata | null {
 
   if (pathname.startsWith('/psalmy/')) {
     const psalmNumber = Number(decodeRouteId(pathname.slice('/psalmy/'.length)))
-    const psalm = psalms.find((entry) => entry.number === psalmNumber)
-    if (!psalm) return null
+    if (!Number.isInteger(psalmNumber) || psalmNumber < 1 || psalmNumber > 150) return null
 
     return {
-      title: `${psalm.title} — pełny tekst | ${SITE_NAME}`,
-      description: createDescription(
-        psalm.title,
-        psalm.verses.map((verse) => verse.text).join(' '),
-        'Psalm w przekładzie Jakuba Wujka',
-      ),
-      canonicalPath: `/psalmy/${psalm.number}`,
+      title: `Psalm ${psalmNumber} — pełny tekst | ${SITE_NAME}`,
+      description: `Pełny tekst Psalmu ${psalmNumber} w publicznodomenowym przekładzie Jakuba Wujka, z informacją o wydaniu, źródłem cyfrowym i dokładnym URL-em.`,
+      canonicalPath: `/psalmy/${psalmNumber}`,
       type: 'article',
       section: 'Psalmy',
     }
