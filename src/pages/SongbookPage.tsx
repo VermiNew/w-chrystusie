@@ -1,6 +1,6 @@
 import { useMemo, useEffect, useState, type CSSProperties } from 'react'
 import { useLocation, useParams, Link } from 'react-router-dom'
-import { FaArrowLeft, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaStar, FaTrash, FaXmark } from 'react-icons/fa6'
+import { FaArrowLeft, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaCopyright, FaStar, FaTrash, FaXmark } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
 import { songs, type Song } from '../data/songs'
 import ReadingModeToggle from '../components/ReadingModeToggle'
@@ -159,9 +159,28 @@ export default function SongbookPage() {
           onToggleFavorite={() => toggleFavorite('song', selected.id)}
         />
         <h1>{selected.title}</h1>
-        <div className="song-text" lang="pl">
-          <Markdown>{selected.body}</Markdown>
-        </div>
+        {selected.author && (
+          <p className="content-rights-status">
+            Autor: <strong>{selected.author}</strong>
+            {selected.rightsStatus === 'public-domain' && <> · domena publiczna</>}
+          </p>
+        )}
+        {selected.rightsStatus === 'permission-required' ? (
+          <aside className="psalms-rights-notice content-rights-notice">
+            <FaCopyright aria-hidden="true" />
+            <div>
+              <h2>Tekst chroniony prawem autorskim</h2>
+              <p>
+                {selected.rightsNote ?? 'Pełny tekst wymaga zgody właściciela praw autorskich.'}
+                {' '}Pozostawiamy tytuł, autora i dokładny adres źródłowy.
+              </p>
+            </div>
+          </aside>
+        ) : (
+          <div className="song-text" lang="pl">
+            <Markdown>{selected.body}</Markdown>
+          </div>
+        )}
         {selected.source && (
           <SourceAttributionLink url={selected.source} />
         )}

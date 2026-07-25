@@ -972,6 +972,15 @@ body[data-nav-menu='open'] {
   line-height: 1.6;
 }
 
+.content-rights-status {
+  margin: -0.5rem 0 1.25rem;
+  color: var(--color-text-muted);
+}
+
+.content-rights-notice {
+  margin: 1.5rem 0;
+}
+
 .psalm-index-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

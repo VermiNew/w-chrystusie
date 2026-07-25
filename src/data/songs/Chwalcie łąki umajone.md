@@ -2,6 +2,10 @@
 title: Chwalcie łąki umajone
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1159/Chwalcie-laki-umajone
+author: ks. Karol Bołoz Antoniewicz
+rightsStatus: public-domain
+rightsNote: Autor zmarł w 1852 roku; tekst znajduje się w domenie publicznej.
+verifiedAt: 2026-07-25
 ---
 
 1. Chwalcie łąki umajone,  
