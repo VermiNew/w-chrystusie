@@ -9,6 +9,7 @@ const collections = [
 ]
 const knownRightsStatuses = new Set([
   'licensed',
+  'original',
   'permission-required',
   'permission-granted',
   'public-domain',
@@ -38,6 +39,7 @@ function createAudit(collection, entries) {
     collection: collection.name,
     total: entries.length,
     exactSourceUrls: 0,
+    originalEntries: 0,
     missingOrInvalidSourceUrls: [],
     sourceDomains: new Map(),
     rightsStatuses: new Map(),
@@ -49,24 +51,28 @@ function createAudit(collection, entries) {
   for (const entry of entries) {
     const metadata = entry.metadata
     const source = metadata?.source
+    const rightsStatus = metadata?.rightsStatus
 
-    try {
-      const sourceUrl = new URL(source)
-      if (sourceUrl.protocol !== 'https:' && sourceUrl.protocol !== 'http:') {
-        throw new Error('unsupported protocol')
-      }
-      if (sourceUrl.pathname === '/' || sourceUrl.pathname === '') {
-        throw new Error('domain-only URL')
-      }
+    if (rightsStatus === 'original') {
+      result.originalEntries += 1
+    } else {
+      try {
+        const sourceUrl = new URL(source)
+        if (sourceUrl.protocol !== 'https:' && sourceUrl.protocol !== 'http:') {
+          throw new Error('unsupported protocol')
+        }
+        if (sourceUrl.pathname === '/' || sourceUrl.pathname === '') {
+          throw new Error('domain-only URL')
+        }
 
-      result.exactSourceUrls += 1
-      const hostname = sourceUrl.hostname.toLowerCase().replace(/^www\./, '')
-      result.sourceDomains.set(hostname, (result.sourceDomains.get(hostname) ?? 0) + 1)
-    } catch {
-      result.missingOrInvalidSourceUrls.push(entry.file)
+        result.exactSourceUrls += 1
+        const hostname = sourceUrl.hostname.toLowerCase().replace(/^www\./, '')
+        result.sourceDomains.set(hostname, (result.sourceDomains.get(hostname) ?? 0) + 1)
+      } catch {
+        result.missingOrInvalidSourceUrls.push(entry.file)
+      }
     }
 
-    const rightsStatus = metadata?.rightsStatus
     if (!rightsStatus || !knownRightsStatuses.has(rightsStatus)) {
       result.missingRightsStatus.push(entry.file)
     } else {
@@ -85,7 +91,8 @@ function createAudit(collection, entries) {
 
 function printAudit(audit) {
   console.log(`\n${audit.collection}: ${audit.total}`)
-  console.log(`  dokładne URL-e źródeł: ${audit.exactSourceUrls}/${audit.total}`)
+  console.log(`  dokładne URL-e zewnętrzne: ${audit.exactSourceUrls}/${audit.total}`)
+  console.log(`  opracowania własne: ${audit.originalEntries}/${audit.total}`)
   console.log(
     `  status prawny: ${audit.total - audit.missingRightsStatus.length}/${audit.total}`,
   )

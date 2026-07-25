@@ -1,6 +1,6 @@
 import { useMemo, useEffect, useState, type CSSProperties } from 'react'
 import { useLocation, useParams, Link } from 'react-router-dom'
-import { FaArrowLeft, FaCalendarDay, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaHandsPraying, FaList, FaStar, FaTrash, FaXmark } from 'react-icons/fa6'
+import { FaArrowLeft, FaCalendarDay, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaCopyright, FaHandsPraying, FaList, FaStar, FaTrash, FaXmark } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
 import { getPrayerOfDay, prayers, type Prayer } from '../data/prayers'
 import ReadingModeToggle from '../components/ReadingModeToggle'
@@ -161,9 +161,29 @@ export default function PrayersPage() {
           onToggleFavorite={() => toggleFavorite('prayer', selected.id)}
         />
         <h1>{selected.title}</h1>
-        <div className="prayer-text" lang="pl">
-          <Markdown>{selected.body}</Markdown>
-        </div>
+        {selected.author && (
+          <p className="content-rights-status">
+            Autor: <strong>{selected.author}</strong>
+            {selected.rightsStatus === 'original' && <> · opracowanie własne</>}
+            {selected.rightsStatus === 'public-domain' && <> · domena publiczna</>}
+          </p>
+        )}
+        {selected.rightsStatus === 'permission-required' ? (
+          <aside className="psalms-rights-notice content-rights-notice">
+            <FaCopyright aria-hidden="true" />
+            <div>
+              <h2>Tekst chroniony prawem autorskim</h2>
+              <p>
+                {selected.rightsNote ?? 'Pełny tekst wymaga zgody właściciela praw autorskich.'}
+                {' '}Pozostawiamy tytuł, autora i dokładny adres źródłowy.
+              </p>
+            </div>
+          </aside>
+        ) : (
+          <div className="prayer-text" lang="pl">
+            <Markdown>{selected.body}</Markdown>
+          </div>
+        )}
         {selected.source && (
           <SourceAttributionLink url={selected.source} />
         )}

@@ -1,6 +1,10 @@
 ---
 category: Katechizm
 title: Jak prawdziwie z sercem odmówić różaniec
+author: Redakcja W Chrystusie
+rightsStatus: original
+rightsNote: Opracowanie własne projektu W Chrystusie.
+verifiedAt: 2026-07-25
 ---
 
 Różaniec nie jest tylko powtarzaniem słów. To modlitwa, w której z Maryją patrzymy na życie Jezusa: Jego narodzenie, nauczanie, mękę, śmierć i zmartwychwstanie. Dobrze odmówiony różaniec nie wymaga idealnego skupienia, ale szczerego serca i pragnienia trwania przy Bogu.
