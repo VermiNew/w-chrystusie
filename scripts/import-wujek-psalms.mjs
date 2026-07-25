@@ -9,6 +9,7 @@ const sourceUrlPrefix =
   'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Psalm%C3%B3w_'
 const apiUrl = 'https://pl.wikisource.org/w/api.php'
 const userAgent = 'WChrystusieContentImporter/1.0 (https://w-chrystusie.pages.dev)'
+const psalmsWithContinuedSourceNumbering = new Set([115, 147])
 
 function parseRange(argumentsList) {
   const fromIndex = argumentsList.indexOf('--from')
@@ -52,22 +53,40 @@ function textFromHtml(value) {
     .trim()
 }
 
+function normalizeVerseNumbers(numbers, continueFromPreviousPsalm) {
+  let offset = continueFromPreviousPsalm ? 1 - (numbers[0] ?? 1) : 0
+
+  return numbers.map((number, index) => {
+    if (number === 1 && index > 0) offset = index
+    return number + offset
+  })
+}
+
 function parsePsalm(number, html) {
   const verseParagraphPattern = /<p>([\s\S]*?)<\/p>/gi
   const markerPattern = /<span[^>]*id="\d+:(\d+)\.?"[^>]*>[\s\S]*?<\/span>/i
   const sourceMarkerPattern = /id="\d+:(\d+)\.?"/g
-  const verses = []
+  const rawVerses = []
 
   for (const paragraphMatch of html.matchAll(verseParagraphPattern)) {
     const paragraph = paragraphMatch[1]
     const marker = paragraph.match(markerPattern)
     if (!marker) continue
 
-    const verseNumber = Number(marker[1])
     const markerEnd = marker.index + marker[0].length
     const text = textFromHtml(paragraph.slice(markerEnd))
-    if (text) verses.push({ number: verseNumber, text })
+    if (text) rawVerses.push({ number: Number(marker[1]), text })
   }
+
+  const continueFromPreviousPsalm = psalmsWithContinuedSourceNumbering.has(number)
+  const normalizedVerseNumbers = normalizeVerseNumbers(
+    rawVerses.map((verse) => verse.number),
+    continueFromPreviousPsalm,
+  )
+  const verses = rawVerses.map((verse, index) => ({
+    number: normalizedVerseNumbers[index],
+    text: verse.text,
+  }))
 
   const summaryMatch = html.match(
     /<div class="center"[^>]*><b><span[^>]*>PSALM<\/span>[\s\S]*?<\/div>\s*<div[^>]*font-size:85%[^>]*>([\s\S]*?)<\/div>/i,
@@ -92,8 +111,9 @@ function parsePsalm(number, html) {
     )
   }
 
-  const sourceVerseNumbers = [...html.matchAll(sourceMarkerPattern)].map((match) =>
-    Number(match[1]),
+  const sourceVerseNumbers = normalizeVerseNumbers(
+    [...html.matchAll(sourceMarkerPattern)].map((match) => Number(match[1])),
+    continueFromPreviousPsalm,
   )
   const missingVerseNumbers = sourceVerseNumbers.filter(
     (verseNumber) => !uniqueVerseNumbers.has(verseNumber),
