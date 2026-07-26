@@ -930,6 +930,7 @@ body[data-nav-menu='open'] {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  animation: content-fade-in 0.4s ease both;
 }
 
 .psalms-header h1 {
@@ -939,6 +940,7 @@ body[data-nav-menu='open'] {
 .psalms-header > p:last-child {
   margin: 0;
   color: var(--color-text-muted);
+  animation: content-fade-in 0.5s ease 0.1s both;
 }
 
 .psalms-rights-notice {
@@ -950,6 +952,7 @@ body[data-nav-menu='open'] {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 10px;
+  animation: slide-in-left 0.4s ease 0.1s both;
 }
 
 .psalms-rights-notice > svg {
@@ -1046,6 +1049,19 @@ body[data-nav-menu='open'] {
   outline-offset: 2px;
 }
 
+.psalm-index-grid li {
+  animation: list-item-in 0.4s ease both;
+}
+.psalm-index-grid li:nth-child(1) { animation-delay: 0.02s; }
+.psalm-index-grid li:nth-child(2) { animation-delay: 0.04s; }
+.psalm-index-grid li:nth-child(3) { animation-delay: 0.06s; }
+.psalm-index-grid li:nth-child(4) { animation-delay: 0.08s; }
+.psalm-index-grid li:nth-child(5) { animation-delay: 0.10s; }
+.psalm-index-grid li:nth-child(6) { animation-delay: 0.12s; }
+.psalm-index-grid li:nth-child(7) { animation-delay: 0.14s; }
+.psalm-index-grid li:nth-child(8) { animation-delay: 0.16s; }
+.psalm-index-grid li:nth-child(n+9) { animation-delay: 0.18s; }
+
 .psalm-reader {
   max-width: 50rem;
 }
@@ -1053,6 +1069,7 @@ body[data-nav-menu='open'] {
 .psalm-reader-header {
   margin: 2rem auto;
   text-align: center;
+  animation: content-fade-in 0.5s ease both;
 }
 
 .psalm-reader-header h1 {
@@ -1075,6 +1092,7 @@ body[data-nav-menu='open'] {
   font-family: var(--font-serif);
   font-size: 1.12rem;
   line-height: 1.8;
+  animation: content-fade-in 0.6s ease 0.1s both;
 }
 
 .psalm-verses p {
@@ -1100,6 +1118,7 @@ body[data-nav-menu='open'] {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 10px;
+  animation: slide-in-left 0.4s ease 0.15s both;
 }
 
 .psalm-source-card > svg {
@@ -1140,6 +1159,7 @@ body[data-nav-menu='open'] {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
   margin-top: 1.5rem;
+  animation: content-fade-in 0.4s ease 0.2s both;
 }
 
 .psalm-reader-navigation a {
@@ -3213,6 +3233,10 @@ body[data-nav-menu='open'] {
   text-transform: uppercase;
 }
 
+.sources-eyebrow {
+  animation: content-fade-in 0.4s ease both;
+}
+
 .sources-header h1 {
   margin-bottom: 0.65rem;
 }
@@ -3222,6 +3246,7 @@ body[data-nav-menu='open'] {
   font-family: var(--font-reading);
   font-size: 1.05rem;
   line-height: 1.75;
+  animation: content-fade-in 0.5s ease 0.1s both;
 }
 
 .sources-section + .sources-section {
@@ -3336,6 +3361,14 @@ body[data-nav-menu='open'] {
   outline-offset: 3px;
 }
 
+.source-card {
+  animation: list-item-in 0.4s ease both;
+}
+.source-card:nth-child(1) { animation-delay: 0.03s; }
+.source-card:nth-child(2) { animation-delay: 0.06s; }
+.source-card:nth-child(3) { animation-delay: 0.09s; }
+.source-card:nth-child(n+4) { animation-delay: 0.12s; }
+
 .material-cards {
   display: grid;
   gap: 1rem;
@@ -3349,7 +3382,11 @@ body[data-nav-menu='open'] {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 14px;
+  animation: list-item-in 0.5s ease both;
 }
+.material-card:nth-child(1) { animation-delay: 0.1s; }
+.material-card:nth-child(2) { animation-delay: 0.15s; }
+.material-card:nth-child(n+3) { animation-delay: 0.2s; }
 
 .material-card-image {
   display: grid;
