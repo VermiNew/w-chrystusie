@@ -913,6 +913,52 @@ body[data-nav-menu='open'] {
   text-decoration: underline;
 }
 
+.scripture-subsection {
+  max-width: 55ch;
+  margin: 2rem auto;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  animation: content-fade-in 0.5s ease 0.15s both;
+}
+
+.scripture-subsection-icon {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.scripture-subsection h2 {
+  margin: 0 0 0.75rem;
+}
+
+.scripture-subsection p {
+  margin: 0 0 1.25rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
+.subsection-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.subsection-link:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
 /* Psalms */
 
 .psalms-page {
