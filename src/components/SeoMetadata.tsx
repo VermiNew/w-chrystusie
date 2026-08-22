@@ -35,10 +35,16 @@ const staticRoutes: Record<string, RouteMetadata> = {
     canonicalPath: '/pismo-swiete',
     noIndex: true,
   },
+  '/pismo-swiete/psalmy': {
+    title: 'Psalmy — pełne teksty | W Chrystusie',
+    description: 'Pełne teksty 150 Psalmów w publicznodomenowym przekładzie Jakuba Wujka, ze źródłem i dokładnym URL-em.',
+    canonicalPath: '/pismo-swiete/psalmy',
+  },
   '/psalmy': {
     title: 'Psalmy — pełne teksty | W Chrystusie',
     description: 'Pełne teksty 150 Psalmów w publicznodomenowym przekładzie Jakuba Wujka, ze źródłem i dokładnym URL-em.',
-    canonicalPath: '/psalmy',
+    canonicalPath: '/pismo-swiete/psalmy',
+    noIndex: true,
   },
   '/spiewnik': {
     title: 'Śpiewnik katolicki | W Chrystusie',
@@ -136,16 +142,22 @@ function findDetailMetadata(pathname: string): RouteMetadata | null {
     }
   }
 
-  if (pathname.startsWith('/psalmy/')) {
-    const psalmNumber = Number(decodeRouteId(pathname.slice('/psalmy/'.length)))
+  const psalmPrefixes = [
+    { prefix: '/pismo-swiete/psalmy/', noIndex: false },
+    { prefix: '/psalmy/', noIndex: true },
+  ]
+  const psalmRoute = psalmPrefixes.find(({ prefix }) => pathname.startsWith(prefix))
+  if (psalmRoute) {
+    const psalmNumber = Number(decodeRouteId(pathname.slice(psalmRoute.prefix.length)))
     if (!Number.isInteger(psalmNumber) || psalmNumber < 1 || psalmNumber > 150) return null
 
     return {
       title: `Psalm ${psalmNumber} — pełny tekst | ${SITE_NAME}`,
       description: `Pełny tekst Psalmu ${psalmNumber} w publicznodomenowym przekładzie Jakuba Wujka, z informacją o wydaniu, źródłem cyfrowym i dokładnym URL-em.`,
-      canonicalPath: `/psalmy/${psalmNumber}`,
+      canonicalPath: `/pismo-swiete/psalmy/${psalmNumber}`,
       type: 'article',
       section: 'Psalmy',
+      noIndex: psalmRoute.noIndex,
     }
   }
 

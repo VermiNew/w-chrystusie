@@ -34,7 +34,7 @@ const staticPages = [
     noIndex: true,
   },
   {
-    path: '/psalmy',
+    path: '/pismo-swiete/psalmy',
     title: 'Psalmy — pełne teksty | W Chrystusie',
     description: 'Pełne teksty 150 Psalmów w publicznodomenowym przekładzie Jakuba Wujka, ze źródłem i dokładnym URL-em.',
   },
@@ -295,8 +295,8 @@ const pages = [
       category: 'Psalmy',
     })),
     {
-      prefix: '/psalmy',
-      outputDirectory: 'psalmy',
+      prefix: '/pismo-swiete/psalmy',
+      outputDirectory: 'pismo-swiete/psalmy',
       contentType: 'Psalm w przekładzie Jakuba Wujka',
       titleSuffix: 'pełny tekst',
       section: 'Psalmy',
