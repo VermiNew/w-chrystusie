@@ -46,4 +46,7 @@ React 19 · TypeScript · Vite · react-router-dom · react-markdown · react-ic
 
 ## Licencja
 
-MIT
+Kod źródłowy i oryginalne elementy programistyczne: MIT.
+
+Materiały pochodzące ze źródeł zewnętrznych zachowują prawa swoich autorów
+i innych uprawnionych podmiotów. Szczegóły opisuje [informacja o prawach do treści](CONTENT_NOTICE.md).

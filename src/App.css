@@ -3387,6 +3387,18 @@ body[data-nav-menu='open'] {
   line-height: 1.65;
 }
 
+.sources-note a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.sources-note a:focus-visible {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
+  outline-offset: 2px;
+}
+
 .source-card > svg {
   color: var(--color-text-muted);
   font-size: 0.85rem;

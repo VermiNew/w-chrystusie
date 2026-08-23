@@ -65,9 +65,11 @@ export default function SourcesPage() {
           ))}
         </div>
         <p className="sources-note">
-          Rejestr wskazuje pochodzenie informacji, ale nie oznacza zgody na kopiowanie
-          pełnych tekstów. Przy każdej pozycji zachowuję dokładny adres, a przed importem
-          sprawdzam licencję lub zgodę właściciela.
+          Aplikacja jest projektem niekomercyjnym, nie wyświetla reklam i wskazuje
+          pochodzenie wykorzystywanych materiałów. Prawa do treści zewnętrznych pozostają
+          przy ich autorach i innych uprawnionych podmiotach. Uwagi dotyczące atrybucji,
+          źródła albo konkretnego materiału można przesłać na{' '}
+          <a href="mailto:verminewfey@gmail.com">verminewfey@gmail.com</a>.
         </p>
       </section>
 
