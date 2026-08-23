@@ -5,7 +5,7 @@ Polska katolicka aplikacja webowa — modlitwy, pieśni kościelne i interaktywn
 ## Sekcje
 
 - **Modlitwy** — ponad sto modlitw codziennych, litanii i aktów
-- **Pismo Święte** — tymczasowo wycofane (poszukiwana katolicka wersja z otwartą licencją)
+- **Pismo Święte** — Księga Psalmów w historycznym przekładzie Jakuba Wujka; dla pozostałych ksiąg poszukiwana jest katolicka wersja z otwartą licencją
 - **Śpiewnik** — pieśni i hymny kościelne
 - **Różaniec** — interaktywny przewodnik krok po kroku z czterema zestawami tajemnic
 - **Szukaj** — wyszukiwarka po wszystkich sekcjach
