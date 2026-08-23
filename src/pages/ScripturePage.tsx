@@ -20,7 +20,7 @@ export default function ScripturePage() {
         </p>
         <p>
           Jeśli posiadasz lub znasz taki zasób - napisz na{' '}
-          <a href="mailto:verminewfey@gmail.com">verminewfey@gmail.com</a>.
+          <a href="mailto:werminew@protonmail.com">werminew@protonmail.com</a>.
         </p>
       </div>
 

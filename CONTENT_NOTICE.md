@@ -14,4 +14,4 @@ wykorzystywanych materiałów. Treści opracowane specjalnie dla projektu są
 oznaczane jako własne.
 
 Prośby dotyczące uzupełnienia atrybucji, korekty źródła albo dostępności
-konkretnego materiału można zgłaszać na adres: verminewfey@gmail.com.
+konkretnego materiału można zgłaszać na adres: werminew@protonmail.com.

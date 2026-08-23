@@ -69,7 +69,7 @@ export default function SourcesPage() {
           pochodzenie wykorzystywanych materiałów. Prawa do treści zewnętrznych pozostają
           przy ich autorach i innych uprawnionych podmiotach. Uwagi dotyczące atrybucji,
           źródła albo konkretnego materiału można przesłać na{' '}
-          <a href="mailto:verminewfey@gmail.com">verminewfey@gmail.com</a>.
+          <a href="mailto:werminew@protonmail.com">werminew@protonmail.com</a>.
         </p>
       </section>
 
