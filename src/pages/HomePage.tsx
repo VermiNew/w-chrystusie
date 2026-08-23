@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { FaArrowRight, FaCross, FaBookBible, FaMusic, FaHandsPraying, FaBullhorn, FaMagnifyingGlass } from 'react-icons/fa6'
-import { getPrayerOfDay, prayers } from '../data/prayers'
-import { songs } from '../data/songs'
+import { getCatalogPrayerOfDay, prayerCatalog, songCatalog } from '../data/contentCatalog'
 import { useContentLibrary } from '../hooks/useContentLibrary'
 
 const sections = [
@@ -16,8 +15,8 @@ const sections = [
 export default function HomePage() {
   const { latestRecent } = useContentLibrary('prayer')
   const recentContent = latestRecent?.kind === 'prayer'
-    ? prayers.find((prayer) => prayer.id === latestRecent.id)
-    : songs.find((song) => song.id === latestRecent?.id)
+    ? prayerCatalog.find((prayer) => prayer.id === latestRecent.id)
+    : songCatalog.find((song) => song.id === latestRecent?.id)
   const savedPosition = latestRecent
     ? Number.parseInt(localStorage.getItem(`reading-position:${latestRecent.kind}:${latestRecent.id}`) ?? '', 10)
     : Number.NaN
@@ -27,7 +26,7 @@ export default function HomePage() {
   const continueLabel = latestRecent?.kind === 'prayer'
     ? 'Kontynuuj modlitwę'
     : 'Kontynuuj śpiew'
-  const prayerOfDay = getPrayerOfDay()
+  const prayerOfDay = getCatalogPrayerOfDay()
 
   return (
     <div className="home">

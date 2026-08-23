@@ -1,8 +1,7 @@
 import { useEffect, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
 import { announcements } from '../data/announcements'
-import { prayers } from '../data/prayers'
-import { songs } from '../data/songs'
+import { prayerCatalog, songCatalog } from '../data/contentCatalog'
 
 const SITE_NAME = 'W Chrystusie'
 const DEFAULT_DESCRIPTION = 'Polska katolicka aplikacja webowa — modlitwy, pieśni kościelne i interaktywny różaniec w jednym miejscu.'
@@ -112,14 +111,14 @@ function findDetailMetadata(pathname: string): RouteMetadata | null {
   const detailRoutes = [
     {
       prefix: '/modlitwy/',
-      entries: prayers,
+      entries: prayerCatalog,
       contentType: 'Tekst modlitwy',
       titleSuffix: 'modlitwa',
       section: 'Modlitwy',
     },
     {
       prefix: '/spiewnik/',
-      entries: songs,
+      entries: songCatalog,
       contentType: 'Tekst pieśni',
       titleSuffix: 'pieśń kościelna',
       section: 'Śpiewnik',
@@ -135,7 +134,7 @@ function findDetailMetadata(pathname: string): RouteMetadata | null {
 
     return {
       title: `${entry.title} — ${route.titleSuffix} | ${SITE_NAME}`,
-      description: createDescription(entry.title, entry.body, route.contentType),
+      description: createDescription(entry.title, entry.excerpt, route.contentType),
       canonicalPath: `${route.prefix}${encodeURIComponent(entry.id)}`,
       type: 'article',
       section: entry.category ?? route.section,
