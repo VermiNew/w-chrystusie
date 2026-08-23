@@ -7,24 +7,8 @@ export default function ScripturePage() {
     <div className="page">
       <h1>Pismo Święte</h1>
 
-      <div className="scripture-notice">
-        <p>
-          Pismo Święte zostało wycofane ze strony. Wykorzystywana dotychczas wersja
-          (Uwspółcześniona Biblia Gdańska) jest przekładem protestanckim i nie zawiera pełnego
-          kanonu katolickiego.
-        </p>
-        <p>
-          Sekcja zostanie przywrócona, gdy uda się pozyskać <strong>pełną katolicką wersję
-          Pisma Świętego</strong> w formacie nadającym się do parsowania (XML, JSON lub innym),
-          z licencją pozwalającą na wykorzystanie w projektach open-source (MIT).
-        </p>
-        <p>
-          Jeśli posiadasz lub znasz taki zasób - napisz na{' '}
-          <a href="mailto:werminew@protonmail.com">werminew@protonmail.com</a>.
-        </p>
-      </div>
-
       <section className="scripture-subsection">
+        <p className="scripture-availability">Dostępne teraz</p>
         <FaBookOpen className="scripture-subsection-icon" aria-hidden="true" />
         <h2>Księga Psalmów</h2>
         <p>
@@ -35,6 +19,23 @@ export default function ScripturePage() {
           <span>Przejdź do Psalmów</span>
           <FaArrowRight aria-hidden="true" />
         </Link>
+      </section>
+
+      <section className="scripture-notice" aria-labelledby="scripture-preparation-title">
+        <h2 id="scripture-preparation-title">Pozostałe księgi — w przygotowaniu</h2>
+        <p>
+          Pracuję nad przywróceniem pełnego <strong>katolickiego wydania Pisma Świętego</strong>
+          {' '}w formacie nadającym się do wykorzystania w aplikacji i na warunkach pozwalających
+          na jego udostępnienie.
+        </p>
+        <p>
+          Poprzednio używana Uwspółcześniona Biblia Gdańska została wycofana, ponieważ jest
+          przekładem protestanckim i nie zawiera pełnego kanonu katolickiego.
+        </p>
+        <p>
+          Jeśli posiadasz lub znasz odpowiedni zasób, napisz na{' '}
+          <a href="mailto:werminew@protonmail.com">werminew@protonmail.com</a>.
+        </p>
       </section>
     </div>
   )
