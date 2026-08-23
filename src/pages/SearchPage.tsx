@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import { FaKeyboard } from 'react-icons/fa6'
 import { prayers, type Prayer } from '../data/prayers'
 import { songs, type Song } from '../data/songs'
-import { loadBible, type Book } from '../data/scripture'
+import { psalms, type Psalm } from '../data/psalms'
 
-type ResultType = 'prayer' | 'song' | 'verse'
+type ResultType = 'prayer' | 'song' | 'psalm'
 type SearchSection = 'all' | ResultType
 type SearchScope = 'all' | 'title' | 'content'
 
@@ -14,7 +14,7 @@ interface SearchResult {
   title: string
   snippet: string
   category?: string
-  data: Prayer | Song | { book: string; chapter: number; verse: number }
+  data: Prayer | Song | Psalm
 }
 
 interface SearchGroups {
@@ -61,7 +61,6 @@ function searchEntries(
   section: SearchSection,
   category: string,
   scope: SearchScope,
-  books: Book[],
 ): SearchGroups {
   const normalizedQuery = normalize(query)
   const titleMatches: SearchResult[] = []
@@ -105,17 +104,16 @@ function searchEntries(
     }
   }
 
-  if (section === 'all' || section === 'verse') {
-    for (const book of books) {
-      for (const chapter of book.chapters) {
-        for (const verse of chapter.verses) {
-          addResult({
-            type: 'verse',
-            title: `${book.name} ${chapter.number}:${verse.number}`,
-            snippet: getContextSnippet(verse.text, query),
-            data: { book: book.name, chapter: chapter.number, verse: verse.number },
-          }, verse.text)
-        }
+  if (section === 'all' || section === 'psalm') {
+    for (const psalm of psalms) {
+      for (const verse of psalm.verses) {
+        addResult({
+          type: 'psalm',
+          title: `${psalm.title}:${verse.number}`,
+          snippet: getContextSnippet(verse.text, query),
+          category: 'Psalmy',
+          data: psalm,
+        }, verse.text)
       }
     }
   }
@@ -129,7 +127,7 @@ function searchEntries(
 const typeLabels: Record<ResultType, string> = {
   prayer: 'Modlitwa',
   song: 'Pieśń',
-  verse: 'Pismo Święte',
+  psalm: 'Psalm',
 }
 
 const encodeRouteId = (routeId: string) => encodeURIComponent(routeId)
@@ -176,7 +174,11 @@ function SearchResultItem({ result, query }: { result: SearchResult; query: stri
     )
   }
 
-  return <article className="search-result">{content}</article>
+  return (
+    <Link className="search-result search-result-clickable" to={`/pismo-swiete/psalmy/${(result.data as Psalm).number}`}>
+      {content}
+    </Link>
+  )
 }
 
 export default function SearchPage() {
@@ -185,22 +187,6 @@ export default function SearchPage() {
   const [section, setSection] = useState<SearchSection>('all')
   const [category, setCategory] = useState('all')
   const [scope, setScope] = useState<SearchScope>('all')
-  const [books, setBooks] = useState<Book[]>([])
-  const [bibleLoading, setBibleLoading] = useState(true)
-
-  useEffect(() => {
-    loadBible()
-      .then((data) => {
-        setBooks(data)
-      })
-      .catch(() => {
-        setBooks([])
-      })
-      .finally(() => {
-        setBibleLoading(false)
-      })
-  }, [])
-
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedQuery(query), DEBOUNCE_MS)
     return () => clearTimeout(timer)
@@ -220,12 +206,11 @@ export default function SearchPage() {
   const trimmed = debouncedQuery.trim()
   const groups = useMemo(
     () => trimmed.length >= 2
-      ? searchEntries(trimmed, section, category, scope, books)
+      ? searchEntries(trimmed, section, category, scope)
       : { titleMatches: [], contentMatches: [] },
-    [trimmed, section, category, scope, books],
+    [trimmed, section, category, scope],
   )
   const resultCount = groups.titleMatches.length + groups.contentMatches.length
-  const showBibleLoading = bibleLoading && trimmed.length >= 2 && (section === 'all' || section === 'verse')
 
   return (
     <div className="page">
@@ -252,7 +237,7 @@ export default function SearchPage() {
             <option value="all">Wszystkie sekcje</option>
             <option value="prayer">Modlitwy</option>
             <option value="song">Pieśni</option>
-            <option value="verse">Pismo Święte</option>
+            <option value="psalm">Psalmy</option>
           </select>
         </label>
         <label>
@@ -260,7 +245,7 @@ export default function SearchPage() {
           <select
             value={category}
             onChange={(event) => setCategory(event.target.value)}
-            disabled={section === 'verse'}
+            disabled={section === 'psalm'}
           >
             <option value="all">Wszystkie kategorie</option>
             {categories.map((value) => <option key={value} value={value}>{value}</option>)}
@@ -278,15 +263,12 @@ export default function SearchPage() {
       {!query.trim() && (
         <p className="search-hint"><FaKeyboard /> Naciśnij <kbd>/</kbd> z dowolnej strony, aby szybko przejść do wyszukiwania.</p>
       )}
-      {showBibleLoading && (
-        <p className="search-loading">Ładowanie Pisma Świętego…</p>
-      )}
       {trimmed.length >= 2 && (
         <p className="search-count">
           Znaleziono: {resultCount} {resultCount === 1 ? 'wynik' : 'wyników'}
         </p>
       )}
-      {trimmed.length >= 2 && resultCount === 0 && !showBibleLoading && (
+      {trimmed.length >= 2 && resultCount === 0 && (
         <p className="search-empty">Brak wyników dla wybranych filtrów.</p>
       )}
       {groups.titleMatches.length > 0 && (
@@ -294,7 +276,7 @@ export default function SearchPage() {
           <h2>Tytuły <span>({groups.titleMatches.length})</span></h2>
           <ul className="search-results">
             {groups.titleMatches.map((result) => (
-              <li key={result.type === 'verse' ? `verse-${result.title}` : `${result.type}-${(result.data as Prayer | Song).id}`}>
+              <li key={result.type === 'psalm' ? `psalm-${result.title}` : `${result.type}-${(result.data as Prayer | Song).id}`}>
                 <SearchResultItem result={result} query={trimmed} />
               </li>
             ))}
@@ -306,7 +288,7 @@ export default function SearchPage() {
           <h2>Zawartość plików <span>({groups.contentMatches.length})</span></h2>
           <ul className="search-results">
             {groups.contentMatches.map((result) => (
-              <li key={result.type === 'verse' ? `verse-${result.title}` : `${result.type}-${(result.data as Prayer | Song).id}`}>
+              <li key={result.type === 'psalm' ? `psalm-${result.title}` : `${result.type}-${(result.data as Prayer | Song).id}`}>
                 <SearchResultItem result={result} query={trimmed} />
               </li>
             ))}
