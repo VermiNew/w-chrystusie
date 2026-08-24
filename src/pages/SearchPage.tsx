@@ -12,14 +12,25 @@ type SearchScope = 'all' | 'title' | 'content'
 interface SearchResult {
   type: ResultType
   title: string
-  snippet: string
   category?: string
+  content: string
+  normalizedContent: string
   data: Prayer | Song | Psalm
 }
 
 interface SearchGroups {
   titleMatches: SearchResult[]
   contentMatches: SearchResult[]
+}
+
+interface SearchDocument {
+  type: ResultType
+  title: string
+  category?: string
+  content: string
+  normalizedTitle: string
+  normalizedContent: string
+  data: Prayer | Song | Psalm
 }
 
 const FALLBACK_CATEGORY = 'Bez kategorii'
@@ -31,18 +42,53 @@ const normalize = (value: string) => value
   .replace(/\p{M}/gu, '')
   .replace(/ł/g, 'l')
 
-function getContextSnippet(content: string, query: string): string {
-  const compact = content.replace(/[#*_>`[\]]/g, '').replace(/\s+/g, ' ').trim()
-  const matchIndex = normalize(compact).indexOf(normalize(query))
+const compactContent = (content: string) => content
+  .replace(/[#*_>`[\]]/g, '')
+  .replace(/\s+/g, ' ')
+  .trim()
 
-  if (compact.length <= SNIPPET_LENGTH) return compact
-  if (matchIndex < 0) return `${compact.slice(0, SNIPPET_LENGTH).trim()}…`
+function createSearchDocument(
+  type: ResultType,
+  title: string,
+  category: string | undefined,
+  rawContent: string,
+  data: Prayer | Song | Psalm,
+): SearchDocument {
+  const content = compactContent(rawContent)
+  return {
+    type,
+    title,
+    category,
+    content,
+    normalizedTitle: normalize(title),
+    normalizedContent: normalize(content),
+    data,
+  }
+}
 
-  const contextBefore = Math.floor((SNIPPET_LENGTH - query.length) / 2)
+const searchIndex: SearchDocument[] = [
+  ...prayers.map((prayer) => createSearchDocument(
+    'prayer', prayer.title, prayer.category, prayer.body, prayer,
+  )),
+  ...songs.map((song) => createSearchDocument(
+    'song', song.title, song.category, song.body, song,
+  )),
+  ...psalms.flatMap((psalm) => psalm.verses.map((verse) => createSearchDocument(
+    'psalm', `${psalm.title}:${verse.number}`, 'Psalmy', verse.text, psalm,
+  ))),
+]
+
+function getContextSnippet(content: string, normalizedContent: string, normalizedQuery: string): string {
+  const matchIndex = normalizedContent.indexOf(normalizedQuery)
+
+  if (content.length <= SNIPPET_LENGTH) return content
+  if (matchIndex < 0) return `${content.slice(0, SNIPPET_LENGTH).trim()}…`
+
+  const contextBefore = Math.floor((SNIPPET_LENGTH - normalizedQuery.length) / 2)
   const start = Math.max(0, matchIndex - contextBefore)
-  const end = Math.min(compact.length, start + SNIPPET_LENGTH)
+  const end = Math.min(content.length, start + SNIPPET_LENGTH)
 
-  return `${start > 0 ? '…' : ''}${compact.slice(start, end).trim()}${end < compact.length ? '…' : ''}`
+  return `${start > 0 ? '…' : ''}${content.slice(start, end).trim()}${end < content.length ? '…' : ''}`
 }
 
 function getTitleRank(title: string, query: string): number {
@@ -71,55 +117,26 @@ function searchEntries(
   const contentMatches: SearchResult[] = []
   if (!normalizedQuery) return { titleMatches, contentMatches }
 
-  const addResult = (result: SearchResult, content: string) => {
-    if (category !== 'all' && (result.category ?? FALLBACK_CATEGORY) !== category) return
+  for (const document of searchIndex) {
+    if (section !== 'all' && document.type !== section) continue
+    if (category !== 'all' && (document.category ?? FALLBACK_CATEGORY) !== category) continue
 
-    const titleMatchesQuery = normalize(result.title).includes(normalizedQuery)
-    if (scope !== 'content' && titleMatchesQuery) {
+    const result = {
+      type: document.type,
+      title: document.title,
+      category: document.category,
+      content: document.content,
+      normalizedContent: document.normalizedContent,
+      data: document.data,
+    }
+
+    if (scope !== 'content' && document.normalizedTitle.includes(normalizedQuery)) {
       titleMatches.push(result)
-      return
+      continue
     }
 
-    if (scope !== 'title' && normalize(content).includes(normalizedQuery)) {
-      contentMatches.push({ ...result, snippet: getContextSnippet(content, query) })
-    }
-  }
-
-  if (section === 'all' || section === 'prayer') {
-    for (const prayer of prayers) {
-      addResult({
-        type: 'prayer',
-        title: prayer.title,
-        snippet: getContextSnippet(prayer.body, query),
-        category: prayer.category,
-        data: prayer,
-      }, prayer.body)
-    }
-  }
-
-  if (section === 'all' || section === 'song') {
-    for (const song of songs) {
-      addResult({
-        type: 'song',
-        title: song.title,
-        snippet: getContextSnippet(song.body, query),
-        category: song.category,
-        data: song,
-      }, song.body)
-    }
-  }
-
-  if (section === 'all' || section === 'psalm') {
-    for (const psalm of psalms) {
-      for (const verse of psalm.verses) {
-        addResult({
-          type: 'psalm',
-          title: `${psalm.title}:${verse.number}`,
-          snippet: getContextSnippet(verse.text, query),
-          category: 'Psalmy',
-          data: psalm,
-        }, verse.text)
-      }
+    if (scope !== 'title' && document.normalizedContent.includes(normalizedQuery)) {
+      contentMatches.push(result)
     }
   }
 
@@ -137,6 +154,7 @@ const typeLabels: Record<ResultType, string> = {
 
 const encodeRouteId = (routeId: string) => encodeURIComponent(routeId)
 const DEBOUNCE_MS = 200
+const RESULTS_PAGE_SIZE = 12
 
 function highlightQuery(text: string, query: string): ReactNode {
   if (!query) return text
@@ -173,13 +191,14 @@ function highlightQuery(text: string, query: string): ReactNode {
 }
 
 function SearchResultItem({ result, query }: { result: SearchResult; query: string }) {
+  const snippet = getContextSnippet(result.content, result.normalizedContent, normalize(query))
   const content = (
     <>
       <span className="search-result-type">{typeLabels[result.type]}</span>
       {result.category && <span className="search-result-category">{result.category}</span>}
       <strong className="search-result-title">{highlightQuery(result.title, query)}</strong>
-      {result.snippet && (
-        <p className="search-result-snippet">{highlightQuery(result.snippet, query)}</p>
+      {snippet && (
+        <p className="search-result-snippet">{highlightQuery(snippet, query)}</p>
       )}
     </>
   )
@@ -213,6 +232,14 @@ export default function SearchPage() {
   const [section, setSection] = useState<SearchSection>('all')
   const [category, setCategory] = useState('all')
   const [scope, setScope] = useState<SearchScope>('all')
+  const [visibleTitleCount, setVisibleTitleCount] = useState(RESULTS_PAGE_SIZE)
+  const [visibleContentCount, setVisibleContentCount] = useState(RESULTS_PAGE_SIZE)
+
+  const resetVisibleResults = () => {
+    setVisibleTitleCount(RESULTS_PAGE_SIZE)
+    setVisibleContentCount(RESULTS_PAGE_SIZE)
+  }
+
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedQuery(query), DEBOUNCE_MS)
     return () => clearTimeout(timer)
@@ -237,6 +264,8 @@ export default function SearchPage() {
     [trimmed, section, category, scope],
   )
   const resultCount = groups.titleMatches.length + groups.contentMatches.length
+  const visibleTitleMatches = groups.titleMatches.slice(0, visibleTitleCount)
+  const visibleContentMatches = groups.contentMatches.slice(0, visibleContentCount)
 
   return (
     <div className="page">
@@ -247,7 +276,10 @@ export default function SearchPage() {
         aria-label="Szukana fraza"
         placeholder="Wpisz frazę…"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={(event) => {
+          setQuery(event.target.value)
+          resetVisibleResults()
+        }}
         autoFocus
       />
       <div className="search-filters" aria-label="Filtry wyszukiwania">
@@ -258,6 +290,7 @@ export default function SearchPage() {
             onChange={(event) => {
               setSection(event.target.value as SearchSection)
               setCategory('all')
+              resetVisibleResults()
             }}
           >
             <option value="all">Wszystkie sekcje</option>
@@ -270,7 +303,10 @@ export default function SearchPage() {
           Kategoria
           <select
             value={category}
-            onChange={(event) => setCategory(event.target.value)}
+            onChange={(event) => {
+              setCategory(event.target.value)
+              resetVisibleResults()
+            }}
             disabled={section === 'psalm'}
           >
             <option value="all">Wszystkie kategorie</option>
@@ -279,7 +315,13 @@ export default function SearchPage() {
         </label>
         <label>
           Szukaj w
-          <select value={scope} onChange={(event) => setScope(event.target.value as SearchScope)}>
+          <select
+            value={scope}
+            onChange={(event) => {
+              setScope(event.target.value as SearchScope)
+              resetVisibleResults()
+            }}
+          >
             <option value="all">Tytułach i treści</option>
             <option value="title">Tylko w tytułach</option>
             <option value="content">Tylko w treści</option>
@@ -301,24 +343,44 @@ export default function SearchPage() {
         <section className="search-group">
           <h2>Tytuły <span>({groups.titleMatches.length})</span></h2>
           <ul className="search-results">
-            {groups.titleMatches.map((result) => (
+            {visibleTitleMatches.map((result) => (
               <li key={result.type === 'psalm' ? `psalm-${result.title}` : `${result.type}-${(result.data as Prayer | Song).id}`}>
                 <SearchResultItem result={result} query={trimmed} />
               </li>
             ))}
           </ul>
+          {visibleTitleCount < groups.titleMatches.length && (
+            <button
+              type="button"
+              className="search-show-more"
+              onClick={() => setVisibleTitleCount((count) => count + RESULTS_PAGE_SIZE)}
+            >
+              Pokaż więcej tytułów
+              <span>({groups.titleMatches.length - visibleTitleCount})</span>
+            </button>
+          )}
         </section>
       )}
       {groups.contentMatches.length > 0 && (
         <section className="search-group">
           <h2>Zawartość plików <span>({groups.contentMatches.length})</span></h2>
           <ul className="search-results">
-            {groups.contentMatches.map((result) => (
+            {visibleContentMatches.map((result) => (
               <li key={result.type === 'psalm' ? `psalm-${result.title}` : `${result.type}-${(result.data as Prayer | Song).id}`}>
                 <SearchResultItem result={result} query={trimmed} />
               </li>
             ))}
           </ul>
+          {visibleContentCount < groups.contentMatches.length && (
+            <button
+              type="button"
+              className="search-show-more"
+              onClick={() => setVisibleContentCount((count) => count + RESULTS_PAGE_SIZE)}
+            >
+              Pokaż więcej wyników z treści
+              <span>({groups.contentMatches.length - visibleContentCount})</span>
+            </button>
+          )}
         </section>
       )}
     </div>

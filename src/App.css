@@ -2315,6 +2315,38 @@ body[data-nav-menu='open'] {
   padding: 0 0.08em;
 }
 
+.search-show-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 44px;
+  margin-top: 0.75rem;
+  padding: 0.55rem 0.85rem;
+  color: var(--color-primary);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search-show-more:hover {
+  background: var(--color-hover-bg);
+  border-color: var(--color-primary);
+}
+
+.search-show-more:focus-visible {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
+  outline-offset: 2px;
+}
+
+.search-show-more span {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
 @media (max-width: 700px) {
   .search-filters {
     grid-template-columns: 1fr;
