@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaArrowRight, FaCross, FaBookBible, FaMusic, FaHandsPraying, FaBullhorn, FaMagnifyingGlass } from 'react-icons/fa6'
+import DevotionChoiceDialog from '../components/DevotionChoiceDialog'
 import { getCatalogPrayerOfDay, prayerCatalog, songCatalog } from '../data/contentCatalog'
 import { useContentLibrary } from '../hooks/useContentLibrary'
 
@@ -7,12 +9,12 @@ const sections = [
   { to: '/modlitwy', icon: <FaCross />, title: 'Modlitwy', description: 'Modlitwy codzienne i tradycyjne' },
   { to: '/pismo-swiete', icon: <FaBookBible />, title: 'Pismo Święte', description: 'Księga Psalmów w przekładzie Jakuba Wujka' },
   { to: '/spiewnik', icon: <FaMusic />, title: 'Śpiewnik', description: 'Pieśni i hymny kościelne' },
-  { to: '/rozaniec', icon: <FaHandsPraying />, title: 'Różaniec', description: 'Interaktywny przewodnik krok po kroku' },
   { to: '/ogloszenia', icon: <FaBullhorn />, title: 'Ogłoszenia', description: 'Aktualności i inicjatywy parafialne' },
   { to: '/szukaj', icon: <FaMagnifyingGlass />, title: 'Szukaj', description: 'Wyszukiwarka modlitw i pieśni' },
 ]
 
 export default function HomePage() {
+  const [devotionDialogOpen, setDevotionDialogOpen] = useState(false)
   const { latestRecent } = useContentLibrary('prayer')
   const recentContent = latestRecent?.kind === 'prayer'
     ? prayerCatalog.find((prayer) => prayer.id === latestRecent.id)
@@ -60,7 +62,24 @@ export default function HomePage() {
         )}
       </section>
       <section className="section-tiles">
-        {sections.map((s) => (
+        {sections.slice(0, 3).map((s) => (
+          <Link to={s.to} key={s.to} className="section-tile">
+            <span className="section-tile-icon">{s.icon}</span>
+            <h2 className="section-tile-title">{s.title}</h2>
+            <p className="section-tile-desc">{s.description}</p>
+          </Link>
+        ))}
+        <button
+          type="button"
+          className="section-tile section-tile--choice"
+          onClick={() => setDevotionDialogOpen(true)}
+          aria-haspopup="dialog"
+        >
+          <span className="section-tile-icon"><FaHandsPraying /></span>
+          <span className="section-tile-title">Różaniec i koronka</span>
+          <p className="section-tile-desc">Wybierz modlitwę krok po kroku</p>
+        </button>
+        {sections.slice(3).map((s) => (
           <Link to={s.to} key={s.to} className="section-tile">
             <span className="section-tile-icon">{s.icon}</span>
             <h2 className="section-tile-title">{s.title}</h2>
@@ -68,6 +87,10 @@ export default function HomePage() {
           </Link>
         ))}
       </section>
+      <DevotionChoiceDialog
+        open={devotionDialogOpen}
+        onClose={() => setDevotionDialogOpen(false)}
+      />
     </div>
   )
 }
