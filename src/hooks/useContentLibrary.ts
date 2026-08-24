@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 
-export type ContentKind = 'prayer' | 'song'
+export type ContentKind = 'prayer' | 'song' | 'psalm'
 
 export interface RecentContent {
   kind: ContentKind
@@ -19,7 +19,7 @@ const parseKey = (key: string | undefined): RecentContent | null => {
   const separatorIndex = key.indexOf(':')
   const kind = key.slice(0, separatorIndex)
   const id = key.slice(separatorIndex + 1)
-  if ((kind !== 'prayer' && kind !== 'song') || !id) return null
+  if ((kind !== 'prayer' && kind !== 'song' && kind !== 'psalm') || !id) return null
   return { kind, id }
 }
 
@@ -37,7 +37,7 @@ const writeKeys = (storageKey: string, keys: string[]) => {
   window.dispatchEvent(new Event(CHANGE_EVENT))
 }
 
-export function useContentLibrary(kind: ContentKind, activeId?: string) {
+export function useContentLibrary(kind: ContentKind, activeId?: string, trackRecent = true) {
   const [favorites, setFavorites] = useState(() => readKeys(FAVORITES_KEY))
   const [recent, setRecent] = useState(() => readKeys(RECENT_KEY))
 
@@ -56,11 +56,11 @@ export function useContentLibrary(kind: ContentKind, activeId?: string) {
   }, [])
 
   useEffect(() => {
-    if (!activeId) return
+    if (!activeId || !trackRecent) return
     const key = makeKey(kind, activeId)
     const nextRecent = [key, ...readKeys(RECENT_KEY).filter((item) => item !== key)].slice(0, RECENT_LIMIT)
     writeKeys(RECENT_KEY, nextRecent)
-  }, [activeId, kind])
+  }, [activeId, kind, trackRecent])
 
   const toggleFavorite = useCallback((kind: ContentKind, id: string) => {
     const key = makeKey(kind, id)

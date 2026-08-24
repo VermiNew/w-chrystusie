@@ -8,6 +8,8 @@ import {
 import { Link, useParams } from 'react-router-dom'
 import { psalms, type Psalm } from '../data/psalms'
 import NotFoundPage from './NotFoundPage'
+import ReadingModeToggle from '../components/ReadingModeToggle'
+import { useContentLibrary } from '../hooks/useContentLibrary'
 
 function PsalmSource({ psalm }: { psalm: Psalm }) {
   return (
@@ -32,12 +34,21 @@ function PsalmSource({ psalm }: { psalm: Psalm }) {
 function PsalmReader({ psalm }: { psalm: Psalm }) {
   const previous = psalms.find((entry) => entry.number === psalm.number - 1)
   const next = psalms.find((entry) => entry.number === psalm.number + 1)
+  const psalmId = String(psalm.number)
+  const { isFavorite, toggleFavorite } = useContentLibrary('psalm', psalmId, false)
 
   return (
-    <article className="page psalm-reader">
+    <article className="page psalm-reader content-detail-page">
       <Link className="back-button" to="/pismo-swiete/psalmy">
         <FaArrowLeft aria-hidden="true" /> Wszystkie Psalmy
       </Link>
+
+      <ReadingModeToggle
+        contentKey={`psalm:${psalmId}`}
+        contentTitle={psalm.title}
+        isFavorite={isFavorite}
+        onToggleFavorite={() => toggleFavorite('psalm', psalmId)}
+      />
 
       <header className="psalm-reader-header">
         <p className="psalms-eyebrow">Księga Psalmów · przekład Jakuba Wujka</p>

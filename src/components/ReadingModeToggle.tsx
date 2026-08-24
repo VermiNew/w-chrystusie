@@ -50,12 +50,14 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
   useEffect(() => {
     const scale = fontSize / 100
     localStorage.setItem(FONT_SIZE_KEY, String(fontSize))
+    document.documentElement.style.setProperty('--content-reading-scale', String(scale))
     document.documentElement.style.setProperty('--content-reading-font-size', `${1.1 * scale}rem`)
     document.documentElement.style.setProperty('--content-focus-font-size', `${1.8 * scale}rem`)
 
     return () => {
       document.documentElement.style.removeProperty('--content-reading-font-size')
       document.documentElement.style.removeProperty('--content-focus-font-size')
+      document.documentElement.style.removeProperty('--content-reading-scale')
     }
   }, [fontSize])
 
@@ -227,7 +229,7 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
 
     const content = controlsRef.current
       ?.closest('.content-detail-page')
-      ?.querySelector<HTMLElement>('.prayer-text, .song-text')
+      ?.querySelector<HTMLElement>('.prayer-text, .song-text, .psalm-verses')
     speech.start(content?.innerText.trim() ?? '')
   }
 

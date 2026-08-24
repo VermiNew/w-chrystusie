@@ -1159,7 +1159,7 @@ body[data-nav-menu='open'] {
   max-width: 42rem;
   margin: 0 auto 2rem;
   font-family: var(--font-serif);
-  font-size: 1.12rem;
+  font-size: calc(1.12rem * var(--content-reading-scale, 1));
   line-height: 1.8;
   animation: content-fade-in 0.6s ease 0.1s both;
 }
@@ -1268,7 +1268,7 @@ body[data-nav-menu='open'] {
   }
 
   .psalm-verses {
-    font-size: 1.03rem;
+    font-size: calc(1.03rem * var(--content-reading-scale, 1));
   }
 
   .psalm-reader-navigation {
@@ -2127,6 +2127,10 @@ body[data-nav-menu='open'] {
   display: none;
 }
 
+:root[data-reading-mode='true'] .psalm-reader > :is(.psalm-source-card, .psalm-reader-navigation) {
+  display: none;
+}
+
 :root[data-reading-mode='true'] .content-reading-controls {
   position: fixed;
   top: max(1rem, env(safe-area-inset-top));
@@ -2164,12 +2168,21 @@ body[data-nav-menu='open'] {
   animation: none;
 }
 
-:root[data-reading-mode='true'] :is(.prayer-text, .song-text) {
+:root[data-reading-mode='true'] :is(.prayer-text, .song-text, .psalm-verses) {
   max-width: 46rem;
   margin: 0 auto;
   font-size: var(--content-focus-font-size, 1.8rem);
   line-height: 2;
   animation: none;
+}
+
+:root[data-reading-mode='true'] .psalm-reader-header {
+  margin: 4.5rem auto 2rem;
+  animation: none;
+}
+
+:root[data-reading-mode='true'] .psalm-reader-header h1 {
+  font-size: clamp(2rem, 1.6rem + 2vw, 3.25rem);
 }
 
 @media (min-width: 900px) {
@@ -2186,13 +2199,13 @@ body[data-nav-menu='open'] {
     margin-bottom: 2.5rem;
   }
 
-  :root[data-reading-mode='true'] :is(.prayer-text, .song-text) {
+  :root[data-reading-mode='true'] :is(.prayer-text, .song-text, .psalm-verses) {
     max-width: 60ch;
     font-size: var(--content-focus-font-size, 1.8rem);
     line-height: 2.05;
   }
 
-  :root[data-reading-mode='true'] :is(.prayer-text, .song-text) > * + * {
+  :root[data-reading-mode='true'] :is(.prayer-text, .song-text, .psalm-verses) > * + * {
     margin-top: 1.6em;
   }
 }
