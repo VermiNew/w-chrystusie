@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState, useMemo, type ReactNode } from 'react'
+import { Fragment, useEffect, useState, useMemo, useRef, type KeyboardEventHandler, type ReactNode, type Ref } from 'react'
 import { Link } from 'react-router-dom'
 import { FaKeyboard } from 'react-icons/fa6'
 import { prayers, type Prayer } from '../data/prayers'
@@ -190,7 +190,14 @@ function highlightQuery(text: string, query: string): ReactNode {
   return parts
 }
 
-function SearchResultItem({ result, query }: { result: SearchResult; query: string }) {
+interface SearchResultItemProps {
+  result: SearchResult
+  query: string
+  resultRef?: Ref<HTMLAnchorElement>
+  onKeyDown?: KeyboardEventHandler<HTMLAnchorElement>
+}
+
+function SearchResultItem({ result, query, resultRef, onKeyDown }: SearchResultItemProps) {
   const snippet = getContextSnippet(result.content, result.normalizedContent, normalize(query))
   const content = (
     <>
@@ -205,7 +212,7 @@ function SearchResultItem({ result, query }: { result: SearchResult; query: stri
 
   if (result.type === 'prayer') {
     return (
-      <Link className="search-result search-result-clickable" to={`/modlitwy/${encodeRouteId((result.data as Prayer).id)}`}>
+      <Link ref={resultRef} onKeyDown={onKeyDown} className="search-result search-result-clickable" to={`/modlitwy/${encodeRouteId((result.data as Prayer).id)}`}>
         {content}
       </Link>
     )
@@ -213,20 +220,22 @@ function SearchResultItem({ result, query }: { result: SearchResult; query: stri
 
   if (result.type === 'song') {
     return (
-      <Link className="search-result search-result-clickable" to={`/spiewnik/${encodeRouteId((result.data as Song).id)}`}>
+      <Link ref={resultRef} onKeyDown={onKeyDown} className="search-result search-result-clickable" to={`/spiewnik/${encodeRouteId((result.data as Song).id)}`}>
         {content}
       </Link>
     )
   }
 
   return (
-    <Link className="search-result search-result-clickable" to={`/pismo-swiete/psalmy/${(result.data as Psalm).number}`}>
+    <Link ref={resultRef} onKeyDown={onKeyDown} className="search-result search-result-clickable" to={`/pismo-swiete/psalmy/${(result.data as Psalm).number}`}>
       {content}
     </Link>
   )
 }
 
 export default function SearchPage() {
+  const searchInputRef = useRef<HTMLInputElement>(null)
+  const firstResultRef = useRef<HTMLAnchorElement>(null)
   const [query, setQuery] = useState('')
   const [debouncedQuery, setDebouncedQuery] = useState('')
   const [section, setSection] = useState<SearchSection>('all')
@@ -267,12 +276,27 @@ export default function SearchPage() {
   const visibleTitleMatches = groups.titleMatches.slice(0, visibleTitleCount)
   const visibleContentMatches = groups.contentMatches.slice(0, visibleContentCount)
 
+  const focusFirstResult = () => firstResultRef.current?.focus()
+
+  const handleSearchInputKeyDown: KeyboardEventHandler<HTMLInputElement> = (event) => {
+    if (event.key !== 'ArrowDown' || resultCount === 0) return
+    event.preventDefault()
+    focusFirstResult()
+  }
+
+  const handleFirstResultKeyDown: KeyboardEventHandler<HTMLAnchorElement> = (event) => {
+    if (event.key !== 'ArrowUp') return
+    event.preventDefault()
+    searchInputRef.current?.focus()
+  }
+
   return (
     <div className="page">
       <h1>Szukaj</h1>
       <input
         className="search-input"
         type="text"
+        ref={searchInputRef}
         aria-label="Szukana fraza"
         placeholder="Wpisz frazę…"
         value={query}
@@ -280,6 +304,7 @@ export default function SearchPage() {
           setQuery(event.target.value)
           resetVisibleResults()
         }}
+        onKeyDown={handleSearchInputKeyDown}
         autoFocus
       />
       <div className="search-filters" aria-label="Filtry wyszukiwania">
@@ -346,9 +371,14 @@ export default function SearchPage() {
         <section className="search-group">
           <h2>Tytuły <span>({groups.titleMatches.length})</span></h2>
           <ul className="search-results">
-            {visibleTitleMatches.map((result) => (
+            {visibleTitleMatches.map((result, index) => (
               <li key={result.type === 'psalm' ? `psalm-${result.title}` : `${result.type}-${(result.data as Prayer | Song).id}`}>
-                <SearchResultItem result={result} query={trimmed} />
+                <SearchResultItem
+                  result={result}
+                  query={trimmed}
+                  resultRef={index === 0 ? firstResultRef : undefined}
+                  onKeyDown={index === 0 ? handleFirstResultKeyDown : undefined}
+                />
               </li>
             ))}
           </ul>
@@ -368,9 +398,14 @@ export default function SearchPage() {
         <section className="search-group">
           <h2>Zawartość plików <span>({groups.contentMatches.length})</span></h2>
           <ul className="search-results">
-            {visibleContentMatches.map((result) => (
+            {visibleContentMatches.map((result, index) => (
               <li key={result.type === 'psalm' ? `psalm-${result.title}` : `${result.type}-${(result.data as Prayer | Song).id}`}>
-                <SearchResultItem result={result} query={trimmed} />
+                <SearchResultItem
+                  result={result}
+                  query={trimmed}
+                  resultRef={groups.titleMatches.length === 0 && index === 0 ? firstResultRef : undefined}
+                  onKeyDown={groups.titleMatches.length === 0 && index === 0 ? handleFirstResultKeyDown : undefined}
+                />
               </li>
             ))}
           </ul>
