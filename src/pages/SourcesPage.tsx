@@ -107,9 +107,11 @@ export default function SourcesPage() {
           ))}
         </div>
         <p className="materials-note">
-          Linki prowadzą do zewnętrznych stron sprzedawców, zostały sprawdzone{' '}
-          {formatVerificationDate(SOURCE_VERIFICATION_DATE)} i nie są afiliacyjne.
-          Aplikacja nie otrzymuje wynagrodzenia za zakupy.
+          <span>
+            Linki prowadzą do zewnętrznych stron sprzedawców, zostały sprawdzone{' '}
+            {formatVerificationDate(SOURCE_VERIFICATION_DATE)} i nie są afiliacyjne.
+          </span>
+          <span>Aplikacja nie otrzymuje wynagrodzenia za zakupy.</span>
         </p>
       </section>
     </div>
