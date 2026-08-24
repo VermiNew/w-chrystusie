@@ -21,6 +21,18 @@ const APP_SHELL = [
   '/icon-512.png',
   '/apple-touch-icon.png',
   '/logo.png',
+  '/fonts/literata-italic-latin-ext.woff2',
+  '/fonts/literata-italic-latin.woff2',
+  '/fonts/literata-normal-latin-ext.woff2',
+  '/fonts/literata-normal-latin.woff2',
+  '/fonts/poppins-400-latin-ext.woff2',
+  '/fonts/poppins-400-latin.woff2',
+  '/fonts/poppins-500-latin-ext.woff2',
+  '/fonts/poppins-500-latin.woff2',
+  '/fonts/poppins-600-latin-ext.woff2',
+  '/fonts/poppins-600-latin.woff2',
+  '/fonts/space-grotesk-latin-ext.woff2',
+  '/fonts/space-grotesk-latin.woff2',
 ]
 
 self.addEventListener('install', (event) => {
@@ -57,7 +69,6 @@ self.addEventListener('message', (event) => {
 // Fetch strategy:
 //   - Navigation (HTML)        → network-first, fallback to cached app shell
 //   - Same-origin static asset → stale-while-revalidate (cache, refresh in bg)
-//   - Google Fonts             → cache-first
 //   - Anything else            → just pass through
 self.addEventListener('fetch', (event) => {
   const { request } = event
@@ -75,15 +86,6 @@ self.addEventListener('fetch', (event) => {
   // SPA navigation requests
   if (request.mode === 'navigate') {
     event.respondWith(networkFirstHTML(request))
-    return
-  }
-
-  // Google Fonts (CSS + woff2)
-  if (
-    url.hostname === 'fonts.googleapis.com'
-    || url.hostname === 'fonts.gstatic.com'
-  ) {
-    event.respondWith(cacheFirst(request, RUNTIME_CACHE))
     return
   }
 
@@ -113,25 +115,9 @@ async function networkFirstHTML(request) {
   }
 }
 
-async function cacheFirst(request, cacheName) {
-  const cached = await caches.match(request)
-  if (cached) return cached
-  try {
-    const fresh = await fetch(request)
-    if (isCacheableResponse(fresh, true)) {
-      const cache = await caches.open(cacheName)
-      await cache.put(request, fresh.clone())
-      await trimCache(cacheName, MAX_RUNTIME_ENTRIES)
-    }
-    return fresh
-  } catch {
-    return new Response('', { status: 504 })
-  }
-}
-
 async function staleWhileRevalidate(request, cacheName) {
   const cache = await caches.open(cacheName)
-  const cached = await cache.match(request)
+  const cached = await caches.match(request, { ignoreVary: true })
   const network = fetch(request)
     .then(async (response) => {
       if (isCacheableResponse(response)) {
