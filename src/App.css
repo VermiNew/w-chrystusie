@@ -1883,7 +1883,23 @@ body[data-nav-menu='open'] {
   margin-top: 1.15rem;
 }
 
-.devotion-choice-options a {
+.devotion-choice-dialog {
+  animation: dialog-enter 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.devotion-choice-dialog::backdrop {
+  animation: backdrop-enter 0.3s ease both;
+}
+
+.devotion-choice-dialog--closing {
+  animation: dialog-leave 0.25s ease both;
+}
+
+.devotion-choice-dialog--closing::backdrop {
+  animation: backdrop-leave 0.25s ease both;
+}
+
+.devotion-choice-options button {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -1891,20 +1907,21 @@ body[data-nav-menu='open'] {
   min-height: 52px;
   padding: 0.75rem 0.9rem;
   color: var(--color-primary);
+  font: inherit;
   font-weight: 600;
-  text-decoration: none;
   background: var(--color-hover-bg);
   border: 1px solid var(--color-border);
   border-radius: 8px;
+  cursor: pointer;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.devotion-choice-options a:hover {
+.devotion-choice-options button:hover {
   border-color: var(--color-hover-border);
   box-shadow: 0 3px 12px rgba(var(--color-shadow-rgb), 0.08);
 }
 
-.devotion-choice-options a:focus-visible,
+.devotion-choice-options button:focus-visible,
 .devotion-choice-cancel:focus-visible {
   outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
   outline-offset: 2px;
