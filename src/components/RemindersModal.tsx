@@ -17,6 +17,7 @@ import {
   sendBrowserNotification,
   type BrowserNotificationStatus,
 } from '../data/useReminders'
+import { useFocusTrap } from '../hooks/useFocusTrap'
 
 interface Props {
   open: boolean
@@ -38,6 +39,8 @@ export default function RemindersModal({ open, onClose }: Props) {
   const [testingNotification, setTestingNotification] = useState(false)
   const [showDiagnostics, setShowDiagnostics] = useState(false)
   const notifTogglingRef = useRef(false)
+
+  useFocusTrap(dialogRef, open)
 
   const allEnabled = REMINDERS.length > 0 && REMINDERS.every((r) => enabledIds.includes(r.id))
   const browserNotif = useBrowserNotifications()

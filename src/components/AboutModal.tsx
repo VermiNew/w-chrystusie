@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { FaXmark, FaGithub, FaCross, FaMusic, FaGlobe, FaBullhorn, FaLink } from 'react-icons/fa6'
 import { prayerCatalog, songCatalog } from '../data/contentCatalog'
 import { announcements } from '../data/announcements'
+import { useFocusTrap } from '../hooks/useFocusTrap'
 import logoUrl from '../assets/logo-about.png'
 
 interface Props {
@@ -23,6 +24,8 @@ export default function AboutModal({ open, onClose }: Props) {
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const titleId = useId()
   const [closing, setClosing] = useState(false)
+
+  useFocusTrap(dialogRef, open)
 
   const handleClose = useCallback(() => {
     if (closing) return

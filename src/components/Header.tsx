@@ -14,11 +14,40 @@ export default function Header() {
   const [aboutOpen, setAboutOpen] = useState(false)
   const navRef = useRef<HTMLElement>(null)
   const menuToggleRef = useRef<HTMLButtonElement>(null)
+  const restoreMenuFocusRef = useRef(false)
   const unread = useUnreadCount(announcements.map((a) => a.id))
   const hasReminders = useHasAnyReminder()
   const theme = useTheme()
 
   const closeMenu = () => setMenuOpen(false)
+
+  const restoreMenuFocus = () => {
+    if (!restoreMenuFocusRef.current) return
+    restoreMenuFocusRef.current = false
+    window.requestAnimationFrame(() => menuToggleRef.current?.focus())
+  }
+
+  const openReminders = () => {
+    restoreMenuFocusRef.current = menuOpen
+    setRemindersOpen(true)
+    closeMenu()
+  }
+
+  const closeReminders = () => {
+    setRemindersOpen(false)
+    restoreMenuFocus()
+  }
+
+  const openAbout = () => {
+    restoreMenuFocusRef.current = menuOpen
+    setAboutOpen(true)
+    closeMenu()
+  }
+
+  const closeAbout = () => {
+    setAboutOpen(false)
+    restoreMenuFocus()
+  }
 
   useEffect(() => {
     if (menuOpen) {
@@ -123,7 +152,7 @@ export default function Header() {
           <li className="nav-reminders-item">
             <button
               className={`nav-reminders-btn${hasReminders ? ' nav-reminders-btn--active' : ''}`}
-              onClick={() => { setRemindersOpen(true); closeMenu() }}
+              onClick={openReminders}
               title="Przypomnienia o modlitwie"
             >
               <span className="nav-reminders-icon-wrap">
@@ -146,7 +175,7 @@ export default function Header() {
           <li className="nav-about-item">
             <button
               className="nav-about-btn"
-              onClick={() => { setAboutOpen(true); closeMenu() }}
+              onClick={openAbout}
               title="O projekcie"
             >
               <FaCircleInfo />
@@ -155,8 +184,8 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <RemindersModal open={remindersOpen} onClose={() => setRemindersOpen(false)} />
-      <AboutModal open={aboutOpen} onClose={() => setAboutOpen(false)} />
+      <RemindersModal open={remindersOpen} onClose={closeReminders} />
+      <AboutModal open={aboutOpen} onClose={closeAbout} />
     </header>
   )
 }

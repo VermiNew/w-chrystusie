@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useId, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FaArrowRight, FaHandsPraying } from 'react-icons/fa6'
+import { useFocusTrap } from '../hooks/useFocusTrap'
 
 interface Props {
   open: boolean
@@ -17,6 +18,8 @@ export default function DevotionChoiceDialog({ open, onClose }: Props) {
   const titleId = useId()
   const descriptionId = useId()
   const [closing, setClosing] = useState(false)
+
+  useFocusTrap(dialogRef, open)
 
   const handleClose = useCallback((targetPath?: string) => {
     if (closing) return

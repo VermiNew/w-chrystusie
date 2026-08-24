@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef } from 'react'
+import { useFocusTrap } from '../hooks/useFocusTrap'
 
 interface Props {
   open: boolean
@@ -21,6 +22,8 @@ export default function ConfirmDialog({
   const cancelButtonRef = useRef<HTMLButtonElement>(null)
   const titleId = useId()
   const descriptionId = useId()
+
+  useFocusTrap(dialogRef, open)
 
   useEffect(() => {
     const dialog = dialogRef.current
