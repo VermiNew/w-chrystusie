@@ -22,6 +22,7 @@ export default function ContentFontSizeControl({ className = '' }: Props) {
   const [fontSize, setFontSize] = useState(readFontSize)
   const [open, setOpen] = useState(false)
   const controlRef = useRef<HTMLDivElement>(null)
+  const triggerRef = useRef<HTMLButtonElement>(null)
   const panelId = useId()
   const titleId = useId()
 
@@ -46,7 +47,9 @@ export default function ContentFontSizeControl({ className = '' }: Props) {
       if (!controlRef.current?.contains(event.target as Node)) setOpen(false)
     }
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setOpen(false)
+      if (event.key !== 'Escape') return
+      setOpen(false)
+      window.requestAnimationFrame(() => triggerRef.current?.focus())
     }
 
     document.addEventListener('pointerdown', handlePointerDown)
@@ -62,6 +65,7 @@ export default function ContentFontSizeControl({ className = '' }: Props) {
       <button
         className="content-reading-toggle content-font-size-trigger"
         type="button"
+        ref={triggerRef}
         aria-expanded={open}
         aria-controls={panelId}
         title="Ustaw wielkość tekstu"
