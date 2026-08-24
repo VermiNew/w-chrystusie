@@ -331,13 +331,16 @@ export default function SearchPage() {
       {!query.trim() && (
         <p className="search-hint"><FaKeyboard /> Naciśnij <kbd>/</kbd> z dowolnej strony, aby szybko przejść do wyszukiwania.</p>
       )}
+      {query.trim().length === 1 && (
+        <p className="search-hint">Wpisz jeszcze co najmniej jeden znak, aby rozpocząć wyszukiwanie.</p>
+      )}
       {trimmed.length >= 2 && (
-        <p className="search-count">
+        <p className="search-count" aria-live="polite" aria-atomic="true">
           Znaleziono: {resultCount} {resultCount === 1 ? 'wynik' : 'wyników'}
         </p>
       )}
       {trimmed.length >= 2 && resultCount === 0 && (
-        <p className="search-empty">Brak wyników dla wybranych filtrów.</p>
+        <p className="search-empty" role="status">Brak wyników dla wybranych filtrów.</p>
       )}
       {groups.titleMatches.length > 0 && (
         <section className="search-group">
