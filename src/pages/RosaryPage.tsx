@@ -14,6 +14,7 @@ import { hapticLight, hapticMedium } from '../data/haptics'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
 import { useHorizontalSwipe } from '../hooks/useHorizontalSwipe'
 import PrayerCompletion from '../components/PrayerCompletion'
+import ContentFontSizeControl from '../components/ContentFontSizeControl'
 
 const DAY_NAMES = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota']
 const ROSARY_PROGRESS_KEY = 'rosary-progress'
@@ -280,6 +281,9 @@ export default function RosaryPage() {
         <button className="back-button" onClick={() => setShowLitany(false)}>
           <FaArrowLeft aria-hidden="true" /> Wróć do ostatniego kroku
         </button>
+        <div className="prayer-sequence-text-size">
+          <ContentFontSizeControl />
+        </div>
         <p className="optional-rosary-ending-label">Opcjonalne zakończenie różańca</p>
         <h1>{loretoLitany.title}</h1>
         <div className="prayer-text" lang="pl">
@@ -303,6 +307,10 @@ export default function RosaryPage() {
         <FaArrowLeft className="prayer-nav-icon" aria-hidden="true" />
         <span>Powrót do wyboru tajemnic</span>
       </button>
+
+      <div className="prayer-sequence-text-size">
+        <ContentFontSizeControl />
+      </div>
 
       <div className="rosary-progress">
         <span>{currentStep + 1} / {steps.length}</span>

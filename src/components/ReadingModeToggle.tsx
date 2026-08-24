@@ -1,27 +1,15 @@
-import { useEffect, useRef, useState, type CSSProperties } from 'react'
-import { FaArrowRotateLeft, FaCompress, FaExpand, FaMinus, FaPause, FaPlay, FaPlus, FaRegStar, FaShareNodes, FaStar, FaStop, FaVolumeHigh } from 'react-icons/fa6'
+import { useEffect, useRef, useState } from 'react'
+import { FaArrowRotateLeft, FaCompress, FaExpand, FaPause, FaPlay, FaRegStar, FaShareNodes, FaStar, FaStop, FaVolumeHigh } from 'react-icons/fa6'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
 import { useReadingPosition } from '../hooks/useReadingPosition'
 import { useSpeechSynthesis } from '../hooks/useSpeechSynthesis'
+import ContentFontSizeControl from './ContentFontSizeControl'
 
 const AUTO_SCROLL_STEPS = [
   { intervalMs: 4200, distance: 120 },
   { intervalMs: 3200, distance: 160 },
   { intervalMs: 2400, distance: 210 },
 ]
-
-const FONT_SIZE_KEY = 'content-font-size'
-const DEFAULT_FONT_SIZE = 100
-const MIN_FONT_SIZE = 90
-const MAX_FONT_SIZE = 160
-const FONT_SIZE_STEP = 10
-
-const readFontSize = () => {
-  const stored = Number.parseInt(localStorage.getItem(FONT_SIZE_KEY) ?? '', 10)
-  return Number.isFinite(stored) && stored >= MIN_FONT_SIZE && stored <= MAX_FONT_SIZE
-    ? stored
-    : DEFAULT_FONT_SIZE
-}
 
 interface Props {
   contentKey: string
@@ -34,32 +22,15 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
   const [isActive, setIsActive] = useState(false)
   const [autoScrollActive, setAutoScrollActive] = useState(false)
   const [speedIndex, setSpeedIndex] = useState(1)
-  const [fontSize, setFontSize] = useState(readFontSize)
-  const [fontControlsOpen, setFontControlsOpen] = useState(false)
   const [shareStatus, setShareStatus] = useState('')
   const [resumeStatusHiddenFor, setResumeStatusHiddenFor] = useState('')
   const animationFrameRef = useRef<number | null>(null)
   const stepStartedAtRef = useRef<number | null>(null)
   const pendingReadingProgressRef = useRef<number | null>(null)
-  const fontControlsRef = useRef<HTMLDivElement>(null)
   const controlsRef = useRef<HTMLDivElement>(null)
   const { wasRestored, restart } = useReadingPosition(contentKey)
   const speech = useSpeechSynthesis()
   useScreenWakeLock(isActive || speech.status !== 'idle')
-
-  useEffect(() => {
-    const scale = fontSize / 100
-    localStorage.setItem(FONT_SIZE_KEY, String(fontSize))
-    document.documentElement.style.setProperty('--content-reading-scale', String(scale))
-    document.documentElement.style.setProperty('--content-reading-font-size', `${1.1 * scale}rem`)
-    document.documentElement.style.setProperty('--content-focus-font-size', `${1.8 * scale}rem`)
-
-    return () => {
-      document.documentElement.style.removeProperty('--content-reading-font-size')
-      document.documentElement.style.removeProperty('--content-focus-font-size')
-      document.documentElement.style.removeProperty('--content-reading-scale')
-    }
-  }, [fontSize])
 
   useEffect(() => {
     if (!shareStatus) return
@@ -72,24 +43,6 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
     const timer = window.setTimeout(() => setResumeStatusHiddenFor(contentKey), 6000)
     return () => window.clearTimeout(timer)
   }, [contentKey, wasRestored])
-
-  useEffect(() => {
-    if (!fontControlsOpen) return
-
-    const handlePointerDown = (event: PointerEvent) => {
-      if (!fontControlsRef.current?.contains(event.target as Node)) setFontControlsOpen(false)
-    }
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setFontControlsOpen(false)
-    }
-
-    document.addEventListener('pointerdown', handlePointerDown)
-    window.addEventListener('keydown', handleKeyDown)
-    return () => {
-      document.removeEventListener('pointerdown', handlePointerDown)
-      window.removeEventListener('keydown', handleKeyDown)
-    }
-  }, [fontControlsOpen])
 
   useEffect(() => {
     if (!isActive) return
@@ -196,7 +149,6 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
     pendingReadingProgressRef.current = scrollRoot.scrollTop / maxScroll
 
     if (isActive) setAutoScrollActive(false)
-    setFontControlsOpen(false)
     setIsActive(!isActive)
   }
 
@@ -282,83 +234,7 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
         </button>
       )}
 
-      <div ref={fontControlsRef} className="content-font-size-menu content-reading-secondary">
-        <button
-          className="content-reading-toggle content-font-size-trigger"
-          type="button"
-          aria-expanded={fontControlsOpen}
-          aria-controls="content-font-size-panel"
-          title="Ustaw wielkość tekstu"
-          onClick={() => setFontControlsOpen((open) => !open)}
-        >
-          <span className="content-font-size-symbol" aria-hidden="true">Aa</span>
-          <span className="sr-only">Wielkość tekstu</span>
-          <small>{fontSize}%</small>
-        </button>
-        {fontControlsOpen && (
-          <div
-            id="content-font-size-panel"
-            className="content-font-size-popover"
-            role="region"
-            aria-labelledby="content-font-size-title"
-          >
-            <div className="content-font-size-header">
-              <div>
-                <strong id="content-font-size-title">Wielkość tekstu</strong>
-                <span>Dopasuj tekst modlitwy do swoich potrzeb</span>
-              </div>
-              <output aria-live="polite">{fontSize}%</output>
-            </div>
-
-            <div className="content-font-size-stepper">
-              <button
-                type="button"
-                aria-label="Zmniejsz tekst"
-                disabled={fontSize === MIN_FONT_SIZE}
-                onClick={() => setFontSize((size) => Math.max(MIN_FONT_SIZE, size - FONT_SIZE_STEP))}
-              >
-                <FaMinus aria-hidden="true" />
-              </button>
-              <p style={{ fontSize: `${fontSize}%` }}>Przykładowy tekst modlitwy</p>
-              <button
-                type="button"
-                aria-label="Powiększ tekst"
-                disabled={fontSize === MAX_FONT_SIZE}
-                onClick={() => setFontSize((size) => Math.min(MAX_FONT_SIZE, size + FONT_SIZE_STEP))}
-              >
-                <FaPlus aria-hidden="true" />
-              </button>
-            </div>
-
-            <label className="content-font-size-control">
-              <span className="sr-only">Wielkość tekstu od 90 do 160 procent</span>
-              <input
-                type="range"
-                min={MIN_FONT_SIZE}
-                max={MAX_FONT_SIZE}
-                step={FONT_SIZE_STEP}
-                value={fontSize}
-                style={{ '--range-progress': `${((fontSize - MIN_FONT_SIZE) / (MAX_FONT_SIZE - MIN_FONT_SIZE)) * 100}%` } as CSSProperties}
-                aria-label="Wielkość tekstu"
-                onChange={(event) => setFontSize(Number(event.target.value))}
-              />
-            </label>
-            <div className="content-font-size-footer">
-              <span>{MIN_FONT_SIZE}%</span>
-              <button
-                className="content-font-size-reset"
-                type="button"
-                disabled={fontSize === DEFAULT_FONT_SIZE}
-                onClick={() => setFontSize(DEFAULT_FONT_SIZE)}
-              >
-                <FaArrowRotateLeft aria-hidden="true" />
-                Przywróć 100%
-              </button>
-              <span>{MAX_FONT_SIZE}%</span>
-            </div>
-          </div>
-        )}
-      </div>
+      {!isActive && <ContentFontSizeControl className="content-reading-secondary" />}
 
       <button
         className="content-reading-toggle content-reading-toggle--secondary"

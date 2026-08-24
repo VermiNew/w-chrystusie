@@ -2859,6 +2859,10 @@ body[data-nav-menu='open'] {
   transform: translateX(-50%);
 }
 
+.prayer-sequence-text-size {
+  margin-bottom: 1rem;
+}
+
 .chaplet-progress {
   display: flex;
   align-items: center;
@@ -2923,7 +2927,7 @@ body[data-nav-menu='open'] {
 
 .chaplet-prayer {
   font-family: var(--font-reading);
-  font-size: 1.1rem;
+  font-size: calc(1.1rem * var(--content-reading-scale, 1));
   line-height: 1.8;
   margin: 0;
 }
@@ -3355,7 +3359,7 @@ body[data-nav-menu='open'] {
 
 .rosary-prayer {
   font-family: var(--font-reading);
-  font-size: 1.1rem;
+  font-size: calc(1.1rem * var(--content-reading-scale, 1));
   line-height: 1.8;
   margin: 0;
 }

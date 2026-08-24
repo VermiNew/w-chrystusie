@@ -6,6 +6,7 @@ import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
 import { useHorizontalSwipe } from '../hooks/useHorizontalSwipe'
 import PrayerCompletion from '../components/PrayerCompletion'
 import SourceAttributionLink from '../components/SourceAttributionLink'
+import ContentFontSizeControl from '../components/ContentFontSizeControl'
 
 type Screen = 'intro' | 'prayer' | 'complete'
 const CHAPLET_PROGRESS_KEY = 'chaplet-progress'
@@ -169,6 +170,10 @@ export default function ChapletPage() {
         <FaArrowLeft className="prayer-nav-icon" aria-hidden="true" />
         <span>Powrót</span>
       </button>
+
+      <div className="prayer-sequence-text-size">
+        <ContentFontSizeControl />
+      </div>
 
       <div className="chaplet-progress">
         <span>{currentStep + 1} / {steps.length}</span>
