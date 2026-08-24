@@ -25,7 +25,11 @@ interface SearchGroups {
 const FALLBACK_CATEGORY = 'Bez kategorii'
 const SNIPPET_LENGTH = 180
 
-const normalize = (value: string) => value.toLocaleLowerCase('pl-PL')
+const normalize = (value: string) => value
+  .toLocaleLowerCase('pl-PL')
+  .normalize('NFD')
+  .replace(/\p{M}/gu, '')
+  .replace(/ł/g, 'l')
 
 function getContextSnippet(content: string, query: string): string {
   const compact = content.replace(/[#*_>`[\]]/g, '').replace(/\s+/g, ' ').trim()
@@ -65,6 +69,7 @@ function searchEntries(
   const normalizedQuery = normalize(query)
   const titleMatches: SearchResult[] = []
   const contentMatches: SearchResult[] = []
+  if (!normalizedQuery) return { titleMatches, contentMatches }
 
   const addResult = (result: SearchResult, content: string) => {
     if (category !== 'all' && (result.category ?? FALLBACK_CATEGORY) !== category) return
@@ -136,14 +141,35 @@ const DEBOUNCE_MS = 200
 function highlightQuery(text: string, query: string): ReactNode {
   if (!query) return text
 
-  const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-  const parts = text.split(new RegExp(`(${escapedQuery})`, 'gi'))
+  const displayText = text.normalize('NFC')
+  const normalizedText = normalize(displayText)
+  const normalizedQuery = normalize(query)
+  if (!normalizedQuery) return displayText
+  const parts: ReactNode[] = []
+  let cursor = 0
+  let matchIndex = normalizedText.indexOf(normalizedQuery)
 
-  return parts.map((part, index) =>
-    normalize(part) === normalize(query)
-      ? <mark key={`${part}-${index}`} className="search-highlight">{part}</mark>
-      : <Fragment key={`${part}-${index}`}>{part}</Fragment>,
-  )
+  while (matchIndex >= 0) {
+    if (matchIndex > cursor) {
+      parts.push(<Fragment key={`text-${cursor}`}>{displayText.slice(cursor, matchIndex)}</Fragment>)
+    }
+
+    const matchEnd = matchIndex + normalizedQuery.length
+    parts.push(
+      <mark key={`match-${matchIndex}`} className="search-highlight">
+        {displayText.slice(matchIndex, matchEnd)}
+      </mark>,
+    )
+    cursor = matchEnd
+    matchIndex = normalizedText.indexOf(normalizedQuery, cursor)
+  }
+
+  if (cursor === 0) return displayText
+  if (cursor < displayText.length) {
+    parts.push(<Fragment key={`text-${cursor}`}>{displayText.slice(cursor)}</Fragment>)
+  }
+
+  return parts
 }
 
 function SearchResultItem({ result, query }: { result: SearchResult; query: string }) {
