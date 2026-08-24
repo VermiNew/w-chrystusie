@@ -219,6 +219,18 @@ a {
   text-decoration: none;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+}
+
 :root[data-theme-transition='true'] *,
 :root[data-theme-transition='true'] *::before,
 :root[data-theme-transition='true'] *::after {

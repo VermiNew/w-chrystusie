@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
-import { FaArrowRotateLeft, FaCompress, FaExpand, FaPause, FaPlay, FaRegStar, FaShareNodes, FaStar, FaStop, FaTextHeight, FaVolumeHigh } from 'react-icons/fa6'
+import { FaArrowRotateLeft, FaCompress, FaExpand, FaMinus, FaPause, FaPlay, FaPlus, FaRegStar, FaShareNodes, FaStar, FaStop, FaVolumeHigh } from 'react-icons/fa6'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
 import { useReadingPosition } from '../hooks/useReadingPosition'
 import { useSpeechSynthesis } from '../hooks/useSpeechSynthesis'
@@ -12,10 +12,15 @@ const AUTO_SCROLL_STEPS = [
 
 const FONT_SIZE_KEY = 'content-font-size'
 const DEFAULT_FONT_SIZE = 100
+const MIN_FONT_SIZE = 90
+const MAX_FONT_SIZE = 160
+const FONT_SIZE_STEP = 10
 
 const readFontSize = () => {
   const stored = Number.parseInt(localStorage.getItem(FONT_SIZE_KEY) ?? '', 10)
-  return Number.isFinite(stored) && stored >= 90 && stored <= 140 ? stored : DEFAULT_FONT_SIZE
+  return Number.isFinite(stored) && stored >= MIN_FONT_SIZE && stored <= MAX_FONT_SIZE
+    ? stored
+    : DEFAULT_FONT_SIZE
 }
 
 interface Props {
@@ -284,36 +289,71 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
           title="Ustaw wielkość tekstu"
           onClick={() => setFontControlsOpen((open) => !open)}
         >
-          <FaTextHeight aria-hidden="true" />
-          <span>Tekst</span>
+          <span className="content-font-size-symbol" aria-hidden="true">Aa</span>
+          <span className="sr-only">Wielkość tekstu</span>
           <small>{fontSize}%</small>
         </button>
         {fontControlsOpen && (
-          <div id="content-font-size-panel" className="content-font-size-popover">
+          <div
+            id="content-font-size-panel"
+            className="content-font-size-popover"
+            role="region"
+            aria-labelledby="content-font-size-title"
+          >
+            <div className="content-font-size-header">
+              <div>
+                <strong id="content-font-size-title">Wielkość tekstu</strong>
+                <span>Dopasuj tekst modlitwy do swoich potrzeb</span>
+              </div>
+              <output aria-live="polite">{fontSize}%</output>
+            </div>
+
+            <div className="content-font-size-stepper">
+              <button
+                type="button"
+                aria-label="Zmniejsz tekst"
+                disabled={fontSize === MIN_FONT_SIZE}
+                onClick={() => setFontSize((size) => Math.max(MIN_FONT_SIZE, size - FONT_SIZE_STEP))}
+              >
+                <FaMinus aria-hidden="true" />
+              </button>
+              <p style={{ fontSize: `${fontSize}%` }}>Przykładowy tekst modlitwy</p>
+              <button
+                type="button"
+                aria-label="Powiększ tekst"
+                disabled={fontSize === MAX_FONT_SIZE}
+                onClick={() => setFontSize((size) => Math.min(MAX_FONT_SIZE, size + FONT_SIZE_STEP))}
+              >
+                <FaPlus aria-hidden="true" />
+              </button>
+            </div>
+
             <label className="content-font-size-control">
-              <span className="sr-only">Wielkość tekstu</span>
+              <span className="sr-only">Wielkość tekstu od 90 do 160 procent</span>
               <input
                 type="range"
-                min="90"
-                max="140"
-                step="10"
+                min={MIN_FONT_SIZE}
+                max={MAX_FONT_SIZE}
+                step={FONT_SIZE_STEP}
                 value={fontSize}
-                style={{ '--range-progress': `${((fontSize - 90) / 50) * 100}%` } as CSSProperties}
+                style={{ '--range-progress': `${((fontSize - MIN_FONT_SIZE) / (MAX_FONT_SIZE - MIN_FONT_SIZE)) * 100}%` } as CSSProperties}
                 aria-label="Wielkość tekstu"
                 onChange={(event) => setFontSize(Number(event.target.value))}
               />
-              <output>{fontSize}%</output>
             </label>
-            <button
-              className="content-font-size-reset"
-              type="button"
-              title="Przywróć wielkość tekstu do 100%"
-              aria-label="Przywróć wielkość tekstu do 100%"
-              disabled={fontSize === DEFAULT_FONT_SIZE}
-              onClick={() => setFontSize(DEFAULT_FONT_SIZE)}
-            >
-              <FaArrowRotateLeft aria-hidden="true" />
-            </button>
+            <div className="content-font-size-footer">
+              <span>{MIN_FONT_SIZE}%</span>
+              <button
+                className="content-font-size-reset"
+                type="button"
+                disabled={fontSize === DEFAULT_FONT_SIZE}
+                onClick={() => setFontSize(DEFAULT_FONT_SIZE)}
+              >
+                <FaArrowRotateLeft aria-hidden="true" />
+                Przywróć 100%
+              </button>
+              <span>{MAX_FONT_SIZE}%</span>
+            </div>
           </div>
         )}
       </div>
