@@ -4,6 +4,7 @@ import {
   FaArrowUpRightFromSquare,
   FaBookOpen,
   FaGlobe,
+  FaStar,
 } from 'react-icons/fa6'
 import { Link, useParams } from 'react-router-dom'
 import { psalms, type Psalm } from '../data/psalms'
@@ -93,7 +94,31 @@ function PsalmReader({ psalm }: { psalm: Psalm }) {
   )
 }
 
+function PsalmIndexGrid({ entries }: { entries: readonly Psalm[] }) {
+  return (
+    <ol className="psalm-index-grid">
+      {entries.map((psalm) => (
+        <li key={psalm.number}>
+          <Link to={`/pismo-swiete/psalmy/${psalm.number}`}>
+            <span>
+              <small>{psalm.translation}</small>
+              <strong>{psalm.title}</strong>
+              {psalm.summary && <span>{psalm.summary}</span>}
+            </span>
+            <FaArrowRight aria-hidden="true" />
+          </Link>
+        </li>
+      ))}
+    </ol>
+  )
+}
+
 function PsalmsIndex() {
+  const { favoriteIds } = useContentLibrary('psalm')
+  const favoritePsalms = favoriteIds
+    .map((id) => psalms.find((psalm) => String(psalm.number) === id))
+    .filter((psalm): psalm is Psalm => Boolean(psalm))
+
   return (
     <div className="page psalms-page">
       <Link className="back-button" to="/pismo-swiete">
@@ -121,20 +146,16 @@ function PsalmsIndex() {
         </div>
       </aside>
 
-      <ol className="psalm-index-grid">
-        {psalms.map((psalm) => (
-          <li key={psalm.number}>
-            <Link to={`/pismo-swiete/psalmy/${psalm.number}`}>
-              <span>
-                <small>{psalm.translation}</small>
-                <strong>{psalm.title}</strong>
-                {psalm.summary && <span>{psalm.summary}</span>}
-              </span>
-              <FaArrowRight aria-hidden="true" />
-            </Link>
-          </li>
-        ))}
-      </ol>
+      {favoritePsalms.length > 0 && (
+        <details className="prayer-category saved-content-category psalm-favorites" open>
+          <summary className="prayer-category-title">
+            <FaStar aria-hidden="true" /> Ulubione <span>({favoritePsalms.length})</span>
+          </summary>
+          <PsalmIndexGrid entries={favoritePsalms} />
+        </details>
+      )}
+
+      <PsalmIndexGrid entries={psalms} />
     </div>
   )
 }

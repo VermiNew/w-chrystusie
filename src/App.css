@@ -1135,6 +1135,10 @@ body[data-nav-menu='open'] {
   max-width: 50rem;
 }
 
+.psalm-favorites {
+  margin-bottom: 1.5rem;
+}
+
 .psalm-reader-header {
   margin: 2rem auto;
   text-align: center;
