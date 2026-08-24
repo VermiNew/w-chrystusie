@@ -5,6 +5,7 @@ import { hapticLight, hapticMedium } from '../data/haptics'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
 import { useHorizontalSwipe } from '../hooks/useHorizontalSwipe'
 import PrayerCompletion from '../components/PrayerCompletion'
+import SourceAttributionLink from '../components/SourceAttributionLink'
 
 type Screen = 'intro' | 'prayer' | 'complete'
 const CHAPLET_PROGRESS_KEY = 'chaplet-progress'
@@ -186,6 +187,7 @@ export default function ChapletPage() {
           {step.context && <span className="chaplet-context">{step.context}</span>}
         </h2>
         <p className="chaplet-prayer">{step.prayer}</p>
+        {step.source && <SourceAttributionLink url={step.source} />}
       </div>
 
       <div className="prayer-sequence-controls">
