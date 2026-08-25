@@ -36,7 +36,7 @@ function PsalmReader({ psalm }: { psalm: Psalm }) {
   const previous = psalms.find((entry) => entry.number === psalm.number - 1)
   const next = psalms.find((entry) => entry.number === psalm.number + 1)
   const psalmId = String(psalm.number)
-  const { isFavorite, toggleFavorite } = useContentLibrary('psalm', psalmId, false)
+  const { isFavorite, toggleFavorite } = useContentLibrary('psalm', psalmId)
 
   return (
     <article className="page psalm-reader content-detail-page">

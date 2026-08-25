@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { FaArrowRight, FaCross, FaBookBible, FaMusic, FaHandsPraying, FaBullhorn, FaMagnifyingGlass } from 'react-icons/fa6'
 import DevotionChoiceDialog from '../components/DevotionChoiceDialog'
 import { getCatalogPrayerOfDay, prayerCatalog, songCatalog } from '../data/contentCatalog'
+import { psalms } from '../data/psalms'
 import { useContentLibrary } from '../hooks/useContentLibrary'
 
 const sections = [
@@ -18,16 +19,24 @@ export default function HomePage() {
   const { latestRecent } = useContentLibrary('prayer')
   const recentContent = latestRecent?.kind === 'prayer'
     ? prayerCatalog.find((prayer) => prayer.id === latestRecent.id)
-    : songCatalog.find((song) => song.id === latestRecent?.id)
+    : latestRecent?.kind === 'song'
+      ? songCatalog.find((song) => song.id === latestRecent.id)
+      : psalms.find((psalm) => String(psalm.number) === latestRecent?.id)
   const savedPosition = latestRecent
     ? Number.parseInt(localStorage.getItem(`reading-position:${latestRecent.kind}:${latestRecent.id}`) ?? '', 10)
     : Number.NaN
   const continuePath = latestRecent
-    ? `${latestRecent.kind === 'prayer' ? '/modlitwy' : '/spiewnik'}/${encodeURIComponent(latestRecent.id)}`
+    ? `${latestRecent.kind === 'prayer'
+      ? '/modlitwy'
+      : latestRecent.kind === 'song'
+        ? '/spiewnik'
+        : '/pismo-swiete/psalmy'}/${encodeURIComponent(latestRecent.id)}`
     : null
   const continueLabel = latestRecent?.kind === 'prayer'
     ? 'Kontynuuj modlitwę'
-    : 'Kontynuuj śpiew'
+    : latestRecent?.kind === 'song'
+      ? 'Kontynuuj śpiew'
+      : 'Kontynuuj Psalm'
   const prayerOfDay = getCatalogPrayerOfDay()
 
   return (
