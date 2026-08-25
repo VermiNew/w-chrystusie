@@ -3,7 +3,9 @@ import { Link, useParams } from 'react-router-dom'
 import ReadingModeToggle from '../components/ReadingModeToggle'
 import { exodus } from '../data/exodus'
 import { genesis } from '../data/genesis'
+import { scriptureBooksBySlug } from '../data/scriptureCatalog'
 import { useContentLibrary } from '../hooks/useContentLibrary'
+import { getChapterProgress, useScriptureProgress } from '../hooks/useScriptureProgress'
 import NotFoundPage from './NotFoundPage'
 
 const books = {
@@ -16,6 +18,7 @@ function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof type
   const chapter = book.chapters.find((entry) => entry.number === chapterNumber)
   const contentId = `${book.id}:${chapterNumber}`
   const { isFavorite, toggleFavorite } = useContentLibrary('scripture', contentId)
+  useScriptureProgress(book.id, chapterNumber)
 
   if (!chapter) return <NotFoundPage />
 
@@ -99,7 +102,30 @@ export default function GenesisPage() {
   const chapterNumber = Number(chapter)
 
   if (!chapter) {
-    return <ScriptureBookReader bookSlug={validBookSlug} chapterNumber={1} />
+    const book = scriptureBooksBySlug[bookSlug]
+    if (!book?.isAvailable) return <NotFoundPage />
+
+    return (
+      <div className="page">
+        <Link className="back-button" to="/pismo-swiete">
+          <FaArrowLeft aria-hidden="true" /> Powrót do ksiąg
+        </Link>
+        <h1>{book.name}</h1>
+        <p className="scripture-copyright">Wybierz rozdział. Pasek u dołu pokazuje zapisany postęp czytania.</p>
+        <div className="chapter-grid" aria-label={`Rozdziały: ${book.name}`}>
+          {Array.from({ length: book.chapterCount }, (_, index) => {
+            const number = index + 1
+            const progress = getChapterProgress(book.id, number)
+            return (
+              <Link key={number} className="chapter-button" to={`/pismo-swiete/${bookSlug}/${number}`} aria-label={`Rozdział ${number}`}>
+                {number}
+                {progress > 0 && <span className={`chapter-progress${progress >= 100 ? ' chapter-progress--full' : ''}`} style={{ width: `${progress}%` }} />}
+              </Link>
+            )
+          })}
+        </div>
+      </div>
+    )
   }
 
   return Number.isInteger(chapterNumber) && chapterNumber > 0
