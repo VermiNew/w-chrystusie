@@ -10,6 +10,7 @@ const HomePage = lazy(() => import('./pages/HomePage'))
 const PrayersPage = lazy(() => import('./pages/PrayersPage'))
 const ScripturePage = lazy(() => import('./pages/ScripturePage'))
 const PsalmsPage = lazy(() => import('./pages/PsalmsPage'))
+const GenesisPage = lazy(() => import('./pages/GenesisPage'))
 const SongbookPage = lazy(() => import('./pages/SongbookPage'))
 const RosaryPage = lazy(() => import('./pages/RosaryPage'))
 const ChapletPage = lazy(() => import('./pages/ChapletPage'))
@@ -58,6 +59,8 @@ function AppRoutes() {
             <Route path="/pismo-swiete" element={<ScripturePage />} />
             <Route path="/pismo-swiete/psalmy" element={<PsalmsPage />} />
             <Route path="/pismo-swiete/psalmy/:id" element={<PsalmsPage />} />
+            <Route path="/pismo-swiete/rodzaju" element={<GenesisPage />} />
+            <Route path="/pismo-swiete/rodzaju/:chapter" element={<GenesisPage />} />
             <Route path="/psalmy" element={<PsalmsPage />} />
             <Route path="/psalmy/:id" element={<PsalmsPage />} />
             <Route path="/spiewnik" element={<SongbookPage />} />

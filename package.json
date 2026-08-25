@@ -12,9 +12,11 @@
     "preview": "vite preview",
     "playwright": "playwright",
     "playwright:test": "playwright test",
+    "playwright:smoke": "playwright test tests/scripture.smoke.spec.ts",
     "playwright:ui": "playwright test --ui",
     "content:catalog": "node scripts/generate-content-catalog.mjs",
     "content:psalms": "node scripts/import-wujek-psalms.mjs",
+    "content:genesis": "node scripts/import-wujek-genesis.mjs",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 
-export type ContentKind = 'prayer' | 'song' | 'psalm'
+export type ContentKind = 'prayer' | 'song' | 'psalm' | 'scripture'
 
 export interface RecentContent {
   kind: ContentKind
@@ -19,7 +19,7 @@ const parseKey = (key: string | undefined): RecentContent | null => {
   const separatorIndex = key.indexOf(':')
   const kind = key.slice(0, separatorIndex)
   const id = key.slice(separatorIndex + 1)
-  if ((kind !== 'prayer' && kind !== 'song' && kind !== 'psalm') || !id) return null
+  if ((kind !== 'prayer' && kind !== 'song' && kind !== 'psalm' && kind !== 'scripture') || !id) return null
   return { kind, id }
 }
 

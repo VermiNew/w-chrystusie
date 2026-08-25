@@ -21,6 +21,20 @@ export default function ScripturePage() {
         </Link>
       </section>
 
+      <section className="scripture-subsection">
+        <p className="scripture-availability">Dostępne teraz</p>
+        <FaBookOpen className="scripture-subsection-icon" aria-hidden="true" />
+        <h2>Księga Rodzaju</h2>
+        <p>
+          Wszystkie 50 rozdziałów w historycznym przekładzie Jakuba Wujka z 1599 roku.
+          Każdy rozdział zawiera atrybucję i bezpośredni URL źródła.
+        </p>
+        <Link to="/pismo-swiete/rodzaju" className="subsection-link">
+          <span>Czytaj Księgę Rodzaju</span>
+          <FaArrowRight aria-hidden="true" />
+        </Link>
+      </section>
+
       <section className="scripture-notice" aria-labelledby="scripture-preparation-title">
         <h2 id="scripture-preparation-title">Pozostałe księgi — w przygotowaniu</h2>
         <p>
