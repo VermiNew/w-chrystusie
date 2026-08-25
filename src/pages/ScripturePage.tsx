@@ -16,7 +16,7 @@ function TestamentBooks({ testament, title }: { testament: 'Old' | 'New'; title:
           return (
             <li key={book.id}>
               {book.isAvailable ? (
-                <Link className="book-item" to={`/pismo-swiete/${book.slug}`} aria-label={label}>
+                <Link className="book-item" to={book.id === 'psa' ? '/pismo-swiete/psalmy' : `/pismo-swiete/${book.slug}`} aria-label={label}>
                   <span>{book.name}</span>
                   <small>{book.chapterCount} rozdziałów</small>
                   {progress > 0 && <span className={`chapter-progress${progress >= 100 ? ' chapter-progress--full' : ''}`} style={{ width: `${progress}%` }} />}

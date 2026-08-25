@@ -1064,6 +1064,8 @@ body[data-nav-menu='open'] {
 
 .psalm-index-grid a {
   display: flex;
+  position: relative;
+  overflow: hidden;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
@@ -1081,7 +1083,7 @@ body[data-nav-menu='open'] {
   color: var(--color-primary);
 }
 
-.psalm-index-grid a > span {
+.psalm-index-grid a > .psalm-index-content {
   display: grid;
   min-width: 0;
   gap: 0.2rem;

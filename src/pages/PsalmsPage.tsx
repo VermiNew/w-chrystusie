@@ -11,6 +11,7 @@ import { psalms, type Psalm } from '../data/psalms'
 import NotFoundPage from './NotFoundPage'
 import ReadingModeToggle from '../components/ReadingModeToggle'
 import { useContentLibrary } from '../hooks/useContentLibrary'
+import { getChapterProgress, useScriptureProgress } from '../hooks/useScriptureProgress'
 
 function PsalmSource({ psalm }: { psalm: Psalm }) {
   return (
@@ -37,6 +38,7 @@ function PsalmReader({ psalm }: { psalm: Psalm }) {
   const next = psalms.find((entry) => entry.number === psalm.number + 1)
   const psalmId = String(psalm.number)
   const { isFavorite, toggleFavorite } = useContentLibrary('psalm', psalmId)
+  useScriptureProgress('psa', psalm.number)
 
   return (
     <article className="page psalm-reader content-detail-page">
@@ -97,18 +99,28 @@ function PsalmReader({ psalm }: { psalm: Psalm }) {
 function PsalmIndexGrid({ entries }: { entries: readonly Psalm[] }) {
   return (
     <ol className="psalm-index-grid">
-      {entries.map((psalm) => (
-        <li key={psalm.number}>
-          <Link to={`/pismo-swiete/psalmy/${psalm.number}`}>
-            <span>
-              <small>{psalm.translation}</small>
-              <strong>{psalm.title}</strong>
-              {psalm.summary && <span>{psalm.summary}</span>}
-            </span>
-            <FaArrowRight aria-hidden="true" />
-          </Link>
-        </li>
-      ))}
+      {entries.map((psalm) => {
+        const progress = getChapterProgress('psa', psalm.number)
+
+        return (
+          <li key={psalm.number}>
+            <Link to={`/pismo-swiete/psalmy/${psalm.number}`}>
+              <span className="psalm-index-content">
+                <small>{psalm.translation}</small>
+                <strong>{psalm.title}</strong>
+                {psalm.summary && <span>{psalm.summary}</span>}
+              </span>
+              {progress > 0 && (
+                <span
+                  className={`chapter-progress${progress >= 100 ? ' chapter-progress--full' : ''}`}
+                  style={{ width: `${progress}%` }}
+                />
+              )}
+              <FaArrowRight aria-hidden="true" />
+            </Link>
+          </li>
+        )
+      })}
     </ol>
   )
 }
