@@ -25,7 +25,7 @@ function AppRoutes() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    const isContentDetail = ['/modlitwy/', '/spiewnik/', '/pismo-swiete/psalmy/'].some(
+    const isContentDetail = ['/modlitwy/', '/spiewnik/', '/pismo-swiete/'].some(
       (prefix) => location.pathname.startsWith(prefix) && location.pathname.length > prefix.length,
     )
     if (isContentDetail) return
@@ -59,8 +59,8 @@ function AppRoutes() {
             <Route path="/pismo-swiete" element={<ScripturePage />} />
             <Route path="/pismo-swiete/psalmy" element={<PsalmsPage />} />
             <Route path="/pismo-swiete/psalmy/:id" element={<PsalmsPage />} />
-            <Route path="/pismo-swiete/rodzaju" element={<GenesisPage />} />
-            <Route path="/pismo-swiete/rodzaju/:chapter" element={<GenesisPage />} />
+            <Route path="/pismo-swiete/:book" element={<GenesisPage />} />
+            <Route path="/pismo-swiete/:book/:chapter" element={<GenesisPage />} />
             <Route path="/psalmy" element={<PsalmsPage />} />
             <Route path="/psalmy/:id" element={<PsalmsPage />} />
             <Route path="/spiewnik" element={<SongbookPage />} />

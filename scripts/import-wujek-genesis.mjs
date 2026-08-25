@@ -3,15 +3,37 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const outputFile = path.join(projectRoot, 'src', 'data', 'generated', 'genesis-wujek.json')
-const sourcePagePrefix = 'Biblia Wujka (1923)/Księga Rodzaju '
-const sourceUrlPrefix =
-  'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Rodzaju_'
-const sourceBookUrl =
-  'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Rodzaju_%28ca%C5%82o%C5%9B%C4%87%29'
 const apiUrl = 'https://pl.wikisource.org/w/api.php'
 const userAgent = 'WChrystusieContentImporter/1.0 (https://w-chrystusie.pages.dev)'
-const chapterCount = 50
+
+const books = {
+  gen: {
+    id: 'gen',
+    name: 'Księga Rodzaju',
+    chapterCount: 50,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'genesis-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Rodzaju ',
+    sourceUrlPrefix:
+      'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Rodzaju_',
+    sourceBookUrl:
+      'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Rodzaju_%28ca%C5%82o%C5%9B%C4%87%29',
+  },
+  exo: {
+    id: 'exo',
+    name: 'Księga Wyjścia',
+    chapterCount: 40,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'exodus-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Wyjścia ',
+    sourceUrlPrefix:
+      'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Wyj%C5%9Bcia_',
+    sourceBookUrl:
+      'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Wyj%C5%9Bcia_%28ca%C5%82o%C5%9B%C4%87%29',
+  },
+}
+
+const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
+const book = books[requestedBookId]
+if (!book) throw new Error(`Nieznana księga: ${requestedBookId}. Dostępne: ${Object.keys(books).join(', ')}.`)
 
 function decodeHtml(value) {
   const namedEntities = {
@@ -44,7 +66,7 @@ function textFromHtml(value) {
 
 function parseChapter(chapterNumber, html) {
   const verseParagraphPattern = /<p>([\s\S]*?)<\/p>/gi
-  const markerPattern = /<span[^>]*id="(\d+):(\d+)\.?"[^>]*>[\s\S]*?<\/span>/i
+  const markerPattern = /<span[^>]*id="(\d+):(\d+)(?:\.|&#\d+;)?"[^>]*>[\s\S]*?<\/span>/i
   const verses = []
 
   for (const paragraphMatch of html.matchAll(verseParagraphPattern)) {
@@ -58,7 +80,7 @@ function parseChapter(chapterNumber, html) {
   }
 
   if (verses.length === 0) {
-    throw new Error(`Księga Rodzaju ${chapterNumber}: nie znaleziono żadnego wersetu.`)
+    throw new Error(`${book.name} ${chapterNumber}: nie znaleziono żadnego wersetu.`)
   }
 
   const expectedVerseNumbers = Array.from({ length: verses.length }, (_, index) => index + 1)
@@ -67,13 +89,13 @@ function parseChapter(chapterNumber, html) {
   )
   if (!hasCompleteSequence) {
     throw new Error(
-      `Księga Rodzaju ${chapterNumber}: wersety nie tworzą pełnej sekwencji od 1 (${verses.map((verse) => verse.number).join(', ')}).`,
+      `${book.name} ${chapterNumber}: wersety nie tworzą pełnej sekwencji od 1 (${verses.map((verse) => verse.number).join(', ')}).`,
     )
   }
 
   return {
     number: chapterNumber,
-    sourceUrl: `${sourceUrlPrefix}${chapterNumber}`,
+    sourceUrl: `${book.sourceUrlPrefix}${chapterNumber}`,
     verses,
   }
 }
@@ -81,7 +103,7 @@ function parseChapter(chapterNumber, html) {
 async function fetchChapter(chapterNumber) {
   const parameters = new URLSearchParams({
     action: 'parse',
-    page: `${sourcePagePrefix}${chapterNumber}`,
+    page: `${book.sourcePagePrefix}${chapterNumber}`,
     prop: 'text',
     format: 'json',
     formatversion: '2',
@@ -91,34 +113,34 @@ async function fetchChapter(chapterNumber) {
   })
 
   if (!response.ok) {
-    throw new Error(`Księga Rodzaju ${chapterNumber}: API zwróciło HTTP ${response.status}.`)
+    throw new Error(`${book.name} ${chapterNumber}: API zwróciło HTTP ${response.status}.`)
   }
 
   const payload = await response.json()
   if (payload.error || !payload.parse?.text) {
-    throw new Error(`Księga Rodzaju ${chapterNumber}: API nie zwróciło renderowanego tekstu.`)
+    throw new Error(`${book.name} ${chapterNumber}: API nie zwróciło renderowanego tekstu.`)
   }
 
   return parseChapter(chapterNumber, payload.parse.text)
 }
 
 const chapters = []
-for (let chapterNumber = 1; chapterNumber <= chapterCount; chapterNumber += 1) {
+for (let chapterNumber = 1; chapterNumber <= book.chapterCount; chapterNumber += 1) {
   const chapter = await fetchChapter(chapterNumber)
   chapters.push(chapter)
-  console.log(`[genesis] Pobrano rozdział ${chapterNumber} (${chapter.verses.length} wersetów).`)
+  console.log(`[${book.id}] Pobrano rozdział ${chapterNumber} (${chapter.verses.length} wersetów).`)
 }
 
-const genesis = {
-  id: 'gen',
-  name: 'Księga Rodzaju',
+const importedBook = {
+  id: book.id,
+  name: book.name,
   translation: 'Biblia Jakuba Wujka (1599), wydanie 1923',
   sourceName: 'Wikiźródła',
-  sourceBookUrl,
+  sourceBookUrl: book.sourceBookUrl,
   sourceRights: 'Domena publiczna (wydanie); CC BY-SA 4.0 (transkrypcja Wikiźródeł)',
   chapters,
 }
 
-await mkdir(path.dirname(outputFile), { recursive: true })
-await writeFile(outputFile, `${JSON.stringify(genesis, null, 2)}\n`, 'utf8')
-console.log(`[genesis] Zapisano ${chapters.length} rozdziałów w ${path.relative(projectRoot, outputFile)}.`)
+await mkdir(path.dirname(book.outputFile), { recursive: true })
+await writeFile(book.outputFile, `${JSON.stringify(importedBook, null, 2)}\n`, 'utf8')
+console.log(`[${book.id}] Zapisano ${chapters.length} rozdziałów w ${path.relative(projectRoot, book.outputFile)}.`)
