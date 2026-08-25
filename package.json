@@ -15,6 +15,7 @@
     "playwright:ui": "playwright test --ui",
     "content:catalog": "node scripts/generate-content-catalog.mjs",
     "content:psalms": "node scripts/import-wujek-psalms.mjs",
+    "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },
   "dependencies": {
