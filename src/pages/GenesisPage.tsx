@@ -6,6 +6,7 @@ import { ezra } from '../data/ezra'
 import { firstKings } from '../data/firstKings'
 import { firstChronicles } from '../data/firstChronicles'
 import { genesis } from '../data/genesis'
+import { isaiah } from '../data/isaiah'
 import { judges } from '../data/judges'
 import { numbers } from '../data/numbers'
 import { scriptureBooksBySlug } from '../data/scriptureCatalog'
@@ -21,6 +22,7 @@ const books = {
   '1-krolewska': firstKings,
   '1-kronik': firstChronicles,
   ezdrasza: ezra,
+  izajasza: isaiah,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {

@@ -34,4 +34,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/ezdrasza/10')
   await expect(page.locator('.psalm-verses')).toContainText('I naleźli się z synów kapłańskich')
+
+  await page.goto('/pismo-swiete/izajasza/45')
+  await expect(page.locator('.psalm-verses')).toContainText('W Panu będzie usprawiedliwione')
 })
