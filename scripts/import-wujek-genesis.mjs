@@ -29,6 +29,15 @@ const books = {
     sourceBookUrl:
       'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Wyj%C5%9Bcia_%28ca%C5%82o%C5%9B%C4%87%29',
   },
+  num: {
+    id: 'num',
+    name: 'Księga Liczb',
+    chapterCount: 36,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'numbers-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Liczb ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Liczb_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Liczb_%28ca%C5%82o%C5%9B%C4%87%29',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
@@ -72,11 +81,14 @@ function parseChapter(chapterNumber, html) {
   for (const paragraphMatch of html.matchAll(verseParagraphPattern)) {
     const paragraph = paragraphMatch[1]
     const marker = paragraph.match(markerPattern)
-    if (!marker || Number(marker[1]) !== chapterNumber) continue
+    const plainMarker = marker ? null : paragraph.match(/^\s*(\d+)\.\s*/)
+    if (marker && Number(marker[1]) !== chapterNumber) continue
+    if (!marker && !plainMarker) continue
 
-    const markerEnd = marker.index + marker[0].length
+    const verseNumber = marker ? Number(marker[2]) : Number(plainMarker[1])
+    const markerEnd = marker ? marker.index + marker[0].length : plainMarker[0].length
     const text = textFromHtml(paragraph.slice(markerEnd))
-    if (text) verses.push({ number: Number(marker[2]), text })
+    if (text) verses.push({ number: verseNumber, text })
   }
 
   if (verses.length === 0) {

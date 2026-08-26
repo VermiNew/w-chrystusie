@@ -19,4 +19,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/rodzaju/1')
   await expect(page.locator('.psalm-verses')).toContainText('Na początku stworzył Bóg niebo i ziemię.')
+
+  await page.goto('/pismo-swiete/liczb/11')
+  await expect(page.locator('.psalm-verses')).toContainText('A jeźli się tobie inaczéj zda')
 })
