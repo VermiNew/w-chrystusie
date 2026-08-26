@@ -19,6 +19,7 @@
     "content:genesis": "node scripts/import-wujek-genesis.mjs",
     "content:exodus": "node scripts/import-wujek-genesis.mjs --book exo",
     "content:numbers": "node scripts/import-wujek-genesis.mjs --book num",
+    "content:judges": "node scripts/import-wujek-genesis.mjs --book jdg",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },

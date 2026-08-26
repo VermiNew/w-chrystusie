@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import ReadingModeToggle from '../components/ReadingModeToggle'
 import { exodus } from '../data/exodus'
 import { genesis } from '../data/genesis'
+import { judges } from '../data/judges'
 import { numbers } from '../data/numbers'
 import { scriptureBooksBySlug } from '../data/scriptureCatalog'
 import { useContentLibrary } from '../hooks/useContentLibrary'
@@ -13,6 +14,7 @@ const books = {
   rodzaju: genesis,
   wyjscia: exodus,
   liczb: numbers,
+  sedziow: judges,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {

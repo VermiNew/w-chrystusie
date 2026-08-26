@@ -22,4 +22,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/liczb/11')
   await expect(page.locator('.psalm-verses')).toContainText('A jeźli się tobie inaczéj zda')
+
+  await page.goto('/pismo-swiete/sedziow/1')
+  await expect(page.locator('.psalm-verses')).toContainText('Po śmierci Jozuego')
 })

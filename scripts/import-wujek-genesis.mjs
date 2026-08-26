@@ -38,6 +38,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Liczb_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Liczb_%28ca%C5%82o%C5%9B%C4%87%29',
   },
+  jdg: {
+    id: 'jdg',
+    name: 'Księga Sędziów',
+    chapterCount: 21,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'judges-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Sędziów ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_S%C4%99dzi%C3%B3w_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_S%C4%99dzi%C3%B3w_%28ca%C5%82o%C5%9B%C4%87%29',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
