@@ -21,6 +21,7 @@
     "content:numbers": "node scripts/import-wujek-genesis.mjs --book num",
     "content:judges": "node scripts/import-wujek-genesis.mjs --book jdg",
     "content:first-kings": "node scripts/import-wujek-genesis.mjs --book 1ki",
+    "content:first-chronicles": "node scripts/import-wujek-genesis.mjs --book 1ch",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },

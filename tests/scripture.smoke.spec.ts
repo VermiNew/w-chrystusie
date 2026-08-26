@@ -28,4 +28,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/1-krolewska/1')
   await expect(page.locator('.psalm-verses')).toContainText('król Dawid zstarzał się')
+
+  await page.goto('/pismo-swiete/1-kronik/26')
+  await expect(page.locator('.psalm-verses')).toContainText('Braci téż jego lat dłuższych')
 })
