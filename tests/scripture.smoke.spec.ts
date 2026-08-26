@@ -25,4 +25,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/sedziow/1')
   await expect(page.locator('.psalm-verses')).toContainText('Po śmierci Jozuego')
+
+  await page.goto('/pismo-swiete/1-krolewska/1')
+  await expect(page.locator('.psalm-verses')).toContainText('król Dawid zstarzał się')
 })

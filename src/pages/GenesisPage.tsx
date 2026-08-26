@@ -2,6 +2,7 @@ import { FaArrowLeft, FaArrowRight, FaArrowUpRightFromSquare, FaGlobe } from 're
 import { Link, useParams } from 'react-router-dom'
 import ReadingModeToggle from '../components/ReadingModeToggle'
 import { exodus } from '../data/exodus'
+import { firstKings } from '../data/firstKings'
 import { genesis } from '../data/genesis'
 import { judges } from '../data/judges'
 import { numbers } from '../data/numbers'
@@ -15,6 +16,7 @@ const books = {
   wyjscia: exodus,
   liczb: numbers,
   sedziow: judges,
+  '1-krolewska': firstKings,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {
