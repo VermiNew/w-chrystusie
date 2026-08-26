@@ -6,6 +6,7 @@ import { ezra } from '../data/ezra'
 import { firstKings } from '../data/firstKings'
 import { firstChronicles } from '../data/firstChronicles'
 import { genesis } from '../data/genesis'
+import { galatians } from '../data/galatians'
 import { isaiah } from '../data/isaiah'
 import { judges } from '../data/judges'
 import { lamentations } from '../data/lamentations'
@@ -25,6 +26,7 @@ const books = {
   ezdrasza: ezra,
   izajasza: isaiah,
   lamentacje: lamentations,
+  'do-galatow': galatians,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {

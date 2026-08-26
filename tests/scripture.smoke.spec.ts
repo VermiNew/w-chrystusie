@@ -40,4 +40,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/lamentacje/5')
   await expect(page.locator('.psalm-verses')).toContainText('Wspomnij Panie!')
+
+  await page.goto('/pismo-swiete/do-galatow/6')
+  await expect(page.locator('.psalm-verses')).toContainText('Jeden drugiego brzemiona noście')
 })
