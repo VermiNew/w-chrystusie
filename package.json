@@ -24,6 +24,7 @@
     "content:first-chronicles": "node scripts/import-wujek-genesis.mjs --book 1ch",
     "content:ezra": "node scripts/import-wujek-genesis.mjs --book ezr",
     "content:isaiah": "node scripts/import-wujek-genesis.mjs --book isa",
+    "content:lamentations": "node scripts/import-wujek-genesis.mjs --book lam",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },

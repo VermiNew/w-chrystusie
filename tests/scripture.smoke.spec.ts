@@ -37,4 +37,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/izajasza/45')
   await expect(page.locator('.psalm-verses')).toContainText('W Panu będzie usprawiedliwione')
+
+  await page.goto('/pismo-swiete/lamentacje/5')
+  await expect(page.locator('.psalm-verses')).toContainText('Wspomnij Panie!')
 })

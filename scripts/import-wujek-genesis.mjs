@@ -83,6 +83,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Izajasza_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Izajasza_%28ca%C5%82o%C5%9B%C4%87%29',
   },
+  lam: {
+    id: 'lam',
+    name: 'Lamentacje',
+    chapterCount: 5,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'lamentations-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Treny ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Treny_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Treny_%28ca%C5%82o%C5%9B%C4%87%29',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

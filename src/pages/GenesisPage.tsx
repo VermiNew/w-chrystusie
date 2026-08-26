@@ -8,6 +8,7 @@ import { firstChronicles } from '../data/firstChronicles'
 import { genesis } from '../data/genesis'
 import { isaiah } from '../data/isaiah'
 import { judges } from '../data/judges'
+import { lamentations } from '../data/lamentations'
 import { numbers } from '../data/numbers'
 import { scriptureBooksBySlug } from '../data/scriptureCatalog'
 import { useContentLibrary } from '../hooks/useContentLibrary'
@@ -23,6 +24,7 @@ const books = {
   '1-kronik': firstChronicles,
   ezdrasza: ezra,
   izajasza: isaiah,
+  lamentacje: lamentations,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {
