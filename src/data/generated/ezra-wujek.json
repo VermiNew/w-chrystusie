@@ -1,0 +1,1190 @@
+{
+  "id": "ezr",
+  "name": "Księga Ezdrasza",
+  "translation": "Biblia Jakuba Wujka (1599), wydanie 1923",
+  "sourceName": "Wikiźródła",
+  "sourceBookUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Ezdrasza_%28ca%C5%82o%C5%9B%C4%87%29",
+  "sourceRights": "Domena publiczna (wydanie); CC BY-SA 4.0 (transkrypcja Wikiźródeł)",
+  "chapters": [
+    {
+      "number": 1,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Ezdrasza_1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Roku pierwszego Cyrusa, króla Perskiego, aby się wypełniło słowo Pańskie z ust Jeremiaszowych, wzbudził Pan ducha Cyrusa, króla Perskiego, i puścił głos po wszystkiem królestwie swem i na piśmie, rzekąc:"
+        },
+        {
+          "number": 2,
+          "text": "To mówi Cyrus, król Perski: Wszystkie królestwa ziemskie dał mi Pan, Bóg niebieski, i ten mi rozkazał, abych mu zbudował dom w Jeruzalem, które jest w Żydowstwie."
+        },
+        {
+          "number": 3,
+          "text": "Kto jest między wami ze wszystkiego ludu jego, niechaj będzie z nim Pan, Bóg jego. Niech idzie do Jeruzalem, które jest w Żydowstwie, a niech buduje dom Pana, Boga Izraelskiego, (onci jest Bóg), który jest w Jeruzalem."
+        },
+        {
+          "number": 4,
+          "text": "A wszyscy inni po wszystkich miejscach, gdziekolwiek mieszkają, niech go podpomagają mężowie z miejsca swego śrebrem i złotem i majętnością i bydłem, oprócz co dobrowolnie ofiarują kościołowi Bożemu, który jest w Jeruzalem."
+        },
+        {
+          "number": 5,
+          "text": "I powstali przedniejsi z ojców, z Judy i z Benjamin, i kapłani i Lewitowie i wszelki, którego Bóg ducha wzbudził, aby szli budować kościół Pański, który był w Jeruzalem."
+        },
+        {
+          "number": 6,
+          "text": "I wszyscy, którzy byli w okolicy, wspomogli ręce ich naczyniem śrebrnem i złotem, majętnością i bydłem, sprzętem, oprócz tego, co z dobréj woli ofiarowali byli."
+        },
+        {
+          "number": 7,
+          "text": "Król téż Cyrus wyniósł naczynia kościoła Pańskiego, które był pobrał Nabuchodonozor z Jeruzalem i położył je był we zborze Boga swego."
+        },
+        {
+          "number": 8,
+          "text": "A Cyrus, król Perski, wyniósł je przez ręce Mithrydata, syna Gazabat, i odliczył je Sassanasar, książęciu Judzkiemu."
+        },
+        {
+          "number": 9,
+          "text": "I ta jest liczba ich: Czasz złotych trzydzieści, czasz śrebrnych tysiąc, nożów dwadzieścia i dziewięć."
+        },
+        {
+          "number": 10,
+          "text": "Kubków złotych trzydzieści, kubków srebrnych drugich czterysta i dziesięć, inszego naczynia tysiąc."
+        },
+        {
+          "number": 11,
+          "text": "Wszystkiego naczynia złotego i śrebrnego pięć tysięcy i czterysta: wszystko wziął Sassabasar z tymi, którzy wyszli z przeprowadzenia Babilońskiego do Jeruzalem."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Ezdrasza_2",
+      "verses": [
+        {
+          "number": 1,
+          "text": "A synowie krainy ci są, którzy wyszli z poimania, które był przeniósł Nabuchodonozor, król Babiloński, do Babilonu, i wrócili się do Jeruzalem i Judy, każdy do miasta swego."
+        },
+        {
+          "number": 2,
+          "text": "Którzy przyszli z Zorobabelem, Jozue, Nehemia, Saraja, Rahelaja, Mardochaj, Belsan, Mesphar, Begwaj, Rehum, Baana. Poczet mężów ludu Izraelskiego:"
+        },
+        {
+          "number": 3,
+          "text": "Synów Pharos dwa tysiące sto siedmdziesiąt dwa."
+        },
+        {
+          "number": 4,
+          "text": "Synów Sephatya trzysta siedmdziesiąt dwa."
+        },
+        {
+          "number": 5,
+          "text": "Synów Area siedmset siedmdziesiąt i pięć."
+        },
+        {
+          "number": 6,
+          "text": "Synów Phahath Moab, synów Jozue Joab, dwa tysiące ośmset dwanaście."
+        },
+        {
+          "number": 7,
+          "text": "Synów Elam tysiąc dwieście pięćdziesiąt cztery."
+        },
+        {
+          "number": 8,
+          "text": "Synów Zethua dziewięćset czterdzieści pięć."
+        },
+        {
+          "number": 9,
+          "text": "Synów Zachaj siedmset sześćdziesiąt."
+        },
+        {
+          "number": 10,
+          "text": "Synów Bani sześćset czterdzieści dwa."
+        },
+        {
+          "number": 11,
+          "text": "Synów Bebaj sześćset dwadzieścia trzy."
+        },
+        {
+          "number": 12,
+          "text": "Synów Azgad tysiąc dwieście dwadzieścia dwa."
+        },
+        {
+          "number": 13,
+          "text": "Synów Adonikam sześćset sześćdziesiąt sześć."
+        },
+        {
+          "number": 14,
+          "text": "Synów Begwaj dwa tysiące pięćdziesiąt sześć."
+        },
+        {
+          "number": 15,
+          "text": "Synów Adyn czterysta pięćdziesiąt cztery."
+        },
+        {
+          "number": 16,
+          "text": "Synów Ather, którzy byli z Ezechiasza, dziewięćdziesiąt ośm."
+        },
+        {
+          "number": 17,
+          "text": "Synów Bezaj trzysta dwadzieścia trzy."
+        },
+        {
+          "number": 18,
+          "text": "Synów Jora sto dwanaście."
+        },
+        {
+          "number": 19,
+          "text": "Synów Hasum dwieście dwadzieścia trzy."
+        },
+        {
+          "number": 20,
+          "text": "Synów Gebbar dziewięćdziesiąt pięć."
+        },
+        {
+          "number": 21,
+          "text": "Synów Bethlehem sto dwadzieścia trzy."
+        },
+        {
+          "number": 22,
+          "text": "Mężów Netopha pięćdziesiąt i sześć."
+        },
+        {
+          "number": 23,
+          "text": "Mężów Anathoth sto dwadzieścia i ośm."
+        },
+        {
+          "number": 24,
+          "text": "Synów Azmaweth czterdzieści dwa."
+        },
+        {
+          "number": 25,
+          "text": "Synów Karyathyarym, Cephira i Beroth siedmset czterdzieści trzéj."
+        },
+        {
+          "number": 26,
+          "text": "Synów Ramath i Gabaa sześćset dwadzieścia jeden."
+        },
+        {
+          "number": 27,
+          "text": "Mężów Machma sto dwadzieścia dwa."
+        },
+        {
+          "number": 28,
+          "text": "Mężów Bethel i Haj dwieście dwadzieścia trzy."
+        },
+        {
+          "number": 29,
+          "text": "Synów Nebo pięćdziesiąt dwa."
+        },
+        {
+          "number": 30,
+          "text": "Synów Megbis sto pięćdiesiąt sześć."
+        },
+        {
+          "number": 31,
+          "text": "Synów Elam drugiego tysiąc dwieście pięćdziesiąt cztery."
+        },
+        {
+          "number": 32,
+          "text": "Synów Har trzysta dwadzieścia."
+        },
+        {
+          "number": 33,
+          "text": "Synów Lod, Hadyd i Ono siedmset dwadzieścia pięć."
+        },
+        {
+          "number": 34,
+          "text": "Synów Jerecho trzysta czterdzieści pięć."
+        },
+        {
+          "number": 35,
+          "text": "Synów Senaa trzy tysiące sześćset trzydzieści."
+        },
+        {
+          "number": 36,
+          "text": "Kapłanów: Synów Jadaja w domu Jozue, dziewięćset siedmdziesiąt trzéj."
+        },
+        {
+          "number": 37,
+          "text": "Synów Emmer tysiąc pięćdziesiąt dwa."
+        },
+        {
+          "number": 38,
+          "text": "Synów Pheshur tysiąc dwieście czterdzieści siedm."
+        },
+        {
+          "number": 39,
+          "text": "Synów Harym tysiąc siedmnaście."
+        },
+        {
+          "number": 40,
+          "text": "Lewitów: Synów Jozue i Cedmihel, synów Odomiasza, siedmdziesiąt cztery."
+        },
+        {
+          "number": 41,
+          "text": "Śpiewaków: Synów Asaph sto dwadzieścia ośm."
+        },
+        {
+          "number": 42,
+          "text": "Synowie wrotnych: Synowie Sellum, synowie Ater, synowie Telmon, synowie Akkub, synowie Hatyta, synowie Sobaj, wszystkich sto trzydzieści dziewięc."
+        },
+        {
+          "number": 43,
+          "text": "Nathynejczycy: Synowie Syha, synowie Hasupha, synowie Tabbaoth,"
+        },
+        {
+          "number": 44,
+          "text": "Synowie Ceros, synowie Syaa, synowie Phadon,"
+        },
+        {
+          "number": 45,
+          "text": "Synowie Lebana, synowie Hagaba, synowie Akkub,"
+        },
+        {
+          "number": 46,
+          "text": "Synowie Hagab, synowie Semlaj, synowie Hanan,"
+        },
+        {
+          "number": 47,
+          "text": "Synowie Gaddel, synowie Gaber, synowie Raaja,"
+        },
+        {
+          "number": 48,
+          "text": "Synowie Rasyn, synowie Nekoda, synowie Gazam,"
+        },
+        {
+          "number": 49,
+          "text": "Synowie Aza, synowie Phasea, synowie Besee,"
+        },
+        {
+          "number": 50,
+          "text": "Synowie Asena, synowie Munim, synowie Nephusym,"
+        },
+        {
+          "number": 51,
+          "text": "Synowie Bakbuk, synowie Hakupha, synowie Harhur,"
+        },
+        {
+          "number": 52,
+          "text": "Synowie Besluth, synowie Mahida, synowie Harsa,"
+        },
+        {
+          "number": 53,
+          "text": "Synowie Berkos, synowie Sysara, synowie Thema,"
+        },
+        {
+          "number": 54,
+          "text": "Synowie Nasya, synowie Hatypha,"
+        },
+        {
+          "number": 55,
+          "text": "Synowie sług Salomonowych, synowie Sotai, synowie Sophereth, synowie Pharuda,"
+        },
+        {
+          "number": 56,
+          "text": "Synowie Jala, synowie Derkon, synowie Geddel,"
+        },
+        {
+          "number": 57,
+          "text": "Synowie Saphatya, synowie Hatyl, synowie Phochereth, którzy byli z Asebaim, synowie Ami,"
+        },
+        {
+          "number": 58,
+          "text": "Wszystkich Nathynejczyków i synów sług Salomonowych trzysta dziewięćdziesiąt dwa."
+        },
+        {
+          "number": 59,
+          "text": "A ci, którzy wyszli z Thelmala, Thelharsa, Cherub i Adon i Emer: i nie mogli pokazać domów ojców swoich i nasienia swego, jeźli z Izraela byli."
+        },
+        {
+          "number": 60,
+          "text": "Synów Dalaja, synów Tobia, synów Nekoda, sześćset pięćdziesiąt dwa."
+        },
+        {
+          "number": 61,
+          "text": "A synów kapłańskich: Synowie Hobia, synowie Akkos, synowie Bersellaj, który pojął z córek Bersellaj, Galaadczyka, żonę, i przezwano go ich imieniem."
+        },
+        {
+          "number": 62,
+          "text": "Ci szukali pisma rodu swego i nie naleźli: i wyrzuceni są z kapłaństwa."
+        },
+        {
+          "number": 63,
+          "text": "I rzekł im Athersata, aby nie jedli z świętego świętych, ażby powstał kapłan uczony i doskonały."
+        },
+        {
+          "number": 64,
+          "text": "Wszystko mnóstwo jako jeden czterdzieści dwa tysiące trzysta sześćdziesiąt:"
+        },
+        {
+          "number": 65,
+          "text": "Oprócz sług ich i służebnic, których było siedm tysięcy trzysta trzydzieści siedm: a między nimi śpiewaków i śpiewaczek dwieście."
+        },
+        {
+          "number": 66,
+          "text": "Koni ich siedmset trzydzieści sześć: mułów ich dwieście czterdzieści pięć:"
+        },
+        {
+          "number": 67,
+          "text": "Wielbłądów ich czterysta trzydzieści pięć: osłów ich sześć tysięcy siedmset dwadzieścia."
+        },
+        {
+          "number": 68,
+          "text": "A z przedniejszych ojców, gdy wchodzili do kościoła Pańskiego, który jest w Jeruzalem, dobrowolnie ofiarowali na dom Boży, aby go postawili na miejscu jego."
+        },
+        {
+          "number": 69,
+          "text": "Według przemożenia swego dali nakład na budowanie: złota czerwonych złotych sześćdziesiąt tysięcy i tysiąc, śrebra grzywien pięć tysięcy i sto szat kapłańskich."
+        },
+        {
+          "number": 70,
+          "text": "Mieszkali tedy kapłani i Lewitowie i z ludu i śpiewacy i wrotni i Nathynejszycy w mieściech swych, i wszystek Izrael w mieściech swych."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Ezdrasza_3",
+      "verses": [
+        {
+          "number": 1,
+          "text": "I już był przyszedł miesiąc siódmy, a synowie Izraelowi byli w mieściech swoich: zgromadził się tedy wszystek lud jako mąż jeden do Jeruzalem."
+        },
+        {
+          "number": 2,
+          "text": "I powstał Jozue, syn Josedek, i bracia jego kapłani, i Zorobabel, syn Salathiel, i bracia jego, i zbudowali ołtarz Bogu IrzaelowemuIzraelowemu, aby na nim ofiarowali całopalenia, jako napisano w zakonie Mojżesza, męża Bożego."
+        },
+        {
+          "number": 3,
+          "text": "A ołtarz Boży postawili na podstawkach jego, gdy ich narodowie okolicznych ziem odstraszali, i ofiarowali na nim całopalenie Panu po ranu i w wieczór."
+        },
+        {
+          "number": 4,
+          "text": "I uczynili święto kuczek, jako napisano jest, i całopalenie na każdy dzień porządnie według przykazania, robotę dnia w dzień jéj."
+        },
+        {
+          "number": 5,
+          "text": "A potem całopalenie ustawiczne, tak w pierwsze dni miesiąca, jako i w wszystkie uroczyste święta Pańskie, które były poświęcone, i we wszystkich, w których z chęci był ofiarowany dar Panu."
+        },
+        {
+          "number": 6,
+          "text": "Od pierwszego dnia miesiąca siódmego poczęli ofiarować całopalenie Panu: a kościół Boży jeszcze nie był założony."
+        },
+        {
+          "number": 7,
+          "text": "I dali pieniądze kamiennikom i murarzom, strawę téż i picie i oliwę Sydończykom i Tyryjczykom, aby prowadzili drzewo cedrowe z Libanu do morza Joppe wedle tego, jako im był Cyrus, król Perski, przykazał."
+        },
+        {
+          "number": 8,
+          "text": "A roku wtórego przyjścia ich do kościoła Bożego do Jeruzalem, miesiąca wtórego, zaczęli Zorobabel, syn Salathiel, i Jozue, syn Josedek, i inni z braci ich, kapłani i Lewitowie i wszyscy, którzy byli przyszli z poimania do Jeruzalem, i postanowili Lewity od dwudziestu lat i wyżéj, aby przynaglali robocie Pańskiéj."
+        },
+        {
+          "number": 9,
+          "text": "I stanął Jozue i synowie jego, i bracia jego, Cedmihel i synowie jego i synowie Juda, jako mąż jeden, aby przypilnowali tych, którzy robili w kościele Bożym: synowie Ilenadad i synowie ich i bracia ich Lewitowie."
+        },
+        {
+          "number": 10,
+          "text": "Gdy tedy założyli murarze kościół Pański, stanęli kapłani w ubiorze swoim z trąbami: a Lewitowie, synowie Asaph, z cymbałami, aby chwalili Boga przez ręce Dawida, króla Izraelskiego."
+        },
+        {
+          "number": 11,
+          "text": "I śpiewali pieśni i wyznawanie Panu: iż dobry, iż na wieki miłosierdzie jego nad Izraelem. Wszystek téż lud krzyczał krzykiem wielkim, chwaląc Pana z tego, iż był założon kościół Pański."
+        },
+        {
+          "number": 12,
+          "text": "Mnodzy téż z kapłanów i z Lewitów i przedniejsi z ojców i starcy, którzy widzieli kościół pierwszy, gdy był założony, i ten kościół przed oczyma swemi, płakali głosem wielkim, a nmodzymnodzy krzycząc w radości głos podnosili."
+        },
+        {
+          "number": 13,
+          "text": "I nie mógł żaden poznać głosu krzyczenia weselących się i głosu płaczu ludu; albowiem lud spółecznie krzyczał głosem wielkim, i głos daleko było słyszeć."
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Ezdrasza_4",
+      "verses": [
+        {
+          "number": 1,
+          "text": "I usłyszeli nieprzyjaciele Judy i Benjamin, iż synowie poimania budowali kościół Panu, Bogu Izraelowemu;"
+        },
+        {
+          "number": 2,
+          "text": "I przystąpiwszy do Zorobabela i do przedniejszych ojców rzekli im: Niech budujemy z wami; bo tak jako i wy szukamy Boga waszego: otośmy ofiarowali ofiary odedni Asar Haddon, króla Assur, który nas tu zaprowadził."
+        },
+        {
+          "number": 3,
+          "text": "I rzekł im Zorobabel i Jozue i insi przedniejsi ojcowie Izraelscy: Nie możecie wy z nami budować domu Bogu naszemu, ale my tylko sami zbudujemy Panu, Bogu naszemu, jako nam rozkazał Cyrus, król Perski."
+        },
+        {
+          "number": 4,
+          "text": "Stało się tedy, że lud ziemie przeszkadzał rękom ludu Judzkiego i przekazał im w budowaniu,"
+        },
+        {
+          "number": 5,
+          "text": "I najęli przeciwko nim rajce, aby rozproszyli radę ich po wszystkie dni Cyrusa, króla Perskiego, i aż do królestwa Daryusza, króla Perskiego."
+        },
+        {
+          "number": 6,
+          "text": "A za królestwa Aswera, na początku królestwa jego, napisali skargę na obywatele Judzkie i Jerozolimskie."
+        },
+        {
+          "number": 7,
+          "text": "I za dni Artaxerxa pisał Beselam Mithrydat i Tabeel i inni, którzy w radzie ich byli, do Artaxerxa, króla Perskiego, a list skargi napisany był po Syryjsku, i czytano go językiem Syryjskim."
+        },
+        {
+          "number": 8,
+          "text": "Reum Beelteem i Samsaj sarz napisali list jeden o Jeruzalem do Artaxerxa króla takowy:"
+        },
+        {
+          "number": 9,
+          "text": "Reum Beelteem i Samsaj pisarz i inne rady ich: Dynejczycy, Apharsathachowie, Terphalczycy, Apharsejczycy, Erchuejczycy, Babilończycy, Susanechowie, Dyewiowie i Elamitowie,"
+        },
+        {
+          "number": 10,
+          "text": "I inni z narodów, które przeniósł Asenaphar wielki i sławny, i kazał im mieszkać w mieściech Samaryjskich i w innych zarzecznych krainach w pokoju."
+        },
+        {
+          "number": 11,
+          "text": "(Ten jest wypis listu, który posłali do niego): Artaxerxowi królowi słudzy twoi, mężowie, którzy za rzeką, zdrowia życzą:"
+        },
+        {
+          "number": 12,
+          "text": "Niech będzie wiadomo królowi, iż Żydowie, którzy wyszli od ciebie do nas, przyszli do Jeruzalem, miasta odpornego i złego, które budują wywodząc mury jego i ściany oprawując."
+        },
+        {
+          "number": 13,
+          "text": "Teraz tedy niech będzie wiadomo królowi, iż, jeźli ono miasto będzie zbudowane, a mury jego naprawione będą: podatku i cła i dochodów rocznych nie dadzą, i aż do królów ta szkoda przyjdzie."
+        },
+        {
+          "number": 14,
+          "text": "A my pamiętając na sól, którąśmy na pałacu królewskim jadali, a iż patrząc na królewskie urazy, za rzecz niesłuszną mamy, przetośmy posłali i oznajmili królowi:"
+        },
+        {
+          "number": 15,
+          "text": "Abyś poszukał w księgach historyi ojców twoich, a najdziesz napisano w kronikach i dowiesz się, iż ono miasto miasto odporne jest a królom i ziemiom szkodliwe, i wojny powstają w niem od dawnych dni: przeco i miasto same zburzone jest."
+        },
+        {
+          "number": 16,
+          "text": "Opowiadamy królowi, iż, jeźli ono miasto będzie zbudowane a mury jego będą naprawione, dzierżawy za rzeką mieć nie będziesz."
+        },
+        {
+          "number": 17,
+          "text": "Słowo posłał król do Reum Beelteem i Samsaj pisarza i do innych, którzy w radzie ich byli, obywatelów Samaryi, i innym za rzeką, życząc zdrowia i pokoju:"
+        },
+        {
+          "number": 18,
+          "text": "Skarga, którąście posłali do nas, jawnie jest czytana przedemną."
+        },
+        {
+          "number": 19,
+          "text": "I rozkazałem, i szukano i naleziono, że to miasto zdawna królom się przeciwia, i rozruchy i walki w niem powstawają."
+        },
+        {
+          "number": 20,
+          "text": "Bo i królowie mocni byli w Jeruzalem, którzy i panowali nad wszelką krainą, która jest za rzeką: dań téż, cła i dochody bierali."
+        },
+        {
+          "number": 21,
+          "text": "Przetóż teraz słuchajcie wyroku: Brońcie tamtym mężom, aby tamto miasto nie było budowane, aż jeźliby podobno odemnie rozkazano było."
+        },
+        {
+          "number": 22,
+          "text": "Patrzcie, abyście tego niedbale nie czynili, i złe przeciw królom polekku nie rosło."
+        },
+        {
+          "number": 23,
+          "text": "A tak kopia wyroku Artaxerxa króla czytana jest przed Reumem Beelteem i Samsaj pisarzem i radą ich: i jechali wskok do Jeruzalem do Żydów i zabronili im ramieniem i mocą."
+        },
+        {
+          "number": 24,
+          "text": "Zaniechana jest tedy robota domu Pańskiego w Jeruzalem, i nie budowano aż do roku wtórego królestwa Daryusza, króla Perskiego."
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Ezdrasza_5",
+      "verses": [
+        {
+          "number": 1,
+          "text": "A Aggeusz prorok i Zacharyasz, syn Addo, prorokowali prorukując do Żydów, którzy byli w Żydowstwie i w Jeruzalem w imię Boga Izraelskiego."
+        },
+        {
+          "number": 2,
+          "text": "Tedy powstali Zorobabel, syn Salathiel, i Jozue, syn Josedek, i poczęli budować kościół Boży w Jeruzalem: a z nimi prorocy Boży pomagający im."
+        },
+        {
+          "number": 3,
+          "text": "W ten czas przyszedł do nich Thathanaj, który był książęciem za rzeką, i Stharbuzanaj i radzce ich i tak im mówili: Kto wam radził, żebyście ten dom budowali i mury jego naprawowali?"
+        },
+        {
+          "number": 4,
+          "text": "Na cośmy im odpowiedzieli, co za imiona były ludzi, którzy byli przyczyną onego budowania."
+        },
+        {
+          "number": 5,
+          "text": "A oko Boga ich było nad starszymi Żydowskimi, i zahamować ich nie mogli. I zdało sie, aby rzecz do Daryusza była odniesiona, a na ten czas aby dosyć uczynili przeciw onemu oskarżeniu."
+        },
+        {
+          "number": 6,
+          "text": "Kopia listu, który posłał Thathanaj, książę krainy za rzeką, i Stharbuzanaj i radzce jego Arphasachczyczy, którzy byli za rzeką, do Daryusza króla."
+        },
+        {
+          "number": 7,
+          "text": "Mowa, którą, mu byli posłali, tak była napisana: Daryuszowi królowi pokój wszelaki."
+        },
+        {
+          "number": 8,
+          "text": "Niech będzie wiadomo królowi, żeśmy jeździli do żydowskiéj krainy, do domu Boga wielkiego, który z kamienia nieciosanego budują, i drzewo w ściany kładą: a tę robotę pilno wywodzą, i rośnie w ręku ich."
+        },
+        {
+          "number": 9,
+          "text": "A tak pytaliśmy starszych onych i takeśmy im rzekli: Kto wam dał moc, abyście ten dom budowali i mury te naprawowali?"
+        },
+        {
+          "number": 10,
+          "text": "Ale i imion ich pytaliśmy od nich, abyśmyć oznajmili: i wypisaliśmy imiona tych mężów, którzy są między nimi przedniejsi."
+        },
+        {
+          "number": 11,
+          "text": "A oni nam odpowiedzieli temi słowy: My jesteśmy słudzy Boga nieba i ziemie, i budujemy kościół, który był zbudowany przed tą wielą lat, i który był król Izraelski wielki zbudował i wywiódł."
+        },
+        {
+          "number": 12,
+          "text": "A gdy ojcowie nasi wzruszyli ku gniewu Boga niebieskiego, dał je w ręce Nabuchodonozora, króla Babilońskiego, Chaldejczyka, dom téż ten zburzył i lud jego przeniósł do Babilonu."
+        },
+        {
+          "number": 13,
+          "text": "A pierwszego roku Cyrusa, króla Babilońskiego, Cyrus król dał wyrok, aby ten dom Boży zbudowano."
+        },
+        {
+          "number": 14,
+          "text": "Bo i naczynia kościoła Bożego złote i śrebrne, które był Nabuchodonozor wybrał z kościoła, który był w Jeruzalem, i zaniósł je był do zboru Babilońskiego, wyniósł król Cyrus ze zboru Babilońskiego, i dano je niejakiemu Sassabasarowi, którego téż książęciem postanowił."
+        },
+        {
+          "number": 15,
+          "text": "I rzekł mu: Weźmij te naczynia, a idź a połóż je w kościele, który jest w Jeruzalem, a dom Boży niech będzie zbudowany na miejscu swojem."
+        },
+        {
+          "number": 16,
+          "text": "Na ten czas tedy on Sassabasar przyszedł i założył fundamenty kościoła Bożego w Jeruzalem, i od onego czasu aż dotąd buduje się a jeszcze nie jest skończony."
+        },
+        {
+          "number": 17,
+          "text": "Teraz tedy, jeźli się zda rzecz dobra królowi, niech szukają w Bibliothece królewskiéj, która jest w Babilonie, jeźli król Cyrus rozkazał budować dom Boży w Jeruzalem, a wolą królewską w téj rzeczy niechaj do nas pośle."
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Ezdrasza_6",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Daryusz tedy król rozkazał, i szukali w Bibliothece ksiąg, które były chowane w Babilonie."
+        },
+        {
+          "number": 2,
+          "text": "I naleziono w Ekbatanie, który jest zamek w Medeńskiéj krainie, księgi jedne, i taka pamięć była w nich napisana."
+        },
+        {
+          "number": 3,
+          "text": "Roku pierwszego Cyrusa króla, Cyrus król dał wyrok, aby dom Boży był zbudowan, który jest w Jeruzalem, na miejscu, gdzieby ofiary ofiarowano, a żeby założyli grunty, któreby znosiły wysz sześćdziesiąt łokci, a szerz sześćdziesiąt łokci."
+        },
+        {
+          "number": 4,
+          "text": "Trzy rzędy z kamieni nieciosanych, i takież rzędy z drzewa nowego: a nakłady z domu królewskiego dane będą."
+        },
+        {
+          "number": 5,
+          "text": "Ale i naczynia kościoła Bożego złote i śrebrne, które był Nabuchodonozor wyniósł z kościoła Jerozolimskiego a zaniósł je był do Babilonu, niech wrócone będą i odniesione do kościoła do Jeruzalem na miejsce swoje, które téż położone są w kościele Bożym."
+        },
+        {
+          "number": 6,
+          "text": "Teraz tedy Thathanaj, książę krainy, która jest za rzeką Stharbuzanaj, i rajce wasi Apharsacheowie, którzyście za rzeką, odstąpcie od nich daleko."
+        },
+        {
+          "number": 7,
+          "text": "A dopuśćcie, żeby był budowan kościół tam ten Boży od książęcia Żydów i od starszych ich, aby dom Boży tam ten zbudowali na swem miejscu."
+        },
+        {
+          "number": 8,
+          "text": "Alem i ja rozkazał, coby mieli czynić tam ci starsi Żydowscy, aby był zbudowan dom Boży, to jest, aby z skrzynie królewskiéj, to jest z poborów, które dawają z krainy za rzeką, pilnie nakłady dawano tym mężom, aby się robocie nie przeszkadzało."
+        },
+        {
+          "number": 9,
+          "text": "A będzieli potrzeba, i cielce i jagnięta i koźlęta na całopalenie Bogu niebieskiemu, zboże, sól, wino i oliwę według porządku kapłanów, którzy są w Jeruzalem, niech im dawają na każdy dzień, aby w czem skarga nie była."
+        },
+        {
+          "number": 10,
+          "text": "A niechaj ofiarują ofiary Bogu niebieskiemu, i niech proszą za zdrowie królewskie i synów jego."
+        },
+        {
+          "number": 11,
+          "text": "Odemnie tedy dekret jest uczyniony, aby każdy człowiek, któryby odmienił to rozkazanie, było wzięto drzewo z domu jego i było wystawione, i był przybit na niem, a dom jego aby był pospolity."
+        },
+        {
+          "number": 12,
+          "text": "A Bóg, który chciał, aby tam mieszkało imię swoje, niech rozproszy wszystkie królestwa i lud, któryby ściągnął rękę swoję, aby się sprzeciwił a rozwalił ten tam dom Boży, który jest w Jeruzalem. Ja, Daryusz, postanowiłem wyrok, który chcę, aby się z pilnością wypełnił."
+        },
+        {
+          "number": 13,
+          "text": "Thathanaj tedy, książę krainy za rzeką, i Stharbuzanaj i rada jego wedle tego, jako był rozkazał Daryusz król, z pilnością tak wykonali."
+        },
+        {
+          "number": 14,
+          "text": "A starsi żydowscy budowali, i powodziło się im według proroctwa Aggeusza proroka i Zacharyasza, syna Addo: i budowali i wystawili za rozkazaniem Boga Izraelowego i za rozkazaniem Cyrusa i Daryusza i Artaxerxa, królów Perskich."
+        },
+        {
+          "number": 15,
+          "text": "I dokonali tego domu Bożego aż do trzeciego dnia miesiąca Adar, który jest rok szósty królestwa Daryusza króla."
+        },
+        {
+          "number": 16,
+          "text": "I uczynili synowie Izraelowie, kapłani i Lewitowie i inni z synów przeprowadzenia poświącanie domu Bożego z radością."
+        },
+        {
+          "number": 17,
+          "text": "I ofiarowali na poświęcenie domu Bożego cielców sto, baranów dwieście, baranków czterysta, kozłów od kóz za grzech wszystkiego Izraela dwanaście, według liczby pokoleń Izraelskich."
+        },
+        {
+          "number": 18,
+          "text": "I postanowili kapłany w rzędziech ich i Lewity w przemianach swoich nad służbą Bożą w Jeruzalem, jako napisano w księgach Mojżeszowych."
+        },
+        {
+          "number": 19,
+          "text": "I uczynili synowie Izraelscy przeprowadzenia Paschę czternastego dnia księżyca pierwszego."
+        },
+        {
+          "number": 20,
+          "text": "Bo się byli oczyścili kapłani i Lewitowie jako jeden: wszyscy czyści na ofiarowanie Paschy wszystkim synom przeprowadzenia i braci swéj kapłanom i sobie."
+        },
+        {
+          "number": 21,
+          "text": "I jedli synowie Izraelscy, którzy się byli wrócili z przeprowadzenia, i wszyscy, którzy się byli odłączyli od plugastwa narodów ziemskich ku nim, żeby szukali Pana, Boga Izraelskiego."
+        },
+        {
+          "number": 22,
+          "text": "I uczynili święto przaśników przez siedm dni z weselem; bo je był uweselił Pan i obrócił był serce króla Assur ku nim, aby pomagał rękom ich w budowaniu domu Pana, Boga Izraelowego."
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Ezdrasza_7",
+      "verses": [
+        {
+          "number": 1,
+          "text": "A po tych słowiech za królestwa Artaxerxa, króla Perskiego, Ezdrasz, syn Saraji, syna Azaryasza, syna Helcyasza,"
+        },
+        {
+          "number": 2,
+          "text": "Syna Sellum, syna Sadok, syna Achitob,"
+        },
+        {
+          "number": 3,
+          "text": "Syna Amaryasza, syna Azaryasza, syna Marajoth,"
+        },
+        {
+          "number": 4,
+          "text": "Syna Zarahyasza, syna Ozy, syna Bokcy,"
+        },
+        {
+          "number": 5,
+          "text": "Syna Abisue, syna Phinees, syna Eleazar, syna Aarona, kapłana od początku:"
+        },
+        {
+          "number": 6,
+          "text": "Ten Ezdrasz wyszedł z Babilonu, a ten pisarz prędki w zakonie Mojżeszowym, który dał Pan Bóg Izraelowi: i dał mu król według ręki Pana, Boga jego, nad nim wszystkę prośbę jego."
+        },
+        {
+          "number": 7,
+          "text": "I wyszło z synów Izrael i z synów kapłańskich i z synów Lewitskich i z śpiewaków i z odźwiernych i z Nathynejczyków do Jeruzalem, roku siódmego Artaxerxa króla."
+        },
+        {
+          "number": 8,
+          "text": "I przyszli do Jeruzalem miesiąca piątego, ten jest siódmy rok królewski."
+        },
+        {
+          "number": 9,
+          "text": "Bo pierwszego dnia miesiąca pierwszego począł wychodzić z Babilonu, a pierwszego dnia miesiąca piątego przyszedł do Jeruzalem, według ręki Boga jego dobréj nad nim."
+        },
+        {
+          "number": 10,
+          "text": "Bo Ezdrasz przygotował serce swe, aby szukał zakonu Pańskiego i czynił i nauczał w Izraelu przykazania i sądu."
+        },
+        {
+          "number": 11,
+          "text": "A wypis listu wyroku ten jest, który dał król Artaxerxes Ezdraszowi kapłanowi, pisarzowi uczonemu w mowiech i w przykazaniach Pańskich i w Ceremoniach jego w Izraelu:"
+        },
+        {
+          "number": 12,
+          "text": "Artaxerxes, król królów, Ezdraszowi kapłanowi, pisarzowi prawa Boga niebieskiego wielce uczonemu, zdrowia."
+        },
+        {
+          "number": 13,
+          "text": "Odemnie dekret wyszedł, aby, komukolwiekby się podobało w królestwie mojem z ludu Izraelskiego i z kapłanów jego i z Lewitów iść do Jeruzalem, szedł z tobą."
+        },
+        {
+          "number": 14,
+          "text": "Albowiemeś posłan od króla i od siedmi radnych panów jego, abyś nawiedził Żydowską ziemię i Jeruzalem w zakonie Boga twego, który jest w ręku twoich:"
+        },
+        {
+          "number": 15,
+          "text": "A żebyś niósł śrebro i złoto, które król i rada jego dobrowolnie ofiarowali Bogu Izraelowemu, którego przybytek jest w Jeruzalem,"
+        },
+        {
+          "number": 16,
+          "text": "I wszystko śrebro i złoto, którebyśkolwiek nalazł w wszystkiéj ziemi Babilońskiéj, i lud by chciał ofiarować, i z kapłanów coby dobrowolnie otiarowali domowi Boga swego, który jest w Jeruzalem."
+        },
+        {
+          "number": 17,
+          "text": "Przespiecznie weźmij i z tych pieniędzy z pilnością nakup cielców, baranów, baranków i obiat i mokrych ofiar ich a ofiaruj je na ołtarzu kościoła Boga waszego, który jest w Jeruzalem."
+        },
+        {
+          "number": 18,
+          "text": "Ale i jeźli co tobie i braci twéj będzie się podobało z ostatka śrebra i złota uczynić według woli Boga waszego, czyńcie."
+        },
+        {
+          "number": 19,
+          "text": "Naczynie téż, które tobie dają dla służby domu Boga twego, oddaj przed oblicznością Boga w Jeruzalem."
+        },
+        {
+          "number": 20,
+          "text": "Ale i inne rzeczy, którychby było potrzeba w dom Boga twego, ilekolwiek będzie potrzeba, abyś nałożył, będzie dano z skarbu i pieniędzy królewskich"
+        },
+        {
+          "number": 21,
+          "text": "I odemnie. Ja, król Artaxerxes, postanowiłem i dałem dekret wszystkim stróżom skrzyni pospolitéj, którzy są za rzeką, czegokolwiek od was żądać będzie Ezdrasz kapłan, pisarz zakonu Boga niebieskiego, abyście bez omieszkania dali,"
+        },
+        {
+          "number": 22,
+          "text": "Aż do sta talentów śrebra i aż do sta korcy pszenice i aż do sta batów wina i do sta batów oliwy, a soli bez miary."
+        },
+        {
+          "number": 23,
+          "text": "Wszystko, co należy do obrzędu Boga niebieskiego, niech będzie oddano z pilnością w domu Boga niebieskiego: by się snadź nie rozgniewał na królestwo króla i synów jego."
+        },
+        {
+          "number": 24,
+          "text": "Wam téż oznajmujemy o wszystkich kapłaniech i Lewitach i śpiewakach i odźwiernych, Nathynejczykach i sługach domu Boga tego, żebyście nie mieli mocy cła, dani i rocznego obroku wkładać na nie."
+        },
+        {
+          "number": 25,
+          "text": "A ty, Ezdraszu, według mądrości Boga twego, która jest w ręce twojéj, postanów sędzię i urzędniki, żeby sądzili wszystkiemu ludowi, który jest za rzeką, to jest, tym, którzy znają zakon Boga twego: ale i nieumiejętne bezpiecznie nauczajcie."
+        },
+        {
+          "number": 26,
+          "text": "A wszelki, któryby nie pełnił zakonu Boga twego i zakonu królewskiego pilnie, będzie o nim sąd albo na śmierć, albo na wygnanie, albo na skaranie na majętności jego, albo więc na więzienie."
+        },
+        {
+          "number": 27,
+          "text": "Błogosławiony Pan, Bóg ojców naszych, który to dał w serce królewskie, aby wsławił dom Pański, który jest w Jeruzalem,"
+        },
+        {
+          "number": 28,
+          "text": "A ku mnie skłonił miłosierdzie swe przed królem i radą jego i wszystkimi możnymi książęty królewskimi. A ja umocniony ręką Pana, Boga mego, która była nademną, zgromadziłem z Izraela przedniejsze, którzyby szli zemną."
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Ezdrasza_8",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Ci tedy są przedniejsi domów i ród onych, którzy wyszli zemną za królowania Artaxerxa króla z Babilonu."
+        },
+        {
+          "number": 2,
+          "text": "Z synów Phinees Gerson: z synów Ithamar Daniel: z synów Dawidowych Hattus."
+        },
+        {
+          "number": 3,
+          "text": "Z synów Sechemiaszowych, synów Phares, Zacharyasz: a z nim naliczono mężów sto pięćdziesiąt."
+        },
+        {
+          "number": 4,
+          "text": "Z synów Phahath Moab, Elioenaj, syn Zarehet, a z nim dwieście mężów."
+        },
+        {
+          "number": 5,
+          "text": "Z synów Sechemiaszowych syn Ezechiel, a z nim trzysta mężów."
+        },
+        {
+          "number": 6,
+          "text": "Z synów Adan Abed, syn Jonathan, a z nim pięćdziesiąt mężów."
+        },
+        {
+          "number": 7,
+          "text": "Z synów Alam Isajasz, syn Athaliaszów, a z nim siedmdziesiąt mężów."
+        },
+        {
+          "number": 8,
+          "text": "Z synów Saphatyaszowych Zebedya, syn Michael, a z nim ośmdziesiąt mężów."
+        },
+        {
+          "number": 9,
+          "text": "Z synów Joab Obedya, syn Jahiel, a z nim dwieście ośmnaście mężów."
+        },
+        {
+          "number": 10,
+          "text": "Z synów Selomith syn Josphiów, a z nim sto sześćdziesiąt mężów."
+        },
+        {
+          "number": 11,
+          "text": "Z synów Bebaj Zacharyasz, syn Bebaj, a z nim dwadzieścia ośm mężów."
+        },
+        {
+          "number": 12,
+          "text": "Z synów Azgad Johanan, syn Akcetan, a z nim sto i dziesięć mężów."
+        },
+        {
+          "number": 13,
+          "text": "Z synów Adonikam, którzy byli ostateczni, a te imiona ich: Elipheleth i Jehiel i Samajasz, a z nimi sześćdziesiąt mężów."
+        },
+        {
+          "number": 14,
+          "text": "Z synów Begwi Uthaj i Zachur, a z nimi siedmdziesiąt mężów."
+        },
+        {
+          "number": 15,
+          "text": "A zgromadziłem je do rzeki, która wchodzi do Ahawa, i mieszkaliśmy tam trzy dni: i szukałem między ludem i kapłany synów Lewi, i nie nalazłem tam."
+        },
+        {
+          "number": 16,
+          "text": "A tak posłałem Eliezer i Aryel i Semejasza i Elnathan i Jaryb i drugiego Elnathan i Nathan i Zacharyasza i Mosollam, przełożone, i Jojaryb i Elnathan, mędrce."
+        },
+        {
+          "number": 17,
+          "text": "I posłałem ich do Eddo, który jest pierwszy na miejscu Chasphii, i włożyłem w usta ich słowa, któreby mówili do Eddo i do braci jego Nathynejczyków, na miejscu Chasphii, aby nam przywiedli sługi domu Boga naszego."
+        },
+        {
+          "number": 18,
+          "text": "I przywiedli nam przez rękę Boga naszego dobrą nad nami męża nauczonego, z synów Moholi, syna Lewi, syna Izrael, i Sarabiasza i syny jego i braci jego ośmnaście,"
+        },
+        {
+          "number": 19,
+          "text": "I Hasabiasza a z nim Isajasza, synów Merary, i braci jego i synów jego dwadzieścia."
+        },
+        {
+          "number": 20,
+          "text": "I z Nathynejczyków, które był dał Dawid i książęta na posługi Lewitom, Nathynejczyków dwieście dwadzieścia. Wszyscy ci imiony swemi byli mianowani."
+        },
+        {
+          "number": 21,
+          "text": "I zapowiedziałem tam post u rzeki Ahawa, abyśmy się dręczyli przed Panem, Bogiem naszym, a prosili od niego drogi prostéj sobie i synom naszym i wszystkiéj majętności naszéj."
+        },
+        {
+          "number": 22,
+          "text": "Bom się wstydał prosić u króla pomocy i jezdnych, którzyby nas bronili od nieprzyjaciela na drodze; bośmy mówili królowi: Ręka Boga naszego jest nad wszystkimi, którzy go szukają w dobroci: a panowanie jego i moc jego i zapalczywość nad wszystkimi, którzy go opuszczają."
+        },
+        {
+          "number": 23,
+          "text": "I pościliśmy i prosiliśmy Boga naszego o to, i powiodło się nam szczęśliwie."
+        },
+        {
+          "number": 24,
+          "text": "I odłączyłem z książąt kapłańskich dwanaście: Sarabiasza i Hasabiasza, a z nimi z braci ich dziesięć."
+        },
+        {
+          "number": 25,
+          "text": "I odważyłem im śrebro i złoto i naczynie poświęcone domu Boga naszego, które był ofiarował król i rady jego i książęta jego i wszystek Izrael z tych, którzy się byli naleźli."
+        },
+        {
+          "number": 26,
+          "text": "I odważyłem w ich ręku śrebra talentów sześćset pięćdziesiąt, i sto naczynia śrebrnego, złota sto talentów."
+        },
+        {
+          "number": 27,
+          "text": "A czasz złotych dwadzieścia, które miały po tysiąc czerwonych złotych, a naczynia miedzi jasnéj bardzo dobréj dwoje, piękne jako złoto."
+        },
+        {
+          "number": 28,
+          "text": "I rzekłem im: Wyście święci Pańscy, i naczynie święte i śrebro i złoto, które dobrowolnie jest ofiarowane Panu, Bogu ojców waszych."
+        },
+        {
+          "number": 29,
+          "text": "Czujcież a strzeżcie, aż odważycie przed książęty kapłanów i Lewitów i przed książęty domów Izraelskich w Jeruzalem do skarbu domu Pańskiego."
+        },
+        {
+          "number": 30,
+          "text": "I wzięli kapłani i Lewitowie wagę śrebra i złota i naczynia, żeby odnieśli do Jeruzalem do domu Boga naszego."
+        },
+        {
+          "number": 31,
+          "text": "A tak ruszyliśmy się od rzeki Ahawa dwunastego dnia księżyca pierwszego, abyśmy szli do Jeruzalem: a ręka Boga naszego była nad nami, i wybawił nas z ręki nieprzyjaciela i czyhającego na drodze."
+        },
+        {
+          "number": 32,
+          "text": "I przyszliśmy do Jeruzalem i mieszkaliśmy tam trzy dni."
+        },
+        {
+          "number": 33,
+          "text": "A czwartego dnia odważono śrebro i złoto i naczynie w domu Boga naszego przez rękę Meremoth, syna Uryasza, kapłana, a z nim Eleazar, syn Phineesów, a z nimi Jozabed, syn Jozuego, i Noadaja, syn Bennoi, Lewitowie:"
+        },
+        {
+          "number": 34,
+          "text": "Według liczby i wagi wszyskich rzeczy: i spisano wszystkę wagę czasu onego."
+        },
+        {
+          "number": 35,
+          "text": "Ale i którzy byli przyszli z poimania, synowie przeprowadzenia, ofiarowali całopalenia Bogu Izraelowemu, cielców dwanaście za wszystek lud Izraelski, baranów dziewięćdziesiąt sześć, baranków siedmdziesiąt siedm, kozłów za grzech dwanaście: wszystko na całopalenie Panu,"
+        },
+        {
+          "number": 36,
+          "text": "A wyroki królewskie oddali panom, którzy byli od oczu królewskich, i książętom za rzeką: i wywyższyli lud i dom Boży."
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Ezdrasza_9",
+      "verses": [
+        {
+          "number": 1,
+          "text": "A gdy się to odprawiło, przystąpili do mnie przełożeni, mówiąc: Nie odłączył się lud Izraelski, kapłani i Lewitowie, od narodów ziem i od obrzydłości ich, to jest od Chananejczyka i Hethejczyka i Pherezejczyka i Jebuzejczyka i Ammonitów i Moabitów i Egiptyanów i Amorrejczyków."
+        },
+        {
+          "number": 2,
+          "text": "Bo zpójmowali córki ich sobie i synom swym: i pomieszali nasienie święte z ludźmi ziem, ręka téż książąt i urzędu w tem przestępstwie pierwsza była."
+        },
+        {
+          "number": 3,
+          "text": "A gdym usłyszał tę rzecz, rozdarłem płaszcz mój i suknią i rwałem włosy na głowie mojéj i brodzie i siedziałem smutny."
+        },
+        {
+          "number": 4,
+          "text": "I zeszli się do mnie wszyscy, którzy się bali słowa Boga Izraelowego, dla przestępstwa tych, którzy się byli z niewoli wrócili: a jam siedział smutny aż do ofiary wieczornéj."
+        },
+        {
+          "number": 5,
+          "text": "A w ofiarę wieczorną wstałem z utrapienia mego, a rozdarłszy płaszcz i suknią, poklęknąłem na kolana moje i rozciągnąłem ręce swe ku Panu, Bogu memu,"
+        },
+        {
+          "number": 6,
+          "text": "I rzekłem: Boże mój, wstydci mię a sromam się podnieść oblicze moje do ciebie; bo nieprawości nasze rozmnożyły się nad głowę naszę, i grzechy nasze urosły aż do nieba:"
+        },
+        {
+          "number": 7,
+          "text": "Ode dni ojców naszych: lecz i my sami zgrzeszyliśmy ciężko aż do dnia tego: a przez nieprawości nasze wydaniśmy sami i królowie nasi i kapłani nasi w ręce królów ziemskich i pod miecz i w niewolą i na zawstydzenie twarzy, jako i dnia tego."
+        },
+        {
+          "number": 8,
+          "text": "A teraz jakoby trochę i na mały czas stała się prośba nasza u Pana, Boga naszego, żeby nam zostawiono ostatek, i dany był kołek na miejscu jego świętem, i oświecił oczy nasze Bóg nasz a dał nam trochę żywota w niewolstwie naszem."
+        },
+        {
+          "number": 9,
+          "text": "Bośmy niewolnicy, a w niewoli naszéj nie opuścił nas Bóg nasz, ale nakłonił na nas miłosierdzie przed królem Perskim, aby nam dał żywot, i wywyższył dom Boga naszego i zbudował spustoszenia jego i dał nam płot w Judzie i w Jeruzalem."
+        },
+        {
+          "number": 10,
+          "text": "A teraz co rzeczemy, Boże nasz, potem? bośmy opuścili przykazania twoje,"
+        },
+        {
+          "number": 11,
+          "text": "Któreś rozkazał w ręce sług twoich proroków, mówiąc: Ziemia, do któréj wy wchodzicie, abyście ją posiedli, ziemia plugawa jest wedle plugastwa narodów i inszych ziem, i obrzydłości onych, którzy ją napełnili od brzegu aż do brzegu w splugawieniu swem."
+        },
+        {
+          "number": 12,
+          "text": "Teraz tedy córek waszych nie dajcie synom ich i córek ich nie bierzcie synom waszym i nie szukajcie pokoju ich i szczęścia ich aż do wieku: abyście byli umocnieni i pożywali dóbr ziemie, żebyście dziedzice mieli syny wasze aż na wieki."
+        },
+        {
+          "number": 13,
+          "text": "A po wszystkiem, co przyszło na nas dla uczynków naszych złych i dla grzechu naszego wielkiego, żeś ty, Boże nasz, wybawił nas z nieprawości naszéj i dałeś nam zbawienie jako jest dziś:"
+        },
+        {
+          "number": 14,
+          "text": "Abyśmy się nie wracali i nie gwałcili przykazania twego i nie wstępowali w małżeństwa z narody tych obrzydłości. Izaliś się rozgniewał na nas aż do zginienia, żebyś nam nie zostawił ostatków na wybawienie?"
+        },
+        {
+          "number": 15,
+          "text": "Panie, Boże Izraelów! tyś jest sprawiedliwy: żeśmy zostali, którzybyśmy byli wybawieni, jako dnia tego. Otośmy przed tobą w przewinieniu naszem; bo nie możemy się ostać przed tobą dla tego."
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Ezdrasza_10",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Tak tedy gdy się modlił Ezdrasz i gdy wzywał płacząc i leżał przed kościołem Bożym, zebrało się do niego z Izraelczyków zgromadzenie bardzo wielkie mężów i niewiast i dzieci, i płakał lud płaczem wielkim."
+        },
+        {
+          "number": 2,
+          "text": "I odpowiedział Secheniasz, syn Jehiel, z synów Elam, i rzekł Ezdraszowi: Myśmy wystąpili przeciw Bogu naszemu i spójmowaliśmy żony obce z ludu ziemie: a teraz, jeźli jest za to pokuta w Izraelu,"
+        },
+        {
+          "number": 3,
+          "text": "Uczyńmy przymierze z Panem, Bogiem naszym, że porzucimy wszystkie żony i te, którzy z tych się urodzili, według woli Pańskiéj i tych, którzy się boją przykazania Pana, Boga naszego: niechaj będzie według zakonu."
+        },
+        {
+          "number": 4,
+          "text": "Wstańże: na cię należy stanowić, a my będziem z tobą. Zmocnij się, a czyń."
+        },
+        {
+          "number": 5,
+          "text": "Wstał tedy Ezdrasz i poprzysiągł książęta kapłańskie i Lewitskie i wszystkiego Izraela, żeby uczynili wedle tego słowa, i przysięgli."
+        },
+        {
+          "number": 6,
+          "text": "I wstał Ezdrasz przed domem Bożym i szedł do komory Johanana, syna Eliasyb i wszedł tam, chleba nie jadł i wody nie pił; bo żałował przestępstwa tych, którzy się byli z niewoli wrócili."
+        },
+        {
+          "number": 7,
+          "text": "I puszczono głos w Judzie i w Jeruzalem do wszystkich synów przeprowadzenia, aby się zgromadzili do Jeruzalem."
+        },
+        {
+          "number": 8,
+          "text": "A wszelki, któryby nie przyszedł za trzy dni, według uradzenia książąt i starszych, będzie wzięta wszystka majętność jego, i sam będzie wyrzucon z gromady przeprowadzenia."
+        },
+        {
+          "number": 9,
+          "text": "Zeszli się tedy wszyscy mężowie Judzcy i Benjaminowi do Jeruzalem za trzy dni, ten jest miesiąc dziewiąty, dwudziestego dnia miesiąca: i siedział wszystek lud na placu domu Bożego, drżąc dla grzechu i dla dżdżów."
+        },
+        {
+          "number": 10,
+          "text": "I wstał Ezdrasz kapłan i rzekł do nich: Wyście wystąpili i spójmowaliście żony obce, abyście przydali do grzechu Izrael."
+        },
+        {
+          "number": 11,
+          "text": "A teraz dajcie wyznanie Panu, Bogu ojców waszych, a uczyńcie upodobanie jego, a odłączcie się od narodów ziemie i od żon obcych."
+        },
+        {
+          "number": 12,
+          "text": "I odpowiedziało wszystko zgromadzenie i rzekło głosem wielkim: Według słowa twego do nas, tak się niechaj stanie."
+        },
+        {
+          "number": 13,
+          "text": "Ale jednak iż lud wielki jest, i czas dżdżysty, a nie możemy stać na dworze, a sprawa nie jest jednego dnia albo dwu; (bośmy bardzo zgrzeszyli w téj mowie):"
+        },
+        {
+          "number": 14,
+          "text": "Niechaj będą postanowieni przełożeni we wszystkiem zgromadzeniu: a wszyscy w mieściech naszych, którzy pojęli żony obce, niech przychodzą na czas postanowiony, a z nimi starsi po mieście i mieście i sędziowie jego, aż się odwróci gniew Boga naszego od nas dla tego grzechu."
+        },
+        {
+          "number": 15,
+          "text": "Jonathan tedy, syn Azahel, i Jazya, syn Thekue, byli na to wysadzeni: a Mesollam i Sebethaj Lewit pomagali im."
+        },
+        {
+          "number": 16,
+          "text": "I uczynili tak synowie przeniesienia. I poszli Ezdrasz kapłan i mężowie przełożeni familii do domów ojców swoich, i wszyscy po imionach swoich: i zasiedli pierwszego dnia miesiąca dziesiątego, aby się o rzeczy pytali."
+        },
+        {
+          "number": 17,
+          "text": "I odprawili się wszyscy mężowie, którzy byli pojęli żony obce, aż do pierwszego dnia miesiąca pierwszego."
+        },
+        {
+          "number": 18,
+          "text": "I naleźli się z synów kapłańskich, którzy byli pojęli żony obce, z synów Jozue, syna Josedek, i braciéj jego Maasya i Eliezer i Jaryb i Godolia."
+        },
+        {
+          "number": 19,
+          "text": "I dali ręce swe, że mieli odrzucić żony swe, a za występ swój barana z owiec ofiarować."
+        },
+        {
+          "number": 20,
+          "text": "A z synów Emmer: Hanani i Zebedya."
+        },
+        {
+          "number": 21,
+          "text": "A z synów Harym: Maasya i Elia i Semeja i Jehiel i Ozyasz."
+        },
+        {
+          "number": 22,
+          "text": "A z synów Phashur: Elioenaj, Maasya, Ismael, Nathanael, Jozabed i Elasa."
+        },
+        {
+          "number": 23,
+          "text": "I z synów Lewitów: Jozabed, i Semei i Celaja, (ten jest Kalito), Phataja, Juda i Eliezer."
+        },
+        {
+          "number": 24,
+          "text": "A z śpiewaków: Eliasyb. A z odźwiernych: Sellum i Telem i Ury."
+        },
+        {
+          "number": 25,
+          "text": "I z Izraela, z synów Pharos: Remeja i Jezya i Melchia i Miamin i Eliezer i Melchia i Banea."
+        },
+        {
+          "number": 26,
+          "text": "A z synów Elam: Mathania, Zacharyasz i Jehiel i Abdy i Jerymoth i Elia."
+        },
+        {
+          "number": 27,
+          "text": "A z synów Zethua: Elioenaj, Eliasyb, Mathania i Jerymoth i Zabad i Azyza."
+        },
+        {
+          "number": 28,
+          "text": "A z synów Bebaj: Johanan, Hanania, Zabbaj, Athalaj."
+        },
+        {
+          "number": 29,
+          "text": "A z synów Bani: Mosollam i Melluch i Adaja, Jasub i Saal i Ramoth."
+        },
+        {
+          "number": 30,
+          "text": "A z synów Phahath Moab: Edna i Chalal, Banajas i Maasyas, Mathanias, Beseleel, Bennui i Manasse."
+        },
+        {
+          "number": 31,
+          "text": "A z synów Herem: Eliezer, Jozue, Melchias, Semejas, Symeon,"
+        },
+        {
+          "number": 32,
+          "text": "Benjamin, Maloch, Samaryas."
+        },
+        {
+          "number": 33,
+          "text": "A z synów Hasom: Mathanaj, Mathatha, Zabad, Elipheleth, Bermaj, Manasse, Semei."
+        },
+        {
+          "number": 34,
+          "text": "Z synów Bani: Maaddy, Amram i Uel,"
+        },
+        {
+          "number": 35,
+          "text": "Baneas i Badajas, Cheliau,"
+        },
+        {
+          "number": 36,
+          "text": "Wania, Marymuth i Eliasyb,"
+        },
+        {
+          "number": 37,
+          "text": "Mathanias, Mathanaj i Jasy."
+        },
+        {
+          "number": 38,
+          "text": "I Bani i Bennui i Semei,"
+        },
+        {
+          "number": 39,
+          "text": "I Salmias i Nathan i Adajas,"
+        },
+        {
+          "number": 40,
+          "text": "I Mechnedebaj, Sesaj, Saraj,"
+        },
+        {
+          "number": 41,
+          "text": "Ezrel i Selemiau, Semerya,"
+        },
+        {
+          "number": 42,
+          "text": "Sellum, Amarya, Józeph."
+        },
+        {
+          "number": 43,
+          "text": "Z synów Nebo: Jehiel, Mathathias, Zabad, Zabina, Jeddu i Joel i Banaja."
+        },
+        {
+          "number": 44,
+          "text": "Ci wszyscy wzięli byli żony obce: a były z nich niewiasty, które były porodziły syny."
+        }
+      ]
+    }
+  ]
+}

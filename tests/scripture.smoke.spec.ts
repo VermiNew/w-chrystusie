@@ -31,4 +31,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/1-kronik/26')
   await expect(page.locator('.psalm-verses')).toContainText('Braci téż jego lat dłuższych')
+
+  await page.goto('/pismo-swiete/ezdrasza/10')
+  await expect(page.locator('.psalm-verses')).toContainText('I naleźli się z synów kapłańskich')
 })
