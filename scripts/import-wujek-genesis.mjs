@@ -233,6 +233,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pierwszy_List_%C5%9Bw._Jana_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pierwszy_List_%C5%9Bw._Jana_%28ca%C5%82o%C5%9B%C4%87%29',
   },
+  '2jn': {
+    id: '2jn',
+    name: '2 List św. Jana',
+    chapterCount: 1,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'second-john-wujek.json'),
+    sourcePage: 'Biblia Wujka (1923)/Drugi List św. Jana',
+    sourceUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Drugi_List_%C5%9Bw._Jana',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Drugi_List_%C5%9Bw._Jana',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
@@ -303,7 +312,7 @@ function parseChapter(chapterNumber, html) {
 
   return {
     number: chapterNumber,
-    sourceUrl: `${book.sourceUrlPrefix}${chapterNumber}`,
+    sourceUrl: book.sourceUrl ?? `${book.sourceUrlPrefix}${chapterNumber}`,
     verses,
   }
 }
@@ -311,7 +320,7 @@ function parseChapter(chapterNumber, html) {
 async function fetchChapter(chapterNumber) {
   const parameters = new URLSearchParams({
     action: 'parse',
-    page: `${book.sourcePagePrefix}${chapterNumber}`,
+    page: book.sourcePage ?? `${book.sourcePagePrefix}${chapterNumber}`,
     prop: 'text',
     format: 'json',
     formatversion: '2',
