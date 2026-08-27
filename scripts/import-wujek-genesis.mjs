@@ -251,6 +251,15 @@ const books = {
     sourceUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Trzeci_List_%C5%9Bw._Jana',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Trzeci_List_%C5%9Bw._Jana',
   },
+  jud: {
+    id: 'jud',
+    name: 'List św. Judy',
+    chapterCount: 1,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'jude-wujek.json'),
+    sourcePage: 'Biblia Wujka (1923)/List św. Judy',
+    sourceUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_%C5%9Bw._Judy',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_%C5%9Bw._Judy',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

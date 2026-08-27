@@ -51,7 +51,7 @@ const newTestament = [
   ['3jn', '3-jana', '3 List św. Jana', 1], ['jud', 'judy', 'List św. Judy', 1], ['rev', 'apokalipsa', 'Apokalipsa św. Jana', 22],
 ] as const
 
-const availableBookIds = new Set(['gen', 'exo', 'num', 'jdg', '1ki', '1ch', 'ezr', 'psa', 'isa', 'lam', 'mat', 'mrk', 'luk', 'jhn', 'rom', 'gal', 'eph', '1th', '2th', '2ti', 'tit', 'jas', '1pe', '2pe', '1jn', '2jn', '3jn'])
+const availableBookIds = new Set(['gen', 'exo', 'num', 'jdg', '1ki', '1ch', 'ezr', 'psa', 'isa', 'lam', 'mat', 'mrk', 'luk', 'jhn', 'rom', 'gal', 'eph', '1th', '2th', '2ti', 'tit', 'jas', '1pe', '2pe', '1jn', '2jn', '3jn', 'jud'])
 
 function makeBooks(entries: readonly (readonly [string, string, string, number])[], testament: Testament) {
   return entries.map(([id, slug, name, chapterCount]) => ({
