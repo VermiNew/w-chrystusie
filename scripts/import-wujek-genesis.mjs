@@ -269,6 +269,15 @@ const books = {
     sourceUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Filemona',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Filemona',
   },
+  rev: {
+    id: 'rev',
+    name: 'Apokalipsa św. Jana',
+    chapterCount: 22,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'revelation-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Apokalipsa św. Jana ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Apokalipsa_%C5%9Bw._Jana_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Apokalipsa_%C5%9Bw._Jana',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
