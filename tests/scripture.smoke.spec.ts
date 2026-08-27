@@ -64,4 +64,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/2-piotra/3')
   await expect(page.locator('.psalm-verses')).toContainText('Lecz nowych niebios i nowéj ziemie')
+
+  await page.goto('/pismo-swiete/marka/16')
+  await expect(page.locator('.psalm-verses')).toContainText('Idąc na wszystek świat')
 })

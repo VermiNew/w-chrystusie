@@ -164,6 +164,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Drugi_List_%C5%9Bw._Piotra_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Drugi_List_%C5%9Bw._Piotra_%28ca%C5%82o%C5%9B%C4%87%29',
   },
+  mrk: {
+    id: 'mrk',
+    name: 'Ewangelia według św. Marka',
+    chapterCount: 16,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'mark-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Ewangelia wg św. Marka ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ewangelia_wg_%C5%9Bw._Marka_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ewangelia_wg_%C5%9Bw._Marka_%28ca%C5%82o%C5%9B%C4%87%29',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
