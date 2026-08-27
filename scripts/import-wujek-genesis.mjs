@@ -196,6 +196,16 @@ const books = {
       ...[2, 3, 4, 5, 6, 7, 8, 9].map((verse) => `20:19:${verse}`),
     ]),
   },
+  jhn: {
+    id: 'jhn',
+    name: 'Ewangelia według św. Jana',
+    chapterCount: 21,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'john-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Ewangelia wg św. Jana ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ewangelia_wg_%C5%9Bw._Jana_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ewangelia_wg_%C5%9Bw._Jana_%28ca%C5%82o%C5%9B%C4%87%29',
+    markerCorrections: new Set([2, 3, 4, 5, 6, 7, 8, 9].map((verse) => `4:3:${verse}`)),
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
