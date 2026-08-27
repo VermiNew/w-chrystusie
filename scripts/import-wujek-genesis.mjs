@@ -260,6 +260,15 @@ const books = {
     sourceUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_%C5%9Bw._Judy',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_%C5%9Bw._Judy',
   },
+  phm: {
+    id: 'phm',
+    name: 'List do Filemona',
+    chapterCount: 1,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'philemon-wujek.json'),
+    sourcePage: 'Biblia Wujka (1923)/List do Filemona',
+    sourceUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Filemona',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Filemona',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

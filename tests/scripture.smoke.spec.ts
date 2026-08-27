@@ -94,4 +94,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/judy/1')
   await expect(page.locator('.psalm-verses')).toContainText('miłosierdzia Pana naszego Jezusa Chrystusa')
+
+  await page.goto('/pismo-swiete/do-filemona/1')
+  await expect(page.locator('.psalm-verses')).toContainText('nie jako sługę, ale miasto sługi')
 })

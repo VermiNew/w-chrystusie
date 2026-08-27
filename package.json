@@ -43,6 +43,7 @@
     "content:second-john": "node scripts/import-wujek-genesis.mjs --book 2jn",
     "content:third-john": "node scripts/import-wujek-genesis.mjs --book 3jn",
     "content:jude": "node scripts/import-wujek-genesis.mjs --book jud",
+    "content:philemon": "node scripts/import-wujek-genesis.mjs --book phm",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },
