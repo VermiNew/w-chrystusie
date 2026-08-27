@@ -2,6 +2,7 @@ import { FaArrowLeft, FaArrowRight, FaArrowUpRightFromSquare, FaGlobe } from 're
 import { Link, useParams } from 'react-router-dom'
 import ReadingModeToggle from '../components/ReadingModeToggle'
 import { exodus } from '../data/exodus'
+import { ephesians } from '../data/ephesians'
 import { ezra } from '../data/ezra'
 import { firstKings } from '../data/firstKings'
 import { firstChronicles } from '../data/firstChronicles'
@@ -27,6 +28,7 @@ const books = {
   izajasza: isaiah,
   lamentacje: lamentations,
   'do-galatow': galatians,
+  'do-efezjan': ephesians,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {

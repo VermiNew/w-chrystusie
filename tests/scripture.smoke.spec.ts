@@ -43,4 +43,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/do-galatow/6')
   await expect(page.locator('.psalm-verses')).toContainText('Jeden drugiego brzemiona noście')
+
+  await page.goto('/pismo-swiete/do-efezjan/6')
+  await expect(page.locator('.psalm-verses')).toContainText('Obleczcie się w zupełną zbroję Bożą')
 })

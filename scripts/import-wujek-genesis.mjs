@@ -101,6 +101,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Galat%C3%B3w_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Galat%C3%B3w_%28ca%C5%82o%C5%9B%C4%87%29',
   },
+  eph: {
+    id: 'eph',
+    name: 'List do Efezjan',
+    chapterCount: 6,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'ephesians-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/List do Efezjan ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Efezjan_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Efezjan_%28ca%C5%82o%C5%9B%C4%87%29',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
