@@ -67,4 +67,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/marka/16')
   await expect(page.locator('.psalm-verses')).toContainText('Idąc na wszystek świat')
+
+  await page.goto('/pismo-swiete/mateusza/2')
+  await expect(page.locator('.psalm-verses')).toContainText('Gdy się tedy narodził Jezus w Bethlehem')
 })

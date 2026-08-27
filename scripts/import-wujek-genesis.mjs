@@ -173,6 +173,16 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ewangelia_wg_%C5%9Bw._Marka_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ewangelia_wg_%C5%9Bw._Marka_%28ca%C5%82o%C5%9B%C4%87%29',
   },
+  mat: {
+    id: 'mat',
+    name: 'Ewangelia według św. Mateusza',
+    chapterCount: 28,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'matthew-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Ewangelia wg św. Mateusza ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ewangelia_wg_%C5%9Bw._Mateusza_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ewangelia_wg_%C5%9Bw._Mateusza_%28ca%C5%82o%C5%9B%C4%87%29',
+    markerCorrections: new Set(['2:1:1']),
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
@@ -217,7 +227,8 @@ function parseChapter(chapterNumber, html) {
     const paragraph = paragraphMatch[1]
     const marker = paragraph.match(markerPattern)
     const plainMarker = marker ? null : paragraph.match(/^\s*(\d+)\.\s*/)
-    if (marker && Number(marker[1]) !== chapterNumber) continue
+    const markerCorrection = marker && book.markerCorrections?.has(`${chapterNumber}:${marker[1]}:${marker[2]}`)
+    if (marker && Number(marker[1]) !== chapterNumber && !markerCorrection) continue
     if (!marker && !plainMarker) continue
 
     const verseNumber = marker ? Number(marker[2]) : Number(plainMarker[1])

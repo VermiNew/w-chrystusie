@@ -13,6 +13,7 @@ import { firstThessalonians } from '../data/firstThessalonians'
 import { judges } from '../data/judges'
 import { lamentations } from '../data/lamentations'
 import { mark } from '../data/mark'
+import { matthew } from '../data/matthew'
 import { numbers } from '../data/numbers'
 import { romans } from '../data/romans'
 import { secondThessalonians } from '../data/secondThessalonians'
@@ -43,6 +44,7 @@ const books = {
   '2-do-tymoteusza': secondTimothy,
   '2-piotra': secondPeter,
   marka: mark,
+  mateusza: matthew,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {
