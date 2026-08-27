@@ -14,6 +14,7 @@ import { lamentations } from '../data/lamentations'
 import { numbers } from '../data/numbers'
 import { romans } from '../data/romans'
 import { scriptureBooksBySlug } from '../data/scriptureCatalog'
+import { titus } from '../data/titus'
 import { useContentLibrary } from '../hooks/useContentLibrary'
 import { getChapterProgress, useScriptureProgress } from '../hooks/useScriptureProgress'
 import NotFoundPage from './NotFoundPage'
@@ -31,6 +32,7 @@ const books = {
   'do-galatow': galatians,
   'do-efezjan': ephesians,
   'do-rzymian': romans,
+  'do-tytusa': titus,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {

@@ -49,4 +49,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/do-rzymian/16')
   await expect(page.locator('.psalm-verses')).toContainText('A Bóg pokoju niechaj zetrze szatana')
+
+  await page.goto('/pismo-swiete/do-tytusa/3')
+  await expect(page.locator('.psalm-verses')).toContainText('Albowiem i my byliśmy niekiedy głupi')
 })
