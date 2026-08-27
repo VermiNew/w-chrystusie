@@ -79,4 +79,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/jakuba/5')
   await expect(page.locator('.psalm-verses')).toContainText('Nuż teraz, bogacze!')
+
+  await page.goto('/pismo-swiete/1-piotra/5')
+  await expect(page.locator('.psalm-verses')).toContainText('A Bóg wszelakiéj łaski')
 })

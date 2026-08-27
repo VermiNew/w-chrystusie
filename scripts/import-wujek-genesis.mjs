@@ -215,6 +215,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_%C5%9Bw._Jakuba_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_%C5%9Bw._Jakuba_%28ca%C5%82o%C5%9B%C4%87%29',
   },
+  '1pe': {
+    id: '1pe',
+    name: '1 List św. Piotra',
+    chapterCount: 5,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'first-peter-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Pierwszy List św. Piotra ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pierwszy_List_%C5%9Bw._Piotra_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pierwszy_List_%C5%9Bw._Piotra_%28ca%C5%82o%C5%9B%C4%87%29',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
