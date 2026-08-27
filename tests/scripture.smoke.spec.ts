@@ -61,4 +61,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/2-do-tymoteusza/4')
   await expect(page.locator('.psalm-verses')).toContainText('Potykaniem dobrem potykałem się')
+
+  await page.goto('/pismo-swiete/2-piotra/3')
+  await expect(page.locator('.psalm-verses')).toContainText('Lecz nowych niebios i nowéj ziemie')
 })
