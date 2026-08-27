@@ -9,6 +9,7 @@ import { firstChronicles } from '../data/firstChronicles'
 import { genesis } from '../data/genesis'
 import { galatians } from '../data/galatians'
 import { isaiah } from '../data/isaiah'
+import { firstThessalonians } from '../data/firstThessalonians'
 import { judges } from '../data/judges'
 import { lamentations } from '../data/lamentations'
 import { numbers } from '../data/numbers'
@@ -35,6 +36,7 @@ const books = {
   'do-rzymian': romans,
   'do-tytusa': titus,
   '2-do-tesaloniczan': secondThessalonians,
+  '1-do-tesaloniczan': firstThessalonians,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {

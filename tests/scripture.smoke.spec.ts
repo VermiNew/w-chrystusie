@@ -55,4 +55,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/2-do-tesaloniczan/3')
   await expect(page.locator('.psalm-verses')).toContainText('A Pan niech prostuje serca wasze')
+
+  await page.goto('/pismo-swiete/1-do-tesaloniczan/5')
+  await expect(page.locator('.psalm-verses')).toContainText('Zawsze się weselcie')
 })

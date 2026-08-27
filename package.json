@@ -30,6 +30,7 @@
     "content:romans": "node scripts/import-wujek-genesis.mjs --book rom",
     "content:titus": "node scripts/import-wujek-genesis.mjs --book tit",
     "content:second-thessalonians": "node scripts/import-wujek-genesis.mjs --book 2th",
+    "content:first-thessalonians": "node scripts/import-wujek-genesis.mjs --book 1th",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },
