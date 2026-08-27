@@ -13,6 +13,7 @@ import { judges } from '../data/judges'
 import { lamentations } from '../data/lamentations'
 import { numbers } from '../data/numbers'
 import { romans } from '../data/romans'
+import { secondThessalonians } from '../data/secondThessalonians'
 import { scriptureBooksBySlug } from '../data/scriptureCatalog'
 import { titus } from '../data/titus'
 import { useContentLibrary } from '../hooks/useContentLibrary'
@@ -33,6 +34,7 @@ const books = {
   'do-efezjan': ephesians,
   'do-rzymian': romans,
   'do-tytusa': titus,
+  '2-do-tesaloniczan': secondThessalonians,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {
