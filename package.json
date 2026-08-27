@@ -37,6 +37,7 @@
     "content:matthew": "node scripts/import-wujek-genesis.mjs --book mat",
     "content:luke": "node scripts/import-wujek-genesis.mjs --book luk",
     "content:john": "node scripts/import-wujek-genesis.mjs --book jhn",
+    "content:james": "node scripts/import-wujek-genesis.mjs --book jas",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },

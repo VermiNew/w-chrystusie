@@ -76,4 +76,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/jana/4')
   await expect(page.locator('.psalm-verses')).toContainText('Przyszła niewiasta z Samaryi czerpać wodę')
+
+  await page.goto('/pismo-swiete/jakuba/5')
+  await expect(page.locator('.psalm-verses')).toContainText('Nuż teraz, bogacze!')
 })

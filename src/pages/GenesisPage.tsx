@@ -12,6 +12,7 @@ import { isaiah } from '../data/isaiah'
 import { firstThessalonians } from '../data/firstThessalonians'
 import { judges } from '../data/judges'
 import { john } from '../data/john'
+import { james } from '../data/james'
 import { lamentations } from '../data/lamentations'
 import { mark } from '../data/mark'
 import { matthew } from '../data/matthew'
@@ -49,6 +50,7 @@ const books = {
   mateusza: matthew,
   lukasza: luke,
   jana: john,
+  jakuba: james,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {
