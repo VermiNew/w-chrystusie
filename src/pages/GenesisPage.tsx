@@ -12,6 +12,7 @@ import { isaiah } from '../data/isaiah'
 import { judges } from '../data/judges'
 import { lamentations } from '../data/lamentations'
 import { numbers } from '../data/numbers'
+import { romans } from '../data/romans'
 import { scriptureBooksBySlug } from '../data/scriptureCatalog'
 import { useContentLibrary } from '../hooks/useContentLibrary'
 import { getChapterProgress, useScriptureProgress } from '../hooks/useScriptureProgress'
@@ -29,6 +30,7 @@ const books = {
   lamentacje: lamentations,
   'do-galatow': galatians,
   'do-efezjan': ephesians,
+  'do-rzymian': romans,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {

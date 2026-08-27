@@ -110,6 +110,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Efezjan_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Efezjan_%28ca%C5%82o%C5%9B%C4%87%29',
   },
+  rom: {
+    id: 'rom',
+    name: 'List do Rzymian',
+    chapterCount: 16,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'romans-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/List do Rzymian ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Rzymian_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Rzymian_%28ca%C5%82o%C5%9B%C4%87%29',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
