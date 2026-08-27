@@ -146,6 +146,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pierwszy_List_do_Tesaloniczan_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pierwszy_List_do_Tesaloniczan_%28ca%C5%82o%C5%9B%C4%87%29',
   },
+  '2ti': {
+    id: '2ti',
+    name: '2 List do Tymoteusza',
+    chapterCount: 4,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'second-timothy-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Drugi List do Tymoteusza ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Drugi_List_do_Tymoteusza_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Drugi_List_do_Tymoteusza_%28ca%C5%82o%C5%9B%C4%87%29',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

@@ -58,4 +58,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/1-do-tesaloniczan/5')
   await expect(page.locator('.psalm-verses')).toContainText('Zawsze się weselcie')
+
+  await page.goto('/pismo-swiete/2-do-tymoteusza/4')
+  await expect(page.locator('.psalm-verses')).toContainText('Potykaniem dobrem potykałem się')
 })
