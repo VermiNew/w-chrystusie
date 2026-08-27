@@ -11,6 +11,7 @@ import { galatians } from '../data/galatians'
 import { isaiah } from '../data/isaiah'
 import { firstThessalonians } from '../data/firstThessalonians'
 import { firstPeter } from '../data/firstPeter'
+import { firstJohn } from '../data/firstJohn'
 import { judges } from '../data/judges'
 import { john } from '../data/john'
 import { james } from '../data/james'
@@ -53,6 +54,7 @@ const books = {
   jana: john,
   jakuba: james,
   '1-piotra': firstPeter,
+  '1-jana': firstJohn,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {
