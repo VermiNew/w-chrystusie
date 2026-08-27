@@ -183,6 +183,19 @@ const books = {
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ewangelia_wg_%C5%9Bw._Mateusza_%28ca%C5%82o%C5%9B%C4%87%29',
     markerCorrections: new Set(['2:1:1']),
   },
+  luk: {
+    id: 'luk',
+    name: 'Ewangelia według św. Łukasza',
+    chapterCount: 24,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'luke-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Ewangelia wg św. Łukasza ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ewangelia_wg_%C5%9Bw._%C5%81ukasza_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ewangelia_wg_%C5%9Bw._%C5%81ukasza_%28ca%C5%82o%C5%9B%C4%87%29',
+    markerCorrections: new Set([
+      ...[2, 3, 4].map((verse) => `18:17:${verse}`),
+      ...[2, 3, 4, 5, 6, 7, 8, 9].map((verse) => `20:19:${verse}`),
+    ]),
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

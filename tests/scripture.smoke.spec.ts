@@ -70,4 +70,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/mateusza/2')
   await expect(page.locator('.psalm-verses')).toContainText('Gdy się tedy narodził Jezus w Bethlehem')
+
+  await page.goto('/pismo-swiete/lukasza/20')
+  await expect(page.locator('.psalm-verses')).toContainText('Chrzest Janów byłli z nieba')
 })

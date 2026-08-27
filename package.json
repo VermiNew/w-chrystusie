@@ -35,6 +35,7 @@
     "content:second-peter": "node scripts/import-wujek-genesis.mjs --book 2pe",
     "content:mark": "node scripts/import-wujek-genesis.mjs --book mrk",
     "content:matthew": "node scripts/import-wujek-genesis.mjs --book mat",
+    "content:luke": "node scripts/import-wujek-genesis.mjs --book luk",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },
