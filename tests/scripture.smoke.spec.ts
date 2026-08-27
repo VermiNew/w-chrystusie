@@ -88,4 +88,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/2-jana/1')
   await expect(page.locator('.psalm-verses')).toContainText('Niech będzie z wami łaska, miłosierdzie, pokój')
+
+  await page.goto('/pismo-swiete/3-jana/1')
+  await expect(page.locator('.psalm-verses')).toContainText('nie naśladuj złego, ale co jest dobrego')
 })

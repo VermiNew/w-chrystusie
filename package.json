@@ -41,6 +41,7 @@
     "content:first-peter": "node scripts/import-wujek-genesis.mjs --book 1pe",
     "content:first-john": "node scripts/import-wujek-genesis.mjs --book 1jn",
     "content:second-john": "node scripts/import-wujek-genesis.mjs --book 2jn",
+    "content:third-john": "node scripts/import-wujek-genesis.mjs --book 3jn",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },

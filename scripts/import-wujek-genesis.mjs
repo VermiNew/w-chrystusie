@@ -242,6 +242,15 @@ const books = {
     sourceUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Drugi_List_%C5%9Bw._Jana',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Drugi_List_%C5%9Bw._Jana',
   },
+  '3jn': {
+    id: '3jn',
+    name: '3 List św. Jana',
+    chapterCount: 1,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'third-john-wujek.json'),
+    sourcePage: 'Biblia Wujka (1923)/Trzeci List św. Jana',
+    sourceUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Trzeci_List_%C5%9Bw._Jana',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Trzeci_List_%C5%9Bw._Jana',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
