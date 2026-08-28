@@ -21,6 +21,7 @@ import { philippians } from '../data/philippians'
 import { secondCorinthians } from '../data/secondCorinthians'
 import { firstCorinthians } from '../data/firstCorinthians'
 import { firstTimothy } from '../data/firstTimothy'
+import { hebrews } from '../data/hebrews'
 import { judges } from '../data/judges'
 import { john } from '../data/john'
 import { james } from '../data/james'
@@ -73,6 +74,7 @@ const books = {
   '2-do-koryntian': secondCorinthians,
   '1-do-koryntian': firstCorinthians,
   '1-do-tymoteusza': firstTimothy,
+  'do-hebrajczykow': hebrews,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {

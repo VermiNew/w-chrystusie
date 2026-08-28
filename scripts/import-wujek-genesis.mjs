@@ -314,6 +314,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pierwszy_List_do_Tymoteusza_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pierwszy_List_do_Tymoteusza',
   },
+  heb: {
+    id: 'heb',
+    name: 'List do Hebrajczyków',
+    chapterCount: 13,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'hebrews-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/List do Hebrajczyków ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Hebrajczyk%C3%B3w_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Hebrajczyk%C3%B3w',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
