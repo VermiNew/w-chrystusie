@@ -115,4 +115,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/do-hebrajczykow/11')
   await expect(page.locator('.psalm-verses')).toContainText('wiara jest gruntem rzeczy tych, których się spodziewamy')
+
+  await page.goto('/pismo-swiete/dzieje-apostolskie/28')
+  await expect(page.locator('.psalm-verses')).toContainText('Opowiadając królestwo Boże')
 })

@@ -323,6 +323,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Hebrajczyk%C3%B3w_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Hebrajczyk%C3%B3w',
   },
+  act: {
+    id: 'act',
+    name: 'Dzieje Apostolskie',
+    chapterCount: 28,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'acts-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Dzieje Apostolskie ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Dzieje_Apostolskie_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Dzieje_Apostolskie',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
