@@ -342,6 +342,17 @@ const books = {
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Kolosan_%28ca%C5%82o%C5%9B%C4%87%29',
     unmarkedFirstVerseChapters: new Set([4]),
   },
+  lev: {
+    id: 'lev',
+    name: 'Księga Kapłańska',
+    chapterCount: 27,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'leviticus-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Kapłańska ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Kap%C5%82a%C5%84ska_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Kap%C5%82a%C5%84ska',
+    markerCorrections: new Set(Array.from({ length: 16 }, (_, index) => `22:21:${index + 1}`)),
+    embeddedVerseMarkerChapters: new Set([26]),
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
@@ -380,10 +391,27 @@ function textFromHtml(value) {
 function parseChapter(chapterNumber, html) {
   const verseParagraphPattern = /<p>([\s\S]*?)<\/p>/gi
   const markerPattern = /<span[^>]*id="(\d+):(\d+)(?:\.|&#\d+;)?"[^>]*>[\s\S]*?<\/span>/i
+  const markerGlobalPattern = /<span[^>]*id="(\d+):(\d+)(?:\.|&#\d+;)?"[^>]*>[\s\S]*?<\/span>/gi
   const verses = []
 
   for (const paragraphMatch of html.matchAll(verseParagraphPattern)) {
     const paragraph = paragraphMatch[1]
+    const embeddedMarkers = book.embeddedVerseMarkerChapters?.has(chapterNumber)
+      ? [...paragraph.matchAll(markerGlobalPattern)]
+      : []
+    if (embeddedMarkers.length > 1) {
+      embeddedMarkers.forEach((embeddedMarker, index) => {
+        const nextMarker = embeddedMarkers[index + 1]
+        const text = textFromHtml(paragraph.slice(
+          embeddedMarker.index + embeddedMarker[0].length,
+          nextMarker?.index ?? paragraph.length,
+        ))
+        if (Number(embeddedMarker[1]) === chapterNumber && text) {
+          verses.push({ number: Number(embeddedMarker[2]), text })
+        }
+      })
+      continue
+    }
     const marker = paragraph.match(markerPattern)
     const plainMarker = marker ? null : paragraph.match(/^\s*(\d+)\.\s*/)
     const unmarkedFirstVerse = !marker

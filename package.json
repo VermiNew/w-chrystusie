@@ -52,6 +52,7 @@
     "content:hebrews": "node scripts/import-wujek-genesis.mjs --book heb",
     "content:acts": "node scripts/import-wujek-genesis.mjs --book act",
     "content:colossians": "node scripts/import-wujek-genesis.mjs --book col",
+    "content:leviticus": "node scripts/import-wujek-genesis.mjs --book lev",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },

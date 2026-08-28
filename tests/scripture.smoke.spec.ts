@@ -121,4 +121,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/do-kolosan/4')
   await expect(page.locator('.psalm-verses')).toContainText('Panowie! co sprawiedliwego i słusznego jest')
+
+  await page.goto('/pismo-swiete/kaplanska/19')
+  await expect(page.locator('.psalm-verses')).toContainText('będziesz miłował przyjaciela twego, jako sam siebie')
 })
