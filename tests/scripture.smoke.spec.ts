@@ -103,4 +103,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/do-filipian/4')
   await expect(page.locator('.psalm-verses')).toContainText('Wszystko mogę w tym, który mię umacnia')
+
+  await page.goto('/pismo-swiete/2-do-koryntian/13')
+  await expect(page.locator('.psalm-verses')).toContainText('spółeczność Ducha Świętego niech będzie z wami wszystkimi')
 })

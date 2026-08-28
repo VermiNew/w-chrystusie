@@ -18,6 +18,7 @@ import { jude } from '../data/jude'
 import { philemon } from '../data/philemon'
 import { revelation } from '../data/revelation'
 import { philippians } from '../data/philippians'
+import { secondCorinthians } from '../data/secondCorinthians'
 import { judges } from '../data/judges'
 import { john } from '../data/john'
 import { james } from '../data/james'
@@ -67,6 +68,7 @@ const books = {
   'do-filemona': philemon,
   apokalipsa: revelation,
   'do-filipian': philippians,
+  '2-do-koryntian': secondCorinthians,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {

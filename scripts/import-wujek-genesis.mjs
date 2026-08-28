@@ -287,6 +287,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Filipian_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Filipian',
   },
+  '2co': {
+    id: '2co',
+    name: '2 List do Koryntian',
+    chapterCount: 13,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'second-corinthians-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Drugi List do Koryntian ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Drugi_List_do_Koryntian_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Drugi_List_do_Koryntian',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
