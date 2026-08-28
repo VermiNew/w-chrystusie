@@ -305,6 +305,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pierwszy_List_do_Koryntian_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pierwszy_List_do_Koryntian',
   },
+  '1ti': {
+    id: '1ti',
+    name: '1 List do Tymoteusza',
+    chapterCount: 6,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'first-timothy-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Pierwszy List do Tymoteusza ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pierwszy_List_do_Tymoteusza_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pierwszy_List_do_Tymoteusza',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

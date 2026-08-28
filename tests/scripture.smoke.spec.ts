@@ -109,4 +109,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/1-do-koryntian/13')
   await expect(page.locator('.psalm-verses')).toContainText('Miłość cierpliwa jest, łaskawa jest')
+
+  await page.goto('/pismo-swiete/1-do-tymoteusza/6')
+  await expect(page.locator('.psalm-verses')).toContainText('Bojuj dobry bój wiary')
 })
