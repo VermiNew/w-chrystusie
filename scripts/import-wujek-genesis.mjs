@@ -332,6 +332,16 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Dzieje_Apostolskie_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Dzieje_Apostolskie',
   },
+  col: {
+    id: 'col',
+    name: 'List do Kolosan',
+    chapterCount: 4,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'colossians-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/List do Kolosan ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Kolosan_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Kolosan_%28ca%C5%82o%C5%9B%C4%87%29',
+    unmarkedFirstVerseChapters: new Set([4]),
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
@@ -376,12 +386,16 @@ function parseChapter(chapterNumber, html) {
     const paragraph = paragraphMatch[1]
     const marker = paragraph.match(markerPattern)
     const plainMarker = marker ? null : paragraph.match(/^\s*(\d+)\.\s*/)
+    const unmarkedFirstVerse = !marker
+      && !plainMarker
+      && book.unmarkedFirstVerseChapters?.has(chapterNumber)
+      && paragraph.includes('font-size:130%')
     const markerCorrection = marker && book.markerCorrections?.has(`${chapterNumber}:${marker[1]}:${marker[2]}`)
     if (marker && Number(marker[1]) !== chapterNumber && !markerCorrection) continue
-    if (!marker && !plainMarker) continue
+    if (!marker && !plainMarker && !unmarkedFirstVerse) continue
 
-    const verseNumber = marker ? Number(marker[2]) : Number(plainMarker[1])
-    const markerEnd = marker ? marker.index + marker[0].length : plainMarker[0].length
+    const verseNumber = unmarkedFirstVerse ? 1 : marker ? Number(marker[2]) : Number(plainMarker[1])
+    const markerEnd = unmarkedFirstVerse ? 0 : marker ? marker.index + marker[0].length : plainMarker[0].length
     const text = textFromHtml(paragraph.slice(markerEnd))
     if (text) verses.push({ number: verseNumber, text })
   }

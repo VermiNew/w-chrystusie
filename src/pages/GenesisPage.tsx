@@ -23,6 +23,7 @@ import { firstCorinthians } from '../data/firstCorinthians'
 import { firstTimothy } from '../data/firstTimothy'
 import { hebrews } from '../data/hebrews'
 import { acts } from '../data/acts'
+import { colossians } from '../data/colossians'
 import { judges } from '../data/judges'
 import { john } from '../data/john'
 import { james } from '../data/james'
@@ -77,6 +78,7 @@ const books = {
   '1-do-tymoteusza': firstTimothy,
   'do-hebrajczykow': hebrews,
   'dzieje-apostolskie': acts,
+  'do-kolosan': colossians,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {

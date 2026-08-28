@@ -118,4 +118,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/dzieje-apostolskie/28')
   await expect(page.locator('.psalm-verses')).toContainText('Opowiadając królestwo Boże')
+
+  await page.goto('/pismo-swiete/do-kolosan/4')
+  await expect(page.locator('.psalm-verses')).toContainText('Panowie! co sprawiedliwego i słusznego jest')
 })
