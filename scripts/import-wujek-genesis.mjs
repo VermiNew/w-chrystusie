@@ -296,6 +296,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Drugi_List_do_Koryntian_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Drugi_List_do_Koryntian',
   },
+  '1co': {
+    id: '1co',
+    name: '1 List do Koryntian',
+    chapterCount: 16,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'first-corinthians-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Pierwszy List do Koryntian ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pierwszy_List_do_Koryntian_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pierwszy_List_do_Koryntian',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

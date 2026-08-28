@@ -47,6 +47,7 @@
     "content:revelation": "node scripts/import-wujek-genesis.mjs --book rev",
     "content:philippians": "node scripts/import-wujek-genesis.mjs --book php",
     "content:second-corinthians": "node scripts/import-wujek-genesis.mjs --book 2co",
+    "content:first-corinthians": "node scripts/import-wujek-genesis.mjs --book 1co",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },

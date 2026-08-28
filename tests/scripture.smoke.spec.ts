@@ -106,4 +106,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/2-do-koryntian/13')
   await expect(page.locator('.psalm-verses')).toContainText('spółeczność Ducha Świętego niech będzie z wami wszystkimi')
+
+  await page.goto('/pismo-swiete/1-do-koryntian/13')
+  await expect(page.locator('.psalm-verses')).toContainText('Miłość cierpliwa jest, łaskawa jest')
 })
