@@ -278,6 +278,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Apokalipsa_%C5%9Bw._Jana_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Apokalipsa_%C5%9Bw._Jana',
   },
+  php: {
+    id: 'php',
+    name: 'List do Filipian',
+    chapterCount: 4,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'philippians-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/List do Filipian ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Filipian_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/List_do_Filipian',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

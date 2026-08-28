@@ -100,4 +100,7 @@ test('Pismo Święte oraz dostępne księgi są czytelne', async ({ page }) => {
 
   await page.goto('/pismo-swiete/apokalipsa/22')
   await expect(page.locator('.psalm-verses')).toContainText('Zaiste przyjdę rychło. Amen. Przyjdź, Panie Jezu!')
+
+  await page.goto('/pismo-swiete/do-filipian/4')
+  await expect(page.locator('.psalm-verses')).toContainText('Wszystko mogę w tym, który mię umacnia')
 })
