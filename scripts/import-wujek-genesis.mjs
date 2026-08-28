@@ -353,6 +353,15 @@ const books = {
     markerCorrections: new Set(Array.from({ length: 16 }, (_, index) => `22:21:${index + 1}`)),
     embeddedVerseMarkerChapters: new Set([26]),
   },
+  jos: {
+    id: 'jos',
+    name: 'Księga Jozuego',
+    chapterCount: 24,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'joshua-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Jozuego ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Jozuego_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Jozuego',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
