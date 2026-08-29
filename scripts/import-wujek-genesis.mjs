@@ -391,6 +391,16 @@ const books = {
     unmarkedFirstVerseChapters: new Set([18]),
     markerCorrections: new Set(Array.from({ length: 7 }, (_, index) => `30:29:${index + 2}`)),
   },
+  '2sm': {
+    id: '2sm',
+    name: '2 Księga Samuela',
+    chapterCount: 24,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'second-samuel-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Druga Księga Samuela ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Druga_Ksi%C4%99ga_Samuela_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Druga_Ksi%C4%99ga_Samuela',
+    markerCorrections: new Set(Array.from({ length: 9 }, (_, index) => `12:11:${index + 1}`)),
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
