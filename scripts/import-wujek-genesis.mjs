@@ -380,6 +380,17 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Druga_Ksi%C4%99ga_Kr%C3%B3lewska_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Druga_Ksi%C4%99ga_Kr%C3%B3lewska',
   },
+  '1sm': {
+    id: '1sm',
+    name: '1 Księga Samuela',
+    chapterCount: 31,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'first-samuel-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Pierwsza Księga Samuela ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pierwsza_Ksi%C4%99ga_Samuela_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pierwsza_Ksi%C4%99ga_Samuela',
+    unmarkedFirstVerseChapters: new Set([18]),
+    markerCorrections: new Set(Array.from({ length: 7 }, (_, index) => `30:29:${index + 2}`)),
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
