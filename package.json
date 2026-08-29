@@ -60,6 +60,7 @@
     "content:second-samuel": "node scripts/import-wujek-genesis.mjs --book 2sm",
     "content:second-chronicles": "node scripts/import-wujek-genesis.mjs --book 2ch",
     "content:nehemiah": "node scripts/import-wujek-genesis.mjs --book neh",
+    "content:job": "node scripts/import-wujek-genesis.mjs --book job",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },
