@@ -63,6 +63,7 @@
     "content:job": "node scripts/import-wujek-genesis.mjs --book job",
     "content:proverbs": "node scripts/import-wujek-genesis.mjs --book pro",
     "content:ecclesiastes": "node scripts/import-wujek-genesis.mjs --book ecc",
+    "content:song-of-songs": "node scripts/import-wujek-genesis.mjs --book sng",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },

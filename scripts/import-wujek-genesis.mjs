@@ -452,6 +452,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Koheleta_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Koheleta',
   },
+  sng: {
+    id: 'sng',
+    name: 'Pieśń nad Pieśniami',
+    chapterCount: 8,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'song-of-songs-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Pieśń nad Pieśniami ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pie%C5%9B%C5%84_nad_Pie%C5%9Bniami_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Pie%C5%9B%C5%84_nad_Pie%C5%9Bniami',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

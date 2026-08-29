@@ -35,6 +35,7 @@ import { nehemiah } from '../data/nehemiah'
 import { job } from '../data/job'
 import { proverbs } from '../data/proverbs'
 import { ecclesiastes } from '../data/ecclesiastes'
+import { songOfSongs } from '../data/songOfSongs'
 import { judges } from '../data/judges'
 import { john } from '../data/john'
 import { james } from '../data/james'
@@ -101,6 +102,7 @@ const books = {
   hioba: job,
   przyslow: proverbs,
   koheleta: ecclesiastes,
+  'piesn-nad-piesniami': songOfSongs,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {
