@@ -414,6 +414,16 @@ const books = {
       ...Array.from({ length: 17 }, (_, index) => `13:12:${index + 2}`),
     ]),
   },
+  neh: {
+    id: 'neh',
+    name: 'Księga Nehemiasza',
+    chapterCount: 13,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'nehemiah-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Nehemiasza ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Nehemiasza_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Nehemiasza',
+    embeddedVerseMarkerChapters: new Set([10]),
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
