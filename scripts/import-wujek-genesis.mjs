@@ -489,6 +489,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Aggeusza_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Aggeusza',
   },
+  nah: {
+    id: 'nah',
+    name: 'Księga Nahuma',
+    chapterCount: 3,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'nahum-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Nahuma ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Nahuma_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Nahuma',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

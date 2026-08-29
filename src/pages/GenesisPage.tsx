@@ -39,6 +39,7 @@ import { songOfSongs } from '../data/songOfSongs'
 import { jeremiah } from '../data/jeremiah'
 import { obadiah } from '../data/obadiah'
 import { haggai } from '../data/haggai'
+import { nahum } from '../data/nahum'
 import { judges } from '../data/judges'
 import { john } from '../data/john'
 import { james } from '../data/james'
@@ -109,6 +110,7 @@ const books = {
   jeremiasza: jeremiah,
   abdiasza: obadiah,
   aggeusza: haggai,
+  nahuma: nahum,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {
