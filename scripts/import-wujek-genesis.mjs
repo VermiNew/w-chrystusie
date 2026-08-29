@@ -433,6 +433,16 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Hioba_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Hioba',
   },
+  pro: {
+    id: 'pro',
+    name: 'Księga Przysłów',
+    chapterCount: 31,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'proverbs-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Przysłów ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w',
+    markerCorrections: new Set([2, 3, 4, 5, 6].map((verse) => `3:2:${verse}`)),
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

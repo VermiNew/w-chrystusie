@@ -1,0 +1,3860 @@
+{
+  "id": "pro",
+  "name": "Księga Przysłów",
+  "translation": "Biblia Jakuba Wujka (1599), wydanie 1923",
+  "sourceName": "Wikiźródła",
+  "sourceBookUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w",
+  "sourceRights": "Domena publiczna (wydanie); CC BY-SA 4.0 (transkrypcja Wikiźródeł)",
+  "chapters": [
+    {
+      "number": 1,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Przypowieści Salomona, syna Dawidowego, króla Izraelskiego."
+        },
+        {
+          "number": 2,
+          "text": "Dla nawyknienia mądrości i ćwiczenia: dla wyrozumienia słów roztropnych:"
+        },
+        {
+          "number": 3,
+          "text": "I dla przyjęcia ćwiczenia nauki, sprawiedliwości i sądu i prawości:"
+        },
+        {
+          "number": 4,
+          "text": "Dla podania maluczkim biegłości, młodemu umiejętności i rozumu."
+        },
+        {
+          "number": 5,
+          "text": "Słuchając mądry, mędrszym będzie: a rozumny rządy otrzyma."
+        },
+        {
+          "number": 6,
+          "text": "Wyrozumie przypowieść i wykład, słowa mądrych i gadki ich."
+        },
+        {
+          "number": 7,
+          "text": "Bojaźń Pańska początek mądrości: mądrością i nauką głupi gardzą."
+        },
+        {
+          "number": 8,
+          "text": "Słuchaj, synu mój! ćwiczenia ojca twego, a nie opuszczaj zakonu matki twojéj:"
+        },
+        {
+          "number": 9,
+          "text": "Aby była przydana łaska głowie twojéj, a łańcuch szyi twojéj."
+        },
+        {
+          "number": 10,
+          "text": "Synu mój! jeźliby cię nęcili grzesznicy, nie przyzwalaj im."
+        },
+        {
+          "number": 11,
+          "text": "Jeźliby rzekli: Pójdź z nami, zasadźmy się na krew, zakryjmy sidła na niewinnego bez przyczyny:"
+        },
+        {
+          "number": 12,
+          "text": "Pożremy go jako piekło żywego, a całego jako zstępującego w dół:"
+        },
+        {
+          "number": 13,
+          "text": "Wszelką majętność drogą najdziemy, napełniemy domy nasze korzyścią:"
+        },
+        {
+          "number": 14,
+          "text": "Puść los z nami, mieszek jeden niech będzie wszystkich nas."
+        },
+        {
+          "number": 15,
+          "text": "Synu mój! nie chódź z nimi, powściągnij nogę twoję od ścieżek ich."
+        },
+        {
+          "number": 16,
+          "text": "Albowiem nogi ich bieżą ku złemu, i kwapią się, aby krew przelali."
+        },
+        {
+          "number": 17,
+          "text": "Ano próżno zarzucają sieć przed oczyma skrzydlastych."
+        },
+        {
+          "number": 18,
+          "text": "Oni téż przeciw krwi swojéj zasadzają się, i czynią zdrady przeciw duszom swoim."
+        },
+        {
+          "number": 19,
+          "text": "Tak ścieżki wszelkiego łakomego dusze majętnych odejmują."
+        },
+        {
+          "number": 20,
+          "text": "Mądrość przed domy opowiada, na ulicach swój głos wypuszcza."
+        },
+        {
+          "number": 21,
+          "text": "W główniejszych gromadach woła, we drzwiach bram miejskich wydaje słowa swe, mówiąc:"
+        },
+        {
+          "number": 22,
+          "text": "Dokądże maluczcy będziecie miłować dzieciństwo, a głupi rzeczy im szkodliwych żądać będą, a nieroztropni nienawidzieć umiejętności?"
+        },
+        {
+          "number": 23,
+          "text": "Nawróćcie się na karanie moje: oto wyniosę wam ducha mego, i ukażę wam słowa moje."
+        },
+        {
+          "number": 24,
+          "text": "Iżem wołała, a nie chcieliście: wyciągałam rękę moję, a nie był, ktoby pojrzał."
+        },
+        {
+          "number": 25,
+          "text": "Wzgardziliście wszelką radą moją, a łajań moich zaniedbaliście."
+        },
+        {
+          "number": 26,
+          "text": "Ja się téż śmiać będę w waszem zatraceniu, i urągać będę, gdy to na was przyjdzie, czegoście się bali."
+        },
+        {
+          "number": 27,
+          "text": "Gdy przypadnie nagle nieszczęście, i zginienie jako burza przypadnie, kiedy przyjdzie na was utrapienie i ucisk:"
+        },
+        {
+          "number": 28,
+          "text": "Tedy mię wzywać będą, a nie wysłucham: rano wstaną, a nie najdą mię."
+        },
+        {
+          "number": 29,
+          "text": "Dlatego że mieli w nienawiści karność, a bojaźni Pańskiéj nie przyjęli:"
+        },
+        {
+          "number": 30,
+          "text": "Ani przestawali na radzie mojéj, i uwłoczyli wszelkiemu karaniu memu."
+        },
+        {
+          "number": 31,
+          "text": "A tak będą jeść owoce drogi swojéj, i nasycą się radami swemi."
+        },
+        {
+          "number": 32,
+          "text": "Odwrócenie maluczkich zamorduje je: a szczęście głupców zatraci je."
+        },
+        {
+          "number": 33,
+          "text": "Ale kto mię usłucha bez bojaźni, będzie odpoczywał, i zażyje obfitości, odjąwszy bojaźń złego."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_2",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Synu mój! jeźli przyjmiesz mowy moje, a przykazania moje skryjesz przy sobie,"
+        },
+        {
+          "number": 2,
+          "text": "Aby słuchało mądrości ucho twoje: nakłoń serca swego ku poznaniu roztropności."
+        },
+        {
+          "number": 3,
+          "text": "Bo jeźli wzowiesz mądrości, i nakłonisz serce twe roztropności:"
+        },
+        {
+          "number": 4,
+          "text": "Jeźli jéj szukać będziesz jako pieniędzy, a jako skarbów dokopasz się jéj:"
+        },
+        {
+          "number": 5,
+          "text": "Tedy wyrozumiesz bojaźń Pańską, i umiejętność Bożą najdziesz."
+        },
+        {
+          "number": 6,
+          "text": "Bo Pan dawa mądrość: a z ust jego roztropność i umiejętność."
+        },
+        {
+          "number": 7,
+          "text": "Strzedz będzie prawych zbawienia, i obroni chodzących w prostości,"
+        },
+        {
+          "number": 8,
+          "text": "Zachowując ścieżki sprawiedliwości, i dróg świętych przestrzegając."
+        },
+        {
+          "number": 9,
+          "text": "Tedy wyrozumiesz sprawiedliwość, i sąd i prawość i wszelką ścieżkę dobrą."
+        },
+        {
+          "number": 10,
+          "text": "Jeźli wnidzie mądrość do serca twego, a umiejętność spodoba się duszy twojéj:"
+        },
+        {
+          "number": 11,
+          "text": "Rada strzedz cię będzie, a roztropność zachowa cię,"
+        },
+        {
+          "number": 12,
+          "text": "Abyś był wyrwan z drogi złéj i od człowieka, który mówi przewrotność:"
+        },
+        {
+          "number": 13,
+          "text": "Którzy opuszczają drogę prostą, a chodzą drogami ciemnemi:"
+        },
+        {
+          "number": 14,
+          "text": "Którzy się weselą źle uczyniwszy, a radują się w rzeczach najgorszych:"
+        },
+        {
+          "number": 15,
+          "text": "Których drogi przewrotne są, i postępki ich bezecne."
+        },
+        {
+          "number": 16,
+          "text": "Abyś był wyrwany od cudzéj niewiasty i od obcéj, która gładzi mowy swoje,"
+        },
+        {
+          "number": 17,
+          "text": "I opuszcza wodza młodości swojéj, i zapomniała przymierza Boga swego."
+        },
+        {
+          "number": 18,
+          "text": "Albowiem dom jéj nachylił się do śmierci, i ścieżki jéj do piekła."
+        },
+        {
+          "number": 19,
+          "text": "Wszyscy, którzy wchodzą do niéj, nie wrócą się i nie chwycą się ścieżki żywota."
+        },
+        {
+          "number": 20,
+          "text": "Abyś chodził drogą dobrą, i strzegł sprawiedliwych ścieżek."
+        },
+        {
+          "number": 21,
+          "text": "Bo którzy są prawi, będą mieszkać na ziemi, a prości trwać będą na niéj."
+        },
+        {
+          "number": 22,
+          "text": "Ale niezbożni będą z ziemie wytraceni: a którzy czynią niesprawiedliwie, będą z niéj zniesieni."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_3",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Synu mój! nie zapominaj zakonu mego, a przykazań moich niech strzeże serce twoje."
+        },
+        {
+          "number": 2,
+          "text": "Przedłużenia bowiem dni i lat żywota i pokoju przydadzą tobie."
+        },
+        {
+          "number": 3,
+          "text": "Miłosierdzie i prawda niech cię nie opuszczają: obwin je około szyje twojéj, i napisz na tablicach serca twego."
+        },
+        {
+          "number": 4,
+          "text": "A najdziesz łaskę i rozum dobry u Boga i u ludzi."
+        },
+        {
+          "number": 5,
+          "text": "Miéj ufność w Panu ze wszystkiego serca swego, a nie polegaj na roztropności twojéj."
+        },
+        {
+          "number": 6,
+          "text": "Na wszystkich drogach twoich myśl o nim, a on wyprostuje ścieżki twoje."
+        },
+        {
+          "number": 7,
+          "text": "Nie bądź sam u siebie mądrym: bój się Boga, a odstąp od złego;"
+        },
+        {
+          "number": 8,
+          "text": "Zdrowie bowiem będzie żywotowi twemu, a odwilżenie kościom twoim."
+        },
+        {
+          "number": 9,
+          "text": "Czcij Pana z majętności twojéj, a z pierwiastek wszelkiego zboża twego dawaj mu:"
+        },
+        {
+          "number": 10,
+          "text": "A napełnią się gumna twoje obfitością, i prasy twe winem opływać będą."
+        },
+        {
+          "number": 11,
+          "text": "Karania Pańskiego, synu mój, nie odrzucaj: ani ustawaj, gdy od niego karan bywasz."
+        },
+        {
+          "number": 12,
+          "text": "Bo kogo Pan miłuje, karze: a jako ojciec w synie kocha się."
+        },
+        {
+          "number": 13,
+          "text": "Błogosławiony człowiek, który nalazł mądrość, i który obfituje w roztropności."
+        },
+        {
+          "number": 14,
+          "text": "Lepsze jest nabycie jéj, niźli kupiectwo śrebra: i złota pierwszego i najczystszego owoc jéj."
+        },
+        {
+          "number": 15,
+          "text": "Droższa jest nad wszystkie bogactwa: a wszystkie rzeczy, które bywają pożądane, nie mogą jéj być przyrównane."
+        },
+        {
+          "number": 16,
+          "text": "Przedłużenie dni na prawicy jéj, a na lewicy jéj bogactwa i sława."
+        },
+        {
+          "number": 17,
+          "text": "Drogi jéj drogi piękne, i wszystkie ścieżki jej spokojne."
+        },
+        {
+          "number": 18,
+          "text": "Drzewem żywot jest tym, którzyby się jéj chwycili: i błogosławiony, który ją otrzyma."
+        },
+        {
+          "number": 19,
+          "text": "Pan mądrością ugruntował ziemię, roztropnością niebiosa utwierdził."
+        },
+        {
+          "number": 20,
+          "text": "Mądrością jego wyniknęły głębokości, i obłoki zsiadają się w rosę."
+        },
+        {
+          "number": 21,
+          "text": "Synu mój! niech te rzeczy nie schodzą z oczu twoich: strzeż zakonu i rady:"
+        },
+        {
+          "number": 22,
+          "text": "I będzie żywotem duszy twojéj, i łaską szyi twojéj."
+        },
+        {
+          "number": 23,
+          "text": "Tedy pójdziesz śmiele drogą twoją, i noga twoja nie potknie się."
+        },
+        {
+          "number": 24,
+          "text": "Jeźli zaśniesz, nie zlękniesz się: będziesz odpoczywał, i będzie wdzięczny sen twój."
+        },
+        {
+          "number": 25,
+          "text": "Nie ulękniesz się strachu nagłego, ani przypadających na cię mocy niezbożników."
+        },
+        {
+          "number": 26,
+          "text": "Pan bowiem będzie przy boku twoim, i będzie strzegł nogi twojéj, aby cię nie poimano."
+        },
+        {
+          "number": 27,
+          "text": "Nie broń dobrze czynić temu, który może: jeźli możesz, i sam dobrze czyń."
+        },
+        {
+          "number": 28,
+          "text": "Nie mów przyjacielowi twemu: Idź, a wróć się, jutroć dam: gdy możesz zaraz dać."
+        },
+        {
+          "number": 29,
+          "text": "Nie myśl przyjacielowi twemu złego, gdy on w tobie dufność ma."
+        },
+        {
+          "number": 30,
+          "text": "Nie wadź się z człowiekiem bez przyczyny, gdy on tobie nic złego nie uczynił."
+        },
+        {
+          "number": 31,
+          "text": "Nie zajrzyj człowiekowi niesprawiedliwemu, ani naśladuj dróg jego;"
+        },
+        {
+          "number": 32,
+          "text": "Bo obrzydłością Panu jest każdy naśmiewca, a z prostymi rozmowa jego."
+        },
+        {
+          "number": 33,
+          "text": "Ubóstwo od Pana w domu niezbożnego: lecz mieszkania sprawiedliwych będą błogosławione."
+        },
+        {
+          "number": 34,
+          "text": "On się naśmieje z naśmiewców, a cichym da łaskę."
+        },
+        {
+          "number": 35,
+          "text": "Sławę mądrzy osiągną: głupich wywyższenie zelżywość."
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_4",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Słuchajcie, synowie! nauki ojcowskiéj, a pilnujcie, abyście umieli roztropność."
+        },
+        {
+          "number": 2,
+          "text": "Dar dobry dam wam, nie opuszczajcie zakonu mego."
+        },
+        {
+          "number": 3,
+          "text": "Bo i ja byłem synem u ojca mego, młodziuchnym i jedynaczkiem przed matką moją:"
+        },
+        {
+          "number": 4,
+          "text": "I nauczał mię i mówił: Niech przyjmie słowa moje serce twoje: strzeż przykazań moich, a będziesz żył."
+        },
+        {
+          "number": 5,
+          "text": "Osiągnij mądrość, osiągnij roztropność: nie zapominaj, ani się odchylaj od słów ust moich."
+        },
+        {
+          "number": 6,
+          "text": "Nie opuszczaj jéj, a będzie cię strzegła: miłuj ją, a zachowa cię."
+        },
+        {
+          "number": 7,
+          "text": "Początek mądrości: osiągnij mądrość, a we wszelkiéj osiadłości twojéj nabywaj roztropności."
+        },
+        {
+          "number": 8,
+          "text": "Uchwyć się jéj, i wywyższy cię: będziesz wsławion od niéj, gdy ją obłapisz."
+        },
+        {
+          "number": 9,
+          "text": "Da na głowę twoję pomnożenie łaski, i koroną ozdobną nakryje cię."
+        },
+        {
+          "number": 10,
+          "text": "Słuchaj, synu mój! a przyjmij słowa moje, abyć się rozmnożyły lata żywota."
+        },
+        {
+          "number": 11,
+          "text": "Drogę mądrości ukażę tobie, poprowadzę cię ścieżkami prawości."
+        },
+        {
+          "number": 12,
+          "text": "Któremi gdy pójdziesz, nie będą ściśnione kroki twoje: a bieżąc nie będziesz miał obrazy."
+        },
+        {
+          "number": 13,
+          "text": "Trzymaj się nauki, nie puszczay się jéj, strzeż jéj; bo ona jest żywotem twoim."
+        },
+        {
+          "number": 14,
+          "text": "Nie kochaj się w ścieżkach niezbożników, ani sobie upodobaj drogi złośników."
+        },
+        {
+          "number": 15,
+          "text": "Uciekaj od niéj, ani chódź po niéj: odchyl się a opuść ją."
+        },
+        {
+          "number": 16,
+          "text": "Nie śpią bowiem, aż co złego zbroją: i nie mogą spać, aż kogo podejdą."
+        },
+        {
+          "number": 17,
+          "text": "Jedzą chleb niezbożności, i wino nieprawości piją."
+        },
+        {
+          "number": 18,
+          "text": "A ścieżka sprawiedliwych, jako jasna światłość, wschodzi i rośnie aż do doskonałego dnia."
+        },
+        {
+          "number": 19,
+          "text": "Droga niezbożnych ciemna: nie wiedzą, gdzie upadną."
+        },
+        {
+          "number": 20,
+          "text": "Synu mój! słuchaj powieści moich, a na wymowy moje nakłoń ucha twego."
+        },
+        {
+          "number": 21,
+          "text": "Niech nie odchodzą od oczu twoich, chowaj je wpośród serca twego."
+        },
+        {
+          "number": 22,
+          "text": "Żywotem bowiem są tym, którzy je najdują: a zdrowiem wszelkiemu ciału."
+        },
+        {
+          "number": 23,
+          "text": "Wszelaką strażą strzeż serca twego; bo z niego żywot pochodzi."
+        },
+        {
+          "number": 24,
+          "text": "Oddal od siebie usta przewrotne, a wargi uwłaczające niechaj będą daleko od ciebie."
+        },
+        {
+          "number": 25,
+          "text": "Oczy twoje niechaj prosto patrzą, a powieki twe niech uprzedzają kroki twoje."
+        },
+        {
+          "number": 26,
+          "text": "Prostuj ścieżki nogom twoim, a wszystkie drogi twoje będą zmocnione."
+        },
+        {
+          "number": 27,
+          "text": "Nie ustępuj na prawo ani na lewo: odwróć nogę twoję od złego; bo drogi, które są po prawéj stronie, zna Pan: a przewrótne są, które są po lewéj stronie. A on proste uczyni biegi twoje, a drogi twoje w pokoju poprowadzi."
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_5",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Synu mój! bądź pełen mądrości mojéj, a ku roztropności mojéj nakłoń ucha twego."
+        },
+        {
+          "number": 2,
+          "text": "Abyś srzegłstrzegł myśli, a wargi twe naukę zachowały. Nie słuchaj chytrości niewieściéj."
+        },
+        {
+          "number": 3,
+          "text": "Plastr bowiem miodu ciekący wargi nierządnice, a gardło jéj gładsze niż oliwa:"
+        },
+        {
+          "number": 4,
+          "text": "Lecz ostatnie rzeczy jéj gorzkie jako piołun, i ostre jako miecz o dwu ostrzu."
+        },
+        {
+          "number": 5,
+          "text": "Nogi jéj stępują do śmierci, a kroki jéj przechodzą do piekła."
+        },
+        {
+          "number": 6,
+          "text": "Po ścieżce żywota nie chodzą, błędne są kroki jéj i nie wyśladowane."
+        },
+        {
+          "number": 7,
+          "text": "Teraz tedy, synu mój! słuchaj mię, a nie odstępuj od słów ust moich."
+        },
+        {
+          "number": 8,
+          "text": "Oddal od niéj drogę twoję, a nie przybliżaj się ku drzwiom domu jéj."
+        },
+        {
+          "number": 9,
+          "text": "Abyś nie dał obcym czci twojéj, a lat twoich okrutnemu:"
+        },
+        {
+          "number": 10,
+          "text": "By się snadź nie nasycili obcy siły twojéj, a prace twe nie były w cudzym domu:"
+        },
+        {
+          "number": 11,
+          "text": "I abyś nie wzdychał na ostatku, kiedy zniszczysz mięsa twoje i ciało twoje, i rzeczesz:"
+        },
+        {
+          "number": 12,
+          "text": "Czemużem się ja brzydził nauką, a serce moje nie przestało na karaniu?"
+        },
+        {
+          "number": 13,
+          "text": "Anim słuchał głosu uczących mię, a nauczycielom nie nachyliłem ucha mego?"
+        },
+        {
+          "number": 14,
+          "text": "Bez mała byłem w każdéj złości w pośrodku zgromadzenia i zboru."
+        },
+        {
+          "number": 15,
+          "text": "Pij wodę z cysterny twojéj, i wody płynące studnice twojéj."
+        },
+        {
+          "number": 16,
+          "text": "Niech ściekają źródła twoje z domu, a na ulicach wody twe rozdzielaj."
+        },
+        {
+          "number": 17,
+          "text": "Miéj je sam, a obcy niech nie będą uczęstnikami twymi."
+        },
+        {
+          "number": 18,
+          "text": "Niech będzie zdrój twój błogosławiony, a wesel się z żoną młodości twojéj."
+        },
+        {
+          "number": 19,
+          "text": "Łani najmilsza, i jelonek najwdzięczniejszy: piersi jéj niech cię upajają na każdy czas, a w miłości jéj kochaj się ustawicznie."
+        },
+        {
+          "number": 20,
+          "text": "Czemu się dasz, synu mój! zwodzić obcéj, i odpoczywasz na łonie cudzéj?"
+        },
+        {
+          "number": 21,
+          "text": "Pan patrza na drogi człecze, i wszystkie kroki jego upatruje."
+        },
+        {
+          "number": 22,
+          "text": "Nieprawości jego poimają niezbożnika, a powrozami grzechów swych związan bywa."
+        },
+        {
+          "number": 23,
+          "text": "On umrze, przeto że nie miał ćwiczenia, a w wielkości głupstwa swego oszukan będzie."
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_6",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Synu mój! jeźlibyś ręczył za przyjaciela twego, uwiązałeś u obcego rękę twoję:"
+        },
+        {
+          "number": 2,
+          "text": "Usidliłeś się słowy ust twoich, i poimanyś własnemi mowami."
+        },
+        {
+          "number": 3,
+          "text": "Uczyńże tedy, co mówię, synu mój! a wyzwól się sam; boś wpadł w rękę bliźniego twego. Biegaj, śpiesz się, wzbudź przyjaciela twego."
+        },
+        {
+          "number": 4,
+          "text": "Nie dawaj snu oczom twoim, i niech nie drzymią powieki twoje."
+        },
+        {
+          "number": 5,
+          "text": "Wyrwij się jako sarna z ręki, i jako ptak z ręki ptasznika."
+        },
+        {
+          "number": 6,
+          "text": "Idź do mrówki, o leniwcze! a przypatruj się drogom jéj, a ucz się mądrości:"
+        },
+        {
+          "number": 7,
+          "text": "Która, nie mając wodza, ani nauczyciela, ani przełożonego,"
+        },
+        {
+          "number": 8,
+          "text": "Gotuje w lecie pokarm sobie i zgromadza we żniwa, coby jadła."
+        },
+        {
+          "number": 9,
+          "text": "A dokądże, leniwcze! spać będziesz? kiedy powstaniesz ze snu swego?"
+        },
+        {
+          "number": 10,
+          "text": "Mało pośpisz, mało podrzymiesz, mało złożysz ręce ku spaniu:"
+        },
+        {
+          "number": 11,
+          "text": "I przyjdzie na cię jako podróżny niedostatek, a ubóstwo jako mąż zbrojny. Lecz jeźli będziesz nieleniwym, przyjdzie jako źródło żniwo twoje, a niedostatek daleko uciecze od ciebie."
+        },
+        {
+          "number": 12,
+          "text": "Człowiek odstępca, mąż nieużyteczny chodzi z przewrótnemi usty."
+        },
+        {
+          "number": 13,
+          "text": "Mruga oczyma, pociera nogą, palcem mówi."
+        },
+        {
+          "number": 14,
+          "text": "Złem sercem myśli złość, a na każdy czas swary rozsiewa."
+        },
+        {
+          "number": 15,
+          "text": "Temu nagle przyjdzie zatracenie jego, i zarazem start będzie: ani będzie więcéj mieć lekarstwa."
+        },
+        {
+          "number": 16,
+          "text": "Sześć rzeczy są, których nienawidzi Pan, a siódmą brzydzi się dusza jego:"
+        },
+        {
+          "number": 17,
+          "text": "Oczu wyniosłych, języka kłamliwego, ręku przelewających krew niewinną."
+        },
+        {
+          "number": 18,
+          "text": "Serca wymyślającego myśli złośliwe, nóg prędkich na bieżenie ku złemu."
+        },
+        {
+          "number": 19,
+          "text": "Świadka fałszywego, który mówi kłamstwo, i tego, który sieje rozterki między bracią."
+        },
+        {
+          "number": 20,
+          "text": "Zachowaj, synu mój! przykazania ojca twego, a nie opuszczaj zakonu matki twojéj."
+        },
+        {
+          "number": 21,
+          "text": "Uwiąż je zawsze u serca twego, i obwin koło szyje twojéj."
+        },
+        {
+          "number": 22,
+          "text": "Gdy będziesz chodził, niechaj idą z tobą: gdy będziesz spał, niech cię strzegą: a gdy się ocucisz, rozmawiaj z niemi."
+        },
+        {
+          "number": 23,
+          "text": "Bo przykazanie pochodnia jest, a zakon światłość: i droga do żywota, karność ćwiczenia."
+        },
+        {
+          "number": 24,
+          "text": "Aby cię strzegły od złéj niewiasty, od łagodnego języka obcéj."
+        },
+        {
+          "number": 25,
+          "text": "Niechaj nie pożąda piękności jéj serce twoje, ani się daj poimać mruganiu jéj."
+        },
+        {
+          "number": 26,
+          "text": "Cena bowiem nierządnice ledwie za jeden chleb stoi: a niewiasta drogą duszę mężową pójmuje."
+        },
+        {
+          "number": 27,
+          "text": "Izali człowiek może skryć ogień w zanadrzu swojem, aby nie gorzały szaty jego?"
+        },
+        {
+          "number": 28,
+          "text": "Albo chodzić po rozpalonym węglu, aby się nie oparzyły nogi jego?"
+        },
+        {
+          "number": 29,
+          "text": "Tak ten, który wnidzie do żony bliźniego swego, nie będzie czysty, kiedy się jéj dotknie."
+        },
+        {
+          "number": 30,
+          "text": "Nie wielkać jest wina, kiedy kto ukradnie; bo kradnie, aby duszę łaknącą nasycił:"
+        },
+        {
+          "number": 31,
+          "text": "Gdy go téż zastaną, nagrodzi siedmiorako, i wyda wszystkę majętność domu swego."
+        },
+        {
+          "number": 32,
+          "text": "Ale kto cudzołożnik jest, prze niedostatek serca straci duszę swoję."
+        },
+        {
+          "number": 33,
+          "text": "Zelżywość i sromotę zgromadza sobie, a hańba jego nie będzie zgładzona."
+        },
+        {
+          "number": 34,
+          "text": "Bo zawistna miłość i zapalczywość mężowa nie przepuści w dzień pomsty."
+        },
+        {
+          "number": 35,
+          "text": "I nie da się użyć niczyjéj prośbie, i nie przyjmie za odkupienie najwięcéj darów."
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_7",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Synu mój! strzeż mów moich, a przykazania moje zachowaj u siebie."
+        },
+        {
+          "number": 2,
+          "text": "Strzeż przykazań moich, a będziesz żyw, i zakonu mego, jako źrenice oka twego."
+        },
+        {
+          "number": 3,
+          "text": "Przywiąż go na palcach twoich, napisz go na tablicach serca twego."
+        },
+        {
+          "number": 4,
+          "text": "Rzecz mądrości: Siostrą moją jesteś: a roztropność nazywaj przyjaciółką swoją:"
+        },
+        {
+          "number": 5,
+          "text": "Aby cię strzegła od obcéj niewiasty i od cudzéj, która słowa swoje łagodnemi czyni."
+        },
+        {
+          "number": 6,
+          "text": "Bom oknem domu swego przez kratę wyglądał:"
+        },
+        {
+          "number": 7,
+          "text": "I ujrzałem maluczkie, obaczyłem głupiego młodzieńca."
+        },
+        {
+          "number": 8,
+          "text": "Który szedł przez ulicę przy kącie, a wedle drogi domu jéj poszedł:"
+        },
+        {
+          "number": 9,
+          "text": "Zmierzkiem, pod wieczór, w ciemności nocnéj i w mroku."
+        },
+        {
+          "number": 10,
+          "text": "A oto wyszła przeciw jemu niewiasta w ubiorze wszetecznym, gotowa na łowienie dusz:"
+        },
+        {
+          "number": 11,
+          "text": "Świegotliwa i błędna, niespokojna, i nie mogąc ostać się w domu swym, na nogach swoich:"
+        },
+        {
+          "number": 12,
+          "text": "To przed domem, to na ulicach, to przy kąciech, zasadzkę czyniąc:"
+        },
+        {
+          "number": 13,
+          "text": "I ująwszy młodzieńca pocałowała, a niewstydliwą twarzą pochlebuje, mówiąc:"
+        },
+        {
+          "number": 14,
+          "text": "Ślubiłam ofiary za zdrowie, dzisiajm oddała śluby moje."
+        },
+        {
+          "number": 15,
+          "text": "Przetóżem wyszła przeciw tobie, pragnąc cię widzieć, i nalazłam."
+        },
+        {
+          "number": 16,
+          "text": "Usznurowałam powrózkami łóżko moje, usłałam je kobiercami wzorzystymi z Egiptu."
+        },
+        {
+          "number": 17,
+          "text": "Potrzęsłam pościel moję mirrą i aloesem i cynamonem."
+        },
+        {
+          "number": 18,
+          "text": "Pójdźże, upijmy się piersiami, i nakochajmy się w pożądanem obłapianiu aż do białego dnia."
+        },
+        {
+          "number": 19,
+          "text": "Bo niemasz męża w domu jego, jechał w daleką drogę."
+        },
+        {
+          "number": 20,
+          "text": "Wziął z sobą worek pieniędzy: w pełni księżyca ma się wrócić do domu swego."
+        },
+        {
+          "number": 21,
+          "text": "Usidliła go rozmaitą mową, i łagodnością ust przyciągnęła go."
+        },
+        {
+          "number": 22,
+          "text": "Wnet poszedł za nią, jako wół, gdy go na rzeź wiodą, i jako baran poskakujący, a nie wiedząc, że do powroza głupiego ciągną:"
+        },
+        {
+          "number": 23,
+          "text": "Aż przebije strzała wątrobę jego: jako gdyby ptak śpieszył się do sidła, a nie wie, że idzie o niebezpieczeństwo dusze jego."
+        },
+        {
+          "number": 24,
+          "text": "Teraz tedy, synu mój! słuchaj mię, a bądź pilen słów ust moich."
+        },
+        {
+          "number": 25,
+          "text": "Niechaj się nie unosi za drogami jéj serce twoje, i nie daj się zdradzać ścieżkom jéj."
+        },
+        {
+          "number": 26,
+          "text": "Wielu bowiem zraniwszy powaliła, i najmocniejsi od niéj są pozabijani."
+        },
+        {
+          "number": 27,
+          "text": "Droga do piekła dom jéj, przechodząca aż do gmachów śmierci."
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_8",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Izali mądrość nie woła, a roztropność nie podawa głosu swego?"
+        },
+        {
+          "number": 2,
+          "text": "Na wierzchach i wysokich górach, przy drodze, w pośrodku dróg stojąc,"
+        },
+        {
+          "number": 3,
+          "text": "Przy bramach miejskich i w samych drzwiach mówi, rzekąc:"
+        },
+        {
+          "number": 4,
+          "text": "O ludzie, do was wołam, a głos mój ku synom człowieczym."
+        },
+        {
+          "number": 5,
+          "text": "Zrozumiejcież, maluccy, chytrość, a głupcy obaczajcie się."
+        },
+        {
+          "number": 6,
+          "text": "Słuchajcie; bo o wielkich rzeczach mówić będę: i otworzą się usta moje, aby opowiadały prawości."
+        },
+        {
+          "number": 7,
+          "text": "Prawdę rozmyślać będzie gardło moje, a wargi moje będą się brzydzić niezbożnością."
+        },
+        {
+          "number": 8,
+          "text": "Sprawiedliwe są wszystkie powieści moje, niemasz w nich nic krzywego ani przewrótnego."
+        },
+        {
+          "number": 9,
+          "text": "Proste są rozumnym, i prawe najdującym umiejętność."
+        },
+        {
+          "number": 10,
+          "text": "Przyjmijcie ćwiczenie moje, a nie pieniądze: umiejętność raczéj niż złoto obierajcie."
+        },
+        {
+          "number": 11,
+          "text": "Lepsza jest bowiem mądrość nad wszelakie najdroższe rzeczy, i wszystko, co może być pożądane, nie może jéj być przyrównane."
+        },
+        {
+          "number": 12,
+          "text": "Ja, mądrość mieszkam w radzie, a przy myślach ćwiczonych bywam."
+        },
+        {
+          "number": 13,
+          "text": "Bojaźń Pańska nienawidzi złości: pychą i hardością, i drogą złą, i usty dwujęzycznemi brzydzę się."
+        },
+        {
+          "number": 14,
+          "text": "Moja jest rada i prawość, moja jest roztropność, moje jest męstwo."
+        },
+        {
+          "number": 15,
+          "text": "Przez mię królowie królują, i prawodawcy stanowią sprawiedliwość."
+        },
+        {
+          "number": 16,
+          "text": "Przez mię książęta panują, i mocarze skazują sprawiedliwie."
+        },
+        {
+          "number": 17,
+          "text": "Ja miłuję tych, którzy mię miłują: a którzy rano czują do mnie, najdą mię."
+        },
+        {
+          "number": 18,
+          "text": "Przy mnie są bogactwa i sława, pyszne majętności i sprawiedliwość."
+        },
+        {
+          "number": 19,
+          "text": "Lepszy bowiem jest owoc mój niż złoto i kamienie drogie: a urodzaje moje niż śrebro wyborne."
+        },
+        {
+          "number": 20,
+          "text": "Na drogach sprawiedliwości chodzę, w pośrodku ścieżek sądowych:"
+        },
+        {
+          "number": 21,
+          "text": "Abych ubogaciła te, którzy mię miłują, i skarby ich abym napełniła."
+        },
+        {
+          "number": 22,
+          "text": "Pan mię posiągł na początku dróg swoich, pierwéj niźli co czynił z początku."
+        },
+        {
+          "number": 23,
+          "text": "Od wiekum jest zrządzona i z starodawna, pierwéj niźli się ziemia stała."
+        },
+        {
+          "number": 24,
+          "text": "Jeszcze nie było przepaści, a jam już poczęta była: ani jeszcze źródła wód były wyniknęły:"
+        },
+        {
+          "number": 25,
+          "text": "Ani jeszcze góry ciężką wielkością były stanęły przed pagórkami, jam się rodziła."
+        },
+        {
+          "number": 26,
+          "text": "Jeszcze był ziemie nie uczynił, ani rzek, ani zawias okręgu ziemie."
+        },
+        {
+          "number": 27,
+          "text": "Gdy gotował niebiosa, tamem ja była: gdy pewnym porządkiem i kołem otaczał przepaści."
+        },
+        {
+          "number": 28,
+          "text": "Gdy niebiosa utwierdzał wzgórę, i ważył źródła wód."
+        },
+        {
+          "number": 29,
+          "text": "Gdy zakładał morzu granice jego, a ustawę dawał wodom, aby nie przestępowały granic swoich: kiedy zawieszał fundamenty ziemie."
+        },
+        {
+          "number": 30,
+          "text": "Z nimem była wszystko składając, i kochałam się na każdy dzień:"
+        },
+        {
+          "number": 31,
+          "text": "Igrając przed nim na każdy czas,"
+        },
+        {
+          "number": 32,
+          "text": "Igrając na okręgu ziemie: a kochanie moje, być z synmi człowieczymi."
+        },
+        {
+          "number": 33,
+          "text": "Teraz tedy, synowie! słuchajcie mię: błogosławieni, którzy strzegą dróg moich."
+        },
+        {
+          "number": 34,
+          "text": "Słuchajcie ćwiczenia a bądźcie mądrymi, a nie odrzucajcie go."
+        },
+        {
+          "number": 35,
+          "text": "Błogosławiony człowiek, który mię słucha: i który czuje u drzwi moich na każdy dzień, i pilnuje u podwojów drzwi moich."
+        },
+        {
+          "number": 36,
+          "text": "Kto mię najdzie, najdzie żywot i wyczerpnie zbawienie od Pana."
+        },
+        {
+          "number": 37,
+          "text": "Ale kto przeciw mnie zgrzeszy, obrazi duszę swoję. Wszyscy, którzy mię nienawidzą, kochają się w śmierci."
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_9",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Mądrość zbudowała sobie dom, wyciosała siedm filarów."
+        },
+        {
+          "number": 2,
+          "text": "Ofiarowała ofiary swoje, roztworzyła wino i stół swój wystawiła."
+        },
+        {
+          "number": 3,
+          "text": "Posłała dziewki swe, (aby przyzwały), na zamek i na mury miejskie:"
+        },
+        {
+          "number": 4,
+          "text": "Jeźli kto jest maluczkim, niechaj przyjdzie do mnie."
+        },
+        {
+          "number": 5,
+          "text": "I głupcom mówiła: Pójdźcie, pożywajcie chleba mego i pijcie wino, którem wam roztworzyła."
+        },
+        {
+          "number": 6,
+          "text": "Opuśćcie dzieciństwo a żyjcie, i chódźcie drogami roztropności."
+        },
+        {
+          "number": 7,
+          "text": "Kto uczy naśmiewcę, sam sobie krzywdę czyni: a kto strofuje niezbożnika, zmazę sobie rodzi."
+        },
+        {
+          "number": 8,
+          "text": "Nie karz naśmiewcę, aby cię nie miał w nienawiści: karz mądrego, a będzie cię miłował."
+        },
+        {
+          "number": 9,
+          "text": "Daj mądremu powód, a przyczyni mu się mądrości: nauczaj sprawiedliwego, a pokwapi się wziąć."
+        },
+        {
+          "number": 10,
+          "text": "Początek mądrości bojaźń Pańska: a umiejętność świętych roztropność."
+        },
+        {
+          "number": 11,
+          "text": "Bo przez mię rozmnożą się dni twoje, i przyczynią się tobie lata żywota."
+        },
+        {
+          "number": 12,
+          "text": "Jeźli będziesz mądrym, sam sobie będziesz: a będzieszli naśmiewcą, sam złe poniesiesz."
+        },
+        {
+          "number": 13,
+          "text": "Niewiasta głupia i wrzaskliwa i pełna łudarstwa, a nic zgoła nie umiejąca."
+        },
+        {
+          "number": 14,
+          "text": "Siedzi we drzwiach domu swego na stołku, na wyższem miejscu w mieście,"
+        },
+        {
+          "number": 15,
+          "text": "Aby wołała mijających drogą, a idących drogą swoją:"
+        },
+        {
+          "number": 16,
+          "text": "Kto jest maluczki, niechaj zstąpi do mnie: a głupcowi rzekła:"
+        },
+        {
+          "number": 17,
+          "text": "Wody kradzione słodsze są, a chleb kryjomy smaczniejszy."
+        },
+        {
+          "number": 18,
+          "text": "A nie wiedział, że tam są olbrzymowie, i w głębokościach piekielnych goście jéj."
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_10",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Mądry syn rozwesela ojca: a syn głupi smutkiem jest matce swojéj."
+        },
+        {
+          "number": 2,
+          "text": "Nic nie pomogą skarby niezbożności, lecz sprawiedliwość wybawi od śmierci."
+        },
+        {
+          "number": 3,
+          "text": "Nie udręczy Pan głodem dusze sprawiedliwego: a zasadki niezbożnych wywróci."
+        },
+        {
+          "number": 4,
+          "text": "Ubóstwo sprawiła ręka leniwa: ale ręka mocnych bogactwa gotuje. Kto się wspiera na kłamstwach, ten pasie wiatry: a tenże téż ściga latające ptaki."
+        },
+        {
+          "number": 5,
+          "text": "Kto zbiera we żniwa, syn mądry jest: ale kto śpi lecie, syn pohańbienia."
+        },
+        {
+          "number": 6,
+          "text": "Błogosławieństwo Pańskie nad głową sprawiedliwego: a nieprawość usta bezbożnych pokrywa."
+        },
+        {
+          "number": 7,
+          "text": "Pamiątka sprawiedliwego z chwałą: ale imię niezbożnych zginie."
+        },
+        {
+          "number": 8,
+          "text": "Mądry sercem przyjmuje przykazania: głupi bywa bit wargami."
+        },
+        {
+          "number": 9,
+          "text": "Kto chodzi w prostości, bezpiecznie chodzi: lecz kto wywraca drogi swe, wyjawion będzie."
+        },
+        {
+          "number": 10,
+          "text": "Kto mruga okiem, przyniesie żal: a głupi wargami będzie bit."
+        },
+        {
+          "number": 11,
+          "text": "Źródło żywota usta sprawiedliwego: a usta niezbożnych nieprawość pokrywają."
+        },
+        {
+          "number": 12,
+          "text": "Nienawiść wzbudza swary: a wszystkie występki miłość pokrywa."
+        },
+        {
+          "number": 13,
+          "text": "W uściech mądrego najduje się mądrość: a kij na grzbiecie tego, któremu nie staje serca."
+        },
+        {
+          "number": 14,
+          "text": "Mądrzy tają umiejętność: lecz usta głupiego są bliskie pohańbienia."
+        },
+        {
+          "number": 15,
+          "text": "Majętność bogatego miasto mocy jego: bojaźń ubogich niedostatek ich."
+        },
+        {
+          "number": 16,
+          "text": "Robota sprawiedliwego ku żywotowi: ale urodzaj niezbożnego ku grzechowi."
+        },
+        {
+          "number": 17,
+          "text": "Droga do żywota, strzegącemu ćwiczenia: lecz kto opuszcza karność, błądzi."
+        },
+        {
+          "number": 18,
+          "text": "Wargi kłamliwe tają w sobie nienawiść: kto mówi potwarz, głupi jest."
+        },
+        {
+          "number": 19,
+          "text": "W wielomówności nie będzie bez grzechu: lecz kto miarkuje wargi swe, bardzo roztropny jest."
+        },
+        {
+          "number": 20,
+          "text": "Śrebro wyborne język sprawiedliwego: ale serce niezbożnych za nic nie stoi."
+        },
+        {
+          "number": 21,
+          "text": "Wargi sprawiedliwego nauczają wielu: lecz którzy nieumiejętni są, w niedostatku serca pomrą."
+        },
+        {
+          "number": 22,
+          "text": "Błogosławieństwo Pańskie czyni bogatymi, ani się przyłączy do nich utrapienie."
+        },
+        {
+          "number": 23,
+          "text": "Głupi jakoby śmiechem czyni niecnotę, ale mądrością jest mężowi baczność."
+        },
+        {
+          "number": 24,
+          "text": "Czego się boi niezbożnik, przyjdzie nań: żądanie ich sprawiedliwym będzie dano."
+        },
+        {
+          "number": 25,
+          "text": "Jako chmura przechodząca przeminie niezbożnik: lecz sprawiedliwy jako fundament wieczny."
+        },
+        {
+          "number": 26,
+          "text": "Jako ocet zębom, a dym oczom, tak leniwy tym, którzy go posłali."
+        },
+        {
+          "number": 27,
+          "text": "Bojaźń Pańska dni przyczyni: a lata niezbożnych będą ukrócone."
+        },
+        {
+          "number": 28,
+          "text": "Oczekawanie sprawiedliwych wesele: lecz nadzieja niezbożnych zginie."
+        },
+        {
+          "number": 29,
+          "text": "Moc prostego droga Pańska: a strach tym, którzy źle czynią."
+        },
+        {
+          "number": 30,
+          "text": "Sprawiedliwy na wieki poruszon nie będzie: a niezbożnicy mieszkać nie będą na ziemi."
+        },
+        {
+          "number": 31,
+          "text": "Usta sprawiedliwego zrodzą mądrość: język przewrótnych zginie."
+        },
+        {
+          "number": 32,
+          "text": "Wargi sprawiedliwego upatrują wdzięczności: a usta bezbożnych przewrótności."
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_11",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Waga zdradliwa brzydliwość jest u Pana: a gwicht sprawiedliwy wola jego."
+        },
+        {
+          "number": 2,
+          "text": "Gdzie będzie pycha, tam będzie i hańba: a gdzie jest pokora, tam i mądrość."
+        },
+        {
+          "number": 3,
+          "text": "Prostota sprawiedliwych poprowadzi je: a podejście fałszerzów spustoszy je."
+        },
+        {
+          "number": 4,
+          "text": "Nie pomogą bogactwa w dzień pomsty: ale sprawiedliwość wybawi od śmierci."
+        },
+        {
+          "number": 5,
+          "text": "Sprawiedliwość prostego naprostuje drogę jego: a niezbożnik upadnie w swojéj niezbożności."
+        },
+        {
+          "number": 6,
+          "text": "Sprawiedliwość prawych wyzwoli je: a niesprawiedliwi w zasadkach swoich poimani będą."
+        },
+        {
+          "number": 7,
+          "text": "Gdy umrze człowiek niezbożny, ustanie wszystka nadzieja: i oczekawanie frasowliwych zginie."
+        },
+        {
+          "number": 8,
+          "text": "Sprawiedliwy z ucisku wyrwan jest: a miasto niego niezbożnik będzie dany."
+        },
+        {
+          "number": 9,
+          "text": "Obłudnik usty zdradza przyjaciela swego: ale sprawiedliwi umiejętnością będą wybawieni."
+        },
+        {
+          "number": 10,
+          "text": "W szczęściu sprawiedliwych będzie się radowało miasto: a w zatraceniu niezbożnych będzie pochwała."
+        },
+        {
+          "number": 11,
+          "text": "Błogosławieństwem sprawiedliwych wywyższy się miasto: a usty niezbożnych wywróci się."
+        },
+        {
+          "number": 12,
+          "text": "Kto gardzi przyjacielem swoim, potrzebujący serca jest: a człowiek rozumny milczy."
+        },
+        {
+          "number": 13,
+          "text": "Kto zdradliwie chodzi, objawia tajemnice: ale kto wiernego serca, tai tego, czego mu się przyjaciel zwierzył."
+        },
+        {
+          "number": 14,
+          "text": "Gdzie niemasz rządzce, lud upadnie: a zdrowie, gdzie wiele rady."
+        },
+        {
+          "number": 15,
+          "text": "Złem utrapion będzie, który ręczy za obcego: lecz, kto się strzeże sideł, bezpieczen będzie."
+        },
+        {
+          "number": 16,
+          "text": "Niewiasta wdzięczna dostąpi sławy: a mocarze będą mieć bogactwa."
+        },
+        {
+          "number": 17,
+          "text": "Dobrze czyni duszy swéj człowiek miłosierny: a który okrutnym jest, odrzuca i krewne."
+        },
+        {
+          "number": 18,
+          "text": "Bezbożnik czyni dzieło nietrwałe, a siejącemu sprawiedliwość zapłata wierna."
+        },
+        {
+          "number": 19,
+          "text": "Łaskawość gotuje żywot: a naśladowanie złych śmierć."
+        },
+        {
+          "number": 20,
+          "text": "Brzydliwe Panu serce przewrótne: a upodobanie jego w tych, którzy w prostości chodzą."
+        },
+        {
+          "number": 21,
+          "text": "Ręka w ręce, nie ujdzie zły karania: ale nasienie sprawiedliwych zachowane będzie."
+        },
+        {
+          "number": 22,
+          "text": "Kolce złote w pysku u świnie niewiasta piękna a głupia."
+        },
+        {
+          "number": 23,
+          "text": "Żądza sprawiedliwych wszelka dobra jest: oczekawanie niezbożników zapalczywość."
+        },
+        {
+          "number": 24,
+          "text": "Jedni udzielają własnych, a bogatszymi się stawają, a drudzy wydzierają nieswoje, a zawsze są w niedostatku."
+        },
+        {
+          "number": 25,
+          "text": "Dusza, która błogosławi, utyje: a kto upaja, i sam téż upojon będzie."
+        },
+        {
+          "number": 26,
+          "text": "Kto kryje zboże, przeklnie go pospólstwo: lecz błogosławieństwo nad głową przedawających."
+        },
+        {
+          "number": 27,
+          "text": "Dobrze wstaje rano, który szuka dobra: ale kto szuka złości, zatłumi go."
+        },
+        {
+          "number": 28,
+          "text": "Kto ufa w bogactwach swoich, upadnie: a sprawiedliwi jako zielony list zakwitną."
+        },
+        {
+          "number": 29,
+          "text": "Kto mięsza dom swój, odziedziczy wiatry: a kto głupi jest, będzie służył mądremu."
+        },
+        {
+          "number": 30,
+          "text": "Owoc sprawiedliwego drzewo żywota: a kto przyjmuje dusze, mądry jest."
+        },
+        {
+          "number": 31,
+          "text": "Jeźliż sprawiedliwy na ziemi odnosi: jako daleko więcéj niezbożny i grzeszny?"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_12",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Kto miłuje karność, miłuje umiejętność: ale kto nienawidzi strofowania, głupi jest."
+        },
+        {
+          "number": 2,
+          "text": "Kto dobry jest, wyczerpnie łaskę u Pana: ale kto ufa w myślach swoich, niezbożnie czyni."
+        },
+        {
+          "number": 3,
+          "text": "Nie zmocni się człowiek z niezbożności: a korzeń sprawiedliwych nie będzie poruszony."
+        },
+        {
+          "number": 4,
+          "text": "Niewiasta pilna jest koroną mężowi swemu: a zgniłość w kościach jego, która czyni rzeczy godne sromoty."
+        },
+        {
+          "number": 5,
+          "text": "Myśli sprawiedliwych sądy: a rady niezbożnych zdradliwe."
+        },
+        {
+          "number": 6,
+          "text": "Słowa niezbożników czyhają na krew: usta sprawiedliwych wybawiają je."
+        },
+        {
+          "number": 7,
+          "text": "Obróć niezbożne, a nie będzie ich: a dom sprawiedliwych stać będzie."
+        },
+        {
+          "number": 8,
+          "text": "Z nauki swojéj mąż będzie poznany: ale kto jest nikczemny a głupi, wzgardzie podlęże."
+        },
+        {
+          "number": 9,
+          "text": "Lepszy jest ubogi, mając swą potrzebę, niźli chlubliwy, który potrzebuje chleba."
+        },
+        {
+          "number": 10,
+          "text": "Zna sprawiedliwy dusze bydła swego: a wnętrzności niezbożnych okrutne."
+        },
+        {
+          "number": 11,
+          "text": "Kto sprawuje ziemię swoję, będzie nasycon chlebem: ale kto się próżnowaniem bawi, najgłupszy jest. Kto wesoły jest w zasiadaniu na winie, w zamkach swoich zostawi sromotę."
+        },
+        {
+          "number": 12,
+          "text": "Żądza niezbożnika zmocnienie niecnotliwych: lecz korzeń sprawiedliwych rość będzie."
+        },
+        {
+          "number": 13,
+          "text": "Dla ust przewrótnych przybliża się upad złośliwemu: lecz sprawiedliwy ujdzie ucisku."
+        },
+        {
+          "number": 14,
+          "text": "Z owocu ust swoich każdy będzie napełnion dobrami: a według uczynków rąk jego będzie mu oddano."
+        },
+        {
+          "number": 15,
+          "text": "Droga głupiego prosta w oczach jego: lecz kto mądry jest, słucha porady."
+        },
+        {
+          "number": 16,
+          "text": "Głupi natychmiast gniew swój pokazuje: lecz, kto krzywdę pokrywa, chytry jest."
+        },
+        {
+          "number": 17,
+          "text": "Który, co wie, mówi, świadek jest sprawiedliwy: ale, który kłama, jest świadek zdradliwy."
+        },
+        {
+          "number": 18,
+          "text": "Jest, który obiecuje, a jako mieczem sumienia kłóty bywa: a język mądrych jest zdrowie."
+        },
+        {
+          "number": 19,
+          "text": "Warga prawdy trwała będzie na wieki, a kto jest świadek nagły, ten stroi język kłamstwa."
+        },
+        {
+          "number": 20,
+          "text": "Zdrada w sercu myślących złości: ale, którzy radzą o pokoju, idzie za nimi wesele."
+        },
+        {
+          "number": 21,
+          "text": "Nie zafrasuje sprawiedliwego, cokolwiek nań przypadnie: lecz niezbożnicy będą pełni złego."
+        },
+        {
+          "number": 22,
+          "text": "Brzydkością są Panu wargi kłamliwe: a którzy się wiernie obchodzą, podobają mu się."
+        },
+        {
+          "number": 23,
+          "text": "Człowiek chytry tai umiejętność: a serce głupich wywoływa głupstwo."
+        },
+        {
+          "number": 24,
+          "text": "Ręka mocnych panować będzie: a, która leniwa jest, pod hołdem będzie."
+        },
+        {
+          "number": 25,
+          "text": "Smutek w sercu męża poniży go: a powieścią dobrą uweselon bywa."
+        },
+        {
+          "number": 26,
+          "text": "Kto nie waży szkody dla przyjaciela, jest sprawiedliwy: lecz droga niezbożnych zdradzi je."
+        },
+        {
+          "number": 27,
+          "text": "Nie najdzie zysku zdradliwy: a majętność człowieka będzie cena złota."
+        },
+        {
+          "number": 28,
+          "text": "Na ścieżce sprawiedliwości żywot: a droga zdrożna wiedzie do śmierci."
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_13",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Syn mądry, nauka ojcowska: a który jest naśmiewca, nie słucha, kiedy go strofują."
+        },
+        {
+          "number": 2,
+          "text": "Z owocu ust swoich człowiek będzie nasycon dobrami: ale dusza przestępców złośliwa."
+        },
+        {
+          "number": 3,
+          "text": "Kto strzeże ust swoich, strzeże dusze swojej: lecz, kto nie rozmyślny jest ku mówieniu, poczuje szkody."
+        },
+        {
+          "number": 4,
+          "text": "Chce i nie chce leniwiec: a dusza robiących utyje."
+        },
+        {
+          "number": 5,
+          "text": "Słowem kłamliwem będzie się brzydził sprawiedliwy: lecz niezbożnik zawstydza i zawstydzon będzie."
+        },
+        {
+          "number": 6,
+          "text": "Sprawiedliwość strzeże drogi niewinnego: lecz niezbożność podchodzi grzesznika."
+        },
+        {
+          "number": 7,
+          "text": "Jest jakoby bogaty, choć nic nie ma: a jest jakoby ubogi, choć ma wiele bogactw."
+        },
+        {
+          "number": 8,
+          "text": "Okup dusze męża bogactwa jego: lecz ubogi nie odnosi łajania."
+        },
+        {
+          "number": 9,
+          "text": "Światłość sprawiedliwych uwesela: ale świeca niezbożnych zagaśnie."
+        },
+        {
+          "number": 10,
+          "text": "Między pysznymi zawsze są swary: a którzy wszystko czynią z poradą, rządzą się mądrością."
+        },
+        {
+          "number": 11,
+          "text": "Majętność prędko nabyta umniejszy się: a która polekku bywa ręką zgromadzona, rozmnoży się."
+        },
+        {
+          "number": 12,
+          "text": "Nadzieja, która się odwłóczy, trapi duszę: drzewo żywota pożądanie wypełnione."
+        },
+        {
+          "number": 13,
+          "text": "Kto uwłacza rzeczy jakiéj, sam się na przyszły czas obowięzuje: a kto się boi przykazania, w pokoju będzie mieszkał. Dusze zdradliwe błądzą w grzechach: ale sprawiedliwi są miłosierni i litują się."
+        },
+        {
+          "number": 14,
+          "text": "Zakon mądrego zdrój żywota, aby odwodził od upadku śmierci."
+        },
+        {
+          "number": 15,
+          "text": "Nauka dobra da łaskę: na drodze gardzących przepaść."
+        },
+        {
+          "number": 16,
+          "text": "Chytry czyni wszystko zdradą: ale kto głupi jest, pokazuje głupstwo."
+        },
+        {
+          "number": 17,
+          "text": "Poseł niezbożnego wpadnie we złe: ale poseł wierny zdrowie."
+        },
+        {
+          "number": 18,
+          "text": "Nędza i sromota temu, który opuszcza ćwiczenie: a kto słucha karzącego, wsławion będzie."
+        },
+        {
+          "number": 19,
+          "text": "Żądza, jeźli się spełni, rozkoszuje duszę: brzydzą się głupi tymi, którzy się strzegą złego."
+        },
+        {
+          "number": 20,
+          "text": "Kto chodzi z mądrym, mądrym będzie: przyjaciel głupich stanie się podobny."
+        },
+        {
+          "number": 21,
+          "text": "Grzeszniki goni nieszczęście: a sprawiedliwym nagrodzi się dobrem."
+        },
+        {
+          "number": 22,
+          "text": "Dobry zostawuje dziedzicami syny i wnuki: i chowają na sprawiedliwego majętność grzesznego."
+        },
+        {
+          "number": 23,
+          "text": "Obfita żywność na nowinach ojców: ale innym bywają zbierane bez rozsądku."
+        },
+        {
+          "number": 24,
+          "text": "Kto folguje rózdze, nienawidzi syna swego: lecz kto go miłuje, ustawnie ćwiczy."
+        },
+        {
+          "number": 25,
+          "text": "Sprawiedliwy je i nasyca duszę swoję: lecz brzuch niezbożnych nie nasycony."
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_14",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Mądra niewiasta buduje dom swój: a głupia i zbudowany rękoma zepsuje."
+        },
+        {
+          "number": 2,
+          "text": "Chodzący prostą drogą i bojący się Boga, wzgardzon bywa od tego, który bezecną drogą chodzi."
+        },
+        {
+          "number": 3,
+          "text": "W uściech głupiego kij pychy: lecz wargi mądrych strzegą ich."
+        },
+        {
+          "number": 4,
+          "text": "Kędy niemasz wołów, żłób próżny jest: a gdzie wiele zboża, tam jest jawna moc wołu."
+        },
+        {
+          "number": 5,
+          "text": "Świadek prawdziwy nie kłama: lecz nieprawdę powiada świadek zdradliwy."
+        },
+        {
+          "number": 6,
+          "text": "Szuka naśmiewca mądrości, a nie najduje: nauka roztropnych łacna."
+        },
+        {
+          "number": 7,
+          "text": "Idź przeciw mężowi głupiemu, a nie zna warg mądrości."
+        },
+        {
+          "number": 8,
+          "text": "Mądrość chytrego jest rozumieć drogę swoję: a nieopatrzność głupich obłędna."
+        },
+        {
+          "number": 9,
+          "text": "Głupi będzie się śmiał z grzechu: a między sprawiedliwymi będzie mieszkała łaska."
+        },
+        {
+          "number": 10,
+          "text": "Serce, które zna gorzkość dusze swojéj, do wesela jego nie przymięsza się obcy."
+        },
+        {
+          "number": 11,
+          "text": "Dom niezbożnych zgładzon będzie: lecz przybytki sprawiedliwych zakwitną."
+        },
+        {
+          "number": 12,
+          "text": "Jest droga, która się zda człowiekowi sprawiedliwa: ale koniec jéj prowadzi do śmierci."
+        },
+        {
+          "number": 13,
+          "text": "Śmiech będzie zmięszan z żałością: a koniec wesela smutek posiada."
+        },
+        {
+          "number": 14,
+          "text": "Drogami swemi nasycon będzie głupi: a nad nim będzie mąż dobry."
+        },
+        {
+          "number": 15,
+          "text": "Prostak wierzy każdemu słowu: chytry rozważa kroki swoje. Syn zdradliwy nie będzie miał nic dobrego: ale słudze mądremu poszczęścią się sprawy, i wyprostuje się droga jego."
+        },
+        {
+          "number": 16,
+          "text": "Mądry boi się i odstępuje od złego: głupi przeskakuje a dufa."
+        },
+        {
+          "number": 17,
+          "text": "Niecierpliwy czynić będzie głupstwo: a mąż chytry przemierzły jest."
+        },
+        {
+          "number": 18,
+          "text": "Maluczcy posiędą głupstwo: a opatrzni będą czekać umiejętności."
+        },
+        {
+          "number": 19,
+          "text": "Będą leżeć źli przed dobrymi: a niezbożnicy u drzwi sprawiedliwych."
+        },
+        {
+          "number": 20,
+          "text": "Ubogi i bliźniemu swemu omierzły będzie: ale bogatych jest przyjaciół wiele."
+        },
+        {
+          "number": 21,
+          "text": "Kto gardzi bliźnim swoim, grzeszy: ale kto ma litość nad ubogim, błogosławiony będzie. Kto wierzy w Pana, miłosierdzie miłuje."
+        },
+        {
+          "number": 22,
+          "text": "Błądzą, którzy źle czynią: miłosierdzie i prawda gotują dobra."
+        },
+        {
+          "number": 23,
+          "text": "Ze wszelkiéj roboty będzie dostatek: ale, gdzie słów wiele, tam często niedostatek."
+        },
+        {
+          "number": 24,
+          "text": "Korona mądrych bogactwa ich: szaleństwo głupich nieroztropność."
+        },
+        {
+          "number": 25,
+          "text": "Wybawia duszę świadek prawdziwy: a zdradliwy kłamstwa mówi."
+        },
+        {
+          "number": 26,
+          "text": "W bojaźni Pańskiéj ufanie mocy: i synowie jego nadzieję mieć będą."
+        },
+        {
+          "number": 27,
+          "text": "Bojaźń Pańska zdrój żywota, aby uszli upadku śmierci."
+        },
+        {
+          "number": 28,
+          "text": "W wielkości ludu godność królewska: a w trosze ludzi zelżywość książęcia."
+        },
+        {
+          "number": 29,
+          "text": "Kto jest cierpliwy, wielką się mądrością rządzi: a kto niecierpliwy jest, wywyższa swe głupstwo."
+        },
+        {
+          "number": 30,
+          "text": "Żywot ciała zdrowie serca: spróchnienie kości zazdrość."
+        },
+        {
+          "number": 31,
+          "text": "Kto czyni krzywdę ubogiemu, urąga Stworzycielowi jego: a czci go, kto ma zmiłowanie nad ubogim."
+        },
+        {
+          "number": 32,
+          "text": "Dla złości swéj niezbożnik wygnany będzie: ale sprawiedliwy nadzieję ma przy śmierci swojéj."
+        },
+        {
+          "number": 33,
+          "text": "W sercu roztropnego odpoczywa mądrość: i wszelkie nieuczone wyćwiczy."
+        },
+        {
+          "number": 34,
+          "text": "Sprawiedliwość wywyższa naród: ale grzech czyni ludzie mizernymi."
+        },
+        {
+          "number": 35,
+          "text": "Sługa roztropny wdzięczny jest królowi: niepożyteczny gniew jego odniesie."
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_15",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Odpowiedź łagodna uśmierza gniew: ale mowa przykra pobudza."
+        },
+        {
+          "number": 2,
+          "text": "Język mądrych zdobi umiejętność: usta głupich wywierają głupstwo."
+        },
+        {
+          "number": 3,
+          "text": "Na każdem miejscu oczy Pańskie wypatrują dobre i złe."
+        },
+        {
+          "number": 4,
+          "text": "Język łagodny drzewo żywota: a który niemierny jest, zetrze ducha."
+        },
+        {
+          "number": 5,
+          "text": "Głupi śmieje się z strofowania ojca swego: lecz, kto strzeże karności, chytrszy będzie. W obfitéj sprawiedliwości moc jest największa: a myśli niezbożnych będą wykorzenione."
+        },
+        {
+          "number": 6,
+          "text": "Dom sprawiedliwego moc wielka: a w dochodziech niezbożnego zamięszanie."
+        },
+        {
+          "number": 7,
+          "text": "Wargi mądrych siać będą umiejętność: serce głupich inaksze będzie."
+        },
+        {
+          "number": 8,
+          "text": "Ofiary niezbożnych obrzydłe Panu: modlitwy sprawiedliwych przyjemne."
+        },
+        {
+          "number": 9,
+          "text": "Obrzydłość jest Panu droga niezbożnego: który idzie za sprawiedliwością, jest umiłowany od niego."
+        },
+        {
+          "number": 10,
+          "text": "Nauka zła opuszczającemu drogę żywota: kto nienawidzi karności, umrze."
+        },
+        {
+          "number": 11,
+          "text": "Piekło i zatracenie przed Panem: jako daleko więcéj serca synów człowieczych."
+        },
+        {
+          "number": 12,
+          "text": "Zaraźliwy nie miłuje tego, kto go karze, i do mądrych nie idzie."
+        },
+        {
+          "number": 13,
+          "text": "Serce wesołe rozwesela oblicze: w frasunku serca duch upada."
+        },
+        {
+          "number": 14,
+          "text": "Serce mądrego szuka nauki: a usta głupich karmią się nieumiejętnością."
+        },
+        {
+          "number": 15,
+          "text": "Wszystkie dni ubogiego złe: myśl bezpieczna jako ustawiczne gody."
+        },
+        {
+          "number": 16,
+          "text": "Lepsza jest trocha z bojaźnią Pańską, niż wielkie skarby a nienasycające."
+        },
+        {
+          "number": 17,
+          "text": "Lepiéj jest być proszonym na jarzynę z miłością, niż na cielę tłuste z nienawiścią."
+        },
+        {
+          "number": 18,
+          "text": "Mąż gniewliwy pobudza swary: który cierpliwy jest, uśmierza wzbudzone."
+        },
+        {
+          "number": 19,
+          "text": "Droga leniwych jako płot cierniowy: droga sprawiedliwych bez obrazy."
+        },
+        {
+          "number": 20,
+          "text": "Syn mądry uwesela ojca: a głupi człowiek gardzi matką swoją."
+        },
+        {
+          "number": 21,
+          "text": "Głupstwo wesele głupiemu: a mąż mądry prostuje kroki swoje."
+        },
+        {
+          "number": 22,
+          "text": "Rozpraszają się myśli, kędy niemasz rady: ale, gdzie jest wiele radzących, utwierdzają się."
+        },
+        {
+          "number": 23,
+          "text": "Weseli się człowiek w zdaniu ust swoich: a mowa czasu swego rzeczona jest bardzo dobra."
+        },
+        {
+          "number": 24,
+          "text": "Ścieżka żywota nad umiejętnym, aby się uchronił piekła najgłębszego."
+        },
+        {
+          "number": 25,
+          "text": "Dom pysznych Pan wywróci: a granice wdów potwierdza."
+        },
+        {
+          "number": 26,
+          "text": "Obrzydłość Panu myśli złe: a czysta mowa najpiękniejsza potwierdzona będzie od niego."
+        },
+        {
+          "number": 27,
+          "text": "Mięsza dom swój, który łakomstwa naśladuje: a kto nienawidzi darów, będzie żył. Przez miłosierdzie i wiarę bywają oczyszczane grzechy: a przez bojaźń Pańską wszelki odstępuje od złego."
+        },
+        {
+          "number": 28,
+          "text": "Serce sprawiedliwego rozmyśla posłuszeństwo: usta niezbożnych opływają złością."
+        },
+        {
+          "number": 29,
+          "text": "Daleko jest Pan od niezbożnych: a modlitwy sprawiedliwych wysłucha."
+        },
+        {
+          "number": 30,
+          "text": "Światłość oczu uwesela duszę: a dobra sława czyni tłuste kości."
+        },
+        {
+          "number": 31,
+          "text": "Ucho, które słucha karności żywota, w pośrodku mądrych mieszkać będzie."
+        },
+        {
+          "number": 32,
+          "text": "Kto odrzuca karność, wzgardza duszę swoję: ale kto przyjmuje karanie, panem jest serca."
+        },
+        {
+          "number": 33,
+          "text": "Bojaźń Pańska ćwiczenie mądrości, a sławę uprzedza pokora."
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_16",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Człowiecza jest duszę przygotować: a Pańska rządzić językiem."
+        },
+        {
+          "number": 2,
+          "text": "Wszystkie drogi człowiecze są jawne przed oczyma jego: Pan jest, który uważa duchy."
+        },
+        {
+          "number": 3,
+          "text": "Objaw Panu uczynki twoje, a będą wyprostowane myśli twoje."
+        },
+        {
+          "number": 4,
+          "text": "Pan wszystko udziałał sam dla siebie: téż i niezbożnika na zły dzień."
+        },
+        {
+          "number": 5,
+          "text": "Obrzydły jest Panu każdy pyszny: by téż ręka do ręki była, nie uchodzi karania. Początek drogi dobréj, czynić sprawiedliwość, i wdzięczniejsza Bogu, niźli ofiary ofiarować."
+        },
+        {
+          "number": 6,
+          "text": "Miłosierdziem i prawdą nieprawość bywa odkupiona: a w bojaźni Pańskiéj strzegą się złego."
+        },
+        {
+          "number": 7,
+          "text": "Gdy się podobają Panu drogi człowiecze, tedy i nieprzyjacioły jego przywiedzie do pokoju."
+        },
+        {
+          "number": 8,
+          "text": "Lepsza jest trocha z sprawiedliwością: niźli wielkie dochody z nieprawością."
+        },
+        {
+          "number": 9,
+          "text": "Serce człowiecze rozrządza drogi swoje: ale Pańska jest prostować kroki jego."
+        },
+        {
+          "number": 10,
+          "text": "Proroctwo w wargach królewskich: w sądzie nie błądzą usta jego."
+        },
+        {
+          "number": 11,
+          "text": "Waga i szala jest sąd Pański: a uczynki jego wszystkie gwichty w worku."
+        },
+        {
+          "number": 12,
+          "text": "Obrzydliwi królowie, którzy źle czynią; bo sprawiedliwością umacnia się stolica."
+        },
+        {
+          "number": 13,
+          "text": "Upodobanie królewskie wargi sprawiedliwe: kto mówi dobrze, będzie umiłowan."
+        },
+        {
+          "number": 14,
+          "text": "Gniew królewski posłowie śmierci: a mąż mądry ubłaga go."
+        },
+        {
+          "number": 15,
+          "text": "W wesołości twarzy królewskiéj żywot, a łaska jego jako deszcz póżnypóźny."
+        },
+        {
+          "number": 16,
+          "text": "Nabywaj mądrości; bo lepsza jest nad złoto, i nabywaj roztropności; bo droższa jest nad śrebro."
+        },
+        {
+          "number": 17,
+          "text": "Ścieżka sprawiedliwych odchyla się od złego: stróż dusze swéj strzeże drogi swojéj."
+        },
+        {
+          "number": 18,
+          "text": "Przed zginieniem uprzedza pycha, a przed upadkiem duch się wynosi."
+        },
+        {
+          "number": 19,
+          "text": "Lepiéj jest korzyć się z cichymi, niźli dzielić korzyści z pysznymi."
+        },
+        {
+          "number": 20,
+          "text": "Ćwiczony w słowie najdzie dobra: a który ma nadzieję w Panu, błogosławiony jest."
+        },
+        {
+          "number": 21,
+          "text": "Który jest mądrego serca, będzie nazwany rozumnym: a kto wdzięcznéj wymowy, więcéj odniesie."
+        },
+        {
+          "number": 22,
+          "text": "Zdrój żywota nauka tego, kto ją ma: a nauka głupich szaleństwo."
+        },
+        {
+          "number": 23,
+          "text": "Serce mądrego wyćwiczy usta jego, a wargom jego przyda wdzięczności."
+        },
+        {
+          "number": 24,
+          "text": "Plastr miodu słowa ozdobne, słodkość duszy zdrowie kościom."
+        },
+        {
+          "number": 25,
+          "text": "Jest droga, która się zda człowiekowi prawa: a koniec jéj prowadzi do śmierci."
+        },
+        {
+          "number": 26,
+          "text": "Dusza robiącego robi sobie; bo go przymuszają usta jego."
+        },
+        {
+          "number": 27,
+          "text": "Mąż niezbożny wykopuje złość, a na wargach jego ogień się rozpala."
+        },
+        {
+          "number": 28,
+          "text": "Człowiek przewrótny wszczyna zwady, a świegotliwy rozłącza książęta."
+        },
+        {
+          "number": 29,
+          "text": "Mąż złościwy nuci bliźniego swego i prowadzi go drogą nie dobrą."
+        },
+        {
+          "number": 30,
+          "text": "Kto zapatrzywszy się, myśli przewrótności, gryząc wargi swoje, dokazuje złości."
+        },
+        {
+          "number": 31,
+          "text": "Wieniec godności szędziwość, która się najduje w drogach sprawiedliwości."
+        },
+        {
+          "number": 32,
+          "text": "Lepszy jest cierpliwy, niźli mąż mocny: a który panuje sercu swemu, niż ten, co miast dobywa."
+        },
+        {
+          "number": 33,
+          "text": "Losy do łona rzucają: ale od Pana bywają nastrojone."
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_17",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Lepszy jest kęs chleba suchego z weselem, niźli dom pełen ofiar z swarem."
+        },
+        {
+          "number": 2,
+          "text": "Sługa roztropny będzie panował nad synmi głupimi: a między bracią będzie dzielił dziedzictwo."
+        },
+        {
+          "number": 3,
+          "text": "Jako w ogniu próbują śrebro, a złoto w piecu, tak Pan próbuje serca."
+        },
+        {
+          "number": 4,
+          "text": "Złośnik posłuszen jest językowi złośliwemu: a zdradliwy słucha warg kłamliwych."
+        },
+        {
+          "number": 5,
+          "text": "Kto gardzi ubogim, lży Stworzyciela jego: a kto się raduje z upadku drugiego, nie ujdzie karania."
+        },
+        {
+          "number": 6,
+          "text": "Wieńcem starych są synowie synów: a chwała synów ojcowie ich."
+        },
+        {
+          "number": 7,
+          "text": "Nie przystoją głupiemu słowa poważne, ani książęciu usta kłamliwe."
+        },
+        {
+          "number": 8,
+          "text": "Kamień drogi najwdzięczniejszy, oczekiwanie czekającego: gdzie się kolwiek obraca, mądrze rozumie."
+        },
+        {
+          "number": 9,
+          "text": "Kto tai grzech, szuka przyjaźni: kto inakszemi słowy powtarza, rozłącza złączone."
+        },
+        {
+          "number": 10,
+          "text": "Więcéj waży upominanie u roztropnego, niźli sto plag u głupiego."
+        },
+        {
+          "number": 11,
+          "text": "Zły człowiek zawsze swaru szuka: ale Aniół okrutny będzie wysłan przeciw jemu."
+        },
+        {
+          "number": 12,
+          "text": "Lepiéj jest potkać siesię z niedźwiedzicą, kiedy jéj dzieci wezmą: niźli z głupim ufającym w głupstwie swojem."
+        },
+        {
+          "number": 13,
+          "text": "Kto oddaje złe za dobre, nie wynidzie złe z domu jego."
+        },
+        {
+          "number": 14,
+          "text": "Kto spuszcza wodę, początkiem jest swarów: i niźli odniesie lekkość, odstępuje sądu."
+        },
+        {
+          "number": 15,
+          "text": "Kto usprawiedliwia niezbożnego, i kto potępia sprawiedliwego, obadwaj są obrzydłymi Panu."
+        },
+        {
+          "number": 16,
+          "text": "Cóż pomoże głupiemu, że ma bogactwa: ponieważ mądrości kupić nie może? Kto dom swój wysoko podnosi, szuka obalenia: a kto się chroni nauki, we złe wpadnie."
+        },
+        {
+          "number": 17,
+          "text": "Na każdy czas miłuje, kto jest przyjacielem: a brat doznan bywa w utrapieniu."
+        },
+        {
+          "number": 18,
+          "text": "Głupi człowiek klaskać będzie rękoma, gdy zaręczy za przyjaciela swego."
+        },
+        {
+          "number": 19,
+          "text": "Kto myśli o rozterkach, miłuje swary: a kto podnosi drzwi, upadku szuka."
+        },
+        {
+          "number": 20,
+          "text": "Kto jest przewrótnego serca, nie najdzie dobra: a kto wywraca język, we złe wpadnie."
+        },
+        {
+          "number": 21,
+          "text": "Głupi się urodził na sromotę swoję, ale ani ojciec głupiego będzie miał pociechy."
+        },
+        {
+          "number": 22,
+          "text": "Serce wesołe czyni wiek kwitnący: duch smutny wysusza kości."
+        },
+        {
+          "number": 23,
+          "text": "Dar z zanadrza niezbożnik bierze, aby wywrócił ścieżki sądowe."
+        },
+        {
+          "number": 24,
+          "text": "Na twarzy roztropnego świeci się mądrość: oczy głupich na kończynach ziemie."
+        },
+        {
+          "number": 25,
+          "text": "Syn głupi gniewem ojcowi, a żałością matce, która go porodziła."
+        },
+        {
+          "number": 26,
+          "text": "Nie dobrze jest, uszkodzić sprawiedliwego: anić bić przełożonego, który dobrze sądzi."
+        },
+        {
+          "number": 27,
+          "text": "Kto miarkuje mowy swe, jest uczony i mądry: a drogiego ducha mąż ćwiczony."
+        },
+        {
+          "number": 28,
+          "text": "I głupi jeźli milczy, będzie mian za mądrego: a jeźli stuli usta swe, za roztropnego."
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_18",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Przyczyn szuka, kto się chce z przyjacielem rozstać: na każdy czas urągania godzien będzie."
+        },
+        {
+          "number": 2,
+          "text": "Nie przyjmuje głupi słów roztropności: chybabyś to powiadał, co ma w sercu swojem."
+        },
+        {
+          "number": 3,
+          "text": "Niezbożnik gdy przyjdzie w głębokość grzechów, za nic sobie nie ma: ale za nim idzie hańba i sromota."
+        },
+        {
+          "number": 4,
+          "text": "Woda głęboka słowa z ust męża: potok wylewający zdrój mądrości."
+        },
+        {
+          "number": 5,
+          "text": "Mieć wzgląd na osobę niezbożnego, nie jest rzecz dobra, abyś ustąpił od prawdy sądu."
+        },
+        {
+          "number": 6,
+          "text": "Wargi głupiego wdawają się w swary: a usta jego wzbudzają rozterki."
+        },
+        {
+          "number": 7,
+          "text": "Usta głupiego za zginieniem jego: a wargi jego upadkiem duszy jego."
+        },
+        {
+          "number": 8,
+          "text": "Słowa dwujęzycznego jakoby proste: a one przerażają aż do samych wnętrzności żywota. Leniwego poraża bojaźń: a dusze niewieściuchów będą łaknąć."
+        },
+        {
+          "number": 9,
+          "text": "Kto niedbały i leniwy jest w robocie swojéj, bratem jest rozpraszającego roboty swoje."
+        },
+        {
+          "number": 10,
+          "text": "Wieża najmocniejsza imię Pańskie: do niego bieży sprawiedliwy, a będzie wywyższon."
+        },
+        {
+          "number": 11,
+          "text": "Majętność bogatego miasto mocy jego, i jako mur mocny obtaczający go."
+        },
+        {
+          "number": 12,
+          "text": "Przed upadkiem podnosi się serce człowiecze, i przed sławą bywa uniżone."
+        },
+        {
+          "number": 13,
+          "text": "Kto pierwéj odpowiada, niźli wysłucha, pokazuje się być głupim i pohańbienia godnym."
+        },
+        {
+          "number": 14,
+          "text": "Duch męża podpiera mdłość jego: ale ducha do gniewu łacnego kto będzie mógł znosić?"
+        },
+        {
+          "number": 15,
+          "text": "Serce roztropnego otrzyma umiejętność: a ucho mądrych szuka wiadomości."
+        },
+        {
+          "number": 16,
+          "text": "Dar człowieczy rozprzestrzenia drogę jego i czyni mu miejsce przed książęty."
+        },
+        {
+          "number": 17,
+          "text": "Sprawiedliwy najpierwéj sam na się żałuje: przyjdzie przyjaciel jego, i doświadczać go będzie."
+        },
+        {
+          "number": 18,
+          "text": "Los uśmierza zwady, i między możnymi téż rozsądek czyni."
+        },
+        {
+          "number": 19,
+          "text": "Brat, który bywa wspomagan od brata, jako miasto mocne, a sądy jako zawory miast."
+        },
+        {
+          "number": 20,
+          "text": "Z owocu ust męża napełni się brzuch jego: a urodzaje warg jego nasycą go."
+        },
+        {
+          "number": 21,
+          "text": "Śmierć i żywot w ręce języka: którzy go miłują, będą jeść owoce jego."
+        },
+        {
+          "number": 22,
+          "text": "Kto nalazł żonę dobrą, nalazł rzecz dobrą i wyczerpnie pociechę od Pana. Kto wygania żonę dobrą, wygania rzecz dobrą: ale, kto trzyma cudzołożnicę, głupi jest i niezbożny."
+        },
+        {
+          "number": 23,
+          "text": "Człowiek ubogi z prośbami mówi: ale bogaty surowie odpowiada."
+        },
+        {
+          "number": 24,
+          "text": "Mąż przyjacielski do towarzystwa, większym przyjacielem będzie niźli brat."
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_19",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Lepszy jest ubogi, który chodzi w prostocie swéj, niźli bogaty warg przewrótnych i głupi."
+        },
+        {
+          "number": 2,
+          "text": "Gdzie niemasz umiejętności dusze, niemasz dobra: a kto prędkich jest nóg, potknie się."
+        },
+        {
+          "number": 3,
+          "text": "Głupstwo człowiecze wywraca drogę jego, a na Boga wre sercem swem."
+        },
+        {
+          "number": 4,
+          "text": "Bogactwa przyczyniają wiele przyjaciół: lecz od ubogiego i ci, które miał, odstępują."
+        },
+        {
+          "number": 5,
+          "text": "Świadek fałeszny nie ujdzie karania: a kto mówi kłamstwa, nie uciecze."
+        },
+        {
+          "number": 6,
+          "text": "Wiele tych, którzy czczą osobę możnego, i są przyjaciółmi dary dającego."
+        },
+        {
+          "number": 7,
+          "text": "Bracia człowieka ubogiego nienawidzą go: a ktemu i przyjaciele daleko odstąpili od niego. Kto się tylko na słowiech sadzi, nic nie będzie miał."
+        },
+        {
+          "number": 8,
+          "text": "Lecz, kto ma rozum, miłuje duszę swoję, a strzegący roztropności najdzie dobra."
+        },
+        {
+          "number": 9,
+          "text": "Świadek fałeszny nie ujdzie karania: a kto mówi kłamstwa, zginie."
+        },
+        {
+          "number": 10,
+          "text": "Nie przystoi głupiemu rozkosz: ani słudze panować nad książęty."
+        },
+        {
+          "number": 11,
+          "text": "Nauka męża po cierpliwości bywa doznana: a cześć jego jest mijać nieprawość."
+        },
+        {
+          "number": 12,
+          "text": "Jako ryk lwi, tak i gniew królewski: a jako rosa na trawie, tak téż wesoła twarz jego."
+        },
+        {
+          "number": 13,
+          "text": "Żałość ojcowa syn głupi: a dach ustawicznie kapający, swarliwa niewiasta."
+        },
+        {
+          "number": 14,
+          "text": "Dom i majętności dane bywają od rodziców: ale żona roztropna właśnie od samego Pana."
+        },
+        {
+          "number": 15,
+          "text": "Lenistwo przynosi ospałość: a dusza niedbała będzie łaknęła."
+        },
+        {
+          "number": 16,
+          "text": "Kto strzeże przykazania, strzeże dusze swojéj: lecz, kto zaniedbywa drogi swéj, umorzon będzie."
+        },
+        {
+          "number": 17,
+          "text": "Na lichwę daje Panu, kto ma litość nad ubogim, i nagrodę jego odda mu."
+        },
+        {
+          "number": 18,
+          "text": "Ćwicz syna twego, nie rozpaczaj: a ku zabiciu jego nie przykładaj dusze twojéj."
+        },
+        {
+          "number": 19,
+          "text": "Kto niecierpliwy jest, szkodę popadnie: a gdy wydrze, drugie przyda."
+        },
+        {
+          "number": 20,
+          "text": "Słuchaj porady a przyjmuj ćwiczenie, abyś był mądrym na ostatku twoim."
+        },
+        {
+          "number": 21,
+          "text": "Wiele myśli w sercu męża: a wola Pańska trwać będzie."
+        },
+        {
+          "number": 22,
+          "text": "Człowiek potrzebny jest miłosierny: a lepszy jest ubogi niż mąż kłamliwy."
+        },
+        {
+          "number": 23,
+          "text": "Bojaźń Pańska do żywota: w obfitości mieszkać będzie bez nawiedzenia złego."
+        },
+        {
+          "number": 24,
+          "text": "Kryje leniwy rękę swą pod pachy, ani ją do ust swoich przykłada."
+        },
+        {
+          "number": 25,
+          "text": "Gdy zaraźliwego ubijesz, głupi mędrszym będzie: a jeźli skarzesz mądrego, zrozumie karność."
+        },
+        {
+          "number": 26,
+          "text": "Kto frasuje ojca a wypędza matkę, bezecny jest i nieszczęśliwy."
+        },
+        {
+          "number": 27,
+          "text": "Nie przestawaj, synu, słuchać nauki, a umiéj słowa umiejętności."
+        },
+        {
+          "number": 28,
+          "text": "Świadek nieprawy śmieje się z sądu: a usta niezbożnych żrą nieprawość."
+        },
+        {
+          "number": 29,
+          "text": "Nagotowano pośmiewcom sądy, i młoty bijące ciałom głupich."
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_20",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Rozpustna rzecz wino, i zwadliwe pijaństwo: ktokolwiek się w nich kocha, nie będzie mądrym."
+        },
+        {
+          "number": 2,
+          "text": "Jako ryk lwi, tak i strach królewski: kto go drażni, grzeszy przeciw duszy swojéj."
+        },
+        {
+          "number": 3,
+          "text": "Poczciwość jest człowiekowi, który się odłącza od zwady: a wszyscy głupi wdawają się w swary."
+        },
+        {
+          "number": 4,
+          "text": "Dla zimna leniwiec orać nie chciał: przetóż będzie żebrał lecie, a nie dadzą mu."
+        },
+        {
+          "number": 5,
+          "text": "Jako woda głęboka, tak rada w sercu męża: ale człowiek mądry wyczerpnie ją."
+        },
+        {
+          "number": 6,
+          "text": "Wiele ludzi miłosiernymi zowią: ale męża wiernego kto najdzie?"
+        },
+        {
+          "number": 7,
+          "text": "Sprawiedliwy, który chodzi w prostocie swojéj, błogosławione po sobie syny zostawi."
+        },
+        {
+          "number": 8,
+          "text": "Król, który siedzi na stolicy sądowéj, rozprasza wszystko złe pojrzeniem swojem."
+        },
+        {
+          "number": 9,
+          "text": "Któż może mówić: Czyste jest serce moje, jestem próżen grzechu?"
+        },
+        {
+          "number": 10,
+          "text": "Waga i waga, miara i miara: oboje obrzydłe jest u Boga."
+        },
+        {
+          "number": 11,
+          "text": "Po zabawach jego poznać dziecię, jeźli czyste i prawe są uczynki jego."
+        },
+        {
+          "number": 12,
+          "text": "Ucho słuchające a oko widzące, Pan oboje uczynił."
+        },
+        {
+          "number": 13,
+          "text": "Nie kochaj siesię w spaniu, aby cię ubóstwo nie ścisnęło: otwórz oczy swoje, a najedz się chleba."
+        },
+        {
+          "number": 14,
+          "text": "Złe jest, złe jest, mówi każdy kupujący: a odszedłszy tedy się będzie chwalił."
+        },
+        {
+          "number": 15,
+          "text": "Jest złoto i obfitość pereł i naczynie drogie usta umiejętności."
+        },
+        {
+          "number": 16,
+          "text": "Weźmij suknią tego, który ręczył za obcego: a za obce weźmij fant od niego."
+        },
+        {
+          "number": 17,
+          "text": "Słodki jest człowiekowi chleb kłamstwa, a potem napełnią się piaskiem usta jego."
+        },
+        {
+          "number": 18,
+          "text": "Myśli poradami się utwierdzają: a rządem mają być sprawowane wojny."
+        },
+        {
+          "number": 19,
+          "text": "Z tym, który objawia tajemnice, a chodzi zdradliwie, a rozwodzi wargi swe, nie miéj towarzystwa."
+        },
+        {
+          "number": 20,
+          "text": "Kto złorzeczy ojcu swemu i matce, pochodnia jego zgaśnie w pośród ciemności."
+        },
+        {
+          "number": 21,
+          "text": "Dziedzictwo, do którego się z przodku kwapią, na końcu błogosławieństwa mieć nie będzie."
+        },
+        {
+          "number": 22,
+          "text": "Nie mów: Oddam złość. Czekaj na Pana a wybawi cię."
+        },
+        {
+          "number": 23,
+          "text": "Brzydliwość jest u Pana waga i waga: szala zdradliwa nie jest dobra."
+        },
+        {
+          "number": 24,
+          "text": "Od Pana bywają prostowane kroki męża: a któryż z ludzi może zrozumieć drogę swoję?"
+        },
+        {
+          "number": 25,
+          "text": "Upadek jest człowiekowi, pożreć święte: a ślubiwszy odmienić."
+        },
+        {
+          "number": 26,
+          "text": "Król mądry rozpędza niezbożniki i obraca na nie koło."
+        },
+        {
+          "number": 27,
+          "text": "Duch człowieczy jest pochodnia Pańska, która wypatruje wszystkie skrytości wnętrzne."
+        },
+        {
+          "number": 28,
+          "text": "Miłosierdzie i prawda strzegą króla: a łaskawością umacnia się stolica jego."
+        },
+        {
+          "number": 29,
+          "text": "Wesele młodych, moc ich: i ozdoba starych szędziwość."
+        },
+        {
+          "number": 30,
+          "text": "Siność rany otrze złości, i razy we wnętrznościach brzucha."
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_21",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Jako rozdziały wód, tak serce królewskie w ręce Pańskiéj: kędy jedno chce, nachyli go."
+        },
+        {
+          "number": 2,
+          "text": "Wszelka droga człowiecza zda mu się być prawa: ale Pan uważa serca."
+        },
+        {
+          "number": 3,
+          "text": "Czynić miłosierdzie i sprawiedliwość, więcéj się Panu podoba, niźli ofiary."
+        },
+        {
+          "number": 4,
+          "text": "Wynoszenie oczu jest rozszerzenie serca, świeca niezbożnych grzech."
+        },
+        {
+          "number": 5,
+          "text": "Myśli dużego zawsze w dostatku: lecz każdy leniwy zawsze jest w niedostatku."
+        },
+        {
+          "number": 6,
+          "text": "Który zbiera skarby językiem kłamliwym, nikczemny i szalony jest i wpadnie w sidła śmierci."
+        },
+        {
+          "number": 7,
+          "text": "Drapiestwo niezbożnych zrzuca je, iż nie chcieli czynić sądu."
+        },
+        {
+          "number": 8,
+          "text": "Przewrótna droga człowiecza daleką jest: ale kto czysty jest, szczera sprawa jego."
+        },
+        {
+          "number": 9,
+          "text": "Lepiéj jest siedzieć w kącie domu, niźli z żoną swarliwą, a w domu spółecznym."
+        },
+        {
+          "number": 10,
+          "text": "Dusza niezbożnego żąda złego: nie zlituje się nad bliźnim swoim."
+        },
+        {
+          "number": 11,
+          "text": "Skarawszy zaraźliwego mędrszy będzie prostak: a jeźli naśladuje mądrego, przyjmie naukę."
+        },
+        {
+          "number": 12,
+          "text": "Myśli sprawiedliwy o domu niezbożnego, aby odciągnął niezbożne od złego."
+        },
+        {
+          "number": 13,
+          "text": "Kto zatula uszy swe na wołanie ubogiego, będzie i sam wołał, a nie wysłuchają go."
+        },
+        {
+          "number": 14,
+          "text": "Dar potajemnie dany gasi gniewy: a upominek w zanadrzu rozgniewanie wielkie."
+        },
+        {
+          "number": 15,
+          "text": "Radość sprawiedliwemu jest, czynić sąd: a strach działającym nieprawość."
+        },
+        {
+          "number": 16,
+          "text": "Człowiek, który zbłądzi z drogi nauki, we zborze olbrzymów mieszkać będzie."
+        },
+        {
+          "number": 17,
+          "text": "Kto się kocha w używaniu, w niedostatku będzie: kto miłuje wino i tłuste kąski, nie zbogaci się."
+        },
+        {
+          "number": 18,
+          "text": "Niezbożny będzie dan za sprawiedliwego, a nieprawy za prawe."
+        },
+        {
+          "number": 19,
+          "text": "Lepiéj jest mieszkać w ziemi pustéj, niźli z żoną swarliwą a gniewliwą."
+        },
+        {
+          "number": 20,
+          "text": "Skarb pożądany i wonny olejek w mieszkaniu sprawiedliwego: a głupi człowiek rozleje go."
+        },
+        {
+          "number": 21,
+          "text": "Kto naśladuje sprawiedliwości i miłosierdzia, najdzie żywot sprawiedliwość i chwałę."
+        },
+        {
+          "number": 22,
+          "text": "Miasto mocnych ubiegł mądry, i zepsował moc ufania ich."
+        },
+        {
+          "number": 23,
+          "text": "Kto strzeże ust swoich i języka swego, strzeże od ucisków dusze swojéj."
+        },
+        {
+          "number": 24,
+          "text": "Hardego i pysznego zowią nieuczonym, który w gniewie pysznie się sprawuje."
+        },
+        {
+          "number": 25,
+          "text": "Pożądliwości zabijają leniwego; albowiem nie chciały nic robić ręce jego."
+        },
+        {
+          "number": 26,
+          "text": "Przez cały dzień pragnie i pożąda: a kto sprawiedliwy jest, daje bez przestanku."
+        },
+        {
+          "number": 27,
+          "text": "Ofiary niezbożnych brzydliwe, iż się ofiarują z grzechu."
+        },
+        {
+          "number": 28,
+          "text": "Świadek kłamliwy zginie: mąż posłuszny będzie mówił zwycięstwo."
+        },
+        {
+          "number": 29,
+          "text": "Człowiek niezbożny niewstydliwie zatwardza twarz swoję: ale kto prawy jest, poprawia drogi swojéj."
+        },
+        {
+          "number": 30,
+          "text": "Niemasz mądrości, niemasz roztropności, niemasz rady przeciw Panu."
+        },
+        {
+          "number": 31,
+          "text": "Konia gotują na dzień bitwy: ale Pan daje wybawienie."
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_22",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Lepsze jest imię dobre, niż wielkie bogactwa: łaska nad śrebro i złoto."
+        },
+        {
+          "number": 2,
+          "text": "Bogaty i ubogi potkali się: obudwu Pan jest Stworzycielem."
+        },
+        {
+          "number": 3,
+          "text": "Zmyślny obaczył złe i skrył się: prostak minął i popadł szkodę."
+        },
+        {
+          "number": 4,
+          "text": "Koniec skromności bojaźń Pańska, bogactwo i chwała i żywot."
+        },
+        {
+          "number": 5,
+          "text": "Oręże i miecze na drodze przewrótnego: a stróż dusze swéj daleko odstępuje od nich."
+        },
+        {
+          "number": 6,
+          "text": "Przypowieść jest: Młodzieniec wedle drogi swéj, choćby się zstarzał, nie odstąpi od niéj."
+        },
+        {
+          "number": 7,
+          "text": "Bogaty ubogim rozkazuje: a kto u kogo pożycza, sługą jest tego, który mu pożyczył."
+        },
+        {
+          "number": 8,
+          "text": "Kto sieje nieprawość, będzie żął nieszczęście: i laską gniewu swego zniszczeje."
+        },
+        {
+          "number": 9,
+          "text": "Kto skłonny jest ku miłosierdziu, błogosławion będzie; bo chleba swego dał ubogiemu. Zwycięstwa i czci dostanie, kto dary daje: a duszę odejmuje tych, co je biorą."
+        },
+        {
+          "number": 10,
+          "text": "Wypędź naśmiewcę, a wynidzie z nim swar: i ustaną prawa i potwarzy."
+        },
+        {
+          "number": 11,
+          "text": "Kto miłuje czystość serdeczną, dla wdzięczności ust swoich będzie miał przyjacielem króla."
+        },
+        {
+          "number": 12,
+          "text": "Oczy Pańskie strzegą umiejętności: a słowa nieprawego bywają wywrócone."
+        },
+        {
+          "number": 13,
+          "text": "Mówi leniwiec: Lew jest na dworze, w pośród ulic zabit będę."
+        },
+        {
+          "number": 14,
+          "text": "Usta cudzéj są dołem głębokim: na kogo się Pan gniewa, wpadnie weń."
+        },
+        {
+          "number": 15,
+          "text": "Głupstwo przywiązane jest do serca dziecięcego: ale rózga karania wypędzi je."
+        },
+        {
+          "number": 16,
+          "text": "Kto potwarza ubogiego, aby przysporzył majętności sobie, da sam bogatszemu, i będzie nędzę klepał."
+        },
+        {
+          "number": 17,
+          "text": "Nakłoń ucha twego a słuchaj słów mądrych: a serce swoje przyłóż do nauki mojéj."
+        },
+        {
+          "number": 18,
+          "text": "Którać piękna będzie, gdy ją zachowasz w sercu swojem, i rozpłynie się po wargach twoich:"
+        },
+        {
+          "number": 19,
+          "text": "Aby było w Panu ufanie twoje: i przetóżem ci ją dziś pokazał."
+        },
+        {
+          "number": 20,
+          "text": "Otom ci ją trojako opisał w myślach i w nauce:"
+        },
+        {
+          "number": 21,
+          "text": "Abym ci okazał stałość i powieści prawdziwe: abyś z nich odpowiadał tym, którzy cię posłali."
+        },
+        {
+          "number": 22,
+          "text": "Nie czyń bezprawia ubogiemu, iż ubogi jest: ani niszcz nędznika w bramie."
+        },
+        {
+          "number": 23,
+          "text": "Albowiem Pan będzie sądził sprawy jego: i przebije tych, którzy przebili duszę jego."
+        },
+        {
+          "number": 24,
+          "text": "Nie bądź przyjacielem człowiekowi gniewliwemu: ani chódź z mężem zapalczywym."
+        },
+        {
+          "number": 25,
+          "text": "Byś snadź nie przywykł ścieżkom jego, a wziął zgorszenie dusze twojéj."
+        },
+        {
+          "number": 26,
+          "text": "Nie bywaj między tymi, którzy rękę dają, i którzy się czynią rękojmiami za długi."
+        },
+        {
+          "number": 27,
+          "text": "Bo jeźli niemasz zkąd wrócić, czemuć nie ma wziąć przykrycie z łóżka twego?"
+        },
+        {
+          "number": 28,
+          "text": "Nie przestępuj granic starych, które założyli ojcowie twoi."
+        },
+        {
+          "number": 29,
+          "text": "Widziałeś męża biegłego w sprawach swoich? przed królmi stać będzie, a nie będzie przed podłymi."
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_23",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Gdy siędziesz, abyś jadł z książęciem, pilnie obacz, co położono przed tobą:"
+        },
+        {
+          "number": 2,
+          "text": "I połóż nóż w gardle twojem, jeźliż jednak masz w mocy duszę twoję."
+        },
+        {
+          "number": 3,
+          "text": "Nie pożądaj pokarmów tego, w którym chleb kłamstwa."
+        },
+        {
+          "number": 4,
+          "text": "Nie pracuj, abyś się zbogacił; ale załóż miarę opatrzności twojéj."
+        },
+        {
+          "number": 5,
+          "text": "Nie podnoś oczu twoich na bogactwa, których mieć nie możesz; bo uczynią sobie skrzydła jakoby orłowe, i ulecą do nieba."
+        },
+        {
+          "number": 6,
+          "text": "Nie jadaj z cłowiekiemczłowiekiem zazdrościwym, i nie pragnij pokarmów jego."
+        },
+        {
+          "number": 7,
+          "text": "Bo nakształt wieszczka i praktykarza domniemywa się, czego nie wie. Jedz a pij, rzecze tobie: a myśl jego nie jest z tobą."
+        },
+        {
+          "number": 8,
+          "text": "Pokarmy, któreś jadł, zrzucisz: i utracisz wdzięczne słowa twoje."
+        },
+        {
+          "number": 9,
+          "text": "Nie mów w uszach głupich; bo wzgardzą naukę wymowy twojéj."
+        },
+        {
+          "number": 10,
+          "text": "Nie tykaj granic małych dziatek: a nie wchódź na rolą sierót."
+        },
+        {
+          "number": 11,
+          "text": "Bo powinny ich mocny jest: a on będzie sądził przeciw tobie sprawy ich."
+        },
+        {
+          "number": 12,
+          "text": "Niech wnidzie do ćwiczenia serce twoje: a uszy twoje do słów umiejętności."
+        },
+        {
+          "number": 13,
+          "text": "Nie odejmuj od dziecięcia karności; bo jeźli go ubijesz rózgą, nie umrze."
+        },
+        {
+          "number": 14,
+          "text": "Ty go ubijesz rózgą, a duszę jego z piekła wybawisz."
+        },
+        {
+          "number": 15,
+          "text": "Synu mój! będzieli mądre serce twoje, będzieć się z tobą radowało serce moje."
+        },
+        {
+          "number": 16,
+          "text": "I będą się weselić nerki moje, gdy będą dobrze mówić usta twoje."
+        },
+        {
+          "number": 17,
+          "text": "Niech nie zajrzy grzesznym serce twoje: ale w bojaźni Pańskiéj trwaj przez cały dzień."
+        },
+        {
+          "number": 18,
+          "text": "Bo będziesz miał nadzieję na końcu, a oczekawanie twe nie będzie odjęte."
+        },
+        {
+          "number": 19,
+          "text": "Słuchaj, synu mój! a bądź mądry: a prostuj na drodze duszę twoję."
+        },
+        {
+          "number": 20,
+          "text": "Nie bywaj na biesiadach pijaniców: ani na kolacyach tych, którzy mięso na jedzenie znaszają;"
+        },
+        {
+          "number": 21,
+          "text": "Bo którzy się pijaństwem bawią, i którzy się składają, zniszczeją: a w łatach chodzić będzie ospałość."
+        },
+        {
+          "number": 22,
+          "text": "Słuchaj ojca twego, który cię zrodził: a nie gardź, gdy się zstarzeje matka twoja."
+        },
+        {
+          "number": 23,
+          "text": "Kupuj prawdę, a nie przedawaj mądrości i nauki i umiejętności."
+        },
+        {
+          "number": 24,
+          "text": "Raduje się bardzo ojciec sprawiedliwego; który zrodził mądrego, weselić się będzie z niego."
+        },
+        {
+          "number": 25,
+          "text": "Niech się weseli ojciec twój i matka twoja, a niech się raduje, która cię urodziła."
+        },
+        {
+          "number": 26,
+          "text": "Daj mi, synu mój! serce twoje: a oczy twoje niech strzegą dróg moich."
+        },
+        {
+          "number": 27,
+          "text": "Bo dół głęboki jest nierządnica, a studnia ciasna cudza."
+        },
+        {
+          "number": 28,
+          "text": "Czyha na drodze jako zbójca, a które ujrzy nieopatrznie, zabije."
+        },
+        {
+          "number": 29,
+          "text": "Komu biada? czyjemu ojcu biada? komu swary? komu doły? komu bez przyczyny rany? komu płynienie oczu?"
+        },
+        {
+          "number": 30,
+          "text": "Izali nie tym, którzy zasiadają na winie, a bawią się kubków wytrząsaniem?"
+        },
+        {
+          "number": 31,
+          "text": "Nie patrz na wino, gdy się rumieni, gdy się rozjaśni w szklenicy barwa jego: łagodnie wchodzi:"
+        },
+        {
+          "number": 32,
+          "text": "Ale na końcu ukąsi jako wąż, a jako źmija jad rozpuści."
+        },
+        {
+          "number": 33,
+          "text": "Oczy twe będą patrzyć na cudze: a serce twe będzie mówić przewrótności."
+        },
+        {
+          "number": 34,
+          "text": "I będziesz jako śpiący naśród morza: i jako uśpiony stérnik, gdy stér straci."
+        },
+        {
+          "number": 35,
+          "text": "I rzeczesz: Bili mię, ale mię nie bolało: ciągnęli mię, a nie czułem. Kiedyż ocucę, i zasię wino najdę?"
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_24",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Nie naśladuj ludzi złych, ani żądaj być z nimi."
+        },
+        {
+          "number": 2,
+          "text": "Albowiem serce ich myśli o drapiestwie, a usta ich mówią zdrady."
+        },
+        {
+          "number": 3,
+          "text": "Mądrością będzie budowany dom, a roztropnością umocnion będzie."
+        },
+        {
+          "number": 4,
+          "text": "Umiejętnością napełniają się śpiżarnie wszelakiéj majętności kosztownéj i pięknéj."
+        },
+        {
+          "number": 5,
+          "text": "Człowiek mądry mocny jest: a mąż uczony silny i potężny."
+        },
+        {
+          "number": 6,
+          "text": "Bo sprawą zaczyna się wojna: a będzie zdrowie, kędy wiele rady jest."
+        },
+        {
+          "number": 7,
+          "text": "Wysoka głupiemu mądrość, nie otworzy w bramie ust swoich."
+        },
+        {
+          "number": 8,
+          "text": "Kto myśli źle czynić, głupim nazwan będzie."
+        },
+        {
+          "number": 9,
+          "text": "Myśl głupiego jest grzech: a brzydliwością ludzką obmówca."
+        },
+        {
+          "number": 10,
+          "text": "Jeźli zwątpisz spracowany w dzień ucisku, umniejszy się siła twoja."
+        },
+        {
+          "number": 11,
+          "text": "Wybawiaj te, które na śmierć wiodą: a które ciągną na stracenie, wyzwalać nie przestawaj."
+        },
+        {
+          "number": 12,
+          "text": "Jeźli rzeczesz: Nie mam na to siły: który patrzy na serce, on rozumie, a stróża dusze twéj nic nie omyli: i odda człowiekowi według uczynków jego."
+        },
+        {
+          "number": 13,
+          "text": "Jedz miód, synu mój! bo dobry jest, i plastr najsłodszy gardłu twojemu."
+        },
+        {
+          "number": 14,
+          "text": "Takżeć umiejętność mądrości duszy twojéj; którą gdy najdziesz, będziesz miał nadzieję na ostatku, a nadzieja twoja nie zginie."
+        },
+        {
+          "number": 15,
+          "text": "Nie czyń zdrady, i nie szukaj niezbożności w domu sprawiedliwego i nie psuj pokoju jego."
+        },
+        {
+          "number": 16,
+          "text": "Bo siedmkroć upadnie sprawiedliwy, i powstanie: lecz niezbożni we złe upadną."
+        },
+        {
+          "number": 17,
+          "text": "Gdy upadnie nieprzyjaciel twój,nie wesel się: a z upadku jego niech się nie raduje serce twoje:"
+        },
+        {
+          "number": 18,
+          "text": "Aby nie ujrzał Pan, a miałby ci za złe, i odwróciłby gniew swój od niego."
+        },
+        {
+          "number": 19,
+          "text": "Nie sprzeczaj się ze złymi, ani zajrzyj niezbożnym."
+        },
+        {
+          "number": 20,
+          "text": "Bo źli nie mają nadzieje napotem, a świeca niezboźnych zagaśnie."
+        },
+        {
+          "number": 21,
+          "text": "Bój się Pana, synu mój! i króla: a z obmówcami nie mięszaj się."
+        },
+        {
+          "number": 22,
+          "text": "Bo natychmiast powstanie zatracenie ich, a upadek obudwu kto wie? I to téż dla mądrych:"
+        },
+        {
+          "number": 23,
+          "text": "Mieć wzgląd na osobę u sądu nie jest rzecz dobra."
+        },
+        {
+          "number": 24,
+          "text": "Którzy mówią niezbożnemu: Jesteś sprawiedliwy, będą je ludzie przeklinać: i brzydzić się nimi będą pokolenia."
+        },
+        {
+          "number": 25,
+          "text": "Którzy go karzą, będą chwaleni: przyjdzie na nie błogosławieństwo."
+        },
+        {
+          "number": 26,
+          "text": "Wargi pocałuje, który odpowiada słowa dobre."
+        },
+        {
+          "number": 27,
+          "text": "Gotuj na dworze dzieło twoje i sprawuj pilnie rolą twoję, abyś potem dom twój budował."
+        },
+        {
+          "number": 28,
+          "text": "Nie bądź świadkiem niepotrzebnie przeciw bliźniemu twemu: i nie zdradzaj nikogo wargami twemi."
+        },
+        {
+          "number": 29,
+          "text": "Nie mów: Jako mi uczynił, tak mu uczynię: oddam każdemu według uczynku jego."
+        },
+        {
+          "number": 30,
+          "text": "Szedłem przez pole człowieka leniwego, i przez winnicę męża głupiego :"
+        },
+        {
+          "number": 31,
+          "text": "Ano wszędy zarosło pokrzywami, i ciernie pokryło grunt jego, i rozwalił się płot kamienny."
+        },
+        {
+          "number": 32,
+          "text": "Co ujrzawszy schowałem do serca swego, a z przykładu nauczyłem się rozumu."
+        },
+        {
+          "number": 33,
+          "text": "Mało, rzekę, pośpisz, mało podrzymiesz, trochę ręce złożysz ku odpoczywaniu:"
+        },
+        {
+          "number": 34,
+          "text": "Aż ci przyjdzie jako poseł ubóstwo, a żebractwo jako mąż zbrojny."
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_25",
+      "verses": [
+        {
+          "number": 1,
+          "text": "I te przypowieści Salomonowe, które wypisali mężowie Ezechiasza, króla Judzkiego."
+        },
+        {
+          "number": 2,
+          "text": "Cześć Boża jest, taić słowo: a cześć królewska, wywiadować się powieści."
+        },
+        {
+          "number": 3,
+          "text": "Niebo wysoko, a ziemia nisko, a serce królewskie jest niewybadane."
+        },
+        {
+          "number": 4,
+          "text": "Odejm zużelicę od śrebra, a wynidzie naczynie czyste."
+        },
+        {
+          "number": 5,
+          "text": "Odejm niezbożność od obliczności królewskiéj, a umocni się sprawiedliwością stolica jego."
+        },
+        {
+          "number": 6,
+          "text": "Nie popisuj się zacnością przed królem, a na miejscu wielmożnych nie stawaj."
+        },
+        {
+          "number": 7,
+          "text": "Bo lepiéj, iż ci rzeką: Wstąp wyżéj, a niżbyś miał być uniżon przed książęciem."
+        },
+        {
+          "number": 8,
+          "text": "Co widziały oczy twoje, tego wnet nie powiadaj w swarze, byś zaś potem poprawić tego nie mógł, gdybyś zelżył przyjaciela swego."
+        },
+        {
+          "number": 9,
+          "text": "Sprawuj rzecz twą z przyjacielem twoim, i tajemnice obcemu nie odkrywaj:"
+        },
+        {
+          "number": 10,
+          "text": "By się snadź nie natrząsał z ciebie, usłyszawszy, i nie przestał ci na oczy wyrzucać. Łaska a przyjacielstwo wolnym czynią: które sobie chowaj, byś nie był na pośmiech."
+        },
+        {
+          "number": 11,
+          "text": "Jabłka złote w śrebrnych łóżkach, kto mówi słowo swego czasu."
+        },
+        {
+          "number": 12,
+          "text": "Nausznica złota i perła świecąca, który strofuje mądrego, i ucho posłuszne."
+        },
+        {
+          "number": 13,
+          "text": "Jako zimno śnieżne w żniwa, tak posłaniec wierny temu, który go posłał: duszy jego uspokojenie sprawuje."
+        },
+        {
+          "number": 14,
+          "text": "Obłok i wiatr i deszcz za nimi nie idzie, mąż wychwalający się a obietnic nie pełniący."
+        },
+        {
+          "number": 15,
+          "text": "Cierpliwością będzie książę ubłagane, a język miękki złamie zatwardzenie."
+        },
+        {
+          "number": 16,
+          "text": "Miódeś znalazł, jedz, ileć potrzeba, byś snadź, objadłszy się go, nie zrzucił."
+        },
+        {
+          "number": 17,
+          "text": "Powściągnij nogę twoję z domu bliźniego twego, by kiedy będąc syt nie miał cię w nienawiści."
+        },
+        {
+          "number": 18,
+          "text": "Oszczepem i mieczem i strzałą ostrą człowiek, który mówi przeciw bliźniemu swemu fałszywe świadectwo."
+        },
+        {
+          "number": 19,
+          "text": "Ząb spróchniały i noga spracowana, który ma nadzieję w niewiernym w dzień ucisku:"
+        },
+        {
+          "number": 20,
+          "text": "I utraca płaszcz w dzień zimna. Ocet w saletrze, który śpiewa pieśni sercu złemu. Jako mól odzieniu, a robak drzewu, tak smutek męża szkodzi sercu."
+        },
+        {
+          "number": 21,
+          "text": "Jeźli łaknie nieprzyjaciel twój, nakarm go: jeźli pragnie, daj mu się wody napić."
+        },
+        {
+          "number": 22,
+          "text": "Bo węgle ogniste zgromadzisz na głowę jego, a Pan ci to nagrodzi."
+        },
+        {
+          "number": 23,
+          "text": "Wiatr północny rozpędza deszcz: a oblicze smutne język uwłaczający."
+        },
+        {
+          "number": 24,
+          "text": "Lepiéj siedzieć w kącie domu, niźli z żoną swarliwą w domu spółecznym."
+        },
+        {
+          "number": 25,
+          "text": "Zimna woda duszy pragnącéj, a poselstwo dobre z ziemie dalekiéj."
+        },
+        {
+          "number": 26,
+          "text": "Źródło nogą zamącone i zdrój zepsowany, sprawiedliwy przed niezbożnikiem upadający."
+        },
+        {
+          "number": 27,
+          "text": "Jako temu, który je wiele miodu, nie jest zdrowo, tak, kto się wiele bada o majestacie, będzie zatłumion od chwały."
+        },
+        {
+          "number": 28,
+          "text": "Jako miasto otworzyste a bez murów; tak człowiek, który w mowie nie może zawściągnąć ducha swego."
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_26",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Jako śnieg lecie, a deszcz we żniwa, tak nie przystoi głupiemu chwała."
+        },
+        {
+          "number": 2,
+          "text": "Jako ptak gdzieindzie przelatający, i wróbel, kędy chce, bieży, tak przeklęctwo bez przyczyny wymówione na kogo przyjdzie."
+        },
+        {
+          "number": 3,
+          "text": "Bicz na konia, a ogłów na osła, a kij na grzbiet głupiego."
+        },
+        {
+          "number": 4,
+          "text": "Nie odpowiadaj głupiemu według głupstwa jego, abyś nie był jemu podobny."
+        },
+        {
+          "number": 5,
+          "text": "Odpowiedz głupiemu według głupstwa jego, aby się sobie nie zdał być mądrym."
+        },
+        {
+          "number": 6,
+          "text": "Chromy na nogi i nieprawość pijący, kto posyła słowa przez posła głupiego."
+        },
+        {
+          "number": 7,
+          "text": "Jako chromy próżno ma cudne golenie, tak nieprzystojna jest przypowieść w uściech głupiego."
+        },
+        {
+          "number": 8,
+          "text": "Jako kto rzuca kamień na gromadę Merkuryuszowę , tak, kto wyrządza poczciwość głupiemu."
+        },
+        {
+          "number": 9,
+          "text": "Jako gdyby ciernie urosło w ręce pijanego, tak przypowieść w uściech głupiego."
+        },
+        {
+          "number": 10,
+          "text": "Sąd czyni koniec sprawom: a kto głupiemu rozkaże milczenie, gniew uśmierza."
+        },
+        {
+          "number": 11,
+          "text": "Jako pies, który się wraca do zwrócenia swego, tak głupi, który powtarza głupstwo swoje."
+        },
+        {
+          "number": 12,
+          "text": "Widziałeś człowieka, który się sobie zda być mądrym, większą nadeń nadzieję będzie miał głupi."
+        },
+        {
+          "number": 13,
+          "text": "Mówi leniwiec: Lew jest na drodze i lwica na drogach."
+        },
+        {
+          "number": 14,
+          "text": "Jako drzwi obracają się na zawiasach swoich, tak leniwiec na łóżku swojem."
+        },
+        {
+          "number": 15,
+          "text": "Kryje leniwiec rękę pod pachy swoje, a z pracą je podnosi do gęby swojéj."
+        },
+        {
+          "number": 16,
+          "text": "Leniwiec zda się sobie mędrszy, niźli siedm mężów mądrze mówiących."
+        },
+        {
+          "number": 17,
+          "text": "Jako gdy kto psa ułapi za uszy, tak kto niecierpliwy mimo idzie a wdaje się w swary drugiego."
+        },
+        {
+          "number": 18,
+          "text": "Jako jest winny ten, który wypuszcza strzały i włocznie na zabicie:"
+        },
+        {
+          "number": 19,
+          "text": "Tak człowiek, który zdradliwie szkodzi przyjacielowi swemu: a gdy go doznają, mówi: Żem żartem uczynił."
+        },
+        {
+          "number": 20,
+          "text": "Gdy nie stanie drew, zgaśnie ogień: gdzie niemasz podszczuwacza, ustaną zwady."
+        },
+        {
+          "number": 21,
+          "text": "Jako węgle martwe do rozpalonych, i jako drwa do ognia, tak człowiek gniewliwy swary pobudza."
+        },
+        {
+          "number": 22,
+          "text": "Słowa podszczuwacza jakoby proste: a one przerażają aż do wnętrzności żywota."
+        },
+        {
+          "number": 23,
+          "text": "Jako gdybyś naczynie gliniane śrebrem nieczystem chciał ozdobić, tak wargi nadęte ze złem sercem złożone."
+        },
+        {
+          "number": 24,
+          "text": "Po mowie swéj bywa poznan nieprzyjaciel, kiedy w sercu rozmyśla zdrady."
+        },
+        {
+          "number": 25,
+          "text": "Gdy spuści głos swój, nie wierz mu; bo siedm złości są w sercu jego."
+        },
+        {
+          "number": 26,
+          "text": "Kto pokrywa nienawiść zdradliwie, tego złość będzie odkryta przed radą."
+        },
+        {
+          "number": 27,
+          "text": "Kto kopie dół, wpadnie weń: a kto toczy kamień, obróci się nań."
+        },
+        {
+          "number": 28,
+          "text": "Język kłamliwy nie miłuje prawdy: a usta śliskie czynią zatracenie."
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_27",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Nie chlub się dniem jutrzejszym: nie wiedząc, co przyszły dzień przyniesie."
+        },
+        {
+          "number": 2,
+          "text": "Niech cię chwali cudzy, a nie usta twoje: obcy, a nie wargi twoje."
+        },
+        {
+          "number": 3,
+          "text": "Ciężkić jest kamień i ważny piasek, ale gniew głupiego nad oboje cięższy."
+        },
+        {
+          "number": 4,
+          "text": "Gniew nie ma miłosierdzia, ani nagła zapalczywość: a popędliwość wzruszonego ducha kto będzie mógł strzymać?"
+        },
+        {
+          "number": 5,
+          "text": "Lepsze jest jawne karanie, niż miłość tajemna."
+        },
+        {
+          "number": 6,
+          "text": "Lepsze są rany od miłującego, niż zdradliwe całowania od nienawidzącego."
+        },
+        {
+          "number": 7,
+          "text": "Dusza nasycona podepcze plastr miodu: a dusza głodna i gorzkie przyjmie za słodkie."
+        },
+        {
+          "number": 8,
+          "text": "Jako ptak przenosząc się z gniazda swego: tak człowiek, który opuszcza miejsce swoje."
+        },
+        {
+          "number": 9,
+          "text": "Olejkami i rozmaitą wonią uwesela się serce: a dobremi radami od przyjaciela dusza się cieszy."
+        },
+        {
+          "number": 10,
+          "text": "Przyjaciela twego i przyjaciela ojca twego nie opuszczaj, a w dom brata twego nie wchódź w dzień kłopotu twego. Lepszy jest sąsiad bliski, niźli brat daleki."
+        },
+        {
+          "number": 11,
+          "text": "Ucz się mądrości, synu mój! a uweselaj serce moje: abyś mógł urągającemu odpowiedzieć mowę."
+        },
+        {
+          "number": 12,
+          "text": "Zmyślny ujrzawszy złe skrył się: maluczcy mijając podjęli szkodę."
+        },
+        {
+          "number": 13,
+          "text": "Weźmij suknią tego, który ręczył za obcego: a za inne weźmij fant od niego."
+        },
+        {
+          "number": 14,
+          "text": "Kto błogosławi bliźniemu swemu wielkim głosem, rano wstawszy będzie podobny złorzeczącemu."
+        },
+        {
+          "number": 15,
+          "text": "Dach, przez który kapie w dzień zimny, a niewiasta swarliwa są podobni sobie."
+        },
+        {
+          "number": 16,
+          "text": "Kto ją trzyma, jakoby kto wiatr trzymał, i oliwy prawice swéj wołać będzie."
+        },
+        {
+          "number": 17,
+          "text": "Żelazo ostrzy się żelazem: a człowiek zaostrza oblicze przyjaciela swego."
+        },
+        {
+          "number": 18,
+          "text": "Kto strzeże drzewa figowego, będzie jadł owoc jego: a kto strzeże pana swego, uczczon będzie."
+        },
+        {
+          "number": 19,
+          "text": "Jako w wodzie pokazują się twarze patrzających, tak serca człowiecze jawne są mądrym."
+        },
+        {
+          "number": 20,
+          "text": "Piekło i zatracenie nie bywają nigdy napełnione: tak i oczy człowiecze nie nasycone."
+        },
+        {
+          "number": 21,
+          "text": "Jako próbują śrebro w ogniu, a złoto w piecu: tak człowiek bywa próbowany usty chwalącego. Serce złośnikowe wynajduje złości: a serce dobre szuka umiejętności."
+        },
+        {
+          "number": 22,
+          "text": "Choćbyś stłukł głupiego w stępie jako krupy, bijąc z wierzchu stąporem, nie będzie odjęte od niego głupstwo jego."
+        },
+        {
+          "number": 23,
+          "text": "Pilnie poznawaj twarz bydła twojego: a miéj staranie o trzodach twoich."
+        },
+        {
+          "number": 24,
+          "text": "Bo nie zawsze będziesz miał moc: ale korona będzie dana od narodu do narodu."
+        },
+        {
+          "number": 25,
+          "text": "Otworzyły się łąki, i ukazały się trawy zielone, i zebrano siana z gór."
+        },
+        {
+          "number": 26,
+          "text": "Owce na szaty twoje, a kozłowie na zapłatę pola."
+        },
+        {
+          "number": 27,
+          "text": "Miéj dosyć na koziem mleku ku żywności twojéj, i na potrzeby domu twojego, i na pożywienie służebnicom twoim."
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_28",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Ucieka niezbożny, choć go nikt nie goni: ale sprawiedliwy jako lew śmiały bez bojaźni będzie."
+        },
+        {
+          "number": 2,
+          "text": "Dla grzechów ziemie wiele książąt jéj: a dla mądrości człowieka, i wiadomości tego, co się mówi, przedłuży się żywot książęciu."
+        },
+        {
+          "number": 3,
+          "text": "Człowiek ubogi potwarzający ubogie, jest podobien dżdżowi gwałtownemu, który głód przynosi."
+        },
+        {
+          "number": 4,
+          "text": "Którzy odstępują zakonu, chwalą niezbożnego: którzy go strzegą, zapalają się przeciw niemu."
+        },
+        {
+          "number": 5,
+          "text": "Źli ludzie nie myślą o sądzie: a którzy szukają Pana, obaczywają wszystko."
+        },
+        {
+          "number": 6,
+          "text": "Lepszy jest ubogi chodzący w prostości swéj, aniźli bogaty w drogach przewrótnych."
+        },
+        {
+          "number": 7,
+          "text": "Kto strzeże zakonu, syn mądry jest: ale który karmi obżerce, zawstydza ojca swego."
+        },
+        {
+          "number": 8,
+          "text": "Kto zbiera bogactwa z lichwy i z płatu, zbiera je szczodremu na ubogie."
+        },
+        {
+          "number": 9,
+          "text": "Kto odwraca uszy swe, aby nie słuchał zakonu, modlitwa jego obrzydła będzie."
+        },
+        {
+          "number": 10,
+          "text": "Kto zawodzi sprawiedliwe na złą drogę, w upadku swym zginie: a prości posiędą dobra jego."
+        },
+        {
+          "number": 11,
+          "text": "Człowiek bogaty zda się sobie mądry: ale ubogi roztropny doświadczy go."
+        },
+        {
+          "number": 12,
+          "text": "Gdy się radują sprawiedliwi, wielka jest sława: gdy królują niezbożni, są upadki ludzi."
+        },
+        {
+          "number": 13,
+          "text": "Kto pokrywa złości swe, poszczęścion nie będzie: lecz kto się spowiada a opuści je, miłosierdzie otrzyma."
+        },
+        {
+          "number": 14,
+          "text": "Błogosławiony człowiek, który się zawsze boi: a który jest twardego serca, we złe upadnie."
+        },
+        {
+          "number": 15,
+          "text": "Lew ryczący i niedźwiedź łaknący, Pan niezbożny nad ubogim ludem."
+        },
+        {
+          "number": 16,
+          "text": "Książę nie mające roztropności, wielu uciśnie przez potwarz: a kto nienawidzi łakomstwa, dni jego będą przedłużone."
+        },
+        {
+          "number": 17,
+          "text": "Człowieka, który potwarza krew dusze, by téż do grobu uciekł, nikt nie dzierży."
+        },
+        {
+          "number": 18,
+          "text": "Kto chodzi w prostości, zbawion będzie: kto przewrótnemi drogami idzie, raz upadnie."
+        },
+        {
+          "number": 19,
+          "text": "Kto sprawuje rolą swą, naje się chleba: lecz kto się próżnowaniem bawi, będzie syt ubóstwa."
+        },
+        {
+          "number": 20,
+          "text": "Mąż wierny wielce chwalon będzie: lecz kto się prędko chce zbogacić, nie będzie bez winy."
+        },
+        {
+          "number": 21,
+          "text": "Kto ma wzgląd u sądu na osobę, nie dobrze czyni : ten i dla kęsa chleba odstępuje prawdy."
+        },
+        {
+          "number": 22,
+          "text": "Człowiek, który się prędko chce zbogacić, a innym zajrzy, nie wie, iż nań przyjdzie niedostatek."
+        },
+        {
+          "number": 23,
+          "text": "Kto strofuje człowieka, większą potem łaskę najdzie u niego, niźli ten, który łagodnym językiem zwodzi."
+        },
+        {
+          "number": 24,
+          "text": "Kto bierze co u ojca swego albo u matki, a mówi, że to nie grzech, jest towarzyszem mężobójce."
+        },
+        {
+          "number": 25,
+          "text": "Kto się chlubi i szerzy, wszczyna zwady: lecz kto ma nadzieję w Panu, uzdrowion będzie."
+        },
+        {
+          "number": 26,
+          "text": "Kto ufa w sercu swojem, głupi jest: ale kto mądrze sobie postępuje, ten zbawion będzie."
+        },
+        {
+          "number": 27,
+          "text": "Kto daje ubogiemu, nie zubożeje: kto gardzi proszącym, będzie niedostatek cierpiał."
+        },
+        {
+          "number": 28,
+          "text": "Gdy powstają niezbożnicy, tedy się kryją ludzie: gdy oni zginą, mnożyć się będą sprawiedliwi."
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_29",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Człowiekowi, który karzącego twardym karkiem wzgardza, nagłe zginienie nań przyjdzie, a nie przyjdzie ku zdrowiu."
+        },
+        {
+          "number": 2,
+          "text": "Kiedy się mnożą sprawiedliwi, będzie się radowało pospólstwo: gdy niezbożni władzą wezmą, wzdychać będzie lud."
+        },
+        {
+          "number": 3,
+          "text": "Człowiek, który miłuje mądrość, uwesela ojca swego: ale który chowa wszeteczne niewiasty, utraci majętność."
+        },
+        {
+          "number": 4,
+          "text": "Król sprawiedliwy wynosi ziemię: mąż łakomy wywróci ją."
+        },
+        {
+          "number": 5,
+          "text": "Człowiek, który łagodnemi a obłudnemi słowy mówi przyjacielowi swemu, sieć zastawia na nogi jego."
+        },
+        {
+          "number": 6,
+          "text": "Grzeszącego męża niesprawiedliwego uwikle sidło: a sprawiedliwy chwalić i weselić się będzie."
+        },
+        {
+          "number": 7,
+          "text": "Zna sprawiedliwy sprawę ubogich: niezbożny nie rozumie umiejętności."
+        },
+        {
+          "number": 8,
+          "text": "Ludzie zaraźliwi rozpraszają miasto: a mądrzy gniew odwracają."
+        },
+        {
+          "number": 9,
+          "text": "Człowiek mądry, będzieli się z głupim prawował, choć się gniewa, choć się śmieje, nie najdzie pokoju."
+        },
+        {
+          "number": 10,
+          "text": "Mężowie krwawi nienawidzą prostego: ale sprawiedliwi szukają dusze jego."
+        },
+        {
+          "number": 11,
+          "text": "Wszystkiego ducha swego pokazuje głupi: mądry odkłada i chowa na potem."
+        },
+        {
+          "number": 12,
+          "text": "Pan, który rad słucha słów kłamliwych, wszystkie sługi ma niezbożne."
+        },
+        {
+          "number": 13,
+          "text": "Ubogi, a ten, który pożycza, zabieżeli sobie: obudwu Pan oświeca."
+        },
+        {
+          "number": 14,
+          "text": "Król, który sądzi według prawdy ubogie, stolica jego będzie na wieki utwierdzona."
+        },
+        {
+          "number": 15,
+          "text": "Rózga i karanie daje mądrość: ale dziecię puszczone na swą wolą, zawstydza matkę swoję."
+        },
+        {
+          "number": 16,
+          "text": "Gdy się mnożą niezbożni, mnożyć się będą złości: a sprawiedliwi ujrzą ich upadek."
+        },
+        {
+          "number": 17,
+          "text": "Ćwicz syna twego, a ochłodzi cię i da kochanie duszy twojéj."
+        },
+        {
+          "number": 18,
+          "text": "Gdy ustanie proroctwo, rozproszy się lud: a kto strzeże zakonu, jest błogosławiony."
+        },
+        {
+          "number": 19,
+          "text": "Niewolnik nie może być słowy ukarany; bo rozumie, co mówisz, a odpowiadać nie chce."
+        },
+        {
+          "number": 20,
+          "text": "Widziałeś człowieka prędkiego do mówienia? więcéj się trzeba głupstwa spodziewać, niż ukarania jego."
+        },
+        {
+          "number": 21,
+          "text": "Kto w rozkoszy z młodu chowa sługę swego, potem go dozna krnąbrnego."
+        },
+        {
+          "number": 22,
+          "text": "Człowiek gniewliwy wzbudza zwady: a kto jest prędki do gniewu, będzie ku zgrzeszeniu skłonniejszy."
+        },
+        {
+          "number": 23,
+          "text": "Za pysznym chodzi uniżenie: a pokornego duchem ogarnie chwała."
+        },
+        {
+          "number": 24,
+          "text": "Kto spółkuje ze złodziejem, ma w nienawiści duszę swoję: słucha poprzysięgającego, a nie wydaje."
+        },
+        {
+          "number": 25,
+          "text": "Kto się boi człowieka, prędko upadnie: kto ma nadzieję w Panu, podniesion będzie."
+        },
+        {
+          "number": 26,
+          "text": "Wiele szukają twarzy pańskiéj: a od Pana wychodzi sąd każdego."
+        },
+        {
+          "number": 27,
+          "text": "Brzydzą się sprawiedliwi mężem niezbożnym: a niezbożni brzydzą się tymi, którzy są na prostéj drodze. Syn strzegący słowa, ujdzie zatracenia."
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_30",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Słowa zgromadzającego, syna zwracającego. Widzenie, które powiadał mąż, z którym Bóg jest, i który Bogiem, z nim mieszkającym, umocniony rzekł:"
+        },
+        {
+          "number": 2,
+          "text": "Jestem najgłupszy między mężami, i mądrości człowieczéj niemasz we mnie."
+        },
+        {
+          "number": 3,
+          "text": "Nie nauczyłem się mądrości, a nie nawykłem umiejętności świętych."
+        },
+        {
+          "number": 4,
+          "text": "Któż wstąpił do nieba i zstąpił? kto zatrzymał wiatr w rękach swoich? kto zawiązał wody jako w szacie? kto założył wszystkie kończyny ziemie? które jest imię jego? i które imię syna jego, jeźli wiesz?"
+        },
+        {
+          "number": 5,
+          "text": "Wszelka mowa Boża ognista, tarcza jest mającym nadzieję w nim."
+        },
+        {
+          "number": 6,
+          "text": "Nie przydawaj nic do słów jego, aby cię nie przekonał i nie nalazł kłamcą."
+        },
+        {
+          "number": 7,
+          "text": "Dwu rzeczy prosiłem u ciebie, nie odmawiaj mi, pókim żyw."
+        },
+        {
+          "number": 8,
+          "text": "Marność i słowa kłamliwe oddal odemnie: żebractwa i bogactwa nie dawaj mi: daj tylko potrzeby do żywności mojéj,"
+        },
+        {
+          "number": 9,
+          "text": "Bych snadź nasycony nie był przywiedziony do zaprzenia, i rzekł: Któż jest Pan? albo ubóstwem przyciśniony, nie jął się kraść i fałszywie nie przysięgał przez imię Boga mego."
+        },
+        {
+          "number": 10,
+          "text": "Nie oskarżaj sługi do Pana jego, aby cię snadź nie przeklinał, i upadłbyś."
+        },
+        {
+          "number": 11,
+          "text": "Rodzaj, który ojcu swemu złorzeczy i który matce swéj nie błogosławi."
+        },
+        {
+          "number": 12,
+          "text": "Rodzaj, który się sobie zda być czysty a przecie nie omył się z plugastwa swego."
+        },
+        {
+          "number": 13,
+          "text": "Rodzaj, który ma wyniosłe oczy, a powieki ku górze obrócone."
+        },
+        {
+          "number": 14,
+          "text": "Rodzaj, który ma miasto zębów miecze, a żuje trzonowymi swymi, aby wyjadł nędzniki z ziemie, a ubogie z ludzi."
+        },
+        {
+          "number": 15,
+          "text": "Pijawka ma dwie córki mówiące: Przynieś, przynieś. Trzy rzeczy są nie nasycone, a czwarta, która nigdy nie rzecze: Dosyć."
+        },
+        {
+          "number": 16,
+          "text": "Piekło, łono białogłowskie, i ziemia, która się nie nasyca wodą, a ogień nigdy nie mówi: Dosyć."
+        },
+        {
+          "number": 17,
+          "text": "Oko, które urąga ojcu, i które gardzi rodzeniem matki swojéj, niech wykłują krucy od potoków, i niech je wyjedzą orlęta."
+        },
+        {
+          "number": 18,
+          "text": "Trzy rzeczy są u mnie trudne, a czwartéj zgoła nie wiem."
+        },
+        {
+          "number": 19,
+          "text": "Drogi orłowéj na powietrzu, drogi wężowéj na skale, drogi okrętu w pośród morza, a drogi męża w młodości."
+        },
+        {
+          "number": 20,
+          "text": "Takaż jest i droga cudzołożącéj niewiasty, która zjadła, i ucierając usta swoje, mówi: Nie uczyniłam nic złego."
+        },
+        {
+          "number": 21,
+          "text": "Pod trzema rzeczami drży ziemia, a czwartéj znieść nie może."
+        },
+        {
+          "number": 22,
+          "text": "Pod sługą, kiedy króluje: pod głupim, kiedy się naje chleba:"
+        },
+        {
+          "number": 23,
+          "text": "Pod nienawisną niewiastą, kiedy za mąż poszła: a pod służebnicą, kiedy się stanie dziedziczką po pani swojéj."
+        },
+        {
+          "number": 24,
+          "text": "Cztery rzeczy są maluczkie na ziemi, a one są mędrsze nad mędrce."
+        },
+        {
+          "number": 25,
+          "text": "Mrówki, lud słaby, który gotuje we żniwa żywność sobie."
+        },
+        {
+          "number": 26,
+          "text": "Zajączek, gmin nie duży, który czyni sobie w skałach łożysko swoje."
+        },
+        {
+          "number": 27,
+          "text": "Szarańcza króla nie ma, a wszystka hufcami swymi wychodzi."
+        },
+        {
+          "number": 28,
+          "text": "Pająk rękoma się wspiera, a mieszka w pałacach królewskich."
+        },
+        {
+          "number": 29,
+          "text": "Trzy rzeczy są, które dobrze chodzą, a czwarta, która szczęśliwie kroczy."
+        },
+        {
+          "number": 30,
+          "text": "Lew najmocniejszy między zwierzęty, niczyjego się potkania nie zlęknie."
+        },
+        {
+          "number": 31,
+          "text": "Kur mający biodra podkasane: i baran: a i króla niemasz, któryby mu się sprzeciwił."
+        },
+        {
+          "number": 32,
+          "text": "Jest, który się głupim pokazał, skoro wzgorę jest wyniesiony; bo by był rozumiał, zatuliłby był ręką usta swoje."
+        },
+        {
+          "number": 33,
+          "text": "A kto mocno ściska wymiona, chcąc wydoić mleko, ten wyciska masło: a kto bardzo nos wyciera, wyciska krew, a kto wzbudza gniewy, wywodzie niezgody."
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w_31",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Słowa Lamuela króla. Widzenie, którem go ćwiczyła matka jego."
+        },
+        {
+          "number": 2,
+          "text": "Cóż, miły mój, cóż, miły żywota mego, cóż, miły żądania mego?"
+        },
+        {
+          "number": 3,
+          "text": "Nie dawaj niewiastom majętności twojéj, i bogactw twoich na zniszczenie królów."
+        },
+        {
+          "number": 4,
+          "text": "Nie dawaj królom, o Lamuelu! nie dawaj królom wina; bo tam niemasz żadnéj tajemnice, gdzie panuje opilstwo:"
+        },
+        {
+          "number": 5,
+          "text": "By snadź nie pili i nie zapomnieli sądów, a nie odmienili sprawy synów ubogiego."
+        },
+        {
+          "number": 6,
+          "text": "Dawajcie sycery smutnym, a wina tym, których serce jest w gorzkości."
+        },
+        {
+          "number": 7,
+          "text": "Niech piją i zapamiętają nędze swojéj, a boleści swojéj więcéj niech nie wspominają."
+        },
+        {
+          "number": 8,
+          "text": "Otwórz usta swe niememu, i sprawom wszystkich synów mijających."
+        },
+        {
+          "number": 9,
+          "text": "Otwórz usta twoje, skaż, co jest sprawiedliwego, a sądź nędznego i ubogiego."
+        },
+        {
+          "number": 10,
+          "text": "Niewiastę mężną któż znajdzie? daleko i od ostatecznych granic cena jéj."
+        },
+        {
+          "number": 11,
+          "text": "Ufa w niéj serce męża jéj, a korzyści nie będzie potrzebował."
+        },
+        {
+          "number": 12,
+          "text": "Odda mu dobrem, a nie złem po wszystkie dni żywota swojego."
+        },
+        {
+          "number": 13,
+          "text": "Szukała wełny i lnu, i robiła dowcipem rąk swoich."
+        },
+        {
+          "number": 14,
+          "text": "Stała się jako okręt kupiecki, zdaleka przywożąca żywność swoję."
+        },
+        {
+          "number": 15,
+          "text": "I w nocy wstawała i dała korzyść domownikom swoim i pokarmy służebnikom swoim."
+        },
+        {
+          "number": 16,
+          "text": "Oglądała rolą i kupiła ją, z pożytku rąk swoich nasadziła winnicę."
+        },
+        {
+          "number": 17,
+          "text": "Przepasała mocą biodra swoje, i zmocniła ramiona swoje."
+        },
+        {
+          "number": 18,
+          "text": "Skosztowała i ujrzała, że dobre jest kupiectwo jéj, nie zgaśnie w nocy kaganiec jéj."
+        },
+        {
+          "number": 19,
+          "text": "Rękę swą ściągnęła do mocnych rzeczy: a palce jéj ujęły wrzeciono."
+        },
+        {
+          "number": 20,
+          "text": "Rękę swą otworzyła ubogiemu, a dłonie swe ściągnęła ku niedostatecznemu."
+        },
+        {
+          "number": 21,
+          "text": "Nie będzie się bała domowi swemu zimna śnieżnego; bo wszyscy domownicy jéj mają po dwu sukniach."
+        },
+        {
+          "number": 22,
+          "text": "Obicie sprawiła sobie: bisior i szarłat odzienie jéj."
+        },
+        {
+          "number": 23,
+          "text": "Znaczny jest mąż jéj w radzie, gdy usiędzie między starszymi ziemie."
+        },
+        {
+          "number": 24,
+          "text": "Rąbek urobiła i przedała: i pas podała Chananejczykowi."
+        },
+        {
+          "number": 25,
+          "text": "Moc i ochędóstwo ubiór jéj: i śmiać się będzie czasu potomnego."
+        },
+        {
+          "number": 26,
+          "text": "Usta swe otwarza mądrości, a zakon miłosierdzia na języku jéj."
+        },
+        {
+          "number": 27,
+          "text": "Upatrowała ścieżki domu swego, a chleba próżnując nie jadła."
+        },
+        {
+          "number": 28,
+          "text": "Powstali synowie jéj, i szczęśliwą sławili: mąż jéj, i chwalił ją."
+        },
+        {
+          "number": 29,
+          "text": "Wiele córek zebrało bogactwa: tyś przewyższyła wszystkie."
+        },
+        {
+          "number": 30,
+          "text": "Omylna wdzięczność i marna jest piękność: niewiasta bojąca się Boga, ta będzie chwalona."
+        },
+        {
+          "number": 31,
+          "text": "Dajcie jéj z owoców ręku jéj: a niech ją chwalą w bramach uczynki jéj."
+        }
+      ]
+    }
+  ]
+}
