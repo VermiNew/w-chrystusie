@@ -443,6 +443,15 @@ const books = {
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Przys%C5%82%C3%B3w',
     markerCorrections: new Set([2, 3, 4, 5, 6].map((verse) => `3:2:${verse}`)),
   },
+  ecc: {
+    id: 'ecc',
+    name: 'Księga Koheleta',
+    chapterCount: 12,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'ecclesiastes-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Koheleta ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Koheleta_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Koheleta',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

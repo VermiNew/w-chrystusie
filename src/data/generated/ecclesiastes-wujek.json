@@ -1,0 +1,970 @@
+{
+  "id": "ecc",
+  "name": "Księga Koheleta",
+  "translation": "Biblia Jakuba Wujka (1599), wydanie 1923",
+  "sourceName": "Wikiźródła",
+  "sourceBookUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Koheleta",
+  "sourceRights": "Domena publiczna (wydanie); CC BY-SA 4.0 (transkrypcja Wikiźródeł)",
+  "chapters": [
+    {
+      "number": 1,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Koheleta_1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Słowa Ekklesiasta, syna Dawidowego, króla Jerozolimskiego."
+        },
+        {
+          "number": 2,
+          "text": "Marność nad marnościami, rzekł Ekklesiastes: marność nad marnościami, i wszystko marność."
+        },
+        {
+          "number": 3,
+          "text": "Co więcéj ma człowiek ze wszystkiéj prace swéj, którą się pracuje pod słońcem?"
+        },
+        {
+          "number": 4,
+          "text": "Rodzaj przemija, i rodzaj nadchodzi: a ziemia na wieki stoi."
+        },
+        {
+          "number": 5,
+          "text": "Słońce wschodzi i zachodzi, i wraca się do miejsca swego: i tam znowu wszedłszy,"
+        },
+        {
+          "number": 6,
+          "text": "Krąży przez południe, i skłania się ku północy: przechodząc wszystko wokoło idzie wiatr, i nawraca się do okręgów swoich."
+        },
+        {
+          "number": 7,
+          "text": "Wszystkie rzeki wchodzą do morza, a morze nie wylewa: do miejsca, z którego wyszły rzeki, wracają się, aby znowu ciekły."
+        },
+        {
+          "number": 8,
+          "text": "Wszystkie rzeczy trudne, nie może ich człowiek wymówić. Nie nasyca się oko widzeniem, ani się ucho napełnia słyszeniem."
+        },
+        {
+          "number": 9,
+          "text": "Cóż jest, co było? tóż, co potem będzie. Cóż jest, co się stało? tóż, co się stanie."
+        },
+        {
+          "number": 10,
+          "text": "Nic niemasz nowego pod słońcem: i nie może nikt mówić: Oto to jest nowe; już bowiem uprzedziło w wiekach, które były przed nami."
+        },
+        {
+          "number": 11,
+          "text": "Niemasz pamięci pierwszych rzeczy: ale ani tych, które potem będą, nie będzie pamiątki u tych, którzy na końcu będą."
+        },
+        {
+          "number": 12,
+          "text": "Ja, Ekklesiastes, byłem królem Izraelskim w Jeruzalem:"
+        },
+        {
+          "number": 13,
+          "text": "I umyśliłem w sercu mojem, szukać i dowiadować się mądrze o wszystkiem, co się dzieje pod słońcem. (Tę zabawkę najgorszą dał Bóg synom człowieczym, aby się nią bawili.)"
+        },
+        {
+          "number": 14,
+          "text": "Widziałem wszystko, co się dzieje pod słońcem: a oto wszystko marność i utrapienie ducha."
+        },
+        {
+          "number": 15,
+          "text": "Przewrótni z ciężkością bywają naprawieni, a głupich jest poczet nieprzeliczony."
+        },
+        {
+          "number": 16,
+          "text": "Mówiłem w sercu mojem, rzekąc: Otom się stał wielkim i przeszedłem w mądrości wszystkie, którzy przedemną byli w Jeruzalem: a serce moje widziało wiele rzeczy mądrze, i nauczyłem się."
+        },
+        {
+          "number": 17,
+          "text": "I udałem serce moje, abych poznał mądrość i umiejętność i błędy i głupstwo: i doznałem, że i w tych jest praca i utrapienie ducha."
+        },
+        {
+          "number": 18,
+          "text": "Tem, że w wielkiéj mądrości wiele jest kłopotu: a kto przyczynia umiejętności, przyczynia i pracy."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Koheleta_2",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Mówiłem ja w sercu mojem: Pójdę a rozpuszczę się w rozkoszach i będę zażywał dobra. I widziałem, że i to jest marność."
+        },
+        {
+          "number": 2,
+          "text": "Śmiech poczytałem za błąd, a do wesela rzekłem: Co się darmo zwodzisz?"
+        },
+        {
+          "number": 3,
+          "text": "Myślałem w sercu swojem, abych zawściągnął od wina ciało moje, abych serce swe przeniósł ku mądrości, a uchronił się głupstwa: abych obaczył, coby było pożytecznego synom ludzkim, coby czynić potrzeba pod słońcem przez wszystkie dni żywota ich."
+        },
+        {
+          "number": 4,
+          "text": "Rozwielmożyłem dzieła moje: nabudowałem sobie domów, i nasadziłem winnic."
+        },
+        {
+          "number": 5,
+          "text": "Naczyniłem ogrodów i sadów, i naszczepiłem w nich drzew rodzaju wszelakiego."
+        },
+        {
+          "number": 6,
+          "text": "I nabudowałem sobie stawów dla odwilżania lasów drzew rodzących."
+        },
+        {
+          "number": 7,
+          "text": "Nabyłem sobie sług i służebnic, i miałem czeladź wielką: stada téż, i wielkie trzody owiec nade wszystkie, którzy przedemną byli w Jeruzalem."
+        },
+        {
+          "number": 8,
+          "text": "Zgromadziłem sobie śrebro i złoto i majętności królów i krain; sprawiłem sobie śpiewaki i śpiewaczki i rozkoszy synów człowieczych, kubki i czasze na służbę do nalewania wina."
+        },
+        {
+          "number": 9,
+          "text": "I przeszedłem bogactwy wszystkie, którzy przedemną byli w Jeruzalem: mądrość téż została zemną."
+        },
+        {
+          "number": 10,
+          "text": "I wszystko, czego żądały oczy moje, nie broniłem im: anim odmawiał sercu memu, aby nie miało używać wszelakiéj rozkoszy, i kochać się w tem, com był zgotował: a miałem to za cząstkę swoję, gdybych zażył prace swojéj."
+        },
+        {
+          "number": 11,
+          "text": "A gdym się obrócił ku wszystkim dziełom, których naczyniły ręce moje: i ku robotom, w którychem się próżno pocił, obaczyłem we wszystkich marność i udręczenie myśli, a iż nic nie trwa pod słońcem."
+        },
+        {
+          "number": 12,
+          "text": "Przeszedłem, abych oglądał mądrość i głupstwa i szaleństwa. (Cóż jest, rzekłem, człowiek, aby mógł naśladować Króla, stwórcę swego?)"
+        },
+        {
+          "number": 13,
+          "text": "I obaczyłem, iż tak dalece mądrość przechodzi głupstwo, jako różna jest światłość od ciemności."
+        },
+        {
+          "number": 14,
+          "text": "Mądrego oczy są w głowie jego: głupi w ciemności chodzi: i poznałem, iż jednakie jest obu dokończenie."
+        },
+        {
+          "number": 15,
+          "text": "I rzekłem w sercu swem: Jeźliż jedno będzie i głupiego i moje dokończenie, cóż mi pomoże, żem się więcéj o mądrość starał? i rozmawiając z sercem swojem, obaczyłem, że i to jest marność."
+        },
+        {
+          "number": 16,
+          "text": "Nie będzie bowiem pamięci tak mądrego jako i głupiego na wieki, a potomne czasy zapomnieniem wszystko zarówno pokryją: umiera uczony, także jako nieuczony."
+        },
+        {
+          "number": 17,
+          "text": "A dlategóż omierzł mi żywot mój, widząc, że wszystko złe jest pod słońcem, i wszystko jest marność i utrapienie ducha."
+        },
+        {
+          "number": 18,
+          "text": "Brzydziłem się zaś wszystką pracą moją, którąm pilnie pracował pod słońcem, gdyż mam mieć dziedzica po sobie:"
+        },
+        {
+          "number": 19,
+          "text": "O którym nie wiem, jeźli mądry albo głupi będzie, i ma panować w pracach moich, w którychem się pocił, i kłopotałem się: a jestże co tak marnego?"
+        },
+        {
+          "number": 20,
+          "text": "A przetóżem przestał, i odmówiło serce moje więcéj pracować pod słońcem."
+        },
+        {
+          "number": 21,
+          "text": "Bo gdy drugi pracuje w mądrości i umiejętności, i w pilnem staraniu człowiekowi próżnującemu zostawuje nabycie: i to tedy marność i nieszczęście wielkie."
+        },
+        {
+          "number": 22,
+          "text": "Bo cóż za pożytek człowiekowi ze wszystkiéj pracy jego, i z udręczenia ducha, którem się męczył pod słońcem?"
+        },
+        {
+          "number": 23,
+          "text": "Wszystkie dni jego boleści i nędze są pełne, ani w nocy sercem odpoczywa: więc i to nie jest marność?"
+        },
+        {
+          "number": 24,
+          "text": "Izali nie lepiéj jest, jeść i pić i okazać duszy swéj dobra z pracy swojéj? i toć jest z ręki Bożéj."
+        },
+        {
+          "number": 25,
+          "text": "Któż tak używać i rozkoszy zażywać będzie jako ja?"
+        },
+        {
+          "number": 26,
+          "text": "Człowiekowi, który jest dobry przed oczyma jego, dał Bóg mądrość i naukę i wesele: lecz grzesznemu dał frasunek i zbytnią pracą, aby przyczyniał i zbierał, a potem dał temu, który się Bogu upodobał: wszakże i to jest marność, i próżne myśli utrapienie."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Koheleta_3",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Wszystkie rzeczy mają czas, a swym zamierzonym biegem przemija wszystko pod słońcem."
+        },
+        {
+          "number": 2,
+          "text": "Czas rodzenia i czas umierania, czas szczepienia i czas wyrywania tego, co szczepiono."
+        },
+        {
+          "number": 3,
+          "text": "Czas zabijania i czas leczenia, czas rozwalania i czas budowania."
+        },
+        {
+          "number": 4,
+          "text": "Czas płakania i czas śmiania, czas narzekania i czas tańcowania."
+        },
+        {
+          "number": 5,
+          "text": "Czas rozrzucania kamieni i czas zbierania: czas obłapiania i czas oddalania się od obłapiania."
+        },
+        {
+          "number": 6,
+          "text": "Czas nabywania i czas utracania: czas chowania i czas odrzucania."
+        },
+        {
+          "number": 7,
+          "text": "Czas darcia i czas zszywania, czas milczenia i czas mówienia."
+        },
+        {
+          "number": 8,
+          "text": "Czas miłowania i czas nienawidzenia."
+        },
+        {
+          "number": 9,
+          "text": "Czas wojny i czas pokoju."
+        },
+        {
+          "number": 10,
+          "text": "Cóż więcéj ma człowiek z prace swéj? Widziałem udręczenie, które dał Bóg synom człowieczym, aby się ciągnęli w niem."
+        },
+        {
+          "number": 11,
+          "text": "Wszystko uczynił dobrze czasu swego, a świat podał rozbieraniu ich, aby nie nalazł człowiek sprawy, którą uczynił Bóg od początku aż do końca."
+        },
+        {
+          "number": 12,
+          "text": "I poznałem, że niemasz nic lepszego, jako weselić się, a czynić dobrze za żywota swego."
+        },
+        {
+          "number": 13,
+          "text": "Każdy bowiem człowiek, który je i pije i widzi dobra z prace swojéj, to dar Boży jest."
+        },
+        {
+          "number": 14,
+          "text": "Doznałem, iże wszystkie sprawy, które Bóg uczynił, trwają na wieki: nie możemy im nic przydać ani ująć, które Bóg uczynił, aby się go bano."
+        },
+        {
+          "number": 15,
+          "text": "Co już było, to i teraz jest: co będzie, już było; a Bóg odnawia, co przeminęło."
+        },
+        {
+          "number": 16,
+          "text": "Widziałem pod słońcem na miejscu sądu niezbożność: a na miejscu sprawiedliwości nieprawość."
+        },
+        {
+          "number": 17,
+          "text": "I rzekłem w sercu swojem: Sprawiedliwego i niezbożnego Bóg sądzić będzie, i czas każdéj rzeczy tedy będzie."
+        },
+        {
+          "number": 18,
+          "text": "Rzekłem w sercu synom ludzkim, aby ich Bóg doświadczył i ukazał, że są bestyom podobni."
+        },
+        {
+          "number": 19,
+          "text": "Prztetóż jednakie jest dokończenie człowieka i bydląt, i równy stan obojga: jako umiera człowiek, tak i one umierają: i jednako tchną wszystkie, i nie ma człowiek nic więcéj nad bydlę: wszystko podległo marności,"
+        },
+        {
+          "number": 20,
+          "text": "I wszystko idzie na jedno miejsce. Z ziemie są uczynione, i w ziemię się jednako obracają."
+        },
+        {
+          "number": 21,
+          "text": "Któż wie, jeźli duch synów Adamowych wstępuje wzgórę, a jeźli duch bydlęcy zstępuje nadół?"
+        },
+        {
+          "number": 22,
+          "text": "I obaczyłem, iż nic lepszego, jedno weselić się człowiekowi w uczynkach swych, a iż to jest dział jego. Bo któż go przywiedzie, iżby poznał to, co po nim będzie?"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Koheleta_4",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Obróciłem się do innych rzeczy i ujrzałem potwarzy, które się dzieją pod słońcem, i łzy niewinnych, a żadnego pocieszyciela: i nie mogą się sprzeciwić gwałtowi ich, nie mając żadnego pomocnika."
+        },
+        {
+          "number": 2,
+          "text": "A chwaliłem więcéj umarłe niźli żywe."
+        },
+        {
+          "number": 3,
+          "text": "A miałem za szczęśliwego nad obudwu, który się jeszcze nie narodził, ani wiedział złego, które się dzieje pod słońcem."
+        },
+        {
+          "number": 4,
+          "text": "Jeszcze przypatrzałem się wszelakim pracom ludzkim, i zabiegi obaczyłem, że podległy jest zazdrości ludzkiéj: i w tem tedy marność jest i praca zbyteczna."
+        },
+        {
+          "number": 5,
+          "text": "Głupi składa ręce swoje, a je ciało swoje, mówiąc:"
+        },
+        {
+          "number": 6,
+          "text": "Lepsza jest jedna garść z pokojem, niż obie ręce pełne z pracą i z udręczeniem myśli."
+        },
+        {
+          "number": 7,
+          "text": "Przypatrując się nalazłem i drugą marność pod słońcem."
+        },
+        {
+          "number": 8,
+          "text": "Jest jeden, a nie ma drugiego, ani syna ani brata: a wżdy pracować nie przestaje, a nie mogą się nasysićnasycić bogactwem oczy jego: i inny myśli, mówiąc: Komuż pracuję, a pozbawiam duszę moje dóbr? W tem téż jest marność i złe udręczenie."
+        },
+        {
+          "number": 9,
+          "text": "Lepiéj tedy dwiema być spółem, niż jednemu: albowiem mają pożytek z swego towarzystwa."
+        },
+        {
+          "number": 10,
+          "text": "Jeźli jeden upadnie, drugi go podeprze. Biada samemu; bo, jeźli upadnie, nie ma, ktoby go podniósł."
+        },
+        {
+          "number": 11,
+          "text": "Jeźli dwaj spać będą, zagrzeje się jeden od drugiego: jeden jako się zagrzeje?"
+        },
+        {
+          "number": 12,
+          "text": "Jeźli téż kto przemoże jednego, dwaj się mu zastawiają: sznur troisty nie łacno się przerywa."
+        },
+        {
+          "number": 13,
+          "text": "Lepsze jest pacholę ubogie a mądre, niźli król stary a głupi, który nie umie opatrzyć na przyszły czas."
+        },
+        {
+          "number": 14,
+          "text": "Że czasem drugi z więzienia i z oków wychodzi na królestwo: a drugi urodziwszy się królem, zostawa żebrakiem."
+        },
+        {
+          "number": 15,
+          "text": "Widziałem wszystkie żywiące pod słońcem, chodząc z młodzieńcem wtórym, który ma nastać po nim."
+        },
+        {
+          "number": 16,
+          "text": "Niezliczona liczba jest ludzi wszystkich, którzy byli przed nim: a którzy potem będą, nie będą się weselić z niego. Ale i to marność i utrapienie ducha."
+        },
+        {
+          "number": 17,
+          "text": "Strzeż nogi twojéj, gdy idziesz do domu Bożego, a przybliżysz się, abyś słuchał; daleko bowiem lepsze jest posłuszeństwo, niźli ofiary głupich, którzy nie wiedzą, co złego czynią."
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Koheleta_5",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Nie mów nic nierozmyślnie, a niech nie będzie serce twe prędkie na wymówienie słowa przed Bogiem; Bóg bowiem na niebie, a ty na ziemi: przeto niech będzie słów twoich mało."
+        },
+        {
+          "number": 2,
+          "text": "Za wielkiem staraniem sny idą, a w wielomówstwie głupstwo się najdzie."
+        },
+        {
+          "number": 3,
+          "text": "Jeźliś co ślubił Bogu, nie omieszkajże spełnić; albowiem nie podoba się mu niewierna a głupia obietnica, ale cokolwiek ślubisz, oddaj."
+        },
+        {
+          "number": 4,
+          "text": "I daleko lepiéj jest nie ślubować, niźli po ślubie obietnic nie spełnić."
+        },
+        {
+          "number": 5,
+          "text": "Nie dawaj ustom twoim, abyś o grzech przyprawił ciało twoje, ani mów przed Aniołem: Niemasz opatrzności: by snadź Bóg rozgniewawszy się na mowę twoję, nie rozproszył wszystkich spraw rąk twoich."
+        },
+        {
+          "number": 6,
+          "text": "Gdzie wiele snów, wiele marności, i mowy niezliczone. Ale ty Boga się bój."
+        },
+        {
+          "number": 7,
+          "text": "Jeźli ujrzysz potwarzy na ubogie ludzie i gwałtowne sądy i wywrócenie sprawiedliwości w krainie, nie dziwujże się takowéj sprawie; bo nad wysokiego jest wyższy drugi, a nad te jeszcze są drudzy zwierzchniejsi."
+        },
+        {
+          "number": 8,
+          "text": "A nad te jeszcze wszystkiéj ziemi król rozkazuje służącéj."
+        },
+        {
+          "number": 9,
+          "text": "Łakomy nie nasyci się pieniędzy, a kto miłuje bogactwa, nie weźmie z nich pożytku: przetóż i to jest marność."
+        },
+        {
+          "number": 10,
+          "text": "Gdzie jest wiele majętności, wiele i tych, którzy je trawią. A cóż za pożytek panu z tego, jedno iż widzi bogactwa oczyma swemi?"
+        },
+        {
+          "number": 11,
+          "text": "Wdzięczny jest sen robiącemu, chocia mało, chocia wiele zje: lecz nasycenie bogatego spać mu nie dopuszcza."
+        },
+        {
+          "number": 12,
+          "text": "Jest i druga niemoc bardzo zła, którąm widział pod słońcem: bogactwa zachowane na złe pana swego."
+        },
+        {
+          "number": 13,
+          "text": "Giną bowiem w złem utrapieniu: urodził syna, który będzie w wielkiem ubóstwie."
+        },
+        {
+          "number": 14,
+          "text": "Jako wyszedł nagi ze żywota matki swéj, tak się wróci: a nic nie weźmie z sobą z prace swojéj."
+        },
+        {
+          "number": 15,
+          "text": "Żałosna zgoła niemoc, jako przyszedł, tak się wróci. Cóż tedy mu pomoże, że na wiatr pracował?"
+        },
+        {
+          "number": 16,
+          "text": "Po wszystkie dni żywota swego jadał w ciemności i w frasunku wielkim i w kłopocie i smutku."
+        },
+        {
+          "number": 17,
+          "text": "Przetóż to zdało mi się być dobre, aby człowiek jadł i pił i używał wesela z prace swéj, którą sam pracował pod słońcem, w liczbie dni żywota swego, które mu Bóg dał: i to jest dział jego."
+        },
+        {
+          "number": 18,
+          "text": "I każdemu człowiekowi, któremu Bóg dał bogactwa i majętności, i moc mu dał, aby jadł z nich i używał cząstki swojéj i weselił się z pracy swojéj: toć jest dar Boży."
+        },
+        {
+          "number": 19,
+          "text": "Bo nie wiele będzie pamiętał dni żywota swego, iż Bóg zabawił rozkoszami serce jego."
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Koheleta_6",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Jest i drugie złe, którem widział pod słońcem, a iście częste u ludzi."
+        },
+        {
+          "number": 2,
+          "text": "Mąż, któremu Bóg dał bogactwa i majętności i sławę, i nie schodzi niwczem duszy jego we wszystkiem, czego jedno żąda: lecz mu Bóg nie dał téj mocy, aby pożywał z tego: ale człowiek obcy ono pożre. Toć jest marność i nędza wielka."
+        },
+        {
+          "number": 3,
+          "text": "Jeźliby kto spłodził sto synów, i żyłby wiele lat i miałby wiele dni wieku, a dusza by jego nie użyła dobra majętności swojéj, i nie miałby pogrzebu: o tym ja powiadam, iż lepszy jest martwy płód, niźli on."
+        },
+        {
+          "number": 4,
+          "text": "Albowiem próżno przyszedł i idzie do ciemności, i zapamiętaniem zgładzone będzie imię jego."
+        },
+        {
+          "number": 5,
+          "text": "Nie widział słońca, ani poznał różności dobrego i złego."
+        },
+        {
+          "number": 6,
+          "text": "A choćby żył przez dwa tysiące lat a nie zażył dobra, azaż nie do jednego miejsca wszystko idzie?"
+        },
+        {
+          "number": 7,
+          "text": "Wszystka praca człowiecza w uściech jego: lecz dusza jego nie będzie nasycona."
+        },
+        {
+          "number": 8,
+          "text": "Cóż ma więcéj mądry nad głupiego? a co ubogi? jedno aby tam szedł, gdzie jest żywot."
+        },
+        {
+          "number": 9,
+          "text": "Lepiéj jest widzieć to, czegoś żądał, niźli pragnąć, czego nie znasz. Aleć i to marność i duma ducha."
+        },
+        {
+          "number": 10,
+          "text": "Który ma być, już nazwano jest imię jego: i wiedzą, że jest człowiek, i nie może prawować się u sądu z mocniejszym nadeń."
+        },
+        {
+          "number": 11,
+          "text": "Wiele jest słów i wielką w gadaniu mają próżność."
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Koheleta_7",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Cóż potrzeba człowiekowi szukać rzeczy większych nad się, gdyż nie wie, co mu jest pożyteczno w żywocie jego, w liczbie dni pielgrzymowania jego i w czasie, który jako cień przemija. Albo kto mu oznajmić może, co będzie po nim pod słońcem?"
+        },
+        {
+          "number": 2,
+          "text": "Lepsze jest imię dobre, niźli maści drogie: i dzień śmierci, niźli narodzenia."
+        },
+        {
+          "number": 3,
+          "text": "Lepiéj iść do domu żałobnego, niźli do domu godownego; bo w onym przypomina się koniec wszystkich ludzi, a człowiek żywiący rozmyśla, co napotem będzie."
+        },
+        {
+          "number": 4,
+          "text": "Lepszy jest gniew, niźli śmiech; bo przez smutek twarzy poprawuje się umysł przestępnego."
+        },
+        {
+          "number": 5,
+          "text": "Serce mądrych, gdzie smutek jest: a serce głupich, kędy wesele."
+        },
+        {
+          "number": 6,
+          "text": "Lepiéj jest dać się karać mądremu, niźli dać się oszukać pochlebstwami głupich."
+        },
+        {
+          "number": 7,
+          "text": "Bo jaki trzask ciernia pod kotłem gorejącego, taki śmiech głupiego. Ale i to marność."
+        },
+        {
+          "number": 8,
+          "text": "Potwarz frasuje mądrego i straci moc serca jego."
+        },
+        {
+          "number": 9,
+          "text": "Lepszy jest koniec modlitwy, niż początek: lepszy jest cierpliwy, niż chełpliwy."
+        },
+        {
+          "number": 10,
+          "text": "Nie bądź ku zagniewaniu prędki; bo gniew w zanadrzu głupiego odpoczywa."
+        },
+        {
+          "number": 11,
+          "text": "Nie mów: Co mniemasz za przyczyna jest, że pierwsze czasy lepsze były, niźli teraz są? bo głupie jest takowe pytanie."
+        },
+        {
+          "number": 12,
+          "text": "Pożyteczniejsza jest mądrość z bogactwem, i więcéj pomaga tym, którzy widzą słońce."
+        },
+        {
+          "number": 13,
+          "text": "Jako bowiem broni mądrość, tak téż bronią pieniądze: lecz to ma nadzwyż umiejętność i mądrość, że dają żywot temu, który je ma."
+        },
+        {
+          "number": 14,
+          "text": "Przypatrz się sprawom Bożym, iż żaden nie może poprawić, którego on wzgardzi."
+        },
+        {
+          "number": 15,
+          "text": "W dzień dobry zażywaj dobra, a strzeż się dnia złego; bo jako ten, tak i on uczynił Bóg, aby nie nalazł człowiek przeciw jemu żałób sprawiedliwych."
+        },
+        {
+          "number": 16,
+          "text": "Tom téż widział za dni marności mojéj: Sprawiedliwy ginie w sprawiedliwości swojéj: a niezbożny długo żyje we złości swojéj."
+        },
+        {
+          "number": 17,
+          "text": "Nie bądź nazbyt sprawiedliwym ani mądrym więcéj, niż potrzeba, abyś nie zgłupiał."
+        },
+        {
+          "number": 18,
+          "text": "Nie czyń bardzo niezbożnie, ani bądź głupim, abyś nie umarł czasu nie swego."
+        },
+        {
+          "number": 19,
+          "text": "Dobrze jest wspomagać sprawiedliwego, ale i od niego nie odciągaj ręki twojéj: bo kto się Boga boi, nic nie zaniedbywa."
+        },
+        {
+          "number": 20,
+          "text": "Mądrość więcéj umacnia mądrego, niźli dziesięć książąt, którzy są w mieście."
+        },
+        {
+          "number": 21,
+          "text": "Niemasz bowiem sprawiedliwego na ziemi, któryby czynił dobrze a nie grzeszył."
+        },
+        {
+          "number": 22,
+          "text": "Ale i do wszystkich powieści, które się mówią, nie przykładaj serca twego: abyś snadź nie usłyszał sługi twego złorzeczącego tobie."
+        },
+        {
+          "number": 23,
+          "text": "Wie bowiem sumienie twoje, żeś i ty często złorzeczył drugim."
+        },
+        {
+          "number": 24,
+          "text": "Wszystkiegom doświadczał mądrością, mówiłem: Będę mądrym; a ona daléj odstąpiła odemnie."
+        },
+        {
+          "number": 25,
+          "text": "Daleko więcéj, niźli była, i głęboka głębia, kto ją najdzie?"
+        },
+        {
+          "number": 26,
+          "text": "Obejrzałem wszystko myślą moją, abych wiedział i uważał i szukał mądrości i rozumu, a iżbych poznał niezbożność głupiego i błąd nierozumnych."
+        },
+        {
+          "number": 27,
+          "text": "I doznałem, iż niewiasta gorzciejsza jest niźli śmierć, która jest sidłem łowców, a serce jéj niewód, ręce jéj są pęta. Kto się Bogu podoba, wybiega się od niéj: ale kto grzeszny jest, będzie od niéj poiman."
+        },
+        {
+          "number": 28,
+          "text": "Otom tego doznał, (rzekł Ekklesiastes), jednego po drugiem, abych nalazł pewną rzecz."
+        },
+        {
+          "number": 29,
+          "text": "Któréj jeszcze szuka dusza moja, a nie nalazłem. Męża jednego prawego z tysiąca: lecz niewiasty ze wszech nie nalazłem."
+        },
+        {
+          "number": 30,
+          "text": "Tylkom to nalazł, że Bóg uczynił człowieka prawego, a on się sam wdał w niezliczone gadki. Któż taki jest, jako mądry? a kto umie rozwiązanie słowa?"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Koheleta_8",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Mądrość człowieka świeci się na twarzy jego, a najmocniejszy zmieni oblicze jego."
+        },
+        {
+          "number": 2,
+          "text": "Ja strzegę ust królewskich i przykazania przysięgi Bożéj."
+        },
+        {
+          "number": 3,
+          "text": "Nie skwapiaj się odejść od obliczności jego, ani trwaj we złym uczynku; bo wszystko, co chce, uczyni:"
+        },
+        {
+          "number": 4,
+          "text": "A mowa jego pełna jest mocy, ani mu żaden rzec może: Przecz tak czynisz?"
+        },
+        {
+          "number": 5,
+          "text": "Kto strzeże przykazania, nie uzna nic złego: czas i odpowiedź rozumie serce mądrego."
+        },
+        {
+          "number": 6,
+          "text": "Każdéj sprawie jest czas i pogoda: a wielkie człowiecze utrapienie."
+        },
+        {
+          "number": 7,
+          "text": "Bo nie wie przeszłych, a przyszłych od żadnego się posła nie dowie."
+        },
+        {
+          "number": 8,
+          "text": "Nie jest w człowieczéj mocy, zabronić ducha, ani ma mocy w dzień śmierci, ani mu dopuści odpoczynąć, gdy nadchodzi wojna: ani zbawi niezbożność niezbożnego."
+        },
+        {
+          "number": 9,
+          "text": "Wszystko to obaczyłem i udałem serce swe na wszystkie uczynki, które się dzieją pod słońcem: czasem panuje człowiek nad człowiekiem na swe złe."
+        },
+        {
+          "number": 10,
+          "text": "Widziałem niezbożne pogrzebione, którzy jeszcze, póki żyli, na miejscu świętem byli, i chwalono je w mieście, jako w uczynkach sprawiedliwe. Ale i to marność jest."
+        },
+        {
+          "number": 11,
+          "text": "Bo już nie rychło wydają dekret przeciwko złym, bez żadnéj bojaźni synowie człowieczy broją złości."
+        },
+        {
+          "number": 12,
+          "text": "Wszakże grzesznik ztądże stokroć złość czyni, a cierpliwie go czekają: jam poznał, iż tym dobrze będzie, którzy się Boga boją, którzy się wstydzą twarzy jego."
+        },
+        {
+          "number": 13,
+          "text": "Nie jest dobrze niezbożnemu, i dni jego nie przedłużają się: ale niech przemijają jako cień, którzy się nie boją oblicza Pańskiego."
+        },
+        {
+          "number": 14,
+          "text": "Jest i druga marność, która się dzieje na ziemi: są sprawiedliwi, którym się źle wiedzie, jakoby uczynki niezbożnych uczynili: i są niezbożni, którzy są tak bezpieczni, jakoby mieli uczynki sprawiedliwych. Lecz i to mam za największą marność."
+        },
+        {
+          "number": 15,
+          "text": "Chwaliłem tedy wesele, że niemasz nic lepszego człowiekowi pod słońcem, jedno jeść i pić a weselić się: a iż to tylko z sobą weźmie z pracéj swéj we dniach żywota swego, które mu Bóg dał pod słońcem."
+        },
+        {
+          "number": 16,
+          "text": "I udałem serce swe, abym poznał mądrość, i rozumiał zabawienie, które jest na ziemi: jest człowiek, któremu we dnie i w nocy sen na oczach nie postoi."
+        },
+        {
+          "number": 17,
+          "text": "I zrozumiałem, iż wszystkich uczynków Bożych żadnéj przyczyny znaleść człowiek nie może, które się dzieją pod słońcem: a im więcéj pracuje szukając, tem mniéj najduje. Choćby téż mówił mądry, że wie, nie będzie mógł naleść."
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Koheleta_9",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Wszystkom to rozważał w sercu swojem, abych pilnie zrozumiał: są sprawiedliwi i mądrzy, a uczynki ich są w ręce Bożéj: a przecię nie wie człowiek, jeźli jest miłości, czyli nienawiści godzien."
+        },
+        {
+          "number": 2,
+          "text": "Ale wszystkie rzeczy na przyszły czas zachowane są niepewne, przeto że wszystko jednako przychodzi na sprawiedliwego i niezbożnego, na dobrego i na złego, na czystego i nieczystego, na czyniącego ofiary i gardzącego niemi. Jako dobry, tak i grzeszny: jako krzywoprzysiężca, tak i ten, który prawdziwie przysięga."
+        },
+        {
+          "number": 3,
+          "text": "To jest najgorsza ze wszystkiego, co się dzieje pod słońcem, że się jednako ze wszystkimi dzieje: przeco i serca synów człowieczych napełnią się złości i wzgardy w swym żywocie, a potem doprowadzeni będą do piekła."
+        },
+        {
+          "number": 4,
+          "text": "Niemasz żadnego, któryby zawsze żył, i któryby o tem nadzieję miał. Lepszy jest pies żywy, aniźli lew zdechły."
+        },
+        {
+          "number": 5,
+          "text": "Bo żywiący wiedzą, iż umrzeć mają: lecz umarli nic więcéj nie wiedzą, ani daléj mają zapłaty: gdyż pamiątka ich przyszła w zapamiętanie."
+        },
+        {
+          "number": 6,
+          "text": "Miłość téż i nienawiść i zazdrość pospołu zginęły, ani mają części na tym świecie, i w uczynku, który się dzieje pod słońcem."
+        },
+        {
+          "number": 7,
+          "text": "Idźże tedy a jedz chleb swój z weselem, a pij wino swe z radością; bo się uczynki twoje Bogu podobają."
+        },
+        {
+          "number": 8,
+          "text": "Na każdy czas niech będą białe szaty twoje, a olejek niechaj nie schodzi z głowy twojéj."
+        },
+        {
+          "number": 9,
+          "text": "Zażywaj żywota z żoną, którą miłujesz, po wszystkie dni żywota niestateczności twojéj, któreć dane są pod słońcem przez wszystek czas marności twojéj; bo to jest dział w żywocie i w pracy twéj, którą pracujesz pod słońcem."
+        },
+        {
+          "number": 10,
+          "text": "Cokolwiek czynić może ręka twoja, ustawicznie czyń; bo ani sprawy, ani rozumu, ani mądrości, ani umiejętności nie będzie w piekle, gdzie się ty kwapisz."
+        },
+        {
+          "number": 11,
+          "text": "Obróciłem się ku drugiemu i widziałem pod słońcem, iż ani prędkich jest bieg, ani mężnych wojna, ani mądrych chleb, ani uczonych bogactwa, ani zmyślnych łaska: ale czas i trafunek jest we wszystkiem."
+        },
+        {
+          "number": 12,
+          "text": "Nie wie człowiek końca swego: ale jako ryby łowią wędą, i jako ptaka sidłem imają: tak téż ludzie bywają poimani we zły czas, gdy na nie nagle przypadnie."
+        },
+        {
+          "number": 13,
+          "text": "Widziałem téż i tę mądrość pod słońcem i doznałem, że jest wielka:"
+        },
+        {
+          "number": 14,
+          "text": "Miasto małe, i mało w niem mężów: przyciągnął przeciwko niemu król wielki i obległ je i pobudował szańce wokoło, i dokonało się oblężenie."
+        },
+        {
+          "number": 15,
+          "text": "I nalazł się w niem mąż ubogi a mądry i wybawił miasto mądrością swą; a żaden nie wspomniał potem na onego człowieka ubogiego."
+        },
+        {
+          "number": 16,
+          "text": "I mówiłem ja, iż lepsza jest mądrość, niźli moc: czemuż tedy mądrość ubogiego wzgardzona jest, i słowo jego nie słuchane?"
+        },
+        {
+          "number": 17,
+          "text": "Słów mądrych słuchają w milczeniu, więcéj niż wołania książęcego między głupimi."
+        },
+        {
+          "number": 18,
+          "text": "Lepsza jest mądrość, niż oręże wojenne: a ktoby w jednem zgrzeszył, wiele dobrego straci."
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Koheleta_10",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Muchy zdychające psują wonną wdzięczność drogiego olejku. Droższa jest mądrość i sława, małe i na czas szaleństwo."
+        },
+        {
+          "number": 2,
+          "text": "Serce mądrego po prawéj stronie jego, a serce głupiego po lewéj stronie jego."
+        },
+        {
+          "number": 3,
+          "text": "Ale i w drodze, kiedy głupi chodzi, sam będąc szalonym, wszystkie ma za głupie."
+        },
+        {
+          "number": 4,
+          "text": "Jeźli duch panującego wstąpi na cię, nie opuszczaj miejsca twego; albowiem leczenie uczyni, że przestaną grzechy wielkie."
+        },
+        {
+          "number": 5,
+          "text": "Jest złość, którąm widział pod słońcem, jakoby za obłądzeniem wychodzącą od obliczności książęcia."
+        },
+        {
+          "number": 6,
+          "text": "Głupiego posadzonego na godności wysokiéj, a bogate na dole siedzące."
+        },
+        {
+          "number": 7,
+          "text": "Widziałem sługi na koniech, a książęta chodzące po ziemi jako sługi."
+        },
+        {
+          "number": 8,
+          "text": "Kto dół kopie, wpadnie weń: a kto rozrzuca płot, wąż go ukąsi."
+        },
+        {
+          "number": 9,
+          "text": "Kto przenosi kamienie, spracuje się nimi: a kto rąbie drwa, będzie ranion od nich."
+        },
+        {
+          "number": 10,
+          "text": "Jeźli się przytępi żelazo, a to nie jako pierwéj, ale stępione będzie, z wielką pracą naostrzone będzie: a po dowcipie przychodzi mądrość."
+        },
+        {
+          "number": 11,
+          "text": "Gdyby ukąsił wąż po cichu, nic nie ma mniéj nadeń, który potajemnie uwłóczy."
+        },
+        {
+          "number": 12,
+          "text": "Słowa ust mądrego wdzięczność: a wargi głupiego zrzucą go."
+        },
+        {
+          "number": 13,
+          "text": "Początek słów jego głupstwo: a ostatek ust jego błąd wielki."
+        },
+        {
+          "number": 14,
+          "text": "Głupi rozmnaża słowa: nie wie człowiek, co przed nim było; a co po nim będzie, kto mu oznajmić może?"
+        },
+        {
+          "number": 15,
+          "text": "Praca głupich utrapi je, którzy nie umieją iść do miasta."
+        },
+        {
+          "number": 16,
+          "text": "Biada tobie, ziemio! któréj król jest dziecięciem, i któréj książęta rano jadają."
+        },
+        {
+          "number": 17,
+          "text": "Szczęśliwa ziemia, która ma króla zacnego, i któréj książęta jedzą czasu słusznego dla posilenia, a nie dla zbytku."
+        },
+        {
+          "number": 18,
+          "text": "Dla lenistwa pochylają się dachy, a dla słabych rąk będzie przeciekał dom."
+        },
+        {
+          "number": 19,
+          "text": "Na śmiech czynią chleb a wino, żeby zażywali żywi: a pieniądzom wszystko jest posłuszno."
+        },
+        {
+          "number": 20,
+          "text": "W myśli twojéj nie uwłaczaj królowi, a w skrytości pokoju twego nie łaj bogatemu; bo i ptacy powietrzni głos twój zaniosą: a który ma skrzydła, oznajmi powieść."
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Koheleta_11",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Rzucaj chleb twój na wody ciekące; bo po długim czasie najdziesz go."
+        },
+        {
+          "number": 2,
+          "text": "Daj część siedmi i ośmi; bo nie wiesz, co za złe będzie na ziemi."
+        },
+        {
+          "number": 3,
+          "text": "Jeźli się napełnią obłoki, wyleją deszcz na ziemię; jeźli upadnie drzewo na południe albo na północy, na któremkolwiek miejscu upadnie, tam będzie."
+        },
+        {
+          "number": 4,
+          "text": "Kto się na wiatr ogląda, nigdy siać nie będzie: a kto się przypatruje obłokom, nigdy żąć nie będzie."
+        },
+        {
+          "number": 5,
+          "text": "Jako nie wiesz, która jest droga ducha, i jako się zrastają kości w żywocie brzemiennéj: tak nie wiesz spraw Bożych, który jest twórcą wszystkiego."
+        },
+        {
+          "number": 6,
+          "text": "Po ranu siéj nasienie twoje: a w wieczór niech nie odpoczywa ręka twoja; bo nie wiesz, które lepiéj wznidzie, to albo ono, i jeźli oboje spółem, lepsze będzie."
+        },
+        {
+          "number": 7,
+          "text": "Wdzięczne światło i miła rzecz jest oczom, widzieć słońce."
+        },
+        {
+          "number": 8,
+          "text": "Jeźliby przez wiele lat żyw był człowiek, a w tych wszystkich się weselił, ma pamiętać na czas ciemny i na długie dni: które kiedy przyjdą, przeszłe rzeczy pokażą się marnością."
+        },
+        {
+          "number": 9,
+          "text": "Weselże się tedy młodzieńcze! w młodości twojéj, a niech zażyje dobrego serce twe we dni młodości twojéj, i chódź drogami serca twego, i według wejrzenia oczu twoich: ale wiedz, iż za to wszystko przywiedzie cię Bóg na sąd."
+        },
+        {
+          "number": 10,
+          "text": "Oddal gniew od serca twego, i odrzuć złość od ciała twego; bo młodość i rozkosz są rzeczy marne."
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Koheleta_12",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Pomnij na Stworzyciela twego za dni młodości twojéj, póki nie przyjdzie czas udręczenia i nie nadejdą lata, o których mówić będziesz: Nie podobają mi się."
+        },
+        {
+          "number": 2,
+          "text": "Póki się nie zaćmi słońce i światło i księżyc i gwiazdy, i póki się nie wrócą po dżdżu obłoki."
+        },
+        {
+          "number": 3,
+          "text": "Kiedy się poruszą stróżowie domowi, i zachwieją się duży mężowie, i próżnować będą mielące w małéj liczbie, i zaćmią się patrzące przez dziury."
+        },
+        {
+          "number": 4,
+          "text": "I zawrą wrota na ulicę w poniżeniu głosu mielącéj: i powstaną na głos ptaszy, i ogłuszeją wszystkie córki śpiewania."
+        },
+        {
+          "number": 5,
+          "text": "Będą się téż bać miejsc wysokich, i będą się lękać na drodze, zakwitnie drzewo migdałowe, utyje szarańcza, a rozproszą sie kappary; bo pójdzie człowiek do domu wieczności swéj, i będą chodzić po ulicach płaczący."
+        },
+        {
+          "number": 6,
+          "text": "Póki się nie przerwie sznur śrebrny, a skurczy się czepek złoty, i stłucze się wiadro nad zdrojem, i złamie się koło nad studnią,"
+        },
+        {
+          "number": 7,
+          "text": "I wróci się proch do ziemie swéj, z któréj był, a duch wróci się do Boga, który go dał."
+        },
+        {
+          "number": 8,
+          "text": "Marność nad marnościami, rzekł Ekklesiastes: i wszystko marność."
+        },
+        {
+          "number": 9,
+          "text": "A Ekklesiastes będąc najmędrszy, nauczał lud i powiedział, co był uczynił: a wywiedziawszy się, złożył wiele przypowieści."
+        },
+        {
+          "number": 10,
+          "text": "Szukał słów pożytecznych i spisał mowy na prawdzie i pełne prawdy."
+        },
+        {
+          "number": 11,
+          "text": "Słowa mądrych są jako ościenie, i jako gwoździe głęboko wbite, które przez radę mistrzów dane są od pasterza jednego."
+        },
+        {
+          "number": 12,
+          "text": "Nad to, synu mój! więcéj się nie pytaj: czynienia wiele ksiąg niemasz końca, a częste myślenie jest ciała utrapienie."
+        },
+        {
+          "number": 13,
+          "text": "Końca mówienia wszyscy społem słuchajmy: Boga się bój a strzeż przykazania jego; bo to jest wszelki człowiek:"
+        },
+        {
+          "number": 14,
+          "text": "Wszystko, co się dzieje, przywiedzie Bóg na sąd, za każdy występek lub dobry lub zły, ono będzie."
+        }
+      ]
+    }
+  ]
+}
