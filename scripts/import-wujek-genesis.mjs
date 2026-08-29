@@ -371,6 +371,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Rut_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Rut_%28ca%C5%82o%C5%9B%C4%87%29',
   },
+  '2ki': {
+    id: '2ki',
+    name: '2 Księga Królewska',
+    chapterCount: 25,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'second-kings-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Druga Księga Królewska ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Druga_Ksi%C4%99ga_Kr%C3%B3lewska_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Druga_Ksi%C4%99ga_Kr%C3%B3lewska',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
