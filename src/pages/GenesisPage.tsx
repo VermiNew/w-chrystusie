@@ -26,6 +26,7 @@ import { acts } from '../data/acts'
 import { colossians } from '../data/colossians'
 import { leviticus } from '../data/leviticus'
 import { joshua } from '../data/joshua'
+import { ruth } from '../data/ruth'
 import { judges } from '../data/judges'
 import { john } from '../data/john'
 import { james } from '../data/james'
@@ -83,6 +84,7 @@ const books = {
   'do-kolosan': colossians,
   kaplanska: leviticus,
   jozuego: joshua,
+  rut: ruth,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {

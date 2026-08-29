@@ -362,6 +362,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Jozuego_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Jozuego',
   },
+  rut: {
+    id: 'rut',
+    name: 'Księga Rut',
+    chapterCount: 4,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'ruth-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Rut ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Rut_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Rut_%28ca%C5%82o%C5%9B%C4%87%29',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
