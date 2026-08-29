@@ -30,6 +30,7 @@ import { ruth } from '../data/ruth'
 import { secondKings } from '../data/secondKings'
 import { firstSamuel } from '../data/firstSamuel'
 import { secondSamuel } from '../data/secondSamuel'
+import { secondChronicles } from '../data/secondChronicles'
 import { judges } from '../data/judges'
 import { john } from '../data/john'
 import { james } from '../data/james'
@@ -91,6 +92,7 @@ const books = {
   '2-krolewska': secondKings,
   '1-samuela': firstSamuel,
   '2-samuela': secondSamuel,
+  '2-kronik': secondChronicles,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {

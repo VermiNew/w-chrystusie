@@ -401,6 +401,19 @@ const books = {
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Druga_Ksi%C4%99ga_Samuela',
     markerCorrections: new Set(Array.from({ length: 9 }, (_, index) => `12:11:${index + 1}`)),
   },
+  '2ch': {
+    id: '2ch',
+    name: '2 Księga Kronik',
+    chapterCount: 36,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'second-chronicles-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Druga Księga Kronik ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Druga_Ksi%C4%99ga_Kronik_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Druga_Ksi%C4%99ga_Kronik',
+    markerCorrections: new Set([
+      ...Array.from({ length: 5 }, (_, index) => `8:7:${index + 2}`),
+      ...Array.from({ length: 17 }, (_, index) => `13:12:${index + 2}`),
+    ]),
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

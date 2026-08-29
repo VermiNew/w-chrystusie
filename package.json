@@ -58,6 +58,7 @@
     "content:second-kings": "node scripts/import-wujek-genesis.mjs --book 2ki",
     "content:first-samuel": "node scripts/import-wujek-genesis.mjs --book 1sm",
     "content:second-samuel": "node scripts/import-wujek-genesis.mjs --book 2sm",
+    "content:second-chronicles": "node scripts/import-wujek-genesis.mjs --book 2ch",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },
