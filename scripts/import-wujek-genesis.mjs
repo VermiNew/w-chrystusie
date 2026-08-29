@@ -480,6 +480,15 @@ const books = {
     sourceUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Abdiasza',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Abdiasza',
   },
+  hag: {
+    id: 'hag',
+    name: 'Księga Aggeusza',
+    chapterCount: 2,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'haggai-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Aggeusza ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Aggeusza_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Aggeusza',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

@@ -66,6 +66,7 @@
     "content:song-of-songs": "node scripts/import-wujek-genesis.mjs --book sng",
     "content:jeremiah": "node scripts/import-wujek-genesis.mjs --book jer",
     "content:obadiah": "node scripts/import-wujek-genesis.mjs --book oba",
+    "content:haggai": "node scripts/import-wujek-genesis.mjs --book hag",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },
