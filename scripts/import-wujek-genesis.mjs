@@ -581,6 +581,21 @@ const books = {
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Ezechiela',
     markerCorrections: new Set([9, 10, 11, 12, 13, 14, 15, 16].map((verse) => `37:36:${verse}`)),
   },
+  jol: {
+    id: 'jol',
+    name: 'Księga Joela',
+    chapterCount: 3,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'joel-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Joela ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Joela_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Joela',
+    transformChapters: ([chapter1, chapter2, chapter3]) => [
+      chapter1,
+      { ...chapter2, verses: chapter2.verses.slice(0, 27) },
+      renumberChapter(3, chapter2, chapter2.verses.slice(27)),
+      renumberChapter(4, chapter3, chapter3.verses),
+    ],
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
@@ -602,6 +617,14 @@ function decodeHtml(value) {
     .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(Number.parseInt(code, 16)))
     .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
     .replace(/&([a-z]+);/gi, (entity, name) => namedEntities[name.toLowerCase()] ?? entity)
+}
+
+function renumberChapter(number, chapter, verses) {
+  return {
+    ...chapter,
+    number,
+    verses: verses.map((verse, index) => ({ ...verse, number: index + 1 })),
+  }
 }
 
 function textFromHtml(value) {
@@ -701,12 +724,13 @@ async function fetchChapter(chapterNumber) {
   return parseChapter(chapterNumber, payload.parse.text)
 }
 
-const chapters = []
+const sourceChapters = []
 for (let chapterNumber = 1; chapterNumber <= book.chapterCount; chapterNumber += 1) {
   const chapter = await fetchChapter(chapterNumber)
-  chapters.push(chapter)
+  sourceChapters.push(chapter)
   console.log(`[${book.id}] Pobrano rozdział ${chapterNumber} (${chapter.verses.length} wersetów).`)
 }
+const chapters = book.transformChapters ? book.transformChapters(sourceChapters) : sourceChapters
 
 const importedBook = {
   id: book.id,
