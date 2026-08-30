@@ -498,6 +498,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Nahuma_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Nahuma',
   },
+  hab: {
+    id: 'hab',
+    name: 'Księga Habakuka',
+    chapterCount: 3,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'habakkuk-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Habakuka ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Habakuka_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Habakuka',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
