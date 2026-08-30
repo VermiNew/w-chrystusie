@@ -507,6 +507,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Habakuka_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Habakuka',
   },
+  zep: {
+    id: 'zep',
+    name: 'Księga Sofoniasza',
+    chapterCount: 3,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'zephaniah-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Sofoniasza ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Sofoniasza_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Sofoniasza',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

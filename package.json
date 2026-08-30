@@ -69,6 +69,7 @@
     "content:haggai": "node scripts/import-wujek-genesis.mjs --book hag",
     "content:nahum": "node scripts/import-wujek-genesis.mjs --book nah",
     "content:habakkuk": "node scripts/import-wujek-genesis.mjs --book hab",
+    "content:zephaniah": "node scripts/import-wujek-genesis.mjs --book zep",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },
