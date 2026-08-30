@@ -73,6 +73,7 @@
     "content:malachi": "node scripts/import-wujek-genesis.mjs --book mal",
     "content:jonah": "node scripts/import-wujek-genesis.mjs --book jon",
     "content:micah": "node scripts/import-wujek-genesis.mjs --book mic",
+    "content:amos": "node scripts/import-wujek-genesis.mjs --book amo",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },

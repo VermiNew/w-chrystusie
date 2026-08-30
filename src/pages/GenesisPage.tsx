@@ -45,6 +45,7 @@ import { zephaniah } from '../data/zephaniah'
 import { malachi } from '../data/malachi'
 import { jonah } from '../data/jonah'
 import { micah } from '../data/micah'
+import { amos } from '../data/amos'
 import { judges } from '../data/judges'
 import { john } from '../data/john'
 import { james } from '../data/james'
@@ -121,6 +122,7 @@ const books = {
   malachiasza: malachi,
   jonasza: jonah,
   micheasza: micah,
+  amosa: amos,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {

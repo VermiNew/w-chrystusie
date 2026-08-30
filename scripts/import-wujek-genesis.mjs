@@ -543,6 +543,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Micheasza_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Micheasza',
   },
+  amo: {
+    id: 'amo',
+    name: 'Księga Amosa',
+    chapterCount: 9,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'amos-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Amosa ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Amosa_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Amosa',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

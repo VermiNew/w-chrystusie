@@ -1,0 +1,652 @@
+{
+  "id": "amo",
+  "name": "Księga Amosa",
+  "translation": "Biblia Jakuba Wujka (1599), wydanie 1923",
+  "sourceName": "Wikiźródła",
+  "sourceBookUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Amosa",
+  "sourceRights": "Domena publiczna (wydanie); CC BY-SA 4.0 (transkrypcja Wikiźródeł)",
+  "chapters": [
+    {
+      "number": 1,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Amosa_1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Słowa Amos, który był między pasterzmi z Thekue, które widział nad Izraelem za dni Ozyasza, króla Judzkiego, i za dni Jeroboama, syna Joas, króla Izraelskiego, przed dwiema laty trzęsienia ziemie."
+        },
+        {
+          "number": 2,
+          "text": "I rzekł: Pan z Syon zaryczy a z Jeruzalem da głos swój, i płakały ozdoby pasterzów, a uszedł wierzch Karmela."
+        },
+        {
+          "number": 3,
+          "text": "To mówi Pan: Dla trzech występków Damaszku i dla czterech nie nawrócę go, iż pomłócili wozmi żelaznymi Galaad."
+        },
+        {
+          "number": 4,
+          "text": "I poślę ogień do domu Azael, i pożre domy Benadad."
+        },
+        {
+          "number": 5,
+          "text": "I skruszę zaworę Damaszku i wytracę obywatela z pola bałwańskiego i trzymającego berło z domu rozkoszy, i będzie zaprowadzon lud Syryjski do Cyreny, mówi Pan."
+        },
+        {
+          "number": 6,
+          "text": "To mówi Pan: Dla trzech występków Gazy i dla czterech nie nawrócę go, iż przenieśli poimanie doskonałe, aby je zamknęli w Idumei."
+        },
+        {
+          "number": 7,
+          "text": "A puszczę ogień na mury Gazy, i pożre domy jéj."
+        },
+        {
+          "number": 8,
+          "text": "I wytracę obywatela z Azothu i trzymającego berło z Aszkalonu i obrócę rękę moję na Akkaron, i zginą pozostali z Philistynów, mówi Pan Bóg."
+        },
+        {
+          "number": 9,
+          "text": "To mówi Pan: Dla trzech złości Tyru i dla czterech nie nawrócę go, dlatego, że zamknęli poimanie doskonałe w Idumei a nie wspomnieli przymierza braterskiego."
+        },
+        {
+          "number": 10,
+          "text": "I puszczę ogień na mur Tyrski, i pożre domy jego."
+        },
+        {
+          "number": 11,
+          "text": "To mówi Pan: Dla trzech złości Edom i dla czterech nie nawrócę go, przeto iż prześladował mieczem brata swego i zgwałcił miłosierdzie swoje i trzymał dłużéj zapalczywość swoję i zagniewanie swe zachował aż do końca."
+        },
+        {
+          "number": 12,
+          "text": "Puszczę ogień na Theman, i pożre domy Bosry."
+        },
+        {
+          "number": 13,
+          "text": "To mówi Pan: Dla trzech złości synów Ammon i dla czterech nie nawrócę go dlatego; bo rozcinał brzemienne Galaad, żeby rozszerzył granice swe."
+        },
+        {
+          "number": 14,
+          "text": "A rozniecę ogień na murze Rabba, i pożre domy jéj w krzyku w dzień wojny i z wichrem w dzień ruszenia."
+        },
+        {
+          "number": 15,
+          "text": "I pójdzie Melchom w niewolą, on i książęta jego spółem, mówi Pan."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Amosa_2",
+      "verses": [
+        {
+          "number": 1,
+          "text": "To mówi Pan: Dla trzech złości Moab i dla czterech nie nawrócę go, dlatego że spalił kości króla Idumejskiego aż na popiół."
+        },
+        {
+          "number": 2,
+          "text": "I puszczę ogień na Moab, i spali domy Karyoth, i umrze w grzmocie Moab w brzmieniu trąby,"
+        },
+        {
+          "number": 3,
+          "text": "I wytracę sędziego z pośrodku jego, i wszystkie książęta jego pobiję z nim, mówi Pan."
+        },
+        {
+          "number": 4,
+          "text": "To mówi Pan: Dla trzech złości Judy i dla czterech nie nawrócę go, przeto że odrzucił zakon Pański, a przykazania jego nie zachował; bo je zwiodły bałwany ich, za którymi chodzili ojcowie ich."
+        },
+        {
+          "number": 5,
+          "text": "I puszczę ogień na Judę, i pożre domy Jeruzalem."
+        },
+        {
+          "number": 6,
+          "text": "To mówi Pan: Dla trzech złości Izraelowych i dla czterech nie nawrócę go, dlatego że przedał za śrebro sprawiedliwego a ubogiego za bóty."
+        },
+        {
+          "number": 7,
+          "text": "Którzy trą bardziéj niż proch ziemski głowy ubogich a drogę poniżonych mijają: i syn i ojciec jego chodzili do dziewki, aby gwałcili imię święte moje."
+        },
+        {
+          "number": 8,
+          "text": "I na szatach zastawnych siadali podle każdego ołtarza, a wino skazanych pili w domu boga swego."
+        },
+        {
+          "number": 9,
+          "text": "A Jam wygładził Amorrejczyka od oblicza ich, którego wysokość cedrów wysokość, a on duży jako dąb: i starłem owoc jego zwierzchu, a korzenie jego ze spodku."
+        },
+        {
+          "number": 10,
+          "text": "Jam jest, którym uczynił, żeście wyszli z ziemie Egipskiéj, a wodziłem was po puszczy czterdzieści lat, żebyście posiedli ziemię Amorrejczyka."
+        },
+        {
+          "number": 11,
+          "text": "I wzbudziłem z synów waszych proroki, a z młodzieńców waszych Nazarejczyki. Izali nie tak jest, synowie Izraelowi? mówi Pan."
+        },
+        {
+          "number": 12,
+          "text": "A będziecie Nazarejczykom podawać wino, a prorokom rozkażecie, mówiąc: Nie prorokujcie."
+        },
+        {
+          "number": 13,
+          "text": "Otóż Ja będę skrzypiał pod wami, jako skrzypi wóz nałożony sianem."
+        },
+        {
+          "number": 14,
+          "text": "I zginie ucieczka od prędkiego, a mocny nie otrzyma siły swojéj, i mocarz nie wyzwoli dusze swojéj."
+        },
+        {
+          "number": 15,
+          "text": "I dzierżący łuk nie ostoi się, a prędki nogami swemi nie będzie wybawion, a kto wsiada na koń, nie zachowa dusze swéj,"
+        },
+        {
+          "number": 16,
+          "text": "I kto mężnego serca między mocarzmi, nago uciekać będzie dnia onego, mówi Pan."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Amosa_3",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Słuchajcie słowa, które Pan mówił na was, synowie Izraelowi! na wszystek rodzaj, którym wywiódł z ziemie Egipskiéj, mówiąc:"
+        },
+        {
+          "number": 2,
+          "text": "Tylkom was poznał ze wszech rodzajów ziemskich, dlatego nawiedzę na was wszystkie nieprawości wasze."
+        },
+        {
+          "number": 3,
+          "text": "Izali pójdą dwa społem, jeźli się nie zgodzą?"
+        },
+        {
+          "number": 4,
+          "text": "Izali ryknie lew w lesie, jeźli obłowu mieć nie będzie? izali szczenię lwie wypuści głos swój z legowiska swego, jeźli czego nie ułapi?"
+        },
+        {
+          "number": 5,
+          "text": "Izali wpadnie ptak do sidła na ziemi bez ptasznika? Izali wezmą sidło z ziemie, pierwéj niźli co ułapi?"
+        },
+        {
+          "number": 6,
+          "text": "Aza zabrzmi trąba w mieście, a lud się nie zlęknie? aza będzie złe w mieście, któregoby Pan nie uczynił?"
+        },
+        {
+          "number": 7,
+          "text": "Bo nie czyni Pan Bóg słowa, jeźliby nie objawił tajemnice swéj sługom swoim prorokom."
+        },
+        {
+          "number": 8,
+          "text": "Lew zaryknie, któż się nie zlęknie? Pan Bóg mówił, któż prorokować nie będzie?"
+        },
+        {
+          "number": 9,
+          "text": "Dajcież słyszeć w domiech Azothu i w domiech ziemie Egipskiéj, a rzeczcie: Zbierzcie się na góry Samaryi a obaczcie szaleństwa wielkie w pośrodku jéj i potwarz cierpiące w skrytościach jéj."
+        },
+        {
+          "number": 10,
+          "text": "I nie umieli czynić prawości, mówi Pan, skarbiąc nieprawość i łupiestwo w domach swoich."
+        },
+        {
+          "number": 11,
+          "text": "Przetóż to mówi Pan Bóg: Będzie uciśniona i okrążona ziemia, i zdarta będzie z ciebie moc twoja, rozchwycą domy twoje."
+        },
+        {
+          "number": 12,
+          "text": "To mówi Pan: Jako gdyby wyrwał pasterz z paszczeki lwiéj dwie goleni, albo koniec ucha, tak wyrywani będą synowie Izraelowi, którzy mieszkają w Samaryi na stronie łóżka i na łożu Damaszku."
+        },
+        {
+          "number": 13,
+          "text": "Słuchajcie, a oświadczajcie w domu Jakóbowym, mówi Pan, Bóg zastępów;"
+        },
+        {
+          "number": 14,
+          "text": "Bo w dzień, gdy nawiedzać pocznę przestępstwa Izraelowe, nawiedzę go i ołtarze Bethel, i obcięte będą rogi ołtarzowe i upadną na ziemię."
+        },
+        {
+          "number": 15,
+          "text": "I porażę dom zimny z domem letnim, a zginą domy z kości słoniowéj, i będą rozwalone domy mnogie, mówi Pan."
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Amosa_4",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Słuchajcie słowa tego, krowy tłuste! które jesteście na górze Samaryjskiéj, które potwarz czynicie nędznikom, a niszczycie ubogie, które mówicie panom swym: Przynieście, a będziem pić."
+        },
+        {
+          "number": 2,
+          "text": "Przysiągł Pan Bóg na świętobliwość swoję, że oto dni przyjdą na was, a wyniosą was na drzewcach, a ostatki wasze w garncach warzących."
+        },
+        {
+          "number": 3,
+          "text": "I dziurami wynidziecie, jedna przeciw drugiéj, a będziecie zarzucone do Armon, mówi Pan."
+        },
+        {
+          "number": 4,
+          "text": "Chódźcież do Bethel a niezbożnie czyńcie, do Galgal a rozmnażajcie przestępstwo, a przynoście poranu ofiary wasze, przez trzy dni dziesięciny wasze."
+        },
+        {
+          "number": 5,
+          "text": "I ofiarujcie z kwaszonego chwałę, a nazywajcie dobrowolne ofiary, a opowiadajcie; boście tak chcieli, synowie Izraelscy! mówi Pan Bóg."
+        },
+        {
+          "number": 6,
+          "text": "Ztądże i Ja dałem wam strętwienie zębów we wszech mieściech waszych i niedostatek chleba po wszech miejscach waszych, a nie nawróciliście się do mnie, mówi Pan."
+        },
+        {
+          "number": 7,
+          "text": "Jam téż zahamował od was deszcz, gdy jeszcze były trzy miesiące do żniwa, a spuszczałem deszcz na jedno miasto, a na drugie miasto nie spuszczałem, część jedna dżdżem polana była, a część, na którą nie spuszczałem dżdżu, wyschła."
+        },
+        {
+          "number": 8,
+          "text": "I przyszły dwa i trzy miasta do jednego miasta, aby wodę piły i nie napiły się, a nie nawróciliście się do mnie, mówi Pan."
+        },
+        {
+          "number": 9,
+          "text": "Karałem was wiatrem palącym i suszą; mnóstwo ogrodów waszych i winnic waszych, oliwnice wasze i figownice wasze pożerała gąsienica, a nie wróciliście się do mnie, mówi Pan."
+        },
+        {
+          "number": 10,
+          "text": "Puściłem na was śmierć na drodze Egipskiéj, pozabijałem mieczem młodzieńce wasze aż do poimania koni waszych, i uczyniłem, że przyszła zgniłość obozów waszych w nozdrze wasze, a nie wróciliście się do mnie, mówi Pan."
+        },
+        {
+          "number": 11,
+          "text": "Wywróciłem was, jako wywrócił Bóg Sodomę i Gomorrę, i staliście się jako głównia porwana z ognia, a nie wróciliście się do mnie, mówi Pan."
+        },
+        {
+          "number": 12,
+          "text": "Przetóż to uczynię tobie, Izraelu! a gdyć to uczynię, przygotuj się na zabieżenie Panu, Bogu twemu, Izraelu!"
+        },
+        {
+          "number": 13,
+          "text": "Bo oto tworzący góry i stwarzający wiatr i oznajmujący człowiekowi mowę swoję, czyniący mgłę poranną, a chodzący po wysokościach ziemie: Pan, Bóg zastępów, imię jego."
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Amosa_5",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Słuchajcie słowa tego, które ja wznoszę na was narzekanie: Dom Izraelów upadł a więcéj nie powstanie."
+        },
+        {
+          "number": 2,
+          "text": "Panna Izraelska porzucona jest na ziemię swoje, niemasz, ktoby ją podniósł."
+        },
+        {
+          "number": 3,
+          "text": "Bo to mówi Pan Bóg: W mieście, z którego wychodziło tysiąc, zostanie się w niem sto, a z którego wychodziło sto, zostanie w niem dziesięć w domu Izraelowym."
+        },
+        {
+          "number": 4,
+          "text": "Bo to mówi Pan domowi Izraelowemu: Szukajcie mię, a żyć będziecie."
+        },
+        {
+          "number": 5,
+          "text": "A nie szukajcie Bethela, do Galgala nie chódźcie i do Bersabei nie przejdziecie; bo Galgala w niewolą zaprowadzona będzie, a Bethel będzie niepożyteczną."
+        },
+        {
+          "number": 6,
+          "text": "Szukajcie Pana, a żyjcie, aby snadź nie zagorzał jako ogień dom Józephów, i pożre, a nie będzie, ktoby ugasił Bethel."
+        },
+        {
+          "number": 7,
+          "text": "Którzy sąd w piołun obracacie, a sprawiedliwość na ziemi opuszczacie."
+        },
+        {
+          "number": 8,
+          "text": "Tego, który uczynił wóz niebieski i kosę, i który obraca ciemności w zaranie i dzień w noc odmienia: który woła wód morskich i wylewa je na oblicze ziemie, Pan imię jego."
+        },
+        {
+          "number": 9,
+          "text": "Który się uśmiecha zburzeniu mocnego, i spustoszenie na mocarza przywodzi."
+        },
+        {
+          "number": 10,
+          "text": "Nienawidzieli strofującego w bramie, a mówiącym doskonale brzydzili się."
+        },
+        {
+          "number": 11,
+          "text": "Przetóż ponieważeście łupili ubogiego a korzyść wyborną braliście od niego, domy z kamienia kwadratowego zbudujecie, a nie będziecie mieszkać w nich, winnic bardzo miłych nasadzicie, a wina ich pić nie będziecie."
+        },
+        {
+          "number": 12,
+          "text": "Bom poznał mnogie złości wasze i mocne grzechy wasze: nieprzyjaciele sprawiedliwego biorący dar a ubogie tłumiący w bramie."
+        },
+        {
+          "number": 13,
+          "text": "Przeto roztropny czasu onego milczeć będzie; bo czas zły jest."
+        },
+        {
+          "number": 14,
+          "text": "Szukajcie dobra a nie złości, żebyście żyli, a będzie Pan, Bóg zastępów, z wami, jakoście mówili."
+        },
+        {
+          "number": 15,
+          "text": "Miejcie złość w nienawiści, a miłujcie dobro i postanówcie w bramie sąd, owa się Pan, Bóg zastępów, zmiłuje nad ostatkiem Józepha."
+        },
+        {
+          "number": 16,
+          "text": "Przetóż to mówi Pan, Bóg zastępów, panujący: Po wszech ulicach narzekanie, a po wszech miejscach, które po stronach są, rzeką: Biada, biada! I będą przyzywać oracza na płacz, a do narzekania tych, którzy umieją narzekać."
+        },
+        {
+          "number": 17,
+          "text": "I po wszech winnicach będzie narzekanie; bo pójdę przez pośród ciebie, mówi Pan."
+        },
+        {
+          "number": 18,
+          "text": "Biada żądającym dnia Pańskiego! cóż wam po nim? dzień ten Pański ciemność, a nie światłość."
+        },
+        {
+          "number": 19,
+          "text": "Jako gdyby uciekał mąż przede lwem, a zabiegł mu niedźwiedź; a wszedłby do domu i podparł się ręką swą na ścianie, a ukąsiłby go wąż."
+        },
+        {
+          "number": 20,
+          "text": "Izali nie ciemność dzień Pański a nie światłość, i mrok a nie jasność w nim?"
+        },
+        {
+          "number": 21,
+          "text": "Mam w nienawiści i odrzuciłem święta wasze, ani przyjmę woni gromad waszych."
+        },
+        {
+          "number": 22,
+          "text": "A jeźli mi ofiarować będziecie całopalenia i dary wasze, nie przyjmę, i na śluby tłustych rzeczy waszych nie wejrzę."
+        },
+        {
+          "number": 23,
+          "text": "Odejmij odemnie zgiełk pieśni twoich, i piosnek liry twojéj słuchać nie będę."
+        },
+        {
+          "number": 24,
+          "text": "I odkryje się sąd jako woda, a sprawiedliwość jako potok gwałtowny."
+        },
+        {
+          "number": 25,
+          "text": "Izaliście mi ofiary i obiatę ofiarowali na puszczy przez czterdzieści lat, domie Izraelski?"
+        },
+        {
+          "number": 26,
+          "text": "I nosiliście namiot Molochowi waszemu i obraz bałwanów waszych, gwiazdę boga waszego, któreście działali sobie."
+        },
+        {
+          "number": 27,
+          "text": "I uczynię, że się przeprowadzicie za Damaszek, mówi Pan: Bóg zastępów imię jego."
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Amosa_6",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Biada, którzyście bogaci na Syonie, a ufacie w górze Samaryjskiéj! co celniejsi, głowy ludów, chodzący z pompą do domu Izraelskiego."
+        },
+        {
+          "number": 2,
+          "text": "Zajdźcie do Chalane a obaczcie, a zonąd idźcie do Emath wielkiego, i znidźcie do Geth Palestyńskiego i do co lepszych królestw tych, jeźli szersza jest granica ich niż granica wasza."
+        },
+        {
+          "number": 3,
+          "text": "Którzyście odłączeni na dzień zły, a przybliżacie się do stolice nieprawości."
+        },
+        {
+          "number": 4,
+          "text": "Którzy sypiacie na łożach słoniowych, a rozpustujecie na pościelach waszych: którzy jadacie baranka z trzody i cielce z pośrodku stada."
+        },
+        {
+          "number": 5,
+          "text": "Którzy śpiewacie przy dźwięku arfy: mniemali, że mieli jako Dawid naczynia śpiewania."
+        },
+        {
+          "number": 6,
+          "text": "Którzy piją czaszami wino, a przedniejszym się olejkiem namazują, a nic się nie użalili skruszenia Józephowego."
+        },
+        {
+          "number": 7,
+          "text": "Przeto teraz wyprowadzą się na przodku prowadzących się: a będzie odjęte spiknienie rozpustnych."
+        },
+        {
+          "number": 8,
+          "text": "Przysiągł Pan Bóg na duszę swoję, mówi Pan, Bóg zastępów: Brzydzę się Ja pychą Jakóbową, a domów jego nienawidzę, i wydam miasto z obywatelmi jego."
+        },
+        {
+          "number": 9,
+          "text": "A jeźli się zostanie dziesięć mężów w domu jednym, i ci pomrą."
+        },
+        {
+          "number": 10,
+          "text": "I weźmie go bliski jego i spali go, aby wyniósł kości z domu, i rzecze temu, który jest wewnątrz domu: Jestli jeszcze u ciebie?"
+        },
+        {
+          "number": 11,
+          "text": "A on odpowie: Już koniec. I rzecze mu: Milcz, a nie wspominaj imienia Pańskiego."
+        },
+        {
+          "number": 12,
+          "text": "Bo oto Pan rozkaże i skarze dom większy obaleniem, a dom mniejszy porysowaniem."
+        },
+        {
+          "number": 13,
+          "text": "Izali biegać mogą konie po skałach, albo mogą orać bawołami? żeście przemienili sąd w gorzkość, a owoc sprawiedliwości w piołun."
+        },
+        {
+          "number": 14,
+          "text": "Którzy się radujecie w niczem, którzy mówicie: Izali nie mocą naszą wzięliśmy sobie rogi?"
+        },
+        {
+          "number": 15,
+          "text": "Bo oto wzbudzę na was, domie Izraelów! mówi Pan, Bóg zastępów, naród, i skruszy was od wejścia do Emath, aż do potoku puszcze."
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Amosa_7",
+      "verses": [
+        {
+          "number": 1,
+          "text": "To mi ukazał Pan Bóg: a oto twórca szarańczy na początku wyrastających rzeczy ode dżdżu późnego, a oto późny po postrzyżeniu królewskiem."
+        },
+        {
+          "number": 2,
+          "text": "I stało się, gdy dokonała jeść trawy ziemie, rzekłem: Panie Boże! bądź miłościw proszę; któż wzniesie Jakóba; bo jest maluczki?"
+        },
+        {
+          "number": 3,
+          "text": "Zmiłował się Pan nadtem. Nie będzie, rzekł Pan."
+        },
+        {
+          "number": 4,
+          "text": "To mi ukazał Pan Bóg, a oto wołał sądu do ognia Pan Bóg: i pożarł przepaść wielką i zjadł część pospołu."
+        },
+        {
+          "number": 5,
+          "text": "I rzekłem: Panie, Boże! przestań, proszę! kto wzniesie Jakóba; bo maluczki jest?"
+        },
+        {
+          "number": 6,
+          "text": "Zmiłował się Pan nadtem: Lecz i to nie będzie, rzekł Pan Bóg."
+        },
+        {
+          "number": 7,
+          "text": "To mi ukazał Pan: a oto Pan stojący na murze potynkowanym, a w ręce jego kielnia murarzka."
+        },
+        {
+          "number": 8,
+          "text": "I rzekł Pan do mnie: Co ty widzisz, Amos? i rzekłem: Kielnią murarzką. I rzekł Pan: Oto Ja położę kielnią w pośrodku ludu mego Izraelskiego, nie przydam więcéj tynkować go."
+        },
+        {
+          "number": 9,
+          "text": "I obalone będą wyżyny bałwańskie, a świątynie Izraelowe spustoszone będą, i powstanę na dom Jeroboama z mieczem."
+        },
+        {
+          "number": 10,
+          "text": "I posłał Amazyasz, kapłan Bethel, do Jeroboama, króla Izrael, mówiąc: Powstał przeciw tobie Amos w pośrodku domu Izraelowego, nie będzie mogła ziemia znieść wszystkich mów jego."
+        },
+        {
+          "number": 11,
+          "text": "Bo to mówi Amos: Od miecza umrze Jeroboam, a Izrael poimany przeprowadzi się z ziemie swéj."
+        },
+        {
+          "number": 12,
+          "text": "I rzekł Amazyasz do Amos: Który widzisz, idź! uciecz do ziemie Judzkiéj, a jedz tam chleb i tam prorokuj."
+        },
+        {
+          "number": 13,
+          "text": "A w Bethel nie przyczyniaj więcéj prorokować; bo świątynią jest królewską i domem królestwa jest."
+        },
+        {
+          "number": 14,
+          "text": "I odpowiedział Amos i rzekł do Amazyasza: Nie jestem prorokiem i nie jestem synem proroka; alem ja skotarz, obrywający leśne figi."
+        },
+        {
+          "number": 15,
+          "text": "I wziął mię Pan, gdym chodził za bydłem, i rzekł Pan do mnie: Idź, prorokuj do ludu mego Izraelskiego."
+        },
+        {
+          "number": 16,
+          "text": "A teraz słuchaj słowa Pańskiego: Ty mówisz: Nie będziesz prorokował na Izraela, a nie będziesz kropił na dom bałwana."
+        },
+        {
+          "number": 17,
+          "text": "Przetóż to mówi Pan: Żona twoja w mieście nierząd płodzić będzie, a synowie twoi i córki twoje od miecza polęgą, a ziemia twoja sznurem pomierzona będzie, a ty w ziemi splugawionéj umrzesz: a Izrael poimany przeniesie się z ziemie swéj."
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Amosa_8",
+      "verses": [
+        {
+          "number": 1,
+          "text": "To mi ukazał Pan Bóg, a oto hak owocu."
+        },
+        {
+          "number": 2,
+          "text": "I rzekł: Co ty widzisz Amos? i rzekłem: Hak owocu. I rzekł Pan do mnie: Przyszedł koniec na lud mój Izraelski, nie przydam więcéj, abym go minął."
+        },
+        {
+          "number": 3,
+          "text": "A będą skrzypieć zawiasy kościelne w on dzień, mówi Pan Bóg: wiele ich pomrze, na każdem miejscu milczenie rozrzucone będzie."
+        },
+        {
+          "number": 4,
+          "text": "Słuchajcie tego, którzy trapicie ubogiego, a czynicie, że giną niedostateczni na ziemi,"
+        },
+        {
+          "number": 5,
+          "text": "Mówiąc: Kiedy minie miesiąc, i będziem przedawali towary? i sobota, i otworzymy zboże, abyśmy umniejszali miary, a przyczyniali sykla, i podrzucali szale zdradliwe?"
+        },
+        {
+          "number": 6,
+          "text": "Abyśmy dostali za śrebro nędzników, a ubogich za bóty, ażebyśmy plewy pszeniczne przedali."
+        },
+        {
+          "number": 7,
+          "text": "Przysiągł Pan przeciw pysze Jakobowéj: jeźliże zapomnię aż do końca wszystkich uczynków ich."
+        },
+        {
+          "number": 8,
+          "text": "Izali dlatego nie poruszy się ziemia, a płakać będzie wszelki obywatel jéj? i wzbierze wszystek jako rzeka i będzie wygnany i zbieży jako potok Egipski."
+        },
+        {
+          "number": 9,
+          "text": "I będzie dnia onego, mówi Pan Bóg: zajdzie słońce w południe, i uczynię, że się zaćmi ziemia w dzień jasności:"
+        },
+        {
+          "number": 10,
+          "text": "I obrócę święta wasze w płacz, a wszystkie pieśni wasze w narzekanie, i oblokę wór na wszelki grzbiet wasz, a na każdą głowę obłysienie, i położę ją jako żałobę jednorodzonego, a ostateczne rzeczy jéj jako dzień gorzki."
+        },
+        {
+          "number": 11,
+          "text": "Oto dni idą, mówi Pan, i puszczę głód na ziemię: nie głód chleba, ani pragnienie wody, ale słuchania słowa Pańskiego."
+        },
+        {
+          "number": 12,
+          "text": "I wzruszą się od morza aż do morza, i od północy aż na wschód będą obchodzić, szukając słowa Pańskiego, a nie najdą."
+        },
+        {
+          "number": 13,
+          "text": "Onego dnia zemdleją panienki piękne i młodzieńcy dla pragnienia."
+        },
+        {
+          "number": 14,
+          "text": "Którzy przysięgają przez grzech Samaryi a mówią: Żywie Bóg twój, Dan! i żywie téż droga w Bersabei; i upadną a nie powstaną więcéj."
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "sourceUrl": "https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Amosa_9",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Widziałem Pana stojącego na ołtarzu, i rzekł: Uderz w zawiasę, i niech się wzruszą naprożniki; bo łakomstwo na głowie wszystkich, a ostatek ich mieczem pobiję: nie będą mogli uciec; ucieka, a nie będzie zachowan z nich, który uciecze."
+        },
+        {
+          "number": 2,
+          "text": "Choćby zstąpili aż do piekła, ztamtąd wywiedzie je ręka moja, i choćby wstąpili aż do nieba, ztamtąd je ściągnę."
+        },
+        {
+          "number": 3,
+          "text": "I choćby się skryli na wierzch Karmela, ztamtąd szperając wezmę je, i choćby się skryli od oczu moich do głębokości morskiéj, tam rozkażę wężowi, a będzie je kąsał."
+        },
+        {
+          "number": 4,
+          "text": "A jeźli pójdą w niewolą przed nieprzyjacioły swymi, tam rozkażę mieczowi, i pobije je: i położę oczy moje na nie, na złe, a nie na dobre."
+        },
+        {
+          "number": 5,
+          "text": "A Pan, Bóg zastępów, który się dotyka ziemie, a zniszczeje, i płakać będą wszyscy mieszkający na niéj: i wzbierze jako potok wszelki, a zciecze jako rzeka Egipska,"
+        },
+        {
+          "number": 6,
+          "text": "Który buduje na niebie wysokie mieszkanie swoje a snopek swój na ziemi zasadził, który przyzywa wód morskich i wylewa je na oblicze ziemie: Pan imię jego."
+        },
+        {
+          "number": 7,
+          "text": "Izali nie jako synowie Murzyńscy wy jesteście mi, synowie Izraelscy? mówi Pan: izali nie Izraela wywiodłem z ziemie Egipskiéj, a Palestyny z Kappadocyi, a Syryany z Cyreny?"
+        },
+        {
+          "number": 8,
+          "text": "Oto oczy Pana Boga na królestwo grzeszące, a zetrę je z oblicza ziemie: wszakóż wygładzając nie wygładzę domu Jakóbowego, mówi Pan."
+        },
+        {
+          "number": 9,
+          "text": "Bo oto Ja rozkaże i wskrzeszę między wszymi narody dom Izraelów, jako wskrzeszają pszenicę w rzeszocie, a nie wypadnie kamyk na ziemię."
+        },
+        {
+          "number": 10,
+          "text": "Od miecza pomrą wszyscy grzesznicy ludu mego, którzy mówią: Nie przybliży się, ani przyjdzie na nas złe."
+        },
+        {
+          "number": 11,
+          "text": "Onego dnia podniosę przybytek Dawidów, który upadł, i zbuduję znowu rozpadliny murów jego, a co się było obaliło, naprawię i znowu zbuduję go jako za dni dawnych."
+        },
+        {
+          "number": 12,
+          "text": "Żeby posiedli ostatek Idumei i wszystkie narody, przeto iż wzywano imienia mego nad nimi, mówi Pan, czyniący to."
+        },
+        {
+          "number": 13,
+          "text": "Oto dni idą, mówi Pan, i zajmie oracz żeńca, a który depce winne jagody, siejącego nasienie: i kropić będą góry słodkością, a wszystkie pagórki wyprawione będą."
+        },
+        {
+          "number": 14,
+          "text": "I wrócę poimanie ludu mego Izraelskiego, a będą budować miasta spustoszone i będą w nich mieszkać: i będą téż sadzić winnice i pić wino ich; i naczynią sadów a będą jeść owoce ich."
+        },
+        {
+          "number": 15,
+          "text": "I nasadzę je w ziemię ich, a nie wyrwę ich więcéj z ziemie ich, którąm im dał, mówi Pan, Bóg twój."
+        }
+      ]
+    }
+  ]
+}
