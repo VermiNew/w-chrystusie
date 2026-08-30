@@ -571,6 +571,16 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Zachariasza_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Zachariasza',
   },
+  ezk: {
+    id: 'ezk',
+    name: 'Księga Ezechiela',
+    chapterCount: 48,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'ezekiel-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Ezechiela ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Ezechiela_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Ezechiela',
+    markerCorrections: new Set([9, 10, 11, 12, 13, 14, 15, 16].map((verse) => `37:36:${verse}`)),
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

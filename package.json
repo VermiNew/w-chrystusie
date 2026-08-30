@@ -76,6 +76,7 @@
     "content:amos": "node scripts/import-wujek-genesis.mjs --book amo",
     "content:hosea": "node scripts/import-wujek-genesis.mjs --book hos",
     "content:zechariah": "node scripts/import-wujek-genesis.mjs --book zec",
+    "content:ezekiel": "node scripts/import-wujek-genesis.mjs --book ezk",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },
