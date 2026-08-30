@@ -596,6 +596,18 @@ const books = {
       renumberChapter(4, chapter3, chapter3.verses),
     ],
   },
+  tob: {
+    id: 'tob',
+    name: 'Księga Tobiasza',
+    chapterCount: 14,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'tobit-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (wyd. 1839-40)/Księgi Tobiaszowe/Rozdział ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_(wyd._1839-40)/Ksi%C4%99gi_Tobiaszowe/Rozdzia%C5%82_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_(wyd._1839-40)/Ksi%C4%99gi_Tobiaszowe',
+    translation: 'Biblia Jakuba Wujka (1599), wydanie 1839–1840',
+    chapterLabel: toRoman,
+    verseIndexCorrections: new Map([['11:3', 3]]),
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
@@ -625,6 +637,11 @@ function renumberChapter(number, chapter, verses) {
     number,
     verses: verses.map((verse, index) => ({ ...verse, number: index + 1 })),
   }
+}
+
+function toRoman(number) {
+  const numerals = ['','I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII','XIX']
+  return numerals[number]
 }
 
 function textFromHtml(value) {
@@ -683,6 +700,10 @@ function parseChapter(chapterNumber, html) {
     throw new Error(`${book.name} ${chapterNumber}: nie znaleziono żadnego wersetu.`)
   }
 
+  verses.forEach((verse, index) => {
+    verse.number = book.verseIndexCorrections?.get(`${chapterNumber}:${index + 1}`) ?? verse.number
+  })
+
   const expectedVerseNumbers = Array.from({ length: verses.length }, (_, index) => index + 1)
   const hasCompleteSequence = expectedVerseNumbers.every(
     (verseNumber, index) => verses[index]?.number === verseNumber,
@@ -695,7 +716,7 @@ function parseChapter(chapterNumber, html) {
 
   return {
     number: chapterNumber,
-    sourceUrl: book.sourceUrl ?? `${book.sourceUrlPrefix}${chapterNumber}`,
+    sourceUrl: book.sourceUrl ?? `${book.sourceUrlPrefix}${book.chapterLabel?.(chapterNumber) ?? chapterNumber}`,
     verses,
   }
 }
@@ -703,7 +724,7 @@ function parseChapter(chapterNumber, html) {
 async function fetchChapter(chapterNumber) {
   const parameters = new URLSearchParams({
     action: 'parse',
-    page: book.sourcePage ?? `${book.sourcePagePrefix}${chapterNumber}`,
+    page: book.sourcePage ?? `${book.sourcePagePrefix}${book.chapterLabel?.(chapterNumber) ?? chapterNumber}`,
     prop: 'text',
     format: 'json',
     formatversion: '2',
@@ -735,7 +756,7 @@ const chapters = book.transformChapters ? book.transformChapters(sourceChapters)
 const importedBook = {
   id: book.id,
   name: book.name,
-  translation: 'Biblia Jakuba Wujka (1599), wydanie 1923',
+  translation: book.translation ?? 'Biblia Jakuba Wujka (1599), wydanie 1923',
   sourceName: 'Wikiźródła',
   sourceBookUrl: book.sourceBookUrl,
   sourceRights: 'Domena publiczna (wydanie); CC BY-SA 4.0 (transkrypcja Wikiźródeł)',
