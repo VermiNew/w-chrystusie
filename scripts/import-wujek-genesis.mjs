@@ -525,6 +525,15 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Malachiasza_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Malachiasza',
   },
+  jon: {
+    id: 'jon',
+    name: 'Księga Jonasza',
+    chapterCount: 4,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'jonah-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Jonasza ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Jonasza_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Jonasza',
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'

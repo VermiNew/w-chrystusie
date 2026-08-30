@@ -43,6 +43,7 @@ import { nahum } from '../data/nahum'
 import { habakkuk } from '../data/habakkuk'
 import { zephaniah } from '../data/zephaniah'
 import { malachi } from '../data/malachi'
+import { jonah } from '../data/jonah'
 import { judges } from '../data/judges'
 import { john } from '../data/john'
 import { james } from '../data/james'
@@ -117,6 +118,7 @@ const books = {
   habakuka: habakkuk,
   sofoniasza: zephaniah,
   malachiasza: malachi,
+  jonasza: jonah,
 }
 
 function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {
