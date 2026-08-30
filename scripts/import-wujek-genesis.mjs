@@ -552,6 +552,16 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Amosa_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Amosa',
   },
+  hos: {
+    id: 'hos',
+    name: 'Księga Ozeasza',
+    chapterCount: 14,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'hosea-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Ozeasza ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Ozeasza_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Ozeasza',
+    unmarkedFirstVerseChapters: new Set([9]),
+  },
 }
 
 const requestedBookId = process.argv[2] === '--book' ? process.argv[3] : 'gen'
