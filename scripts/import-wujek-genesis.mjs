@@ -38,6 +38,16 @@ const books = {
     sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Liczb_',
     sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Liczb_%28ca%C5%82o%C5%9B%C4%87%29',
   },
+  deu: {
+    id: 'deu',
+    name: 'Księga Powtórzonego Prawa',
+    chapterCount: 34,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', 'deuteronomy-verified-wujek.json'),
+    sourcePagePrefix: 'Biblia Wujka (1923)/Księga Powtórzonego Prawa ',
+    sourceUrlPrefix: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Powt%C3%B3rzonego_Prawa_',
+    sourceBookUrl: 'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Powt%C3%B3rzonego_Prawa_%28ca%C5%82o%C5%9B%C4%87%29',
+    markerCorrections: new Set([5, 6, 7, 8, 9, 10, 11, 12, 13].map((verse) => `34:24:${verse}`)),
+  },
   jdg: {
     id: 'jdg',
     name: 'Księga Sędziów',

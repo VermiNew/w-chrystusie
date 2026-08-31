@@ -78,6 +78,7 @@
     "content:zechariah": "node scripts/import-wujek-genesis.mjs --book zec",
     "content:ezekiel": "node scripts/import-wujek-genesis.mjs --book ezk",
     "content:joel": "node scripts/import-wujek-genesis.mjs --book jol",
+    "content:deuteronomy": "node scripts/import-wujek-genesis.mjs --book deu",
     "content:bible:validate": "node scripts/validate-wujek-1839-40-source.mjs",
     "content:audit": "node scripts/audit-content-rights.mjs"
   },

@@ -58,6 +58,7 @@ import { mark } from '../data/mark'
 import { matthew } from '../data/matthew'
 import { luke } from '../data/luke'
 import { numbers } from '../data/numbers'
+import { deuteronomyVerified } from '../data/deuteronomyVerified'
 import { romans } from '../data/romans'
 import { secondThessalonians } from '../data/secondThessalonians'
 import { secondTimothy } from '../data/secondTimothy'
@@ -72,6 +73,7 @@ const books = {
   rodzaju: genesis,
   wyjscia: exodus,
   liczb: numbers,
+  'powtorzonego-prawa': deuteronomyVerified,
   sedziow: judges,
   '1-krolewska': firstKings,
   '1-kronik': firstChronicles,
