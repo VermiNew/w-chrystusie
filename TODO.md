@@ -38,7 +38,8 @@
 
 ## Do zrobienia — refaktor
 
-- [ ] Rozbicie monolitycznego `App.css` na osobne pliki CSS per komponent/strona (bez zmiany styli)
+- [x] Rozbicie monolitycznego `App.css` na osobne pliki CSS (bez zmiany styli) — etap 1: 19 ciągłych plików w `src/styles/`, importowanych w `App.css` w oryginalnej kolejności; zbudowany `dist/` bajtowo identyczny z poprzednim
+- [ ] Etap 2 (opcjonalny): przenoszenie reguł do plików per komponent/strona — zmienia kolejność kaskady, wymaga porównania zrzutów ekranu przed/po dla każdej strony
 - [x] Routing URL dla modlitw i pieśni (`/modlitwy/:id`, `/spiewnik/:id`)
 - [x] Strona 404
 - [x] Kafelek Różańca na stronie głównej
@@ -226,7 +227,9 @@
 
 ## Do zrobienia — treść i design
 
-- [ ] Pismo Święte — pozyskać katolicką wersję z otwartą licencją
+- [x] Pismo Święte — pozyskać katolicką wersję z otwartą licencją (przekład ks. Jakuba Wujka z Wikiźródeł, domena publiczna)
+- [x] Pismo Święte — 64 z 73 ksiąg, w tym cały Nowy Testament
+- [ ] Pismo Święte — brakujące księgi: Tobiasza (import wycofany), Judyty, Estery, Mądrości, Syracha, Barucha, Daniela, 1 i 2 Machabejska
 - [ ] Mobile responsiveness — poprawki layoutu na 375px+
 - [ ] Akcenty kolorystyczne — violet dla hover/active, rubric red dla dekoracji
 - [ ] Kontenery czytania — subtelne obramowanie/cień dla widoków szczegółowych
@@ -248,7 +251,7 @@
 - [x] Zaktualizować zależności produkcyjne i deweloperskie; `npm audit` oraz `npm audit --omit=dev` zwracają 0 podatności
 - [x] Nadać dialogom dostępne nazwy, opisy i przewidywalny fokus początkowy
 - [x] Walidować ustawienia przypomnień odczytywane z `localStorage` i bezpiecznie obsługiwać błędy pamięci przeglądarki
-- [ ] Przenieść fonty Google do lokalnych zasobów, aby typografia działała w pełni offline i nie wymagała zewnętrznego żądania
+- [x] Przenieść fonty Google do lokalnych zasobów, aby typografia działała w pełni offline i nie wymagała zewnętrznego żądania
 
 ## Do zrobienia — źródła treści i wiarygodność
 
