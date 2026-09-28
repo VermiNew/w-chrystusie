@@ -1,0 +1,30 @@
+.main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+  animation: page-fade-in 0.35s ease both;
+  position: relative;
+  z-index: 1;
+}
+
+/* Suspense fallback — invisible placeholder to avoid flash while route chunk loads */
+.page-loading {
+  min-height: 60vh;
+}
+
+@keyframes page-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.page h1 {
+  margin-top: 0;
+  font-family: var(--font-heading);
+  animation: content-fade-in 0.5s ease both;
+}
+
+.page h2 {
+  font-family: var(--font-heading);
+  animation: content-fade-in 0.4s ease 0.1s both;
+}
+

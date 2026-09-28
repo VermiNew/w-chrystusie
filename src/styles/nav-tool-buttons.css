@@ -1,0 +1,65 @@
+/* Bell button in nav-links — icon-only on desktop */
+.nav-reminders-btn {
+  background: none;
+  border: none;
+  color: var(--color-nav-link);
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  position: relative;
+  transition: color 0.2s;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-reminders-icon-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-reminders-btn:hover,
+.nav-reminders-btn--active {
+  color: var(--color-white);
+}
+
+.nav-reminders-active-dot {
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  width: 7px;
+  height: 7px;
+  background: var(--color-success);
+  border-radius: 50%;
+}
+
+/* About button in nav-links — icon-only on desktop */
+.nav-about-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-about-btn {
+  background: none;
+  border: none;
+  color: var(--color-nav-link);
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-about-btn:hover {
+  color: var(--color-white);
+}
+
