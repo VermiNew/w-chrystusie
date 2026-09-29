@@ -45,6 +45,16 @@
 - [x] Kafelek Różańca na stronie głównej
 - [x] Meta tagi (`description`, `theme-color`) + `manifest.json` (PWA)
 - [x] Kategorie pieśni (grupowanie jak w modlitwach)
+- [ ] `PrayersPage` i `SongbookPage` to prawie identyczne ~350 linii — wspólny komponent listy/szczegółu (każda poprawka jest dziś robiona dwa razy)
+- [ ] `GenesisPage` obsługuje wszystkie księgi — rozważyć zmianę nazwy (np. `ScriptureBookPage`)
+
+## Offline (założenie: jedno wejście online, potem wszystko działa bez internetu)
+
+- [x] Service worker zapisuje wszystkie pliki aplikacji: każdą księgę Biblii, modlitwy, pieśni i obrazki stron (`asset-manifest.json`)
+- [x] Po wdrożeniu niezmienione pliki kopiowane z poprzedniej wersji cache zamiast pobierania od nowa; pliki z hashem serwowane najpierw z cache
+- [x] Wyszukiwarka (łącznie z Biblią) działa offline
+- [ ] Logo Wikiźródeł ładowane z `upload.wikimedia.org` — zapisać lokalnie w `public/sources/` (offline pokazuje się pusty obrazek)
+- [ ] `public/pictures/NMP_PIC_MAJ_0.png` waży 2,9 MB i jest zapisywany offline — rozważyć wersję WebP/JPG (~200 KB)
 
 ## Do zrobienia — listy modlitw i pieśni
 
@@ -116,7 +126,9 @@
 - [x] Snippet zawsze obcina od początku (`body.slice(0, 120)`) — powinien pokazywać kontekst wokół dopasowania
 - [x] Pismo Święte ma hardcoded limit 50 wyników, modlitwy i pieśni nie mają żadnego limitu
 - [x] Brak debounce na input — search odpala się przy każdym keystroke, dla 224+230 pozycji może być odczuwalne
-- [ ] Wersety Pisma Świętego nie są klikalne (brak nawigacji do ScripturePage)
+- [x] Wersety Pisma Świętego są klikalne i prowadzą do rozdziału; wyszukiwarka obejmuje wszystkie 64 księgi oraz ogłoszenia
+- [x] Fraza wyszukiwania zapisywana w adresie (`?q=`) — powrót z wyniku przywraca wyniki
+- [x] Filtry list modlitw i pieśni ignorują polskie znaki; poprawna odmiana liczebników („3 wyniki”, „2 pozycje”)
 - [ ] Brak historii ostatnich wyszukiwań
 - [x] `key={i}` (indeks) na elementach listy wyników — powinien być unikalny string
 
@@ -126,6 +138,7 @@
 - [x] Przycisk "Czytaj" w widoku modlitwy/pieśni uruchamia `window.speechSynthesis`
 - [x] Wybór głosu polskiego (`SpeechSynthesisVoice` z `lang: 'pl-PL'`) — `speechSynthesis.getVoices()` filtrowane po języku
 - [x] Przyciski: Start / Pause / Stop; synchronizacja ze stanem komponentu
+- [x] Czytanie krótkimi fragmentami (zdania/wersy) — Chrome urywa długie wypowiedzi; numery wersetów nie są czytane
 - [ ] Przed podpięciem Whisper: `SpeechSynthesisUtterance.onboundary` daje eventy słowo-po-słowie (`charIndex`, `charLength`) — wystarczy do podświetlania słów przy TTS bez żadnego modelu
 
 ### Faza 2 — tryb skupienia (3 linie)
@@ -247,8 +260,13 @@
 - [ ] Po wdrożeniu zweryfikować statusy HTTP bezpośrednich adresów, canonical i Open Graph na publicznej domenie
 - [ ] Zgłosić `sitemap.xml` w Google Search Console i Bing Webmaster Tools oraz monitorować błędy indeksowania
 - [ ] Dodać automatyczną kontrolę niedziałających linków wewnętrznych i zewnętrznych przed publikacją
-- [ ] Zmniejszyć główny pakiet JavaScript (obecnie około 1,55 MB przed gzip) przez podział danych treści na fragmenty ładowane per sekcja
-- [x] Zaktualizować zależności produkcyjne i deweloperskie; `npm audit` oraz `npm audit --omit=dev` zwracają 0 podatności
+- [x] Podzielić dane treści na fragmenty ładowane per sekcja — każda księga Biblii to osobny plik (rozdział: 4,8 MB → ok. 0,66 MB), różaniec, strona główna i nabożeństwo majowe nie ładują już całych zbiorów
+- [ ] Rozważyć dalsze odchudzenie list modlitw (~1,15 MB treści ładowane na `/modlitwy`) — np. lista z katalogu, pełny tekst osobno
+- [x] Zaktualizować zależności produkcyjne i deweloperskie; `npm audit` oraz `npm audit --omit=dev` zwracają 0 podatności (ponownie `npm audit fix` 09.2026)
+- [x] CI (GitHub Actions): lint, build i test smoke przy każdym pushu
+- [x] Tytuły, metadane i statyczne wejścia HTML dla wszystkich ksiąg i rozdziałów Pisma Świętego (wcześniej „Nie znaleziono strony” i brak w sitemap)
+- [x] Error boundary oraz jednorazowe przeładowanie po wdrożeniu, gdy brakuje starego pliku strony
+- [x] Aplikacja działa przy zablokowanej lub pełnej pamięci przeglądarki
 - [x] Nadać dialogom dostępne nazwy, opisy i przewidywalny fokus początkowy
 - [x] Walidować ustawienia przypomnień odczytywane z `localStorage` i bezpiecznie obsługiwać błędy pamięci przeglądarki
 - [x] Przenieść fonty Google do lokalnych zasobów, aby typografia działała w pełni offline i nie wymagała zewnętrznego żądania

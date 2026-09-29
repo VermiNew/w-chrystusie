@@ -17,6 +17,8 @@ Dodatkowo: ulubione i ostatnio otwierane, przywracanie pozycji czytania, tryb sk
 
 ## Uruchomienie
 
+Wymagany Node.js 22.18 lub nowszy (generator stron SEO importuje bezpośrednio pliki `.ts`).
+
 ```bash
 npm install
 npm run dev
@@ -30,7 +32,7 @@ Aplikacja dostępna pod `http://localhost:5173`.
 npm run build
 ```
 
-Pliki produkcyjne trafiają do `dist/`. Po zbudowaniu aplikacji skrypt `scripts/generate-seo-pages.mjs` generuje statyczne wejścia HTML dla znanych tras oraz `sitemap.xml` i `robots.txt`.
+Pliki produkcyjne trafiają do `dist/`. Po zbudowaniu aplikacji skrypt `scripts/generate-seo-pages.mjs` generuje statyczne wejścia HTML dla znanych tras (w tym każdej księgi i rozdziału Pisma Świętego), `sitemap.xml`, `robots.txt` oraz `asset-manifest.json` — listę plików, które service worker zapisuje do pracy offline.
 
 Przed `dev` i `build` automatycznie uruchamia się `npm run content:catalog`, który odświeża katalog treści (`src/data/generated/content-catalog.json`).
 
@@ -41,12 +43,18 @@ npm run lint
 npm run playwright:smoke
 ```
 
+To samo uruchamia CI (GitHub Actions) przy każdym pushu.
+
+## Offline
+
+Aplikacja ma działać w pełni bez internetu po jednym wejściu online. Service worker (`public/sw.js`) przy instalacji zapisuje wszystkie pliki z `asset-manifest.json`: kod, każdą księgę Biblii, modlitwy, pieśni i obrazki stron. Każda księga jest osobnym plikiem, więc otwarcie rozdziału online pobiera tylko tę księgę, a reszta dociąga się w tle. Po wdrożeniu niezmienione pliki są kopiowane z poprzedniej wersji cache zamiast pobierane od nowa. Ustawienia, ulubione i postęp czytania są zapisywane w pamięci przeglądarki.
+
 ## Struktura
 
 - `src/pages/` — strony (ładowane leniwie, osobno dla każdej trasy)
 - `src/components/` — nagłówek, modale, przypomnienia, metadane SEO
 - `src/hooks/` — pozycja czytania, postęp w Piśmie, TTS, wake lock, gesty swipe, focus trap
-- `src/data/` — treści i dane pomocnicze
+- `src/data/` — treści i dane pomocnicze (`scriptureBookLoaders.ts` — ładowanie ksiąg na żądanie)
 - `src/App.css` — punkt wejścia styli; importuje pliki z `src/styles/` w ustalonej kolejności (kolejność ma znaczenie dla kaskady)
 - `scripts/` — import i walidacja treści, audyt praw, generowanie ikon i stron SEO
 
