@@ -4,6 +4,7 @@ import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
 import { useReadingPosition } from '../hooks/useReadingPosition'
 import { useSpeechSynthesis } from '../hooks/useSpeechSynthesis'
 import ContentFontSizeControl from './ContentFontSizeControl'
+import { isPageShortcutBlocked } from '../data/keyboard'
 
 const AUTO_SCROLL_STEPS = [
   { intervalMs: 4200, distance: 120 },
@@ -51,6 +52,8 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
     document.documentElement.dataset.readingMode = 'true'
 
     const handleKeyDown = (event: KeyboardEvent) => {
+      if (isPageShortcutBlocked(event)) return
+
       if (event.key === 'Escape') {
         setAutoScrollActive(false)
         setIsActive(false)

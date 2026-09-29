@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect, useCallback } from 'react'
 import { FaArrowLeft, FaArrowRight, FaCheck } from 'react-icons/fa6'
 import { buildChapletSteps } from '../data/chaplet'
 import { hapticLight, hapticMedium } from '../data/haptics'
+import { isPageShortcutBlocked } from '../data/keyboard'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
 import { useHorizontalSwipe } from '../hooks/useHorizontalSwipe'
 import PrayerCompletion from '../components/PrayerCompletion'
@@ -118,6 +119,7 @@ export default function ChapletPage() {
     if (screen !== 'prayer') return
 
     const handleKey = (e: KeyboardEvent) => {
+      if (isPageShortcutBlocked(e)) return
       setShowKeyboardHint(true)
       if (e.key === 'ArrowRight') goNext()
       if (e.key === 'ArrowLeft') goPrev()
