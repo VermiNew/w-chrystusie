@@ -9,6 +9,12 @@ i znaków należących do innych podmiotów. Prawa do tych materiałów pozostaj
 ich autorach i innych uprawnionych podmiotach. Umieszczenie materiału w aplikacji
 lub repozytorium nie oznacza przeniesienia praw ani udzielenia sublicencji.
 
+Teksty Pisma Świętego pochodzą z publicznodomenowego przekładu ks. Jakuba Wujka
+(wydanie z 1923 roku). Ich cyfrowa transkrypcja pochodzi z Wikiźródeł i jest
+udostępniona na licencji [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.pl);
+pliki `src/data/generated/*-wujek.json` podlegają tej licencji. Każdy rozdział
+wskazuje dokładny adres źródłowy.
+
 Aplikacja jest projektem niekomercyjnym, nie wyświetla reklam i wskazuje źródła
 wykorzystywanych materiałów. Treści opracowane specjalnie dla projektu są
 oznaczane jako własne.
