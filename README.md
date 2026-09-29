@@ -11,7 +11,7 @@ Polska katolicka aplikacja webowa (PWA) — modlitwy, Pismo Święte, pieśni ko
 - **Koronka** — Koronka do Miłosierdzia Bożego krok po kroku
 - **Ogłoszenia** — ogłoszenia z kategoriami i publikacją zaplanowaną na wskazany dzień
 - **Nabożeństwo majowe** i **Źródła i materiały**
-- **Szukaj** — wyszukiwarka po wszystkich sekcjach (skrót klawiszowy `/`)
+- **Szukaj** — wyszukiwarka modlitw, pieśni i Psalmów (skrót klawiszowy `/`)
 
 Dodatkowo: ulubione i ostatnio otwierane, przywracanie pozycji czytania, tryb skupienia, czytanie na głos (Web Speech API), przypomnienia o modlitwie, jasny i ciemny motyw oraz działanie offline (service worker).
 
