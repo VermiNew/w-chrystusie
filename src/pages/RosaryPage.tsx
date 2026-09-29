@@ -9,7 +9,9 @@ import {
   rosaryPromisesIntroduction,
   type MysterySet,
 } from '../data/rosary'
-import { prayers } from '../data/prayers'
+import { parseMarkdown } from '../data/markdown'
+// Only this one prayer is needed here — importing the whole prayer collection would add ~1 MB to the page.
+import loretoLitanyRaw from '../data/prayers/Litania Loretańska do Najświętszej Maryi Panny.md?raw'
 import { hapticLight, hapticMedium } from '../data/haptics'
 import { isPageShortcutBlocked } from '../data/keyboard'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
@@ -19,7 +21,7 @@ import ContentFontSizeControl from '../components/ContentFontSizeControl'
 
 const DAY_NAMES = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota']
 const ROSARY_PROGRESS_KEY = 'rosary-progress'
-const loretoLitany = prayers.find((prayer) => prayer.id === 'Litania Loretańska do Najświętszej Maryi Panny')
+const loretoLitany = parseMarkdown('Litania Loretańska do Najświętszej Maryi Panny', loretoLitanyRaw)
 
 interface RosaryProgress {
   selectedSet: MysterySet | null

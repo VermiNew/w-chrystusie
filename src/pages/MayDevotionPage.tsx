@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom'
 import Markdown from 'react-markdown'
 import { FaArrowLeft, FaChurch, FaHeart } from 'react-icons/fa6'
-import { songs } from '../data/songs'
+import { parseMarkdown } from '../data/markdown'
+// Only this one song is needed here — importing the whole songbook would add ~290 KB to the page.
+import songRaw from '../data/songs/Najpiękniejszy Miesiąc Maj.md?raw'
 
 const SONG_ID = 'Najpiękniejszy Miesiąc Maj'
+const song = parseMarkdown(SONG_ID, songRaw)
 
 export default function MayDevotionPage() {
-  const song = songs.find((s) => s.id === SONG_ID)
 
   return (
     <div className="page">
