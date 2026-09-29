@@ -362,7 +362,13 @@ Allow: /
 
 Sitemap: ${new URL('sitemap.xml', siteUrl).href}
 `
-const assetPaths = (await collectAssetPaths(path.join(distDirectory, 'assets'))).sort()
+// Everything the service worker precaches for offline use: all build chunks
+// plus the images shown on pages (source logos, book covers, May devotion picture).
+const offlineImageDirectories = ['sources', 'materials', 'pictures']
+const assetPaths = (await Promise.all([
+  collectAssetPaths(path.join(distDirectory, 'assets')),
+  ...offlineImageDirectories.map((directory) => collectAssetPaths(path.join(distDirectory, directory), `/${directory}`)),
+])).flat().sort()
 
 await Promise.all([
   writeFile(path.join(distDirectory, 'sitemap.xml'), sitemap, 'utf8'),

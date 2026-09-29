@@ -68,7 +68,8 @@ self.addEventListener('message', (event) => {
 
 // Fetch strategy:
 //   - Navigation (HTML)        → network-first, fallback to cached app shell
-//   - Same-origin static asset → stale-while-revalidate (cache, refresh in bg)
+//   - Hashed /assets/ file     → cache-first (immutable)
+//   - Other same-origin file   → stale-while-revalidate (cache, refresh in bg)
 //   - Anything else            → just pass through
 self.addEventListener('fetch', (event) => {
   const { request } = event
@@ -86,6 +87,12 @@ self.addEventListener('fetch', (event) => {
   // SPA navigation requests
   if (request.mode === 'navigate') {
     event.respondWith(networkFirstHTML(request))
+    return
+  }
+
+  // Vite-hashed files never change under the same name, so the cache is authoritative.
+  if (url.origin === self.location.origin && url.pathname.startsWith('/assets/')) {
+    event.respondWith(cacheFirst(request, RUNTIME_CACHE))
     return
   }
 
@@ -130,6 +137,24 @@ async function staleWhileRevalidate(request, cacheName) {
   return cached || (await network) || new Response('', { status: 504 })
 }
 
+async function cacheFirst(request, cacheName) {
+  const cached = await caches.match(request, { ignoreVary: true })
+  if (cached) return cached
+  try {
+    const response = await fetch(request)
+    if (isCacheableResponse(response)) {
+      const cache = await caches.open(cacheName)
+      await cache.put(request, response.clone())
+    }
+    return response
+  } catch {
+    return new Response('', { status: 504 })
+  }
+}
+
+// Everything the app needs offline: the shell above plus every file from the
+// generated manifest (all JS/CSS chunks, including each Bible book, and the
+// images used on pages). One visit online is enough to use the app offline.
 async function precacheAppShell() {
   const cache = await caches.open(STATIC_CACHE)
   await cache.addAll(APP_SHELL)
@@ -139,10 +164,21 @@ async function precacheAppShell() {
 
   const manifest = await manifestResponse.json()
   if (!Array.isArray(manifest)) return
-  const assetPaths = manifest.filter(
-    (assetPath) => typeof assetPath === 'string' && assetPath.startsWith('/assets/'),
-  )
-  if (assetPaths.length > 0) await cache.addAll(assetPaths)
+  const paths = manifest.filter((assetPath) => typeof assetPath === 'string' && assetPath.startsWith('/'))
+
+  // Old caches are deleted only on activate, so during install the previous
+  // version is still there. Hashed /assets/ files that did not change are copied
+  // from it instead of being downloaded again on every deploy.
+  const missing = []
+  await Promise.all(paths.map(async (assetPath) => {
+    const previous = assetPath.startsWith('/assets/') ? await caches.match(assetPath) : undefined
+    if (previous) {
+      await cache.put(assetPath, previous)
+    } else {
+      missing.push(assetPath)
+    }
+  }))
+  if (missing.length > 0) await cache.addAll(missing)
 }
 
 function isCacheableResponse(response, allowOpaque = false) {
