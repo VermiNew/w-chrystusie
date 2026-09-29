@@ -144,7 +144,7 @@ export default function Header() {
               className={({ isActive }) => isActive ? 'active nav-announcements' : 'nav-announcements'}
             >
               <FaBullhorn /> Ogłoszenia
-              {unread > 0 && <span className="nav-badge" />}
+              {unread > 0 && <span className="nav-badge"><span className="sr-only">(nieprzeczytane)</span></span>}
             </NavLink>
           </li>
           <li><NavLink to="/szukaj" onClick={closeMenu}><FaMagnifyingGlass /> Szukaj</NavLink></li>

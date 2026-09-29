@@ -309,6 +309,7 @@ export default function RemindersModal({ open, onClose }: Props) {
                       <input
                         type="time"
                         className="reminders-time-input"
+                        aria-label={`${reminder.label} — godzina ${i + 1}`}
                         value={time}
                         onChange={(e) => handleTimeChange(reminder.id, i, e.target.value)}
                       />
@@ -316,7 +317,7 @@ export default function RemindersModal({ open, onClose }: Props) {
                         <button
                           className="reminders-time-remove"
                           onClick={() => handleRemoveTime(reminder.id, i)}
-                          aria-label="Usuń godzinę"
+                          aria-label={`Usuń godzinę ${time}`}
                         >
                           <FaTrash />
                         </button>

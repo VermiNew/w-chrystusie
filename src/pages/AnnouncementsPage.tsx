@@ -66,7 +66,7 @@ function AnnouncementCard({ announcement }: { announcement: Announcement }) {
               <FaThumbtack size={12} /> Przypięte
             </span>
           )}
-          {!isRead && <span className="announcement-unread-dot" />}
+          {!isRead && <span className="announcement-unread-dot"><span className="sr-only">Nieprzeczytane</span></span>}
           <span className="announcement-category">{announcement.category}</span>
           <span className="announcement-card-date">{formatDate(announcement.date)}</span>
         </div>
