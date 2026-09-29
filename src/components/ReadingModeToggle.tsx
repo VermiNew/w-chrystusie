@@ -12,6 +12,16 @@ const AUTO_SCROLL_STEPS = [
   { intervalMs: 2400, distance: 210 },
 ]
 
+// Bible chapters render verse numbers as <sup>; reading them aloud ("1 Na początku… 2 …") breaks the flow.
+function getReadableText(element: HTMLElement): string {
+  if (!element.querySelector('sup')) return element.innerText.trim()
+  return Array.from(element.children, (child) => {
+    const copy = child.cloneNode(true) as HTMLElement
+    copy.querySelectorAll('sup').forEach((number) => number.remove())
+    return copy.textContent?.trim() ?? ''
+  }).filter(Boolean).join('\n')
+}
+
 interface Props {
   contentKey: string
   contentTitle: string
@@ -185,7 +195,7 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
     const content = controlsRef.current
       ?.closest('.content-detail-page')
       ?.querySelector<HTMLElement>('.prayer-text, .song-text, .psalm-verses')
-    speech.start(content?.innerText.trim() ?? '')
+    speech.start(content ? getReadableText(content) : '')
   }
 
   return (
