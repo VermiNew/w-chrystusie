@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState, useMemo, useRef, type KeyboardEventHandler, type ReactNode, type Ref } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { FaKeyboard } from 'react-icons/fa6'
 import { prayers, type Prayer } from '../data/prayers'
 import { songs, type Song } from '../data/songs'
@@ -234,8 +234,10 @@ function SearchResultItem({ result, query, resultRef, onKeyDown }: SearchResultI
 export default function SearchPage() {
   const searchInputRef = useRef<HTMLInputElement>(null)
   const firstResultRef = useRef<HTMLAnchorElement>(null)
-  const [query, setQuery] = useState('')
-  const [debouncedQuery, setDebouncedQuery] = useState('')
+  // The phrase lives in ?q= so going back from a result (or sharing the link) restores it.
+  const [searchParams, setSearchParams] = useSearchParams()
+  const [query, setQuery] = useState(() => searchParams.get('q') ?? '')
+  const [debouncedQuery, setDebouncedQuery] = useState(query)
   const [section, setSection] = useState<SearchSection>('all')
   const [category, setCategory] = useState('all')
   const [scope, setScope] = useState<SearchScope>('all')
@@ -251,6 +253,13 @@ export default function SearchPage() {
     const timer = setTimeout(() => setDebouncedQuery(query), DEBOUNCE_MS)
     return () => clearTimeout(timer)
   }, [query])
+
+  useEffect(() => {
+    const phrase = debouncedQuery.trim()
+    if ((searchParams.get('q') ?? '') === phrase) return
+    // replace: typing should not add a history entry per keystroke
+    setSearchParams(phrase ? { q: phrase } : {}, { replace: true })
+  }, [debouncedQuery, searchParams, setSearchParams])
 
   const categories = useMemo(() => {
     const values = new Set<string>()
