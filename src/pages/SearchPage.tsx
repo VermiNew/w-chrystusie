@@ -1,23 +1,27 @@
 import { Fragment, useEffect, useState, useMemo, useRef, type KeyboardEventHandler, type ReactNode, type Ref } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { FaKeyboard } from 'react-icons/fa6'
-import { prayers, type Prayer } from '../data/prayers'
-import { songs, type Song } from '../data/songs'
-import { psalms, type Psalm } from '../data/psalms'
+import { prayers } from '../data/prayers'
+import { songs } from '../data/songs'
+import { psalms } from '../data/psalms'
+import { announcements } from '../data/announcements'
+import { scriptureBooksBySlug } from '../data/scriptureCatalog'
+import { loadScriptureBook, scriptureBookSlugs } from '../data/scriptureBookLoaders'
 import { normalizeSearchText } from '../data/searchText'
 import { pluralPl } from '../data/plural'
 
-type ResultType = 'prayer' | 'song' | 'psalm'
+type ResultType = 'prayer' | 'song' | 'psalm' | 'scripture' | 'announcement'
 type SearchSection = 'all' | ResultType
 type SearchScope = 'all' | 'title' | 'content'
 
 interface SearchResult {
   type: ResultType
+  key: string
+  href: string
   title: string
   category?: string
   content: string
   normalizedContent: string
-  data: Prayer | Song | Psalm
 }
 
 interface SearchGroups {
@@ -25,15 +29,12 @@ interface SearchGroups {
   contentMatches: SearchResult[]
 }
 
-interface SearchDocument {
-  type: ResultType
-  title: string
-  category?: string
-  content: string
+interface SearchDocument extends SearchResult {
   normalizedTitle: string
-  normalizedContent: string
-  data: Prayer | Song | Psalm
 }
+
+// Sections that have no category filter of their own
+const SECTIONS_WITHOUT_CATEGORIES: SearchSection[] = ['psalm', 'scripture']
 
 const FALLBACK_CATEGORY = 'Bez kategorii'
 const SNIPPET_LENGTH = 180
@@ -45,36 +46,90 @@ const compactContent = (content: string) => content
   .replace(/\s+/g, ' ')
   .trim()
 
-function createSearchDocument(
-  type: ResultType,
-  title: string,
-  category: string | undefined,
-  rawContent: string,
-  data: Prayer | Song | Psalm,
-): SearchDocument {
+interface DocumentInput {
+  type: ResultType
+  key: string
+  href: string
+  title: string
+  category?: string
+  rawContent: string
+  // Verse citations ("Psalm 23:1") are not meaningful title matches
+  titleSearchable?: boolean
+}
+
+function createSearchDocument({ titleSearchable = true, rawContent, ...input }: DocumentInput): SearchDocument {
   const content = compactContent(rawContent)
   return {
-    type,
-    title,
-    category,
+    ...input,
     content,
-    normalizedTitle: normalize(title),
+    normalizedTitle: titleSearchable ? normalize(input.title) : '',
     normalizedContent: normalize(content),
-    data,
   }
 }
 
+const encodeRouteId = (routeId: string) => encodeURIComponent(routeId)
+
 const searchIndex: SearchDocument[] = [
-  ...prayers.map((prayer) => createSearchDocument(
-    'prayer', prayer.title, prayer.category, prayer.body, prayer,
-  )),
-  ...songs.map((song) => createSearchDocument(
-    'song', song.title, song.category, song.body, song,
-  )),
-  ...psalms.flatMap((psalm) => psalm.verses.map((verse) => createSearchDocument(
-    'psalm', `${psalm.title}:${verse.number}`, 'Psalmy', verse.text, psalm,
-  ))),
+  ...prayers.map((prayer) => createSearchDocument({
+    type: 'prayer',
+    key: `prayer-${prayer.id}`,
+    href: `/modlitwy/${encodeRouteId(prayer.id)}`,
+    title: prayer.title,
+    category: prayer.category,
+    rawContent: prayer.body,
+  })),
+  ...songs.map((song) => createSearchDocument({
+    type: 'song',
+    key: `song-${song.id}`,
+    href: `/spiewnik/${encodeRouteId(song.id)}`,
+    title: song.title,
+    category: song.category,
+    rawContent: song.body,
+  })),
+  ...psalms.flatMap((psalm) => psalm.verses.map((verse) => createSearchDocument({
+    type: 'psalm',
+    key: `psalm-${psalm.number}:${verse.number}`,
+    href: `/pismo-swiete/psalmy/${psalm.number}`,
+    title: `${psalm.title}:${verse.number}`,
+    category: 'Psalmy',
+    rawContent: verse.text,
+  }))),
+  ...announcements.map((announcement) => createSearchDocument({
+    type: 'announcement',
+    key: `announcement-${announcement.id}`,
+    href: `/ogloszenia/${encodeRouteId(announcement.id)}`,
+    title: announcement.title,
+    category: announcement.category,
+    rawContent: announcement.body,
+  })),
 ]
+
+// The other 63 books (~4 MB of text) are indexed only once somebody actually
+// searches them, so opening the search page stays light. Offline this still
+// works, because the service worker precaches every book chunk.
+let scriptureIndexPromise: Promise<SearchDocument[]> | null = null
+
+function loadScriptureIndex(): Promise<SearchDocument[]> {
+  scriptureIndexPromise ??= Promise.all(scriptureBookSlugs.map(async (slug) => {
+    const book = await loadScriptureBook(slug)
+    const bookSlug = scriptureBooksBySlug[slug]?.slug ?? slug
+    return book.chapters.flatMap((chapter) => chapter.verses.map((verse) => createSearchDocument({
+      type: 'scripture',
+      key: `scripture-${book.id}:${chapter.number}:${verse.number}`,
+      href: `/pismo-swiete/${bookSlug}/${chapter.number}`,
+      title: `${book.name} ${chapter.number},${verse.number}`,
+      category: 'Pismo Święte',
+      rawContent: verse.text,
+      titleSearchable: false,
+    })))
+  }))
+    .then((books) => books.flat())
+    .catch((error: unknown) => {
+      scriptureIndexPromise = null
+      throw error
+    })
+  return scriptureIndexPromise
+}
 
 function getContextSnippet(content: string, normalizedContent: string, normalizedQuery: string): string {
   const matchIndex = normalizedContent.indexOf(normalizedQuery)
@@ -105,6 +160,7 @@ function sortTitleMatches(results: SearchResult[], query: string): SearchResult[
 }
 
 function searchEntries(
+  documents: readonly SearchDocument[],
   query: string,
   section: SearchSection,
   category: string,
@@ -115,26 +171,17 @@ function searchEntries(
   const contentMatches: SearchResult[] = []
   if (!normalizedQuery) return { titleMatches, contentMatches }
 
-  for (const document of searchIndex) {
+  for (const document of documents) {
     if (section !== 'all' && document.type !== section) continue
     if (category !== 'all' && (document.category ?? FALLBACK_CATEGORY) !== category) continue
 
-    const result = {
-      type: document.type,
-      title: document.title,
-      category: document.category,
-      content: document.content,
-      normalizedContent: document.normalizedContent,
-      data: document.data,
-    }
-
     if (scope !== 'content' && document.normalizedTitle.includes(normalizedQuery)) {
-      titleMatches.push(result)
+      titleMatches.push(document)
       continue
     }
 
     if (scope !== 'title' && document.normalizedContent.includes(normalizedQuery)) {
-      contentMatches.push(result)
+      contentMatches.push(document)
     }
   }
 
@@ -148,9 +195,10 @@ const typeLabels: Record<ResultType, string> = {
   prayer: 'Modlitwa',
   song: 'Pieśń',
   psalm: 'Psalm',
+  scripture: 'Pismo Święte',
+  announcement: 'Ogłoszenie',
 }
 
-const encodeRouteId = (routeId: string) => encodeURIComponent(routeId)
 const DEBOUNCE_MS = 200
 const RESULTS_PAGE_SIZE = 12
 
@@ -197,36 +245,17 @@ interface SearchResultItemProps {
 
 function SearchResultItem({ result, query, resultRef, onKeyDown }: SearchResultItemProps) {
   const snippet = getContextSnippet(result.content, result.normalizedContent, normalize(query))
-  const content = (
-    <>
+  // Scripture results already name the book in the title; repeating it as a category adds noise.
+  const showCategory = result.category && result.type !== 'scripture'
+
+  return (
+    <Link ref={resultRef} onKeyDown={onKeyDown} className="search-result search-result-clickable" to={result.href}>
       <span className="search-result-type">{typeLabels[result.type]}</span>
-      {result.category && <span className="search-result-category">{result.category}</span>}
+      {showCategory && <span className="search-result-category">{result.category}</span>}
       <strong className="search-result-title">{highlightQuery(result.title, query)}</strong>
       {snippet && (
         <p className="search-result-snippet">{highlightQuery(snippet, query)}</p>
       )}
-    </>
-  )
-
-  if (result.type === 'prayer') {
-    return (
-      <Link ref={resultRef} onKeyDown={onKeyDown} className="search-result search-result-clickable" to={`/modlitwy/${encodeRouteId((result.data as Prayer).id)}`}>
-        {content}
-      </Link>
-    )
-  }
-
-  if (result.type === 'song') {
-    return (
-      <Link ref={resultRef} onKeyDown={onKeyDown} className="search-result search-result-clickable" to={`/spiewnik/${encodeRouteId((result.data as Song).id)}`}>
-        {content}
-      </Link>
-    )
-  }
-
-  return (
-    <Link ref={resultRef} onKeyDown={onKeyDown} className="search-result search-result-clickable" to={`/pismo-swiete/psalmy/${(result.data as Psalm).number}`}>
-      {content}
     </Link>
   )
 }
@@ -269,15 +298,37 @@ export default function SearchPage() {
     if (section === 'all' || section === 'song') {
       for (const song of songs) values.add(song.category ?? FALLBACK_CATEGORY)
     }
+    if (section === 'all' || section === 'announcement') {
+      for (const announcement of announcements) values.add(announcement.category)
+    }
     return [...values].sort((a, b) => a.localeCompare(b, 'pl'))
   }, [section])
 
   const trimmed = debouncedQuery.trim()
+  const [scriptureDocuments, setScriptureDocuments] = useState<SearchDocument[] | null>(null)
+  const [scriptureFailed, setScriptureFailed] = useState(false)
+  const needsScripture = trimmed.length >= 2 && (section === 'all' || section === 'scripture')
+  const scriptureLoading = needsScripture && !scriptureDocuments && !scriptureFailed
+
+  useEffect(() => {
+    if (!needsScripture || scriptureDocuments) return
+    let cancelled = false
+    loadScriptureIndex().then(
+      (documents) => { if (!cancelled) setScriptureDocuments(documents) },
+      () => { if (!cancelled) setScriptureFailed(true) },
+    )
+    return () => { cancelled = true }
+  }, [needsScripture, scriptureDocuments])
+
+  const documents = useMemo(
+    () => (scriptureDocuments ? [...searchIndex, ...scriptureDocuments] : searchIndex),
+    [scriptureDocuments],
+  )
   const groups = useMemo(
     () => trimmed.length >= 2
-      ? searchEntries(trimmed, section, category, scope)
+      ? searchEntries(documents, trimmed, section, category, scope)
       : { titleMatches: [], contentMatches: [] },
-    [trimmed, section, category, scope],
+    [documents, trimmed, section, category, scope],
   )
   const resultCount = groups.titleMatches.length + groups.contentMatches.length
   const visibleTitleMatches = groups.titleMatches.slice(0, visibleTitleCount)
@@ -329,6 +380,8 @@ export default function SearchPage() {
             <option value="prayer">Modlitwy</option>
             <option value="song">Pieśni</option>
             <option value="psalm">Psalmy</option>
+            <option value="scripture">Pozostałe księgi Pisma</option>
+            <option value="announcement">Ogłoszenia</option>
           </select>
         </label>
         <label>
@@ -339,7 +392,7 @@ export default function SearchPage() {
               setCategory(event.target.value)
               resetVisibleResults()
             }}
-            disabled={section === 'psalm'}
+            disabled={SECTIONS_WITHOUT_CATEGORIES.includes(section)}
           >
             <option value="all">Wszystkie kategorie</option>
             {categories.map((value) => <option key={value} value={value}>{value}</option>)}
@@ -371,7 +424,13 @@ export default function SearchPage() {
           Znaleziono: {resultCount} {pluralPl(resultCount, 'wynik', 'wyniki', 'wyników')}
         </p>
       )}
-      {trimmed.length >= 2 && resultCount === 0 && (
+      {scriptureLoading && (
+        <p className="search-hint" role="status">Wczytywanie Pisma Świętego do wyszukiwania…</p>
+      )}
+      {needsScripture && scriptureFailed && (
+        <p className="search-hint" role="status">Nie udało się wczytać Pisma Świętego — wyniki obejmują pozostałe sekcje.</p>
+      )}
+      {trimmed.length >= 2 && resultCount === 0 && !scriptureLoading && (
         <p className="search-empty" role="status">Brak wyników dla wybranych filtrów.</p>
       )}
       {groups.titleMatches.length > 0 && (
@@ -379,7 +438,7 @@ export default function SearchPage() {
           <h2>Tytuły <span>({groups.titleMatches.length})</span></h2>
           <ul className="search-results">
             {visibleTitleMatches.map((result, index) => (
-              <li key={result.type === 'psalm' ? `psalm-${result.title}` : `${result.type}-${(result.data as Prayer | Song).id}`}>
+              <li key={result.key}>
                 <SearchResultItem
                   result={result}
                   query={trimmed}
@@ -406,7 +465,7 @@ export default function SearchPage() {
           <h2>W treści <span>({groups.contentMatches.length})</span></h2>
           <ul className="search-results">
             {visibleContentMatches.map((result, index) => (
-              <li key={result.type === 'psalm' ? `psalm-${result.title}` : `${result.type}-${(result.data as Prayer | Song).id}`}>
+              <li key={result.key}>
                 <SearchResultItem
                   result={result}
                   query={trimmed}

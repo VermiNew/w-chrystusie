@@ -11,7 +11,7 @@ const sections = [
   { to: '/pismo-swiete', icon: <FaBookBible />, title: 'Pismo Święte', description: 'Biblia w przekładzie Jakuba Wujka' },
   { to: '/spiewnik', icon: <FaMusic />, title: 'Śpiewnik', description: 'Pieśni i hymny kościelne' },
   { to: '/ogloszenia', icon: <FaBullhorn />, title: 'Ogłoszenia', description: 'Aktualności i inicjatywy parafialne' },
-  { to: '/szukaj', icon: <FaMagnifyingGlass />, title: 'Szukaj', description: 'Wyszukiwarka modlitw, pieśni i Psalmów' },
+  { to: '/szukaj', icon: <FaMagnifyingGlass />, title: 'Szukaj', description: 'Wyszukiwarka modlitw, pieśni i Pisma' },
 ]
 
 interface ContinueTarget {
