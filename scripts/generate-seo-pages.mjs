@@ -3,6 +3,9 @@ import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { loadEnv } from 'vite'
+// Node strips the (erasable) TypeScript syntax, so the app's own catalog is the single source of truth.
+import { scriptureCatalog } from '../src/data/scriptureCatalog.ts'
+import { pluralPl } from '../src/data/plural.ts'
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const distDirectory = path.join(projectRoot, 'dist')
@@ -11,6 +14,9 @@ const defaultDescription = 'Polska katolicka aplikacja webowa — modlitwy, pie�
 const productionEnv = loadEnv('production', projectRoot, 'VITE_')
 const configuredSiteUrl = process.env.VITE_SITE_URL?.trim() || productionEnv.VITE_SITE_URL?.trim()
 const siteUrl = new URL(configuredSiteUrl ? `${configuredSiteUrl.replace(/\/+$/, '')}/` : 'http://localhost:4173/')
+
+// Psalms have their own routes and generator entries below.
+const availableBooks = scriptureCatalog.filter((book) => book.isAvailable)
 
 if (!configuredSiteUrl) {
   console.warn('[seo] Brak VITE_SITE_URL. Wygenerowano lokalne adresy; ustaw zmienną przed wdrożeniem produkcyjnym.')
@@ -30,8 +36,7 @@ const staticPages = [
   {
     path: '/pismo-swiete',
     title: 'Pismo Święte | W Chrystusie',
-    description: 'Sekcja Pisma Świętego w aplikacji W Chrystusie.',
-    noIndex: true,
+    description: `Pismo Święte w publicznodomenowym przekładzie ks. Jakuba Wujka — ${availableBooks.length} ksiąg Starego i Nowego Testamentu, ze źródłem każdego rozdziału.`,
   },
   {
     path: '/pismo-swiete/psalmy',
@@ -264,6 +269,25 @@ const [template, prayers, songs, announcements, psalmsRaw] = await Promise.all([
 ])
 const psalms = JSON.parse(psalmsRaw)
 
+// Mirrors the /pismo-swiete/:book(/:chapter) metadata in src/components/SeoMetadata.tsx.
+const scripturePages = availableBooks
+  .filter((book) => book.id !== 'psa')
+  .flatMap((book) => [
+    {
+      path: `/pismo-swiete/${book.slug}`,
+      title: `${book.name} — przekład Jakuba Wujka | ${siteName}`,
+      description: `${book.name} w publicznodomenowym przekładzie ks. Jakuba Wujka: ${book.chapterCount} ${pluralPl(book.chapterCount, 'rozdział', 'rozdziały', 'rozdziałów')} z pełnym tekstem i źródłem.`,
+      section: 'Pismo Święte',
+    },
+    ...Array.from({ length: book.chapterCount }, (_, index) => ({
+      path: `/pismo-swiete/${book.slug}/${index + 1}`,
+      title: `${book.name}, rozdział ${index + 1} | ${siteName}`,
+      description: `Pełny tekst: ${book.name}, rozdział ${index + 1}, w publicznodomenowym przekładzie ks. Jakuba Wujka, ze źródłem cyfrowym i dokładnym URL-em.`,
+      type: 'article',
+      section: book.name,
+    })),
+  ])
+
 const now = new Date()
 const today = [
   now.getFullYear(),
@@ -302,6 +326,7 @@ const pages = [
       section: 'Psalmy',
     },
   ),
+  ...scripturePages,
   ...createDetailPages(publishedAnnouncements, {
     prefix: '/ogloszenia',
     outputDirectory: 'ogloszenia',
