@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { readStorage, removeStorage, writeStorage } from '../data/storage'
 
 const STORAGE_PREFIX = 'reading-position:'
 const MIN_RESTORABLE_SCROLL = 40
@@ -9,7 +10,7 @@ export function useReadingPosition(contentKey: string) {
   const [wasRestored, setWasRestored] = useState(false)
 
   useEffect(() => {
-    const savedPosition = Number.parseInt(localStorage.getItem(storageKey) ?? '', 10)
+    const savedPosition = Number.parseInt(readStorage(storageKey) ?? '', 10)
     const shouldRestore = Number.isFinite(savedPosition) && savedPosition >= MIN_RESTORABLE_SCROLL
     let ready = false
     let innerFrame: number | null = null
@@ -19,9 +20,9 @@ export function useReadingPosition(contentKey: string) {
       if (!ready) return
 
       if (window.scrollY >= MIN_RESTORABLE_SCROLL) {
-        localStorage.setItem(storageKey, String(Math.round(window.scrollY)))
+        writeStorage(storageKey, String(Math.round(window.scrollY)))
       } else {
-        localStorage.removeItem(storageKey)
+        removeStorage(storageKey)
       }
     }
 
@@ -50,7 +51,7 @@ export function useReadingPosition(contentKey: string) {
   }, [storageKey])
 
   const restart = useCallback(() => {
-    localStorage.removeItem(storageKey)
+    removeStorage(storageKey)
     setWasRestored(false)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [storageKey])

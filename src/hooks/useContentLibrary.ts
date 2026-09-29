@@ -33,7 +33,12 @@ const readKeys = (storageKey: string) => {
 }
 
 const writeKeys = (storageKey: string, keys: string[]) => {
-  localStorage.setItem(storageKey, JSON.stringify(keys))
+  try {
+    localStorage.setItem(storageKey, JSON.stringify(keys))
+  } catch {
+    // Storage unavailable (private mode, full quota): favorites and history are not saved.
+    return
+  }
   window.dispatchEvent(new Event(CHANGE_EVENT))
 }
 

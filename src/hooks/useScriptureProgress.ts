@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { readStorage, writeStorage } from '../data/storage'
 
 const PROGRESS_KEY = 'scripture-progress'
 
@@ -6,7 +7,7 @@ type ProgressMap = Record<string, number>
 
 function loadProgress(): ProgressMap {
   try {
-    return JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}') as ProgressMap
+    return JSON.parse(readStorage(PROGRESS_KEY) || '{}') as ProgressMap
   } catch {
     return {}
   }
@@ -15,7 +16,7 @@ function loadProgress(): ProgressMap {
 function saveProgress(key: string, percent: number) {
   const progress = loadProgress()
   progress[key] = Math.max(progress[key] ?? 0, Math.round(percent))
-  localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress))
+  writeStorage(PROGRESS_KEY, JSON.stringify(progress))
 }
 
 export function getChapterProgress(bookId: string, chapter: number) {
