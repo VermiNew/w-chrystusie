@@ -9,6 +9,7 @@ import ConfirmDialog from '../components/ConfirmDialog'
 import SourceAttributionLink from '../components/SourceAttributionLink'
 import { normalizeSearchText } from '../data/searchText'
 import { pluralPl } from '../data/plural'
+import NotFoundPage from './NotFoundPage'
 
 const SCROLL_KEY = 'prayers-scroll'
 const CATEGORY_KEY = 'prayers-category'
@@ -153,6 +154,9 @@ export default function PrayersPage() {
 
   const resultCount = grouped.reduce((sum, group) => sum + group.items.length, 0)
   const hasActiveFilters = query.trim().length > 0 || selectedCategory !== 'all'
+
+  // An unknown id (e.g. an old link after a file rename) is a real 404, not the list.
+  if (selectedId && !selected) return <NotFoundPage />
 
   if (selected) {
     return (

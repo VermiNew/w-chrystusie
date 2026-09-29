@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom'
+import { BrowserRouter, Navigate, Routes, Route, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { useEffect, lazy, Suspense } from 'react'
 import Header from './components/Header'
 import ReminderToast from './components/ReminderToast'
@@ -20,6 +20,12 @@ const MayDevotionPage = lazy(() => import('./pages/MayDevotionPage'))
 const SearchPage = lazy(() => import('./pages/SearchPage'))
 const SourcesPage = lazy(() => import('./pages/SourcesPage'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
+
+// The catalog slug of the Psalms is "psalmow", but they live under /pismo-swiete/psalmy.
+function PsalmsSlugRedirect() {
+  const { id } = useParams()
+  return <Navigate to={id ? `/pismo-swiete/psalmy/${id}` : '/pismo-swiete/psalmy'} replace />
+}
 
 function AppRoutes() {
   const location = useLocation()
@@ -61,6 +67,8 @@ function AppRoutes() {
               <Route path="/pismo-swiete" element={<ScripturePage />} />
               <Route path="/pismo-swiete/psalmy" element={<PsalmsPage />} />
               <Route path="/pismo-swiete/psalmy/:id" element={<PsalmsPage />} />
+              <Route path="/pismo-swiete/psalmow" element={<PsalmsSlugRedirect />} />
+              <Route path="/pismo-swiete/psalmow/:id" element={<PsalmsSlugRedirect />} />
               <Route path="/pismo-swiete/:book" element={<GenesisPage />} />
               <Route path="/pismo-swiete/:book/:chapter" element={<GenesisPage />} />
               <Route path="/psalmy" element={<PsalmsPage />} />
