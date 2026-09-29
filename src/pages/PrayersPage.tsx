@@ -7,6 +7,8 @@ import ReadingModeToggle from '../components/ReadingModeToggle'
 import { useContentLibrary } from '../hooks/useContentLibrary'
 import ConfirmDialog from '../components/ConfirmDialog'
 import SourceAttributionLink from '../components/SourceAttributionLink'
+import { normalizeSearchText } from '../data/searchText'
+import { pluralPl } from '../data/plural'
 
 const SCROLL_KEY = 'prayers-scroll'
 const CATEGORY_KEY = 'prayers-category'
@@ -34,6 +36,16 @@ const categoryOrder = [
 const fallbackCategory = 'Bez kategorii'
 
 const byTitle = (a: Prayer, b: Prayer) => a.title.localeCompare(b.title, 'pl')
+
+// Normalized once, on the first filter use, instead of on every keystroke.
+let searchableTexts: Map<string, string> | null = null
+const getSearchableText = (prayer: Prayer) => {
+  searchableTexts ??= new Map(prayers.map((entry) => [
+    entry.id,
+    normalizeSearchText(`${entry.title} ${entry.category ?? ''} ${entry.body}`),
+  ]))
+  return searchableTexts.get(prayer.id) ?? ''
+}
 
 const decodeRouteId = (routeId: string) => {
   try {
@@ -121,7 +133,7 @@ export default function PrayersPage() {
   }
 
   const grouped = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase()
+    const normalizedQuery = normalizeSearchText(query.trim())
     const map = new Map<string, Prayer[]>()
     for (const prayer of prayers) {
       const category = prayer.category && categoryOrder.includes(prayer.category)
@@ -129,8 +141,7 @@ export default function PrayersPage() {
         : fallbackCategory
       if (selectedCategory !== 'all' && category !== selectedCategory) continue
 
-      const searchableText = `${prayer.title} ${prayer.category ?? ''} ${prayer.body}`.toLowerCase()
-      if (normalizedQuery && !searchableText.includes(normalizedQuery)) continue
+      if (normalizedQuery && !getSearchableText(prayer).includes(normalizedQuery)) continue
 
       if (!map.has(category)) map.set(category, [])
       map.get(category)!.push(prayer)
@@ -296,7 +307,7 @@ export default function PrayersPage() {
       </div>
       {hasActiveFilters && (
         <p className="list-filter-count">
-          Wyświetlono: {resultCount} {resultCount === 1 ? 'pozycję' : 'pozycji'}
+          Wyświetlono: {resultCount} {pluralPl(resultCount, 'pozycję', 'pozycje', 'pozycji')}
         </p>
       )}
       {resultCount === 0 && <p className="list-filter-empty">Brak modlitw pasujących do wybranych filtrów.</p>}

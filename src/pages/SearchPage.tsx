@@ -4,6 +4,8 @@ import { FaKeyboard } from 'react-icons/fa6'
 import { prayers, type Prayer } from '../data/prayers'
 import { songs, type Song } from '../data/songs'
 import { psalms, type Psalm } from '../data/psalms'
+import { normalizeSearchText } from '../data/searchText'
+import { pluralPl } from '../data/plural'
 
 type ResultType = 'prayer' | 'song' | 'psalm'
 type SearchSection = 'all' | ResultType
@@ -36,11 +38,7 @@ interface SearchDocument {
 const FALLBACK_CATEGORY = 'Bez kategorii'
 const SNIPPET_LENGTH = 180
 
-const normalize = (value: string) => value
-  .toLocaleLowerCase('pl-PL')
-  .normalize('NFD')
-  .replace(/\p{M}/gu, '')
-  .replace(/ł/g, 'l')
+const normalize = normalizeSearchText
 
 const compactContent = (content: string) => content
   .replace(/[#*_>`[\]]/g, '')
@@ -361,7 +359,7 @@ export default function SearchPage() {
       )}
       {trimmed.length >= 2 && (
         <p className="search-count" aria-live="polite" aria-atomic="true">
-          Znaleziono: {resultCount} {resultCount === 1 ? 'wynik' : 'wyników'}
+          Znaleziono: {resultCount} {pluralPl(resultCount, 'wynik', 'wyniki', 'wyników')}
         </p>
       )}
       {trimmed.length >= 2 && resultCount === 0 && (
@@ -396,7 +394,7 @@ export default function SearchPage() {
       )}
       {groups.contentMatches.length > 0 && (
         <section className="search-group">
-          <h2>Zawartość plików <span>({groups.contentMatches.length})</span></h2>
+          <h2>W treści <span>({groups.contentMatches.length})</span></h2>
           <ul className="search-results">
             {visibleContentMatches.map((result, index) => (
               <li key={result.type === 'psalm' ? `psalm-${result.title}` : `${result.type}-${(result.data as Prayer | Song).id}`}>

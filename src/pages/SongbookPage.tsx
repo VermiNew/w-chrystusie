@@ -8,6 +8,8 @@ import { useContentLibrary } from '../hooks/useContentLibrary'
 import ConfirmDialog from '../components/ConfirmDialog'
 import { getLiturgicalSeason } from '../data/liturgicalSeason'
 import SourceAttributionLink from '../components/SourceAttributionLink'
+import { normalizeSearchText } from '../data/searchText'
+import { pluralPl } from '../data/plural'
 
 const SCROLL_KEY = 'songbook-scroll'
 const CATEGORY_KEY = 'songbook-category'
@@ -31,6 +33,16 @@ const categoryOrder = [
 const fallbackCategory = 'Bez kategorii'
 
 const byTitle = (a: Song, b: Song) => a.title.localeCompare(b.title, 'pl')
+
+// Normalized once, on the first filter use, instead of on every keystroke.
+let searchableTexts: Map<string, string> | null = null
+const getSearchableText = (song: Song) => {
+  searchableTexts ??= new Map(songs.map((entry) => [
+    entry.id,
+    normalizeSearchText(`${entry.title} ${entry.category ?? ''} ${entry.body}`),
+  ]))
+  return searchableTexts.get(song.id) ?? ''
+}
 
 const decodeRouteId = (routeId: string) => {
   try {
@@ -119,7 +131,7 @@ export default function SongbookPage() {
   }
 
   const grouped = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase()
+    const normalizedQuery = normalizeSearchText(query.trim())
     const map = new Map<string, Song[]>()
     for (const song of songs) {
       const category = song.category && categoryOrder.includes(song.category)
@@ -127,8 +139,7 @@ export default function SongbookPage() {
         : fallbackCategory
       if (selectedCategory !== 'all' && category !== selectedCategory) continue
 
-      const searchableText = `${song.title} ${song.category ?? ''} ${song.body}`.toLowerCase()
-      if (normalizedQuery && !searchableText.includes(normalizedQuery)) continue
+      if (normalizedQuery && !getSearchableText(song).includes(normalizedQuery)) continue
 
       if (!map.has(category)) map.set(category, [])
       map.get(category)!.push(song)
@@ -277,7 +288,7 @@ export default function SongbookPage() {
       </div>
       {hasActiveFilters && (
         <p className="list-filter-count">
-          Wyświetlono: {resultCount} {resultCount === 1 ? 'pozycję' : 'pozycji'}
+          Wyświetlono: {resultCount} {pluralPl(resultCount, 'pozycję', 'pozycje', 'pozycji')}
         </p>
       )}
       {resultCount === 0 && <p className="list-filter-empty">Brak pieśni pasujących do wybranych filtrów.</p>}
