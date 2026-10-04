@@ -365,10 +365,18 @@ Sitemap: ${new URL('sitemap.xml', siteUrl).href}
 // Everything the service worker precaches for offline use: all build chunks
 // plus the images shown on pages (source logos, book covers, May devotion picture).
 const offlineImageDirectories = ['sources', 'materials', 'pictures']
-const assetPaths = (await Promise.all([
-  collectAssetPaths(path.join(distDirectory, 'assets')),
-  ...offlineImageDirectories.map((directory) => collectAssetPaths(path.join(distDirectory, directory), `/${directory}`)),
-])).flat().sort()
+const buildAssetPaths = await collectAssetPaths(path.join(distDirectory, 'assets'))
+// Only images the built code actually references, so unused originals kept in
+// public/ (e.g. a large PNG replaced by WebP) are not downloaded by every visitor.
+const builtCode = (await Promise.all(
+  buildAssetPaths
+    .filter((assetPath) => /\.(js|css)$/.test(assetPath))
+    .map((assetPath) => readFile(path.join(distDirectory, assetPath), 'utf8')),
+)).join('\n')
+const imagePaths = (await Promise.all(
+  offlineImageDirectories.map((directory) => collectAssetPaths(path.join(distDirectory, directory), `/${directory}`)),
+)).flat().filter((imagePath) => builtCode.includes(imagePath))
+const assetPaths = [...buildAssetPaths, ...imagePaths].sort()
 
 await Promise.all([
   writeFile(path.join(distDirectory, 'sitemap.xml'), sitemap, 'utf8'),

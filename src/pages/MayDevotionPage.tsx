@@ -71,7 +71,7 @@ export default function MayDevotionPage() {
 
       <figure className="devotion-image">
         <img
-          src="/pictures/NMP_PIC_MAJ_0.png"
+          src="/pictures/NMP_PIC_MAJ_0.webp"
           alt="Najświętsza Maryja Panna — maj"
           loading="lazy"
         />

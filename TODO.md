@@ -54,7 +54,8 @@
 - [x] Po wdrożeniu niezmienione pliki kopiowane z poprzedniej wersji cache zamiast pobierania od nowa; pliki z hashem serwowane najpierw z cache
 - [x] Wyszukiwarka (łącznie z Biblią) działa offline
 - [x] Logo Wikiźródeł zapisane lokalnie (`public/sources/wikisource.svg`, jednokolorowe z Simple Icons) — działa offline
-- [ ] `public/pictures/NMP_PIC_MAJ_0.png` waży 2,9 MB i jest zapisywany offline — rozważyć wersję WebP/JPG (~200 KB)
+- [x] Obraz majowy w WebP (335 KB zamiast 2,9 MB); do zapisu offline trafiają tylko obrazki używane w kodzie
+- [ ] Usunąć nieużywany oryginał `public/pictures/NMP_PIC_MAJ_0.png` (2,9 MB), jeśli nie jest potrzebny jako źródło
 
 ## Do zrobienia — listy modlitw i pieśni
 
