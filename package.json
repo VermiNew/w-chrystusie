@@ -17,6 +17,7 @@
     "playwright:test": "playwright test",
     "playwright:smoke": "playwright test tests/scripture.smoke.spec.ts",
     "playwright:ui": "playwright test --ui",
+    "test:prod": "playwright test -c playwright.prod.config.ts",
     "content:catalog": "node scripts/generate-content-catalog.mjs",
     "content:psalms": "node scripts/import-wujek-psalms.mjs",
     "content:genesis": "node scripts/import-wujek-genesis.mjs",

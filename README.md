@@ -41,9 +41,10 @@ Sprawdzanie kodu:
 ```bash
 npm run lint
 npm run playwright:smoke
+npm run build && npm run test:prod   # testy na wersji produkcyjnej
 ```
 
-To samo uruchamia CI (GitHub Actions) przy każdym pushu.
+`test:prod` (`tests/prod/`) sprawdza tryb offline po jednej wizycie, metadane rozdziałów Biblii, strony 404, Esc w różańcu, zachowanie frazy wyszukiwania i działanie przy zablokowanej pamięci przeglądarki. Wszystko to uruchamia też CI (GitHub Actions) przy każdym pushu.
 
 ## Offline
 
