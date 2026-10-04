@@ -53,7 +53,7 @@
 - [x] Service worker zapisuje wszystkie pliki aplikacji: każdą księgę Biblii, modlitwy, pieśni i obrazki stron (`asset-manifest.json`)
 - [x] Po wdrożeniu niezmienione pliki kopiowane z poprzedniej wersji cache zamiast pobierania od nowa; pliki z hashem serwowane najpierw z cache
 - [x] Wyszukiwarka (łącznie z Biblią) działa offline
-- [ ] Logo Wikiźródeł ładowane z `upload.wikimedia.org` — zapisać lokalnie w `public/sources/` (offline pokazuje się pusty obrazek)
+- [x] Logo Wikiźródeł zapisane lokalnie (`public/sources/wikisource.svg`, jednokolorowe z Simple Icons) — działa offline
 - [ ] `public/pictures/NMP_PIC_MAJ_0.png` waży 2,9 MB i jest zapisywany offline — rozważyć wersję WebP/JPG (~200 KB)
 
 ## Do zrobienia — listy modlitw i pieśni

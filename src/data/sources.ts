@@ -111,7 +111,8 @@ export const contentSources: readonly ContentSource[] = [
     id: 'wikisource',
     name: 'Wikiźródła',
     url: 'https://pl.wikisource.org/',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg',
+    // Monochrome mark from the CC0 simple-icons set, stored locally so it also shows offline
+    logo: '/sources/wikisource.svg',
     description:
       'Cyfrowe źródło publicznodomenowego przekładu Biblii ks. Jakuba Wujka (wydanie z 1923 roku).',
     contentKinds: ['pełne teksty ksiąg Pisma Świętego, w tym 150 Psalmów'],
@@ -128,7 +129,7 @@ export const contentSources: readonly ContentSource[] = [
     status: 'active',
     verifiedAt: '2026-07-25',
     usageNote:
-      'Tekst wydania jest w domenie publicznej; transkrypcja Wikiźródeł jest udostępniona na licencji CC BY-SA 4.0. Logo Wikiźródeł: CC BY-SA 3.0; Wikimedia Foundation, Inc.',
+      'Tekst wydania jest w domenie publicznej; transkrypcja Wikiźródeł jest udostępniona na licencji CC BY-SA 4.0. Logo Wikiźródeł jest znakiem Wikimedia Foundation, Inc.; użyto jednokolorowej wersji z zestawu Simple Icons (CC0).',
   },
   {
     id: 'romcal',
