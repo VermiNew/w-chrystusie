@@ -190,7 +190,7 @@
 - [x] `✝` w AboutModal jako zwykły znak — zastąpić ikoną lub SVG z logo aplikacji
 
 ### Strona główna
-- [ ] Brak wizualnego wyróżnienia aktualnego okresu liturgicznego (Adwent, Wielkanoc itp.)
+- [x] Karta „Dzisiaj w liturgii” na stronie głównej: obchód dnia, okres, kolor szat, święto nakazane, najbliższe święto
 
 ### Typografia i spacing
 - [x] `font-reading` (Literata) używana w widokach treści — sprawdzić czy załadowana dla wszystkich widoków szczegółowych (modlitwy, pieśni, koronka)
@@ -307,10 +307,13 @@
 
 ## Do zrobienia — kalendarz liturgiczny i czytania na dziś
 
-- [ ] Zweryfikować Romcal jako źródło dat i obchodów liturgicznych oraz zakres polskiego kalendarza i lokalizacji
-- [ ] Zaprojektować warstwę kalendarza niezależną od interfejsu: data, okres liturgiczny, kolor, ranga, obchód i wspomnienia
-- [ ] Uwzględnić strefę `Europe/Warsaw`, zmianę dnia o północy, lata przestępne i ruchome uroczystości
-- [ ] Dodać widok „Dzisiaj w liturgii” na stronie głównej i pełny kalendarz z nawigacją po dniach
+- [x] Własny kalendarz zamiast Romcal (bez nowej zależności): `src/data/liturgicalCalendar.ts`, działa offline
+- [x] Warstwa kalendarza niezależna od interfejsu: okres, tydzień, kolor, ranga, uroczystości i święta (ogólne i polskie), przenoszenie uroczystości
+- [ ] Wspomnienia świętych (obowiązkowe i dowolne) — wymagają sprawdzonego źródła danych
+- [ ] Zweryfikować z kalendarzem KEP: uroczystości polskie przypadające w niedzielę wielkanocną (np. 3 maja 2026 — teraz przeniesione na poniedziałek wg norm ogólnych) oraz szczególne decyzje Stolicy Apostolskiej (np. Narodzenie św. Jana Chrzciciela w 2022)
+- [x] Ruchome uroczystości i lata przestępne (sprawdzone dla lat 2024–2040); dzień liczony wg lokalnego czasu urządzenia
+- [x] Widok „Dzisiaj w liturgii” na stronie głównej
+- [ ] Pełny kalendarz z nawigacją po dniach
 - [ ] Pozyskać osobne, legalne źródło polskich czytań mszalnych; Romcal nie powinien być traktowany jako źródło tekstów czytań
 - [ ] Ustalić zakres danych czytań: pierwsze czytanie, psalm responsoryjny, drugie czytanie, aklamacja i Ewangelia
 - [ ] Zapisać przy każdym czytaniu źródło, siglum, tłumaczenie, licencję i adres oryginalnej publikacji

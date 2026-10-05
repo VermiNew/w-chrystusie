@@ -6,7 +6,7 @@ export interface LiturgicalSeason {
   songCategory?: string
 }
 
-const DAY_MS = 86_400_000
+export const DAY_MS = 86_400_000
 
 const seasons: Record<LiturgicalSeasonId, LiturgicalSeason> = {
   advent: { id: 'advent', name: 'Adwent', songCategory: 'Pieśni adwentowe' },
@@ -17,15 +17,15 @@ const seasons: Record<LiturgicalSeasonId, LiturgicalSeason> = {
   easter: { id: 'easter', name: 'Okres Wielkanocny', songCategory: 'Pieśni wielkanocne' },
 }
 
-const dateKey = (year: number, month: number, day: number) => Date.UTC(year, month, day)
+export const dateKey = (year: number, month: number, day: number) => Date.UTC(year, month, day)
 
-const firstSundayOnOrAfter = (key: number) => {
+export const firstSundayOnOrAfter = (key: number) => {
   const weekday = new Date(key).getUTCDay()
   return key + ((7 - weekday) % 7) * DAY_MS
 }
 
 // Gregorian computus (Meeus/Jones/Butcher) gives Easter Sunday for any Gregorian year.
-const getEasterKey = (year: number) => {
+export const getEasterKey = (year: number) => {
   const a = year % 19
   const b = Math.floor(year / 100)
   const c = year % 100

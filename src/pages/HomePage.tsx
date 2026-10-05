@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaArrowRight, FaCross, FaBookBible, FaMusic, FaHandsPraying, FaBullhorn, FaMagnifyingGlass } from 'react-icons/fa6'
 import DevotionChoiceDialog from '../components/DevotionChoiceDialog'
+import LiturgyToday from '../components/LiturgyToday'
 import { getCatalogPrayerOfDay, prayerCatalog, songCatalog } from '../data/contentCatalog'
 import { scriptureCatalog } from '../data/scriptureCatalog'
 import { useContentLibrary, type RecentContent } from '../hooks/useContentLibrary'
@@ -97,6 +98,7 @@ export default function HomePage() {
           </Link>
         )}
       </section>
+      <LiturgyToday />
       <section className="section-tiles">
         {sections.slice(0, 3).map((s) => (
           <Link to={s.to} key={s.to} className="section-tile">

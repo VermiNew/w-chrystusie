@@ -104,3 +104,17 @@ test('kopia zapasowa przenosi ulubione na inne urządzenie', async ({ browser },
   await expect(targetPage.locator('.saved-content-category')).toContainText('Ewangelia według św. Jana, rozdział 3')
   await target.close()
 })
+
+test('strona główna pokazuje dzień liturgiczny', async ({ page }) => {
+  await page.clock.setFixedTime(new Date('2026-04-03T09:00:00'))
+  await page.goto('/')
+  const card = page.locator('.liturgy-today')
+  await expect(card).toContainText('Wielki Piątek Męki Pańskiej')
+  await expect(card).toContainText('kolor szat: czerwony')
+  await expect(card).toContainText('Najbliżej: Niedziela Zmartwychwstania Pańskiego')
+
+  // A solemnity transferred off a privileged day (25 March 2024 was in Holy Week)
+  await page.clock.setFixedTime(new Date('2024-04-08T09:00:00'))
+  await page.reload()
+  await expect(card).toContainText('Uroczystość Zwiastowania Pańskiego')
+})
