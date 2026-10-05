@@ -77,7 +77,7 @@
 
 - [x] `reset()` użyte wewnątrz `useEffect` bez `useCallback` — przy każdym render tworzy nową referencję, może powodować niechciane re-subskrypcje listenera klawiatury
 - [x] Brak możliwości wznowienia modlitwy po opuszczeniu strony — wybrany zestaw i krok nie są persystowane (sessionStorage / URL param)
-- [ ] Brak wizualizacji paciorków (już w TODO ogólnym, potwierdzenie)
+- [x] Wizualizacja paciorków — pasek bieżącej części (krzyżyk, 1 + 3 we wstępie; 1 + 10 w dziesiątku)
 - [x] Podświetlanie tajemnic wg dnia tygodnia działa, ale brak informacji o tym że można odmówić inny zestaw w każdy dzień — brak tooltipa/opisu przy przyciskach
 - [x] `← →` na klawiaturze nie działa gdy focus jest na przycisku nawigacyjnym (event listener na `window`, ale `button` może przechwycić `ArrowKey` przed scrollem)
 - [x] Litania Loretańska jako opcjonalne zakończenie
@@ -87,7 +87,7 @@
 
 - [x] Ten sam bug co różaniec: `reset()` bez `useCallback` w `useEffect` — nowa referencja przy każdym renderze
 - [x] Brak persystencji kroku po opuszczeniu strony
-- [ ] Brak intro-screen dla różańca (koronka ma ładny ekran wprowadzający, różaniec nie — niespójność)
+- [x] Wstęp na ekranie wyboru tajemnic różańca w stylu koronki (bez dodatkowego kliknięcia)
 
 ## Do zrobienia — ogłoszenia
 
@@ -247,7 +247,7 @@
 - [ ] Mobile responsiveness — poprawki layoutu na 375px+
 - [ ] Akcenty kolorystyczne — violet dla hover/active, rubric red dla dekoracji
 - [ ] Kontenery czytania — subtelne obramowanie/cień dla widoków szczegółowych
-- [ ] Różaniec — wizualizacja paciorków
+- [x] Różaniec — wizualizacja paciorków
 - [x] Różaniec — podświetlanie tajemnic wg dnia tygodnia
 - [ ] Pieśni — uzupełnienie treści
 

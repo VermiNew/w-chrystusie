@@ -234,6 +234,102 @@
   transition: width 0.3s ease;
 }
 
+/* Bead strip of the current part: intro (cross, 1 + 3) or a decade (1 + 10) */
+.rosary-beads {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  max-width: 55ch;
+  margin: 0 auto 1.25rem;
+}
+
+.rosary-bead {
+  --bead-size: 0.8rem;
+  position: relative;
+  width: var(--bead-size);
+  height: var(--bead-size);
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  background: transparent;
+  transition: background-color 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.rosary-bead--large {
+  --bead-size: 1.15rem;
+  margin-right: 0.35rem;
+}
+
+/* The crucifix: a small cross drawn with two bars */
+.rosary-bead--cross {
+  --bead-size: 1.15rem;
+  margin-right: 0.35rem;
+  border: none;
+  border-radius: 0;
+}
+
+.rosary-bead--cross::before,
+.rosary-bead--cross::after {
+  content: '';
+  position: absolute;
+  background: var(--color-border);
+  border-radius: 1px;
+  transition: background-color 0.3s;
+}
+
+.rosary-bead--cross::before {
+  left: 50%;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.rosary-bead--cross::after {
+  left: 15%;
+  top: 28%;
+  width: 70%;
+  height: 3px;
+}
+
+.rosary-bead--done {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+}
+
+.rosary-bead--cross.rosary-bead--done {
+  background: transparent;
+}
+
+.rosary-bead--cross.rosary-bead--done::before,
+.rosary-bead--cross.rosary-bead--done::after {
+  background: var(--color-primary);
+}
+
+.rosary-bead--current {
+  transform: scale(1.3);
+  box-shadow: 0 0 0 4px rgba(var(--color-primary-rgb), 0.2);
+}
+
+.rosary-bead--cross.rosary-bead--current {
+  box-shadow: none;
+}
+
+@media (max-width: 360px) {
+  .rosary-beads--decade {
+    gap: 0.3rem;
+  }
+
+  .rosary-beads--decade .rosary-bead {
+    --bead-size: 0.65rem;
+  }
+
+  .rosary-beads--decade .rosary-bead--large {
+    --bead-size: 0.95rem;
+  }
+}
+
 .rosary-step {
   text-align: center;
   max-width: 55ch;

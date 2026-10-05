@@ -4,6 +4,7 @@ import Markdown from 'react-markdown'
 import {
   mysterySets,
   buildRosarySteps,
+  getBeadStrip,
   rosaryPrayerGuide,
   rosaryPromises,
   rosaryPromisesIntroduction,
@@ -86,6 +87,7 @@ export default function RosaryPage() {
   )
 
   const step = steps[currentStep]
+  const beadStrip = selectedSet ? getBeadStrip(steps, currentStep) : null
   const isFirst = currentStep === 0
   const isLast = currentStep === steps.length - 1
 
@@ -195,6 +197,18 @@ export default function RosaryPage() {
     return (
       <div className="page">
         <h1>Różaniec</h1>
+        {/* Same introduction style as the chaplet, so both guided prayers start alike */}
+        <div className="chaplet-intro rosary-welcome">
+          <p className="chaplet-intro-lead">
+            Różaniec to rozważanie życia Jezusa razem z Maryją. Wycisz się na chwilę
+            i powierz Bogu to, co nosisz w sercu — aplikacja poprowadzi Cię przez
+            każdą modlitwę, paciorek po paciorku.
+          </p>
+          <blockquote className="chaplet-intro-quote">
+            „Bądź pozdrowiona łaski pełna, Pan z tobą, błogosławionaś ty między niewiastami.”
+            <cite>— Łk 1,28 (przekład Jakuba Wujka)</cite>
+          </blockquote>
+        </div>
         <p className="rosary-intro">Wybierz tajemnice, które chcesz odmówić:</p>
         <p className="rosary-choice-note" id="rosary-choice-note">
           <FaCircleInfo aria-hidden="true" />
@@ -325,6 +339,23 @@ export default function RosaryPage() {
           />
         </div>
       </div>
+
+      {beadStrip && (
+        // Decorative: the step counter in the heading already tells screen readers where we are
+        <div className={`rosary-beads${beadStrip.beads.length > 6 ? ' rosary-beads--decade' : ''}`} aria-hidden="true">
+          {beadStrip.beads.map((bead, index) => (
+            <span
+              key={index}
+              className={[
+                'rosary-bead',
+                `rosary-bead--${bead}`,
+                index < beadStrip.done ? 'rosary-bead--done' : '',
+                index === beadStrip.current ? 'rosary-bead--current' : '',
+              ].filter(Boolean).join(' ')}
+            />
+          ))}
+        </div>
+      )}
 
       <div className="rosary-step" key={currentStep} {...swipeHandlers}>
         {step.mystery && (

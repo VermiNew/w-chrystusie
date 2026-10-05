@@ -139,33 +139,40 @@ export const mysterySets: MysterySet[] = [
   },
 ]
 
+export type BeadKind = 'cross' | 'large' | 'small'
+
 export interface RosaryStep {
   label: string
   prayer: string
   counter?: string
   context?: string
   mystery?: string
+  // Part of the rosary shown as a bead strip ("intro" or "decade-N"), and the bead this prayer is said on
+  beadGroup?: string
+  bead?: BeadKind
 }
 
 export function buildRosarySteps(mysterySet: MysterySet): RosaryStep[] {
   const steps: RosaryStep[] = []
 
-  steps.push({ label: 'Znak Krzyża', prayer: prayers.signOfCross })
-  steps.push({ label: 'Wierzę w Boga', prayer: prayers.creed })
-  steps.push({ label: 'Ojcze Nasz', prayer: prayers.ourFather })
+  const intro = 'intro'
+  steps.push({ label: 'Znak Krzyża', prayer: prayers.signOfCross, beadGroup: intro })
+  steps.push({ label: 'Wierzę w Boga', prayer: prayers.creed, beadGroup: intro, bead: 'cross' })
+  steps.push({ label: 'Ojcze Nasz', prayer: prayers.ourFather, beadGroup: intro, bead: 'large' })
 
   for (let i = 1; i <= 3; i++) {
-    steps.push({ label: 'Zdrowaś Mario', prayer: prayers.hailMary, counter: `${i}/3` })
+    steps.push({ label: 'Zdrowaś Mario', prayer: prayers.hailMary, counter: `${i}/3`, beadGroup: intro, bead: 'small' })
   }
 
-  steps.push({ label: 'Chwała Ojcu', prayer: prayers.gloryBe })
+  steps.push({ label: 'Chwała Ojcu', prayer: prayers.gloryBe, beadGroup: intro })
 
   for (let decade = 0; decade < 5; decade++) {
     const mystery = mysterySet.mysteries[decade]
     const context = `Dziesiątek ${decade + 1} z 5`
+    const beadGroup = `decade-${decade + 1}`
 
-    steps.push({ label: `Tajemnica ${decade + 1}`, prayer: mystery, mystery })
-    steps.push({ label: 'Ojcze Nasz', prayer: prayers.ourFather, context, mystery })
+    steps.push({ label: `Tajemnica ${decade + 1}`, prayer: mystery, mystery, beadGroup })
+    steps.push({ label: 'Ojcze Nasz', prayer: prayers.ourFather, context, mystery, beadGroup, bead: 'large' })
 
     for (let i = 1; i <= 10; i++) {
       steps.push({
@@ -174,15 +181,42 @@ export function buildRosarySteps(mysterySet: MysterySet): RosaryStep[] {
         counter: `${i}/10`,
         context,
         mystery,
+        beadGroup,
+        bead: 'small',
       })
     }
 
-    steps.push({ label: 'Chwała Ojcu', prayer: prayers.gloryBe, context, mystery })
-    steps.push({ label: 'Modlitwa Fatimska', prayer: prayers.fatima, context, mystery })
+    steps.push({ label: 'Chwała Ojcu', prayer: prayers.gloryBe, context, mystery, beadGroup })
+    steps.push({ label: 'Modlitwa Fatimska', prayer: prayers.fatima, context, mystery, beadGroup })
   }
 
   steps.push({ label: 'Pod Twoją Obronę', prayer: prayers.subTuumPraesidium })
   steps.push({ label: 'Znak Krzyża', prayer: prayers.signOfCross })
 
   return steps
+}
+
+export interface BeadStrip {
+  beads: BeadKind[]
+  // Beads already prayed, including the current one
+  done: number
+  // Index of the bead being prayed now, or null between beads (mystery, Glory Be, Fatima prayer)
+  current: number | null
+}
+
+/** Beads of the part of the rosary the given step belongs to; null for the closing prayers. */
+export function getBeadStrip(steps: readonly RosaryStep[], stepIndex: number): BeadStrip | null {
+  const group = steps[stepIndex]?.beadGroup
+  if (!group) return null
+
+  const beads: BeadKind[] = []
+  let done = 0
+  let current: number | null = null
+  steps.forEach((step, index) => {
+    if (step.beadGroup !== group || !step.bead) return
+    if (index === stepIndex) current = beads.length
+    if (index <= stepIndex) done++
+    beads.push(step.bead)
+  })
+  return { beads, done, current }
 }
