@@ -4,6 +4,7 @@ import { FaXmark, FaGithub, FaCross, FaMusic, FaGlobe, FaBullhorn, FaLink } from
 import { prayerCatalog, songCatalog } from '../data/contentCatalog'
 import { announcements } from '../data/announcements'
 import { useFocusTrap } from '../hooks/useFocusTrap'
+import DataBackup from './DataBackup'
 import logoUrl from '../assets/logo-about.png'
 
 interface Props {
@@ -67,6 +68,9 @@ export default function AboutModal({ open, onClose }: Props) {
     const dialog = dialogRef.current
     if (!dialog) return
     const handle = (e: Event) => {
+      // A file input inside the dialog fires its own bubbling "cancel"
+      // (e.g. when the file picker is dismissed); only Escape on the dialog closes it.
+      if (e.target !== dialog) return
       e.preventDefault()
       handleClose()
     }
@@ -133,6 +137,8 @@ export default function AboutModal({ open, onClose }: Props) {
         <Link className="about-sources-link" to="/zrodla" onClick={handleClose}>
           <FaLink aria-hidden="true" /> Źródła i materiały
         </Link>
+
+        <DataBackup />
 
         <div className="about-footer">
           <a

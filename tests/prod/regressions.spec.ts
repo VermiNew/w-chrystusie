@@ -1,3 +1,4 @@
+import path from 'node:path'
 import { expect, test } from '@playwright/test'
 
 test('rozdziały Biblii mają własny tytuł, a błędne adresy dają 404', async ({ page }) => {
@@ -63,4 +64,43 @@ test('aplikacja działa przy zablokowanej pamięci przeglądarki', async ({ brow
   }
   expect(errors).toEqual([])
   await context.close()
+})
+
+test('kopia zapasowa przenosi ulubione na inne urządzenie', async ({ browser }, testInfo) => {
+  const source = await browser.newContext({ serviceWorkers: 'block' })
+  const sourcePage = await source.newPage()
+  await sourcePage.goto('/pismo-swiete/jana/3')
+  await sourcePage.getByRole('button', { name: 'Do ulubionych' }).click()
+  await sourcePage.locator('.nav-toggle').click()
+  await sourcePage.locator('.nav-about-btn').click()
+  await expect(sourcePage.locator('dialog.about-dialog')).toBeVisible()
+  const [download] = await Promise.all([
+    sourcePage.waitForEvent('download'),
+    sourcePage.getByRole('button', { name: 'Zapisz kopię' }).click(),
+  ])
+  // ASCII-only path: Chromium ignores setInputFiles for paths with Polish letters (from the test title)
+  const backupPath = path.join(testInfo.project.outputDir, `backup-${testInfo.workerIndex}.json`)
+  await download.saveAs(backupPath)
+  await source.close()
+
+  const target = await browser.newContext({ serviceWorkers: 'block' })
+  const targetPage = await target.newPage()
+  await targetPage.goto('/')
+  await targetPage.locator('.nav-toggle').click()
+  await targetPage.locator('.nav-about-btn').click()
+  await expect(targetPage.locator('dialog.about-dialog')).toBeVisible()
+  // Dismissing the file picker fires a bubbling "cancel"; it must not close the dialog
+  await targetPage.locator('.about-data input[type=file]').dispatchEvent('cancel', { bubbles: true })
+  await expect(targetPage.locator('dialog.about-dialog')).toBeVisible()
+  await targetPage.locator('.about-data input[type=file]').setInputFiles(backupPath)
+  // The file is read asynchronously before the confirmation appears
+  await expect(targetPage.locator('.about-data-confirm')).toBeVisible()
+  // Restoring reloads the page so every store picks up the new data
+  await Promise.all([
+    targetPage.waitForEvent('framenavigated'),
+    targetPage.getByRole('button', { name: 'Wczytaj', exact: true }).click(),
+  ])
+  await targetPage.goto('/pismo-swiete')
+  await expect(targetPage.locator('.saved-content-category')).toContainText('Ewangelia według św. Jana, rozdział 3')
+  await target.close()
 })
