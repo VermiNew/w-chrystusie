@@ -2,12 +2,19 @@ import { execFileSync } from 'node:child_process'
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { loadEnv } from 'vite'
-// Node strips the (erasable) TypeScript syntax, so the app's own catalog is the single source of truth.
-import { scriptureCatalog } from '../src/data/scriptureCatalog.ts'
-import { pluralPl } from '../src/data/plural.ts'
+import { loadEnv, runnerImport } from 'vite'
 
+// The app's own TypeScript catalog stays the single source of truth. Vite
+// transpiles it here, so this works on any Node version Vite supports
+// (hosts such as Cloudflare Pages may use a Node without built-in .ts support).
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+const [{ module: catalogModule }, { module: pluralModule }] = await Promise.all([
+  runnerImport(path.join(projectRoot, 'src', 'data', 'scriptureCatalog.ts')),
+  runnerImport(path.join(projectRoot, 'src', 'data', 'plural.ts')),
+])
+const { scriptureCatalog } = catalogModule
+const { pluralPl } = pluralModule
+
 const distDirectory = path.join(projectRoot, 'dist')
 const siteName = 'W Chrystusie'
 const defaultDescription = 'Polska katolicka aplikacja webowa — modlitwy, pieśni kościelne i interaktywny różaniec w jednym miejscu.'

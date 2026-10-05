@@ -16,7 +16,6 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          # >= 22.18 is required: the SEO generator imports TypeScript files directly
           node-version: 22.x
           cache: npm
 

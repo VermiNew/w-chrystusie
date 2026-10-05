@@ -17,7 +17,7 @@ Dodatkowo: ulubione i ostatnio otwierane, przywracanie pozycji czytania, tryb sk
 
 ## Uruchomienie
 
-Wymagany Node.js 22.18 lub nowszy (generator stron SEO importuje bezpośrednio pliki `.ts`).
+Wymagany Node.js 20.19+ lub 22.12+ (jak dla Vite 7).
 
 ```bash
 npm install
