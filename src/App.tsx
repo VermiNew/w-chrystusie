@@ -1,8 +1,9 @@
-import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom'
+import { BrowserRouter, Navigate, Routes, Route, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { useEffect, lazy, Suspense } from 'react'
 import Header from './components/Header'
 import ReminderToast from './components/ReminderToast'
 import SeoMetadata from './components/SeoMetadata'
+import ErrorBoundary from './components/ErrorBoundary'
 import './App.css'
 
 // Route-level code splitting — pages load on demand
@@ -19,6 +20,12 @@ const MayDevotionPage = lazy(() => import('./pages/MayDevotionPage'))
 const SearchPage = lazy(() => import('./pages/SearchPage'))
 const SourcesPage = lazy(() => import('./pages/SourcesPage'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
+
+// The catalog slug of the Psalms is "psalmow", but they live under /pismo-swiete/psalmy.
+function PsalmsSlugRedirect() {
+  const { id } = useParams()
+  return <Navigate to={id ? `/pismo-swiete/psalmy/${id}` : '/pismo-swiete/psalmy'} replace />
+}
 
 function AppRoutes() {
   const location = useLocation()
@@ -51,30 +58,34 @@ function AppRoutes() {
     <>
       <SeoMetadata />
       <main className="main" key={location.pathname}>
-        <Suspense fallback={<div className="page-loading" aria-hidden="true" />}>
-          <Routes location={location}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/modlitwy" element={<PrayersPage />} />
-            <Route path="/modlitwy/:id" element={<PrayersPage />} />
-            <Route path="/pismo-swiete" element={<ScripturePage />} />
-            <Route path="/pismo-swiete/psalmy" element={<PsalmsPage />} />
-            <Route path="/pismo-swiete/psalmy/:id" element={<PsalmsPage />} />
-            <Route path="/pismo-swiete/:book" element={<GenesisPage />} />
-            <Route path="/pismo-swiete/:book/:chapter" element={<GenesisPage />} />
-            <Route path="/psalmy" element={<PsalmsPage />} />
-            <Route path="/psalmy/:id" element={<PsalmsPage />} />
-            <Route path="/spiewnik" element={<SongbookPage />} />
-            <Route path="/spiewnik/:id" element={<SongbookPage />} />
-            <Route path="/rozaniec" element={<RosaryPage />} />
-            <Route path="/koronka" element={<ChapletPage />} />
-            <Route path="/ogloszenia" element={<AnnouncementsPage />} />
-            <Route path="/ogloszenia/:id" element={<AnnouncementsPage />} />
-            <Route path="/nabozenstwo-majowe" element={<MayDevotionPage />} />
-            <Route path="/szukaj" element={<SearchPage />} />
-            <Route path="/zrodla" element={<SourcesPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-        </Suspense>
+        <ErrorBoundary>
+          <Suspense fallback={<div className="page-loading" aria-hidden="true" />}>
+            <Routes location={location}>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/modlitwy" element={<PrayersPage />} />
+              <Route path="/modlitwy/:id" element={<PrayersPage />} />
+              <Route path="/pismo-swiete" element={<ScripturePage />} />
+              <Route path="/pismo-swiete/psalmy" element={<PsalmsPage />} />
+              <Route path="/pismo-swiete/psalmy/:id" element={<PsalmsPage />} />
+              <Route path="/pismo-swiete/psalmow" element={<PsalmsSlugRedirect />} />
+              <Route path="/pismo-swiete/psalmow/:id" element={<PsalmsSlugRedirect />} />
+              <Route path="/pismo-swiete/:book" element={<GenesisPage />} />
+              <Route path="/pismo-swiete/:book/:chapter" element={<GenesisPage />} />
+              <Route path="/psalmy" element={<PsalmsPage />} />
+              <Route path="/psalmy/:id" element={<PsalmsPage />} />
+              <Route path="/spiewnik" element={<SongbookPage />} />
+              <Route path="/spiewnik/:id" element={<SongbookPage />} />
+              <Route path="/rozaniec" element={<RosaryPage />} />
+              <Route path="/koronka" element={<ChapletPage />} />
+              <Route path="/ogloszenia" element={<AnnouncementsPage />} />
+              <Route path="/ogloszenia/:id" element={<AnnouncementsPage />} />
+              <Route path="/nabozenstwo-majowe" element={<MayDevotionPage />} />
+              <Route path="/szukaj" element={<SearchPage />} />
+              <Route path="/zrodla" element={<SourcesPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </Suspense>
+        </ErrorBoundary>
       </main>
     </>
   )

@@ -7,6 +7,10 @@ import ReadingModeToggle from '../components/ReadingModeToggle'
 import { useContentLibrary } from '../hooks/useContentLibrary'
 import ConfirmDialog from '../components/ConfirmDialog'
 import SourceAttributionLink from '../components/SourceAttributionLink'
+import { normalizeSearchText } from '../data/searchText'
+import { pluralPl } from '../data/plural'
+import NotFoundPage from './NotFoundPage'
+import { readStorage, removeStorage, writeStorage } from '../data/storage'
 
 const SCROLL_KEY = 'prayers-scroll'
 const CATEGORY_KEY = 'prayers-category'
@@ -35,6 +39,16 @@ const fallbackCategory = 'Bez kategorii'
 
 const byTitle = (a: Prayer, b: Prayer) => a.title.localeCompare(b.title, 'pl')
 
+// Normalized once, on the first filter use, instead of on every keystroke.
+let searchableTexts: Map<string, string> | null = null
+const getSearchableText = (prayer: Prayer) => {
+  searchableTexts ??= new Map(prayers.map((entry) => [
+    entry.id,
+    normalizeSearchText(`${entry.title} ${entry.category ?? ''} ${entry.body}`),
+  ]))
+  return searchableTexts.get(prayer.id) ?? ''
+}
+
 const decodeRouteId = (routeId: string) => {
   try {
     return decodeURIComponent(routeId)
@@ -60,7 +74,7 @@ export default function PrayersPage() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [favoriteToRemove, setFavoriteToRemove] = useState<Prayer | null>(null)
   const [clearHistoryOpen, setClearHistoryOpen] = useState(false)
-  const [returnCategory] = useState(() => sessionStorage.getItem(CATEGORY_KEY))
+  const [returnCategory] = useState(() => readStorage(CATEGORY_KEY, 'session'))
   const selectedId = getSelectedId(id, location.pathname)
   const selected = selectedId ? prayers.find((p) => p.id === selectedId) ?? null : null
   const { favoriteIds, recentIds, isFavorite, toggleFavorite, removeFavorite, clearRecent } = useContentLibrary('prayer', selected?.id)
@@ -94,7 +108,7 @@ export default function PrayersPage() {
   useEffect(() => {
     if (selected) return
 
-    const savedScroll = sessionStorage.getItem(SCROLL_KEY)
+    const savedScroll = readStorage(SCROLL_KEY, 'session')
     if (!savedScroll && !returnCategory) return
 
     const frame = requestAnimationFrame(() => {
@@ -104,24 +118,24 @@ export default function PrayersPage() {
       } else if (returnCategory) {
         document.getElementById(getCategoryAnchorId(returnCategory))?.scrollIntoView({ block: 'start' })
       }
-      sessionStorage.removeItem(SCROLL_KEY)
-      sessionStorage.removeItem(CATEGORY_KEY)
+      removeStorage(SCROLL_KEY, 'session')
+      removeStorage(CATEGORY_KEY, 'session')
     })
 
     return () => cancelAnimationFrame(frame)
   }, [selected, returnCategory])
 
   const saveListPosition = (category: string) => {
-    sessionStorage.setItem(SCROLL_KEY, String(window.scrollY))
-    sessionStorage.setItem(CATEGORY_KEY, category)
+    writeStorage(SCROLL_KEY, String(window.scrollY), 'session')
+    writeStorage(CATEGORY_KEY, category, 'session')
   }
 
   const prepareListReturn = () => {
-    sessionStorage.setItem(CATEGORY_KEY, detailCategory)
+    writeStorage(CATEGORY_KEY, detailCategory, 'session')
   }
 
   const grouped = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase()
+    const normalizedQuery = normalizeSearchText(query.trim())
     const map = new Map<string, Prayer[]>()
     for (const prayer of prayers) {
       const category = prayer.category && categoryOrder.includes(prayer.category)
@@ -129,8 +143,7 @@ export default function PrayersPage() {
         : fallbackCategory
       if (selectedCategory !== 'all' && category !== selectedCategory) continue
 
-      const searchableText = `${prayer.title} ${prayer.category ?? ''} ${prayer.body}`.toLowerCase()
-      if (normalizedQuery && !searchableText.includes(normalizedQuery)) continue
+      if (normalizedQuery && !getSearchableText(prayer).includes(normalizedQuery)) continue
 
       if (!map.has(category)) map.set(category, [])
       map.get(category)!.push(prayer)
@@ -142,6 +155,9 @@ export default function PrayersPage() {
 
   const resultCount = grouped.reduce((sum, group) => sum + group.items.length, 0)
   const hasActiveFilters = query.trim().length > 0 || selectedCategory !== 'all'
+
+  // An unknown id (e.g. an old link after a file rename) is a real 404, not the list.
+  if (selectedId && !selected) return <NotFoundPage />
 
   if (selected) {
     return (
@@ -296,7 +312,7 @@ export default function PrayersPage() {
       </div>
       {hasActiveFilters && (
         <p className="list-filter-count">
-          Wyświetlono: {resultCount} {resultCount === 1 ? 'pozycję' : 'pozycji'}
+          Wyświetlono: {resultCount} {pluralPl(resultCount, 'pozycję', 'pozycje', 'pozycji')}
         </p>
       )}
       {resultCount === 0 && <p className="list-filter-empty">Brak modlitw pasujących do wybranych filtrów.</p>}

@@ -2,8 +2,11 @@ import { useEffect, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
 import { announcements } from '../data/announcements'
 import { prayerCatalog, songCatalog } from '../data/contentCatalog'
+import { scriptureBooksBySlug, scriptureCatalog } from '../data/scriptureCatalog'
+import { pluralPl } from '../data/plural'
 
 const SITE_NAME = 'W Chrystusie'
+const AVAILABLE_BOOK_COUNT = scriptureCatalog.filter((book) => book.isAvailable).length
 const DEFAULT_DESCRIPTION = 'Polska katolicka aplikacja webowa — modlitwy, pieśni kościelne i interaktywny różaniec w jednym miejscu.'
 const DEFAULT_IMAGE_PATH = '/og-image.jpg'
 
@@ -30,9 +33,8 @@ const staticRoutes: Record<string, RouteMetadata> = {
   },
   '/pismo-swiete': {
     title: 'Pismo Święte | W Chrystusie',
-    description: 'Sekcja Pisma Świętego w aplikacji W Chrystusie.',
+    description: `Pismo Święte w publicznodomenowym przekładzie ks. Jakuba Wujka — ${AVAILABLE_BOOK_COUNT} ksiąg Starego i Nowego Testamentu, ze źródłem każdego rozdziału.`,
     canonicalPath: '/pismo-swiete',
-    noIndex: true,
   },
   '/pismo-swiete/psalmy': {
     title: 'Psalmy — pełne teksty | W Chrystusie',
@@ -157,6 +159,33 @@ function findDetailMetadata(pathname: string): RouteMetadata | null {
       type: 'article',
       section: 'Psalmy',
       noIndex: psalmRoute.noIndex,
+    }
+  }
+
+  // Other Bible books: /pismo-swiete/:book and /pismo-swiete/:book/:chapter
+  if (pathname.startsWith('/pismo-swiete/')) {
+    const [slug, chapterSegment, ...rest] = pathname.slice('/pismo-swiete/'.length).split('/')
+    const book = Object.hasOwn(scriptureBooksBySlug, slug) ? scriptureBooksBySlug[slug] : undefined
+    if (!book?.isAvailable || book.id === 'psa' || rest.length > 0) return null
+
+    if (chapterSegment === undefined) {
+      return {
+        title: `${book.name} — przekład Jakuba Wujka | ${SITE_NAME}`,
+        description: `${book.name} w publicznodomenowym przekładzie ks. Jakuba Wujka: ${book.chapterCount} ${pluralPl(book.chapterCount, 'rozdział', 'rozdziały', 'rozdziałów')} z pełnym tekstem i źródłem.`,
+        canonicalPath: `/pismo-swiete/${book.slug}`,
+        section: 'Pismo Święte',
+      }
+    }
+
+    const chapterNumber = Number(chapterSegment)
+    if (!/^[1-9]\d*$/.test(chapterSegment) || chapterNumber > book.chapterCount) return null
+
+    return {
+      title: `${book.name}, rozdział ${chapterNumber} | ${SITE_NAME}`,
+      description: `Pełny tekst: ${book.name}, rozdział ${chapterNumber}, w publicznodomenowym przekładzie ks. Jakuba Wujka, ze źródłem cyfrowym i dokładnym URL-em.`,
+      canonicalPath: `/pismo-swiete/${book.slug}/${chapterNumber}`,
+      type: 'article',
+      section: book.name,
     }
   }
 

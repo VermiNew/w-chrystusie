@@ -1,10 +1,11 @@
 import { useSyncExternalStore } from 'react'
+import { readStorage, writeStorage } from './storage'
 
 const STORAGE_KEY = 'theme'
 type Theme = 'light' | 'dark'
 
 function getStoredTheme(): Theme {
-  const stored = localStorage.getItem(STORAGE_KEY)
+  const stored = readStorage(STORAGE_KEY)
   if (stored === 'dark' || stored === 'light') return stored
   // Respect OS preference
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
@@ -23,7 +24,7 @@ applyTheme(snapshot)
 
 // React to OS-level theme changes when the user hasn't set a manual preference
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-  if (localStorage.getItem(STORAGE_KEY)) return
+  if (readStorage(STORAGE_KEY)) return
   snapshot = e.matches ? 'dark' : 'light'
   applyTheme(snapshot)
   listeners.forEach((l) => l())
@@ -57,7 +58,7 @@ function applyThemeWithTransition(theme: Theme) {
 
 export function toggleTheme() {
   snapshot = snapshot === 'light' ? 'dark' : 'light'
-  localStorage.setItem(STORAGE_KEY, snapshot)
+  writeStorage(STORAGE_KEY, snapshot)
   applyThemeWithTransition(snapshot)
   notify()
 }

@@ -3,6 +3,22 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 
+// After a deploy, an open tab may request a route chunk that no longer exists.
+// Reload once to pick up the new version; the time guard prevents a reload loop
+// (e.g. offline before precaching finished) and lets ErrorBoundary explain instead.
+const CHUNK_RELOAD_KEY = 'chunk-reload-at'
+window.addEventListener('vite:preloadError', (event) => {
+  try {
+    const lastReload = Number(sessionStorage.getItem(CHUNK_RELOAD_KEY) ?? 0)
+    if (Date.now() - lastReload < 10_000) return
+    sessionStorage.setItem(CHUNK_RELOAD_KEY, String(Date.now()))
+  } catch {
+    return
+  }
+  event.preventDefault()
+  window.location.reload()
+})
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />

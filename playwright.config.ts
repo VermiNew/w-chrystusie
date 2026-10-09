@@ -2,6 +2,8 @@ import { defineConfig, devices } from '@playwright/test'
 
 export default defineConfig({
   testDir: './tests',
+  // tests/prod needs a production build — see playwright.prod.config.ts
+  testIgnore: 'prod/**',
   outputDir: '.work/playwright-results',
   reporter: [['html', { outputFolder: '.work/playwright-report', open: 'never' }], ['list']],
   use: {

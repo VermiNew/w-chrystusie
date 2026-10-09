@@ -22,7 +22,7 @@ function PsalmSource({ psalm }: { psalm: Psalm }) {
         <p>
           <strong>{psalm.translation}</strong>
           <br />
-          Domena publiczna · źródło cyfrowe: {psalm.sourceName}
+          Domena publiczna (wydanie); CC BY-SA 4.0 (transkrypcja Wikiźródeł) · źródło cyfrowe: {psalm.sourceName}
         </p>
         <a href={psalm.sourceUrl} target="_blank" rel="noopener noreferrer">
           <span>URL źródła: {psalm.sourceUrl}</span>

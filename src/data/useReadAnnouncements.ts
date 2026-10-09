@@ -4,7 +4,8 @@ const STORAGE_KEY = 'read-announcements'
 
 function getReadIds(): string[] {
   try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
+    const value: unknown = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
+    return Array.isArray(value) ? value.filter((item): item is string => typeof item === 'string') : []
   } catch {
     return []
   }
@@ -23,25 +24,23 @@ function getSnapshot() {
   return snapshot
 }
 
-function notify() {
-  snapshot = getReadIds()
+// Keeps the in-memory state even when storage is unavailable (private mode, full quota).
+function saveReadIds(ids: string[]) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(ids))
+  } catch {
+    // Read state then lasts only for this session.
+  }
+  snapshot = ids
   listeners.forEach((l) => l())
 }
 
 export function markAsRead(id: string) {
-  const ids = getReadIds()
-  if (!ids.includes(id)) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify([...ids, id]))
-    notify()
-  }
+  if (!snapshot.includes(id)) saveReadIds([...snapshot, id])
 }
 
 export function markAsUnread(id: string) {
-  const ids = getReadIds()
-  if (ids.includes(id)) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(ids.filter((i) => i !== id)))
-    notify()
-  }
+  if (snapshot.includes(id)) saveReadIds(snapshot.filter((i) => i !== id))
 }
 
 export function useReadAnnouncements() {

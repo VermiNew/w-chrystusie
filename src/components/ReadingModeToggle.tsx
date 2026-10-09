@@ -4,12 +4,23 @@ import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
 import { useReadingPosition } from '../hooks/useReadingPosition'
 import { useSpeechSynthesis } from '../hooks/useSpeechSynthesis'
 import ContentFontSizeControl from './ContentFontSizeControl'
+import { isPageShortcutBlocked } from '../data/keyboard'
 
 const AUTO_SCROLL_STEPS = [
   { intervalMs: 4200, distance: 120 },
   { intervalMs: 3200, distance: 160 },
   { intervalMs: 2400, distance: 210 },
 ]
+
+// Bible chapters render verse numbers as <sup>; reading them aloud ("1 Na początku… 2 …") breaks the flow.
+function getReadableText(element: HTMLElement): string {
+  if (!element.querySelector('sup')) return element.innerText.trim()
+  return Array.from(element.children, (child) => {
+    const copy = child.cloneNode(true) as HTMLElement
+    copy.querySelectorAll('sup').forEach((number) => number.remove())
+    return copy.textContent?.trim() ?? ''
+  }).filter(Boolean).join('\n')
+}
 
 interface Props {
   contentKey: string
@@ -51,6 +62,8 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
     document.documentElement.dataset.readingMode = 'true'
 
     const handleKeyDown = (event: KeyboardEvent) => {
+      if (isPageShortcutBlocked(event)) return
+
       if (event.key === 'Escape') {
         setAutoScrollActive(false)
         setIsActive(false)
@@ -182,7 +195,7 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
     const content = controlsRef.current
       ?.closest('.content-detail-page')
       ?.querySelector<HTMLElement>('.prayer-text, .song-text, .psalm-verses')
-    speech.start(content?.innerText.trim() ?? '')
+    speech.start(content ? getReadableText(content) : '')
   }
 
   return (

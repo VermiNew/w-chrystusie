@@ -1,0 +1,516 @@
+/* Rosary */
+
+.rosary-intro {
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  animation: content-fade-in 0.4s ease 0.1s both;
+}
+
+.rosary-choice-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin: 0 0 1.25rem;
+  padding: 0.75rem 0.9rem;
+  color: var(--color-text-muted);
+  background: rgba(var(--color-primary-rgb), 0.06);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.14);
+  border-radius: 9px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  animation: content-fade-in 0.45s ease 0.16s both;
+}
+
+.rosary-choice-note svg {
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.2rem;
+  color: var(--color-primary);
+}
+
+.rosary-sets {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rosary-sets li:nth-child(1) { animation-delay: 0.24s; }
+.rosary-sets li:nth-child(2) { animation-delay: 0.3s; }
+.rosary-sets li:nth-child(3) { animation-delay: 0.36s; }
+.rosary-sets li:nth-child(4) { animation-delay: 0.42s; }
+
+.rosary-set-button {
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.25rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-text);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.rosary-set-button:hover {
+  background-color: var(--color-hover-bg);
+  border-color: var(--color-hover-border);
+}
+
+.rosary-set-button--today {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.rosary-set-days {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rosary-set-today-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-white);
+  background: var(--color-primary);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.rosary-reference-section {
+  margin-top: 2.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--color-border);
+  animation: content-fade-in 0.45s ease 0.48s both;
+}
+
+.rosary-reference-section > h2 {
+  margin: 0 0 1rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 3vw, 1.55rem);
+}
+
+.rosary-reference {
+  margin-bottom: 0.65rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.rosary-reference summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 72px;
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.rosary-reference summary::-webkit-details-marker {
+  display: none;
+}
+
+.rosary-reference summary > span {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.rosary-reference summary strong {
+  color: var(--color-primary);
+  line-height: 1.4;
+}
+
+.rosary-reference summary small {
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.rosary-reference summary > svg {
+  flex: 0 0 auto;
+  color: var(--color-text-muted);
+  transition: transform 0.2s;
+}
+
+.rosary-reference[open] summary > svg {
+  transform: rotate(180deg);
+}
+
+.rosary-reference summary:focus-visible {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
+  outline-offset: -3px;
+}
+
+@media (hover: hover) {
+  .rosary-reference summary:hover {
+    background: var(--color-hover-bg);
+  }
+}
+
+.rosary-reference-content {
+  padding: 0.25rem 1rem 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.rosary-prayer-guide > div {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rosary-prayer-guide > div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.rosary-prayer-guide dt {
+  margin-bottom: 0.45rem;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.rosary-prayer-guide dd,
+.rosary-promises {
+  font-family: var(--font-reading);
+  line-height: 1.8;
+}
+
+.rosary-promises > p {
+  margin-top: 1.25rem;
+}
+
+.rosary-promises ol {
+  display: grid;
+  gap: 0.9rem;
+  margin: 1.25rem 0 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.rosary-promises li {
+  padding-left: 0.25rem;
+}
+
+.rosary-promises .source-link {
+  font-family: var(--font-body);
+}
+
+.rosary-progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.rosary-progress-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--color-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.rosary-progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Bead strip of the current part: intro (cross, 1 + 3) or a decade (1 + 10) */
+.rosary-beads {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  max-width: 55ch;
+  margin: 0 auto 1.25rem;
+}
+
+.rosary-bead {
+  --bead-size: 0.8rem;
+  position: relative;
+  width: var(--bead-size);
+  height: var(--bead-size);
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  background: transparent;
+  transition: background-color 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.rosary-bead--large {
+  --bead-size: 1.15rem;
+  margin-right: 0.35rem;
+}
+
+/* The crucifix: a small cross drawn with two bars */
+.rosary-bead--cross {
+  --bead-size: 1.15rem;
+  margin-right: 0.35rem;
+  border: none;
+  border-radius: 0;
+}
+
+.rosary-bead--cross::before,
+.rosary-bead--cross::after {
+  content: '';
+  position: absolute;
+  background: var(--color-border);
+  border-radius: 1px;
+  transition: background-color 0.3s;
+}
+
+.rosary-bead--cross::before {
+  left: 50%;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.rosary-bead--cross::after {
+  left: 15%;
+  top: 28%;
+  width: 70%;
+  height: 3px;
+}
+
+.rosary-bead--done {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+}
+
+.rosary-bead--cross.rosary-bead--done {
+  background: transparent;
+}
+
+.rosary-bead--cross.rosary-bead--done::before,
+.rosary-bead--cross.rosary-bead--done::after {
+  background: var(--color-primary);
+}
+
+.rosary-bead--current {
+  transform: scale(1.3);
+  box-shadow: 0 0 0 4px rgba(var(--color-primary-rgb), 0.2);
+}
+
+.rosary-bead--cross.rosary-bead--current {
+  box-shadow: none;
+}
+
+@media (max-width: 360px) {
+  .rosary-beads--decade {
+    gap: 0.3rem;
+  }
+
+  .rosary-beads--decade .rosary-bead {
+    --bead-size: 0.65rem;
+  }
+
+  .rosary-beads--decade .rosary-bead--large {
+    --bead-size: 0.95rem;
+  }
+}
+
+.rosary-step {
+  text-align: center;
+  max-width: 55ch;
+  margin: 0 auto 2rem;
+  touch-action: pan-y;
+  animation: content-fade-in 0.3s ease both;
+}
+
+.rosary-mystery {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin: 0 0 0.5rem;
+}
+
+.rosary-label {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem;
+  color: var(--color-primary);
+}
+
+.rosary-counter {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}
+
+.rosary-prayer {
+  font-family: var(--font-reading);
+  font-size: calc(1.1rem * var(--content-reading-scale, 1));
+  line-height: 1.8;
+  margin: 0;
+}
+
+.rosary-optional-ending {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 55ch;
+  min-height: 52px;
+  margin: 0 auto 1.25rem;
+  padding: 0.75rem 0.9rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.rosary-optional-ending input {
+  position: relative;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 22px;
+  appearance: none;
+  background: var(--color-border-strong);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.rosary-optional-ending input::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: var(--color-white);
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(var(--color-shadow-rgb), 0.25);
+  transition: transform 0.2s;
+}
+
+.rosary-optional-ending input:checked {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.rosary-optional-ending input:checked::before {
+  transform: translateX(16px);
+}
+
+.rosary-optional-ending:has(input:checked) {
+  background: color-mix(in srgb, var(--color-primary) 8%, var(--color-surface));
+  border-color: color-mix(in srgb, var(--color-primary) 55%, var(--color-border));
+}
+
+@media (hover: hover) {
+  .rosary-optional-ending:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 3px 12px rgba(var(--color-shadow-rgb), 0.08);
+  }
+}
+
+.rosary-optional-ending span {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.rosary-optional-ending strong {
+  color: var(--color-primary);
+  font-size: 0.92rem;
+}
+
+.rosary-optional-ending small,
+.optional-rosary-ending-label {
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+}
+
+.optional-rosary-ending-label {
+  width: fit-content;
+  margin: 1.5rem 0 0.45rem;
+  padding: 0.2rem 0.45rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  background: var(--color-hover-bg);
+  border-radius: 4px;
+}
+
+.optional-rosary-ending-complete {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  margin-top: 2rem;
+  padding: 0.7rem 1rem;
+  color: var(--color-white);
+  font: inherit;
+  font-weight: 600;
+  background: var(--color-header-bg);
+  border: 1px solid var(--color-header-bg);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+@media (hover: hover) {
+  .optional-rosary-ending-complete:hover {
+    box-shadow: 0 5px 18px rgba(var(--color-header-bg-rgb), 0.24);
+    transform: translateY(-1px);
+  }
+}
+
+.optional-rosary-ending-complete:active {
+  transform: scale(0.98);
+}
+
+.optional-rosary-ending-complete:focus-visible,
+.rosary-optional-ending:focus-within {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
+  outline-offset: 3px;
+}
+
+.rosary-nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 55ch;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.prayer-nav-icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 0.9em;
+  height: 0.9em;
+}
+
+.rosary-keyboard-hint {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  opacity: 0.5;
+  margin: 0.75rem auto 0;
+  letter-spacing: 0.03em;
+}
+

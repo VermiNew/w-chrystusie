@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef, useState, type CSSProperties } from 'react'
 import { FaArrowRotateLeft, FaMinus, FaPlus } from 'react-icons/fa6'
+import { readStorage, writeStorage } from '../data/storage'
 
 const FONT_SIZE_KEY = 'content-font-size'
 const DEFAULT_FONT_SIZE = 100
@@ -8,7 +9,7 @@ const MAX_FONT_SIZE = 160
 const FONT_SIZE_STEP = 10
 
 const readFontSize = () => {
-  const stored = Number.parseInt(localStorage.getItem(FONT_SIZE_KEY) ?? '', 10)
+  const stored = Number.parseInt(readStorage(FONT_SIZE_KEY) ?? '', 10)
   return Number.isFinite(stored) && stored >= MIN_FONT_SIZE && stored <= MAX_FONT_SIZE
     ? stored
     : DEFAULT_FONT_SIZE
@@ -28,7 +29,7 @@ export default function ContentFontSizeControl({ className = '' }: Props) {
 
   useEffect(() => {
     const scale = fontSize / 100
-    localStorage.setItem(FONT_SIZE_KEY, String(fontSize))
+    writeStorage(FONT_SIZE_KEY, String(fontSize))
     document.documentElement.style.setProperty('--content-reading-scale', String(scale))
     document.documentElement.style.setProperty('--content-reading-font-size', `${1.1 * scale}rem`)
     document.documentElement.style.setProperty('--content-focus-font-size', `${1.8 * scale}rem`)

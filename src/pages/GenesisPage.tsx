@@ -1,142 +1,16 @@
+import { use } from 'react'
 import { FaArrowLeft, FaArrowRight, FaArrowUpRightFromSquare, FaGlobe } from 'react-icons/fa6'
 import { Link, useParams } from 'react-router-dom'
 import ReadingModeToggle from '../components/ReadingModeToggle'
-import { exodus } from '../data/exodus'
-import { ephesians } from '../data/ephesians'
-import { ezra } from '../data/ezra'
-import { firstKings } from '../data/firstKings'
-import { firstChronicles } from '../data/firstChronicles'
-import { genesis } from '../data/genesis'
-import { galatians } from '../data/galatians'
-import { isaiah } from '../data/isaiah'
-import { firstThessalonians } from '../data/firstThessalonians'
-import { firstPeter } from '../data/firstPeter'
-import { firstJohn } from '../data/firstJohn'
-import { secondJohn } from '../data/secondJohn'
-import { thirdJohn } from '../data/thirdJohn'
-import { jude } from '../data/jude'
-import { philemon } from '../data/philemon'
-import { revelation } from '../data/revelation'
-import { philippians } from '../data/philippians'
-import { secondCorinthians } from '../data/secondCorinthians'
-import { firstCorinthians } from '../data/firstCorinthians'
-import { firstTimothy } from '../data/firstTimothy'
-import { hebrews } from '../data/hebrews'
-import { acts } from '../data/acts'
-import { colossians } from '../data/colossians'
-import { leviticus } from '../data/leviticus'
-import { joshua } from '../data/joshua'
-import { ruth } from '../data/ruth'
-import { secondKings } from '../data/secondKings'
-import { firstSamuel } from '../data/firstSamuel'
-import { secondSamuel } from '../data/secondSamuel'
-import { secondChronicles } from '../data/secondChronicles'
-import { nehemiah } from '../data/nehemiah'
-import { job } from '../data/job'
-import { proverbs } from '../data/proverbs'
-import { ecclesiastes } from '../data/ecclesiastes'
-import { songOfSongs } from '../data/songOfSongs'
-import { jeremiah } from '../data/jeremiah'
-import { obadiah } from '../data/obadiah'
-import { haggai } from '../data/haggai'
-import { nahum } from '../data/nahum'
-import { habakkuk } from '../data/habakkuk'
-import { zephaniah } from '../data/zephaniah'
-import { malachi } from '../data/malachi'
-import { jonah } from '../data/jonah'
-import { micah } from '../data/micah'
-import { amos } from '../data/amos'
-import { hosea } from '../data/hosea'
-import { zechariah } from '../data/zechariah'
-import { ezekiel } from '../data/ezekiel'
-import { joel } from '../data/joel'
-import { judges } from '../data/judges'
-import { john } from '../data/john'
-import { james } from '../data/james'
-import { lamentations } from '../data/lamentations'
-import { mark } from '../data/mark'
-import { matthew } from '../data/matthew'
-import { luke } from '../data/luke'
-import { numbers } from '../data/numbers'
-import { deuteronomyVerified } from '../data/deuteronomyVerified'
-import { romans } from '../data/romans'
-import { secondThessalonians } from '../data/secondThessalonians'
-import { secondTimothy } from '../data/secondTimothy'
-import { secondPeter } from '../data/secondPeter'
+import { hasScriptureBook, loadScriptureBook } from '../data/scriptureBookLoaders'
 import { scriptureBooksBySlug } from '../data/scriptureCatalog'
-import { titus } from '../data/titus'
 import { useContentLibrary } from '../hooks/useContentLibrary'
 import { getChapterProgress, useScriptureProgress } from '../hooks/useScriptureProgress'
 import NotFoundPage from './NotFoundPage'
 
-const books = {
-  rodzaju: genesis,
-  wyjscia: exodus,
-  liczb: numbers,
-  'powtorzonego-prawa': deuteronomyVerified,
-  sedziow: judges,
-  '1-krolewska': firstKings,
-  '1-kronik': firstChronicles,
-  ezdrasza: ezra,
-  izajasza: isaiah,
-  lamentacje: lamentations,
-  'do-galatow': galatians,
-  'do-efezjan': ephesians,
-  'do-rzymian': romans,
-  'do-tytusa': titus,
-  '2-do-tesaloniczan': secondThessalonians,
-  '1-do-tesaloniczan': firstThessalonians,
-  '2-do-tymoteusza': secondTimothy,
-  '2-piotra': secondPeter,
-  marka: mark,
-  mateusza: matthew,
-  lukasza: luke,
-  jana: john,
-  jakuba: james,
-  '1-piotra': firstPeter,
-  '1-jana': firstJohn,
-  '2-jana': secondJohn,
-  '3-jana': thirdJohn,
-  judy: jude,
-  'do-filemona': philemon,
-  apokalipsa: revelation,
-  'do-filipian': philippians,
-  '2-do-koryntian': secondCorinthians,
-  '1-do-koryntian': firstCorinthians,
-  '1-do-tymoteusza': firstTimothy,
-  'do-hebrajczykow': hebrews,
-  'dzieje-apostolskie': acts,
-  'do-kolosan': colossians,
-  kaplanska: leviticus,
-  jozuego: joshua,
-  rut: ruth,
-  '2-krolewska': secondKings,
-  '1-samuela': firstSamuel,
-  '2-samuela': secondSamuel,
-  '2-kronik': secondChronicles,
-  nehemiasza: nehemiah,
-  hioba: job,
-  przyslow: proverbs,
-  koheleta: ecclesiastes,
-  'piesn-nad-piesniami': songOfSongs,
-  jeremiasza: jeremiah,
-  abdiasza: obadiah,
-  aggeusza: haggai,
-  nahuma: nahum,
-  habakuka: habakkuk,
-  sofoniasza: zephaniah,
-  malachiasza: malachi,
-  jonasza: jonah,
-  micheasza: micah,
-  amosa: amos,
-  ozeasza: hosea,
-  zachariasza: zechariah,
-  ezechiela: ezekiel,
-  joela: joel,
-}
-
-function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof typeof books; chapterNumber: number }) {
-  const book = books[bookSlug]
+function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: string; chapterNumber: number }) {
+  // Suspends until the book chunk is loaded; the route-level Suspense shows the placeholder.
+  const book = use(loadScriptureBook(bookSlug))
   const chapter = book.chapters.find((entry) => entry.number === chapterNumber)
   const contentId = `${book.id}:${chapterNumber}`
   const { isFavorite, toggleFavorite } = useContentLibrary('scripture', contentId)
@@ -218,10 +92,7 @@ function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: keyof type
 
 export default function GenesisPage() {
   const { book: bookSlug, chapter } = useParams()
-  if (!bookSlug || !(bookSlug in books)) return <NotFoundPage />
-
-  const validBookSlug = bookSlug as keyof typeof books
-  const chapterNumber = Number(chapter)
+  if (!bookSlug || !hasScriptureBook(bookSlug)) return <NotFoundPage />
 
   if (!chapter) {
     const book = scriptureBooksBySlug[bookSlug]
@@ -250,7 +121,8 @@ export default function GenesisPage() {
     )
   }
 
-  return Number.isInteger(chapterNumber) && chapterNumber > 0
-    ? <ScriptureBookReader bookSlug={validBookSlug} chapterNumber={chapterNumber} />
+  // Only canonical chapter numbers ("3", not "03" or "3.0") are valid addresses.
+  return /^[1-9]\d*$/.test(chapter)
+    ? <ScriptureBookReader bookSlug={bookSlug} chapterNumber={Number(chapter)} />
     : <NotFoundPage />
 }

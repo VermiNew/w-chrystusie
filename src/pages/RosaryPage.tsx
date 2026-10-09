@@ -4,13 +4,17 @@ import Markdown from 'react-markdown'
 import {
   mysterySets,
   buildRosarySteps,
+  getBeadStrip,
   rosaryPrayerGuide,
   rosaryPromises,
   rosaryPromisesIntroduction,
   type MysterySet,
 } from '../data/rosary'
-import { prayers } from '../data/prayers'
+import { parseMarkdown } from '../data/markdown'
+// Only this one prayer is needed here — importing the whole prayer collection would add ~1 MB to the page.
+import loretoLitanyRaw from '../data/prayers/Litania Loretańska do Najświętszej Maryi Panny.md?raw'
 import { hapticLight, hapticMedium } from '../data/haptics'
+import { isPageShortcutBlocked } from '../data/keyboard'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
 import { useHorizontalSwipe } from '../hooks/useHorizontalSwipe'
 import PrayerCompletion from '../components/PrayerCompletion'
@@ -18,7 +22,7 @@ import ContentFontSizeControl from '../components/ContentFontSizeControl'
 
 const DAY_NAMES = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota']
 const ROSARY_PROGRESS_KEY = 'rosary-progress'
-const loretoLitany = prayers.find((prayer) => prayer.id === 'Litania Loretańska do Najświętszej Maryi Panny')
+const loretoLitany = parseMarkdown('Litania Loretańska do Najświętszej Maryi Panny', loretoLitanyRaw)
 
 interface RosaryProgress {
   selectedSet: MysterySet | null
@@ -83,6 +87,7 @@ export default function RosaryPage() {
   )
 
   const step = steps[currentStep]
+  const beadStrip = selectedSet ? getBeadStrip(steps, currentStep) : null
   const isFirst = currentStep === 0
   const isLast = currentStep === steps.length - 1
 
@@ -164,6 +169,7 @@ export default function RosaryPage() {
     if (!selectedSet || isComplete || showLitany) return
 
     const handleKey = (e: KeyboardEvent) => {
+      if (isPageShortcutBlocked(e)) return
       setShowKeyboardHint(true)
       if (e.key === 'ArrowRight') goNext()
       if (e.key === 'ArrowLeft') goPrev()
@@ -191,6 +197,18 @@ export default function RosaryPage() {
     return (
       <div className="page">
         <h1>Różaniec</h1>
+        {/* Same introduction style as the chaplet, so both guided prayers start alike */}
+        <div className="chaplet-intro rosary-welcome">
+          <p className="chaplet-intro-lead">
+            Różaniec to rozważanie życia Jezusa razem z Maryją. Wycisz się na chwilę
+            i powierz Bogu to, co nosisz w sercu — aplikacja poprowadzi Cię przez
+            każdą modlitwę, paciorek po paciorku.
+          </p>
+          <blockquote className="chaplet-intro-quote">
+            „Bądź pozdrowiona łaski pełna, Pan z tobą, błogosławionaś ty między niewiastami.”
+            <cite>— Łk 1,28 (przekład Jakuba Wujka)</cite>
+          </blockquote>
+        </div>
         <p className="rosary-intro">Wybierz tajemnice, które chcesz odmówić:</p>
         <p className="rosary-choice-note" id="rosary-choice-note">
           <FaCircleInfo aria-hidden="true" />
@@ -321,6 +339,23 @@ export default function RosaryPage() {
           />
         </div>
       </div>
+
+      {beadStrip && (
+        // Decorative: the step counter in the heading already tells screen readers where we are
+        <div className={`rosary-beads${beadStrip.beads.length > 6 ? ' rosary-beads--decade' : ''}`} aria-hidden="true">
+          {beadStrip.beads.map((bead, index) => (
+            <span
+              key={index}
+              className={[
+                'rosary-bead',
+                `rosary-bead--${bead}`,
+                index < beadStrip.done ? 'rosary-bead--done' : '',
+                index === beadStrip.current ? 'rosary-bead--current' : '',
+              ].filter(Boolean).join(' ')}
+            />
+          ))}
+        </div>
+      )}
 
       <div className="rosary-step" key={currentStep} {...swipeHandlers}>
         {step.mystery && (
