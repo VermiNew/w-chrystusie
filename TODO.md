@@ -81,7 +81,7 @@
 - [x] Podświetlanie tajemnic wg dnia tygodnia działa, ale brak informacji o tym że można odmówić inny zestaw w każdy dzień — brak tooltipa/opisu przy przyciskach
 - [x] `← →` na klawiaturze nie działa gdy focus jest na przycisku nawigacyjnym (event listener na `window`, ale `button` może przechwycić `ArrowKey` przed scrollem)
 - [x] Litania Loretańska jako opcjonalne zakończenie
-- [ ] Inne modlitwy opcjonalne na zakończenie różańca
+- [x] Inne modlitwy opcjonalne na zakończenie różańca — do Litanii Loretańskiej doszły: Litania do św. Józefa, Litania do św. Michała Archanioła, „Wieczny odpoczynek”; można wybrać kilka, odmawiane po kolei
 
 ## Do zrobienia — koronka
 
