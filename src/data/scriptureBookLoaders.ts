@@ -11,6 +11,8 @@ const loaders: Record<string, () => Promise<ScriptureBook>> = {
   '1-krolewska': () => import('./firstKings').then((module) => module.firstKings),
   '1-kronik': () => import('./firstChronicles').then((module) => module.firstChronicles),
   ezdrasza: () => import('./ezra').then((module) => module.ezra),
+  tobiasza: () => import('./tobit').then((module) => module.tobit),
+  judyty: () => import('./judith').then((module) => module.judith),
   izajasza: () => import('./isaiah').then((module) => module.isaiah),
   lamentacje: () => import('./lamentations').then((module) => module.lamentations),
   'do-galatow': () => import('./galatians').then((module) => module.galatians),

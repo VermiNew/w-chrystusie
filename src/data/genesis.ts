@@ -18,6 +18,8 @@ export interface ScriptureBook {
   sourceName: string
   sourceBookUrl: string
   sourceRights: string
+  /** Set when the digital transcription has not been proofread at the source yet. */
+  sourceQuality?: 'unverified'
   chapters: ScriptureChapter[]
 }
 

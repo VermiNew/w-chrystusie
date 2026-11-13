@@ -508,3 +508,8 @@
   text-decoration: underline;
 }
 
+
+/* Books whose Wikisource transcription is not proofread yet (1839–1840 edition). */
+.scripture-unverified-notice > svg {
+  color: #d97706;
+}

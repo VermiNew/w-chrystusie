@@ -1,5 +1,5 @@
 import { use } from 'react'
-import { FaArrowLeft, FaArrowRight, FaArrowUpRightFromSquare, FaGlobe } from 'react-icons/fa6'
+import { FaArrowLeft, FaArrowRight, FaArrowUpRightFromSquare, FaGlobe, FaTriangleExclamation } from 'react-icons/fa6'
 import { Link, useParams } from 'react-router-dom'
 import ReadingModeToggle from '../components/ReadingModeToggle'
 import { hasScriptureBook, loadScriptureBook } from '../data/scriptureBookLoaders'
@@ -38,6 +38,20 @@ function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: string; ch
         <p className="psalms-eyebrow">{book.name} · przekład Jakuba Wujka</p>
         <h1>Rozdział {chapter.number}</h1>
       </header>
+
+      {book.sourceQuality === 'unverified' && (
+        <aside className="psalms-rights-notice scripture-unverified-notice">
+          <FaTriangleExclamation aria-hidden="true" />
+          <div>
+            <h2>Tekst przed korektą</h2>
+            <p>
+              Ta księga pochodzi z wydania Wujka z lat 1839–1840 (dawna pisownia, np. „iest”, „y”).
+              Jej cyfrowa transkrypcja w Wikiźródłach nie została jeszcze sprawdzona, więc mogą
+              zdarzyć się literówki. W razie wątpliwości porównaj z linkiem do źródła pod rozdziałem.
+            </p>
+          </div>
+        </aside>
+      )}
 
       <div className="psalm-verses">
         {chapter.verses.map((verse) => (

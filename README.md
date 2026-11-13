@@ -5,7 +5,7 @@ Polska katolicka aplikacja webowa (PWA) — modlitwy, Pismo Święte, pieśni ko
 ## Sekcje
 
 - **Modlitwy** — blisko 400 modlitw codziennych, litanii i aktów, pogrupowanych w kategorie
-- **Pismo Święte** — historyczny przekład ks. Jakuba Wujka (teksty z Wikiźródeł); dostępne są 64 księgi, w tym cały Nowy Testament. Brakuje jeszcze ksiąg: Tobiasza, Judyty, Estery, Mądrości, Syracha, Barucha, Daniela i obu Ksiąg Machabejskich
+- **Pismo Święte** — historyczny przekład ks. Jakuba Wujka (teksty z Wikiźródeł); dostępne są 66 ksiąg, w tym cały Nowy Testament. Księgi Tobiasza i Judyty pochodzą z wydania 1839–1840 (dawna pisownia, transkrypcja jeszcze nieskorygowana — aplikacja to zaznacza). Brakuje jeszcze ksiąg: Estery, Mądrości, Syracha, Barucha, Daniela i obu Ksiąg Machabejskich
 - **Śpiewnik** — blisko 300 pieśni z oznaczeniem okresu liturgicznego i trybem powiększonej czcionki
 - **Różaniec** — interaktywny przewodnik krok po kroku z czterema zestawami tajemnic
 - **Koronka** — Koronka do Miłosierdzia Bożego krok po kroku
