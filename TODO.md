@@ -214,7 +214,7 @@
 ### Atmosfera i klimat
 - [ ] Ikona krzyża w hero animuje się przy hover — ale brak analogicznego ciepła w reszcie UI; rozważyć delikatne złote/bursztynowe akcenty kolorystyczne w miejscach modlitewnych (nagłówki treści, separatory)
 - [x] Widok modlitwy/pieśni: tekst na `font-reading` (Literata) — sprawdzić czy `line-height` jest wystarczający do komfortowego czytania (rekomendowane 1.8–2.0 dla tekstu modlitewnego)
-- [ ] Odstęp między wersami w litaniach — Markdown renderuje je jako jeden blok; rozważyć CSS `p + p { margin-top: ... }` w `.prayer-text` dla rytmu czytania
+- [x] Odstęp między wersami w litaniach — usunięta dodatkowa pusta linia między akapitami (`white-space: pre-line` tylko na blokach, nie na kontenerze); odstęp 1,25em zamiast ~3em
 - [x] Brak chwili ciszy — po zakończeniu różańca/koronki (`Zakończ ✓`) brak ekranu zakończenia; pojawia się intro bez żadnego "Amen" / podsumowania / momentu zatrzymania
 
 ### Nawigacja i orientacja
@@ -231,7 +231,8 @@
 - [x] Brak "keep screen awake" (`WakeLock API`) — ekran gaśnie w trakcie modlitwy różańcowej; użytkownik musi dotykać ekranu żeby go obudzić, co przerywa skupienie
 - [ ] Czcionka treści modlitwy na mobile — rozważyć `font-size: 1.1rem` zamiast domyślnego `1rem`; modlitwy czyta się trzymając telefon z odległości
 - [x] Brak haptic feedback przy przejściu do następnego kroku różańca/koronki (`navigator.vibrate(10)`) — subtelna odpowiedź dotykowa
-- [ ] Po wejściu w modlitwę/pieśń telefon scrolluje do góry (App.tsx `scrollTo(0,0)`) ale header jest sticky — pierwsze słowo tekstu jest częściowo przysłonięte
+- [x] Po wejściu w modlitwę/pieśń header nie przysłania tekstu (sprawdzone na 375px); prawdziwy problem był inny — pasek narzędzi zajmował 3 rzędy nad tytułem, teraz na telefonie to jeden rząd kafelków
+- [x] Tryb skupienia na telefonie — pływające przyciski zawijały się do 2 rzędów i zasłaniały tytuł; teraz jeden pełnej szerokości rząd
 
 ### Dostępność (a11y)
 - [x] Brak `aria-label` na przyciskach Wstecz/Dalej w różańcu i koronce — czytniki ekranowe mówią tylko "button"

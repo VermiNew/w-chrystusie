@@ -207,11 +207,17 @@
 .prayer-text {
   width: 100%;
   max-width: 65ch;
-  white-space: pre-line;
   line-height: 1.9;
   font-size: var(--content-reading-font-size, 1.1rem);
   font-family: var(--font-reading);
   animation: text-reveal 0.6s ease both;
+}
+
+/* Keep single line breaks inside text blocks (litany verses). Applied to the blocks
+   only: on the container, the newline nodes Markdown emits between blocks would
+   render as an extra empty line. */
+.prayer-text :is(p, li) {
+  white-space: pre-line;
 }
 
 .prayer-text > * + *,

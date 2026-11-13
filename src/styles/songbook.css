@@ -639,6 +639,47 @@
   outline-offset: 1px;
 }
 
+/* Phones: the reading tools used to wrap into three rows above the title.
+   Lay them out as one row of equal tiles (icon above a short label). */
+@media (max-width: 600px) {
+  :root:not([data-reading-mode='true']) .content-reading-controls {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3.5rem, 1fr));
+    align-items: stretch;
+    width: 100%;
+    gap: 0.4rem;
+  }
+
+  :root:not([data-reading-mode='true']) .content-reading-toggle {
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 100%;
+    min-width: 0;
+    min-height: 3.75rem;
+    height: 100%;
+    padding: 0.45rem 0.2rem;
+    font-size: 0.72rem;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  :root:not([data-reading-mode='true']) .content-reading-toggle svg {
+    font-size: 1.05rem;
+  }
+
+  /* Center the font size popover on the whole toolbar, not on its narrow tile. */
+  :root:not([data-reading-mode='true']) .content-font-size-menu {
+    position: static;
+    display: flex;
+  }
+
+  :root:not([data-reading-mode='true']) .content-reading-resume {
+    grid-column: 1 / -1;
+    justify-content: space-between;
+  }
+}
+
 :root[data-reading-mode='true'] .header {
   display: none;
 }
@@ -747,8 +788,32 @@
   }
 
   :root[data-reading-mode='true'] .content-detail-page > h1 {
-    margin-top: 4.25rem;
+    margin-top: 5.25rem;
     font-size: 2rem;
+  }
+
+  /* The floating controls wrapped into two rows and covered the title.
+     Keep them in one full-width row of equal tiles instead. */
+  :root[data-reading-mode='true'] .content-reading-controls {
+    left: max(1rem, env(safe-area-inset-left));
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    gap: 0.4rem;
+  }
+
+  :root[data-reading-mode='true'] .content-reading-toggle {
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0;
+    min-height: 3.25rem;
+    padding: 0.35rem 0.25rem;
+    font-size: 0.75rem;
+    line-height: 1.15;
+  }
+
+  :root[data-reading-mode='true'] .content-reading-toggle small {
+    display: none;
   }
 }
 
