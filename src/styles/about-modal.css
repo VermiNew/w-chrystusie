@@ -315,3 +315,21 @@
   font-weight: 600;
 }
 
+
+/* Touch screens: a grab handle hints that the dialog can be dragged down to close. */
+@media (pointer: coarse) {
+  .about-dialog::before,
+  .reminders-dialog::before {
+    content: '';
+    /* Absolute, so the handle does not add height (the dialogs are height-capped). */
+    position: absolute;
+    top: 0.4rem;
+    left: 50%;
+    z-index: 1;
+    width: 2.25rem;
+    height: 4px;
+    translate: -50% 0;
+    background: var(--color-border-strong);
+    border-radius: 2px;
+  }
+}

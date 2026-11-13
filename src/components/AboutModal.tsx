@@ -4,6 +4,7 @@ import { FaXmark, FaGithub, FaCross, FaMusic, FaGlobe, FaBullhorn, FaLink } from
 import { prayerCatalog, songCatalog } from '../data/contentCatalog'
 import { announcements } from '../data/announcements'
 import { useFocusTrap } from '../hooks/useFocusTrap'
+import { useSwipeToClose } from '../hooks/useSwipeToClose'
 import DataBackup from './DataBackup'
 import logoUrl from '../assets/logo-about.png'
 
@@ -37,6 +38,8 @@ export default function AboutModal({ open, onClose }: Props) {
       onClose()
     }, CLOSE_DURATION_MS)
   }, [closing, onClose])
+
+  useSwipeToClose(dialogRef, open, handleClose)
 
   useEffect(() => {
     const dialog = dialogRef.current

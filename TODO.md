@@ -182,7 +182,7 @@
 ### Ogólne mobile
 - [x] `touch-action: manipulation` globalnie dla linków, przycisków i pól formularzy (`index.css`)
 - [x] Brak `user-select: none` na przyciskach nawigacyjnych — przypadkowe zaznaczanie tekstu podczas szybkiego tapowania
-- [ ] Modalne (`RemindersModal`, `AboutModal`) — brak obsługi swipe-down do zamknięcia na mobile
+- [x] Modalne (`RemindersModal`, `AboutModal`) — zamykanie przeciągnięciem w dół na ekranach dotykowych (`useSwipeToClose`), uchwyt nad oknem
 - [ ] Listy modlitw/pieśni na mobile — elementy listy mają `min-height: 44px` ale padding może być niewystarczający na bardzo małych ekranach
 
 ## Do zrobienia — ogólny wygląd
