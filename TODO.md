@@ -130,7 +130,7 @@
 - [x] Wersety Pisma Świętego są klikalne i prowadzą do rozdziału; wyszukiwarka obejmuje wszystkie 64 księgi oraz ogłoszenia
 - [x] Fraza wyszukiwania zapisywana w adresie (`?q=`) — powrót z wyniku przywraca wyniki
 - [x] Filtry list modlitw i pieśni ignorują polskie znaki; poprawna odmiana liczebników („3 wyniki”, „2 pozycje”)
-- [ ] Brak historii ostatnich wyszukiwań
+- [x] Historia ostatnich wyszukiwań — do 8 fraz pod pustym polem (zapis po otwarciu wyniku lub Enter), usuwanie pojedynczo i „Wyczyść”; obejmuje ją kopia zapasowa
 - [x] `key={i}` (indeks) na elementach listy wyników — powinien być unikalny string
 
 ## Do zrobienia — tryb czytania z głosem (duży feature)

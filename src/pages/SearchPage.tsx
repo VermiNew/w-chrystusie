@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState, useMemo, useRef, type KeyboardEventHandler, type ReactNode, type Ref } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { FaKeyboard } from 'react-icons/fa6'
+import { FaClockRotateLeft, FaKeyboard, FaXmark } from 'react-icons/fa6'
 import { prayers } from '../data/prayers'
 import { songs } from '../data/songs'
 import { psalms } from '../data/psalms'
@@ -9,6 +9,7 @@ import { scriptureBooksBySlug } from '../data/scriptureCatalog'
 import { loadScriptureBook, scriptureBookSlugs } from '../data/scriptureBookLoaders'
 import { normalizeSearchText } from '../data/searchText'
 import { pluralPl } from '../data/plural'
+import { addSearchHistory, clearSearchHistory, readSearchHistory, removeSearchHistory } from '../data/searchHistory'
 
 type ResultType = 'prayer' | 'song' | 'psalm' | 'scripture' | 'announcement'
 type SearchSection = 'all' | ResultType
@@ -241,15 +242,16 @@ interface SearchResultItemProps {
   query: string
   resultRef?: Ref<HTMLAnchorElement>
   onKeyDown?: KeyboardEventHandler<HTMLAnchorElement>
+  onOpen?: () => void
 }
 
-function SearchResultItem({ result, query, resultRef, onKeyDown }: SearchResultItemProps) {
+function SearchResultItem({ result, query, resultRef, onKeyDown, onOpen }: SearchResultItemProps) {
   const snippet = getContextSnippet(result.content, result.normalizedContent, normalize(query))
   // Scripture results already name the book in the title; repeating it as a category adds noise.
   const showCategory = result.category && result.type !== 'scripture'
 
   return (
-    <Link ref={resultRef} onKeyDown={onKeyDown} className="search-result search-result-clickable" to={result.href}>
+    <Link ref={resultRef} onKeyDown={onKeyDown} onClick={onOpen} className="search-result search-result-clickable" to={result.href}>
       <span className="search-result-type">{typeLabels[result.type]}</span>
       {showCategory && <span className="search-result-category">{result.category}</span>}
       <strong className="search-result-title">{highlightQuery(result.title, query)}</strong>
@@ -272,6 +274,7 @@ export default function SearchPage() {
   const [scope, setScope] = useState<SearchScope>('all')
   const [visibleTitleCount, setVisibleTitleCount] = useState(RESULTS_PAGE_SIZE)
   const [visibleContentCount, setVisibleContentCount] = useState(RESULTS_PAGE_SIZE)
+  const [history, setHistory] = useState(readSearchHistory)
 
   const resetVisibleResults = () => {
     setVisibleTitleCount(RESULTS_PAGE_SIZE)
@@ -336,7 +339,20 @@ export default function SearchPage() {
 
   const focusFirstResult = () => firstResultRef.current?.focus()
 
+  const rememberQuery = () => setHistory(addSearchHistory(query))
+
+  const applyHistoryPhrase = (phrase: string) => {
+    setQuery(phrase)
+    setDebouncedQuery(phrase)
+    resetVisibleResults()
+    searchInputRef.current?.focus()
+  }
+
   const handleSearchInputKeyDown: KeyboardEventHandler<HTMLInputElement> = (event) => {
+    if (event.key === 'Enter') {
+      rememberQuery()
+      return
+    }
     if (event.key !== 'ArrowDown' || resultCount === 0) return
     event.preventDefault()
     focusFirstResult()
@@ -416,6 +432,34 @@ export default function SearchPage() {
       {!query.trim() && (
         <p className="search-hint"><FaKeyboard /> Naciśnij <kbd>/</kbd> z dowolnej strony, aby szybko przejść do wyszukiwania.</p>
       )}
+      {!query.trim() && history.length > 0 && (
+        <section className="search-history" aria-labelledby="search-history-title">
+          <div className="search-history-header">
+            <h2 id="search-history-title"><FaClockRotateLeft aria-hidden="true" /> Ostatnio szukane</h2>
+            <button type="button" className="search-history-clear" onClick={() => setHistory(clearSearchHistory())}>
+              Wyczyść
+            </button>
+          </div>
+          <ul>
+            {history.map((phrase) => (
+              <li key={phrase} className="search-history-item">
+                <button type="button" className="search-history-phrase" onClick={() => applyHistoryPhrase(phrase)}>
+                  {phrase}
+                </button>
+                <button
+                  type="button"
+                  className="search-history-remove"
+                  aria-label={`Usuń „${phrase}” z historii wyszukiwania`}
+                  title="Usuń z historii"
+                  onClick={() => setHistory(removeSearchHistory(phrase))}
+                >
+                  <FaXmark aria-hidden="true" />
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
       {query.trim().length === 1 && (
         <p className="search-hint">Wpisz jeszcze co najmniej jeden znak, aby rozpocząć wyszukiwanie.</p>
       )}
@@ -444,6 +488,7 @@ export default function SearchPage() {
                   query={trimmed}
                   resultRef={index === 0 ? firstResultRef : undefined}
                   onKeyDown={index === 0 ? handleFirstResultKeyDown : undefined}
+                  onOpen={rememberQuery}
                 />
               </li>
             ))}
@@ -471,6 +516,7 @@ export default function SearchPage() {
                   query={trimmed}
                   resultRef={groups.titleMatches.length === 0 && index === 0 ? firstResultRef : undefined}
                   onKeyDown={groups.titleMatches.length === 0 && index === 0 ? handleFirstResultKeyDown : undefined}
+                  onOpen={rememberQuery}
                 />
               </li>
             ))}
