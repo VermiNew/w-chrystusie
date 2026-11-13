@@ -450,3 +450,9 @@
   outline-offset: 3px;
 }
 
+
+/* Sepia: the cream "white vestment" dot blended into the cream surface. */
+[data-theme='sepia'] .liturgy-color--white {
+  background: #ffffff;
+  border-color: rgba(59, 47, 34, 0.45);
+}
