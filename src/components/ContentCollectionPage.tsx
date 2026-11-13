@@ -5,12 +5,17 @@
  * so every fix had to be made twice. Each page now passes its configuration
  * (route, storage keys, categories, labels) and the few parts that really
  * differ (list intro, category badge, extra block below the detail view).
+ *
+ * The list and navigation use the light content catalog (titles, categories,
+ * excerpts). The full text is loaded per entry when it is opened, and for the
+ * whole collection only when somebody types in the list search.
  */
 import { useMemo, useEffect, useState, type CSSProperties, type ReactNode } from 'react'
 import { useLocation, useParams, Link } from 'react-router-dom'
 import { FaArrowLeft, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaCopyright, FaStar, FaTrash, FaXmark } from 'react-icons/fa6'
 import Markdown from 'react-markdown'
 import type { MarkdownEntry } from '../data/markdown'
+import type { ContentCatalogEntry } from '../data/contentCatalog'
 import ReadingModeToggle from './ReadingModeToggle'
 import { useContentLibrary, type ContentKind } from '../hooks/useContentLibrary'
 import ConfirmDialog from './ConfirmDialog'
@@ -21,7 +26,12 @@ import NotFoundPage from '../pages/NotFoundPage'
 import { readStorage, removeStorage, writeStorage } from '../data/storage'
 
 export interface ContentCollectionConfig {
-  items: MarkdownEntry[]
+  /** Light list of all entries (no full text). */
+  items: readonly ContentCatalogEntry[]
+  /** Loads the full entry for the detail view. */
+  loadEntry: (id: string) => Promise<MarkdownEntry | undefined>
+  /** Loads the full text of every entry, for searching inside the texts. */
+  loadAllEntries: () => Promise<readonly MarkdownEntry[]>
   /** Library kind used for favorites, recent items and reading position. */
   kind: Extract<ContentKind, 'prayer' | 'song'>
   /** Route of the list, e.g. `/modlitwy`; details live under `${basePath}/:id`. */
@@ -49,32 +59,35 @@ export interface ContentCollectionConfig {
   types?: {
     label: string
     typeOrder: string[]
-    getType: (item: MarkdownEntry) => string
+    getType: (item: ContentCatalogEntry) => string
   }
   /** Extra content shown under the list title. */
   listIntro?: ReactNode
   /** Extra content inside a category title, before the item count. */
   renderCategoryBadge?: (category: string) => ReactNode
   /** Extra content at the end of the detail view. */
-  renderDetailFooter?: (selected: MarkdownEntry, prepareListReturn: () => void) => ReactNode
+  renderDetailFooter?: (selected: ContentCatalogEntry, prepareListReturn: () => void) => ReactNode
 }
 
 const fallbackCategory = 'Bez kategorii'
 
-const byTitle = (a: MarkdownEntry, b: MarkdownEntry) => a.title.localeCompare(b.title, 'pl')
+type ListEntry = ContentCatalogEntry
 
-// Normalized once per collection, on the first filter use, instead of on every keystroke.
-const searchableTextCache = new WeakMap<MarkdownEntry[], Map<string, string>>()
-const getSearchableText = (items: MarkdownEntry[], entry: MarkdownEntry) => {
-  let texts = searchableTextCache.get(items)
+const byTitle = (a: ListEntry, b: ListEntry) => a.title.localeCompare(b.title, 'pl')
+
+// Normalized once per collection (catalog, then full texts), not on every keystroke.
+const searchableTextCache = new WeakMap<readonly object[], Map<string, string>>()
+function getSearchableTexts(entries: readonly (ListEntry | MarkdownEntry)[]) {
+  let texts = searchableTextCache.get(entries)
   if (!texts) {
-    texts = new Map(items.map((item) => [
-      item.id,
-      normalizeSearchText(`${item.title} ${item.category ?? ''} ${item.body}`),
+    texts = new Map(entries.map((entry) => [
+      entry.id,
+      // Until the full texts arrive, the catalog excerpt stands in for the body.
+      normalizeSearchText(`${entry.title} ${entry.category ?? ''} ${'body' in entry ? entry.body : entry.excerpt}`),
     ]))
-    searchableTextCache.set(items, texts)
+    searchableTextCache.set(entries, texts)
   }
-  return texts.get(entry.id) ?? ''
+  return texts
 }
 
 const decodeRouteId = (routeId: string) => {
@@ -96,6 +109,8 @@ const getSelectedId = (routeId: string | undefined, pathname: string, basePath: 
 
 export default function ContentCollectionPage({
   items,
+  loadEntry,
+  loadAllEntries,
   kind,
   basePath,
   scrollKey,
@@ -116,7 +131,10 @@ export default function ContentCollectionPage({
   const [query, setQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [selectedType, setSelectedType] = useState('all')
-  const [favoriteToRemove, setFavoriteToRemove] = useState<MarkdownEntry | null>(null)
+  const [favoriteToRemove, setFavoriteToRemove] = useState<ListEntry | null>(null)
+  const [loadedEntry, setLoadedEntry] = useState<MarkdownEntry | null>(null)
+  const [entryFailed, setEntryFailed] = useState(false)
+  const [fullEntries, setFullEntries] = useState<readonly MarkdownEntry[] | null>(null)
   const [clearHistoryOpen, setClearHistoryOpen] = useState(false)
   const [returnCategory] = useState(() => readStorage(categoryKey, 'session'))
   const selectedId = getSelectedId(id, location.pathname, basePath)
@@ -124,17 +142,17 @@ export default function ContentCollectionPage({
   const { favoriteIds, recentIds, isFavorite, toggleFavorite, removeFavorite, clearRecent } = useContentLibrary(kind, selected?.id)
   const favoriteItems = favoriteIds
     .map((favoriteId) => items.find((item) => item.id === favoriteId))
-    .filter((item): item is MarkdownEntry => Boolean(item))
+    .filter((item): item is ListEntry => Boolean(item))
   const recentItems = recentIds
     .filter(Boolean)
     .map((recentId) => items.find((item) => item.id === recentId))
-    .filter((item): item is MarkdownEntry => Boolean(item))
+    .filter((item): item is ListEntry => Boolean(item))
 
-  const getCategory = (item: MarkdownEntry) => (
+  const getCategory = (item: ListEntry) => (
     item.category && categoryOrder.includes(item.category) ? item.category : fallbackCategory
   )
   const getCategoryAnchorId = (category: string) => `${anchorPrefix}-${encodeURIComponent(category)}`
-  const getItemPath = (item: MarkdownEntry) => `${basePath}/${encodeRouteId(item.id)}`
+  const getItemPath = (item: ListEntry) => `${basePath}/${encodeRouteId(item.id)}`
 
   const detailCategory = selected ? getCategory(selected) : fallbackCategory
   const siblingItems = selected
@@ -145,6 +163,34 @@ export default function ContentCollectionPage({
   const nextItem = detailIndex >= 0 && detailIndex < siblingItems.length - 1
     ? siblingItems[detailIndex + 1]
     : null
+
+  // Full text of the opened entry (a small chunk of its own).
+  useEffect(() => {
+    if (!selected) return
+    let cancelled = false
+    loadEntry(selected.id).then(
+      (entry) => {
+        if (cancelled) return
+        setEntryFailed(!entry)
+        setLoadedEntry(entry ?? null)
+      },
+      () => { if (!cancelled) setEntryFailed(true) },
+    )
+    return () => { cancelled = true }
+  }, [selected, loadEntry])
+
+  // Searching inside the texts needs all of them; load them on the first search.
+  const wantsFullText = query.trim().length > 0
+  useEffect(() => {
+    if (!wantsFullText || fullEntries) return
+    let cancelled = false
+    loadAllEntries().then(
+      (entries) => { if (!cancelled) setFullEntries(entries) },
+      // Offline without a cached copy: the list keeps searching titles and excerpts.
+      () => undefined,
+    )
+    return () => { cancelled = true }
+  }, [wantsFullText, fullEntries, loadAllEntries])
 
   // Restore the expanded category first, then the saved list position.
   useEffect(() => {
@@ -178,7 +224,8 @@ export default function ContentCollectionPage({
 
   const grouped = useMemo(() => {
     const normalizedQuery = normalizeSearchText(query.trim())
-    const map = new Map<string, MarkdownEntry[]>()
+    const searchableTexts = normalizedQuery ? getSearchableTexts(fullEntries ?? items) : null
+    const map = new Map<string, ListEntry[]>()
     for (const item of items) {
       const category = item.category && categoryOrder.includes(item.category)
         ? item.category
@@ -186,7 +233,7 @@ export default function ContentCollectionPage({
       if (selectedCategory !== 'all' && category !== selectedCategory) continue
       if (types && selectedType !== 'all' && types.getType(item) !== selectedType) continue
 
-      if (normalizedQuery && !getSearchableText(items, item).includes(normalizedQuery)) continue
+      if (searchableTexts && !searchableTexts.get(item.id)?.includes(normalizedQuery)) continue
 
       if (!map.has(category)) map.set(category, [])
       map.get(category)!.push(item)
@@ -194,7 +241,7 @@ export default function ContentCollectionPage({
     return [...categoryOrder, fallbackCategory]
       .filter((cat) => map.has(cat))
       .map((cat) => ({ category: cat, items: [...map.get(cat)!].sort(byTitle) }))
-  }, [items, categoryOrder, query, selectedCategory, types, selectedType])
+  }, [items, categoryOrder, query, selectedCategory, types, selectedType, fullEntries])
 
   const typeCounts = useMemo(() => {
     const counts = new Map<string, number>()
@@ -213,6 +260,21 @@ export default function ContentCollectionPage({
   if (selectedId && !selected) return <NotFoundPage />
 
   if (selected) {
+    const entry = loadedEntry?.id === selected.id ? loadedEntry : null
+    if (!entry) {
+      return (
+        <div className="page content-detail-page content-detail-loading" aria-busy={!entryFailed}>
+          <Link to={basePath} className="back-button" onClick={prepareListReturn}>
+            <FaArrowLeft /> Powrót do listy
+          </Link>
+          <h1>{selected.title}</h1>
+          <p className="content-detail-status" role="status">
+            {entryFailed ? 'Nie udało się wczytać treści. Sprawdź połączenie i spróbuj ponownie.' : 'Wczytywanie…'}
+          </p>
+        </div>
+      )
+    }
+
     return (
       <div className="page content-detail-page">
         <Link to={basePath} className="back-button" onClick={prepareListReturn}>
@@ -230,31 +292,31 @@ export default function ContentCollectionPage({
           onToggleFavorite={() => toggleFavorite(kind, selected.id)}
         />
         <h1>{selected.title}</h1>
-        {selected.author && (
+        {entry.author && (
           <p className="content-rights-status">
-            Autor: <strong>{selected.author}</strong>
-            {selected.rightsStatus === 'original' && <> · opracowanie własne</>}
-            {selected.rightsStatus === 'public-domain' && <> · domena publiczna</>}
+            Autor: <strong>{entry.author}</strong>
+            {entry.rightsStatus === 'original' && <> · opracowanie własne</>}
+            {entry.rightsStatus === 'public-domain' && <> · domena publiczna</>}
           </p>
         )}
-        {selected.rightsStatus === 'permission-required' ? (
+        {entry.rightsStatus === 'permission-required' ? (
           <aside className="psalms-rights-notice content-rights-notice">
             <FaCopyright aria-hidden="true" />
             <div>
               <h2>Tekst chroniony prawem autorskim</h2>
               <p>
-                {selected.rightsNote ?? 'Pełny tekst wymaga zgody właściciela praw autorskich.'}
+                {entry.rightsNote ?? 'Pełny tekst wymaga zgody właściciela praw autorskich.'}
                 {' '}Pozostawiamy tytuł, autora i dokładny adres źródłowy.
               </p>
             </div>
           </aside>
         ) : (
           <div className={textClassName} lang="pl">
-            <Markdown>{selected.body}</Markdown>
+            <Markdown>{entry.body}</Markdown>
           </div>
         )}
-        {selected.source && (
-          <SourceAttributionLink url={selected.source} />
+        {entry.source && (
+          <SourceAttributionLink url={entry.source} />
         )}
         <nav className="content-sibling-nav" aria-label={labels.siblingNav}>
           {previousItem ? (
