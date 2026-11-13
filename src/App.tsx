@@ -11,7 +11,7 @@ const HomePage = lazy(() => import('./pages/HomePage'))
 const PrayersPage = lazy(() => import('./pages/PrayersPage'))
 const ScripturePage = lazy(() => import('./pages/ScripturePage'))
 const PsalmsPage = lazy(() => import('./pages/PsalmsPage'))
-const GenesisPage = lazy(() => import('./pages/GenesisPage'))
+const ScriptureBookPage = lazy(() => import('./pages/ScriptureBookPage'))
 const SongbookPage = lazy(() => import('./pages/SongbookPage'))
 const RosaryPage = lazy(() => import('./pages/RosaryPage'))
 const ChapletPage = lazy(() => import('./pages/ChapletPage'))
@@ -69,8 +69,8 @@ function AppRoutes() {
               <Route path="/pismo-swiete/psalmy/:id" element={<PsalmsPage />} />
               <Route path="/pismo-swiete/psalmow" element={<PsalmsSlugRedirect />} />
               <Route path="/pismo-swiete/psalmow/:id" element={<PsalmsSlugRedirect />} />
-              <Route path="/pismo-swiete/:book" element={<GenesisPage />} />
-              <Route path="/pismo-swiete/:book/:chapter" element={<GenesisPage />} />
+              <Route path="/pismo-swiete/:book" element={<ScriptureBookPage />} />
+              <Route path="/pismo-swiete/:book/:chapter" element={<ScriptureBookPage />} />
               <Route path="/psalmy" element={<PsalmsPage />} />
               <Route path="/psalmy/:id" element={<PsalmsPage />} />
               <Route path="/spiewnik" element={<SongbookPage />} />
