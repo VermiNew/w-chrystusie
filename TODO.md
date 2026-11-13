@@ -115,10 +115,10 @@
 
 ## Do zrobienia — motywy
 
-- [ ] Tylko dwa motywy (light/dark) — brak np. "Sepia" dla trybu nocnego czytania
+- [x] Trzeci motyw „Sepia” (ciepły papier) do czytania wieczorem; przycisk przełącza jasny → ciemny → sepia; kolor paska przeglądarki (`theme-color`) zgodny z motywem
 - [x] Przełącznik motywu nie reaguje na zmianę systemową `prefers-color-scheme` w trakcie sesji (brak nasłuchiwania na `MediaQueryList.change`)
 - [x] Brak płynnej animacji przejścia między motywami (teraz zmiana jest natychmiastowa)
-- [ ] Ikona motywu w nav nie animuje się przy przełączaniu
+- [x] Ikona motywu w nav obraca się przy przełączaniu (z `prefers-reduced-motion` bez animacji)
 
 ## Do zrobienia — wyszukiwarka
 

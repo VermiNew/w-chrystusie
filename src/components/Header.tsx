@@ -4,9 +4,10 @@ import { FaBars, FaBell, FaBookBible, FaBullhorn, FaCalendarDays, FaCircleInfo, 
 import { announcements } from '../data/announcements'
 import { useUnreadCount } from '../data/useReadAnnouncements'
 import { useHasAnyReminder } from '../data/useReminders'
-import { useTheme, toggleTheme } from '../data/useTheme'
+import { getNextTheme, themeLabels, useTheme, toggleTheme } from '../data/useTheme'
 import RemindersModal from './RemindersModal'
 import AboutModal from './AboutModal'
+import { FaBookOpen } from 'react-icons/fa6'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -18,6 +19,7 @@ export default function Header() {
   const unread = useUnreadCount(announcements.map((a) => a.id))
   const hasReminders = useHasAnyReminder()
   const theme = useTheme()
+  const nextTheme = getNextTheme(theme)
 
   const closeMenu = () => setMenuOpen(false)
 
@@ -167,10 +169,15 @@ export default function Header() {
             <button
               className="nav-theme-btn"
               onClick={() => { toggleTheme(); closeMenu() }}
-              title={theme === 'light' ? 'Tryb ciemny' : 'Tryb jasny'}
+              title={`${themeLabels[nextTheme]} (teraz: ${themeLabels[theme].toLowerCase()})`}
             >
-              {theme === 'light' ? <FaMoon /> : <FaSun />}
-              <span className="nav-theme-label">{theme === 'light' ? 'Tryb ciemny' : 'Tryb jasny'}</span>
+              {/* Keyed by theme, so the icon replays its entrance animation on every switch. */}
+              <span className="nav-theme-icon" key={theme} aria-hidden="true">
+                {nextTheme === 'dark' && <FaMoon />}
+                {nextTheme === 'sepia' && <FaBookOpen />}
+                {nextTheme === 'light' && <FaSun />}
+              </span>
+              <span className="nav-theme-label">{themeLabels[nextTheme]}</span>
             </button>
           </li>
           <li className="nav-about-item">

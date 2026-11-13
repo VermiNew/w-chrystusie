@@ -2,17 +2,36 @@ import { useSyncExternalStore } from 'react'
 import { readStorage, writeStorage } from './storage'
 
 const STORAGE_KEY = 'theme'
-type Theme = 'light' | 'dark'
+export type Theme = 'light' | 'dark' | 'sepia'
+
+// The theme button cycles through the themes in this order.
+const THEME_ORDER: Theme[] = ['light', 'dark', 'sepia']
+
+export const themeLabels: Record<Theme, string> = {
+  light: 'Tryb jasny',
+  dark: 'Tryb ciemny',
+  sepia: 'Tryb sepii',
+}
+
+// Browser UI color (address bar on Android) — matches --color-header-bg of each theme.
+const themeColors: Record<Theme, string> = {
+  light: '#1a3a5c',
+  dark: '#1a3a5c',
+  sepia: '#5a3a1e',
+}
+
+export const getNextTheme = (theme: Theme): Theme => THEME_ORDER[(THEME_ORDER.indexOf(theme) + 1) % THEME_ORDER.length]
 
 function getStoredTheme(): Theme {
   const stored = readStorage(STORAGE_KEY)
-  if (stored === 'dark' || stored === 'light') return stored
+  if (stored === 'dark' || stored === 'light' || stored === 'sepia') return stored
   // Respect OS preference
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 }
 
 function applyTheme(theme: Theme) {
   document.documentElement.setAttribute('data-theme', theme)
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', themeColors[theme])
 }
 
 let listeners: (() => void)[] = []
@@ -56,8 +75,9 @@ function applyThemeWithTransition(theme: Theme) {
   }, 260)
 }
 
+/** Switches to the next theme: light → dark → sepia → light. */
 export function toggleTheme() {
-  snapshot = snapshot === 'light' ? 'dark' : 'light'
+  snapshot = getNextTheme(snapshot)
   writeStorage(STORAGE_KEY, snapshot)
   applyThemeWithTransition(snapshot)
   notify()
