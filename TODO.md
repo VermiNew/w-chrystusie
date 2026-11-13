@@ -303,7 +303,8 @@
 - [ ] Przy imporcie zachować dokładny URL każdej pozycji, kategorię, autora i informację o pochodzeniu
 - [ ] Znormalizować polskie znaki, cudzysłowy, wielokrotne spacje, encje HTML i błędne kodowanie
 - [ ] Ręcznie sprawdzić każdą serię importu pod kątem kompletności, duplikatów, jakości językowej i zgodności doktrynalnej
-- [ ] Rozbudować filtry o typ treści: koronka, litania, nowenna, psalm, pieśń, rozważanie i modlitwa okolicznościowa
+- [x] Filtr rodzaju modlitwy na `/modlitwy` (litanie, nowenny, koronki, akty, drogi krzyżowe, hymny, pozostałe) — z tytułu, przyciski z liczbą pozycji
+- [ ] Dalsze typy treści w filtrach (psalm, pieśń, rozważanie, modlitwa okolicznościowa) — wymagają pola `type` w frontmatter
 
 ## Do zrobienia — kalendarz liturgiczny i czytania na dziś
 
