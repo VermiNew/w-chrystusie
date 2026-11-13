@@ -1,0 +1,3416 @@
+{
+  "prayers": [
+    {
+      "id": "Akt całkowitego oddania Jezusowi",
+      "title": "Akt całkowitego oddania Jezusowi",
+      "category": "Akty i ofiarowania"
+    },
+    {
+      "id": "Akt codziennego ofiarowania — o. Wenanty Katarzyniec",
+      "title": "Akt codziennego ofiarowania — o. Wenanty Katarzyniec",
+      "category": "Akty i ofiarowania"
+    },
+    {
+      "id": "Akt Komunii Świętej duchowej",
+      "title": "Akt Komunii Świętej duchowej",
+      "category": "Sakramenty"
+    },
+    {
+      "id": "Akt miłosierdzia za dusze w czyśćcu cierpiące",
+      "title": "Akt miłosierdzia za dusze w czyśćcu cierpiące",
+      "category": "Modlitwy za zmarłych"
+    },
+    {
+      "id": "Akt miłości — św. Jana Marii Vianneya",
+      "title": "Akt miłości — św. Jana Marii Vianneya",
+      "category": "Akty i ofiarowania"
+    },
+    {
+      "id": "Akt miłości",
+      "title": "Akt miłości",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Akt nadziei",
+      "title": "Akt nadziei",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Akt oddania się Bożemu Miłosierdziu",
+      "title": "Akt oddania się Bożemu Miłosierdziu",
+      "category": "Akty i ofiarowania"
+    },
+    {
+      "id": "Akt oddania życia Jezusowi",
+      "title": "Akt oddania życia Jezusowi",
+      "category": "Akty i ofiarowania"
+    },
+    {
+      "id": "Akt ofiarowania — wieczorny",
+      "title": "Akt ofiarowania — wieczorny",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Akt ofiarowania bł. Marii od Jezusa",
+      "title": "Akt ofiarowania bł. Marii od Jezusa",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Akt ofiarowania się Bogu św. o. St. Papczyńskiego",
+      "title": "Akt ofiarowania się Bogu św. o. St. Papczyńskiego",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Akt osobistego oddania się Matce Bożej — kard. Wyszyński",
+      "title": "Akt osobistego oddania się Matce Bożej — kard. Wyszyński",
+      "category": "Modlitwy maryjne"
+    },
+    {
+      "id": "Akt poświęcenia rodzaju ludzkiego Najświętszemu Sercu Pana Jezusa",
+      "title": "Akt poświęcenia rodzaju ludzkiego Najświętszemu Sercu Pana Jezusa",
+      "category": "Akty i ofiarowania"
+    },
+    {
+      "id": "Akt Wiary, Nadziei, Miłości i Żalu",
+      "title": "Akt Wiary, Nadziei, Miłości i Żalu",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Akt wiary",
+      "title": "Akt wiary",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Akt wyrzeczenia się (krótki)",
+      "title": "Akt wyrzeczenia się (krótki)",
+      "category": "Akty i ofiarowania"
+    },
+    {
+      "id": "Akt zawierzenia Matce Bożej Fatimskiej",
+      "title": "Akt zawierzenia Matce Bożej Fatimskiej",
+      "category": "Modlitwy maryjne"
+    },
+    {
+      "id": "Akt żalu",
+      "title": "Akt żalu",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Akty ufności (św. Faustyna)",
+      "title": "Akty ufności (św. Faustyna)",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Aniele Boży, Stróżu Mój",
+      "title": "Aniele Boży, Stróżu Mój",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Anioł Pański",
+      "title": "Anioł Pański",
+      "category": "Modlitwy maryjne"
+    },
+    {
+      "id": "Bądź pochwalony, Panie Jezu Chryste",
+      "title": "Bądź pochwalony, Panie Jezu Chryste",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Biblijna Droga Krzyżowa",
+      "title": "Biblijna Droga Krzyżowa",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Błogosławieństwo Matki Bożej Szkaplerznej",
+      "title": "Błogosławieństwo Matki Bożej Szkaplerznej",
+      "category": "Modlitwy do Matki Bożej Szkaplerznej"
+    },
+    {
+      "id": "Błogosławieństwo w podróży",
+      "title": "Błogosławieństwo w podróży",
+      "category": "Modlitwy w podróży"
+    },
+    {
+      "id": "Boże mój i Ojcze!",
+      "title": "Boże mój i Ojcze!",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Chwała Duchowi Świętemu",
+      "title": "Chwała Duchowi Świętemu",
+      "category": "Modlitwy do Ducha Świętego"
+    },
+    {
+      "id": "Chwała Karmelu",
+      "title": "Chwała Karmelu",
+      "category": "Modlitwy do Matki Bożej Szkaplerznej"
+    },
+    {
+      "id": "Chwała Ojcu",
+      "title": "Chwała Ojcu",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Codzienne ofiarowanie",
+      "title": "Codzienne ofiarowanie",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Cztery cnoty kardynalne",
+      "title": "Cztery cnoty kardynalne",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Do trzech Archaniołów",
+      "title": "Do trzech Archaniołów",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Droga Krzyżowa — kard. Ratzinger",
+      "title": "Droga Krzyżowa — kard. Ratzinger",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Droga Krzyżowa — rozważania małżonków z Domowego Kościoła",
+      "title": "Droga Krzyżowa — rozważania małżonków z Domowego Kościoła",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Droga Krzyżowa — zapowiedzi mesjańskie",
+      "title": "Droga Krzyżowa — zapowiedzi mesjańskie",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Droga Krzyżowa dla małżonków",
+      "title": "Droga Krzyżowa dla małżonków",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Droga Krzyżowa dla młodzieży",
+      "title": "Droga Krzyżowa dla młodzieży",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Droga Krzyżowa inspirowana psalmami",
+      "title": "Droga Krzyżowa inspirowana psalmami",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Droga Krzyżowa o czystość",
+      "title": "Droga Krzyżowa o czystość",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Droga Krzyżowa wg wizji bł. Katarzyny Emmerich",
+      "title": "Droga Krzyżowa wg wizji bł. Katarzyny Emmerich",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Droga Krzyżowa z Aniołami",
+      "title": "Droga Krzyżowa z Aniołami",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Droga Krzyżowa za kapłanów",
+      "title": "Droga Krzyżowa za kapłanów",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Droga Krzyżowa ze św. Janem od Krzyża",
+      "title": "Droga Krzyżowa ze św. Janem od Krzyża",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Droga Krzyżowa ze św. Teresą od Jezusa",
+      "title": "Droga Krzyżowa ze św. Teresą od Jezusa",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Droga Krzyżowa ze Świętymi Karmelu",
+      "title": "Droga Krzyżowa ze Świętymi Karmelu",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Duchowa adopcja dziecka poczętego - codzienna modlitwa",
+      "title": "Duchowa adopcja dziecka poczętego — codzienna modlitwa",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Duchu Najświętszy",
+      "title": "Duchu Najświętszy",
+      "category": "Modlitwy do Ducha Świętego"
+    },
+    {
+      "id": "Duszo Chrystusowa",
+      "title": "Duszo Chrystusowa",
+      "category": "Sakramenty"
+    },
+    {
+      "id": "Dwa przykazania miłości",
+      "title": "Dwa przykazania miłości",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Dwanaście obietnic Najświętszego Serca Pana Jezusa",
+      "title": "Dwanaście obietnic Najświętszego Serca Pana Jezusa",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Dwanaście owoców Ducha Świętego",
+      "title": "Dwanaście owoców Ducha Świętego",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Dziesięć przykazań Bożych",
+      "title": "Dziesięć przykazań Bożych",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Egzorcyzmy prywatne (krótkie)",
+      "title": "Egzorcyzmy prywatne (krótkie)",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Główne Prawdy Wiary",
+      "title": "Główne Prawdy Wiary",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Gorzkie żale - Całość",
+      "title": "Gorzkie żale - Całość",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Grzechy wołające o pomstę do nieba",
+      "title": "Grzechy wołające o pomstę do nieba",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Hymn do Boga — św. Grzegorz z Nazjanzu",
+      "title": "Hymn do Boga — św. Grzegorz z Nazjanzu",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Hymn do Ducha Świętego",
+      "title": "Hymn do Ducha Świętego (Veni Creator Spiritus)",
+      "category": "Modlitwy do Ducha Świętego"
+    },
+    {
+      "id": "Hymn do Królowej Polski",
+      "title": "Hymn do Królowej Polski",
+      "category": "Modlitwy maryjne"
+    },
+    {
+      "id": "Hymn dziękczynny po Komunii świętej",
+      "title": "Hymn dziękczynny po Komunii świętej",
+      "category": "Sakramenty"
+    },
+    {
+      "id": "Hymn ku czci Najświętszej Eucharystii — św. Faustyna",
+      "title": "Hymn ku czci Najświętszej Eucharystii — św. Faustyna",
+      "category": "Sakramenty"
+    },
+    {
+      "id": "Hymn poranny — św. Ambroży",
+      "title": "Hymn poranny — św. Ambroży",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Hymn za zmarłych",
+      "title": "Hymn za zmarłych",
+      "category": "Modlitwy za zmarłych"
+    },
+    {
+      "id": "Jak prawdziwie z sercem odmówić różaniec",
+      "title": "Jak prawdziwie z sercem odmówić różaniec",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Już nastał poranek",
+      "title": "Już nastał poranek",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Koronka 10 cnót ewangelicznych Najświętszej Maryi Panny",
+      "title": "Koronka 10 cnót ewangelicznych Najświętszej Maryi Panny",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Ducha Świętego",
+      "title": "Koronka do Ducha Świętego",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Dzieciątka Jezus za poczęte dzieci",
+      "title": "Koronka do Dzieciątka Jezus za poczęte dzieci",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Jezusa Chrystusa Króla",
+      "title": "Koronka do Jezusa Chrystusa Króla",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Jezusa Zmartwychwstałego",
+      "title": "Koronka do Jezusa Zmartwychwstałego",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Krwawych Łez Matki Bożej",
+      "title": "Koronka do Krwawych Łez Matki Bożej",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Matki Bożej Łaskawej",
+      "title": "Koronka do Matki Bożej Łaskawej",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Matki Bożej Miłosierdzia",
+      "title": "Koronka do Matki Bożej Miłosierdzia",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Matki Bożej Nieustającej Pomocy",
+      "title": "Koronka do Matki Bożej Nieustającej Pomocy",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Matki Bożej Uzdrowienie Chorych",
+      "title": "Koronka do Matki Bożej Uzdrowienie Chorych",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Najsłodszego Serca Jezusowego",
+      "title": "Koronka do Najsłodszego Serca Jezusowego",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Najświętszego Serca Pana Jezusa",
+      "title": "Koronka do Najświętszego Serca Pana Jezusa",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Najświętszej Rodziny",
+      "title": "Koronka do Najświętszej Rodziny",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Najświętszej Trójcy",
+      "title": "Koronka do Najświętszej Trójcy",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Najświętszych Ran Pana Jezusa",
+      "title": "Koronka do Najświętszych Ran Pana Jezusa",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Opatrzności Bożej",
+      "title": "Koronka do Opatrzności Bożej",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Płomienia Miłości Niepokalanego Serca Maryi",
+      "title": "Koronka do Płomienia Miłości Niepokalanego Serca Maryi",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Przemienienia Pańskiego",
+      "title": "Koronka do Przemienienia Pańskiego",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Serca Jezusowego za wstawiennictwem św. Judy Tadeusza",
+      "title": "Koronka do Serca Jezusowego za wstawiennictwem św. Judy Tadeusza",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Sprawiedliwości",
+      "title": "Koronka do Sprawiedliwości",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do św. Agaty",
+      "title": "Koronka do św. Agaty",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do św. Benedykta",
+      "title": "Koronka do św. Benedykta",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do św. Faustyny o wierne spełnianie Woli Bożej",
+      "title": "Koronka do św. Faustyny o wierne spełnianie Woli Bożej",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do św. Jana Apostoła i Ewangelisty",
+      "title": "Koronka do św. Jana Apostoła i Ewangelisty",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do św. Michała Archanioła i chórów anielskich",
+      "title": "Koronka do św. Michała Archanioła i chórów anielskich",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka do Świętej Rodziny o wprowadzanie pokoju do rodzin",
+      "title": "Koronka do Świętej Rodziny o wprowadzanie pokoju do rodzin",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka dziecięctwa duchowego św. Tereski z Lisieux",
+      "title": "Koronka dziecięctwa duchowego św. Tereski z Lisieux",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka Jedności",
+      "title": "Koronka Jedności",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka ku czci Ducha Świętego",
+      "title": "Koronka ku czci Ducha Świętego",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka Miłości",
+      "title": "Koronka Miłości",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka na cześć św. Józefa",
+      "title": "Koronka na cześć św. Józefa",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka o zwycięstwo nad szatanem",
+      "title": "Koronka o zwycięstwo nad szatanem",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka ofiarowania Boskiej Krwi",
+      "title": "Koronka ofiarowania Boskiej Krwi",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka Oto jestem",
+      "title": "Koronka „Oto jestem\"",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka św. Filipa Neri",
+      "title": "Koronka św. Filipa Neri",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka uwielbienia Chrystusa Króla",
+      "title": "Koronka uwielbienia Chrystusa Króla",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka uwielbienia Oblicza Boga Ojca",
+      "title": "Koronka uwielbienia Oblicza Boga Ojca",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka w sprawach najtrudniejszych do św. Judy Tadeusza",
+      "title": "Koronka w sprawach najtrudniejszych do św. Judy Tadeusza",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka wyrzeczenia się zła i napełnienia Duchem Świętym",
+      "title": "Koronka wyrzeczenia się zła i napełnienia Duchem Świętym",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka wyzwolenia",
+      "title": "Koronka wyzwolenia",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka za zmarłych do Serca Maryi",
+      "title": "Koronka za zmarłych do Serca Maryi",
+      "category": "Koronki"
+    },
+    {
+      "id": "Koronka Zbawienia",
+      "title": "Koronka Zbawienia",
+      "category": "Koronki"
+    },
+    {
+      "id": "Królowa i Ozdoba Karmelu",
+      "title": "Królowa i Ozdoba Karmelu",
+      "category": "Modlitwy do Matki Bożej Szkaplerznej"
+    },
+    {
+      "id": "Litania do Anioła Stróża",
+      "title": "Litania do Anioła Stróża",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Litania do bł. Bolesławy Lament",
+      "title": "Litania do bł. Bolesławy Lament",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do bł. Edmunda Bojanowskiego",
+      "title": "Litania do bł. Edmunda Bojanowskiego",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do bł. Fryderyka Ozanama",
+      "title": "Litania do bł. Fryderyka Ozanama",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do bł. Gwidona z Montpellier",
+      "title": "Litania do bł. Gwidona z Montpellier",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do bł. Honorata Koźmińskiego",
+      "title": "Litania do bł. Honorata Koźmińskiego",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do bł. Jana Beyzyma SJ",
+      "title": "Litania do bł. Jana Beyzyma SJ",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do bł. Jerzego Popiełuszki",
+      "title": "Litania do bł. Jerzego Popiełuszki",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do bł. kardynała Stefana Wyszyńskiego",
+      "title": "Litania do bł. kardynała Stefana Wyszyńskiego",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do bł. Karoliny Kózkówny",
+      "title": "Litania do bł. Karoliny Kózkówny",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do bł. Marii Angeli Truszkowskiej",
+      "title": "Litania do bł. Marii Angeli Truszkowskiej",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do bł. Marii Luizy Merkert",
+      "title": "Litania do bł. Marii Luizy Merkert",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do bł. Michała Czartoryskiego OP",
+      "title": "Litania do bł. Michała Czartoryskiego OP",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do bł. Michała Sopoćki",
+      "title": "Litania do bł. Michała Sopoćki",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do bł. Rafała Chylińskiego",
+      "title": "Litania do bł. O. Rafała Chylińskiego",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do bł. Salomei",
+      "title": "Litania do bł. Salomei",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do bł. Wincentego Kadłubka",
+      "title": "Litania do bł. Wincentego Kadłubka",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do błogosławionych Męczenników z Pratulina",
+      "title": "Litania do błogosławionych Męczenników z Pratulina",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do Boga Ojca",
+      "title": "Litania do Boga Ojca",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Chrystusa Kapłana i Ofiary",
+      "title": "Litania do Chrystusa Kapłana i Ofiary",
+      "category": "Modlitwy za bliźnich"
+    },
+    {
+      "id": "Litania do Chrystusa Króla Miłości",
+      "title": "Litania do Chrystusa Króla Miłości",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Ducha Świętego II",
+      "title": "Litania do Ducha Świętego II",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Ducha Świętego",
+      "title": "Litania do Ducha Świętego",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Dzieciątka Jezus",
+      "title": "Litania do Dzieciątka Jezus",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do imienia Jezus",
+      "title": "Litania do imienia Jezus",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Imienia Maryi",
+      "title": "Litania do Imienia Maryi",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Krzyża Świętego",
+      "title": "Litania do Krzyża Świętego",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Matki Boskiej Nieustającej Pomocy",
+      "title": "Litania do Matki Boskiej Nieustającej Pomocy",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Matki Boskiej Szkaplerznej",
+      "title": "Litania do Matki Boskiej Szkaplerznej",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Matki Bożej Bolesnej",
+      "title": "Litania do Matki Bożej Bolesnej",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Matki Bożej Jasnogórskiej",
+      "title": "Litania do Matki Bożej Jasnogórskiej",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Matki Bożej z Guadalupe",
+      "title": "Litania do Matki Bożej z Guadalupe",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Męczenników i Świętych z katakumb św. Kaliksta",
+      "title": "Litania do Męczenników i Świętych z katakumb św. Kaliksta",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Miłosierdzia Bożego",
+      "title": "Litania do Miłosierdzia Bożego",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Najdroższej Krwi Pana Jezusa",
+      "title": "Litania do Najdroższej Krwi Pana Jezusa",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Najświętszego Sakramentu",
+      "title": "Litania do Najświętszego Sakramentu",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Najświętszego Serca Pana Jezusa",
+      "title": "Litania do Najświętszego Serca Pana Jezusa",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Niepokalanego Serca Maryi",
+      "title": "Litania do Niepokalanego Serca Maryi",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Oblicza Jezusa",
+      "title": "Litania do Oblicza Jezusa",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Przenajświętszego Sakramentu",
+      "title": "Litania do Przenajświętszego Sakramentu",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do św. Andrzeja Boboli",
+      "title": "Litania do św. Andrzeja Boboli",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do św. Antoniego z Padwy",
+      "title": "Litania do św. Antoniego z Padwy",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do św. Benedykta",
+      "title": "Litania do św. Benedykta",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do św. Brygidy Szwedzkiej",
+      "title": "Litania do św. Brygidy Szwedzkiej, patronki Europy",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do św. Charbela",
+      "title": "Litania do św. Charbela",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do św. Ekspedyta",
+      "title": "Litania do św. Ekspedyta",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do św. Jadwigi Śląskiej",
+      "title": "Litania do św. Jadwigi Śląskiej",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do św. Jana Pawła II",
+      "title": "Litania do św. Jana Pawła II",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do św. Krzysztofa",
+      "title": "Litania do św. Krzysztofa",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do św. Lidii",
+      "title": "Litania do św. Lidii",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do św. Maksymiliana Marii Kolbego",
+      "title": "Litania do św. Maksymiliana Marii Kolbego",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do św. Matki Teresy z Kalkuty",
+      "title": "Litania do św. Matki Teresy z Kalkuty",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do św. Michała Archanioła",
+      "title": "Litania do św. Michała Archanioła",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do św. Mikołaja",
+      "title": "Litania do św. Mikołaja",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do św. Moniki",
+      "title": "Litania do św. Moniki w intencji dzieci",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do św. O. Pio",
+      "title": "Litania do św. O. Pio",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do św. Pawła",
+      "title": "Litania do św. Pawła",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do św. Rity",
+      "title": "Litania do św. Rity",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do św. Stanisława biskupa i męczennika",
+      "title": "Litania do św. Stanisława biskupa i męczennika",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do św. Stanisława Kostki",
+      "title": "Litania do św. Stanisława Kostki",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do św. Teresy od Dzieciątka Jezus",
+      "title": "Litania do św. Teresy od Dzieciątka Jezus",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do św. Urszuli Ledóchowskiej",
+      "title": "Litania do św. Urszuli Ledóchowskiej",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do św. Wojciecha",
+      "title": "Litania do św. Wojciecha",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Litania do św. Zygmunta Szczęsnego Felińskiego",
+      "title": "Litania do św. Zygmunta Szczęsnego Felińskiego",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Świętego Józefa",
+      "title": "Litania do Świętego Józefa",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Świętej Rodziny",
+      "title": "Litania do Świętej Rodziny",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Litania do Świętych",
+      "title": "Litania do Świętych",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania do Wszystkich Świętych",
+      "title": "Litania do Wszystkich Świętych",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania Loretańska do Najświętszej Maryi Panny",
+      "title": "Litania Loretańska do Najświętszej Maryi Panny",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania Narodu Polskiego",
+      "title": "Litania Narodu Polskiego",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania za dusze czyśccowe",
+      "title": "Litania za dusze czyśćcowe",
+      "category": "Litanie"
+    },
+    {
+      "id": "Litania za zmarłych",
+      "title": "Litania za zmarłych",
+      "category": "Litanie"
+    },
+    {
+      "id": "Magnificat",
+      "title": "Magnificat",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Mała Koronka do Świętej Rodziny",
+      "title": "Mała Koronka do Świętej Rodziny",
+      "category": "Koronki"
+    },
+    {
+      "id": "Mistrzyni Karmelu i Matka nasza",
+      "title": "Mistrzyni Karmelu i Matka nasza",
+      "category": "Modlitwy do Matki Bożej Szkaplerznej"
+    },
+    {
+      "id": "Modlitwa Anioła z Fatimy",
+      "title": "Modlitwa Anioła z Fatimy",
+      "category": "Akty i ofiarowania"
+    },
+    {
+      "id": "Modlitwa błagalna do Matki Bożej Bolesnej",
+      "title": "Modlitwa błagalna do Matki Bożej Bolesnej",
+      "category": "Modlitwy maryjne"
+    },
+    {
+      "id": "Modlitwa Charlesa de Foucauld",
+      "title": "Modlitwa Charlesa de Foucauld",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa codzienna do Matki Bożej Szkaplerznej",
+      "title": "Modlitwa codzienna do Matki Bożej Szkaplerznej",
+      "category": "Modlitwy do Matki Bożej Szkaplerznej"
+    },
+    {
+      "id": "Modlitwa codzienna do św. Józefa",
+      "title": "Modlitwa codzienna do św. Józefa",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Modlitwa codziennego ofiarowania",
+      "title": "Modlitwa codziennego ofiarowania",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Modlitwa do Ducha Świętego za kapłanów",
+      "title": "Modlitwa do Ducha Świętego za kapłanów",
+      "category": "Modlitwy za bliźnich"
+    },
+    {
+      "id": "Modlitwa do Matki Bożej o pokonanie szatana",
+      "title": "Modlitwa do Matki Bożej o pokonanie szatana",
+      "category": "Modlitwy maryjne"
+    },
+    {
+      "id": "Modlitwa do Matki Bożej Szkaplerznej (Błogosławiona Dziewico Niepokalana)",
+      "title": "Modlitwa do Matki Bożej Szkaplerznej (Błogosławiona Dziewico Niepokalana)",
+      "category": "Modlitwy do Matki Bożej Szkaplerznej"
+    },
+    {
+      "id": "Modlitwa do Matki Bożej Szkaplerznej (Orędowniczka Szkaplerza)",
+      "title": "Modlitwa do Matki Bożej Szkaplerznej (Orędowniczka Szkaplerza)",
+      "category": "Modlitwy do Matki Bożej Szkaplerznej"
+    },
+    {
+      "id": "Modlitwa do Matki Bożej Szkaplerznej Pośredniczki łask",
+      "title": "Modlitwa do Matki Bożej Szkaplerznej Pośredniczki łask",
+      "category": "Modlitwy do Matki Bożej Szkaplerznej"
+    },
+    {
+      "id": "Modlitwa do Matki Bożej z Góry Karmel",
+      "title": "Modlitwa do Matki Bożej z Góry Karmel",
+      "category": "Modlitwy do Matki Bożej Szkaplerznej"
+    },
+    {
+      "id": "Modlitwa do św. Charbela",
+      "title": "Modlitwa do św. Charbela",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Modlitwa do św. Floriana",
+      "title": "Modlitwa do św. Floriana",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Modlitwa do św. Hieronima o dar rozważania Słowa Bożego",
+      "title": "Modlitwa do św. Hieronima o dar rozważania Słowa Bożego",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Modlitwa do św. Jana Chrzciciela de Rossi o dobrą spowiedź",
+      "title": "Modlitwa do św. Jana Chrzciciela de Rossi o dobrą spowiedź",
+      "category": "Sakramenty"
+    },
+    {
+      "id": "Modlitwa do św. Jerzego",
+      "title": "Modlitwa do św. Jerzego",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Modlitwa do św. Józefa patrona Kościoła",
+      "title": "Modlitwa do św. Józefa patrona Kościoła",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Modlitwa do św. Judy Tadeusza",
+      "title": "Modlitwa do św. Judy Tadeusza",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Modlitwa do św. Rity",
+      "title": "Modlitwa do św. Rity",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Modlitwa do Świętej Rodziny",
+      "title": "Modlitwa do Świętej Rodziny",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Modlitwa dzieci za rodziców",
+      "title": "Modlitwa dzieci za rodziców",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Modlitwa dziękczynna (św. Faustyna)",
+      "title": "Modlitwa dziękczynna (św. Faustyna)",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa Jana Pawła II o dary Ducha Świętego",
+      "title": "Modlitwa Jana Pawła II o dary Ducha Świętego",
+      "category": "Modlitwy do Ducha Świętego"
+    },
+    {
+      "id": "Modlitwa Jezusowa",
+      "title": "Modlitwa Jezusowa",
+      "category": "Akty i ofiarowania"
+    },
+    {
+      "id": "Modlitwa kierowcy",
+      "title": "Modlitwa kierowcy",
+      "category": "Modlitwy w podróży"
+    },
+    {
+      "id": "Modlitwa kobiety oczekującej potomstwa (św. Rity)",
+      "title": "Modlitwa kobiety oczekującej potomstwa (św. Rity)",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Modlitwa matki oczekującej potomstwa",
+      "title": "Modlitwa matki oczekującej potomstwa",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Modlitwa matki",
+      "title": "Modlitwa matki",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Modlitwa na koniec dnia",
+      "title": "Modlitwa na koniec dnia",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Modlitwa nowenny o zdrowie",
+      "title": "Modlitwa nowenny o zdrowie",
+      "category": "Modlitwy o zdrowie"
+    },
+    {
+      "id": "Modlitwa o błogosławieństwo domowe",
+      "title": "Modlitwa o błogosławieństwo domowe",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Modlitwa o dobrą śmierć",
+      "title": "Modlitwa o dobrą śmierć",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa o dobrego męża & żonę (do św. Józefa)",
+      "title": "Modlitwa o dobrego męża & żonę (do św. Józefa)",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Modlitwa o dobrego męża i dobrą żonę",
+      "title": "Modlitwa o dobrego męża i dobrą żonę",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Modlitwa o jedność w rodzinach",
+      "title": "Modlitwa o jedność w rodzinach",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Modlitwa o łaskę pełnienia miłosierdzia względem bliźnich",
+      "title": "Modlitwa o łaskę pełnienia miłosierdzia względem bliźnich",
+      "category": "Modlitwy za bliźnich"
+    },
+    {
+      "id": "Modlitwa o łaskę przebaczenia",
+      "title": "Modlitwa o łaskę przebaczenia",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa o mądrość Bożą (św. Faustyna)",
+      "title": "Modlitwa o mądrość Bożą (św. Faustyna)",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa o miłość Bożą (św. Faustyna)",
+      "title": "Modlitwa o miłość Bożą (św. Faustyna)",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa o nawrócenie dziecka — św. Monika",
+      "title": "Modlitwa o nawrócenie dziecka — św. Monika",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Modlitwa o nawrócenie grzeszników — św. O. Pio",
+      "title": "Modlitwa o nawrócenie grzeszników — św. O. Pio",
+      "category": "Modlitwy za bliźnich"
+    },
+    {
+      "id": "Modlitwa o pokój serca",
+      "title": "Modlitwa o pokój serca",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa o pokój w rodzinie",
+      "title": "Modlitwa o pokój w rodzinie",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Modlitwa o radość",
+      "title": "Modlitwa o radość",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa o siedem darów Ducha Świętego",
+      "title": "Modlitwa o siedem darów Ducha Świętego",
+      "category": "Modlitwy do Ducha Świętego"
+    },
+    {
+      "id": "Modlitwa o szczęśliwą podróż",
+      "title": "Modlitwa o szczęśliwą podróż",
+      "category": "Modlitwy w podróży"
+    },
+    {
+      "id": "Modlitwa o szczęśliwy wybór stanu",
+      "title": "Modlitwa o szczęśliwy wybór stanu",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa o śmierć szczęśliwą (św. Faustyna)",
+      "title": "Modlitwa o śmierć szczęśliwą (św. Faustyna)",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa o uproszenie łask za przyczyną św. Faustyny",
+      "title": "Modlitwa o uproszenie łask za przyczyną św. Faustyny",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Modlitwa o uzdrowienie z lęków, obaw i odrzucenia",
+      "title": "Modlitwa o uzdrowienie z lęków, obaw i odrzucenia",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa o uzdrowienie z nałogów",
+      "title": "Modlitwa o uzdrowienie z nałogów",
+      "category": "Modlitwy o zdrowie"
+    },
+    {
+      "id": "Modlitwa o uzdrowienie z raka",
+      "title": "Modlitwa o uzdrowienie z raka",
+      "category": "Modlitwy o zdrowie"
+    },
+    {
+      "id": "Modlitwa o uzdrowienie z złych myśli",
+      "title": "Modlitwa o uzdrowienie z złych myśli",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa o zdrowie dla bliskich",
+      "title": "Modlitwa o zdrowie dla bliskich",
+      "category": "Modlitwy o zdrowie"
+    },
+    {
+      "id": "Modlitwa o zdrowie dla dziecka do św. Rity",
+      "title": "Modlitwa o zdrowie dla dziecka do św. Rity",
+      "category": "Modlitwy o zdrowie"
+    },
+    {
+      "id": "Modlitwa o zdrowie do Matki Bożej",
+      "title": "Modlitwa o zdrowie do Matki Bożej",
+      "category": "Modlitwy o zdrowie"
+    },
+    {
+      "id": "Modlitwa o zdrowie w ciężkiej chorobie",
+      "title": "Modlitwa o zdrowie w ciężkiej chorobie",
+      "category": "Modlitwy o zdrowie"
+    },
+    {
+      "id": "Modlitwa o zdrowie",
+      "title": "Modlitwa o zdrowie",
+      "category": "Modlitwy o zdrowie"
+    },
+    {
+      "id": "Modlitwa o. Tomasza Mertona",
+      "title": "Modlitwa o. Tomasza Mertona",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa osoby samotnej",
+      "title": "Modlitwa osoby samotnej",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa pielgrzyma",
+      "title": "Modlitwa pielgrzyma",
+      "category": "Modlitwy w podróży"
+    },
+    {
+      "id": "Modlitwa poranna — Kard. Suenens",
+      "title": "Modlitwa poranna — Kard. Suenens",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Modlitwa poranna II",
+      "title": "Modlitwa poranna II",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Modlitwa poranna III",
+      "title": "Modlitwa poranna III",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Modlitwa poranna V",
+      "title": "Modlitwa poranna V",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Modlitwa poranna VI",
+      "title": "Modlitwa poranna VI",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Modlitwa poranna VII",
+      "title": "Modlitwa poranna VII",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Modlitwa poranna VIII",
+      "title": "Modlitwa poranna VIII",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Modlitwa przebaczenia",
+      "title": "Modlitwa przebaczenia",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa przeciw złym i natrętnym myślom",
+      "title": "Modlitwa przeciw złym i natrętnym myślom",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa św. Faustyny za kapłanów",
+      "title": "Modlitwa św. Faustyny za kapłanów",
+      "category": "Modlitwy za bliźnich"
+    },
+    {
+      "id": "Modlitwa św. Franciszka",
+      "title": "Modlitwa św. Franciszka",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa św. Patryka",
+      "title": "Modlitwa św. Patryka",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa św. Teresy o uświęcenie kapłanów",
+      "title": "Modlitwa św. Teresy o uświęcenie kapłanów",
+      "category": "Modlitwy za bliźnich"
+    },
+    {
+      "id": "Modlitwa św. Tomasza z Akwinu po Komunii świętej",
+      "title": "Modlitwa św. Tomasza z Akwinu po Komunii świętej",
+      "category": "Sakramenty"
+    },
+    {
+      "id": "Modlitwa ufności (św. Faustyna)",
+      "title": "Modlitwa ufności (św. Faustyna)",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwa w kryzysie małżeńskim",
+      "title": "Modlitwa w kryzysie małżeńskim",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Modlitwa wyrzeczenia",
+      "title": "Modlitwa wyrzeczenia",
+      "category": "Akty i ofiarowania"
+    },
+    {
+      "id": "Modlitwa za chorego do Matki Bożej",
+      "title": "Modlitwa za chorego do Matki Bożej",
+      "category": "Modlitwy o zdrowie"
+    },
+    {
+      "id": "Modlitwa za dzieci",
+      "title": "Modlitwa za dzieci",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Modlitwa za kapłanów (Panie i Boże nasz)",
+      "title": "Modlitwa za kapłanów (Panie i Boże nasz)",
+      "category": "Modlitwy za bliźnich"
+    },
+    {
+      "id": "Modlitwa za kapłanów (przez wstawiennictwo św. Michała)",
+      "title": "Modlitwa za kapłanów (przez wstawiennictwo św. Michała)",
+      "category": "Modlitwy za bliźnich"
+    },
+    {
+      "id": "Modlitwa za kapłanów (Stwórco rodzaju ludzkiego)",
+      "title": "Modlitwa za kapłanów (Stwórco rodzaju ludzkiego)",
+      "category": "Modlitwy za bliźnich"
+    },
+    {
+      "id": "Modlitwa za kapłanów Pawła VI",
+      "title": "Modlitwa za kapłanów Pawła VI",
+      "category": "Modlitwy za bliźnich"
+    },
+    {
+      "id": "Modlitwa za kapłanów",
+      "title": "Modlitwa za kapłanów",
+      "category": "Modlitwy za bliźnich"
+    },
+    {
+      "id": "Modlitwa za narzeczoną",
+      "title": "Modlitwa za narzeczoną",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Modlitwa za narzeczonego",
+      "title": "Modlitwa za narzeczonego",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Modlitwa za Ojczyznę (św. Faustyna)",
+      "title": "Modlitwa za Ojczyznę (św. Faustyna)",
+      "category": "Modlitwy za bliźnich"
+    },
+    {
+      "id": "Modlitwa za rodziców",
+      "title": "Modlitwa za rodziców",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Modlitwa za ubogich świata",
+      "title": "Modlitwa za ubogich świata",
+      "category": "Modlitwy za bliźnich"
+    },
+    {
+      "id": "Modlitwa za wdowy (do św. Rity)",
+      "title": "Modlitwa za wdowy (do św. Rity)",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Modlitwa za wstawiennictwem bł. Jana Beyzyma SJ",
+      "title": "Modlitwa za wstawiennictwem bł. Jana Beyzyma SJ",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Modlitwa za wstawiennictwem bł. Marii Angeli Truszkowskiej",
+      "title": "Modlitwa za wstawiennictwem bł. Marii Angeli Truszkowskiej",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Modlitwa za wstawiennictwem św. Jana Vianneya",
+      "title": "Modlitwa za wstawiennictwem św. Jana Vianneya",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Modlitwa za zmarłego w rocznicę śmierci",
+      "title": "Modlitwa za zmarłego w rocznicę śmierci",
+      "category": "Modlitwy za zmarłych"
+    },
+    {
+      "id": "Modlitwa za zmarłego w rodzinie",
+      "title": "Modlitwa za zmarłego w rodzinie",
+      "category": "Modlitwy za zmarłych"
+    },
+    {
+      "id": "Modlitwa za zmarłych kapłanów",
+      "title": "Modlitwa za zmarłych kapłanów",
+      "category": "Modlitwy za zmarłych"
+    },
+    {
+      "id": "Modlitwa za zmarłych rodziców",
+      "title": "Modlitwa za zmarłych rodziców",
+      "category": "Modlitwy za zmarłych"
+    },
+    {
+      "id": "Modlitwa zawierzenia się Bożemu Miłosierdziu",
+      "title": "Modlitwa zawierzenia się Bożemu Miłosierdziu",
+      "category": "Akty i ofiarowania"
+    },
+    {
+      "id": "Modlitwy do Ducha Świętego którymi modlili się święci",
+      "title": "Modlitwy do Ducha Świętego, którymi modlili się święci",
+      "category": "Modlitwy do Ducha Świętego"
+    },
+    {
+      "id": "Modlitwy do Matki Bożej (św. Faustyna)",
+      "title": "Modlitwy do Matki Bożej (św. Faustyna)",
+      "category": "Modlitwy maryjne"
+    },
+    {
+      "id": "Modlitwy po posiłku",
+      "title": "Modlitwy po posiłku",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Modlitwy przed posiłkiem",
+      "title": "Modlitwy przed posiłkiem",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Modlitwy w cierpieniu (św. Faustyna)",
+      "title": "Modlitwy w cierpieniu (św. Faustyna)",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Modlitwy za grzeszników (św. Faustyna)",
+      "title": "Modlitwy za grzeszników (św. Faustyna)",
+      "category": "Modlitwy za bliźnich"
+    },
+    {
+      "id": "Modlitwy za osoby poszukujące męża żony",
+      "title": "Modlitwy za osoby poszukujące męża / żony",
+      "category": "Modlitwy za rodzinę"
+    },
+    {
+      "id": "Modlitwy za wstawiennictwem św. Marii Goretti",
+      "title": "Modlitwy za wstawiennictwem św. Marii Goretti",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Nabożeństwo Pierwszego Czwartku miesiąca",
+      "title": "Nabożeństwo Pierwszego Czwartku miesiąca",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Najważniejsze dobre uczynki",
+      "title": "Najważniejsze dobre uczynki",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Niepokalana Dziewica, Królowa Karmelu",
+      "title": "Niepokalana Dziewica, Królowa Karmelu",
+      "category": "Modlitwy do Matki Bożej Szkaplerznej"
+    },
+    {
+      "id": "Nowenna do Anioła Stróża",
+      "title": "Nowenna do Anioła Stróża",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do bł. Ignacego Kłopotowskiego",
+      "title": "Nowenna do bł. Ignacego Kłopotowskiego",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do bł. ks. Jerzego Popiełuszki",
+      "title": "Nowenna do bł. ks. Jerzego Popiełuszki",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do Chrystusa Króla",
+      "title": "Nowenna do Chrystusa Króla",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do Ducha Świętego (Veni Creator)",
+      "title": "Nowenna do Ducha Świętego (Veni Creator)",
+      "category": "Modlitwy do Ducha Świętego"
+    },
+    {
+      "id": "Nowenna do Ducha Świętego",
+      "title": "Nowenna do Ducha Świętego",
+      "category": "Modlitwy do Ducha Świętego"
+    },
+    {
+      "id": "Nowenna do Dzieciątka Jezus",
+      "title": "Nowenna do Dzieciątka Jezus",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do Jezusa w Najświętszej Eucharystii",
+      "title": "Nowenna do Jezusa w Najświętszej Eucharystii",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do Krwi Chrystusa",
+      "title": "Nowenna do Krwi Chrystusa",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do Matki Bożej rozwiązującej węzły",
+      "title": "Nowenna do Matki Bożej rozwiązującej węzły",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do Matki Bożej Szkaplerznej",
+      "title": "Nowenna do Matki Bożej Szkaplerznej",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do Matki Bożej Wniebowziętej",
+      "title": "Nowenna do Matki Bożej Wniebowziętej",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do Matki Bożej z Guadalupe",
+      "title": "Nowenna do Matki Bożej z Guadalupe",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do Matki Bożej z Lourdes",
+      "title": "Nowenna do Matki Bożej z Lourdes",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Andrzeja Boboli",
+      "title": "Nowenna do św. Andrzeja Boboli",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Antoniego z Padwy",
+      "title": "Nowenna do św. Antoniego z Padwy",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Apostołów Piotra i Pawła",
+      "title": "Nowenna do św. Apostołów Piotra i Pawła",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Brata Alberta",
+      "title": "Nowenna do św. Brata Alberta",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Dominika Savio",
+      "title": "Nowenna do św. Dominika Savio",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Elżbiety od Trójcy Przenajświętszej",
+      "title": "Nowenna do św. Elżbiety od Trójcy Przenajświętszej",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Franciszka z Asyżu",
+      "title": "Nowenna do św. Franciszka z Asyżu",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Gabriela Archanioła",
+      "title": "Nowenna do św. Gabriela Archanioła",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Ignacego Loyoli",
+      "title": "Nowenna do św. Ignacego Loyoli",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Jadwigi Królowej",
+      "title": "Nowenna do św. Jadwigi Królowej",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Jana Bosko",
+      "title": "Nowenna do św. Jana Bosko",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Jana Pawła II",
+      "title": "Nowenna do św. Jana Pawła II",
+      "category": "Modlitwy za wstawiennictwem świętych"
+    },
+    {
+      "id": "Nowenna do św. Joanny Beretty Moli",
+      "title": "Nowenna do św. Joanny Beretty Moli",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Józefa",
+      "title": "Nowenna do św. Józefa",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Judy Tadeusza",
+      "title": "Nowenna do św. Judy Tadeusza",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Katarzyny Aleksandryjskiej",
+      "title": "Nowenna do św. Katarzyny Aleksandryjskiej",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Katarzyny ze Sieny (I)",
+      "title": "Nowenna do św. Katarzyny ze Sieny (I)",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Katarzyny ze Sieny (II)",
+      "title": "Nowenna do św. Katarzyny ze Sieny (II)",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Kazimierza królewicza",
+      "title": "Nowenna do św. Kazimierza królewicza",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Klary",
+      "title": "Nowenna do św. Klary",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Krzysztofa",
+      "title": "Nowenna do św. Krzysztofa",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Maksymiliana Marii Kolbego",
+      "title": "Nowenna do św. Maksymiliana Marii Kolbego",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Marty, patronki bezrobotnych",
+      "title": "Nowenna do św. Marty, patronki bezrobotnych",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Michała Archanioła (wariant II)",
+      "title": "Nowenna do św. Michała Archanioła (wariant II)",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Michała Archanioła",
+      "title": "Nowenna do św. Michała Archanioła",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Ojca Pio",
+      "title": "Nowenna do św. Ojca Pio",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Rafała Archanioła",
+      "title": "Nowenna do św. Rafała Archanioła",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Rity",
+      "title": "Nowenna do św. Rity",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Stanisława Papczyńskiego",
+      "title": "Nowenna do św. Stanisława Papczyńskiego",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Szarbela",
+      "title": "Nowenna do św. Szarbela",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Teresy od Dzieciątka Jezus",
+      "title": "Nowenna do św. Teresy od Dzieciątka Jezus",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do św. Wojciecha, patrona Polski",
+      "title": "Nowenna do św. Wojciecha, patrona Polski",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do świętej Faustyny",
+      "title": "Nowenna do świętej Faustyny",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna do Trójcy Przenajświętszej za wstawiennictwem o. Wenantego Katarzyńca",
+      "title": "Nowenna do Trójcy Przenajświętszej za wstawiennictwem o. Wenantego Katarzyńca",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna ku czci Matki Bożej Fatimskiej",
+      "title": "Nowenna ku czci Matki Bożej Fatimskiej",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna Pompejańska",
+      "title": "Nowenna Pompejańska",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna przed Podwyższeniem Krzyża Świętego",
+      "title": "Nowenna przed Podwyższeniem Krzyża Świętego",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna przed Świętem Miłosierdzia Bożego",
+      "title": "Nowenna przed Świętem Miłosierdzia Bożego",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowenna przed Zesłaniem Ducha Świętego",
+      "title": "Nowenna przed Zesłaniem Ducha Świętego",
+      "category": "Modlitwy do Ducha Świętego"
+    },
+    {
+      "id": "Nowenna zawierzenia woli Bożej",
+      "title": "Nowenna zawierzenia woli Bożej",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Nowy dzień dajesz mi, Panie",
+      "title": "Nowy dzień dajesz mi, Panie",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "O miłosierdzie Boże dla świata całego",
+      "title": "O miłosierdzie Boże dla świata całego",
+      "category": "Modlitwy za bliźnich"
+    },
+    {
+      "id": "O uzdrowienie seksualności",
+      "title": "O uzdrowienie seksualności",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "O uzdrowienie z samobójczych myśli",
+      "title": "O uzdrowienie z samobójczych myśli",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Oddanie się Duchowi Świętemu w Sercu Maryi",
+      "title": "Oddanie się Duchowi Świętemu w Sercu Maryi",
+      "category": "Modlitwy do Matki Bożej Szkaplerznej"
+    },
+    {
+      "id": "Ofiarowanie",
+      "title": "Ofiarowanie",
+      "category": "Akty i ofiarowania"
+    },
+    {
+      "id": "Ojcze Nasz",
+      "title": "Ojcze Nasz",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Ojcze Niebieski — modlitwa wieczorna",
+      "title": "Ojcze Niebieski — modlitwa wieczorna",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Osiem błogosławieństw",
+      "title": "Osiem błogosławieństw",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Panie Boże Wszechmogący",
+      "title": "Panie Boże Wszechmogący",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Panie, otwórz oczy moje",
+      "title": "Panie, otwórz oczy moje",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Pięć Przykazań Kościelnych",
+      "title": "Pięć Przykazań Kościelnych",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Pochwalony bądź Panie Jezu Chryste",
+      "title": "Pochwalony bądź Panie Jezu Chryste",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Pod Twoją Obronę",
+      "title": "Pod Twoją Obronę",
+      "category": "Modlitwy maryjne"
+    },
+    {
+      "id": "Polecenie się Najśw. Pannie Maryi",
+      "title": "Polecenie się Najśw. Pannie Maryi",
+      "category": "Modlitwy do Matki Bożej Szkaplerznej"
+    },
+    {
+      "id": "Prośba o bezpieczną drogę",
+      "title": "Prośba o bezpieczną drogę",
+      "category": "Modlitwy w podróży"
+    },
+    {
+      "id": "Przed Najświętszym Sakramentem (św. Faustyna)",
+      "title": "Przed Najświętszym Sakramentem (św. Faustyna)",
+      "category": "Modlitwy osobiste"
+    },
+    {
+      "id": "Przed nauką religii",
+      "title": "Przed nauką religii",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Przygotowanie do spowiedzi",
+      "title": "Przygotowanie do spowiedzi",
+      "category": "Sakramenty"
+    },
+    {
+      "id": "Przykazanie Milosci",
+      "title": "Przykazanie Miłości",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Przykładowa Modlitwa na koniec dnia",
+      "title": "Przykładowa Modlitwa na koniec dnia",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Przykładowa modlitwa wieczorna",
+      "title": "Przykładowa modlitwa wieczorna",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Przykładowe Modlitwy poranne",
+      "title": "Przykładowe Modlitwy poranne",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Przykładowy pacierz",
+      "title": "Przykładowy pacierz",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Regina Caeli",
+      "title": "Regina Caeli",
+      "category": "Modlitwy maryjne"
+    },
+    {
+      "id": "Różaniec Świętej Teresy od Dzieciątka Jezus i Przenajświętszego Oblicza",
+      "title": "Różaniec Świętej Teresy od Dzieciątka Jezus i Przenajświętszego Oblicza",
+      "category": "Koronki"
+    },
+    {
+      "id": "Siedem cnót głównych",
+      "title": "Siedem cnót głównych",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Siedem darów Ducha Świętego",
+      "title": "Siedem darów Ducha Świętego",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Siedem grzechów głównych",
+      "title": "Siedem grzechów głównych",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Siedem sakramentów świętych",
+      "title": "Siedem sakramentów świętych",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Skład Apostolski",
+      "title": "Skład Apostolski",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Suplikacje",
+      "title": "Suplikacje",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Sześć grzechów przeciwko Duchowi Świętemu",
+      "title": "Sześć grzechów przeciwko Duchowi Świętemu",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Trzy cnoty Boskie",
+      "title": "Trzy cnoty Boskie",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Uczynki miłosierne względem duszy i ciała",
+      "title": "Uczynki miłosierne względem duszy i ciała",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Warunki dobrej spowiedzi",
+      "title": "Warunki dobrej spowiedzi",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Wiara, nadzieja, miłość",
+      "title": "Wiara, nadzieja, miłość",
+      "category": "Katechizm"
+    },
+    {
+      "id": "Wieczór wigilijny w rodzinie",
+      "title": "Wieczór wigilijny w rodzinie",
+      "category": "Nabożeństwa"
+    },
+    {
+      "id": "Za Konających",
+      "title": "Za Konających",
+      "category": "Modlitwy za zmarłych"
+    },
+    {
+      "id": "Zdrowas Maryjo",
+      "title": "Zdrowaś Maryjo",
+      "category": "Modlitwy codzienne"
+    },
+    {
+      "id": "Znak Krzyża świętego",
+      "title": "Znak Krzyża świętego",
+      "category": "Modlitwy codzienne"
+    }
+  ],
+  "songs": [
+    {
+      "id": "A czemuż mój Jezus tak ubogo leży",
+      "title": "A czemuż mój Jezus tak ubogo leży",
+      "category": "Kolędy"
+    },
+    {
+      "id": "A wczora z wieczora",
+      "title": "A wczora z wieczora",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Abba Ojcze",
+      "title": "Abba Ojcze",
+      "category": "Pieśni uwielbienia"
+    },
+    {
+      "id": "Ach mój Jezu, jak Ty klęczysz",
+      "title": "Ach mój Jezu, jak Ty klęczysz",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Ach, mój Jezu ukochany",
+      "title": "Ach, mój Jezu ukochany",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Ach, ubogi żłobie",
+      "title": "Ach, ubogi żłobie",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Alleluja żyje Pan",
+      "title": "Alleluja żyje Pan",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Alleluja! Biją dzwony",
+      "title": "Alleluja! Biją dzwony",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Alleluja! Jezus żyje już",
+      "title": "Alleluja! Jezus żyje już",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Alleluja! Jezus żyje On co za nas",
+      "title": "Alleluja! Jezus żyje On co za nas",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Alleluja... o dniu radosny",
+      "title": "Alleluja... o dniu radosny",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Anielską pieśń dzwon grał",
+      "title": "Anielską pieśń dzwon grał",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Anielskie Twe wejrzenie",
+      "title": "Anielskie Twe wejrzenie",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Anioł Pański otoczony światłością",
+      "title": "Anioł Pański otoczony światłością",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Anioł pasterzom mówił",
+      "title": "Anioł pasterzom mówił",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Aniołów chóry",
+      "title": "Aniołów chóry",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Archanioł Boży Gabriel",
+      "title": "Archanioł Boży Gabriel",
+      "category": "Pieśni adwentowe"
+    },
+    {
+      "id": "Attende Domine",
+      "title": "Attende Domine",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Baranek niesie brzemię win",
+      "title": "Baranek niesie brzemię win",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Barka",
+      "title": "Barka",
+      "category": "Pieśni papieskie"
+    },
+    {
+      "id": "Bądź mi litościw Boże nieskończony",
+      "title": "Bądź mi litościw Boże nieskończony",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Bądź pochwalon na wieki nieśmiertelny Panie",
+      "title": "Bądź pochwalon na wieki nieśmiertelny Panie",
+      "category": "Pieśni uwielbienia"
+    },
+    {
+      "id": "Bądź pozdrowiona, łaski pełna Maryjo",
+      "title": "Bądź pozdrowiona, łaski pełna Maryjo",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Bądźże pozdrowiona",
+      "title": "Bądźże pozdrowiona",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "Betlejem święte",
+      "title": "Betlejem święte",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Biedny, kto Ciebie nie zna od powicia",
+      "title": "Biedny, kto Ciebie nie zna od powicia",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Bliskie jest królestwo Boże",
+      "title": "Bliskie jest królestwo Boże",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Błogosław duszo moja Pana",
+      "title": "Błogosław duszo moja Pana",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "Błogosław, Matko, naszej biednej ziemi",
+      "title": "Błogosław, Matko, naszej biednej ziemi",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Błogosławiona jesteś Maryjo",
+      "title": "Błogosławiona jesteś Maryjo",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Błogosławiony, komu odpuszczone są winy",
+      "title": "Błogosławiony, komu odpuszczone są winy",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Boga chwalcie, pozdrawiajcie Maryję Pannę",
+      "title": "Boga chwalcie, pozdrawiajcie Maryję Pannę",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Bogarodzico, wniebowzięta Pani!",
+      "title": "Bogarodzico, wniebowzięta Pani!",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Bogurodzica, dziewica, Bogiem sławiena Maryja",
+      "title": "Bogurodzica, dziewica, Bogiem sławiena Maryja",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Bogurodzica",
+      "title": "Bogurodzica",
+      "category": "Pieśni patriotyczne"
+    },
+    {
+      "id": "Boscy posłowie, o święci Anieli",
+      "title": "Boscy posłowie, o święci Anieli",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Boże coś Polskę",
+      "title": "Boże coś Polskę",
+      "category": "Pieśni patriotyczne"
+    },
+    {
+      "id": "Boże coś przyrzekł że me grzechy",
+      "title": "Boże coś przyrzekł że me grzechy",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Boże Dziecię, witaj nam",
+      "title": "Boże Dziecię, witaj nam",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Boże litościwy, zmiłuj się nade mną",
+      "title": "Boże litościwy, zmiłuj się nade mną",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Boże lud Twój czci przejęty",
+      "title": "Boże lud Twój czci przejęty",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "Boże mój, spragniony jestem Ciebie",
+      "title": "Boże mój, spragniony jestem Ciebie",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "Boże Ojcze Wszechmogący do Ciebie wołamy",
+      "title": "Boże Ojcze Wszechmogący do Ciebie wołamy",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Boże Sędzio sprawiedliwy",
+      "title": "Boże Sędzio sprawiedliwy",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "Boże w dobroci nigdy nieprzebrany",
+      "title": "Boże w dobroci nigdy nieprzebrany",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Boże wieczny, Boże żywy",
+      "title": "Boże wieczny, Boże żywy",
+      "category": "Pieśni adwentowe"
+    },
+    {
+      "id": "Boże, obdarz Kościół Twój",
+      "title": "Boże, obdarz Kościół Twój",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "Bóg się rodzi, moc truchleje",
+      "title": "Bóg się rodzi, moc truchleje",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Bracia, patrzcie jeno",
+      "title": "Bracia, patrzcie jeno",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Brzmią anielskie cudne pienia",
+      "title": "Brzmią anielskie cudne pienia",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Być bliżej Ciebie chcę",
+      "title": "Być bliżej Ciebie chcę",
+      "category": "Pieśni okolicznościowe"
+    },
+    {
+      "id": "Była cicha i piękna jak wiosna",
+      "title": "Była cicha i piękna jak wiosna",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Całaś piękna jest Maryjo",
+      "title": "Całaś piękna jest Maryjo",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Cały świat niech śpiewa",
+      "title": "Cały świat niech śpiewa",
+      "category": "Pieśni uwielbienia"
+    },
+    {
+      "id": "Chlebem życia posileni",
+      "title": "Chlebem życia posileni",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "Chrystus Pan zmartwychwstał",
+      "title": "Chrystus Pan zmartwychwstał",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Chrystus zmartwychwstał jest",
+      "title": "Chrystus zmartwychwstał jest",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Chwalcie łąki umajone",
+      "title": "Chwalcie łąki umajone",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Chwała i dziękczynienie",
+      "title": "Chwała i dziękczynienie",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "Cicha noc, święta noc (1)",
+      "title": "Cicha noc, święta noc (1)",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Cicha noc, święta noc (2)",
+      "title": "Cicha noc, święta noc (2)",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Cicho wszędzie, śpi świat cały",
+      "title": "Cicho wszędzie, śpi świat cały",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Ciebie Boga wysławiamy",
+      "title": "Ciebie, Boga, wysławiamy",
+      "category": "Pieśni uwielbienia"
+    },
+    {
+      "id": "Ciebie na wieki wychwalać będziemy",
+      "title": "Ciebie na wieki wychwalać będziemy",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Cierniami uwieńczoną",
+      "title": "Cierniami uwieńczoną",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Cieszmy się i pod niebiosy",
+      "title": "Cieszmy się i pod niebiosy",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Co dzień wieczorem, na odgłos dzwonu",
+      "title": "Co dzień wieczorem, na odgłos dzwonu",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Co nam nakazuje nasza wiara",
+      "title": "Co nam nakazuje nasza wiara",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "Co znaczy krzyż",
+      "title": "Co znaczy krzyż",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Cokolwiek w świecie jest, wszystko marność",
+      "title": "Cokolwiek w świecie jest, wszystko marność",
+      "category": "Pieśni okolicznościowe"
+    },
+    {
+      "id": "Cóż to proszę za nowina",
+      "title": "Cóż to proszę za nowina",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Cud wielki się przed nami",
+      "title": "Cud wielki się przed nami",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "Czego chcesz od nas Panie",
+      "title": "Czego chcesz od nas Panie",
+      "category": "Pieśni uwielbienia"
+    },
+    {
+      "id": "Cześć Maryi, cześć i chwała",
+      "title": "Cześć Maryi, cześć i chwała",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Daj mi Jezusa, o Matko moja",
+      "title": "Daj mi Jezusa, o Matko moja",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Do Betlejem pełni radości",
+      "title": "Do Betlejem pełni radości",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Do Ciebie Matko szafarko łask",
+      "title": "Do Ciebie Matko szafarko łask",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Do Ciebie, Panie, pokornie wołamy",
+      "title": "Do Ciebie, Panie, pokornie wołamy",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Do Królowej Różańcowej",
+      "title": "Do Królowej Różańcowej",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Do serca Twego Pani świata",
+      "title": "Do serca Twego Pani świata",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Do szopy, hej pasterze",
+      "title": "Do szopy, hej pasterze",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Dobranoc Głowo święta",
+      "title": "Dobranoc Głowo święta",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Duchu Boży światło sumień",
+      "title": "Duchu Boży światło sumień",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Duchu mądrości rozświeć myśl",
+      "title": "Duchu mądrości rozświeć myśl",
+      "category": "Pieśni do Ducha Świętego"
+    },
+    {
+      "id": "Duchu Najświętszy otwórz usta moje",
+      "title": "Duchu Najświętszy otwórz usta moje",
+      "category": "Pieśni do Ducha Świętego"
+    },
+    {
+      "id": "Duchu Święty przyjdź prosimy",
+      "title": "Duchu Święty przyjdź prosimy",
+      "category": "Pieśni do Ducha Świętego"
+    },
+    {
+      "id": "Dzieciątko się narodziło",
+      "title": "Dzieciątko się narodziło",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Dziecina mała, Bóg Stwórca nieba",
+      "title": "Dziecina mała, Bóg Stwórca nieba",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Dzień ten nam sam Pan Bóg sprawił",
+      "title": "Dzień ten nam sam Pan Bóg sprawił",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Dzień to jest dziś wesela",
+      "title": "Dzień to jest dziś wesela",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Dziękczynne pieśni śpiewajmy wspólnie",
+      "title": "Dziękczynne pieśni śpiewajmy wspólnie",
+      "category": "Pieśni uwielbienia"
+    },
+    {
+      "id": "Dzięki, o Panie, składamy dzięki",
+      "title": "Dzięki, o Panie, składamy dzięki",
+      "category": "Pieśni uwielbienia"
+    },
+    {
+      "id": "Dziękujemy Ci Ojcze nasz",
+      "title": "Dziękujemy Ci Ojcze nasz",
+      "category": "Pieśni uwielbienia"
+    },
+    {
+      "id": "Dzisiaj w Betlejem",
+      "title": "Dzisiaj w Betlejem",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Dziś Chrystus, Król",
+      "title": "Dziś Chrystus, Król",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Dziś koniec roku zeszłemu",
+      "title": "Dziś koniec roku zeszłemu",
+      "category": "Pieśni okolicznościowe"
+    },
+    {
+      "id": "Dzwoneczku nasz miły",
+      "title": "Dzwoneczku nasz miły",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Gdy ja sobie to rozważam",
+      "title": "Gdy ja sobie to rozważam",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Gdy się Chrystus rodzi",
+      "title": "Gdy się Chrystus rodzi",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Gdy śliczna Panna",
+      "title": "Gdy śliczna Panna",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Gdy trwoga nas ogarnia",
+      "title": "Gdy trwoga nas ogarnia",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Gdy widzę Ciebie, krwią oblanego",
+      "title": "Gdy widzę Ciebie, krwią oblanego",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Gdzież duszy ojczyzna",
+      "title": "Gdzież duszy ojczyzna",
+      "category": "Pieśni okolicznościowe"
+    },
+    {
+      "id": "Głos wdzięczny z Nieba wychodzi",
+      "title": "Głos wdzięczny z Nieba wychodzi",
+      "category": "Pieśni adwentowe"
+    },
+    {
+      "id": "Gwiazdo morza!",
+      "title": "Gwiazdo morza!",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Gwiazdo śliczna, wspaniała",
+      "title": "Gwiazdo śliczna, wspaniała",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Gwiazdo zaranna, śliczna Jutrzenko",
+      "title": "Gwiazdo zaranna, śliczna Jutrzenko",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Gwiazdo złota promienista",
+      "title": "Gwiazdo złota promienista",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Hej w dzień narodzenia",
+      "title": "Hej w dzień narodzenia",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Hejnał wszyscy zaśpiewajmy",
+      "title": "Hejnał wszyscy zaśpiewajmy",
+      "category": "Pieśni adwentowe"
+    },
+    {
+      "id": "Hymn do Ducha Świętego",
+      "title": "Hymn do Ducha Świętego",
+      "category": "Pieśni do Ducha Świętego"
+    },
+    {
+      "id": "Idźmy, tulmy się jak dziatki",
+      "title": "Idźmy, tulmy się jak dziatki",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Jak Cię witał niegdyś lud",
+      "title": "Jak Cię witał niegdyś lud",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Jak szczęśliwa Polska cała",
+      "title": "Jak szczęśliwa Polska cała",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Jam gościem na tym świecie",
+      "title": "Jam gościem na tym świecie",
+      "category": "Pieśni okolicznościowe"
+    },
+    {
+      "id": "Jasnogórska można Pani, Maryjo",
+      "title": "Jasnogórska można Pani, Maryjo",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Jedyna i władna świata Królowo",
+      "title": "Jedyna i władna świata Królowo",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Jezu Chryste Panie miły",
+      "title": "Jezu Chryste Panie miły",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Jezu miłe Dzieciątko",
+      "title": "Jezu miłe Dzieciątko",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Jezus najwyższe Imię",
+      "title": "Jezus najwyższe Imię",
+      "category": "Pieśni uwielbienia"
+    },
+    {
+      "id": "Jezusa narodzonego wszyscy witajmy",
+      "title": "Jezusa narodzonego wszyscy witajmy",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Jezusa narodzonego",
+      "title": "Jezusa narodzonego",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Judzką krainę noc okryła",
+      "title": "Judzką krainę noc okryła",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Już gościsz Jezu w sercu mym",
+      "title": "Już gościsz Jezu w sercu mym",
+      "category": "Pieśni uwielbienia"
+    },
+    {
+      "id": "Już pochwalmy Króla tego",
+      "title": "Już pochwalmy Króla tego",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Już się pieśń rozlega",
+      "title": "Już się pieśń rozlega",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Już się zbliżył miesiąc maj",
+      "title": "Już się zbliżył miesiąc maj",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Już Zbawiciel Jezus żyje",
+      "title": "Już Zbawiciel Jezus żyje",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Jużem dość pracował",
+      "title": "Jużem dość pracował",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Kiedy słyszę na obłokach",
+      "title": "Kiedy słyszę na obłokach",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Kiedyś powróci Pan",
+      "title": "Kiedyś powróci Pan",
+      "category": "Pieśni adwentowe"
+    },
+    {
+      "id": "Kłaniam się Tobie",
+      "title": "Kłaniam się Tobie",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "Króla wznoszą się ramiona",
+      "title": "Króla wznoszą się ramiona",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Krzyżu Chrystusa, bądźże pochwalony",
+      "title": "Krzyżu Chrystusa, bądźże pochwalony",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Krzyżu święty, nade wszystko",
+      "title": "Krzyżu święty, nade wszystko",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Któż o tej dobie płacze we żłobie",
+      "title": "Któż o tej dobie płacze we żłobie",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Lament serdeczny",
+      "title": "Lament serdeczny",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Litania zawierzenia Matce Bożej Fatimskiej",
+      "title": "Litania zawierzenia Matce Bożej Fatimskiej",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Ludu, mój ludu",
+      "title": "Ludu, mój ludu",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Lulajże Jezuniu",
+      "title": "Lulajże Jezuniu",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Magnificat",
+      "title": "Magnificat",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Matko Bolesna, Twe oczy zwróć",
+      "title": "Matko Bolesna, Twe oczy zwróć",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Matko cierpiąca, której Serce tkliwe",
+      "title": "Matko cierpiąca, której Serce tkliwe",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Miałem ci ja w sercu",
+      "title": "Miałem ci ja w sercu",
+      "category": "Pieśni okolicznościowe"
+    },
+    {
+      "id": "Miłosierdziem Twoim Panie",
+      "title": "Miłosierdziem Twoim Panie",
+      "category": "Pieśni okolicznościowe"
+    },
+    {
+      "id": "Minęły cienie i mroki nocy",
+      "title": "Minęły cienie i mroki nocy",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Miserere mei Deus",
+      "title": "Miserere mei Deus",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Mizerna cicha, stajenka licha",
+      "title": "Mizerna cicha, stajenka licha",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Nadzieja nasza w Zmartwychwstałym",
+      "title": "Nadzieja nasza w Zmartwychwstałym",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Najpiękniejszy Miesiąc Maj",
+      "title": "Najpiękniejszy Miesiąc Maj",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Narodził się Jezus Chrystus",
+      "title": "Narodził się Jezus Chrystus",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Narodził się Jezus w stajni ubogi",
+      "title": "Narodził się Jezus w stajni ubogi",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Narodził się nam Zbawiciel",
+      "title": "Narodził się nam Zbawiciel",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Nawróć się ludu w pokorze",
+      "title": "Nawróć się ludu w pokorze",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Nie bój się",
+      "title": "Nie bój się",
+      "category": "Pieśni uwielbienia"
+    },
+    {
+      "id": "Nie było miejsca dla Ciebie",
+      "title": "Nie było miejsca dla Ciebie",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Nie opuszczaj nas, Jezu",
+      "title": "Nie opuszczaj nas, Jezu",
+      "category": "Pieśni okolicznościowe"
+    },
+    {
+      "id": "Nie tak bystro płynie rzeka",
+      "title": "Nie tak bystro płynie rzeka",
+      "category": "Pieśni okolicznościowe"
+    },
+    {
+      "id": "Nie tylko tam w szopce",
+      "title": "Nie tylko tam w szopce",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Nie zna śmierci Pan żywota",
+      "title": "Nie zna śmierci Pan żywota",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Niebiosa, rosę spuście nam z góry",
+      "title": "Niebiosa, rosę spuście nam z góry",
+      "category": "Pieśni adwentowe"
+    },
+    {
+      "id": "Niech błogosławiony będzie Bóg i Ojciec",
+      "title": "Niech błogosławiony będzie Bóg i Ojciec",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Niech w radosne święto",
+      "title": "Niech w radosne święto",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Niech w święto radosne Paschalnej Ofiary",
+      "title": "Niech w święto radosne Paschalnej Ofiary",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Niechaj z nami będzie Pan",
+      "title": "Niechaj z nami będzie Pan",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "Niepojęte dary",
+      "title": "Niepojęte dary",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Noc ciemna i zimna",
+      "title": "Noc ciemna i zimna",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Noc nadeszła pożądana",
+      "title": "Noc nadeszła pożądana",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Nowy Rok bieży",
+      "title": "Nowy Rok bieży",
+      "category": "Pieśni okolicznościowe"
+    },
+    {
+      "id": "O Boże mój o Zbawicielu mój",
+      "title": "O Boże mój o Zbawicielu mój",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "O człowiecze wspomnij sobie",
+      "title": "O człowiecze wspomnij sobie",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "O duszo wszelka nabożna",
+      "title": "O duszo wszelka nabożna",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "O Fatimska Nasza Pani",
+      "title": "O Fatimska Nasza Pani",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "O gwiazdo betlejemska",
+      "title": "O gwiazdo betlejemska",
+      "category": "Kolędy"
+    },
+    {
+      "id": "O Jezu mój, Zbawco mój",
+      "title": "O Jezu mój, Zbawco mój",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "O Józefie coś szukał gospody",
+      "title": "O Józefie coś szukał gospody",
+      "category": "Kolędy"
+    },
+    {
+      "id": "O Krwi najdroższa",
+      "title": "O Krwi najdroższa",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "O Stworzycielu Duchu przyjdź",
+      "title": "O Stworzycielu Duchu przyjdź",
+      "category": "Pieśni do Ducha Świętego"
+    },
+    {
+      "id": "Odkupicielu ratuj swe stworzenie",
+      "title": "Odkupicielu ratuj swe stworzenie",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Ofiara Krzyża spełniona",
+      "title": "Ofiara Krzyża spełniona",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Ofiarujmy chwałę w wierze",
+      "title": "Ofiarujmy chwałę w wierze",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Ogrodzie Oliwny",
+      "title": "Ogrodzie Oliwny",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Ojcze z niebios, Boże, Panie",
+      "title": "Ojcze z niebios, Boże, Panie",
+      "category": "Pieśni okolicznościowe"
+    },
+    {
+      "id": "Ojcze, Boże Wszechmogący",
+      "title": "Ojcze, Boże Wszechmogący",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Oto Jezus umiera",
+      "title": "Oto Jezus umiera",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Oto Pan Bóg przyjdzie",
+      "title": "Oto Pan Bóg przyjdzie",
+      "category": "Pieśni adwentowe"
+    },
+    {
+      "id": "Oto teraz czas właściwy",
+      "title": "Oto teraz czas właściwy",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Otrzyjcie już łzy płaczący",
+      "title": "Otrzyjcie już łzy płaczący",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Pamiątkę dnia świątecznego",
+      "title": "Pamiątkę dnia świątecznego",
+      "category": "Pieśni do Ducha Świętego"
+    },
+    {
+      "id": "Pamiętaj człowiecze na Jezusa",
+      "title": "Pamiętaj człowiecze na Jezusa",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Pan Jezus grzechy nasze",
+      "title": "Pan Jezus grzechy nasze",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Pan Jezus już się zbliża",
+      "title": "Pan Jezus już się zbliża",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "Pan z nieba",
+      "title": "Pan z nieba",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Pan zmartwychwstał i jest z nami",
+      "title": "Pan zmartwychwstał i jest z nami",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Panie nogi Twe całuję",
+      "title": "Panie nogi Twe całuję",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Panie, co mieszkasz na wysokim niebie",
+      "title": "Panie, co mieszkasz na wysokim niebie",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Panie, Ty widzisz, krzyża się nie lękam",
+      "title": "Panie, Ty widzisz, krzyża się nie lękam",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Parce Domine",
+      "title": "Parce Domine",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Pasterze bieżeli, gdy głos usłyszeli",
+      "title": "Pasterze bieżeli, gdy głos usłyszeli",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Pasterze mili, coście widzieli",
+      "title": "Pasterze mili, coście widzieli",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Pasterzu, pasterzu, czy widzisz",
+      "title": "Pasterzu, pasterzu, czy widzisz",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Płacz, płacz, kto żyw",
+      "title": "Płacz, płacz, kto żyw",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Płaczcie Anieli",
+      "title": "Płaczcie Anieli",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Płonie gwiazda nad Betlejem",
+      "title": "Płonie gwiazda nad Betlejem",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Płynie z serca mego pieśń wzniosła",
+      "title": "Płynie z serca mego pieśń wzniosła",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "Po upadku człowieka grzesznego",
+      "title": "Po upadku człowieka grzesznego",
+      "category": "Pieśni adwentowe"
+    },
+    {
+      "id": "Podnieś rękę, Boże Dziecię!",
+      "title": "Podnieś rękę, Boże Dziecię!",
+      "category": "Pieśni patriotyczne"
+    },
+    {
+      "id": "Posypmy głowy popiołem",
+      "title": "Posypmy głowy popiołem",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Pośpieszcie pastuszki z piosneczki",
+      "title": "Pośpieszcie pastuszki z piosneczki",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Powiedzcie, pasterze mili",
+      "title": "Powiedzcie, pasterze mili",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Pozwól mi Twe męki śpiewać",
+      "title": "Pozwól mi Twe męki śpiewać",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Pójdźmy wszyscy do stajenki",
+      "title": "Pójdźmy wszyscy do stajenki",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Pójdźmy, pójdźmy, aż do Betlejem",
+      "title": "Pójdźmy, pójdźmy, aż do Betlejem",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Przed oczy Twoje, Panie",
+      "title": "Przed oczy Twoje, Panie",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Przed Tobą Ojcze stajemy skruszeni",
+      "title": "Przed Tobą Ojcze stajemy skruszeni",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Przepuść Panie, przepuść ludowi Twemu",
+      "title": "Przepuść Panie, przepuść ludowi Twemu",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Przez Twoje święte Zmartwychpowstanie",
+      "title": "Przez Twoje święte Zmartwychpowstanie",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Przy onej górze",
+      "title": "Przy onej górze",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Przybądź, Panie, bo czekamy",
+      "title": "Przybądź, Panie, bo czekamy",
+      "category": "Pieśni adwentowe"
+    },
+    {
+      "id": "Przybieżeli do Betlejem",
+      "title": "Przybieżeli do Betlejem",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Przylecieli aniołkowie",
+      "title": "Przylecieli aniołkowie",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Przystąpcie bliżej grzesznicy",
+      "title": "Przystąpcie bliżej grzesznicy",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Przystąpię do ołtarza Bożego",
+      "title": "Przystąpię do ołtarza Bożego",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "Przystąpmy do szopy",
+      "title": "Przystąpmy do szopy",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Radością naszą jesteś Ty",
+      "title": "Radością naszą jesteś Ty",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "Radujmy się, bracia mili",
+      "title": "Radujmy się, bracia mili",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Rodziną Bożą jesteśmy",
+      "title": "Rodziną Bożą jesteśmy",
+      "category": "Pieśni okolicznościowe"
+    },
+    {
+      "id": "Rodzino Święta, opieki Twej trzeba",
+      "title": "Rodzino Święta, opieki Twej trzeba",
+      "category": "Pieśni okolicznościowe"
+    },
+    {
+      "id": "Rodzino Święta, wśród rodzin jedyna",
+      "title": "Rodzino Święta, wśród rodzin jedyna",
+      "category": "Pieśni okolicznościowe"
+    },
+    {
+      "id": "Rota",
+      "title": "Rota",
+      "category": "Pieśni patriotyczne"
+    },
+    {
+      "id": "Rozkwitnęła się lilija",
+      "title": "Rozkwitnęła się lilija",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Rozmyślajmy dziś, wierni chrześcijanie",
+      "title": "Rozmyślajmy dziś, wierni chrześcijanie",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Rozpłyńcie się me źrenice",
+      "title": "Rozpłyńcie się me źrenice",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Sekwencja o Duchu Świętym",
+      "title": "Sekwencja o Duchu Świętym",
+      "category": "Pieśni do Ducha Świętego"
+    },
+    {
+      "id": "Słyszę z nieba muzykę",
+      "title": "Słyszę z nieba muzykę",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Sprawiedliwości Słońce Chryste",
+      "title": "Sprawiedliwości Słońce Chryste",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Stała Matka boleściwa",
+      "title": "Stała Matka boleściwa",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Stanę pod krzyżem",
+      "title": "Stanę pod krzyżem",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Śliczna Panienka Jezusa zrodziła",
+      "title": "Śliczna Panienka Jezusa zrodziła",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Śliczny Jezu, miły Panie",
+      "title": "Śliczny Jezu, miły Panie",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Śpiewajcie Panu z weselem",
+      "title": "Śpiewajcie Panu z weselem",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Święta rodzina",
+      "title": "Święta rodzina",
+      "category": "Pieśni okolicznościowe"
+    },
+    {
+      "id": "Te Deum – Ciebie Boga wysławiamy",
+      "title": "Te Deum – Ciebie Boga wysławiamy",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "Triumfy Króla niebieskiego",
+      "title": "Triumfy Króla niebieskiego",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Ty, któryś gorzko na krzyżu umierał",
+      "title": "Ty, któryś gorzko na krzyżu umierał",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "U drzwi Twoich stoję, Panie",
+      "title": "U drzwi Twoich stoję, Panie",
+      "category": "Pieśni mszalne"
+    },
+    {
+      "id": "U stóp krzyża Matka stała",
+      "title": "U stóp krzyża Matka stała",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Ubi caritas (Tam gdzie miłość jest)",
+      "title": "Ubi caritas (Tam gdzie miłość jest)",
+      "category": "Pieśni uwielbienia"
+    },
+    {
+      "id": "Usłysz Panie dobrotliwy",
+      "title": "Usłysz Panie dobrotliwy",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "W Boże Narodzenie wszystko się weseli",
+      "title": "W Boże Narodzenie wszystko się weseli",
+      "category": "Kolędy"
+    },
+    {
+      "id": "W czasie świętym, adwentowym",
+      "title": "W czasie świętym, adwentowym",
+      "category": "Pieśni adwentowe"
+    },
+    {
+      "id": "W dzień Bożego Narodzenia",
+      "title": "W dzień Bożego Narodzenia",
+      "category": "Kolędy"
+    },
+    {
+      "id": "W Fatimie u Maryi",
+      "title": "W Fatimie u Maryi",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "W krzyżu cierpienie",
+      "title": "W krzyżu cierpienie",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "W Ogrójcu Jezus klęczy",
+      "title": "W Ogrójcu Jezus klęczy",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "W słonecznej światłości",
+      "title": "W słonecznej światłości",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "W żłobie leży",
+      "title": "W żłobie leży",
+      "category": "Kolędy"
+    },
+    {
+      "id": "W żłobku na sianie",
+      "title": "W żłobku na sianie",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Wesel się Królowo miła",
+      "title": "Wesel się Królowo miła",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Weselmy się chrześcijanie",
+      "title": "Weselmy się chrześcijanie",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Wesołą nowinę",
+      "title": "Wesołą nowinę",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Wesoły nam dzień dziś nastał",
+      "title": "Wesoły nam dzień dziś nastał",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Wielbimy Krzyż Twój Panie",
+      "title": "Wielbimy Krzyż Twój Panie",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Wisi na krzyżu",
+      "title": "Wisi na krzyżu",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Witaj Jezu, ukochany",
+      "title": "Witaj Jezu, ukochany",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Witaj, Matko uwielbiona",
+      "title": "Witaj, Matko uwielbiona",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Witajże Dzieciątko",
+      "title": "Witajże Dzieciątko",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Witam Cię Przenajświętsze Ciało",
+      "title": "Witam Cię Przenajświętsze Ciało",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Wiwat dzisiaj Boskiej Istności",
+      "title": "Wiwat dzisiaj Boskiej Istności",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Wstał Pan Chrystus z martwych ninie",
+      "title": "Wstał Pan Chrystus z martwych ninie",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Wstanę i pójdę do mojego Ojca",
+      "title": "Wstanę i pójdę do mojego Ojca",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Wstańcie, wstańcie, wstańcie pasterze mili",
+      "title": "Wstańcie, wstańcie, wstańcie pasterze mili",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Wydawajcie owoce godne nawrócenia",
+      "title": "Wydawajcie owoce godne nawrócenia",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Wysławiajmy Chrysta Pana",
+      "title": "Wysławiajmy Chrysta Pana",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Wysłuchaj Panie daj się przebłagać",
+      "title": "Wysłuchaj Panie daj się przebłagać",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Z dalekiej Fatimy",
+      "title": "Z dalekiej Fatimy",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Z dawna Polski",
+      "title": "Z dawna Polski",
+      "category": "Pieśni patriotyczne"
+    },
+    {
+      "id": "Z narodzenia Pana",
+      "title": "Z narodzenia Pana",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Z nieba wysokiego",
+      "title": "Z nieba wysokiego",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Z pokorą wielką",
+      "title": "Z pokorą wielką",
+      "category": "Pieśni za zmarłych"
+    },
+    {
+      "id": "Z tej biednej ziemi",
+      "title": "Z tej biednej ziemi",
+      "category": "Pieśni okolicznościowe"
+    },
+    {
+      "id": "Zajaśniała cudna zorza",
+      "title": "Zajaśniała cudna zorza",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Zawitaj, Ukrzyżowany",
+      "title": "Zawitaj, Ukrzyżowany",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Zbliżam się k’Tobie",
+      "title": "Zbliżam się k’Tobie",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Zdrowaś bądź, Maryja",
+      "title": "Zdrowaś bądź, Maryja",
+      "category": "Pieśni adwentowe"
+    },
+    {
+      "id": "Zdrowaś Maryjo Bogarodzico",
+      "title": "Zdrowaś Maryjo Bogarodzico",
+      "category": "Pieśni Maryjne"
+    },
+    {
+      "id": "Zjawiło się nam dziś coś nowego",
+      "title": "Zjawiło się nam dziś coś nowego",
+      "category": "Kolędy"
+    },
+    {
+      "id": "Złóżcie troski żałujący",
+      "title": "Złóżcie troski żałujący",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Zmartwychpowstał Pan prawdziwie",
+      "title": "Zmartwychpowstał Pan prawdziwie",
+      "category": "Pieśni wielkanocne"
+    },
+    {
+      "id": "Zmiłuj się nade mną, Boże",
+      "title": "Zmiłuj się nade mną, Boże",
+      "category": "Pieśni wielkopostne"
+    },
+    {
+      "id": "Zmiłuj się Stwórco nad swoim ludem",
+      "title": "Zmiłuj się Stwórco nad swoim ludem",
+      "category": "Pieśni pokutne"
+    },
+    {
+      "id": "Zwycięzca śmierci",
+      "title": "Zwycięzca śmierci",
+      "category": "Pieśni wielkanocne"
+    }
+  ]
+}

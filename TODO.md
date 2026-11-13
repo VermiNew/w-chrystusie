@@ -263,6 +263,7 @@
 - [ ] Po wdrożeniu zweryfikować statusy HTTP bezpośrednich adresów, canonical i Open Graph na publicznej domenie
 - [ ] Zgłosić `sitemap.xml` w Google Search Console i Bing Webmaster Tools oraz monitorować błędy indeksowania
 - [ ] Dodać automatyczną kontrolę niedziałających linków wewnętrznych i zewnętrznych przed publikacją
+- [x] Katalog z fragmentami tekstów poza głównym pakietem: `SeoMetadata` ładuje go tylko na podstronach modlitw/pieśni, strona główna używa `content-index.json` (same tytuły), okno „O projekcie” — `content-counts.json`. Główny pakiet: 87 → 20 KB gzip
 - [x] Podzielić dane treści na fragmenty ładowane per sekcja — każda księga Biblii to osobny plik (rozdział: 4,8 MB → ok. 0,66 MB), różaniec, strona główna i nabożeństwo majowe nie ładują już całych zbiorów
 - [x] Odchudzenie list modlitw i pieśni — lista z katalogu, każdy tekst to osobny mały plik (`src/data/contentLoaders.ts`, `assets/content/`); pełne teksty dopiero przy wyszukiwaniu w treści. Otwarcie modlitwy: 1845 → 769 KB JS
 - [ ] Katalog z fragmentami (`content-catalog.json`, ~270 KB) jest w głównym pakiecie przez `SeoMetadata` — rozważyć meta-opisy ustawiane przez samą stronę treści

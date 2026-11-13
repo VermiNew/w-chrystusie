@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { FaArrowRight, FaCross, FaBookBible, FaMusic, FaHandsPraying, FaBullhorn, FaMagnifyingGlass } from 'react-icons/fa6'
 import DevotionChoiceDialog from '../components/DevotionChoiceDialog'
 import LiturgyToday from '../components/LiturgyToday'
-import { getCatalogPrayerOfDay, prayerCatalog, songCatalog } from '../data/contentCatalog'
+import { getIndexPrayerOfDay, prayerIndex, songIndex } from '../data/contentIndex'
 import { scriptureCatalog } from '../data/scriptureCatalog'
 import { useContentLibrary, type RecentContent } from '../hooks/useContentLibrary'
 
@@ -25,11 +25,11 @@ interface ContinueTarget {
 // page does not have to download full prayer, psalm or Bible texts.
 function getContinueTarget({ kind, id }: RecentContent): ContinueTarget | null {
   if (kind === 'prayer') {
-    const prayer = prayerCatalog.find((entry) => entry.id === id)
+    const prayer = prayerIndex.find((entry) => entry.id === id)
     return prayer ? { path: `/modlitwy/${encodeURIComponent(id)}`, label: 'Kontynuuj modlitwę', title: prayer.title } : null
   }
   if (kind === 'song') {
-    const song = songCatalog.find((entry) => entry.id === id)
+    const song = songIndex.find((entry) => entry.id === id)
     return song ? { path: `/spiewnik/${encodeURIComponent(id)}`, label: 'Kontynuuj śpiew', title: song.title } : null
   }
   if (kind === 'psalm') {
@@ -65,7 +65,7 @@ export default function HomePage() {
   const savedPosition = latestRecent
     ? readSavedPosition(`reading-position:${latestRecent.kind}:${latestRecent.id}`)
     : Number.NaN
-  const prayerOfDay = getCatalogPrayerOfDay()
+  const prayerOfDay = getIndexPrayerOfDay()
 
   return (
     <div className="home">
