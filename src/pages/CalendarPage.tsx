@@ -130,13 +130,15 @@ export default function CalendarPage() {
             <FaChevronRight aria-hidden="true" />
           </button>
         </div>
-        <div className="calendar-grid" role="grid" aria-labelledby="calendar-month-title">
-          <div className="calendar-grid-row calendar-weekdays" role="row">
+        {/* Plain buttons, not role="grid": every button names its full date, and a grid role
+            would promise arrow-key navigation that this calendar does not have. */}
+        <div className="calendar-grid">
+          <div className="calendar-grid-row calendar-weekdays" aria-hidden="true">
             {WEEKDAY_LABELS.map((label) => (
-              <span key={label} role="columnheader" className={label === 'Nd' ? 'calendar-sunday' : undefined}>{label}</span>
+              <span key={label} className={label === 'Nd' ? 'calendar-sunday' : undefined}>{label}</span>
             ))}
           </div>
-          <div className="calendar-grid-days" role="row">
+          <div className="calendar-grid-days">
             {Array.from({ length: month.leadingBlanks }, (_, index) => (
               <span key={`blank-${index}`} className="calendar-cell calendar-cell--blank" aria-hidden="true" />
             ))}
@@ -148,8 +150,7 @@ export default function CalendarPage() {
                 <button
                   key={toParam(date)}
                   type="button"
-                  role="gridcell"
-                  aria-selected={isSelected}
+                  aria-pressed={isSelected}
                   aria-current={isToday ? 'date' : undefined}
                   aria-label={`${formatLong(date)}: ${day.title}`}
                   className={[
