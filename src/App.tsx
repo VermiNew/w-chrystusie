@@ -19,6 +19,7 @@ const AnnouncementsPage = lazy(() => import('./pages/AnnouncementsPage'))
 const MayDevotionPage = lazy(() => import('./pages/MayDevotionPage'))
 const SearchPage = lazy(() => import('./pages/SearchPage'))
 const SourcesPage = lazy(() => import('./pages/SourcesPage'))
+const CalendarPage = lazy(() => import('./pages/CalendarPage'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 
 // The catalog slug of the Psalms is "psalmow", but they live under /pismo-swiete/psalmy.
@@ -80,6 +81,7 @@ function AppRoutes() {
               <Route path="/ogloszenia" element={<AnnouncementsPage />} />
               <Route path="/ogloszenia/:id" element={<AnnouncementsPage />} />
               <Route path="/nabozenstwo-majowe" element={<MayDevotionPage />} />
+              <Route path="/kalendarz" element={<CalendarPage />} />
               <Route path="/szukaj" element={<SearchPage />} />
               <Route path="/zrodla" element={<SourcesPage />} />
               <Route path="*" element={<NotFoundPage />} />

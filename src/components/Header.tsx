@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { FaCross, FaBookBible, FaMusic, FaMagnifyingGlass, FaBars, FaXmark, FaHandsPraying, FaBullhorn, FaBell, FaCircleInfo, FaLink, FaMoon, FaSun } from 'react-icons/fa6'
+import { FaBars, FaBell, FaBookBible, FaBullhorn, FaCalendarDays, FaCircleInfo, FaCross, FaHandsPraying, FaLink, FaMagnifyingGlass, FaMoon, FaMusic, FaSun, FaXmark } from 'react-icons/fa6'
 import { announcements } from '../data/announcements'
 import { useUnreadCount } from '../data/useReadAnnouncements'
 import { useHasAnyReminder } from '../data/useReminders'
@@ -137,6 +137,7 @@ export default function Header() {
           <li><NavLink to="/spiewnik" onClick={closeMenu}><FaMusic /> Śpiewnik</NavLink></li>
           <li><NavLink to="/rozaniec" onClick={closeMenu}><FaHandsPraying /> Różaniec</NavLink></li>
           <li><NavLink to="/koronka" onClick={closeMenu}><FaHandsPraying /> Koronka</NavLink></li>
+          <li><NavLink to="/kalendarz" onClick={closeMenu}><FaCalendarDays /> Kalendarz</NavLink></li>
           <li>
             <NavLink
               to="/ogloszenia"

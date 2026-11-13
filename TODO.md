@@ -313,7 +313,7 @@
 - [ ] Zweryfikować z kalendarzem KEP: uroczystości polskie przypadające w niedzielę wielkanocną (np. 3 maja 2026 — teraz przeniesione na poniedziałek wg norm ogólnych) oraz szczególne decyzje Stolicy Apostolskiej (np. Narodzenie św. Jana Chrzciciela w 2022)
 - [x] Ruchome uroczystości i lata przestępne (sprawdzone dla lat 2024–2040); dzień liczony wg lokalnego czasu urządzenia
 - [x] Widok „Dzisiaj w liturgii” na stronie głównej
-- [ ] Pełny kalendarz z nawigacją po dniach
+- [x] Pełny kalendarz z nawigacją po dniach — `/kalendarz` (`CalendarPage`): siatka miesiąca, dzień w adresie `?d=RRRR-MM-DD`, link z „Dzisiaj w liturgii” i z menu
 - [ ] Pozyskać osobne, legalne źródło polskich czytań mszalnych; Romcal nie powinien być traktowany jako źródło tekstów czytań
 - [ ] Ustalić zakres danych czytań: pierwsze czytanie, psalm responsoryjny, drugie czytanie, aklamacja i Ewangelia
 - [ ] Zapisać przy każdym czytaniu źródło, siglum, tłumaczenie, licencję i adres oryginalnej publikacji

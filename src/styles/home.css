@@ -392,6 +392,22 @@
   color: var(--color-text-muted);
 }
 
+.liturgy-today-calendar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  margin-top: 0.35rem;
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.liturgy-today-calendar-link:hover {
+  text-decoration: underline;
+}
+
 .liturgy-today-next strong {
   color: var(--color-text);
   font-weight: 600;
