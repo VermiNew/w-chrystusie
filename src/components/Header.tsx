@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { FaBars, FaBell, FaBookBible, FaBookOpen, FaBullhorn, FaCircleInfo, FaCross, FaHandsPraying, FaLink, FaMagnifyingGlass, FaMoon, FaMusic, FaSun, FaXmark } from 'react-icons/fa6'
+import { FaCross, FaBookBible, FaMusic, FaMagnifyingGlass, FaBars, FaXmark, FaHandsPraying, FaBullhorn, FaBell, FaCircleInfo, FaLink, FaMoon, FaSun } from 'react-icons/fa6'
 import { announcements } from '../data/announcements'
 import { useUnreadCount } from '../data/useReadAnnouncements'
 import { useHasAnyReminder } from '../data/useReminders'
 import { getNextTheme, themeLabels, useTheme, toggleTheme } from '../data/useTheme'
 import RemindersModal from './RemindersModal'
 import AboutModal from './AboutModal'
+import { FaBookOpen } from 'react-icons/fa6'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
