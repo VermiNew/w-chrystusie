@@ -45,7 +45,7 @@
 - [x] Kafelek Różańca na stronie głównej
 - [x] Meta tagi (`description`, `theme-color`) + `manifest.json` (PWA)
 - [x] Kategorie pieśni (grupowanie jak w modlitwach)
-- [ ] `PrayersPage` i `SongbookPage` to prawie identyczne ~350 linii — wspólny komponent listy/szczegółu (każda poprawka jest dziś robiona dwa razy)
+- [x] `PrayersPage` i `SongbookPage` korzystają ze wspólnego `ContentCollectionPage` (lista + szczegół); strony przekazują tylko konfigurację i swoje dodatki
 - [ ] `GenesisPage` obsługuje wszystkie księgi — rozważyć zmianę nazwy (np. `ScriptureBookPage`)
 
 ## Offline (założenie: jedno wejście online, potem wszystko działa bez internetu)

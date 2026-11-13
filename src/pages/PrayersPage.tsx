@@ -1,19 +1,7 @@
-import { useMemo, useEffect, useState, type CSSProperties } from 'react'
-import { useLocation, useParams, Link } from 'react-router-dom'
-import { FaArrowLeft, FaCalendarDay, FaChevronDown, FaChevronLeft, FaChevronRight, FaClock, FaCopyright, FaHandsPraying, FaList, FaStar, FaTrash, FaXmark } from 'react-icons/fa6'
-import Markdown from 'react-markdown'
-import { getPrayerOfDay, prayers, type Prayer } from '../data/prayers'
-import ReadingModeToggle from '../components/ReadingModeToggle'
-import { useContentLibrary } from '../hooks/useContentLibrary'
-import ConfirmDialog from '../components/ConfirmDialog'
-import SourceAttributionLink from '../components/SourceAttributionLink'
-import { normalizeSearchText } from '../data/searchText'
-import { pluralPl } from '../data/plural'
-import NotFoundPage from './NotFoundPage'
-import { readStorage, removeStorage, writeStorage } from '../data/storage'
-
-const SCROLL_KEY = 'prayers-scroll'
-const CATEGORY_KEY = 'prayers-category'
+import { Link } from 'react-router-dom'
+import { FaCalendarDay, FaHandsPraying, FaList } from 'react-icons/fa6'
+import { getPrayerOfDay, prayers } from '../data/prayers'
+import ContentCollectionPage from '../components/ContentCollectionPage'
 
 const categoryOrder = [
   'Modlitwy codzienne',
@@ -35,194 +23,30 @@ const categoryOrder = [
   'Katechizm',
 ]
 
-const fallbackCategory = 'Bez kategorii'
-
-const byTitle = (a: Prayer, b: Prayer) => a.title.localeCompare(b.title, 'pl')
-
-// Normalized once, on the first filter use, instead of on every keystroke.
-let searchableTexts: Map<string, string> | null = null
-const getSearchableText = (prayer: Prayer) => {
-  searchableTexts ??= new Map(prayers.map((entry) => [
-    entry.id,
-    normalizeSearchText(`${entry.title} ${entry.category ?? ''} ${entry.body}`),
-  ]))
-  return searchableTexts.get(prayer.id) ?? ''
-}
-
-const decodeRouteId = (routeId: string) => {
-  try {
-    return decodeURIComponent(routeId)
-  } catch {
-    return routeId
-  }
-}
-
-const encodeRouteId = (routeId: string) => encodeURIComponent(routeId)
-const getCategoryAnchorId = (category: string) => `prayer-category-${encodeURIComponent(category)}`
-
-const getSelectedId = (routeId: string | undefined, pathname: string) => {
-  if (routeId) return decodeRouteId(routeId)
-  if (!pathname.startsWith('/modlitwy/')) return null
-
-  return decodeRouteId(pathname.slice('/modlitwy/'.length))
+const labels = {
+  title: 'Modlitwy',
+  siblingNav: 'Nawigacja między modlitwami',
+  filterPlaceholder: 'Tytuł lub treść modlitwy...',
+  emptyFilter: 'Brak modlitw pasujących do wybranych filtrów.',
 }
 
 export default function PrayersPage() {
-  const { id } = useParams()
-  const location = useLocation()
-  const [query, setQuery] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const [favoriteToRemove, setFavoriteToRemove] = useState<Prayer | null>(null)
-  const [clearHistoryOpen, setClearHistoryOpen] = useState(false)
-  const [returnCategory] = useState(() => readStorage(CATEGORY_KEY, 'session'))
-  const selectedId = getSelectedId(id, location.pathname)
-  const selected = selectedId ? prayers.find((p) => p.id === selectedId) ?? null : null
-  const { favoriteIds, recentIds, isFavorite, toggleFavorite, removeFavorite, clearRecent } = useContentLibrary('prayer', selected?.id)
-  const favoritePrayers = favoriteIds
-    .map((favoriteId) => prayers.find((prayer) => prayer.id === favoriteId))
-    .filter((prayer): prayer is Prayer => Boolean(prayer))
-  const recentPrayers = recentIds
-    .filter(Boolean)
-    .map((recentId) => prayers.find((prayer) => prayer.id === recentId))
-    .filter((prayer): prayer is Prayer => Boolean(prayer))
-  const detailCategory = selected?.category && categoryOrder.includes(selected.category)
-    ? selected.category
-    : fallbackCategory
-  const siblingItems = selected
-    ? prayers
-      .filter((prayer) => {
-        const category = prayer.category && categoryOrder.includes(prayer.category)
-          ? prayer.category
-          : fallbackCategory
-        return category === detailCategory
-      })
-      .sort(byTitle)
-    : []
-  const detailIndex = selected ? siblingItems.findIndex((prayer) => prayer.id === selected.id) : -1
-  const previousItem = detailIndex > 0 ? siblingItems[detailIndex - 1] : null
-  const nextItem = detailIndex >= 0 && detailIndex < siblingItems.length - 1
-    ? siblingItems[detailIndex + 1]
-    : null
   const prayerOfDay = getPrayerOfDay()
-  // Restore the expanded category first, then the saved list position.
-  useEffect(() => {
-    if (selected) return
 
-    const savedScroll = readStorage(SCROLL_KEY, 'session')
-    if (!savedScroll && !returnCategory) return
-
-    const frame = requestAnimationFrame(() => {
-      const y = savedScroll ? Number.parseInt(savedScroll, 10) : Number.NaN
-      if (Number.isFinite(y)) {
-        window.scrollTo(0, y)
-      } else if (returnCategory) {
-        document.getElementById(getCategoryAnchorId(returnCategory))?.scrollIntoView({ block: 'start' })
-      }
-      removeStorage(SCROLL_KEY, 'session')
-      removeStorage(CATEGORY_KEY, 'session')
-    })
-
-    return () => cancelAnimationFrame(frame)
-  }, [selected, returnCategory])
-
-  const saveListPosition = (category: string) => {
-    writeStorage(SCROLL_KEY, String(window.scrollY), 'session')
-    writeStorage(CATEGORY_KEY, category, 'session')
-  }
-
-  const prepareListReturn = () => {
-    writeStorage(CATEGORY_KEY, detailCategory, 'session')
-  }
-
-  const grouped = useMemo(() => {
-    const normalizedQuery = normalizeSearchText(query.trim())
-    const map = new Map<string, Prayer[]>()
-    for (const prayer of prayers) {
-      const category = prayer.category && categoryOrder.includes(prayer.category)
-        ? prayer.category
-        : fallbackCategory
-      if (selectedCategory !== 'all' && category !== selectedCategory) continue
-
-      if (normalizedQuery && !getSearchableText(prayer).includes(normalizedQuery)) continue
-
-      if (!map.has(category)) map.set(category, [])
-      map.get(category)!.push(prayer)
-    }
-    return [...categoryOrder, fallbackCategory]
-      .filter((cat) => map.has(cat))
-      .map((cat) => ({ category: cat, items: [...map.get(cat)!].sort(byTitle) }))
-  }, [query, selectedCategory])
-
-  const resultCount = grouped.reduce((sum, group) => sum + group.items.length, 0)
-  const hasActiveFilters = query.trim().length > 0 || selectedCategory !== 'all'
-
-  // An unknown id (e.g. an old link after a file rename) is a real 404, not the list.
-  if (selectedId && !selected) return <NotFoundPage />
-
-  if (selected) {
-    return (
-      <div className="page content-detail-page">
-        <Link to="/modlitwy" className="back-button" onClick={prepareListReturn}>
-          <FaArrowLeft /> Powrót do listy
-        </Link>
-        <nav className="content-breadcrumb" aria-label="Okruszki">
-          <Link to="/modlitwy" onClick={prepareListReturn}>Modlitwy</Link>
-          <span aria-hidden="true">/</span>
-          <Link to="/modlitwy" onClick={prepareListReturn}>{detailCategory}</Link>
-        </nav>
-        <ReadingModeToggle
-          contentKey={`prayer:${selected.id}`}
-          contentTitle={selected.title}
-          isFavorite={isFavorite}
-          onToggleFavorite={() => toggleFavorite('prayer', selected.id)}
-        />
-        <h1>{selected.title}</h1>
-        {selected.author && (
-          <p className="content-rights-status">
-            Autor: <strong>{selected.author}</strong>
-            {selected.rightsStatus === 'original' && <> · opracowanie własne</>}
-            {selected.rightsStatus === 'public-domain' && <> · domena publiczna</>}
-          </p>
-        )}
-        {selected.rightsStatus === 'permission-required' ? (
-          <aside className="psalms-rights-notice content-rights-notice">
-            <FaCopyright aria-hidden="true" />
-            <div>
-              <h2>Tekst chroniony prawem autorskim</h2>
-              <p>
-                {selected.rightsNote ?? 'Pełny tekst wymaga zgody właściciela praw autorskich.'}
-                {' '}Pozostawiamy tytuł, autora i dokładny adres źródłowy.
-              </p>
-            </div>
-          </aside>
-        ) : (
-          <div className="prayer-text" lang="pl">
-            <Markdown>{selected.body}</Markdown>
-          </div>
-        )}
-        {selected.source && (
-          <SourceAttributionLink url={selected.source} />
-        )}
-        <nav className="content-sibling-nav" aria-label="Nawigacja między modlitwami">
-          {previousItem ? (
-            <Link to={`/modlitwy/${encodeRouteId(previousItem.id)}`}>
-              <FaChevronLeft />
-              <span className="content-sibling-copy">
-                <small>Poprzednia</small>
-                <span>{previousItem.title}</span>
-              </span>
-            </Link>
-          ) : <span />}
-          {nextItem && (
-            <Link className="content-sibling-next" to={`/modlitwy/${encodeRouteId(nextItem.id)}`}>
-              <span className="content-sibling-copy">
-                <small>Następna</small>
-                <span>{nextItem.title}</span>
-              </span>
-              <FaChevronRight />
-            </Link>
-          )}
-        </nav>
+  return (
+    <ContentCollectionPage
+      items={prayers}
+      kind="prayer"
+      basePath="/modlitwy"
+      scrollKey="prayers-scroll"
+      categoryKey="prayers-category"
+      anchorPrefix="prayer-category"
+      categoryOrder={categoryOrder}
+      textClassName="prayer-text"
+      listClassName="prayer-list"
+      itemClassName="prayer-item"
+      labels={labels}
+      renderDetailFooter={(selected, prepareListReturn) => (
         <nav className="content-next-actions" aria-labelledby="content-next-actions-title">
           <h2 id="content-next-actions-title">Co dalej?</h2>
           <div>
@@ -236,131 +60,13 @@ export default function PrayersPage() {
               <FaHandsPraying aria-hidden="true" /> Koronka
             </Link>
             {selected.id !== prayerOfDay.id && (
-              <Link to={`/modlitwy/${encodeRouteId(prayerOfDay.id)}`}>
+              <Link to={`/modlitwy/${encodeURIComponent(prayerOfDay.id)}`}>
                 <FaCalendarDay aria-hidden="true" /> Modlitwa dnia
               </Link>
             )}
           </div>
         </nav>
-      </div>
-    )
-  }
-
-  return (
-    <div className="page">
-      <h1>Modlitwy</h1>
-      {favoritePrayers.length > 0 && (
-        <details className="prayer-category saved-content-category">
-          <summary className="prayer-category-title"><FaStar aria-hidden="true" /> Ulubione <span>({favoritePrayers.length})</span></summary>
-          <ul className="prayer-list">
-            {favoritePrayers.map((prayer) => (
-              <li key={prayer.id} className="saved-content-item">
-                <Link to={`/modlitwy/${encodeRouteId(prayer.id)}`} className="prayer-item">{prayer.title}</Link>
-                <button
-                  type="button"
-                  className="saved-content-remove"
-                  aria-label={`Usuń „${prayer.title}” z ulubionych`}
-                  title="Usuń z ulubionych"
-                  onClick={() => setFavoriteToRemove(prayer)}
-                >
-                  <FaXmark aria-hidden="true" />
-                </button>
-              </li>
-            ))}
-          </ul>
-        </details>
       )}
-      {recentPrayers.length > 0 && (
-        <details className="prayer-category saved-content-category">
-          <summary className="prayer-category-title"><FaClock className="saved-content-recent-icon" aria-hidden="true" /> Ostatnio otwierane <span>({recentPrayers.length})</span></summary>
-          <ul className="prayer-list">
-            {recentPrayers.map((prayer) => (
-              <li key={prayer.id}>
-                <Link to={`/modlitwy/${encodeRouteId(prayer.id)}`} className="prayer-item">{prayer.title}</Link>
-              </li>
-            ))}
-          </ul>
-          <button type="button" className="saved-content-clear" onClick={() => setClearHistoryOpen(true)}>
-            <FaTrash aria-hidden="true" /> Wyczyść historię
-          </button>
-        </details>
-      )}
-      <div className="list-filter-controls">
-        <label>
-          Szukaj
-          <input
-            className="list-filter-input"
-            type="search"
-            placeholder="Tytuł lub treść modlitwy..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
-        </label>
-        <label>
-          Kategoria
-          <span className="list-filter-select">
-            <select value={selectedCategory} onChange={(event) => setSelectedCategory(event.target.value)}>
-              <option value="all">Wszystkie kategorie</option>
-              {categoryOrder.map((category) => (
-                <option key={category} value={category}>{category}</option>
-              ))}
-              <option value={fallbackCategory}>{fallbackCategory}</option>
-            </select>
-            <FaChevronDown aria-hidden="true" />
-          </span>
-        </label>
-      </div>
-      {hasActiveFilters && (
-        <p className="list-filter-count">
-          Wyświetlono: {resultCount} {pluralPl(resultCount, 'pozycję', 'pozycje', 'pozycji')}
-        </p>
-      )}
-      {resultCount === 0 && <p className="list-filter-empty">Brak modlitw pasujących do wybranych filtrów.</p>}
-      {grouped.map(({ category, items }) => (
-        <details
-          key={category}
-          id={getCategoryAnchorId(category)}
-          className="prayer-category"
-          open={hasActiveFilters || returnCategory === category || undefined}
-        >
-          <summary className="prayer-category-title">{category} <span>({items.length})</span></summary>
-          <ul className="prayer-list">
-            {items.map((prayer, index) => (
-              <li key={prayer.id} style={{ '--item-index': index } as CSSProperties}>
-                <Link
-                  to={`/modlitwy/${encodeRouteId(prayer.id)}`}
-                  className="prayer-item"
-                  onClick={() => saveListPosition(category)}
-                >
-                  {prayer.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </details>
-      ))}
-      <ConfirmDialog
-        open={favoriteToRemove !== null}
-        title="Usunąć z ulubionych?"
-        description={favoriteToRemove ? `Pozycja „${favoriteToRemove.title}” zniknie z ulubionych.` : ''}
-        confirmLabel="Usuń"
-        onCancel={() => setFavoriteToRemove(null)}
-        onConfirm={() => {
-          if (favoriteToRemove) removeFavorite('prayer', favoriteToRemove.id)
-          setFavoriteToRemove(null)
-        }}
-      />
-      <ConfirmDialog
-        open={clearHistoryOpen}
-        title="Wyczyścić historię?"
-        description="Usunięta zostanie historia ostatnio otwieranych modlitw i pieśni."
-        confirmLabel="Wyczyść"
-        onCancel={() => setClearHistoryOpen(false)}
-        onConfirm={() => {
-          clearRecent()
-          setClearHistoryOpen(false)
-        }}
-      />
-    </div>
+    />
   )
 }
