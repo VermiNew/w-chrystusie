@@ -42,6 +42,15 @@ export interface ContentCollectionConfig {
     filterPlaceholder: string
     emptyFilter: string
   }
+  /**
+   * Optional second filter by kind (e.g. litany, novena), shown as a row of chips.
+   * `getType` returns one of `typeOrder` for every item.
+   */
+  types?: {
+    label: string
+    typeOrder: string[]
+    getType: (item: MarkdownEntry) => string
+  }
   /** Extra content shown under the list title. */
   listIntro?: ReactNode
   /** Extra content inside a category title, before the item count. */
@@ -97,6 +106,7 @@ export default function ContentCollectionPage({
   listClassName,
   itemClassName,
   labels,
+  types,
   listIntro,
   renderCategoryBadge,
   renderDetailFooter,
@@ -105,6 +115,7 @@ export default function ContentCollectionPage({
   const location = useLocation()
   const [query, setQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
+  const [selectedType, setSelectedType] = useState('all')
   const [favoriteToRemove, setFavoriteToRemove] = useState<MarkdownEntry | null>(null)
   const [clearHistoryOpen, setClearHistoryOpen] = useState(false)
   const [returnCategory] = useState(() => readStorage(categoryKey, 'session'))
@@ -173,6 +184,7 @@ export default function ContentCollectionPage({
         ? item.category
         : fallbackCategory
       if (selectedCategory !== 'all' && category !== selectedCategory) continue
+      if (types && selectedType !== 'all' && types.getType(item) !== selectedType) continue
 
       if (normalizedQuery && !getSearchableText(items, item).includes(normalizedQuery)) continue
 
@@ -182,10 +194,20 @@ export default function ContentCollectionPage({
     return [...categoryOrder, fallbackCategory]
       .filter((cat) => map.has(cat))
       .map((cat) => ({ category: cat, items: [...map.get(cat)!].sort(byTitle) }))
-  }, [items, categoryOrder, query, selectedCategory])
+  }, [items, categoryOrder, query, selectedCategory, types, selectedType])
+
+  const typeCounts = useMemo(() => {
+    const counts = new Map<string, number>()
+    if (!types) return counts
+    for (const item of items) {
+      const type = types.getType(item)
+      counts.set(type, (counts.get(type) ?? 0) + 1)
+    }
+    return counts
+  }, [items, types])
 
   const resultCount = grouped.reduce((sum, group) => sum + group.items.length, 0)
-  const hasActiveFilters = query.trim().length > 0 || selectedCategory !== 'all'
+  const hasActiveFilters = query.trim().length > 0 || selectedCategory !== 'all' || selectedType !== 'all'
 
   // An unknown id (e.g. an old link after a file rename) is a real 404, not the list.
   if (selectedId && !selected) return <NotFoundPage />
@@ -298,6 +320,26 @@ export default function ContentCollectionPage({
             <FaTrash aria-hidden="true" /> Wyczyść historię
           </button>
         </details>
+      )}
+      {types && (
+        <div className="list-type-filter" role="group" aria-label={types.label}>
+          {['all', ...types.typeOrder].map((type) => {
+            const count = type === 'all' ? items.length : typeCounts.get(type) ?? 0
+            if (count === 0) return null
+            return (
+              <button
+                key={type}
+                type="button"
+                className="list-type-chip"
+                aria-pressed={selectedType === type}
+                onClick={() => setSelectedType(type)}
+              >
+                {type === 'all' ? 'Wszystkie' : type}
+                <span className="list-type-count">{count}</span>
+              </button>
+            )
+          })}
+        </div>
       )}
       <div className="list-filter-controls">
         <label>

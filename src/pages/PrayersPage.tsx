@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { FaCalendarDay, FaHandsPraying, FaList } from 'react-icons/fa6'
 import { getPrayerOfDay, prayers } from '../data/prayers'
 import ContentCollectionPage from '../components/ContentCollectionPage'
+import type { MarkdownEntry } from '../data/markdown'
 
 const categoryOrder = [
   'Modlitwy codzienne',
@@ -22,6 +23,25 @@ const categoryOrder = [
   'Sakramenty',
   'Katechizm',
 ]
+
+// Kind of prayer, read from the first word of the title.
+const prayerTypes = [
+  { type: 'Litanie', prefixes: ['Litania'] },
+  { type: 'Nowenny', prefixes: ['Nowenna'] },
+  { type: 'Koronki', prefixes: ['Koronka'] },
+  { type: 'Akty', prefixes: ['Akt'] },
+  { type: 'Drogi krzyżowe', prefixes: ['Droga Krzyżowa', 'Droga krzyżowa'] },
+  { type: 'Hymny', prefixes: ['Hymn'] },
+]
+const otherPrayersType = 'Modlitwy'
+
+const types = {
+  label: 'Rodzaj modlitwy',
+  typeOrder: [...prayerTypes.map(({ type }) => type), otherPrayersType],
+  getType: (prayer: MarkdownEntry) => prayerTypes.find(({ prefixes }) => prefixes.some(
+    (prefix) => prayer.title === prefix || prayer.title.startsWith(`${prefix} `),
+  ))?.type ?? otherPrayersType,
+}
 
 const labels = {
   title: 'Modlitwy',
@@ -46,6 +66,7 @@ export default function PrayersPage() {
       listClassName="prayer-list"
       itemClassName="prayer-item"
       labels={labels}
+      types={types}
       renderDetailFooter={(selected, prepareListReturn) => (
         <nav className="content-next-actions" aria-labelledby="content-next-actions-title">
           <h2 id="content-next-actions-title">Co dalej?</h2>
