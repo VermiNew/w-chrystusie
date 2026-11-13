@@ -18,6 +18,7 @@ import {
   type BrowserNotificationStatus,
 } from '../data/useReminders'
 import { useFocusTrap } from '../hooks/useFocusTrap'
+import { useSwipeToClose } from '../hooks/useSwipeToClose'
 
 interface Props {
   open: boolean
@@ -59,6 +60,8 @@ export default function RemindersModal({ open, onClose }: Props) {
       onClose()
     }, CLOSE_DURATION_MS)
   }, [closing, onClose])
+
+  useSwipeToClose(dialogRef, open, handleClose)
 
   // Open dialog when `open` becomes true
   useEffect(() => {

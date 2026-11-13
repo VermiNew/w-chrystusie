@@ -181,7 +181,7 @@
 ### Ogólne mobile
 - [ ] Brak `touch-action: manipulation` na interaktywnych elementach — 300ms tap delay na starszych iOS
 - [x] Brak `user-select: none` na przyciskach nawigacyjnych — przypadkowe zaznaczanie tekstu podczas szybkiego tapowania
-- [ ] Modalne (`RemindersModal`, `AboutModal`) — brak obsługi swipe-down do zamknięcia na mobile
+- [x] Modalne (`RemindersModal`, `AboutModal`) — zamykanie przeciągnięciem w dół na ekranach dotykowych (`useSwipeToClose`), uchwyt nad oknem
 - [ ] Listy modlitw/pieśni na mobile — elementy listy mają `min-height: 44px` ale padding może być niewystarczający na bardzo małych ekranach
 
 ## Do zrobienia — ogólny wygląd
