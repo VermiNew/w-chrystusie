@@ -171,8 +171,10 @@
   border-radius: 12px;
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.2s, box-shadow 0.2s, translate 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, translate 0.2s, scale 0.12s, background-color 0.2s;
   animation: tile-slide-left 0.5s ease both;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Row 1: tiles 1-3 */
@@ -196,10 +198,20 @@
   to { opacity: 1; transform: translateX(0); }
 }
 
-.section-tile:hover {
+/* Hover lift only with a real pointer: on touch screens :hover sticks after a tap. */
+@media (hover: hover) {
+  .section-tile:hover {
+    border-color: var(--color-hover-border);
+    box-shadow: 0 6px 24px rgba(var(--color-primary-rgb), 0.12), 0 0 0 3px rgba(var(--color-primary-rgb), 0.06);
+    translate: 0 -4px;
+  }
+}
+
+/* Tap feedback on touch screens (and click on desktop): a short press-in. */
+.section-tile:active {
   border-color: var(--color-hover-border);
-  box-shadow: 0 6px 24px rgba(var(--color-primary-rgb), 0.12), 0 0 0 3px rgba(var(--color-primary-rgb), 0.06);
-  translate: 0 -4px;
+  background: var(--color-hover-bg);
+  scale: 0.97;
 }
 
 .section-tile-icon {
@@ -440,7 +452,14 @@
   flex: 0 0 auto;
 }
 
-.home-shortcut:hover {
+@media (hover: hover) {
+  .home-shortcut:hover {
+    background: var(--color-hover-bg);
+    border-color: var(--color-hover-border);
+  }
+}
+
+.home-shortcut:active {
   background: var(--color-hover-bg);
   border-color: var(--color-hover-border);
 }

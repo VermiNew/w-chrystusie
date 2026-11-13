@@ -46,7 +46,7 @@
 - [x] Meta tagi (`description`, `theme-color`) + `manifest.json` (PWA)
 - [x] Kategorie pieśni (grupowanie jak w modlitwach)
 - [x] `PrayersPage` i `SongbookPage` korzystają ze wspólnego `ContentCollectionPage` (lista + szczegół); strony przekazują tylko konfigurację i swoje dodatki
-- [ ] `GenesisPage` obsługuje wszystkie księgi — rozważyć zmianę nazwy (np. `ScriptureBookPage`)
+- [x] `GenesisPage` → `ScriptureBookPage` (obsługuje wszystkie księgi)
 
 ## Offline (założenie: jedno wejście online, potem wszystko działa bez internetu)
 
@@ -179,7 +179,7 @@
 - [x] `max-width: 55ch` na `.rosary-nav` / `.chaplet-nav` — na bardzo małych ekranach (320px) może być za szeroki
 
 ### Ogólne mobile
-- [ ] Brak `touch-action: manipulation` na interaktywnych elementach — 300ms tap delay na starszych iOS
+- [x] `touch-action: manipulation` globalnie dla linków, przycisków i pól formularzy (`index.css`)
 - [x] Brak `user-select: none` na przyciskach nawigacyjnych — przypadkowe zaznaczanie tekstu podczas szybkiego tapowania
 - [ ] Modalne (`RemindersModal`, `AboutModal`) — brak obsługi swipe-down do zamknięcia na mobile
 - [ ] Listy modlitw/pieśni na mobile — elementy listy mają `min-height: 44px` ale padding może być niewystarczający na bardzo małych ekranach
@@ -200,10 +200,10 @@
 ### Animacje i interakcje
 - [x] Staggered delay listy (`list-item-in`) hardcoded do 10 elementów — przy 224 modlitwach elementy po 10. nie mają animacji wejścia
 - [x] Brak `prefers-reduced-motion` — wszystkie animacje powinny być wyłączone dla użytkowników z tą preferencją
-- [ ] Hover na kafelkach strony głównej tylko na desktop — brak analogicznego efektu tap na mobile
+- [x] Kafelki strony głównej: uniesienie przy hover tylko z myszą (`@media (hover: hover)`), na dotyku krótkie „wciśnięcie” (`:active`)
 
 ### Dark mode
-- [ ] `--color-darken: black` — niezmienna w dark mode, prawdopodobnie nieużywana lub błędna
+- [x] `--color-darken` — sprawdzone: używana w `chaplet.css` i `reminder-toast.css` do przyciemniania koloru głównego, czarny jest poprawny w obu motywach
 - [x] Brak `color-scheme: light` na `:root` (jest tylko `color-scheme: dark` w `[data-theme="dark"]`)
 
 ### PWA / meta
