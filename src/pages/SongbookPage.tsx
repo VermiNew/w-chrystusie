@@ -1,4 +1,5 @@
-import { songs } from '../data/songs'
+import { songCatalog } from '../data/contentCatalog'
+import { loadAllSongs, loadSongEntry } from '../data/contentLoaders'
 import { getLiturgicalSeason } from '../data/liturgicalSeason'
 import ContentCollectionPage from '../components/ContentCollectionPage'
 
@@ -30,7 +31,9 @@ export default function SongbookPage() {
 
   return (
     <ContentCollectionPage
-      items={songs}
+      items={songCatalog}
+      loadEntry={loadSongEntry}
+      loadAllEntries={loadAllSongs}
       kind="song"
       basePath="/spiewnik"
       scrollKey="songbook-scroll"

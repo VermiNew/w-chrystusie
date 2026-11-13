@@ -777,3 +777,9 @@
   outline-offset: 1px;
 }
 
+
+/* Shown for a moment while the text of the opened prayer/song chunk loads. */
+.content-detail-status {
+  margin-top: 1rem;
+  color: var(--color-text-muted);
+}

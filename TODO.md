@@ -262,7 +262,8 @@
 - [ ] Zgłosić `sitemap.xml` w Google Search Console i Bing Webmaster Tools oraz monitorować błędy indeksowania
 - [ ] Dodać automatyczną kontrolę niedziałających linków wewnętrznych i zewnętrznych przed publikacją
 - [x] Podzielić dane treści na fragmenty ładowane per sekcja — każda księga Biblii to osobny plik (rozdział: 4,8 MB → ok. 0,66 MB), różaniec, strona główna i nabożeństwo majowe nie ładują już całych zbiorów
-- [ ] Rozważyć dalsze odchudzenie list modlitw (~1,15 MB treści ładowane na `/modlitwy`) — np. lista z katalogu, pełny tekst osobno
+- [x] Odchudzenie list modlitw i pieśni — lista z katalogu, każdy tekst to osobny mały plik (`src/data/contentLoaders.ts`, `assets/content/`); pełne teksty dopiero przy wyszukiwaniu w treści. Otwarcie modlitwy: 1845 → 769 KB JS
+- [ ] Katalog z fragmentami (`content-catalog.json`, ~270 KB) jest w głównym pakiecie przez `SeoMetadata` — rozważyć meta-opisy ustawiane przez samą stronę treści
 - [x] Zaktualizować zależności produkcyjne i deweloperskie; `npm audit` oraz `npm audit --omit=dev` zwracają 0 podatności (ponownie `npm audit fix` 09.2026)
 - [x] CI (GitHub Actions): lint, build i test smoke przy każdym pushu
 - [x] Tytuły, metadane i statyczne wejścia HTML dla wszystkich ksiąg i rozdziałów Pisma Świętego (wcześniej „Nie znaleziono strony” i brak w sitemap)

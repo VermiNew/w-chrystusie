@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import { FaCalendarDay, FaHandsPraying, FaList } from 'react-icons/fa6'
-import { getPrayerOfDay, prayers } from '../data/prayers'
+import { getCatalogPrayerOfDay, prayerCatalog, type ContentCatalogEntry } from '../data/contentCatalog'
+import { loadAllPrayers, loadPrayerEntry } from '../data/contentLoaders'
 import ContentCollectionPage from '../components/ContentCollectionPage'
-import type { MarkdownEntry } from '../data/markdown'
 
 const categoryOrder = [
   'Modlitwy codzienne',
@@ -38,7 +38,7 @@ const otherPrayersType = 'Modlitwy'
 const types = {
   label: 'Rodzaj modlitwy',
   typeOrder: [...prayerTypes.map(({ type }) => type), otherPrayersType],
-  getType: (prayer: MarkdownEntry) => prayerTypes.find(({ prefixes }) => prefixes.some(
+  getType: (prayer: ContentCatalogEntry) => prayerTypes.find(({ prefixes }) => prefixes.some(
     (prefix) => prayer.title === prefix || prayer.title.startsWith(`${prefix} `),
   ))?.type ?? otherPrayersType,
 }
@@ -51,11 +51,13 @@ const labels = {
 }
 
 export default function PrayersPage() {
-  const prayerOfDay = getPrayerOfDay()
+  const prayerOfDay = getCatalogPrayerOfDay()
 
   return (
     <ContentCollectionPage
-      items={prayers}
+      items={prayerCatalog}
+      loadEntry={loadPrayerEntry}
+      loadAllEntries={loadAllPrayers}
       kind="prayer"
       basePath="/modlitwy"
       scrollKey="prayers-scroll"
