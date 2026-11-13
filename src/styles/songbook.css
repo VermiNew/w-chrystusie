@@ -777,3 +777,12 @@
   outline-offset: 1px;
 }
 
+
+/* Fragment currently read aloud ("Czytaj"), drawn with the CSS Custom Highlight API. */
+::highlight(speech-current) {
+  background-color: rgba(var(--color-primary-rgb), 0.16);
+}
+
+:root[data-theme='dark'] ::highlight(speech-current) {
+  background-color: rgba(var(--color-primary-rgb), 0.28);
+}

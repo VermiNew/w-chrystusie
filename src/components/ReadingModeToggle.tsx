@@ -5,6 +5,7 @@ import { useReadingPosition } from '../hooks/useReadingPosition'
 import { useSpeechSynthesis } from '../hooks/useSpeechSynthesis'
 import ContentFontSizeControl from './ContentFontSizeControl'
 import { isPageShortcutBlocked } from '../data/keyboard'
+import { createSpeechHighlighter, type SpeechHighlighter } from '../data/speechHighlight'
 
 const AUTO_SCROLL_STEPS = [
   { intervalMs: 4200, distance: 120 },
@@ -39,9 +40,17 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
   const stepStartedAtRef = useRef<number | null>(null)
   const pendingReadingProgressRef = useRef<number | null>(null)
   const controlsRef = useRef<HTMLDivElement>(null)
+  const highlighterRef = useRef<SpeechHighlighter | null>(null)
   const { wasRestored, restart } = useReadingPosition(contentKey)
   const speech = useSpeechSynthesis()
   useScreenWakeLock(isActive || speech.status !== 'idle')
+
+  // The highlight belongs to the current reading; remove it when reading stops or the page changes.
+  useEffect(() => {
+    if (speech.status === 'idle') highlighterRef.current?.clear()
+  }, [speech.status])
+
+  useEffect(() => () => highlighterRef.current?.clear(), [contentKey])
 
   useEffect(() => {
     if (!shareStatus) return
@@ -195,7 +204,9 @@ export default function ReadingModeToggle({ contentKey, contentTitle, isFavorite
     const content = controlsRef.current
       ?.closest('.content-detail-page')
       ?.querySelector<HTMLElement>('.prayer-text, .song-text, .psalm-verses')
-    speech.start(content ? getReadableText(content) : '')
+    highlighterRef.current?.clear()
+    highlighterRef.current = content ? createSpeechHighlighter(content) : null
+    speech.start(content ? getReadableText(content) : '', (chunk) => highlighterRef.current?.show(chunk))
   }
 
   return (
