@@ -76,6 +76,11 @@ const staticPages = [
     description: 'Litania loretańska i materiały do osobistego przeżywania nabożeństwa majowego.',
   },
   {
+    path: '/kalendarz',
+    title: 'Kalendarz liturgiczny | W Chrystusie',
+    description: 'Kalendarz liturgiczny Kościoła katolickiego w Polsce: okresy, niedziele, uroczystości, święta i kolory szat na każdy dzień.',
+  },
+  {
     path: '/szukaj',
     title: 'Szukaj | W Chrystusie',
     description: 'Wyszukiwarka modlitw, pieśni i pozostałych treści aplikacji W Chrystusie.',
