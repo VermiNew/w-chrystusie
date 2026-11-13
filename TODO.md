@@ -140,7 +140,8 @@
 - [x] Wybór głosu polskiego (`SpeechSynthesisVoice` z `lang: 'pl-PL'`) — `speechSynthesis.getVoices()` filtrowane po języku
 - [x] Przyciski: Start / Pause / Stop; synchronizacja ze stanem komponentu
 - [x] Czytanie krótkimi fragmentami (zdania/wersy) — Chrome urywa długie wypowiedzi; numery wersetów nie są czytane
-- [ ] Przed podpięciem Whisper: `SpeechSynthesisUtterance.onboundary` daje eventy słowo-po-słowie (`charIndex`, `charLength`) — wystarczy do podświetlania słów przy TTS bez żadnego modelu
+- [x] Podświetlanie przy TTS — aktualnie czytany fragment (zdanie/wers) zaznaczony przez CSS Custom Highlight API (`::highlight(speech-current)`), bez opakowywania Markdownu w `<span>`; strona przewija się za czytaniem (`src/data/speechHighlight.ts`)
+- [ ] (dalej, opcjonalnie) Przed podpięciem Whisper: `SpeechSynthesisUtterance.onboundary` daje eventy słowo-po-słowie (`charIndex`, `charLength`) — wystarczy do podświetlania słów przy TTS bez żadnego modelu
 
 ### Faza 2 — tryb skupienia (3 linie)
 - [ ] Wymaga rozbicia treści na **jednostki** (zdania lub wersy) — Markdown renderuje do bloków, więc trzeba parsować `body` przed renderowaniem

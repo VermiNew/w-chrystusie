@@ -45,7 +45,8 @@ export function useSpeechSynthesis() {
     setStatus('idle')
   }, [supported])
 
-  const start = useCallback((text: string) => {
+  /** `onChunkStart` is called when each piece of `text` starts being spoken (e.g. to highlight it). */
+  const start = useCallback((text: string, onChunkStart?: (chunk: string) => void) => {
     if (!supported) return
     const chunks = splitForSpeech(text)
     if (chunks.length === 0) return
@@ -67,6 +68,9 @@ export function useSpeechSynthesis() {
       utterance.lang = 'pl-PL'
       utterance.voice = voice
       utterance.onerror = finish
+      utterance.onstart = () => {
+        if (sessionRef.current === session) onChunkStart?.(chunk)
+      }
       if (index === chunks.length - 1) utterance.onend = finish
       window.speechSynthesis.speak(utterance)
     })
