@@ -263,6 +263,7 @@
 - [ ] Dodać automatyczną kontrolę niedziałających linków wewnętrznych i zewnętrznych przed publikacją
 - [x] Podzielić dane treści na fragmenty ładowane per sekcja — każda księga Biblii to osobny plik (rozdział: 4,8 MB → ok. 0,66 MB), różaniec, strona główna i nabożeństwo majowe nie ładują już całych zbiorów
 - [ ] Rozważyć dalsze odchudzenie list modlitw (~1,15 MB treści ładowane na `/modlitwy`) — np. lista z katalogu, pełny tekst osobno
+- [x] Katalog z fragmentami tekstów poza głównym pakietem: `SeoMetadata` ładuje go tylko na podstronach modlitw/pieśni, strona główna używa `content-index.json` (same tytuły), okno „O projekcie” — `content-counts.json`. Główny pakiet: 87 → 20 KB gzip
 - [x] Zaktualizować zależności produkcyjne i deweloperskie; `npm audit` oraz `npm audit --omit=dev` zwracają 0 podatności (ponownie `npm audit fix` 09.2026)
 - [x] CI (GitHub Actions): lint, build i test smoke przy każdym pushu
 - [x] Tytuły, metadane i statyczne wejścia HTML dla wszystkich ksiąg i rozdziałów Pisma Świętego (wcześniej „Nie znaleziono strony” i brak w sitemap)
