@@ -11,7 +11,7 @@ const HomePage = lazy(() => import('./pages/HomePage'))
 const PrayersPage = lazy(() => import('./pages/PrayersPage'))
 const ScripturePage = lazy(() => import('./pages/ScripturePage'))
 const PsalmsPage = lazy(() => import('./pages/PsalmsPage'))
-const GenesisPage = lazy(() => import('./pages/GenesisPage'))
+const ScriptureBookPage = lazy(() => import('./pages/ScriptureBookPage'))
 const SongbookPage = lazy(() => import('./pages/SongbookPage'))
 const RosaryPage = lazy(() => import('./pages/RosaryPage'))
 const ChapletPage = lazy(() => import('./pages/ChapletPage'))
@@ -19,6 +19,7 @@ const AnnouncementsPage = lazy(() => import('./pages/AnnouncementsPage'))
 const MayDevotionPage = lazy(() => import('./pages/MayDevotionPage'))
 const SearchPage = lazy(() => import('./pages/SearchPage'))
 const SourcesPage = lazy(() => import('./pages/SourcesPage'))
+const CalendarPage = lazy(() => import('./pages/CalendarPage'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 
 // The catalog slug of the Psalms is "psalmow", but they live under /pismo-swiete/psalmy.
@@ -69,8 +70,8 @@ function AppRoutes() {
               <Route path="/pismo-swiete/psalmy/:id" element={<PsalmsPage />} />
               <Route path="/pismo-swiete/psalmow" element={<PsalmsSlugRedirect />} />
               <Route path="/pismo-swiete/psalmow/:id" element={<PsalmsSlugRedirect />} />
-              <Route path="/pismo-swiete/:book" element={<GenesisPage />} />
-              <Route path="/pismo-swiete/:book/:chapter" element={<GenesisPage />} />
+              <Route path="/pismo-swiete/:book" element={<ScriptureBookPage />} />
+              <Route path="/pismo-swiete/:book/:chapter" element={<ScriptureBookPage />} />
               <Route path="/psalmy" element={<PsalmsPage />} />
               <Route path="/psalmy/:id" element={<PsalmsPage />} />
               <Route path="/spiewnik" element={<SongbookPage />} />
@@ -80,6 +81,7 @@ function AppRoutes() {
               <Route path="/ogloszenia" element={<AnnouncementsPage />} />
               <Route path="/ogloszenia/:id" element={<AnnouncementsPage />} />
               <Route path="/nabozenstwo-majowe" element={<MayDevotionPage />} />
+              <Route path="/kalendarz" element={<CalendarPage />} />
               <Route path="/szukaj" element={<SearchPage />} />
               <Route path="/zrodla" element={<SourcesPage />} />
               <Route path="*" element={<NotFoundPage />} />

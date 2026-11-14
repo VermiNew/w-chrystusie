@@ -9,6 +9,7 @@ Polska katolicka aplikacja webowa (PWA) — modlitwy, Pismo Święte, pieśni ko
 - **Śpiewnik** — blisko 300 pieśni z oznaczeniem okresu liturgicznego i trybem powiększonej czcionki
 - **Różaniec** — interaktywny przewodnik krok po kroku z czterema zestawami tajemnic
 - **Koronka** — Koronka do Miłosierdzia Bożego krok po kroku
+- **Kalendarz liturgiczny** (`/kalendarz`) — miesiąc z kolorem szat i rangą każdego dnia, szczegóły wybranego dnia, lista uroczystości i świąt; liczony na urządzeniu, działa offline
 - **Ogłoszenia** — ogłoszenia z kategoriami i publikacją zaplanowaną na wskazany dzień
 - **Nabożeństwo majowe** i **Źródła i materiały**
 - **Szukaj** — wyszukiwarka modlitw, pieśni, Pisma Świętego i ogłoszeń (skrót klawiszowy `/`, fraza zapisywana w adresie `?q=`)

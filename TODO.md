@@ -45,8 +45,8 @@
 - [x] Kafelek Różańca na stronie głównej
 - [x] Meta tagi (`description`, `theme-color`) + `manifest.json` (PWA)
 - [x] Kategorie pieśni (grupowanie jak w modlitwach)
-- [ ] `PrayersPage` i `SongbookPage` to prawie identyczne ~350 linii — wspólny komponent listy/szczegółu (każda poprawka jest dziś robiona dwa razy)
-- [ ] `GenesisPage` obsługuje wszystkie księgi — rozważyć zmianę nazwy (np. `ScriptureBookPage`)
+- [x] `PrayersPage` i `SongbookPage` korzystają ze wspólnego `ContentCollectionPage` (lista + szczegół); strony przekazują tylko konfigurację i swoje dodatki
+- [x] `GenesisPage` → `ScriptureBookPage` (obsługuje wszystkie księgi)
 
 ## Offline (założenie: jedno wejście online, potem wszystko działa bez internetu)
 
@@ -81,7 +81,7 @@
 - [x] Podświetlanie tajemnic wg dnia tygodnia działa, ale brak informacji o tym że można odmówić inny zestaw w każdy dzień — brak tooltipa/opisu przy przyciskach
 - [x] `← →` na klawiaturze nie działa gdy focus jest na przycisku nawigacyjnym (event listener na `window`, ale `button` może przechwycić `ArrowKey` przed scrollem)
 - [x] Litania Loretańska jako opcjonalne zakończenie
-- [ ] Inne modlitwy opcjonalne na zakończenie różańca
+- [x] Inne modlitwy opcjonalne na zakończenie różańca — do Litanii Loretańskiej doszły: Litania do św. Józefa, Litania do św. Michała Archanioła, „Wieczny odpoczynek”; można wybrać kilka, odmawiane po kolei
 
 ## Do zrobienia — koronka
 
@@ -115,10 +115,10 @@
 
 ## Do zrobienia — motywy
 
-- [ ] Tylko dwa motywy (light/dark) — brak np. "Sepia" dla trybu nocnego czytania
+- [x] Trzeci motyw „Sepia” (ciepły papier) do czytania wieczorem; przycisk przełącza jasny → ciemny → sepia; kolor paska przeglądarki (`theme-color`) zgodny z motywem
 - [x] Przełącznik motywu nie reaguje na zmianę systemową `prefers-color-scheme` w trakcie sesji (brak nasłuchiwania na `MediaQueryList.change`)
 - [x] Brak płynnej animacji przejścia między motywami (teraz zmiana jest natychmiastowa)
-- [ ] Ikona motywu w nav nie animuje się przy przełączaniu
+- [x] Ikona motywu w nav obraca się przy przełączaniu (z `prefers-reduced-motion` bez animacji)
 
 ## Do zrobienia — wyszukiwarka
 
@@ -130,7 +130,7 @@
 - [x] Wersety Pisma Świętego są klikalne i prowadzą do rozdziału; wyszukiwarka obejmuje wszystkie 64 księgi oraz ogłoszenia
 - [x] Fraza wyszukiwania zapisywana w adresie (`?q=`) — powrót z wyniku przywraca wyniki
 - [x] Filtry list modlitw i pieśni ignorują polskie znaki; poprawna odmiana liczebników („3 wyniki”, „2 pozycje”)
-- [ ] Brak historii ostatnich wyszukiwań
+- [x] Historia ostatnich wyszukiwań — do 8 fraz pod pustym polem (zapis po otwarciu wyniku lub Enter), usuwanie pojedynczo i „Wyczyść”; obejmuje ją kopia zapasowa
 - [x] `key={i}` (indeks) na elementach listy wyników — powinien być unikalny string
 
 ## Do zrobienia — tryb czytania z głosem (duży feature)
@@ -140,7 +140,8 @@
 - [x] Wybór głosu polskiego (`SpeechSynthesisVoice` z `lang: 'pl-PL'`) — `speechSynthesis.getVoices()` filtrowane po języku
 - [x] Przyciski: Start / Pause / Stop; synchronizacja ze stanem komponentu
 - [x] Czytanie krótkimi fragmentami (zdania/wersy) — Chrome urywa długie wypowiedzi; numery wersetów nie są czytane
-- [ ] Przed podpięciem Whisper: `SpeechSynthesisUtterance.onboundary` daje eventy słowo-po-słowie (`charIndex`, `charLength`) — wystarczy do podświetlania słów przy TTS bez żadnego modelu
+- [x] Podświetlanie przy TTS — aktualnie czytany fragment (zdanie/wers) zaznaczony przez CSS Custom Highlight API (`::highlight(speech-current)`), bez opakowywania Markdownu w `<span>`; strona przewija się za czytaniem (`src/data/speechHighlight.ts`)
+- [ ] (dalej, opcjonalnie) Przed podpięciem Whisper: `SpeechSynthesisUtterance.onboundary` daje eventy słowo-po-słowie (`charIndex`, `charLength`) — wystarczy do podświetlania słów przy TTS bez żadnego modelu
 
 ### Faza 2 — tryb skupienia (3 linie)
 - [ ] Wymaga rozbicia treści na **jednostki** (zdania lub wersy) — Markdown renderuje do bloków, więc trzeba parsować `body` przed renderowaniem
@@ -179,9 +180,9 @@
 - [x] `max-width: 55ch` na `.rosary-nav` / `.chaplet-nav` — na bardzo małych ekranach (320px) może być za szeroki
 
 ### Ogólne mobile
-- [ ] Brak `touch-action: manipulation` na interaktywnych elementach — 300ms tap delay na starszych iOS
+- [x] `touch-action: manipulation` globalnie dla linków, przycisków i pól formularzy (`index.css`)
 - [x] Brak `user-select: none` na przyciskach nawigacyjnych — przypadkowe zaznaczanie tekstu podczas szybkiego tapowania
-- [ ] Modalne (`RemindersModal`, `AboutModal`) — brak obsługi swipe-down do zamknięcia na mobile
+- [x] Modalne (`RemindersModal`, `AboutModal`) — zamykanie przeciągnięciem w dół na ekranach dotykowych (`useSwipeToClose`), uchwyt nad oknem
 - [ ] Listy modlitw/pieśni na mobile — elementy listy mają `min-height: 44px` ale padding może być niewystarczający na bardzo małych ekranach
 
 ## Do zrobienia — ogólny wygląd
@@ -200,10 +201,10 @@
 ### Animacje i interakcje
 - [x] Staggered delay listy (`list-item-in`) hardcoded do 10 elementów — przy 224 modlitwach elementy po 10. nie mają animacji wejścia
 - [x] Brak `prefers-reduced-motion` — wszystkie animacje powinny być wyłączone dla użytkowników z tą preferencją
-- [ ] Hover na kafelkach strony głównej tylko na desktop — brak analogicznego efektu tap na mobile
+- [x] Kafelki strony głównej: uniesienie przy hover tylko z myszą (`@media (hover: hover)`), na dotyku krótkie „wciśnięcie” (`:active`)
 
 ### Dark mode
-- [ ] `--color-darken: black` — niezmienna w dark mode, prawdopodobnie nieużywana lub błędna
+- [x] `--color-darken` — sprawdzone: używana w `chaplet.css` i `reminder-toast.css` do przyciemniania koloru głównego, czarny jest poprawny w obu motywach
 - [x] Brak `color-scheme: light` na `:root` (jest tylko `color-scheme: dark` w `[data-theme="dark"]`)
 
 ### PWA / meta
@@ -214,7 +215,7 @@
 ### Atmosfera i klimat
 - [ ] Ikona krzyża w hero animuje się przy hover — ale brak analogicznego ciepła w reszcie UI; rozważyć delikatne złote/bursztynowe akcenty kolorystyczne w miejscach modlitewnych (nagłówki treści, separatory)
 - [x] Widok modlitwy/pieśni: tekst na `font-reading` (Literata) — sprawdzić czy `line-height` jest wystarczający do komfortowego czytania (rekomendowane 1.8–2.0 dla tekstu modlitewnego)
-- [ ] Odstęp między wersami w litaniach — Markdown renderuje je jako jeden blok; rozważyć CSS `p + p { margin-top: ... }` w `.prayer-text` dla rytmu czytania
+- [x] Odstęp między wersami w litaniach — usunięta dodatkowa pusta linia między akapitami (`white-space: pre-line` tylko na blokach, nie na kontenerze); odstęp 1,25em zamiast ~3em
 - [x] Brak chwili ciszy — po zakończeniu różańca/koronki (`Zakończ ✓`) brak ekranu zakończenia; pojawia się intro bez żadnego "Amen" / podsumowania / momentu zatrzymania
 
 ### Nawigacja i orientacja
@@ -231,7 +232,8 @@
 - [x] Brak "keep screen awake" (`WakeLock API`) — ekran gaśnie w trakcie modlitwy różańcowej; użytkownik musi dotykać ekranu żeby go obudzić, co przerywa skupienie
 - [ ] Czcionka treści modlitwy na mobile — rozważyć `font-size: 1.1rem` zamiast domyślnego `1rem`; modlitwy czyta się trzymając telefon z odległości
 - [x] Brak haptic feedback przy przejściu do następnego kroku różańca/koronki (`navigator.vibrate(10)`) — subtelna odpowiedź dotykowa
-- [ ] Po wejściu w modlitwę/pieśń telefon scrolluje do góry (App.tsx `scrollTo(0,0)`) ale header jest sticky — pierwsze słowo tekstu jest częściowo przysłonięte
+- [x] Po wejściu w modlitwę/pieśń header nie przysłania tekstu (sprawdzone na 375px); prawdziwy problem był inny — pasek narzędzi zajmował 3 rzędy nad tytułem, teraz na telefonie to jeden rząd kafelków
+- [x] Tryb skupienia na telefonie — pływające przyciski zawijały się do 2 rzędów i zasłaniały tytuł; teraz jeden pełnej szerokości rząd
 
 ### Dostępność (a11y)
 - [x] Brak `aria-label` na przyciskach Wstecz/Dalej w różańcu i koronce — czytniki ekranowe mówią tylko "button"
@@ -263,8 +265,10 @@
 - [ ] Po wdrożeniu zweryfikować statusy HTTP bezpośrednich adresów, canonical i Open Graph na publicznej domenie
 - [ ] Zgłosić `sitemap.xml` w Google Search Console i Bing Webmaster Tools oraz monitorować błędy indeksowania
 - [ ] Dodać automatyczną kontrolę niedziałających linków wewnętrznych i zewnętrznych przed publikacją
+- [x] Katalog z fragmentami tekstów poza głównym pakietem: `SeoMetadata` ładuje go tylko na podstronach modlitw/pieśni, strona główna używa `content-index.json` (same tytuły), okno „O projekcie” — `content-counts.json`. Główny pakiet: 87 → 20 KB gzip
 - [x] Podzielić dane treści na fragmenty ładowane per sekcja — każda księga Biblii to osobny plik (rozdział: 4,8 MB → ok. 0,66 MB), różaniec, strona główna i nabożeństwo majowe nie ładują już całych zbiorów
-- [ ] Rozważyć dalsze odchudzenie list modlitw (~1,15 MB treści ładowane na `/modlitwy`) — np. lista z katalogu, pełny tekst osobno
+- [x] Odchudzenie list modlitw i pieśni — lista z katalogu, każdy tekst to osobny mały plik (`src/data/contentLoaders.ts`, `assets/content/`); pełne teksty dopiero przy wyszukiwaniu w treści. Otwarcie modlitwy: 1845 → 769 KB JS
+- [ ] Katalog z fragmentami (`content-catalog.json`, ~270 KB) jest w głównym pakiecie przez `SeoMetadata` — rozważyć meta-opisy ustawiane przez samą stronę treści
 - [x] Zaktualizować zależności produkcyjne i deweloperskie; `npm audit` oraz `npm audit --omit=dev` zwracają 0 podatności (ponownie `npm audit fix` 09.2026)
 - [x] CI (GitHub Actions): lint, build i test smoke przy każdym pushu
 - [x] Tytuły, metadane i statyczne wejścia HTML dla wszystkich ksiąg i rozdziałów Pisma Świętego (wcześniej „Nie znaleziono strony” i brak w sitemap)
@@ -305,7 +309,8 @@
 - [ ] Przy imporcie zachować dokładny URL każdej pozycji, kategorię, autora i informację o pochodzeniu
 - [ ] Znormalizować polskie znaki, cudzysłowy, wielokrotne spacje, encje HTML i błędne kodowanie
 - [ ] Ręcznie sprawdzić każdą serię importu pod kątem kompletności, duplikatów, jakości językowej i zgodności doktrynalnej
-- [ ] Rozbudować filtry o typ treści: koronka, litania, nowenna, psalm, pieśń, rozważanie i modlitwa okolicznościowa
+- [x] Filtr rodzaju modlitwy na `/modlitwy` (litanie, nowenny, koronki, akty, drogi krzyżowe, hymny, pozostałe) — z tytułu, przyciski z liczbą pozycji
+- [ ] Dalsze typy treści w filtrach (psalm, pieśń, rozważanie, modlitwa okolicznościowa) — wymagają pola `type` w frontmatter
 
 ## Do zrobienia — kalendarz liturgiczny i czytania na dziś
 
@@ -315,7 +320,7 @@
 - [ ] Zweryfikować z kalendarzem KEP: uroczystości polskie przypadające w niedzielę wielkanocną (np. 3 maja 2026 — teraz przeniesione na poniedziałek wg norm ogólnych) oraz szczególne decyzje Stolicy Apostolskiej (np. Narodzenie św. Jana Chrzciciela w 2022)
 - [x] Ruchome uroczystości i lata przestępne (sprawdzone dla lat 2024–2040); dzień liczony wg lokalnego czasu urządzenia
 - [x] Widok „Dzisiaj w liturgii” na stronie głównej
-- [ ] Pełny kalendarz z nawigacją po dniach
+- [x] Pełny kalendarz z nawigacją po dniach — `/kalendarz` (`CalendarPage`): siatka miesiąca, dzień w adresie `?d=RRRR-MM-DD`, link z „Dzisiaj w liturgii” i z menu
 - [ ] Pozyskać osobne, legalne źródło polskich czytań mszalnych; Romcal nie powinien być traktowany jako źródło tekstów czytań
 - [ ] Ustalić zakres danych czytań: pierwsze czytanie, psalm responsoryjny, drugie czytanie, aklamacja i Ewangelia
 - [ ] Zapisać przy każdym czytaniu źródło, siglum, tłumaczenie, licencję i adres oryginalnej publikacji

@@ -1,4 +1,5 @@
-import { FaChurch } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
+import { FaArrowRight, FaChurch } from 'react-icons/fa6'
 import { colorNames, getLiturgicalDay, getNextCelebration } from '../data/liturgicalCalendar'
 
 const formatDay = (date: Date) => date.toLocaleDateString('pl-PL', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })
@@ -31,6 +32,9 @@ export default function LiturgyToday() {
           Najbliżej: <strong>{next.day.title}</strong> — {formatShortDay(next.date)}
         </p>
       )}
+      <Link to="/kalendarz" className="liturgy-today-calendar-link">
+        Pełny kalendarz <FaArrowRight aria-hidden="true" />
+      </Link>
     </section>
   )
 }

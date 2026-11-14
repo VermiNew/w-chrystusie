@@ -21,6 +21,7 @@ const BACKUP_KEYS = [
   'prayer-reminders-times',
   'prayer-reminders-notif',
   'content-font-size',
+  'search-history',
   'theme',
 ]
 const BACKUP_PREFIXES = ['reading-position:']

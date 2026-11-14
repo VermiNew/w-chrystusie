@@ -18,6 +18,8 @@ function getContentUpdatedAt() {
   }
 }
 
+const CONTENT_CHUNK_DIRECTORY = 'assets/content/'
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
@@ -26,8 +28,22 @@ export default defineConfig({
     __CONTENT_UPDATED_AT__: JSON.stringify(getContentUpdatedAt()),
   },
   build: {
+    modulePreload: {
+      // Prayer/song text chunks import nothing, so they never need a preload list.
+      // Without this filter Vite lists all ~700 of them in the entry chunk (+15 KB gzip)
+      // as preload dependencies of the "load the whole collection" import.
+      resolveDependencies: (_filename, dependencies) => dependencies.filter(
+        (dependency) => !dependency.startsWith(CONTENT_CHUNK_DIRECTORY),
+      ),
+    },
     rollupOptions: {
       output: {
+        // One chunk per prayer/song Markdown file (see src/data/contentLoaders.ts),
+        // kept in their own folder with ASCII names.
+        chunkFileNames(chunkInfo) {
+          const isContentFile = /\/src\/data\/(prayers|songs)\/[^/]+\.md/.test(chunkInfo.facadeModuleId ?? '')
+          return isContentFile ? `${CONTENT_CHUNK_DIRECTORY}[hash].js` : 'assets/[name]-[hash].js'
+        },
         // Split vendor libraries into separate long-lived chunks so app
         // updates don't invalidate them in the user's browser cache.
         manualChunks(id) {

@@ -1,7 +1,7 @@
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { announcements } from '../data/announcements'
-import { prayerCatalog, songCatalog } from '../data/contentCatalog'
+import type { ContentCatalogEntry } from '../data/contentCatalog'
 import { scriptureBooksBySlug, scriptureCatalog } from '../data/scriptureCatalog'
 import { pluralPl } from '../data/plural'
 
@@ -9,6 +9,15 @@ const SITE_NAME = 'W Chrystusie'
 const AVAILABLE_BOOK_COUNT = scriptureCatalog.filter((book) => book.isAvailable).length
 const DEFAULT_DESCRIPTION = 'Polska katolicka aplikacja webowa — modlitwy, pieśni kościelne i interaktywny różaniec w jednym miejscu.'
 const DEFAULT_IMAGE_PATH = '/og-image.jpg'
+
+// The prayer/song catalog (~270 KB with excerpts) is only needed on their detail
+// pages, which load it anyway — so it is not part of the entry bundle.
+interface ContentCatalogs {
+  prayerCatalog: readonly ContentCatalogEntry[]
+  songCatalog: readonly ContentCatalogEntry[]
+}
+let loadedCatalogs: ContentCatalogs | null = null
+const CATALOG_ROUTE = /^\/(modlitwy|spiewnik)\/./
 
 interface RouteMetadata {
   title: string
@@ -72,6 +81,11 @@ const staticRoutes: Record<string, RouteMetadata> = {
     description: 'Litania loretańska i materiały do osobistego przeżywania nabożeństwa majowego.',
     canonicalPath: '/nabozenstwo-majowe',
   },
+  '/kalendarz': {
+    title: 'Kalendarz liturgiczny | W Chrystusie',
+    description: 'Kalendarz liturgiczny Kościoła katolickiego w Polsce: okresy, niedziele, uroczystości, święta i kolory szat na każdy dzień.',
+    canonicalPath: '/kalendarz',
+  },
   '/szukaj': {
     title: 'Szukaj | W Chrystusie',
     description: 'Wyszukiwarka modlitw, pieśni i pozostałych treści aplikacji W Chrystusie.',
@@ -109,18 +123,20 @@ function createDescription(title: string, body: string, contentType: string) {
   return `${prefix}${excerpt}${excerpt.length === availableLength ? '…' : ''}`
 }
 
-function findDetailMetadata(pathname: string): RouteMetadata | null {
+function findDetailMetadata(pathname: string, catalogs: ContentCatalogs | null): RouteMetadata | null {
   const detailRoutes = [
     {
       prefix: '/modlitwy/',
-      entries: prayerCatalog,
+      listPath: '/modlitwy',
+      entries: catalogs?.prayerCatalog,
       contentType: 'Tekst modlitwy',
       titleSuffix: 'modlitwa',
       section: 'Modlitwy',
     },
     {
       prefix: '/spiewnik/',
-      entries: songCatalog,
+      listPath: '/spiewnik',
+      entries: catalogs?.songCatalog,
       contentType: 'Tekst pieśni',
       titleSuffix: 'pieśń kościelna',
       section: 'Śpiewnik',
@@ -129,6 +145,8 @@ function findDetailMetadata(pathname: string): RouteMetadata | null {
 
   for (const route of detailRoutes) {
     if (!pathname.startsWith(route.prefix)) continue
+    // For the moment until the catalog arrives, use the metadata of the list.
+    if (!route.entries) return { ...staticRoutes[route.listPath], canonicalPath: pathname }
 
     const routeId = decodeRouteId(pathname.slice(route.prefix.length))
     const entry = route.entries.find((item) => item.id === routeId)
@@ -207,9 +225,9 @@ function findDetailMetadata(pathname: string): RouteMetadata | null {
   return null
 }
 
-function getRouteMetadata(pathname: string): RouteMetadata {
+function getRouteMetadata(pathname: string, catalogs: ContentCatalogs | null): RouteMetadata {
   const normalizedPath = pathname.length > 1 ? pathname.replace(/\/+$/, '') : pathname
-  const detailMetadata = findDetailMetadata(normalizedPath)
+  const detailMetadata = findDetailMetadata(normalizedPath, catalogs)
   if (detailMetadata) return detailMetadata
   if (staticRoutes[normalizedPath]) return staticRoutes[normalizedPath]
 
@@ -272,7 +290,20 @@ function setStructuredData(metadata: RouteMetadata, canonicalUrl: string, imageU
 
 export default function SeoMetadata() {
   const { pathname } = useLocation()
-  const metadata = useMemo(() => getRouteMetadata(pathname), [pathname])
+  const [catalogs, setCatalogs] = useState(loadedCatalogs)
+  const needsCatalogs = CATALOG_ROUTE.test(pathname)
+
+  useEffect(() => {
+    if (!needsCatalogs || catalogs) return
+    let cancelled = false
+    import('../data/contentCatalog').then(({ prayerCatalog, songCatalog }) => {
+      loadedCatalogs = { prayerCatalog, songCatalog }
+      if (!cancelled) setCatalogs(loadedCatalogs)
+    }, () => undefined)
+    return () => { cancelled = true }
+  }, [needsCatalogs, catalogs])
+
+  const metadata = useMemo(() => getRouteMetadata(pathname, catalogs), [pathname, catalogs])
 
   useEffect(() => {
     const configuredSiteUrl = import.meta.env.VITE_SITE_URL?.trim().replace(/\/+$/, '')

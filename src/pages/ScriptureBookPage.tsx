@@ -104,7 +104,7 @@ function ScriptureBookReader({ bookSlug, chapterNumber }: { bookSlug: string; ch
   )
 }
 
-export default function GenesisPage() {
+export default function ScriptureBookPage() {
   const { book: bookSlug, chapter } = useParams()
   if (!bookSlug || !hasScriptureBook(bookSlug)) return <NotFoundPage />
 

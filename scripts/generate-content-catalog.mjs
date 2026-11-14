@@ -3,7 +3,13 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const outputFile = path.join(projectRoot, 'src', 'data', 'generated', 'content-catalog.json')
+const outputDirectory = path.join(projectRoot, 'src', 'data', 'generated')
+// Full catalog with excerpts: prayer/song lists and their page metadata.
+const outputFile = path.join(outputDirectory, 'content-catalog.json')
+// Titles only: the home page ("Modlitwa dnia", "Kontynuuj") without the ~270 KB of excerpts.
+const indexFile = path.join(outputDirectory, 'content-index.json')
+// Just the numbers: the About dialog, which is part of the entry bundle.
+const countsFile = path.join(outputDirectory, 'content-counts.json')
 const EXCERPT_LENGTH = 220
 
 function parseMarkdown(filename, raw) {
@@ -60,7 +66,13 @@ const [prayers, songs] = await Promise.all([
   loadCatalog('songs'),
 ])
 
-await mkdir(path.dirname(outputFile), { recursive: true })
-await writeFile(outputFile, `${JSON.stringify({ prayers, songs }, null, 2)}\n`, 'utf8')
+const withoutExcerpt = (entries) => entries.map(({ id, title, category }) => ({ id, title, ...(category ? { category } : {}) }))
+
+await mkdir(outputDirectory, { recursive: true })
+await Promise.all([
+  writeFile(outputFile, `${JSON.stringify({ prayers, songs }, null, 2)}\n`, 'utf8'),
+  writeFile(indexFile, `${JSON.stringify({ prayers: withoutExcerpt(prayers), songs: withoutExcerpt(songs) }, null, 2)}\n`, 'utf8'),
+  writeFile(countsFile, `${JSON.stringify({ prayers: prayers.length, songs: songs.length }, null, 2)}\n`, 'utf8'),
+])
 
 console.log(`[catalog] Wygenerowano ${prayers.length} modlitw i ${songs.length} pieśni.`)

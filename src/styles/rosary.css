@@ -514,3 +514,26 @@
   letter-spacing: 0.03em;
 }
 
+
+/* Several optional endings can be chosen; they are prayed in the listed order. */
+.rosary-optional-endings {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 55ch;
+  margin: 0 auto 1.25rem;
+  padding: 0;
+  border: 0;
+}
+
+.rosary-optional-endings legend {
+  margin-bottom: 0.5rem;
+  padding: 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.rosary-optional-endings .rosary-optional-ending {
+  width: 100%;
+  margin: 0;
+}

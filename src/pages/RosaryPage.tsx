@@ -3,6 +3,7 @@ import { FaArrowLeft, FaArrowRight, FaArrowUpRightFromSquare, FaCheck, FaChevron
 import Markdown from 'react-markdown'
 import {
   mysterySets,
+  prayers,
   buildRosarySteps,
   getBeadStrip,
   rosaryPrayerGuide,
@@ -10,9 +11,11 @@ import {
   rosaryPromisesIntroduction,
   type MysterySet,
 } from '../data/rosary'
-import { parseMarkdown } from '../data/markdown'
-// Only this one prayer is needed here — importing the whole prayer collection would add ~1 MB to the page.
+import { parseMarkdown, type MarkdownEntry } from '../data/markdown'
+// Only these prayers are needed here — importing the whole prayer collection would add ~1 MB to the page.
 import loretoLitanyRaw from '../data/prayers/Litania Loretańska do Najświętszej Maryi Panny.md?raw'
+import josephLitanyRaw from '../data/prayers/Litania do Świętego Józefa.md?raw'
+import michaelLitanyRaw from '../data/prayers/Litania do św. Michała Archanioła.md?raw'
 import { hapticLight, hapticMedium } from '../data/haptics'
 import { isPageShortcutBlocked } from '../data/keyboard'
 import { useScreenWakeLock } from '../hooks/useScreenWakeLock'
@@ -22,7 +25,41 @@ import ContentFontSizeControl from '../components/ContentFontSizeControl'
 
 const DAY_NAMES = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota']
 const ROSARY_PROGRESS_KEY = 'rosary-progress'
-const loretoLitany = parseMarkdown('Litania Loretańska do Najświętszej Maryi Panny', loretoLitanyRaw)
+
+interface RosaryEnding {
+  id: string
+  label: string
+  description: string
+  prayer: MarkdownEntry
+}
+
+// Optional prayers after the rosary, said in this order when several are chosen.
+const ROSARY_ENDINGS: RosaryEnding[] = [
+  {
+    id: 'loreto',
+    label: 'Litania Loretańska',
+    description: 'Tradycyjne zakończenie, zwłaszcza w maju i październiku',
+    prayer: parseMarkdown('Litania Loretańska do Najświętszej Maryi Panny', loretoLitanyRaw),
+  },
+  {
+    id: 'joseph',
+    label: 'Litania do św. Józefa',
+    description: 'Opiekun Świętej Rodziny i patron Kościoła',
+    prayer: parseMarkdown('Litania do Świętego Józefa', josephLitanyRaw),
+  },
+  {
+    id: 'michael',
+    label: 'Litania do św. Michała Archanioła',
+    description: 'O obronę w walce duchowej',
+    prayer: parseMarkdown('Litania do św. Michała Archanioła', michaelLitanyRaw),
+  },
+  {
+    id: 'eternal-rest',
+    label: 'Wieczny odpoczynek',
+    description: 'Za zmarłych',
+    prayer: { id: 'Wieczny odpoczynek', title: 'Wieczny odpoczynek', body: prayers.eternalRest },
+  },
+]
 
 interface RosaryProgress {
   selectedSet: MysterySet | null
@@ -74,8 +111,11 @@ export default function RosaryPage() {
   const [selectedSet, setSelectedSet] = useState<MysterySet | null>(restoredProgress.selectedSet)
   const [currentStep, setCurrentStep] = useState(restoredProgress.currentStep)
   const [isComplete, setIsComplete] = useState(false)
-  const [includeLitany, setIncludeLitany] = useState(false)
-  const [showLitany, setShowLitany] = useState(false)
+  const [selectedEndingIds, setSelectedEndingIds] = useState<string[]>([])
+  // Index into the chosen endings while they are being prayed, null during the rosary itself.
+  const [endingIndex, setEndingIndex] = useState<number | null>(null)
+  const chosenEndings = ROSARY_ENDINGS.filter((ending) => selectedEndingIds.includes(ending.id))
+  const showEnding = endingIndex !== null
   const [showKeyboardHint, setShowKeyboardHint] = useState(
     () => window.matchMedia('(hover: hover) and (pointer: fine)').matches,
   )
@@ -116,8 +156,8 @@ export default function RosaryPage() {
     setSelectedSet(null)
     setCurrentStep(0)
     setIsComplete(false)
-    setIncludeLitany(false)
-    setShowLitany(false)
+    setSelectedEndingIds([])
+    setEndingIndex(null)
     window.scrollTo(0, 0)
   }, [])
 
@@ -125,8 +165,8 @@ export default function RosaryPage() {
     hapticMedium()
     setCurrentStep(0)
     setIsComplete(false)
-    setIncludeLitany(false)
-    setShowLitany(false)
+    setSelectedEndingIds([])
+    setEndingIndex(null)
     window.scrollTo(0, 0)
   }, [])
 
@@ -138,21 +178,26 @@ export default function RosaryPage() {
       // Completion must still work when browser storage is unavailable.
     }
     setIsComplete(true)
-    setShowLitany(false)
+    setEndingIndex(null)
     window.scrollTo(0, 0)
   }, [])
 
   const finishRosary = useCallback(() => {
-    if (includeLitany && loretoLitany) {
-      setShowLitany(true)
+    if (selectedEndingIds.length > 0) {
+      hapticLight()
+      setEndingIndex(0)
       window.scrollTo(0, 0)
       return
     }
     complete()
-  }, [complete, includeLitany])
+  }, [complete, selectedEndingIds.length])
+
+  const toggleEnding = (id: string, checked: boolean) => {
+    setSelectedEndingIds((ids) => (checked ? [...ids, id] : ids.filter((selectedId) => selectedId !== id)))
+  }
 
   useEffect(() => {
-    if (!selectedSet || isComplete || showLitany) return
+    if (!selectedSet || isComplete || showEnding) return
 
     try {
       sessionStorage.setItem(ROSARY_PROGRESS_KEY, JSON.stringify({
@@ -162,11 +207,11 @@ export default function RosaryPage() {
     } catch {
       // Prayer navigation remains usable when browser storage is unavailable.
     }
-  }, [selectedSet, currentStep, isComplete, showLitany])
+  }, [selectedSet, currentStep, isComplete, showEnding])
 
   // Arrow keys to navigate between rosary steps
   useEffect(() => {
-    if (!selectedSet || isComplete || showLitany) return
+    if (!selectedSet || isComplete || showEnding) return
 
     const handleKey = (e: KeyboardEvent) => {
       if (isPageShortcutBlocked(e)) return
@@ -178,7 +223,7 @@ export default function RosaryPage() {
 
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
-  }, [selectedSet, isComplete, showLitany, goNext, goPrev, reset])
+  }, [selectedSet, isComplete, showEnding, goNext, goPrev, reset])
 
   const today = new Date().getDay()
 
@@ -227,8 +272,8 @@ export default function RosaryPage() {
                   onClick={() => {
                     setCurrentStep(0)
                     setIsComplete(false)
-                    setIncludeLitany(false)
-                    setShowLitany(false)
+                    setSelectedEndingIds([])
+                    setEndingIndex(null)
                     setSelectedSet(set)
                   }}
                 >
@@ -293,28 +338,51 @@ export default function RosaryPage() {
     )
   }
 
-  if (showLitany && loretoLitany) {
+  const ending = endingIndex !== null ? chosenEndings[endingIndex] : undefined
+  if (ending && endingIndex !== null) {
+    const nextEnding = chosenEndings[endingIndex + 1]
     return (
-      <div className="page content-detail-page optional-rosary-ending">
-        <button className="back-button" onClick={() => setShowLitany(false)}>
-          <FaArrowLeft aria-hidden="true" /> Wróć do ostatniego kroku
+      <div className="page content-detail-page optional-rosary-ending" key={ending.id}>
+        <button
+          className="back-button"
+          onClick={() => {
+            setEndingIndex(endingIndex > 0 ? endingIndex - 1 : null)
+            window.scrollTo(0, 0)
+          }}
+        >
+          <FaArrowLeft aria-hidden="true" /> {endingIndex > 0 ? 'Wróć do poprzedniej modlitwy' : 'Wróć do ostatniego kroku'}
         </button>
         <div className="prayer-sequence-text-size">
           <ContentFontSizeControl />
         </div>
-        <p className="optional-rosary-ending-label">Opcjonalne zakończenie różańca</p>
-        <h1>{loretoLitany.title}</h1>
+        <p className="optional-rosary-ending-label">
+          Zakończenie różańca{chosenEndings.length > 1 && ` · ${endingIndex + 1} z ${chosenEndings.length}`}
+        </p>
+        <h1>{ending.prayer.title}</h1>
         <div className="prayer-text" lang="pl">
-          <Markdown>{loretoLitany.body}</Markdown>
+          <Markdown>{ending.prayer.body}</Markdown>
         </div>
-        {loretoLitany.source && (
-          <a className="source-link" href={loretoLitany.source} target="_blank" rel="noopener noreferrer">
+        {ending.prayer.source && (
+          <a className="source-link" href={ending.prayer.source} target="_blank" rel="noopener noreferrer">
             Źródło <FaArrowUpRightFromSquare aria-hidden="true" />
           </a>
         )}
-        <button className="optional-rosary-ending-complete" onClick={complete}>
-          <FaCheck aria-hidden="true" /> Zakończ różaniec
-        </button>
+        {nextEnding ? (
+          <button
+            className="optional-rosary-ending-complete"
+            onClick={() => {
+              hapticLight()
+              setEndingIndex(endingIndex + 1)
+              window.scrollTo(0, 0)
+            }}
+          >
+            Dalej: {nextEnding.label} <FaArrowRight aria-hidden="true" />
+          </button>
+        ) : (
+          <button className="optional-rosary-ending-complete" onClick={complete}>
+            <FaCheck aria-hidden="true" /> Zakończ różaniec
+          </button>
+        )}
       </div>
     )
   }
@@ -369,18 +437,23 @@ export default function RosaryPage() {
         <p className="rosary-prayer">{step.prayer}</p>
       </div>
 
-      {isLast && loretoLitany && (
-        <label className="rosary-optional-ending">
-          <input
-            type="checkbox"
-            checked={includeLitany}
-            onChange={(event) => setIncludeLitany(event.target.checked)}
-          />
-          <span>
-            <strong>Litania Loretańska</strong>
-            <small>Dodaj jako opcjonalne zakończenie</small>
-          </span>
-        </label>
+      {isLast && (
+        <fieldset className="rosary-optional-endings">
+          <legend>Opcjonalne zakończenie</legend>
+          {ROSARY_ENDINGS.map((ending) => (
+            <label key={ending.id} className="rosary-optional-ending">
+              <input
+                type="checkbox"
+                checked={selectedEndingIds.includes(ending.id)}
+                onChange={(event) => toggleEnding(ending.id, event.target.checked)}
+              />
+              <span>
+                <strong>{ending.label}</strong>
+                <small>{ending.description}</small>
+              </span>
+            </label>
+          ))}
+        </fieldset>
       )}
 
       <div className="prayer-sequence-controls">

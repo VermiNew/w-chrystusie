@@ -2,13 +2,9 @@ import { loadMarkdownFiles, type MarkdownEntry } from './markdown'
 
 export type Prayer = MarkdownEntry
 
+// The whole collection (~1.2 MB), for searching inside the texts: the global search
+// and the list filter. The prayer pages themselves load single texts on demand
+// (contentLoaders.ts); the prayer of the day comes from the catalog (contentCatalog.ts).
 const modules = import.meta.glob('./prayers/*.md', { query: '?raw', eager: true, import: 'default' }) as Record<string, string>
 
 export const prayers = loadMarkdownFiles(modules, './prayers/')
-
-const dailyPrayers = [...prayers].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))
-
-export function getPrayerOfDay(date = new Date()) {
-  const dayNumber = Math.floor(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) / 86_400_000)
-  return dailyPrayers[dayNumber % dailyPrayers.length]
-}

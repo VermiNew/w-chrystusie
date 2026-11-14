@@ -1,9 +1,10 @@
 import { useEffect, useId, useRef, useState, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import { FaXmark, FaGithub, FaCross, FaMusic, FaGlobe, FaBullhorn, FaLink } from 'react-icons/fa6'
-import { prayerCatalog, songCatalog } from '../data/contentCatalog'
+import { contentCounts } from '../data/contentCounts'
 import { announcements } from '../data/announcements'
 import { useFocusTrap } from '../hooks/useFocusTrap'
+import { useSwipeToClose } from '../hooks/useSwipeToClose'
 import DataBackup from './DataBackup'
 import logoUrl from '../assets/logo-about.png'
 
@@ -37,6 +38,8 @@ export default function AboutModal({ open, onClose }: Props) {
       onClose()
     }, CLOSE_DURATION_MS)
   }, [closing, onClose])
+
+  useSwipeToClose(dialogRef, open, handleClose)
 
   useEffect(() => {
     const dialog = dialogRef.current
@@ -119,12 +122,12 @@ export default function AboutModal({ open, onClose }: Props) {
         <div className="about-stats">
           <div className="about-stat">
             <FaCross className="about-stat-icon" />
-            <span className="about-stat-value">{prayerCatalog.length}</span>
+            <span className="about-stat-value">{contentCounts.prayers}</span>
             <span className="about-stat-label">modlitw</span>
           </div>
           <div className="about-stat">
             <FaMusic className="about-stat-icon" />
-            <span className="about-stat-value">{songCatalog.length}</span>
+            <span className="about-stat-value">{contentCounts.songs}</span>
             <span className="about-stat-label">pieśni</span>
           </div>
           <div className="about-stat">

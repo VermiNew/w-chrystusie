@@ -1,0 +1,272 @@
+/* Liturgical calendar page (/kalendarz). Day colors reuse .liturgy-color from home.css. */
+
+.liturgical-calendar-page {
+  max-width: 52rem;
+}
+
+.calendar-day-card,
+.calendar-month,
+.calendar-celebrations {
+  margin-top: 1rem;
+  padding: 1rem 1.15rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.calendar-day-nav,
+.calendar-month-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.calendar-day-nav button,
+.calendar-month-header button {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--color-primary);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.calendar-day-date {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.calendar-today-badge {
+  padding: 0.1rem 0.5rem;
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--color-primary);
+  border-radius: 999px;
+}
+
+.calendar-day-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin: 0.85rem 0 0.45rem;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
+.calendar-today-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  margin-top: 0.85rem;
+  padding: 0.45rem 0.85rem;
+  color: var(--color-primary);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: transparent;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.calendar-month-header h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+.calendar-grid {
+  margin-top: 0.85rem;
+}
+
+.calendar-weekdays,
+.calendar-grid-days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.3rem;
+}
+
+.calendar-weekdays span {
+  padding-bottom: 0.3rem;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.calendar-sunday,
+.calendar-weekdays .calendar-sunday {
+  color: var(--color-primary);
+}
+
+.calendar-cell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  min-height: 3.1rem;
+  padding: 0.35rem 0;
+  color: var(--color-text);
+  font: inherit;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.calendar-cell--blank {
+  cursor: default;
+}
+
+.calendar-cell-number {
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.calendar-cell .liturgy-color {
+  width: 0.55rem;
+  height: 0.55rem;
+  transform: none;
+}
+
+.calendar-cell--solemnity .calendar-cell-number,
+.calendar-cell--feast .calendar-cell-number,
+.calendar-cell.calendar-sunday .calendar-cell-number {
+  font-weight: 700;
+}
+
+.calendar-cell.calendar-sunday {
+  color: var(--color-primary);
+}
+
+.calendar-cell-mark {
+  /* Next to the day number, like a superscript. */
+  position: absolute;
+  top: -0.35rem;
+  left: calc(100% + 1px);
+  color: var(--color-primary);
+  font-size: 0.6rem;
+  font-weight: 800;
+}
+
+.calendar-cell--today {
+  border-color: var(--color-border-strong);
+}
+
+.calendar-cell--selected {
+  background: color-mix(in srgb, var(--color-primary) 12%, var(--color-surface));
+  border-color: var(--color-primary);
+}
+
+@media (hover: hover) {
+  .calendar-cell:not(.calendar-cell--blank):hover,
+  .calendar-celebrations button:hover,
+  .calendar-day-nav button:hover,
+  .calendar-month-header button:hover,
+  .calendar-today-button:hover {
+    background: var(--color-hover-bg);
+  }
+}
+
+:is(.calendar-cell, .calendar-celebrations button, .calendar-day-nav button, .calendar-month-header button, .calendar-today-button):focus-visible {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.28);
+  outline-offset: 1px;
+}
+
+.calendar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin: 0.85rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
+.calendar-legend strong {
+  color: var(--color-primary);
+}
+
+.calendar-celebrations h2 {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+}
+
+.calendar-celebrations ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.calendar-celebrations button {
+  display: grid;
+  grid-template-columns: 4.25rem auto 1fr;
+  align-items: baseline;
+  gap: 0.6rem;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.5rem 0.4rem;
+  color: var(--color-text);
+  font: inherit;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.calendar-celebrations button[aria-current='true'] {
+  background: color-mix(in srgb, var(--color-primary) 10%, var(--color-surface));
+}
+
+.calendar-celebration-date {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.calendar-celebration-title {
+  line-height: 1.35;
+}
+
+.calendar-note {
+  margin: 1rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 400px) {
+  .calendar-month,
+  .calendar-day-card,
+  .calendar-celebrations {
+    padding: 0.85rem 0.7rem;
+  }
+
+  .calendar-grid-days,
+  .calendar-weekdays {
+    gap: 0.15rem;
+  }
+}
