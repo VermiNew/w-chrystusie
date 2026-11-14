@@ -245,7 +245,9 @@
 
 - [x] Pismo Święte — pozyskać katolicką wersję z otwartą licencją (przekład ks. Jakuba Wujka z Wikiźródeł, domena publiczna)
 - [x] Pismo Święte — 64 z 73 ksiąg, w tym cały Nowy Testament
-- [ ] Pismo Święte — brakujące księgi: Tobiasza (import wycofany), Judyty, Estery, Mądrości, Syracha, Barucha, Daniela, 1 i 2 Machabejska
+- [x] Pismo Święte — Tobiasza i Judyty z wydania 1839–1840 (Wikiźródła), z widoczną informacją „Tekst przed korektą” (transkrypcja w większości nieskorygowana, dawna pisownia); poprawione błędne znaczniki wersetów Tob 11,3, Jdt 13,28, Jdt 16,30; Jdt 9 zachowuje numerację wydania (bez w. 16)
+- [ ] Pismo Święte — brakujące księgi: Estery i Daniela (w wydaniu 1923 na Wikiźródłach tylko część protokanoniczna: 10 i 12 rozdziałów), Mądrości (w wydaniu 1839–1840 istnieją tylko rozdz. 1, 18, 19), Syracha, Barucha, 1 i 2 Machabejska (brak w Wikiźródłach)
+- [ ] Gdy Wikiźródła skorygują Tobiasza i Judytę — ponownie uruchomić `npm run content:tobit` i `npm run content:judith`, a po pełnej korekcie usunąć `sourceQuality: unverified`
 - [ ] Mobile responsiveness — poprawki layoutu na 375px+
 - [ ] Akcenty kolorystyczne — violet dla hover/active, rubric red dla dekoracji
 - [ ] Kontenery czytania — subtelne obramowanie/cień dla widoków szczegółowych

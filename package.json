@@ -21,6 +21,8 @@
     "content:catalog": "node scripts/generate-content-catalog.mjs",
     "content:psalms": "node scripts/import-wujek-psalms.mjs",
     "content:genesis": "node scripts/import-wujek-genesis.mjs",
+    "content:tobit": "node scripts/import-wujek-genesis.mjs --book tob",
+    "content:judith": "node scripts/import-wujek-genesis.mjs --book jdt",
     "content:exodus": "node scripts/import-wujek-genesis.mjs --book exo",
     "content:numbers": "node scripts/import-wujek-genesis.mjs --book num",
     "content:judges": "node scripts/import-wujek-genesis.mjs --book jdg",

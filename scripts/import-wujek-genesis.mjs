@@ -6,7 +6,62 @@ const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
 const apiUrl = 'https://pl.wikisource.org/w/api.php'
 const userAgent = 'WChrystusieContentImporter/1.0 (https://w-chrystusie.pages.dev)'
 
+const romanNumerals = [
+  [10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I'],
+]
+
+function toRoman(value) {
+  let rest = value
+  let result = ''
+  for (const [amount, symbol] of romanNumerals) {
+    while (rest >= amount) {
+      result += symbol
+      rest -= amount
+    }
+  }
+  return result
+}
+
+// The 1839–1840 edition (Lwów) on Wikisource is the only Wujek source of these
+// deuterocanonical books. Its chapter pages are named with Roman numerals and its
+// transcription is mostly not proofread yet, so the app shows a notice for them.
+const edition1839 = {
+  translation: 'Biblia Jakuba Wujka (1599), wydanie 1839–1840',
+  sourceQuality: 'unverified',
+  chapterPageName: (chapterNumber) => `Rozdział ${toRoman(chapterNumber)}`,
+  // Verses open with a drop cap: "<b><span>T</span></b>Obiasz" → "Tobiasz".
+  fixDropCaps: true,
+}
+
+const wikisource1839Url = (title) => `https://pl.wikisource.org/wiki/${encodeURIComponent(title.replaceAll(' ', '_'))}`
+
+function edition1839Book(id, name, sourceBookTitle, chapterCount, outputName) {
+  const sourceRoot = `Biblia Wujka (wyd. 1839-40)/${sourceBookTitle}`
+  return {
+    ...edition1839,
+    id,
+    name,
+    chapterCount,
+    outputFile: path.join(projectRoot, 'src', 'data', 'generated', `${outputName}-wujek.json`),
+    sourcePagePrefix: `${sourceRoot}/`,
+    sourceUrlFor: (chapterNumber) => wikisource1839Url(`${sourceRoot}/${edition1839.chapterPageName(chapterNumber)}`),
+    sourceBookUrl: wikisource1839Url(sourceRoot),
+  }
+}
+
 const books = {
+  tob: {
+    ...edition1839Book('tob', 'Księga Tobiasza', 'Księgi Tobiaszowe', 14, 'tobit'),
+    duplicateMarkerFixes: new Set(['11:2']),
+  },
+  jdt: {
+    ...edition1839Book('jdt', 'Księga Judyty', 'Księgi Judith', 16, 'judith'),
+    // The edition joins Vulgate 9:17–18 into one verse and numbers the chapter 15, 17, 18, 19.
+    allowedVerseGaps: new Set(['9:16']),
+    duplicateMarkerFixes: new Set(['13:25']),
+    // Mistyped markers: `chapter:printedNumber` → the next verse number.
+    mistypedMarkerFixes: new Set(['16:80']),
+  },
   gen: {
     id: 'gen',
     name: 'Księga Rodzaju',
@@ -649,6 +704,25 @@ function textFromHtml(value) {
     .trim()
 }
 
+function stripCrossReferences(html) {
+  const text = textFromHtml(
+    html
+      // Italic groups of references, e.g. "<i><a>4. Król. 17. 3.</a> y <a>18. 9.</a></i>".
+      .replace(/<i>(?:(?!<\/i>)[\s\S])*?<a\b[\s\S]*?<\/i>/gi, '')
+      // Single references link to other Bible pages, e.g. "<a title="Biblia Wujka …">Lev. 19. 13.</a>".
+      .replace(/<a\b[^>]*title="Biblia Wujka[^"]*"[^>]*>[\s\S]*?<\/a>/gi, ''),
+  )
+  // Separators left between removed references ("y", ",").
+  return text.replace(/(?:\s+(?:y|[,;]))+\s*$/u, '').trim()
+}
+
+function fixDropCap(text) {
+  return text.replace(
+    /^([A-ZĄĆĘŁŃÓŚŹŻ])([A-ZĄĆĘŁŃÓŚŹŻ]+)(?=[a-ząćęłńóśźżéá])/u,
+    (_, first, rest) => first + rest.toLocaleLowerCase('pl'),
+  )
+}
+
 function parseChapter(chapterNumber, html) {
   const verseParagraphPattern = /<p>([\s\S]*?)<\/p>/gi
   const markerPattern = /<span[^>]*id="(\d+):(\d+)(?:\.|&#\d+;)?"[^>]*>[\s\S]*?<\/span>/i
@@ -683,9 +757,21 @@ function parseChapter(chapterNumber, html) {
     if (marker && Number(marker[1]) !== chapterNumber && !markerCorrection) continue
     if (!marker && !plainMarker && !unmarkedFirstVerse) continue
 
-    const verseNumber = unmarkedFirstVerse ? 1 : marker ? Number(marker[2]) : Number(plainMarker[1])
+    let verseNumber = unmarkedFirstVerse ? 1 : marker ? Number(marker[2]) : Number(plainMarker[1])
+    // Transcription typos: a marker going back (repeated or mistyped) instead of the next number.
+    const previousVerseNumber = verses.at(-1)?.number ?? 0
+    if (
+      (book.duplicateMarkerFixes?.has(`${chapterNumber}:${verseNumber}`) && previousVerseNumber >= verseNumber)
+      || book.mistypedMarkerFixes?.has(`${chapterNumber}:${verseNumber}`)
+    ) {
+      verseNumber = previousVerseNumber + 1
+    }
     const markerEnd = unmarkedFirstVerse ? 0 : marker ? marker.index + marker[0].length : plainMarker[0].length
-    const text = textFromHtml(paragraph.slice(markerEnd))
+    const verseHtml = paragraph.slice(markerEnd)
+    // 1839–1840 pages put marginal cross-references ("4. Król. 17. 3.") into the verse
+    // as italic links; they are not part of the biblical text.
+    const rawText = book.fixDropCaps ? stripCrossReferences(verseHtml) : textFromHtml(verseHtml)
+    const text = book.fixDropCaps ? fixDropCap(rawText) : rawText
     if (text) verses.push({ number: verseNumber, text })
   }
 
@@ -693,7 +779,11 @@ function parseChapter(chapterNumber, html) {
     throw new Error(`${book.name} ${chapterNumber}: nie znaleziono żadnego wersetu.`)
   }
 
-  const expectedVerseNumbers = Array.from({ length: verses.length }, (_, index) => index + 1)
+  // Known numbering gaps of the source edition (`chapter:missingVerse`) are kept as printed.
+  const expectedVerseNumbers = []
+  for (let verseNumber = 1; expectedVerseNumbers.length < verses.length; verseNumber += 1) {
+    if (!book.allowedVerseGaps?.has(`${chapterNumber}:${verseNumber}`)) expectedVerseNumbers.push(verseNumber)
+  }
   const hasCompleteSequence = expectedVerseNumbers.every(
     (verseNumber, index) => verses[index]?.number === verseNumber,
   )
@@ -705,7 +795,7 @@ function parseChapter(chapterNumber, html) {
 
   return {
     number: chapterNumber,
-    sourceUrl: book.sourceUrl ?? `${book.sourceUrlPrefix}${chapterNumber}`,
+    sourceUrl: book.sourceUrl ?? book.sourceUrlFor?.(chapterNumber) ?? `${book.sourceUrlPrefix}${chapterNumber}`,
     verses,
   }
 }
@@ -713,14 +803,20 @@ function parseChapter(chapterNumber, html) {
 async function fetchChapter(chapterNumber) {
   const parameters = new URLSearchParams({
     action: 'parse',
-    page: book.sourcePage ?? `${book.sourcePagePrefix}${chapterNumber}`,
+    page: book.sourcePage ?? `${book.sourcePagePrefix}${book.chapterPageName?.(chapterNumber) ?? chapterNumber}`,
     prop: 'text',
     format: 'json',
     formatversion: '2',
   })
-  const response = await fetch(`${apiUrl}?${parameters}`, {
-    headers: { 'User-Agent': userAgent },
-  })
+  let response
+  for (let attempt = 0; attempt < 6; attempt += 1) {
+    response = await fetch(`${apiUrl}?${parameters}`, {
+      headers: { 'User-Agent': userAgent },
+    })
+    // Wikimedia rate limit: wait and retry instead of failing the whole import.
+    if (response.status !== 429) break
+    await new Promise((resolve) => setTimeout(resolve, 3000 * (attempt + 1)))
+  }
 
   if (!response.ok) {
     throw new Error(`${book.name} ${chapterNumber}: API zwróciło HTTP ${response.status}.`)
@@ -745,7 +841,8 @@ const chapters = book.transformChapters ? book.transformChapters(sourceChapters)
 const importedBook = {
   id: book.id,
   name: book.name,
-  translation: 'Biblia Jakuba Wujka (1599), wydanie 1923',
+  translation: book.translation ?? 'Biblia Jakuba Wujka (1599), wydanie 1923',
+  ...(book.sourceQuality ? { sourceQuality: book.sourceQuality } : {}),
   sourceName: 'Wikiźródła',
   sourceBookUrl: book.sourceBookUrl,
   sourceRights: 'Domena publiczna (wydanie); CC BY-SA 4.0 (transkrypcja Wikiźródeł)',
