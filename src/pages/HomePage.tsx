@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FaArrowRight, FaCross, FaBookBible, FaMusic, FaHandsPraying, FaBullhorn, FaMagnifyingGlass } from 'react-icons/fa6'
+import { FaArrowRight, FaBookBible, FaBookOpen, FaBullhorn, FaCalendarDays, FaCross, FaHandsPraying, FaLink, FaMagnifyingGlass, FaMusic } from 'react-icons/fa6'
 import DevotionChoiceDialog from '../components/DevotionChoiceDialog'
 import LiturgyToday from '../components/LiturgyToday'
 import { getIndexPrayerOfDay, prayerIndex, songIndex } from '../data/contentIndex'
@@ -11,9 +11,12 @@ import { useContentLibrary, type RecentContent } from '../hooks/useContentLibrar
 const sections = [
   { to: '/modlitwy', icon: <FaCross />, title: 'Modlitwy', description: 'Modlitwy codzienne i tradycyjne' },
   { to: '/pismo-swiete', icon: <FaBookBible />, title: 'Pismo Święte', description: 'Biblia w przekładzie Jakuba Wujka' },
+  { to: '/liturgia-godzin', icon: <FaBookOpen />, title: 'Liturgia Godzin', description: 'Brewiarz na każdą porę dnia' },
   { to: '/spiewnik', icon: <FaMusic />, title: 'Śpiewnik', description: 'Pieśni i hymny kościelne' },
+  { to: '/kalendarz', icon: <FaCalendarDays />, title: 'Kalendarz', description: 'Rok liturgiczny dzień po dniu' },
   { to: '/ogloszenia', icon: <FaBullhorn />, title: 'Ogłoszenia', description: 'Aktualności i inicjatywy parafialne' },
   { to: '/szukaj', icon: <FaMagnifyingGlass />, title: 'Szukaj', description: 'Wyszukiwarka modlitw, pieśni i Pisma' },
+  { to: '/zrodla', icon: <FaLink />, title: 'Źródła', description: 'Skąd pochodzą teksty i polecane materiały' },
 ]
 
 interface ContinueTarget {
@@ -108,7 +111,7 @@ export default function HomePage() {
       </section>
       <LiturgyToday />
       <section className="section-tiles">
-        {sections.slice(0, 3).map((s) => (
+        {sections.slice(0, 4).map((s) => (
           <Link to={s.to} key={s.to} className="section-tile">
             <span className="section-tile-icon">{s.icon}</span>
             <h2 className="section-tile-title">{s.title}</h2>
@@ -125,7 +128,7 @@ export default function HomePage() {
           <span className="section-tile-title">Różaniec i koronka</span>
           <p className="section-tile-desc">Wybierz modlitwę krok po kroku</p>
         </button>
-        {sections.slice(3).map((s) => (
+        {sections.slice(4).map((s) => (
           <Link to={s.to} key={s.to} className="section-tile">
             <span className="section-tile-icon">{s.icon}</span>
             <h2 className="section-tile-title">{s.title}</h2>
