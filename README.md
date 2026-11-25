@@ -14,6 +14,7 @@ Serdeczne pozdrowienia dla Duszpasterstwa Akademickiego **Rotunda** prowadzonego
 
 - **Modlitwy** — blisko 400 modlitw codziennych, litanii i aktów, pogrupowanych w kategorie
 - **Pismo Święte** — historyczny przekład ks. Jakuba Wujka (teksty z Wikiźródeł); dostępne są 66 ksiąg, w tym cały Nowy Testament. Księgi Tobiasza i Judyty pochodzą z wydania 1839–1840 (dawna pisownia, transkrypcja jeszcze nieskorygowana — aplikacja to zaznacza). Brakuje jeszcze ksiąg: Estery, Mądrości, Syracha, Barucha, Daniela i obu Ksiąg Machabejskich
+- **Liturgia Godzin** (`/liturgia-godzin`) — brewiarz z psałterzem czterotygodniowym: Wezwanie, Godzina czytań, Jutrznia, Modlitwa w ciągu dnia, Nieszpory i Kompleta na dowolny dzień; tydzień psałterza liczony na urządzeniu. Psalmy i pieśni biblijne z Biblii Wujka; oficjalne teksty własne (hymny, antyfony, czytania, prośby, kolekty) są chronione prawem autorskim, więc aplikacja odsyła do brewiarz.pl. Brakuje jeszcze pieśni z Ksiąg Daniela, Syracha i Mądrości (nie ma ich w Wikiźródłach)
 - **Śpiewnik** — blisko 300 pieśni z oznaczeniem okresu liturgicznego i trybem powiększonej czcionki
 - **Różaniec** — interaktywny przewodnik krok po kroku z czterema zestawami tajemnic
 - **Koronka** — Koronka do Miłosierdzia Bożego krok po kroku
