@@ -2,6 +2,7 @@
 title: Ach, ubogi żłobie
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/42/Ach-ubogi-zlobie
+rightsStatus: attributed
 ---
 
 Ach, ubogi żłobie,  

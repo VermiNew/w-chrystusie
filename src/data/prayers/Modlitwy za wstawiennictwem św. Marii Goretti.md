@@ -2,6 +2,7 @@
 category: Modlitwy za wstawiennictwem świętych
 title: Modlitwy za wstawiennictwem św. Marii Goretti
 source: https://www.niedziela.pl/artykul/80790
+rightsStatus: attributed
 ---
 
 ## Modlitwa za wstawiennictwem św. Marii Goretti (ułożona przez św. Jana Pawła II)

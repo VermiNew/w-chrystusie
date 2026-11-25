@@ -2,6 +2,7 @@
 category: Modlitwy o zdrowie
 title: Modlitwa o uzdrowienie z nałogów
 source: https://www.spm.org.pl/modlitwy-o-zdrowie
+rightsStatus: attributed
 ---
 
 Przychodzę do Ciebie, Duchu Święty, po ratunek.

@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania do Najświętszego Serca Pana Jezusa
 source: https://niezbednik.niedziela.pl/artykul/284/Litania-do-Najswietszego-Serca-Pana
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

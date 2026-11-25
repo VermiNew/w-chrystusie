@@ -2,6 +2,7 @@
 title: Litania do św. Teresy od Dzieciątka Jezus
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-sw-teresy-od-dzieciatka-jezus/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

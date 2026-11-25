@@ -2,6 +2,7 @@
 category: Katechizm
 title: Trzy cnoty Boskie
 source: https://pl.wikipedia.org/wiki/Wiara,_Nadzieja_i_Mi%C5%82o%C5%9B%C4%87
+rightsStatus: attributed
 ---
 
 Cnoty Boskie (teologalne) — wlane przez Boga w duszę człowieka:

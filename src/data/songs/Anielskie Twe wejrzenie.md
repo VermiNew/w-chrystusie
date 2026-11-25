@@ -2,6 +2,7 @@
 title: Anielskie Twe wejrzenie
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1137/Anielskie-Twe-wejrzenie
+rightsStatus: attributed
 ---
 
 Anielskie Twe wejrzenie,  

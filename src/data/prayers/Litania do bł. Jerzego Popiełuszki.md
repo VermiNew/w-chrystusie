@@ -2,6 +2,7 @@
 title: Litania do bł. Jerzego Popiełuszki
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-bl-jerzego-popieluszki/
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

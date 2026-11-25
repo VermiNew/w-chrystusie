@@ -2,6 +2,7 @@
 title: Modlitwa do św. Jana Chrzciciela de Rossi o dobrą spowiedź
 category: Sakramenty
 source: https://dolinamodlitwy.pl/modlitwa-o-dobra-spowiedz/
+rightsStatus: attributed
 ---
 
 Święty Janie, byłeś gorliwym kapłanem i nie szczędziłeś się, by innych prowadzić do Boga.

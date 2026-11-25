@@ -2,6 +2,7 @@
 title: Cicho wszędzie, śpi świat cały
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/56/Cicho-wszedzie-spi-swiat-caly
+rightsStatus: attributed
 ---
 
 Cicho wszędzie, śpi świat cały twardym snem ujęty,  

@@ -2,6 +2,7 @@
 title: Witam Cię Przenajświętsze Ciało
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/232-witam-cie-witam
+rightsStatus: attributed
 ---
 
 1. Witam Cię, witam, Przenajświętsze Ciało,

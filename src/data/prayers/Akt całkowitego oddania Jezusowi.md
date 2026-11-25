@@ -2,6 +2,7 @@
 title: Akt całkowitego oddania Jezusowi
 category: Akty i ofiarowania
 source: https://dolinamodlitwy.pl/akt-calkowitego-oddania-jezusowi/
+rightsStatus: attributed
 ---
 
 Och Jezu, oddaję się Tobie, troszcz się Ty.

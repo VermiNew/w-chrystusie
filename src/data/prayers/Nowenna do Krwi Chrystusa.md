@@ -2,6 +2,7 @@
 title: Nowenna do Krwi Chrystusa
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-krwi-chrystusa/
+rightsStatus: attributed
 ---
 
 Odmawia się przez 9 dni w połączeniu z inną modlitwą do Krwi Chrystusa.

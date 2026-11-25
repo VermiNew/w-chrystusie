@@ -2,6 +2,7 @@
 title: Duchu Święty przyjdź prosimy
 category: Pieśni do Ducha Świętego
 source: https://musicamsacram.pl/spiewnik/798-duchu-swiety-przyjdz-prosimy
+rightsStatus: attributed
 ---
 
 Duchu Święty, przyjdź, prosimy,

@@ -2,6 +2,7 @@
 title: Nowenna do Matki Bożej Szkaplerznej
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-matki-bozej-szkaplerznej-7-15-lipca/
+rightsStatus: attributed
 ---
 
 Nowennę odmawia się 7–15 lipca (wspomnienie Matki Bożej z Góry Karmel 16 lipca).

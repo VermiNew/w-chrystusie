@@ -2,6 +2,7 @@
 title: Błogosław, Matko, naszej biednej ziemi
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1145/Blogoslaw-Matko-naszej-biednej-ziemi
+rightsStatus: attributed
 ---
 
 Błogosław, Matko, naszej biednej ziemi. Tei przebogatej w nieszczęścia i łzy: O, chroń jej dzieci, idąc razem z niemi Przez wichury, burze i przez ciemne mgły.

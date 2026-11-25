@@ -2,6 +2,7 @@
 title: Lament serdeczny
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/783/Lament-serdeczny
+rightsStatus: attributed
 ---
 
 1. Lament serdeczny w mym sercu zawsze trwa bez odmiany,  

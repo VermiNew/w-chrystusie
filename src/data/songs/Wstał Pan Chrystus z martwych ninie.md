@@ -2,6 +2,7 @@
 title: Wstał Pan Chrystus z martwych ninie
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/745-wstal-pan-chrystus
+rightsStatus: attributed
 ---
 
 1. Wstał Pan Chrystus z martwych ninie,

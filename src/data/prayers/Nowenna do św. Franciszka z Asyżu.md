@@ -2,6 +2,7 @@
 title: Nowenna do św. Franciszka z Asyżu
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-franciszka/
+rightsStatus: attributed
 ---
 
 *Nowenna odmawiana 25 września – 3 października, przed uroczystością św. Franciszka z Asyżu (4 października).*

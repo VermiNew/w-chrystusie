@@ -2,6 +2,7 @@
 title: Modlitwa poranna V
 category: Modlitwy codzienne
 source: https://dolinamodlitwy.pl/modlitwa-poranna-v/
+rightsStatus: attributed
 ---
 
 Dobry Boże, zawierzam Tobie cały dzisiejszy dzień i wszystko co mnie dziś spotka.

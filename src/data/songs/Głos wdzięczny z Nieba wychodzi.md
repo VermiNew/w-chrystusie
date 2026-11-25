@@ -2,6 +2,7 @@
 title: Głos wdzięczny z Nieba wychodzi
 category: Pieśni adwentowe
 source: https://niezbednik.niedziela.pl/artykul/28/Glos-wdzieczny-z-Nieba-wychodzi
+rightsStatus: attributed
 ---
 
 Głos wdzięczny z Nieba wychodzi,  

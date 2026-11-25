@@ -2,6 +2,7 @@
 title: Nowenna do św. Jana Bosko
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-jana-bosko-22-30-stycznia/
+rightsStatus: attributed
 ---
 
 *Nowenna odmawiana 22–30 stycznia, przed uroczystością św. Jana Bosko (31 stycznia).*

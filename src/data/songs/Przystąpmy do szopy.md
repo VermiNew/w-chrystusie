@@ -2,6 +2,7 @@
 title: Przystąpmy do szopy
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/139/Przystapmy-do-szopy
+rightsStatus: attributed
 ---
 
 1. Przystąpmy do szopy, uściskajmy stopy Jazusa maleńkiego,  

@@ -2,6 +2,7 @@
 category: Modlitwy do Ducha Świętego
 title: Duchu Najświętszy
 source: https://niezbednik.niedziela.pl/artykul/343/Duchu-Najswietszy
+rightsStatus: attributed
 ---
 
 Duchu Najświętszy, otwórz usta moje,

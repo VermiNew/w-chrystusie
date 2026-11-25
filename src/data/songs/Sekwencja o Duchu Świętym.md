@@ -2,6 +2,7 @@
 title: Sekwencja o Duchu Świętym
 category: Pieśni do Ducha Świętego
 source: https://niezbednik.niedziela.pl/artykul/341/Sekwencja-o-Duchu-Swietym
+rightsStatus: attributed
 ---
 
 Przybądź, Duchu Święty,  

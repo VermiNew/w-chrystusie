@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania do Matki Bożej Jasnogórskiej
 source: https://stacja7.pl/maryja/litania-matki-bozej-jasnogorskiej/
+rightsStatus: attributed
 ---
 
 *(Módl się za nami Bogiem sławiona Maryjo, aby nasz naród dochował Ci wierności)*

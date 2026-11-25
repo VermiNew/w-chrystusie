@@ -2,6 +2,7 @@
 title: Nowenna do Anioła Stróża
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-aniola-stroza/
+rightsStatus: attributed
 ---
 
 *Nowennę do Anioła Stróża zaczynamy 20 września (przed świętem 2 października).*

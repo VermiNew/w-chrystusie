@@ -2,6 +2,7 @@
 title: Pamiątkę dnia świątecznego
 category: Pieśni do Ducha Świętego
 source: https://musicamsacram.pl/spiewnik/818-pamiatke-dnia-swiatecznego
+rightsStatus: attributed
 ---
 
 1. Pamiątkę dnia świątecznego

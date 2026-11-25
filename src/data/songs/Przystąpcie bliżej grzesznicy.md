@@ -2,6 +2,7 @@
 title: Przystąpcie bliżej grzesznicy
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/808/Przystapcie-blizej-grzesznicy
+rightsStatus: attributed
 ---
 
 1. Przystąpcie bliżej grzesznicy  

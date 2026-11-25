@@ -1,11 +1,20 @@
 # ✝ W Chrystusie
 
-Polska katolicka aplikacja webowa (PWA) — modlitwy, Pismo Święte, pieśni kościelne, różaniec i koronka w jednym miejscu.
+Polska katolicka aplikacja webowa (PWA) — modlitwy, Pismo Święte, Liturgia Godzin, pieśni kościelne, różaniec i koronka w jednym miejscu.
+
+## Zawsze w pełni darmowa
+
+„W Chrystusie” jest i zawsze będzie całkowicie bezpłatna: bez reklam, bez płatnych funkcji, bez subskrypcji, bez kont i bez śledzenia użytkowników. To założenie projektu, a nie promocja — żadna część aplikacji nie zostanie nigdy zamknięta za opłatą.
+
+## Pozdrowienia
+
+Serdeczne pozdrowienia dla Duszpasterstwa Akademickiego **Rotunda** prowadzonego przez Misjonarzy Saletynów w Rzeszowie. Szczęść Boże!
 
 ## Sekcje
 
 - **Modlitwy** — blisko 400 modlitw codziennych, litanii i aktów, pogrupowanych w kategorie
 - **Pismo Święte** — historyczny przekład ks. Jakuba Wujka (teksty z Wikiźródeł); dostępne są 66 ksiąg, w tym cały Nowy Testament. Księgi Tobiasza i Judyty pochodzą z wydania 1839–1840 (dawna pisownia, transkrypcja jeszcze nieskorygowana — aplikacja to zaznacza). Brakuje jeszcze ksiąg: Estery, Mądrości, Syracha, Barucha, Daniela i obu Ksiąg Machabejskich
+- **Liturgia Godzin** (`/liturgia-godzin`) — brewiarz z psałterzem czterotygodniowym: Wezwanie, Godzina czytań, Jutrznia, Modlitwa w ciągu dnia, Nieszpory i Kompleta na dowolny dzień; tydzień psałterza liczony na urządzeniu. Psalmy i pieśni biblijne z Biblii Wujka; oficjalne teksty własne (hymny, antyfony, czytania, prośby, kolekty) są chronione prawem autorskim, więc aplikacja odsyła do brewiarz.pl. Brakuje jeszcze pieśni z Ksiąg Daniela, Syracha i Mądrości (nie ma ich w Wikiźródłach)
 - **Śpiewnik** — blisko 300 pieśni z oznaczeniem okresu liturgicznego i trybem powiększonej czcionki
 - **Różaniec** — interaktywny przewodnik krok po kroku z czterema zestawami tajemnic
 - **Koronka** — Koronka do Miłosierdzia Bożego krok po kroku
@@ -50,6 +59,8 @@ npm run build && npm run test:prod   # testy na wersji produkcyjnej
 ## Offline
 
 Aplikacja ma działać w pełni bez internetu po jednym wejściu online. Service worker (`public/sw.js`) przy instalacji zapisuje wszystkie pliki z `asset-manifest.json`: kod, każdą księgę Biblii, modlitwy, pieśni i obrazki stron. Każda księga jest osobnym plikiem, więc otwarcie rozdziału online pobiera tylko tę księgę, a reszta dociąga się w tle. Po wdrożeniu niezmienione pliki są kopiowane z poprzedniej wersji cache zamiast pobierane od nowa. Ustawienia, ulubione i postęp czytania są zapisywane w pamięci przeglądarki.
+
+Stan kopii offline widać w oknie **O projekcie → Offline**: liczba zapisanych plików, zajęte miejsce i wersja. Przycisk **Odśwież** sprawdza, czy jest nowa wersja aplikacji, i pobiera wszystkie pliki od nowa (z pominięciem pamięci podręcznej HTTP); przy okazji prosi przeglądarkę o trwałe przechowywanie, żeby kopia nie została usunięta przy braku miejsca.
 
 ## Struktura
 

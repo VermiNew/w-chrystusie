@@ -2,6 +2,7 @@
 title: Matko Bolesna, Twe oczy zwróć
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/820/Matko-Bolesna-Twe-oczy-zwroc
+rightsStatus: attributed
 ---
 
 Matko Bolesna, Twe oczy zwróć  

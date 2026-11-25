@@ -2,6 +2,7 @@
 title: Ofiara Krzyża spełniona
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/787/Ofiara-Krzyza-spelniona
+rightsStatus: attributed
 ---
 
 1. Ofiara Krzyża spełniona  

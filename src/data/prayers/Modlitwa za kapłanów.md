@@ -2,6 +2,7 @@
 category: Modlitwy za bliźnich
 title: Modlitwa za kapłanów
 source: https://niezbednik.niedziela.pl/artykul/258/Modlitwa-za-kaplanow
+rightsStatus: attributed
 ---
 
 Panie Jezu, Ty wybrałeś Twoich kapłanów spośród nas i wysłałeś ich,

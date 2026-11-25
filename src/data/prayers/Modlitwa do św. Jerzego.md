@@ -2,6 +2,7 @@
 title: Modlitwa do św. Jerzego
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/modlitwa-do-sw-jerzego/
+rightsStatus: attributed
 ---
 
 Boże,

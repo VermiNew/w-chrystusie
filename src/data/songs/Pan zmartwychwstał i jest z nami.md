@@ -2,6 +2,7 @@
 title: Pan zmartwychwstał i jest z nami
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/763-pan-zmartwychwstal-i-jest-z-nami
+rightsStatus: attributed
 ---
 
 1. Pan zmartwychwstał i jest z nami,

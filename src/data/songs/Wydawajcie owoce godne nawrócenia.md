@@ -2,6 +2,7 @@
 title: Wydawajcie owoce godne nawrócenia
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/625-wydawajcie-owoce-godne-nawrocenia
+rightsStatus: attributed
 ---
 
 Ref. Wydawajcie owoce godne nawrócenia.

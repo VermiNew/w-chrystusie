@@ -2,6 +2,7 @@
 title: Ach mój Jezu, jak Ty klęczysz
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/462/Ach-moj-Jezu-jak-Ty-kleczysz
+rightsStatus: attributed
 ---
 
 Ach mój Jezu, jak Ty klęczysz  

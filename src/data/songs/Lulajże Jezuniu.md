@@ -2,6 +2,7 @@
 title: Lulajże Jezuniu
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/81/Lulajze-Jezuniu
+rightsStatus: attributed
 ---
 
 1. Lulajże Jezuniu, moja perełko,  

@@ -2,6 +2,7 @@
 category: Modlitwy codzienne
 title: Przykładowe Modlitwy poranne
 source: https://niezbednik.niedziela.pl/artykul/170/Modlitwy-poranne
+rightsStatus: attributed
 ---
 
 Wszechmogący Ojcze, który jesteś w niebie,

@@ -2,6 +2,7 @@
 title: W Fatimie u Maryi
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/310/W-Fatimie-u-Maryi
+rightsStatus: attributed
 ---
 
 1. Są na ziemi tej takie miejsca,  

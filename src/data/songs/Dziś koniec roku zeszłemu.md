@@ -2,6 +2,7 @@
 title: Dziś koniec roku zeszłemu
 category: Pieśni okolicznościowe
 source: https://niezbednik.niedziela.pl/artykul/273/Dzis-koniec-roku-zeszlemu
+rightsStatus: attributed
 ---
 
 Dziś koniec roku zeszłemu  

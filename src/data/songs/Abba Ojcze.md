@@ -2,6 +2,7 @@
 title: Abba Ojcze
 category: Pieśni uwielbienia
 source: https://www.polskatradycja.pl/piesni/religijne/abba-ojcze.html
+rightsStatus: attributed
 ---
 
 1. Ty wyzwoliłeś nas, Panie,  

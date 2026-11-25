@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania do Męczenników i Świętych z katakumb św. Kaliksta
 source: https://www.apostol.pl/modlitwy/litanie/litania-do-m%C4%99czennik%C3%B3w-i-%C5%9Bwi%C4%99tych-z-katakumb-%C5%9Bw-kalista
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

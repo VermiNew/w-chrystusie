@@ -2,6 +2,7 @@
 category: Modlitwy osobiste
 title: Modlitwa osoby samotnej
 source: https://niezbednik.niedziela.pl/artykul/188/Modlitwa-osoby-samotnej
+rightsStatus: attributed
 ---
 
 Panie mój i Boże, tak się złożyło, że żyję tylko sama.

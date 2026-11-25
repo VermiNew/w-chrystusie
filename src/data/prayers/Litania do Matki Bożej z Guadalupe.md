@@ -2,6 +2,7 @@
 title: Litania do Matki Bożej z Guadalupe
 category: Litanie
 source: https://dolinamodlitwy.pl/litania-do-matki-bozej-z-guadalupe/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

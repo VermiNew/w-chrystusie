@@ -2,6 +2,7 @@
 title: Odkupicielu ratuj swe stworzenie
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/3123-odkupicielu-ratuj-swe-stworzenie
+rightsStatus: attributed
 ---
 
 1. Odkupicielu, ratuj swe stworzenie,

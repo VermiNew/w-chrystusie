@@ -2,6 +2,7 @@
 title: Droga Krzyżowa dla małżonków
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/droga-krzyzowa-dla-malzonkow/
+rightsStatus: attributed
 ---
 
 Każdy sakrament zanurza nas w tajemnicy śmierci i zmartwychwstaniu Jezusa Chrystusa. Sakrament małżeństwa pozwala nam zanurzyć w niej wszystkie małżeńskie i rodzinne doświadczenia. Dzięki temu sakramentowi możemy przeżywać te doświadczenia w świetle zbawczej męki naszego Pana i mieć przekonanie, że On jest w nich obecny. W Jego męce, śmierci i zmartwychwstaniu możemy odnajdywać moc do kochania na co dzień Jego miłością.

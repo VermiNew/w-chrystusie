@@ -2,6 +2,7 @@
 title: Modlitwa o nawrócenie dziecka — św. Monika
 category: Modlitwy za rodzinę
 source: https://dolinamodlitwy.pl/modlitwa-o-nawrocenie-dziecka/
+rightsStatus: attributed
 ---
 
 Zwracam się do Ciebie, święta Moniko,

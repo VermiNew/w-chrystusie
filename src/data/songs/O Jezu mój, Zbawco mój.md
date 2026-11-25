@@ -2,6 +2,7 @@
 title: O Jezu mój, Zbawco mój
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/791/O-Jezu-moj-Zbawco-moj
+rightsStatus: attributed
 ---
 
 1. O Jezu mój, Zbawco mój  

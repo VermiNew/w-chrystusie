@@ -2,6 +2,7 @@
 title: Litania do św. Matki Teresy z Kalkuty
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-sw-matki-teresy-z-kalkuty/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

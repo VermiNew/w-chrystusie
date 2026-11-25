@@ -2,6 +2,7 @@
 title: W żłobku na sianie
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/158/W-zlobku-na-sianie
+rightsStatus: attributed
 ---
 
 1. W żłobku na sianie leży kochanie Dziecina,  

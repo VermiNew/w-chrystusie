@@ -2,6 +2,7 @@
 title: Pamiętaj człowiecze na Jezusa
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/802/Pamietaj-czlowiecze-na-Jezusa
+rightsStatus: attributed
 ---
 
 1. Pamiętaj człowiecze na Jezusa  

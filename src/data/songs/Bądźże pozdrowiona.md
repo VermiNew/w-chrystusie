@@ -2,6 +2,7 @@
 title: Bądźże pozdrowiona
 category: Pieśni mszalne
 source: https://musicamsacram.pl/spiewnik/47-badzze-pozdrowiona
+rightsStatus: attributed
 ---
 
 1. Bądźże pozdrowiona, Hostyjo żywa,  

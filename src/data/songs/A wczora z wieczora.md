@@ -2,6 +2,7 @@
 title: A wczora z wieczora
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/46/A-wczora-z-wieczora
+rightsStatus: attributed
 ---
 
 A wczora z wieczora  

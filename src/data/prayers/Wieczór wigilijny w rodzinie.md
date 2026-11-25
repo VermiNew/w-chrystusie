@@ -2,6 +2,7 @@
 category: Nabożeństwa
 title: Wieczór wigilijny w rodzinie
 source: https://niezbednik.niedziela.pl/artykul/318/Wieczor-wigilijny-w-rodzinie
+rightsStatus: attributed
 ---
 
 ## Przygotowanie

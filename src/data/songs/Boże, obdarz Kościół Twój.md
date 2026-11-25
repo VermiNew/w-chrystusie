@@ -2,6 +2,7 @@
 title: Boże, obdarz Kościół Twój
 category: Pieśni mszalne
 source: https://niezbednik.niedziela.pl/artykul/828/Boze-obdarz-Kosciol-Twoj
+rightsStatus: attributed
 ---
 
 Uradowałem się wezwaniem:  

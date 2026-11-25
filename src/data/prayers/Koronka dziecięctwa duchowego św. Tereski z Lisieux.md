@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka dziecięctwa duchowego św. Tereski z Lisieux
 source: https://dolinamodlitwy.pl/koronka-dzieciectwa-duchowego-sw-tereski-z-lisieux/
+rightsStatus: attributed
 ---
 
 W imię Ojca i Syna, i Ducha Świętego. Amen.

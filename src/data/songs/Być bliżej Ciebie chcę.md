@@ -2,6 +2,7 @@
 title: Być bliżej Ciebie chcę
 category: Pieśni okolicznościowe
 source: https://pl.wikipedia.org/wiki/By%C4%87_bli%C5%BCej_Ciebie_chc%C4%99
+rightsStatus: attributed
 ---
 
 1. Być bliżej Ciebie chcę, o Boże mój,  

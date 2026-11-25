@@ -2,6 +2,7 @@
 title: Do Ciebie Matko szafarko łask
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1164/Do-Ciebie-Matko-szafarko-lask
+rightsStatus: attributed
 ---
 
 Do Ciebie Matko szafarko łask,  

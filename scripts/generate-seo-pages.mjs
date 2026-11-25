@@ -76,6 +76,11 @@ const staticPages = [
     description: 'Litania loretańska i materiały do osobistego przeżywania nabożeństwa majowego.',
   },
   {
+    path: '/liturgia-godzin',
+    title: 'Liturgia Godzin — brewiarz | W Chrystusie',
+    description: 'Brewiarz na każdy dzień: Jutrznia, Nieszpory, Kompleta i pozostałe Godziny z psałterza czterotygodniowego, w przekładzie ks. Jakuba Wujka. Działa offline.',
+  },
+  {
     path: '/kalendarz',
     title: 'Kalendarz liturgiczny | W Chrystusie',
     description: 'Kalendarz liturgiczny Kościoła katolickiego w Polsce: okresy, niedziele, uroczystości, święta i kolory szat na każdy dzień.',

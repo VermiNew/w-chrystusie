@@ -2,6 +2,7 @@
 title: Modlitwa do Świętej Rodziny
 category: Modlitwy za rodzinę
 source: https://dolinamodlitwy.pl/modlitwa-do-swietej-rodziny/
+rightsStatus: attributed
 ---
 
 Boże, Ty z miłości do nas posłałeś Jednorodzonego Syna, by każdy, kto w Niego wierzy nie zginął,

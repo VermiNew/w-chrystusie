@@ -27,7 +27,8 @@ body[data-nav-menu='open'] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1280px;
+  /* Wide enough for every link in one row; below the breakpoint further down the menu collapses. */
+  max-width: 1400px;
   margin: 0 auto;
   height: var(--header-height);
 }
@@ -171,6 +172,28 @@ body[data-nav-menu='open'] {
   display: none;
 }
 
+/* Between the mobile breakpoint and wide screens the links are slightly
+   tighter, so every section (including Brewiarz) fits in one row. */
+@media (min-width: 1341px) and (max-width: 1600px) {
+  .nav-links {
+    gap: 0.6rem;
+  }
+
+  .nav-links a {
+    font-size: 0.92rem;
+    gap: 0.3rem;
+  }
+
+  .nav-brand {
+    font-size: 1.3rem;
+  }
+
+  .nav-reminders-item {
+    margin-left: 0.2rem;
+    padding-left: 0.8rem;
+  }
+}
+
 @media (max-width: 1340px) {
   .nav-overlay {
     display: block;
@@ -242,6 +265,7 @@ body[data-nav-menu='open'] {
   .nav-links--open li:nth-child(10) { transition-delay: 0.73s; }
   .nav-links--open li:nth-child(11) { transition-delay: 0.8s; }
   .nav-links--open li:nth-child(12) { transition-delay: 0.87s; }
+  .nav-links--open li:nth-child(13) { transition-delay: 0.94s; }
 
   .nav-theme-label,
   .nav-about-label {

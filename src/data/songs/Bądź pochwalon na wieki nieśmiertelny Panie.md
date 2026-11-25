@@ -2,6 +2,7 @@
 title: Bądź pochwalon na wieki nieśmiertelny Panie
 category: Pieśni uwielbienia
 source: https://musicamsacram.pl/spiewnik/216-badz-pochwalon-na-wieki
+rightsStatus: attributed
 ---
 
 1. Bądź pochwalon na wieki nieśmiertelny Panie,

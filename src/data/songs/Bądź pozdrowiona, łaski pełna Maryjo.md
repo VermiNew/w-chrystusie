@@ -2,6 +2,7 @@
 title: Bądź pozdrowiona, łaski pełna Maryjo
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1139/Badz-pozdrowiona-laski-pelna-Maryjo
+rightsStatus: attributed
 ---
 
 Bądź pozdrowiona, łaski pełna Maryjo, Matko ma.  

@@ -2,6 +2,7 @@
 category: Modlitwy o zdrowie
 title: Modlitwa o uzdrowienie z raka
 source: https://www.spm.org.pl/modlitwy-o-zdrowie
+rightsStatus: attributed
 ---
 
 Panie Jezu, stoję przed Tobą taki, jaki jestem.

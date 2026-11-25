@@ -2,6 +2,7 @@
 category: Modlitwy codzienne
 title: Panie, otwórz oczy moje
 source: https://niezbednik.niedziela.pl/artykul/173/Panie-otworz-oczy-moje
+rightsStatus: attributed
 ---
 
 Panie, otwórz oczy moje na cuda Twej miłości.

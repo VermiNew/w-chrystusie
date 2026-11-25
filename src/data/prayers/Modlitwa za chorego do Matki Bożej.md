@@ -2,6 +2,7 @@
 title: Modlitwa za chorego do Matki Bożej
 category: Modlitwy o zdrowie
 source: https://dolinamodlitwy.pl/modlitwa-za-chorego/
+rightsStatus: attributed
 ---
 
 Matko Boska Nieustającej Pomocy, Twój Boski Syn,

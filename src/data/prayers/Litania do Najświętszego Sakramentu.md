@@ -2,6 +2,7 @@
 title: Litania do Najświętszego Sakramentu
 category: Litanie
 source: https://dolinamodlitwy.pl/litania-do-najswietszego-sakramentu/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

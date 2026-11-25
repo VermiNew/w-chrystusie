@@ -2,6 +2,7 @@
 title: Droga Krzyżowa wg wizji bł. Katarzyny Emmerich
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/droga-krzyzowa-wg-wizji-bl-katarzyny-emmerich/
+rightsStatus: attributed
 ---
 
 *Słowa Pana Jezusa skierowane do bł. Anny Katarzyny Emmerich*

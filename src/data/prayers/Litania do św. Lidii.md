@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania do św. Lidii
 source: https://www.niedziela.pl/artykul/774/Litania-do-sw-Lidii
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

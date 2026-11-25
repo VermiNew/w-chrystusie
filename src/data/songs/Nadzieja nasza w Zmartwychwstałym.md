@@ -2,6 +2,7 @@
 title: Nadzieja nasza w Zmartwychwstałym
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/766-nadzieja-nasza-w-zmartwychwstalym
+rightsStatus: attributed
 ---
 
 Ant. Nadzieja nasza w Zmartwychwstałym,

@@ -2,6 +2,7 @@
 title: Nowenna przed Zesłaniem Ducha Świętego
 category: Modlitwy do Ducha Świętego
 source: https://dolinamodlitwy.pl/nowenna-do-ducha-swietego-9-dni-przed-swietem-zeslania-ducha-swietego/
+rightsStatus: attributed
 ---
 
 Nowennę odmawia się 14–22 maja, przed Zesłaniem Ducha Świętego (Zielone Świątki). Może być odmawiana również indywidualnie, za każdym razem, gdy prosimy o dary Ducha Świętego.

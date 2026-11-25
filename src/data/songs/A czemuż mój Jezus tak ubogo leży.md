@@ -2,6 +2,7 @@
 title: A czemuż mój Jezus tak ubogo leży
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/43/A-czemuz-moj-Jezus-tak-ubogo-lezy
+rightsStatus: attributed
 ---
 
 A czemuż mój Jezus tak ubogo leży?  

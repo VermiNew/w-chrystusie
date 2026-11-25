@@ -2,6 +2,7 @@
 title: Boże Dziecię, witaj nam
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/49/Boze-Dziecie-witaj-nam
+rightsStatus: attributed
 ---
 
 Boże Dziecię, witaj nam  

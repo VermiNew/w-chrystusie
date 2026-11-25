@@ -2,6 +2,7 @@
 title: Nowenna do św. Jadwigi Królowej
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-jadwigi-krolowej/
+rightsStatus: attributed
 ---
 
 *Nowenna odmawiana 30 maja – 7 czerwca (przed wspomnieniem kanonizacji 8 czerwca)*

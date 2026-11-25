@@ -2,6 +2,7 @@
 title: Te Deum – Ciebie Boga wysławiamy
 category: Pieśni mszalne
 source: https://niezbednik.niedziela.pl/artykul/4828/Te-Deum-%E2%80%93-Ciebie-Boga-wyslawiamy
+rightsStatus: attributed
 ---
 
 1. Ciebie Boga wysławiamy,  

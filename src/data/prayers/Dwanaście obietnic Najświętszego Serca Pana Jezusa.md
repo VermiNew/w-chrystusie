@@ -2,6 +2,7 @@
 category: Nabożeństwa
 title: Dwanaście obietnic Najświętszego Serca Pana Jezusa
 source: https://niezbednik.niedziela.pl/artykul/2175/Wyraz-naszej-milosci-i-szacunku-dla
+rightsStatus: attributed
 ---
 
 *„Kto dziewięć piątków odprawi jak trzeba, nie umrze w grzechach, lecz pójdzie do nieba”.*

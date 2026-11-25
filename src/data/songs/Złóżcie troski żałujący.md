@@ -2,6 +2,7 @@
 title: Złóżcie troski żałujący
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/743-zlozcie-troski-zalujacy
+rightsStatus: attributed
 ---
 
 1. Złóżcie troski, żałujący Chrystusa umarłego!

@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do św. Jana Apostoła i Ewangelisty
 source: https://dolinamodlitwy.pl/koronka-do-sw-jana-apostola-i-ewangelisty/
+rightsStatus: attributed
 ---
 
 27 grudnia - wspomnienie św. Jana Ewangelisty.

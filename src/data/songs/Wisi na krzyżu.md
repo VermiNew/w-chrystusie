@@ -2,6 +2,7 @@
 title: Wisi na krzyżu
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/814/Wisi-na-krzyzu
+rightsStatus: attributed
 ---
 
 1. Wisi na krzyżu, Pan Stwórca nieba,  

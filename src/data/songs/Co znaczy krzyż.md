@@ -2,6 +2,7 @@
 title: Co znaczy krzyż
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/466/Co-znaczy-krzyz
+rightsStatus: attributed
 ---
 
 1. Co znaczy krzyż zesłan od Boga nam? On chce powiedzieć, Bóg syn się cały dał: Dał słodkie słowo swej pociechy; „Jam winy twe na barkach nosił!” „Jam winy twe na barkach nosił!”

@@ -2,6 +2,7 @@
 title: Zjawiło się nam dziś coś nowego
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/160/Zjawilo-sie-nam-dzis-cos-nowego
+rightsStatus: attributed
 ---
 
 1. Zjawiło się nam dziś coś nowego,  

@@ -2,6 +2,7 @@
 title: Hymn dziękczynny po Komunii świętej
 category: Sakramenty
 source: https://dolinamodlitwy.pl/hymn-dziekczynny/
+rightsStatus: attributed
 ---
 
 Dziękuję Ci Boże, za wszystkie łaski, którymi mnie nieustannie obsypujesz,

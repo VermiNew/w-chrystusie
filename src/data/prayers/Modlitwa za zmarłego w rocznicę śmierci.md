@@ -2,6 +2,7 @@
 title: Modlitwa za zmarłego w rocznicę śmierci
 category: Modlitwy za zmarłych
 source: https://dolinamodlitwy.pl/modlitwa-za-zmarlego-w-rocznice-smierci/
+rightsStatus: attributed
 ---
 
 Boże, miłosierny Panie,

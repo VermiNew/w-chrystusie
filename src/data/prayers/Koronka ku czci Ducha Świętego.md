@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka ku czci Ducha Świętego
 source: https://dolinamodlitwy.pl/koronka-ku-czci-ducha-swietego/
+rightsStatus: attributed
 ---
 
 *Ułożona w 1956 r. przez ks. Stanisława Okamfera. Tekst zatwierdzony przez bp. Franciszka Jopa.*

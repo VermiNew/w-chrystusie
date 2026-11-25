@@ -2,6 +2,7 @@
 title: Boże wieczny, Boże żywy
 category: Pieśni adwentowe
 source: https://niezbednik.niedziela.pl/artykul/32/Boze-wieczny-Boze-zywy
+rightsStatus: attributed
 ---
 
 Boże wieczny, Boże żywy,  

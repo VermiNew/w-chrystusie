@@ -2,6 +2,7 @@
 category: Modlitwy w podróży
 title: Modlitwa kierowcy
 source: https://niezbednik.niedziela.pl/artykul/190/Modlitwa-kierowcy
+rightsStatus: attributed
 ---
 
 Panie, daj mi uważne spojrzenie i sprawność kierowania, tak aby mój sposób prowadzenia pojazdu nie niszczył spokoju bliźniego i nie powodował cierpienia wśród moich braci.

@@ -2,6 +2,7 @@
 title: Litania do Boga Ojca
 category: Litanie
 source: https://dolinamodlitwy.pl/litania-do-boga-ojca/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

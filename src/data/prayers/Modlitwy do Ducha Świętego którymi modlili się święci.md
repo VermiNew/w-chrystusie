@@ -2,6 +2,7 @@
 category: Modlitwy do Ducha Świętego
 title: Modlitwy do Ducha Świętego, którymi modlili się święci
 source: https://stacja7.pl
+rightsStatus: attributed
 ---
 
 Jak dobrze modlić się do Ducha Świętego? Postaraj się codziennie na 5 minut zatrzymać swoją wyobraźnię. Zamknij oczy na wszystko, co rozprasza i wycisz się, abyś mógł wejść do swej duszy, która jest świątynią Ducha Świętego. Trwaj tak przez chwilę w świadomości Jego obecności i zacznij zwracać się do Ducha Świętego słowami jednej lub kilku poniższych modlitw. Każdego dnia możesz odmawiać inną.

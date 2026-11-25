@@ -2,6 +2,7 @@
 category: Sakramenty
 title: Przygotowanie do spowiedzi
 source: https://niezbednik.niedziela.pl/artykul/2093/Przygotowanie-do-spowiedzi
+rightsStatus: attributed
 ---
 
 ## Modlitwa przed spowiedzią

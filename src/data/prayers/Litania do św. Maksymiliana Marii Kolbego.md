@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania do św. Maksymiliana Marii Kolbego
 source: https://www.niedziela.pl/artykul/103615/Litania-do-sw-Maksymiliana-Marii-Kolbego
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

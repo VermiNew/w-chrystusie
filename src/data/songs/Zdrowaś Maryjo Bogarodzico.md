@@ -2,6 +2,7 @@
 title: Zdrowaś Maryjo Bogarodzico
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1154/Zdrowas-Maryjo-Bogarodzico
+rightsStatus: attributed
 ---
 
 1. Zdrowaś Maryjo Bogarodzico,  

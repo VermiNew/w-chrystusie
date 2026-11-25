@@ -2,6 +2,7 @@
 title: Z tej biednej ziemi
 category: Pieśni okolicznościowe
 source: https://niezbednik.niedziela.pl/artykul/460/Z-tej-biednej-ziemi
+rightsStatus: attributed
 ---
 
 1. Z tej biednej ziemi, z tej łez doliny  

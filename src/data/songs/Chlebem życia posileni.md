@@ -2,6 +2,7 @@
 title: Chlebem życia posileni
 category: Pieśni mszalne
 source: https://niezbednik.niedziela.pl/artykul/835/Chlebem-zycia-posileni
+rightsStatus: attributed
 ---
 
 1. Chlebem życia posileni  

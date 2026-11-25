@@ -2,6 +2,7 @@
 category: Koronki
 title: Różaniec Świętej Teresy od Dzieciątka Jezus i Przenajświętszego Oblicza
 source: https://dolinamodlitwy.pl/rozaniec-swietej-teresy-od-dzieciatka-jezus-i-przenajswietszego-oblicza/
+rightsStatus: attributed
 ---
 
 *Wspomnienie Świętej Teresy od Dzieciątka Jezus: 1 października.*

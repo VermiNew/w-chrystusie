@@ -2,6 +2,7 @@
 title: O gwiazdo betlejemska
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/121/O-gwiazdo-betlejemska
+rightsStatus: attributed
 ---
 
 1. O gwiazdo betlejemska,  

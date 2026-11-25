@@ -2,6 +2,7 @@
 category: Modlitwy osobiste
 title: Modlitwa o radość
 source: https://niezbednik.niedziela.pl/artykul/195/Modlitwa-o-radosc
+rightsStatus: attributed
 ---
 
 Boże, dawco radości, spraw, abyśmy dostrzegali jak wiele jest powodów do wdzięczności Tobie.

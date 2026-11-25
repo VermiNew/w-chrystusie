@@ -2,6 +2,7 @@
 title: Minęły cienie i mroki nocy
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/1605-minely-cienie-i-mroki-nocy
+rightsStatus: attributed
 ---
 
 1. Minęły cienie i mroki nocy,

@@ -2,6 +2,7 @@
 title: Gdy śliczna Panna
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/66/Gdy-sliczna-Panna
+rightsStatus: attributed
 ---
 
 1. Gdy śliczna Panna Syna kołysała,  

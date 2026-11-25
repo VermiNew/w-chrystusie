@@ -2,6 +2,7 @@
 title: Litania do bł. O. Rafała Chylińskiego
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-bl-o-rafala-chylinskiego/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

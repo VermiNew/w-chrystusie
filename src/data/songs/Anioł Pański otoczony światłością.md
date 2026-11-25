@@ -2,6 +2,7 @@
 title: Anioł Pański otoczony światłością
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/44/Aniol-Panski-otoczony-swiatloscia
+rightsStatus: attributed
 ---
 
 Anioł Pański otoczony światłością dokoła  

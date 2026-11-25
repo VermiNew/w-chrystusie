@@ -61,17 +61,17 @@ export default function DataBackup() {
   }
 
   return (
-    <section className="about-data" aria-labelledby="about-data-title">
+    <section className="about-panel about-data" aria-labelledby="about-data-title">
       <h3 id="about-data-title">Twoje dane</h3>
       <p>
         Ulubione, historia, postęp czytania, przypomnienia i ustawienia są zapisane tylko
         w tej przeglądarce. Zapisz kopię, aby przenieść je na inne urządzenie.
       </p>
-      <div className="about-data-actions">
-        <button type="button" className="about-sources-link" onClick={saveBackup}>
+      <div className="about-actions">
+        <button type="button" className="about-button about-button--primary" onClick={saveBackup}>
           <FaDownload aria-hidden="true" /> Zapisz kopię
         </button>
-        <button type="button" className="about-sources-link" onClick={() => fileInputRef.current?.click()}>
+        <button type="button" className="about-button" onClick={() => fileInputRef.current?.click()}>
           <FaUpload aria-hidden="true" /> Wczytaj kopię
         </button>
         <input
@@ -88,13 +88,13 @@ export default function DataBackup() {
             Wczytać kopię z {formatExportDate(pending.backup.exportedAt)} ({formatEntries(pending.entryCount)})?
             Obecne dane w tej przeglądarce zostaną zastąpione.
           </p>
-          <div className="about-data-actions">
-            <button type="button" className="about-sources-link" onClick={confirmRestore}>Wczytaj</button>
-            <button type="button" className="about-sources-link" onClick={() => setPending(null)}>Anuluj</button>
+          <div className="about-actions">
+            <button type="button" className="about-button" onClick={confirmRestore}>Wczytaj</button>
+            <button type="button" className="about-button" onClick={() => setPending(null)}>Anuluj</button>
           </div>
         </div>
       )}
-      {status && <p className="about-data-status" role="status">{status}</p>}
+      {status && <p className="about-status" role="status">{status}</p>}
     </section>
   )
 }

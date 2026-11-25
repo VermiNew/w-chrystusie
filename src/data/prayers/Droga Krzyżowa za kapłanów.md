@@ -2,6 +2,7 @@
 title: Droga Krzyżowa za kapłanów
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/droga-krzyzowa-za-kaplanow/
+rightsStatus: attributed
 ---
 
 ## Stacja I: Najwyższy Kapłan niesprawiedliwie osądzony

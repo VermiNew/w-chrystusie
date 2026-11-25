@@ -2,6 +2,7 @@
 title: Nowenna do Matki Bożej z Guadalupe
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-matki-bozej-z-guadalupe/
+rightsStatus: attributed
 ---
 
 *Nowenna odmawiana 3–11 grudnia, przed uroczystością Matki Bożej z Guadalupe (12 grudnia).*

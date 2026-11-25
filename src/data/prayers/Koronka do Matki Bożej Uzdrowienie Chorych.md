@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Matki Bożej Uzdrowienie Chorych
 source: https://dolinamodlitwy.pl/koronka-do-matki-bozej-uzdrowienie-chorych/
+rightsStatus: attributed
 ---
 
 *Koronka do prywatnego odmawiania wedle uznania. Odmawia się na różańcu.*

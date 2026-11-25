@@ -2,6 +2,7 @@
 title: Zajaśniała cudna zorza
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/159/Zajasniala-cudna-zorza
+rightsStatus: attributed
 ---
 
 1. Zajaśniała cudna zorza nad szopą Betlejemską,  

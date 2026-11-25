@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania do św. Mikołaja
 source: https://www.niedziela.pl/artykul/47589/
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

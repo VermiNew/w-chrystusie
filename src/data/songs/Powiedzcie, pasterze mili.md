@@ -2,6 +2,7 @@
 title: Powiedzcie, pasterze mili
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/132/Powiedzcie-pasterze-mili
+rightsStatus: attributed
 ---
 
 1. Powiedzcie, pasterze mili, Gdzieście pod ten czas chodzili?  

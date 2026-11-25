@@ -2,6 +2,7 @@
 title: Wstanę i pójdę do mojego Ojca
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/624-wstane-i-pojde-do-mojego-ojca
+rightsStatus: attributed
 ---
 
 Ref. Wstanę i pójdę do mojego Ojca.

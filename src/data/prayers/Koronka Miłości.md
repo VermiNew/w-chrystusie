@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka Miłości
 source: https://dolinamodlitwy.pl/koronka-milosci/
+rightsStatus: attributed
 ---
 
 *Koronkę odmawia się na różańcu. Do prywatnego odmawiania.*

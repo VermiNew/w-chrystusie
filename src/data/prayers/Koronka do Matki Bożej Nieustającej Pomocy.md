@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Matki Bożej Nieustającej Pomocy
 source: https://dolinamodlitwy.pl/koronka-do-matki-bozej-nieustajacej-pomocy/
+rightsStatus: attributed
 ---
 
 **Na dużym paciorku:**

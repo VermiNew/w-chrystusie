@@ -2,6 +2,7 @@
 title: Nowenna ku czci Matki Bożej Fatimskiej
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-ku-czci-matki-bozej-fatimskiej-4-12-maja/
+rightsStatus: attributed
 ---
 
 Nowennę odmawia się 4–12 maja przed świętem Matki Bożej Fatimskiej (13 maja).

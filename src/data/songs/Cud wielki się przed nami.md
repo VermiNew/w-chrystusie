@@ -2,6 +2,7 @@
 title: Cud wielki się przed nami
 category: Pieśni mszalne
 source: https://musicamsacram.pl/spiewnik/862-cud-wielki-sie-przed-nami
+rightsStatus: attributed
 ---
 
 Na wejście

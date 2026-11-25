@@ -2,6 +2,7 @@
 title: Przy onej górze
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/138/Przy-onej-gorze
+rightsStatus: attributed
 ---
 
 1. Przy onej górze świecą się zorze,  

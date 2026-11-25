@@ -2,6 +2,7 @@
 category: Modlitwy do Ducha Świętego
 title: Nowenna do Ducha Świętego
 source: https://niezbednik.niedziela.pl/artykul/2149/Nowenna-do-Ducha-Swietego
+rightsStatus: attributed
 ---
 
 Jak co roku w oczekiwaniu na to Święto Kościół katolicki odprawia nowennę do Ducha Świętego i tym samym trwa we wspólnej modlitwie, podobnie jak apostołowie, którzy modlili się jednomyślnie po wniebowstąpieniu Pana Jezusa, czekając w Jerozolimie na zapowiedziane przez Niego zesłanie Ducha Świętego.

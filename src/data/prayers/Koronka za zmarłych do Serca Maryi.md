@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka za zmarłych do Serca Maryi
 source: https://dolinamodlitwy.pl/koronka-za-zmarlych-do-serca-maryi/
+rightsStatus: attributed
 ---
 
 *Wspomnienie wszystkich wiernych zmarłych: 2 listopada.*

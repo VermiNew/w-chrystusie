@@ -2,6 +2,7 @@
 category: Modlitwy codzienne
 title: Przykładowy pacierz
 source: https://niezbednik.niedziela.pl/artykul/182/Pacierz
+rightsStatus: attributed
 ---
 
 Pacierz to zbiór podstawowych modlitw odmawianych codziennie rano i wieczorem.

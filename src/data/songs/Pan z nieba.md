@@ -2,6 +2,7 @@
 title: Pan z nieba
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/123/Pan-z-nieba
+rightsStatus: attributed
 ---
 
 Pan z nieba i z łona Ojca przychodzi,  

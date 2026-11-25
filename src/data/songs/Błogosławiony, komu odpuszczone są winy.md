@@ -2,6 +2,7 @@
 title: Błogosławiony, komu odpuszczone są winy
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/394/Blogoslawiony-komu-odpuszczone-sa-winy
+rightsStatus: attributed
 ---
 
 Błogosławiony, komu odpuszczone są winy  

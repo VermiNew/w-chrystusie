@@ -1,0 +1,326 @@
+/* Liturgy of the Hours (/liturgia-godzin). Day colours reuse .liturgy-color from home.css. */
+
+.brev-page {
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+.brev-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+/* ---- Day picker ---- */
+
+.brev-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.25rem 0 1rem;
+}
+
+.brev-day-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+}
+
+.brev-day-info {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  min-width: 0;
+  text-align: center;
+}
+
+.brev-day-info strong {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--color-text);
+}
+
+.brev-day-info > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+.brev-week {
+  font-weight: 600;
+  color: var(--color-primary) !important;
+}
+
+.brev-day-btn,
+.brev-today {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-width: 44px;
+  min-height: 44px;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: var(--color-hover-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.brev-today {
+  padding: 0 0.9rem;
+}
+
+.brev-day-btn:hover,
+.brev-today:hover {
+  border-color: var(--color-primary);
+}
+
+/* ---- Hour picker ---- */
+
+.brev-hours {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+  margin: 0 0 1.25rem;
+}
+
+.brev-hour {
+  min-height: 44px;
+  padding: 0.45rem 0.5rem;
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.brev-hour:hover {
+  border-color: var(--color-primary);
+}
+
+.brev-hour[aria-pressed='true'] {
+  color: var(--color-surface);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.brev-day-btn:focus-visible,
+.brev-today:focus-visible,
+.brev-hour:focus-visible {
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.3);
+  outline-offset: 2px;
+}
+
+.brev-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.page .brev-hour-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+/* ---- Hour content ---- */
+
+.brev-content {
+  font-size: var(--content-reading-font-size, 1.1rem);
+  animation: content-fade-in 0.3s ease both;
+}
+
+.brev-section {
+  margin: 1.4rem 0;
+}
+
+.page .brev-section > h2 {
+  margin: 0 0 0.6rem;
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  animation: none;
+}
+
+.brev-rubric {
+  margin: 0.5rem 0;
+  font-size: 0.85em;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.brev-note {
+  margin: 0;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.82em;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  border-left: 3px solid var(--color-border-strong);
+  border-radius: 0 8px 8px 0;
+}
+
+.brev-note a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.brev-note svg {
+  font-size: 0.75em;
+}
+
+.brev-versicle p,
+.brev-prayer,
+.brev-gloria,
+.brev-alleluia {
+  margin: 0.3rem 0;
+  font-family: var(--font-reading);
+  line-height: 1.7;
+}
+
+.brev-sign {
+  display: inline-block;
+  min-width: 1.6em;
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.brev-gloria {
+  margin-top: 0.6rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.brev-passage {
+  margin: 0 0 1.5rem;
+}
+
+.brev-passage-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.page .brev-passage-head h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1em;
+  color: var(--color-text);
+}
+
+.brev-passage-head span {
+  font-size: 0.8em;
+  color: var(--color-text-muted);
+}
+
+.brev-text {
+  font-family: var(--font-reading);
+  line-height: 1.7;
+}
+
+.brev-verse {
+  margin: 0 0 0.45rem;
+  padding-left: 1.6em;
+  text-indent: -1.6em;
+}
+
+.brev-verse sup {
+  display: inline-block;
+  min-width: 1.6em;
+  text-indent: 0;
+  font-family: var(--font-body);
+  font-size: 0.65em;
+  color: var(--color-text-muted);
+  vertical-align: 0.4em;
+}
+
+/* Second half of a psalm verse, after the colon — indented like in printed psalters. */
+.brev-half {
+  display: block;
+  padding-left: 1.6em;
+}
+
+.brev-loading {
+  margin: 0;
+  font-size: 0.85em;
+  color: var(--color-text-muted);
+}
+
+.brev-about {
+  margin-top: 2.5rem;
+  padding: 1rem 1.15rem;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.page .brev-about h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.brev-about p {
+  margin: 0 0 0.6rem;
+}
+
+.brev-about p:last-child {
+  margin-bottom: 0;
+}
+
+.brev-about a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 520px) {
+  .brev-hours {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brev-day-nav {
+    gap: 0.4rem;
+    padding: 0.6rem 0.5rem;
+  }
+}

@@ -2,6 +2,7 @@
 title: Jezu Chryste Panie miły
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/471/Jezu-Chryste-Panie-mily
+rightsStatus: attributed
 ---
 
 1. Jezu Chryste, Panie miły  

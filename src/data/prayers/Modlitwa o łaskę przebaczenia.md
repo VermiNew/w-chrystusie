@@ -2,6 +2,7 @@
 title: Modlitwa o łaskę przebaczenia
 category: Modlitwy osobiste
 source: https://dolinamodlitwy.pl/modlitwa-o-laske-przebaczenia/
+rightsStatus: attributed
 ---
 
 Panie Jezu, Zbawicielu! Nie chcesz, abyśmy za zło złem odpłacali, lecz zło dobrem zwyciężali.

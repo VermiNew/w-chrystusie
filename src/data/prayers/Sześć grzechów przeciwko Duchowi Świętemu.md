@@ -2,6 +2,7 @@
 category: Katechizm
 title: Sześć grzechów przeciwko Duchowi Świętemu
 source: https://niezbednik.niedziela.pl/artykul/4845/Szesc-grzechow-przeciwko-Duchowi-Swietemu
+rightsStatus: attributed
 ---
 
 1. Grzeszyć licząc zuchwale na miłosierdzie Boże.

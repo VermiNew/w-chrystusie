@@ -2,6 +2,7 @@
 title: Dziś Chrystus, Król
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/759-dzis-chrystus-krol
+rightsStatus: attributed
 ---
 
 1. Dziś Chrystus, Król wiecznej chwały,

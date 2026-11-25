@@ -2,6 +2,7 @@
 title: Z narodzenia Pana
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/161/Z-narodzenia-Pana
+rightsStatus: attributed
 ---
 
 Z narodzenia Pana dzień dziś wesoły,  

@@ -2,6 +2,7 @@
 title: Bogurodzica, dziewica, Bogiem sławiena Maryja
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1156/Bogurodzica-dziewica-Bogiem-slawiena
+rightsStatus: attributed
 ---
 
 Bogurodzica, dziewica, Bogiem sławiena Maryja!  

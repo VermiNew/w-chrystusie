@@ -2,6 +2,7 @@
 title: Pozwól mi Twe męki śpiewać
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/807/Pozwol-mi-Twe-meki-spiewac
+rightsStatus: attributed
 ---
 
 Pozwól mi Twe męki śpiewać

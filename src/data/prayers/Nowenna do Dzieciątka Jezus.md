@@ -2,6 +2,7 @@
 title: Nowenna do Dzieciątka Jezus
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-dzieciatka-jezus/
+rightsStatus: attributed
 ---
 
 Nowenna do odprawiania 16–24 grudnia (przed uroczystością Bożego Narodzenia) lub w okresie Bożego Narodzenia.

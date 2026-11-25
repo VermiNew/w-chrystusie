@@ -2,6 +2,7 @@
 title: W dzień Bożego Narodzenia
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/151/W-dzien-Bozego-Narodzenia
+rightsStatus: attributed
 ---
 
 1. W dzień Bożego Narodzenia,  

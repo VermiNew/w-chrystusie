@@ -2,6 +2,7 @@
 category: Katechizm
 title: Warunki dobrej spowiedzi
 source: https://www.niedziela.pl/artykul/164291/nd/Warunki-dobrej-spowiedzi
+rightsStatus: attributed
 ---
 
 1. Rachunek sumienia

@@ -2,6 +2,7 @@
 category: Modlitwy do Matki Bożej Szkaplerznej
 source: https://maryjni.pl/modlitwy-do-matki-bozej-szkaplerznej/
 title: Polecenie się Najśw. Pannie Maryi
+rightsStatus: attributed
 ---
 
 ## Maryja, Święta Pani

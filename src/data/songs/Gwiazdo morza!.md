@@ -2,6 +2,7 @@
 title: Gwiazdo morza!
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1169/Gwiazdo-morza
+rightsStatus: attributed
 ---
 
 Gwiazdo morza! któraś Pana, * Mlekiem swojém karmiła;  

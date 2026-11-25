@@ -2,6 +2,7 @@
 title: Ach, mój Jezu ukochany
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/463/Ach-moj-Jezu-ukochany
+rightsStatus: attributed
 ---
 
 1. Ach, mój Jezu ukochany,  

@@ -2,6 +2,7 @@
 title: Boga chwalcie, pozdrawiajcie Maryję Pannę
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1150/Boga-chwalcie-pozdrawiajcie-Maryje-Panne
+rightsStatus: attributed
 ---
 
 BOGA CHWALCIE, POZDRAWIAJCIE MARYJĘ PANNĘ

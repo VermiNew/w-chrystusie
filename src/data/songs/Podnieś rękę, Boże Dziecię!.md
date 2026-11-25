@@ -2,6 +2,7 @@
 title: Podnieś rękę, Boże Dziecię!
 category: Pieśni patriotyczne
 source: https://niezbednik.niedziela.pl/artykul/163/Podnies-reke-Boze-Dziecie
+rightsStatus: attributed
 ---
 
 Podnieś rękę, Boże Dziecię!  

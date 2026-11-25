@@ -2,6 +2,7 @@
 category: Modlitwy osobiste
 title: Modlitwa o uzdrowienie z złych myśli
 source: https://www.biblijni.pl/modlitwy/196_modlitwa_o_uzdrowienie_osob_dreczonych_zlymi_myslami.html
+rightsStatus: attributed
 ---
 
 Przyjdź, Duchu Święty, który jesteś Bożą pieczęcią na moim sercu.

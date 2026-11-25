@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Jezusa Chrystusa Króla
 source: https://dolinamodlitwy.pl/koronka-do-jezusa-chrystusa-krola/
+rightsStatus: attributed
 ---
 
 Odmawia się na różańcu.

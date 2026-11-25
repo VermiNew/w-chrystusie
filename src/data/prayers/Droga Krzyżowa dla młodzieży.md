@@ -2,6 +2,7 @@
 title: Droga Krzyżowa dla młodzieży
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/droga-krzyzowa-dla-mlodziezy/
+rightsStatus: attributed
 ---
 
 ## Stacja I: Piłat wydaje wyrok na Jezusa

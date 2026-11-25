@@ -2,6 +2,7 @@
 title: Pójdźmy wszyscy do stajenki
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/134/Pojdzmy-wszyscy-do-stajenki
+rightsStatus: attributed
 ---
 
 Pójdźmy wszyscy do stajenki, do Jezusa i Panienki  

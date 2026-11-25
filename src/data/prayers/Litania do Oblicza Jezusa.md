@@ -2,6 +2,7 @@
 title: Litania do Oblicza Jezusa
 category: Litanie
 source: https://dolinamodlitwy.pl/litania-do-oblicza-jezusa/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

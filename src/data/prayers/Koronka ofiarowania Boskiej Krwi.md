@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka ofiarowania Boskiej Krwi
 source: https://dolinamodlitwy.pl/koronka-ofiarowania-boskiej-krwi/
+rightsStatus: attributed
 ---
 
 Pan Jezus powiedział świętej Marii Magdalenie de Pazzi, aby ofiarowała Bogu Ojcu Jego Krew. Było to szczere uczczenie Męki Pańskiej, a święta czyniła to przynajmniej pięćdziesiąt razy w ciągu dnia. W jednej ze swoich ekstaz widziała bardzo wielu nawróconych grzeszników oraz dusze wybawione z czyśćca przez tę modlitwę.

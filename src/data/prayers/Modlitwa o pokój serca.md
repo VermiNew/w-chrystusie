@@ -2,6 +2,7 @@
 title: Modlitwa o pokój serca
 category: Modlitwy osobiste
 source: https://dolinamodlitwy.pl/modlitwa-o-pokoj-serca/
+rightsStatus: attributed
 ---
 
 Panie, daj mi pokój serca.

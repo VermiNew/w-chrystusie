@@ -2,6 +2,7 @@
 category: Sakramenty
 title: Akt Komunii Świętej duchowej
 source: https://dolinamodlitwy.pl/akt-komunii-swietej-duchowej/
+rightsStatus: attributed
 ---
 
 Klękam u Twoich stóp, o mój Jezu, i ofiarowuję Tobie skruchę mego serca,

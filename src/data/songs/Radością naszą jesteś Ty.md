@@ -2,6 +2,7 @@
 title: Radością naszą jesteś Ty
 category: Pieśni mszalne
 source: https://niezbednik.niedziela.pl/artykul/831/Radoscia-nasza-jestes-Ty
+rightsStatus: attributed
 ---
 
 1. Radością naszą jesteś Ty (2x)  

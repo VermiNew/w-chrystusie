@@ -2,6 +2,7 @@
 title: Z dalekiej Fatimy
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/311/Z-dalekiej-Fatimy
+rightsStatus: attributed
 ---
 
 1. Z dalekiej Fatimy donośnie brzmi dzwon,  

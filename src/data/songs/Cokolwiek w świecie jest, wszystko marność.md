@@ -2,6 +2,7 @@
 title: Cokolwiek w świecie jest, wszystko marność
 category: Pieśni okolicznościowe
 source: https://niezbednik.niedziela.pl/artykul/452/Cokolwiek-w-swiecie-jest-wszystko-marnosc
+rightsStatus: attributed
 ---
 
 1. Cokolwiek w świecie jest, wszystko marność, choćby mnie królewska przyszła godność, Wszystko minie, świat przeminie, Króla i Cesarza śmierć nie minie.

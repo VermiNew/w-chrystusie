@@ -2,6 +2,7 @@
 title: Jezus najwyższe Imię
 category: Pieśni uwielbienia
 source: https://www.tekstowo.pl/religijne/jezus-najwyzsze-imie
+rightsStatus: attributed
 ---
 
 1. Jezus, najwyższe Imię,  

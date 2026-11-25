@@ -2,6 +2,7 @@
 category: Katechizm
 title: Wiara, nadzieja, miłość
 source: https://niezbednik.niedziela.pl/artykul/169/Wiara-nadzieja-milosc
+rightsStatus: attributed
 ---
 
 Wierzę w Ciebie, Boże żywy,

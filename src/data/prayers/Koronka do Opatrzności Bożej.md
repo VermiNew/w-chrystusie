@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Opatrzności Bożej
 source: https://dolinamodlitwy.pl/koronka-do-opatrznosci-bozej/
+rightsStatus: attributed
 ---
 
 Odmawia się na różańcu.

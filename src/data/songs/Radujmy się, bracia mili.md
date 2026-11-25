@@ -2,6 +2,7 @@
 title: Radujmy się, bracia mili
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/140/Radujmy-sie-bracia-mili
+rightsStatus: attributed
 ---
 
 1. Radujmy się, bracia mili, gdyż dziw nad dziwy  

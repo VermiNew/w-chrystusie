@@ -2,6 +2,7 @@
 title: Już gościsz Jezu w sercu mym
 category: Pieśni uwielbienia
 source: https://musicamsacram.pl/spiewnik/1033-juz-goscisz-jezu-w-sercu-mym
+rightsStatus: attributed
 ---
 
 1. Już gościsz, Jezu, w sercu mym;

@@ -2,6 +2,7 @@
 category: Modlitwy za wstawiennictwem świętych
 title: Do trzech Archaniołów
 source: https://dolinamodlitwy.pl/do-trzech-archaniolow/
+rightsStatus: attributed
 ---
 
 Chwalebny Michale Archaniele, wodzu zastępów niebieskich, broń nas przed wszystkimi naszymi nieprzyjaciółmi widzialnymi i niewidzialnymi, i nigdy nie pozwól, abyśmy się znaleźli pod ich okrutną władzą.

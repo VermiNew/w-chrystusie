@@ -2,6 +2,7 @@
 category: Modlitwy za rodzinę
 title: Modlitwa w kryzysie małżeńskim
 source: https://niezbednik.niedziela.pl/artykul/263/Modlitwa-w-kryzysie-malzenskim
+rightsStatus: attributed
 ---
 
 Ojcze nasz, zwracam się z pokorną i żarliwą prośbą do Ciebie.

@@ -2,6 +2,7 @@
 title: Nie tak bystro płynie rzeka
 category: Pieśni okolicznościowe
 source: https://niezbednik.niedziela.pl/artykul/272/Nie-tak-bystro-plynie-rzeka
+rightsStatus: attributed
 ---
 
 Nie tak bystro płynie rzeka,  

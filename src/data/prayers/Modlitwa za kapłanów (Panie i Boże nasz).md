@@ -2,6 +2,7 @@
 title: Modlitwa za kapłanów (Panie i Boże nasz)
 category: Modlitwy za bliźnich
 source: https://dolinamodlitwy.pl/modlitwa-za-kaplanow-2/
+rightsStatus: attributed
 ---
 
 Panie i Boże nasz, Królu nieba i ziemi,

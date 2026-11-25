@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka św. Filipa Neri
 source: https://dolinamodlitwy.pl/koronka-sw-filipa-neri/
+rightsStatus: attributed
 ---
 
 *Odmawia się na Różańcu maryjnym.*

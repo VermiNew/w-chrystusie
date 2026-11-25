@@ -2,6 +2,7 @@
 title: Miałem ci ja w sercu
 category: Pieśni okolicznościowe
 source: https://niezbednik.niedziela.pl/artykul/456/Mialem-ci-ja-w-sercu
+rightsStatus: attributed
 ---
 
 1. Miałem ci ja w sercu Jezusa miłego,  

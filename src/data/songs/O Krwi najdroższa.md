@@ -2,6 +2,7 @@
 title: O Krwi najdroższa
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/798/O-Krwi-najdrozsza
+rightsStatus: attributed
 ---
 
 1. O Krwi najdroższa,  

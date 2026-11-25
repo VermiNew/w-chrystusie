@@ -2,6 +2,7 @@
 category: Modlitwy o zdrowie
 title: Modlitwa nowenny o zdrowie
 source: https://www.spm.org.pl/modlitwy-o-zdrowie
+rightsStatus: attributed
 ---
 
 *Na początku: W imię Ojca i Syna, i Ducha Świętego. Amen.*

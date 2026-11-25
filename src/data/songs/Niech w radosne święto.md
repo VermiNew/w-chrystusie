@@ -2,6 +2,7 @@
 title: Niech w radosne święto
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/926-niech-w-radosne-swieto
+rightsStatus: attributed
 ---
 
 1. Niech w radosne święto

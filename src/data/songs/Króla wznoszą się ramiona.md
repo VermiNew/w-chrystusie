@@ -2,6 +2,7 @@
 title: Króla wznoszą się ramiona
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/473/Krola-wznosza-sie-ramiona
+rightsStatus: attributed
 ---
 
 1. Króla wznoszą się ramiona,  

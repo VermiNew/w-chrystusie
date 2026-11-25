@@ -2,6 +2,7 @@
 title: Oto Pan Bóg przyjdzie
 category: Pieśni adwentowe
 source: https://niezbednik.niedziela.pl/artykul/30/Oto-Pan-Bog-przyjdzie
+rightsStatus: attributed
 ---
 
 Oto Pan Bóg przyjdzie,  

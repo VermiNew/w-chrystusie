@@ -2,6 +2,7 @@
 title: Litania do bł. Honorata Koźmińskiego
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-bl-honorata-kozminskiego/
+rightsStatus: attributed
 ---
 
 Panie, zmiłuj się nad nami. Panie, zmiłuj się nad nami.

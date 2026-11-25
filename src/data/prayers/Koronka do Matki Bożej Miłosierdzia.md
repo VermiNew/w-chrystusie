@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Matki Bożej Miłosierdzia
 source: https://dolinamodlitwy.pl/koronka-do-matki-bozej-milosierdzia/
+rightsStatus: attributed
 ---
 
 Koronka składa się z trzech dziesiątków.

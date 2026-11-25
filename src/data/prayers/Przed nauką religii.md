@@ -2,6 +2,7 @@
 category: Modlitwy codzienne
 title: Przed nauką religii
 source: https://niezbednik.niedziela.pl/artykul/242/Przed-nauka-religii
+rightsStatus: attributed
 ---
 
 Duchu Święty, który oświecasz serca i umysły nasze,

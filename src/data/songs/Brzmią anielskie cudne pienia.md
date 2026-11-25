@@ -2,6 +2,7 @@
 title: Brzmią anielskie cudne pienia
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/53/Brzmia-anielskie-cudne-pienia
+rightsStatus: attributed
 ---
 
 Brzmią anielskie cudne pienia nad stajenką lichą,  

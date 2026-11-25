@@ -2,6 +2,7 @@
 title: Modlitwa do św. Judy Tadeusza
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/modlitwa-do-sw-judy-tadeusza/
+rightsStatus: attributed
 ---
 
 Święty Judo Tadeuszu, potężny mój Obrońco i opiekunie, w trosce i opuszczeniu oddaję się Twej cudownej opiece.

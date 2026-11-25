@@ -2,6 +2,7 @@
 title: Miłosierdziem Twoim Panie
 category: Pieśni okolicznościowe
 source: https://niezbednik.niedziela.pl/artykul/457/Milosierdziem-Twoim-Panie
+rightsStatus: attributed
 ---
 
 Miłosierdziem Twoim Panie  

@@ -2,6 +2,7 @@
 category: Modlitwy codzienne
 source: https://niezbednik.niedziela.pl/artykul/245/Ojcze-nasz-Modlitwa-Panska
 title: Ojcze Nasz
+rightsStatus: attributed
 ---
 
 Ojcze nasz, któryś jest w niebie,

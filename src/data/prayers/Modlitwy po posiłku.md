@@ -2,6 +2,7 @@
 category: Modlitwy codzienne
 title: Modlitwy po posiłku
 source: https://niezbednik.niedziela.pl/artykul/240/Modlitwy-po-posilku
+rightsStatus: attributed
 ---
 
 Chwalimy Cię, Panie, i dziękujemy za ten posiłek,

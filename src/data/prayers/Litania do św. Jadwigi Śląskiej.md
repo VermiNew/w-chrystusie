@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania do św. Jadwigi Śląskiej
 source: https://www.biblijni.pl/modlitwy/46_litania_do_swietej_jadwigi_slaskiej.html
+rightsStatus: attributed
 ---
 
 Kyrie eleison, Chryste eleison, Kyrie elejson,

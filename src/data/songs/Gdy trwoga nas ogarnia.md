@@ -2,6 +2,7 @@
 title: Gdy trwoga nas ogarnia
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1168/Gdy-trwoga-nas-ogarnia
+rightsStatus: attributed
 ---
 
 Gdy trwoga nas ogarnia, Matko, wspomóż nas!  

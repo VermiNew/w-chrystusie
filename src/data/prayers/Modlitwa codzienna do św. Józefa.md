@@ -2,6 +2,7 @@
 title: Modlitwa codzienna do św. Józefa
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/modlitwa-codzienna-do-swietego-jozefa/
+rightsStatus: attributed
 ---
 
 O święty Józefie, ziemski Ojcze i Opiekunie Pana i Zbawiciela naszego Jezusa Chrystusa,

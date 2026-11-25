@@ -2,6 +2,7 @@
 title: Dzisiaj w Betlejem
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/63/Dzisiaj-w-Betlejem
+rightsStatus: attributed
 ---
 
 Dzisiaj w Betlejem wesoła nowina,  

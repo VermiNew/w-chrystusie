@@ -2,6 +2,7 @@
 category: Modlitwy za zmarłych
 title: Za Konających
 source: https://niezbednik.niedziela.pl/artykul/185/Za-Konajacych
+rightsStatus: attributed
 ---
 
 Najłaskawszy Jezu, miłośniku dusz,

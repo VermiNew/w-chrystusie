@@ -2,6 +2,7 @@
 title: Jużem dość pracował
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/472/Juzem-dosc-pracowal
+rightsStatus: attributed
 ---
 
 1. Jużem dość pracował dla ciebie, człowiecze,  

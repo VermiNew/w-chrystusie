@@ -2,6 +2,7 @@
 title: Mizerna cicha, stajenka licha
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/82/Mizerna-cicha-stajenka-licha
+rightsStatus: attributed
 ---
 
 1. Mizerna, cicha, stajenka licha,  

@@ -2,6 +2,7 @@
 title: Przez Twoje święte Zmartwychpowstanie
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/764-przez-twoje-swiete-zmartwychpowstanie
+rightsStatus: attributed
 ---
 
 Przez Twoje święte Zmartwychpowstanie,

@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka o zwycięstwo nad szatanem
 source: https://dolinamodlitwy.pl/koronka-o-zwyciestwo-nad-szatanem/
+rightsStatus: attributed
 ---
 
 **Na dużych paciorkach (1 raz):**

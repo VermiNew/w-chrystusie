@@ -2,6 +2,7 @@
 title: Litania do bł. Marii Luizy Merkert
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-blogoslawionej-marii-luizy-merkert/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

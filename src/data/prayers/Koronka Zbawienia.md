@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka Zbawienia
 source: https://dolinamodlitwy.pl/koronka-zbawienia/
+rightsStatus: attributed
 ---
 
 *Odmawiana na Różańcu.*

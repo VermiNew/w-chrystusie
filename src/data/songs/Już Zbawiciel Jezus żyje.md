@@ -2,6 +2,7 @@
 title: Już Zbawiciel Jezus żyje
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/767-juz-zbawiciel-jezus-zyje
+rightsStatus: attributed
 ---
 
 1. Już Zbawiciel, Jezus żyje,

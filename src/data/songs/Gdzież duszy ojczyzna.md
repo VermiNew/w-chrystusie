@@ -2,6 +2,7 @@
 title: Gdzież duszy ojczyzna
 category: Pieśni okolicznościowe
 source: https://niezbednik.niedziela.pl/artykul/454/Gdziez-duszy-ojczyzna
+rightsStatus: attributed
 ---
 
 1. Gdzież duszy ojczyzna, jej pokój, jej raj?  

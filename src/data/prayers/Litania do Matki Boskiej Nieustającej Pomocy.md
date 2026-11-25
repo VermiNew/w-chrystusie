@@ -2,6 +2,7 @@
 title: Litania do Matki Boskiej Nieustającej Pomocy
 category: Litanie
 source: https://dolinamodlitwy.pl/litania-do-matki-boskiej-nieustajacej-pomocy/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

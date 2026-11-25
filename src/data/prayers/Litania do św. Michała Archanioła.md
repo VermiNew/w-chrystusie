@@ -2,6 +2,7 @@
 title: Litania do św. Michała Archanioła
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-sw-michala-archaniola/
+rightsStatus: attributed
 ---
 
 Panie, zmiłuj się nad nami.

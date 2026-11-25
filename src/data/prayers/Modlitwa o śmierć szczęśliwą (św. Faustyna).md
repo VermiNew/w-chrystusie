@@ -2,6 +2,7 @@
 category: Modlitwy osobiste
 title: Modlitwa o śmierć szczęśliwą (św. Faustyna)
 source: https://www.biblijni.pl/modlitwy/32_modlitwa_o_smierc_szczesliwa.html
+rightsStatus: attributed
 ---
 
 O Jezu, na krzyżu rozpięty, błagam Cię, udziel mi łaski, abym zawsze i wszędzie, we wszystkim wiernie spełniała najświętszą wolę Ojca Twego. A kiedy ta wola Boża wydawać mi się będzie ciężka i trudna do spełnienia, to wtenczas błagam Ciebie, Jezu, niechaj z ran Twoich spłynie mi siła i moc, a usta moje niech powtarzają: stań się wola Twoja, Panie. - O Zbawicielu świata, Miłośniku ludzkiego zbawienia, który w tak strasznej boleści katuszy zapomnisz o sobie, a myślisz o dusz zbawieniu, Jezu najlitościwszy, udziel mi łaski zapomnienia o sobie, abym cała żyła dla dusz, pomagając Ci w dziele zbawienia, według najświętszej woli Ojca Twego... *(Dz. 1265)*.

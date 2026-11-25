@@ -2,6 +2,7 @@
 title: Śliczny Jezu, miły Panie
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/812/Sliczny-Jezu-mily-Panie
+rightsStatus: attributed
 ---
 
 1. Śliczny Jezu, miły Panie  

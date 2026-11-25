@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania do św. Jana Pawła II
 source: https://niezbednik.niedziela.pl/artykul/4914/Litania-do-sw-Jana-Pawla-II
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

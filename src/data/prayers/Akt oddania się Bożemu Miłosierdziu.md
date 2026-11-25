@@ -2,6 +2,7 @@
 title: Akt oddania się Bożemu Miłosierdziu
 category: Akty i ofiarowania
 source: https://dolinamodlitwy.pl/akt-oddania-sie-bozemu-milosierdziu/
+rightsStatus: attributed
 ---
 
 O najmiłosierniejszy Jezu, Twoja dobroć jest nieskończona, a skarby łask nieprzebrane.

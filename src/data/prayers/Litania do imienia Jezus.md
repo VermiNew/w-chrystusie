@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania do imienia Jezus
 source: https://niezbednik.niedziela.pl/artykul/285/Litania-do-Imienia-Jezus
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

@@ -2,6 +2,7 @@
 title: Płaczcie Anieli
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/806/Placzcie-Anieli
+rightsStatus: attributed
 ---
 
 1. Płaczcie, Anieli, płaczcie, Duchy swięte  

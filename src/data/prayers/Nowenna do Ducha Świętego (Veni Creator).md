@@ -2,6 +2,7 @@
 title: Nowenna do Ducha Świętego (Veni Creator)
 category: Modlitwy do Ducha Świętego
 source: https://dolinamodlitwy.pl/nowenna-do-ducha-sw/
+rightsStatus: attributed
 ---
 
 *Hymn Veni Creator Spiritus odmawia się przez 9 kolejnych dni jako nowennę do Ducha Świętego.*

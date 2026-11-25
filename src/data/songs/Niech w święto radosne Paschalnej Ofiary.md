@@ -2,6 +2,7 @@
 title: Niech w święto radosne Paschalnej Ofiary
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/1474-niech-w-swieto-radosne-paschalnej-ofiary
+rightsStatus: attributed
 ---
 
 1. Niech w święto radosne Paschalnej Ofiary

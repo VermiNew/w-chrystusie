@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do św. Benedykta
 source: https://dolinamodlitwy.pl/koronka-do-sw-benedykta/
+rightsStatus: attributed
 ---
 
 *Odmawia się na różańcu.*

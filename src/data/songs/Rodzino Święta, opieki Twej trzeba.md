@@ -2,6 +2,7 @@
 title: Rodzino Święta, opieki Twej trzeba
 category: Pieśni okolicznościowe
 source: https://niezbednik.niedziela.pl/artykul/274/Rodzino-Swieta-opieki-Twej-trzeba
+rightsStatus: attributed
 ---
 
 Rodzino Święta, opieki Twej trzeba  

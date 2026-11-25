@@ -2,6 +2,7 @@
 title: Nowy Rok bieży
 category: Pieśni okolicznościowe
 source: https://niezbednik.niedziela.pl/artykul/271/Nowy-Rok-biezy
+rightsStatus: attributed
 ---
 
 1. Nowy Rok bieży, w jasełkach leży,  

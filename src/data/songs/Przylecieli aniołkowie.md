@@ -2,6 +2,7 @@
 title: Przylecieli aniołkowie
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/137/Przylecieli-aniolkowie
+rightsStatus: attributed
 ---
 
 1. Przylecieli aniołkowie  

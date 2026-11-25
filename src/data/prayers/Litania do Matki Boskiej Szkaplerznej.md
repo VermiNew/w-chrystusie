@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania do Matki Boskiej Szkaplerznej
 source: https://stacja7.pl/modlitwa/piekna-litania-do-matki-bozej-szkaplerznej/
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

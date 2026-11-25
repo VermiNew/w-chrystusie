@@ -2,6 +2,7 @@
 title: Litania do Krzyża Świętego
 category: Litanie
 source: https://dolinamodlitwy.pl/litania-do-krzyza-swietego/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

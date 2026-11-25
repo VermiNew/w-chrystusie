@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania Narodu Polskiego
 source: https://niezbednik.niedziela.pl/artykul/686/Litania-Narodu-Polskiego
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

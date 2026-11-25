@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Dzieciątka Jezus za poczęte dzieci
 source: https://dolinamodlitwy.pl/koronka-do-dzieciatka-jezus-za-poczete-dzieci/
+rightsStatus: attributed
 ---
 
 Koronkę odmawia się na różańcu.

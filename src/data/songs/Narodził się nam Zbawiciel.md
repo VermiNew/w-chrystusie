@@ -2,6 +2,7 @@
 title: Narodził się nam Zbawiciel
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/90/Narodzil-sie-nam-Zbawiciel
+rightsStatus: attributed
 ---
 
 1. Narodził się nam Zbawiciel,  

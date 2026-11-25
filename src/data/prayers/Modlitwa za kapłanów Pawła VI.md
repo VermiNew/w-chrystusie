@@ -2,6 +2,7 @@
 category: Modlitwy za bliźnich
 title: Modlitwa za kapłanów Pawła VI
 source: https://parafiazduny.pl/nasze-modlitwy/za-kaplanow
+rightsStatus: attributed
 ---
 
 *Modlitwa błogosławionego Pawła VI*

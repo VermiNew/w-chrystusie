@@ -2,6 +2,7 @@
 title: O Stworzycielu Duchu przyjdź
 category: Pieśni do Ducha Świętego
 source: https://musicamsacram.pl/spiewnik/560-o-stworzycielu-duchu-przyjdz
+rightsStatus: attributed
 ---
 
 1. O Stworzycielu, Duchu, przyjdź,

@@ -2,6 +2,7 @@
 title: Modlitwa Anioła z Fatimy
 category: Akty i ofiarowania
 source: https://dolinamodlitwy.pl/modlitwa-aniola-z-fatimy/
+rightsStatus: attributed
 ---
 
 O Boże mój, wierzę w Ciebie, uwielbiam Ciebie, ufam Tobie i miłuję Ciebie.

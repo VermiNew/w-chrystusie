@@ -2,6 +2,7 @@
 title: Boże w dobroci nigdy nieprzebrany
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/450/Boze-w-dobroci-nigdy-nieprzebrany
+rightsStatus: attributed
 ---
 
 1. Boże w dobroci nigdy nieprzebrany,  

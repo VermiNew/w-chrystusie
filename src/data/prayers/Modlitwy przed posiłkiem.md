@@ -2,6 +2,7 @@
 category: Modlitwy codzienne
 title: Modlitwy przed posiłkiem
 source: https://niezbednik.niedziela.pl/artykul/241/Modlitwy-przed-posilkiem
+rightsStatus: attributed
 ---
 
 Pobłogosław, Panie Boże, nas i ten posiłek,

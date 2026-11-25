@@ -2,6 +2,7 @@
 title: Modlitwa do św. Józefa patrona Kościoła
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/modlitwa-do-swietego-jozefa-patrona-kosciola-katolickiego/
+rightsStatus: attributed
 ---
 
 O najpotężniejszy Patriarcho, święty Józefie, Patronie Kościoła katolickiego,

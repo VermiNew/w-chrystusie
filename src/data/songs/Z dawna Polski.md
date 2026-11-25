@@ -2,6 +2,7 @@
 title: Z dawna Polski
 category: Pieśni patriotyczne
 source: https://niezbednik.niedziela.pl/artykul/165/Z-dawna-Polski
+rightsStatus: attributed
 ---
 
 1.Z dawna Polski Tyś Królową, Maryjo!  

@@ -2,6 +2,7 @@
 title: Ojcze, Boże Wszechmogący
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/799/Ojcze-Boze-Wszechmogacy
+rightsStatus: attributed
 ---
 
 1. Ojcze, Boże Wszechmogący,  

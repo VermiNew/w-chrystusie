@@ -2,6 +2,7 @@
 category: Modlitwy maryjne
 source: https://www.biblijni.pl/modlitwy/8_pod_twoja_obrone.html
 title: Pod Twoją Obronę
+rightsStatus: attributed
 ---
 
 Pod Twoją obronę uciekamy się,

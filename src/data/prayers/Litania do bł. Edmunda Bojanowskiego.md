@@ -2,6 +2,7 @@
 title: Litania do bł. Edmunda Bojanowskiego
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-bl-edmunda-bojanowskiego/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

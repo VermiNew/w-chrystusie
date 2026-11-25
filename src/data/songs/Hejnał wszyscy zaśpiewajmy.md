@@ -2,6 +2,7 @@
 title: Hejnał wszyscy zaśpiewajmy
 category: Pieśni adwentowe
 source: https://niezbednik.niedziela.pl/artykul/37/Hejnal-wszyscy-zaspiewajmy
+rightsStatus: attributed
 ---
 
 Hejnał wszyscy zaśpiewajmy,  

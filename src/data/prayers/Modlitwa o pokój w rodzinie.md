@@ -2,6 +2,7 @@
 category: Modlitwy za rodzinę
 title: Modlitwa o pokój w rodzinie
 source: https://stacja7.pl/modlitwa/modlitwa-o-pokoj-w-rodzinie/
+rightsStatus: attributed
 ---
 
 Boże, Sprawco pokoju i Stróżu miłosierdzia,

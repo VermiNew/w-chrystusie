@@ -2,6 +2,7 @@
 title: Oto Jezus umiera
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/801/Oto-Jezus-umiera
+rightsStatus: attributed
 ---
 
 1. Oto Jezus umiera,  

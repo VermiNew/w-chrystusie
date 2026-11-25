@@ -2,6 +2,7 @@
 title: Narodził się Jezus Chrystus
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/85/Narodzil-sie-Jezus-Chrystus
+rightsStatus: attributed
 ---
 
 1. Narodził się Jezus Chrystus, bądźmy weseli,  

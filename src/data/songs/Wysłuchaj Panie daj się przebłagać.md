@@ -2,6 +2,7 @@
 title: Wysłuchaj Panie daj się przebłagać
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/2223-wysluchaj-panie-daj-sie-przeblagac
+rightsStatus: attributed
 ---
 
 Ant. Wysłuchaj, Panie, daj się przebłagać,

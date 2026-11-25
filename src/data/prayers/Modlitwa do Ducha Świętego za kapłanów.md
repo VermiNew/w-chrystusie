@@ -2,6 +2,7 @@
 category: Modlitwy za bliźnich
 title: Modlitwa do Ducha Świętego za kapłanów
 source: https://parafiazduny.pl/nasze-modlitwy/za-kaplanow
+rightsStatus: attributed
 ---
 
 Duchu Święty, Duchu Mądrości, prowadź kapłanów;

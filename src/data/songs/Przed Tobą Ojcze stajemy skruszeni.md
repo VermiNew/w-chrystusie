@@ -2,6 +2,7 @@
 title: Przed Tobą Ojcze stajemy skruszeni
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/1995-przed-toba-ojcze-stajemy-skruszeni
+rightsStatus: attributed
 ---
 
 1. Przed Tobą, Ojcze, stajemy skruszeni

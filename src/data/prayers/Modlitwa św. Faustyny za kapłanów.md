@@ -2,6 +2,7 @@
 category: Modlitwy za bliźnich
 title: Modlitwa św. Faustyny za kapłanów
 source: https://parafiazduny.pl/nasze-modlitwy/za-kaplanow
+rightsStatus: attributed
 ---
 
 *Modlitwa świętej Faustyny Kowalskiej*

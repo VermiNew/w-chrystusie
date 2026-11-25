@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania do Świętych
 source: https://niezbednik.niedziela.pl/artykul/286/Litania-do-Swietych
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

@@ -2,6 +2,7 @@
 title: W Boże Narodzenie wszystko się weseli
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/149/W-Boze-Narodzenie-wszystko-sie-weseli
+rightsStatus: attributed
 ---
 
 1. W Boże Narodzenie wszystko się weseli  

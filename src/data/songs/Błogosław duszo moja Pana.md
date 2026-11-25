@@ -2,6 +2,7 @@
 title: Błogosław duszo moja Pana
 category: Pieśni mszalne
 source: https://niezbednik.niedziela.pl/artykul/833/Blogoslaw-duszo-moja-Pana
+rightsStatus: attributed
 ---
 
 Błogosław duszo moja Pana  

@@ -2,6 +2,7 @@
 title: Ty, któryś gorzko na krzyżu umierał
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/813/Ty-ktorys-gorzko-na-krzyzu-umieral
+rightsStatus: attributed
 ---
 
 1. Ty, któryś gorzko na krzyżu umierał,  

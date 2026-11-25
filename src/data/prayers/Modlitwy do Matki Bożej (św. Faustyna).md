@@ -2,6 +2,7 @@
 category: Modlitwy maryjne
 title: Modlitwy do Matki Bożej (św. Faustyna)
 source: https://www.biblijni.pl/modlitwy/33_modlitwy_do_matki_bozej.html
+rightsStatus: attributed
 ---
 
 Maryjo, Matko moja i Pani moja, oddaję Ci duszę i ciało moje, życie i śmierć moją, i to, co po niej nastąpi. Wszystko składam w Twoje ręce, o Matko moja. Okryj mnie swym płaszczem dziewiczym i udziel mi laski czystości serca, duszy i ciała, i broń mnie swą potęgą przed nieprzyjaciółmi wszelkimi (...). O śliczna Lilio, Tyś dla mnie zwierciadłem, o Matko moja .

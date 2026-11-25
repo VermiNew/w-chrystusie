@@ -2,6 +2,7 @@
 title: Pasterze mili, coście widzieli
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/129/Pasterze-mili-coscie-widzieli
+rightsStatus: attributed
 ---
 
 1. Pasterze mili, coście widzieli?  

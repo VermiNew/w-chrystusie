@@ -2,6 +2,7 @@
 title: Nowenna do św. Ignacego Loyoli
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-ignacego-loyoli-22-31-lipca/
+rightsStatus: attributed
 ---
 
 *Nowenna odmawiana 22–30 lipca, przed uroczystością św. Ignacego Loyoli (31 lipca).*

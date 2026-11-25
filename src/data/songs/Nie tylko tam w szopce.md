@@ -2,6 +2,7 @@
 title: Nie tylko tam w szopce
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/119/Nie-tylko-tam-w-szopce
+rightsStatus: attributed
 ---
 
 1. Nie tylko tam w szopce, w Betlejem pasterze witali Cię, Panie  

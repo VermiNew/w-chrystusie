@@ -2,6 +2,7 @@
 title: Droga Krzyżowa inspirowana psalmami
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/droga-krzyzowa-inspirowana-psalmami/
+rightsStatus: attributed
 ---
 
 „Eli, Eli, lema sabachthani" — czyli: „Boże mój, Boże, czemuś mnie opuścił?" — to słowa Jezusa konającego na krzyżu. Wbrew pozorom nie jest to okrzyk zwątpienia i rozpaczy, ale zaufania i wiary. Dlaczego? Bo to pierwsze słowa Psalmu 22, który mówi o tym, że Bóg wybawia udręczonego psychicznie i fizycznie człowieka z sytuacji bez wyjścia i przemienia ją w czas chwały i zwycięstwa.

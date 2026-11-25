@@ -2,6 +2,7 @@
 title: Ofiarujmy chwałę w wierze
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/758-ofiarujmy-chwale-w-wierze
+rightsStatus: attributed
 ---
 
 1. Ofiarujmy chwałę w wierze

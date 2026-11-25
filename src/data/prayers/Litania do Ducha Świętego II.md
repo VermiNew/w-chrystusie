@@ -2,6 +2,7 @@
 title: Litania do Ducha Świętego II
 category: Litanie
 source: https://dolinamodlitwy.pl/litania-do-ducha-swietego-2/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

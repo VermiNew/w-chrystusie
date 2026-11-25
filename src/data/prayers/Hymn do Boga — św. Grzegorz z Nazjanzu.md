@@ -2,6 +2,7 @@
 title: Hymn do Boga — św. Grzegorz z Nazjanzu
 category: Modlitwy osobiste
 source: https://dolinamodlitwy.pl/hymn-do-boga-sw-grzegorz-z-nazjanzu/
+rightsStatus: attributed
 ---
 
 O Ty, nad wszystko najwyższy!

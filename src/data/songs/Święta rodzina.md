@@ -2,6 +2,7 @@
 title: Święta rodzina
 category: Pieśni okolicznościowe
 source: https://niezbednik.niedziela.pl/artykul/276/Swieta-rodzina
+rightsStatus: attributed
 ---
 
 1.Tyle dróg jest w ludzkim życiu ,  

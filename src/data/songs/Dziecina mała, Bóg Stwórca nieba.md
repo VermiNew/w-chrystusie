@@ -2,6 +2,7 @@
 title: Dziecina mała, Bóg Stwórca nieba
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/62/Dziecina-mala-Bog-Stworca-nieba
+rightsStatus: attributed
 ---
 
 1. Dziecina mała, Bóg Stwórca nieba  

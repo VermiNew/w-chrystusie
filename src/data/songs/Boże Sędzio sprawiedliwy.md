@@ -2,6 +2,7 @@
 title: Boże Sędzio sprawiedliwy
 category: Pieśni mszalne
 source: https://musicamsacram.pl/spiewnik/511-boze-sedzio-sprawiedliwy
+rightsStatus: attributed
 ---
 
 Na wejście

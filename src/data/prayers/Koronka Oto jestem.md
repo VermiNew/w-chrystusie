@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka „Oto jestem"
 source: https://dolinamodlitwy.pl/koronka-oto-jestem/
+rightsStatus: attributed
 ---
 
 *Koronka do prywatnego odmawiania. Odmawia się na różańcu.*

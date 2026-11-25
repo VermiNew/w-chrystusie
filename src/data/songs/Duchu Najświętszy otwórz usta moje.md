@@ -2,6 +2,7 @@
 title: Duchu Najświętszy otwórz usta moje
 category: Pieśni do Ducha Świętego
 source: https://musicamsacram.pl/spiewnik/304-duchu-najswietszy
+rightsStatus: attributed
 ---
 
 1. Duchu Najświętszy, otwórz usta moje,

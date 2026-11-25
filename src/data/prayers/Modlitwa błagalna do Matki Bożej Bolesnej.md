@@ -2,6 +2,7 @@
 category: Modlitwy maryjne
 title: Modlitwa błagalna do Matki Bożej Bolesnej
 source: https://www.niedziela.pl/artykul/104927
+rightsStatus: attributed
 ---
 
 Upadając w najgłębszej pokorze do stóp Twoich, Matko Bolesna,

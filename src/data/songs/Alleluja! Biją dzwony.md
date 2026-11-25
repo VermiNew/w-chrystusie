@@ -2,6 +2,7 @@
 title: Alleluja! Biją dzwony
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/750-alleluja-bija-dzwony
+rightsStatus: attributed
 ---
 
 1. Alleluja! Biją dzwony,

@@ -2,6 +2,7 @@
 title: Litania do Wszystkich Świętych
 category: Litanie
 source: https://brewiarz.pl/czytelnia/litania_swietych.php3
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

@@ -2,6 +2,7 @@
 title: Wesołą nowinę
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/150/Wesola-nowine
+rightsStatus: attributed
 ---
 
 1. Wesołą nowinę, bracia słuchajcie,  

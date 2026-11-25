@@ -2,6 +2,7 @@
 title: Kiedyś powróci Pan
 category: Pieśni adwentowe
 source: https://niezbednik.niedziela.pl/artykul/36/Kiedys-powroci-Pan
+rightsStatus: attributed
 ---
 
 Kiedyś powróci Pan,  

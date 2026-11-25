@@ -2,6 +2,7 @@
 title: Po upadku człowieka grzesznego
 category: Pieśni adwentowe
 source: https://niezbednik.niedziela.pl/artykul/35/Po-upadku-czlowieka-grzesznego
+rightsStatus: attributed
 ---
 
 Po upadku człowieka grzesznego  

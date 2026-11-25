@@ -2,6 +2,7 @@
 category: Modlitwy za wstawiennictwem świętych
 title: Nowenna do św. Jana Pawła II
 source: https://niezbednik.niedziela.pl/artykul/3240/Nowenna-do-sw-Jana-Pawla-II
+rightsStatus: attributed
 ---
 
 ## Dzień 1

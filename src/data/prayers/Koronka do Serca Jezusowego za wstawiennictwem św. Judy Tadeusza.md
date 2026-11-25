@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Serca Jezusowego za wstawiennictwem św. Judy Tadeusza
 source: https://dolinamodlitwy.pl/koronka-do-serca-jezusowego-za-wstawiennictwem-sw-judy-tadeusza/
+rightsStatus: attributed
 ---
 
 *Koronka do prywatnego odmawiania wedle uznania. Odmawia się na Różańcu.*

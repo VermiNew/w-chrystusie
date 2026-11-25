@@ -2,6 +2,7 @@
 category: Modlitwy osobiste
 title: Modlitwa o uzdrowienie z lęków, obaw i odrzucenia
 source: https://www.biblijni.pl/modlitwy/202_modlitwa_o_uzdrowienie_z_lekow_obaw_i_odrzucenia.html
+rightsStatus: attributed
 ---
 
 Duchu Święty, Duchu mojej duszy…

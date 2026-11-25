@@ -2,6 +2,7 @@
 title: Nowenna do św. Józefa
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-jozefa/
+rightsStatus: attributed
 ---
 
 *Nowenna odmawiana 10–18 marca, przed uroczystością św. Józefa (19 marca).*

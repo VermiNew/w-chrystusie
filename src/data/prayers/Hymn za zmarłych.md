@@ -2,6 +2,7 @@
 title: Hymn za zmarłych
 category: Modlitwy za zmarłych
 source: https://dolinamodlitwy.pl/hymn-za-zmarlych/
+rightsStatus: attributed
 ---
 
 O potężny Królu, Chryste,

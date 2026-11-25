@@ -2,6 +2,7 @@
 title: Kiedy słyszę na obłokach
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/78/Kiedy-slysze-na-oblokach
+rightsStatus: attributed
 ---
 
 Kiedy słyszę na obłokach anielskie śpiewanie,  

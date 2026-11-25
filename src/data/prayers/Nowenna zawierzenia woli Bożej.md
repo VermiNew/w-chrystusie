@@ -2,6 +2,7 @@
 title: Nowenna zawierzenia woli Bożej
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-zawierzenia-woli-bozej-ks-dolindo-ruotolo/
+rightsStatus: attributed
 ---
 
 Nowenna ze słowami ks. Dolindo Ruotolo, mistyka i kandydata na ołtarze.

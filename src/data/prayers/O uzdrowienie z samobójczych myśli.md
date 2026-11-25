@@ -2,6 +2,7 @@
 category: Modlitwy osobiste
 title: O uzdrowienie z samobójczych myśli
 source: https://dolinamodlitwy.pl/o-uzdrowienie-z-samobojczych-mysli/
+rightsStatus: attributed
 ---
 
 *Modlitwy ułożone przez świętą Dymfnę*

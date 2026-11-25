@@ -2,6 +2,7 @@
 title: Już się zbliżył miesiąc maj
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1175/Juz-sie-zblizyl-miesiac-maj
+rightsStatus: attributed
 ---
 
 1.Już się zbliżył miesiąc maj * już rozkwita ziemski kraj, * Dziś swej Matce i swej Pani * Każdy cześć i chwałę daj.

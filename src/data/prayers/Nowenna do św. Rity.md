@@ -2,6 +2,7 @@
 title: Nowenna do św. Rity
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-rity/
+rightsStatus: attributed
 ---
 
 *Nowenna odmawiana 13–21 maja, przed uroczystością św. Rity (22 maja).*

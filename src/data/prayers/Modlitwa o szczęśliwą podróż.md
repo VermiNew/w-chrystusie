@@ -2,6 +2,7 @@
 category: Modlitwy w podróży
 title: Modlitwa o szczęśliwą podróż
 source: https://niezbednik.niedziela.pl/artykul/192/Modlitwa-o-szczesliwa-podroz
+rightsStatus: attributed
 ---
 
 O Boże wielki, który czuwasz nad wszystkim stworzeniem,

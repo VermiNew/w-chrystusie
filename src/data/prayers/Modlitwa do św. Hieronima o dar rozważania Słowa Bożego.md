@@ -2,6 +2,7 @@
 title: Modlitwa do św. Hieronima o dar rozważania Słowa Bożego
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/modlitwa-do-sw-hieronima-o-dar-rozwazania-slowa-bozego/
+rightsStatus: attributed
 ---
 
 Święty Hieronimie, Doktorze Kościoła i strażniku czystości wiary,

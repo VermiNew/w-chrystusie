@@ -2,6 +2,7 @@
 title: Hymn poranny — św. Ambroży
 category: Modlitwy codzienne
 source: https://dolinamodlitwy.pl/hymn-poranny/
+rightsStatus: attributed
 ---
 
 Wieczny Twórco, co swą mocą

@@ -2,6 +2,7 @@
 title: Droga Krzyżowa — zapowiedzi mesjańskie
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/droga-krzyzowa-zapowiedzi-mesjanskie/
+rightsStatus: attributed
 ---
 
 *Ks. Mateusz Szerszeń CSMA*

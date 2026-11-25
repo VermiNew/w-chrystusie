@@ -2,6 +2,7 @@
 title: Boże lud Twój czci przejęty
 category: Pieśni mszalne
 source: https://musicamsacram.pl/spiewnik/109-boze-lud-twoj
+rightsStatus: attributed
 ---
 
 Na wejście

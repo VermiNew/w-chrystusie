@@ -2,6 +2,7 @@
 title: O Józefie coś szukał gospody
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/122/O-Jozefie-cos-szukal-gospody
+rightsStatus: attributed
 ---
 
 1. O Józefie coś szukał gospody  

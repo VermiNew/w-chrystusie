@@ -2,6 +2,7 @@
 category: Modlitwy do Ducha Świętego
 title: Hymn do Ducha Świętego (Veni Creator Spiritus)
 source: https://niezbednik.niedziela.pl/artykul/339/Hymn-do-Ducha-Swietego
+rightsStatus: attributed
 ---
 
 ## Po polsku

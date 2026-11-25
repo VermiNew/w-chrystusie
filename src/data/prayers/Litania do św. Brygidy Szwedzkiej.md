@@ -2,6 +2,7 @@
 title: Litania do św. Brygidy Szwedzkiej, patronki Europy
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-sw-brygidy-patronki-europy/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

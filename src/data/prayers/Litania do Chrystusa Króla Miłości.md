@@ -2,6 +2,7 @@
 title: Litania do Chrystusa Króla Miłości
 category: Litanie
 source: https://dolinamodlitwy.pl/litania-do-chrystusa-krola-milosci/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Christe, eleison. Kyrie, eleison.

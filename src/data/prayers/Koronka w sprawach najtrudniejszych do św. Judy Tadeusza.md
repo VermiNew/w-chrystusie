@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka w sprawach najtrudniejszych do św. Judy Tadeusza
 source: https://dolinamodlitwy.pl/koronka-w-sprawach-najtrudniejszych-do-sw-judy-tadeusza/
+rightsStatus: attributed
 ---
 
 *Wspomnienie św. Judy Tadeusza: 28 października.*

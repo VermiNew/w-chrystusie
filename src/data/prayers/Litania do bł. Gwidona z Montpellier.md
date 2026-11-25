@@ -2,6 +2,7 @@
 title: Litania do bł. Gwidona z Montpellier
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-bl-gwidona-z-montpellier/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

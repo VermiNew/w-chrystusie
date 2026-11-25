@@ -2,6 +2,7 @@
 title: Nie zna śmierci Pan żywota
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/400-nie-zna-smierci-pan-zywota
+rightsStatus: attributed
 ---
 
 1. Nie zna śmierci Pan żywota,

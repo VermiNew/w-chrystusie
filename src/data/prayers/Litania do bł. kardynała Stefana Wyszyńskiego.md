@@ -2,6 +2,7 @@
 title: Litania do bł. kardynała Stefana Wyszyńskiego
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-bl-kardynala-stefana-wyszynskiego/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie eleison.

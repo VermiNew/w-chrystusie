@@ -2,6 +2,7 @@
 title: Litania zawierzenia Matce Bożej Fatimskiej
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/312/Litania-zawierzenia-Matce-Bozej
+rightsStatus: attributed
 ---
 
 Matko Odkupiciela,  

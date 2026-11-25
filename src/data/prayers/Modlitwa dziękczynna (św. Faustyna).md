@@ -2,6 +2,7 @@
 category: Modlitwy osobiste
 title: Modlitwa dziękczynna (św. Faustyna)
 source: https://www.biblijni.pl/modlitwy/23_modlitwa_dziekczynna.html
+rightsStatus: attributed
 ---
 
 O Jezu, Boże wiekuisty, dziękuję Ci za niezliczone łaski i dobrodziejstwa Twoje. Niech każde uderzenie serca mojego będzie nowym hymnem dziękczynienia ku Tobie, Boże. Każda kropla krwi mojej niech krąży dla Ciebie, Panie; dusza moja - to jeden hymn uwielbienia miłosierdzia Twego. Kocham Cię, Boże, dla Ciebie samego *(Dz. 1794)*.

@@ -172,6 +172,38 @@
   animation: text-reveal 0.6s ease both;
 }
 
+.announcement-body p {
+  margin: 0 0 0.9rem;
+}
+
+/* The global reset removes list padding, which hid the bullets and numbers. */
+.announcement-body ul,
+.announcement-body ol {
+  margin: 0 0 1rem;
+  padding-left: 1.4rem;
+}
+
+.announcement-body li {
+  margin-bottom: 0.3rem;
+}
+
+.announcement-body li::marker {
+  color: var(--color-primary);
+}
+
+/* Links were styled like plain text, so readers could not tell they were clickable. */
+.announcement-body a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.announcement-body a:hover {
+  text-decoration-thickness: 2px;
+}
+
 .announcement-body h2 {
   font-family: var(--font-heading);
   margin: 1.5rem 0 0.75rem;

@@ -2,6 +2,7 @@
 title: Rozkwitnęła się lilija
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/141/Rozkwitnela-sie-lilija
+rightsStatus: attributed
 ---
 
 1. Rozkwitnęła się lilija,  

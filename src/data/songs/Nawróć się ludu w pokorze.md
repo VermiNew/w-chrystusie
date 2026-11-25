@@ -2,6 +2,7 @@
 title: Nawróć się ludu w pokorze
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/361-nawroc-sie-ludu-w-pokorze
+rightsStatus: attributed
 ---
 
 1. Nawróć się, ludu, w pokorze,

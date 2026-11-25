@@ -2,6 +2,7 @@
 title: Nowenna do św. Michała Archanioła (wariant II)
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-swietego-michala-archaniola-20-29-wrzesien/
+rightsStatus: attributed
 ---
 
 Nowennę odmawia się 20–28 września (wspomnienie 29 września).

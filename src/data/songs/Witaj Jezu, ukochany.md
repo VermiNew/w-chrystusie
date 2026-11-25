@@ -2,6 +2,7 @@
 title: Witaj Jezu, ukochany
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/152/Witaj-Jezu-ukochany
+rightsStatus: attributed
 ---
 
 1. Witaj Jezu, ukochany  

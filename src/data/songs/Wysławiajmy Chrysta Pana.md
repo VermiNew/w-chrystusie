@@ -2,6 +2,7 @@
 title: Wysławiajmy Chrysta Pana
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/744-wyslawiajmy-chrysta-pana
+rightsStatus: attributed
 ---
 
 1. Wysławiajmy Chrysta Pana,

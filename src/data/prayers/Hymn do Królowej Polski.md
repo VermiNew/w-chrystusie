@@ -2,6 +2,7 @@
 title: Hymn do Królowej Polski
 category: Modlitwy maryjne
 source: https://dolinamodlitwy.pl/hymn-do-krolowej-polski/
+rightsStatus: attributed
 ---
 
 Pani, Królowo naszego narodu,

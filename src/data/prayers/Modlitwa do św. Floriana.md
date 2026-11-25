@@ -2,6 +2,7 @@
 title: Modlitwa do św. Floriana
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/modlitwa-do-sw-floriana/
+rightsStatus: attributed
 ---
 
 Męczenniku święty, święty Florianie, od wieków czczony na polskiej ziemi,

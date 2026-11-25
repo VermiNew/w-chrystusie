@@ -2,6 +2,7 @@
 title: Płynie z serca mego pieśń wzniosła
 category: Pieśni mszalne
 source: https://niezbednik.niedziela.pl/artykul/829/Plynie-z-serca-mego-piesn-wzniosla
+rightsStatus: attributed
 ---
 
 1. Płynie z serca mego pieśń wzniosła,  

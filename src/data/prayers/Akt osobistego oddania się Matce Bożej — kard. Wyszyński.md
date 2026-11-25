@@ -2,6 +2,7 @@
 title: Akt osobistego oddania się Matce Bożej — kard. Wyszyński
 category: Modlitwy maryjne
 source: https://dolinamodlitwy.pl/akt-osobistego-oddania-sie-matce-bozej-prymasa-s-kard-wyszynskiego/
+rightsStatus: attributed
 ---
 
 Święta Maryjo, Bogurodzico Dziewico,

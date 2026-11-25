@@ -2,6 +2,7 @@
 title: Droga Krzyżowa ze św. Janem od Krzyża
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/droga-krzyzowa-ze-sw-janem-od-krzyza/
+rightsStatus: attributed
 ---
 
 **Modlitwa wstępna**

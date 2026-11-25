@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka uwielbienia Chrystusa Króla
 source: https://dolinamodlitwy.pl/koronka-uwielbienia-chrystusa-krola/
+rightsStatus: attributed
 ---
 
 *Koronka do prywatnego odmawiania wedle uznania.*

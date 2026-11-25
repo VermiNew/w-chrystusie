@@ -2,6 +2,7 @@
 title: Przybieżeli do Betlejem
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/135/Przybiezeli-do-Betlejem
+rightsStatus: attributed
 ---
 
 Przybieżeli do Betlejem pasterze,  

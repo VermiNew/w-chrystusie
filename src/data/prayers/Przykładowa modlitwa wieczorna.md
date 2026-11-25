@@ -2,6 +2,7 @@
 category: Modlitwy codzienne
 title: Przykładowa modlitwa wieczorna
 source: https://niezbednik.niedziela.pl/artykul/178/Modlitwa-wieczorna
+rightsStatus: attributed
 ---
 
 W imię Ojca i Syna, i Ducha Świętego. Amen.

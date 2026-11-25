@@ -2,6 +2,7 @@
 title: Duchu mądrości rozświeć myśl
 category: Pieśni do Ducha Świętego
 source: https://musicamsacram.pl/spiewnik/927-duchu-madrosci
+rightsStatus: attributed
 ---
 
 1. Duchu mądrości rozświeć myśl,

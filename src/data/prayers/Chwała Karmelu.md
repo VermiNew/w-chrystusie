@@ -2,6 +2,7 @@
 category: Modlitwy do Matki Bożej Szkaplerznej
 source: https://maryjni.pl/modlitwy-do-matki-bozej-szkaplerznej/
 title: Chwała Karmelu
+rightsStatus: attributed
 ---
 
 ## Modlitwa do Matki Bożej Szkaplerznej za dusze w czyśćcu

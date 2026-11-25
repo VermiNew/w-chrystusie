@@ -2,6 +2,7 @@
 title: Bliskie jest królestwo Boże
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/443/Bliskie-jest-krolestwo-Boze
+rightsStatus: attributed
 ---
 
 Bóg jest Światłością  

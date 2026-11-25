@@ -2,6 +2,7 @@
 title: W słonecznej światłości
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/309/W-slonecznej-swiatlosci
+rightsStatus: attributed
 ---
 
 1. W słonecznej światłości Najświętsza Panna,  

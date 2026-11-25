@@ -2,6 +2,7 @@
 category: Katechizm
 title: Osiem błogosławieństw
 source: https://niezbednik.niedziela.pl/artykul/4838/Osiem-blogoslawienstw
+rightsStatus: attributed
 ---
 
 1. Błogosławieni ubodzy w duchu, albowiem do nich należy królestwo niebieskie.

@@ -2,6 +2,7 @@
 title: Litania do Imienia Maryi
 category: Litanie
 source: https://dolinamodlitwy.pl/litania-do-imienia-maryi/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

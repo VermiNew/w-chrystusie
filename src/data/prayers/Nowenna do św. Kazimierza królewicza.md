@@ -2,6 +2,7 @@
 title: Nowenna do św. Kazimierza królewicza
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-kazimierza-krolewicza-24-luty-3-marca/
+rightsStatus: attributed
 ---
 
 *Nowenna odmawiana 24 lutego – 3 marca, przed uroczystością św. Kazimierza (4 marca).*

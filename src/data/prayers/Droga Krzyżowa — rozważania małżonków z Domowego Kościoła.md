@@ -2,6 +2,7 @@
 title: Droga Krzyżowa — rozważania małżonków z Domowego Kościoła
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/droga-krzyzowa-rozwazania-malzonkow-z-domowego-kosciola/
+rightsStatus: attributed
 ---
 
 Panie Jezu, wchodzimy dziś z Tobą na drogę krzyża — drogę, która prowadzi przez cierpienie, ale rodzi miłość silniejszą niż słabość człowieka. Chcemy spojrzeć na Twoją mękę w świetle naszego życia małżeńskiego i rodzinnego, w naszych codziennych trudnościach, słabościach i nadziejach. Ucz nas na tej drodze prawdziwej miłości: cierpliwej, wiernej i przebaczającej. Niech każda stacja pomoże nam zobaczyć, jak bardzo jesteśmy sobie nawzajem dani przez Ciebie.

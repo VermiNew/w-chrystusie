@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka wyrzeczenia się zła i napełnienia Duchem Świętym
 source: https://dolinamodlitwy.pl/koronka-wyrzeczenia-sie-zla-i-napelnienia-duchem-swietym/
+rightsStatus: attributed
 ---
 
 *Słowami św. Miriam od Jezusa Ukrzyżowanego, Małej Arabki. Do odmawiania na różańcu.*

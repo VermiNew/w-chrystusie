@@ -2,6 +2,7 @@
 title: Ojcze z niebios, Boże, Panie
 category: Pieśni okolicznościowe
 source: https://niezbednik.niedziela.pl/artykul/459/Ojcze-z-niebios-Boze-Panie
+rightsStatus: attributed
 ---
 
 1. Ojcze z niebios, Boże, Panie,  

@@ -2,6 +2,7 @@
 title: Alleluja żyje Pan
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/752-alleluja-zyje-pan
+rightsStatus: attributed
 ---
 
 1. Alleluja, żyje Pan,

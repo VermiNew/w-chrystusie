@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka wyzwolenia
 source: https://dolinamodlitwy.pl/koronka-wyzwolenia/
+rightsStatus: attributed
 ---
 
 *„Jeżeli więc Syn was wyzwoli, wówczas będziecie rzeczywiście wolni" (J 8,36).*

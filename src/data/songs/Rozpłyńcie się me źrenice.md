@@ -2,6 +2,7 @@
 title: Rozpłyńcie się me źrenice
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/810/Rozplyncie-sie-me-zrenice
+rightsStatus: attributed
 ---
 
 1. Rozpłyńcie się me źrenice  

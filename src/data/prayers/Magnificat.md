@@ -2,6 +2,7 @@
 title: Magnificat
 category: Modlitwy codzienne
 source: https://dolinamodlitwy.pl/magnificat/
+rightsStatus: attributed
 ---
 
 WIELBI DUSZA MOJA PANA,

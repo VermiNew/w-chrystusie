@@ -2,6 +2,7 @@
 category: Modlitwy za rodzinę
 title: Modlitwa o błogosławieństwo domowe
 source: https://niezbednik.niedziela.pl/artykul/264/Modlitwa-o-blogoslawienstwo-domowe
+rightsStatus: attributed
 ---
 
 Bóg w Trójcy Świętej Jedyny, niech błogosławi ten dom i wszystkich w nim mieszkających.

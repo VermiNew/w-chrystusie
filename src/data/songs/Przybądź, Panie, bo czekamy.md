@@ -2,6 +2,7 @@
 title: Przybądź, Panie, bo czekamy
 category: Pieśni adwentowe
 source: https://niezbednik.niedziela.pl/artykul/31/Przybadz-Panie-bo-czekamy
+rightsStatus: attributed
 ---
 
 Przybądź, Panie, bo czekamy  
