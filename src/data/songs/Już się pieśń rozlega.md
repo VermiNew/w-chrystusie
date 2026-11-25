@@ -2,6 +2,7 @@
 title: Już się pieśń rozlega
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/73/Juz-sie-piesn-rozlega
+rightsStatus: attributed
 ---
 
 1. Już się pieśń rozlega oto Bóg się rodzi.  

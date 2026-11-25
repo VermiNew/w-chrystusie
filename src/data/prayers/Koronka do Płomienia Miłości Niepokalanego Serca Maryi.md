@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Płomienia Miłości Niepokalanego Serca Maryi
 source: https://dolinamodlitwy.pl/koronka-do-plomienia-milosci-niepokalanego-serca-maryi/
+rightsStatus: attributed
 ---
 
 W imię Ojca i Syna, i Ducha Świętego. Amen. *(5 razy)*

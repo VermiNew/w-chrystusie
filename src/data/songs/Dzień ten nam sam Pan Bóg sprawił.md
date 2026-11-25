@@ -2,6 +2,7 @@
 title: Dzień ten nam sam Pan Bóg sprawił
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/39/Dzien-ten-nam-sam-Pan-Bog-sprawil
+rightsStatus: attributed
 ---
 
 Dzień ten nam sam Pan Bóg sprawił, * Na nim światu się objawił;  

@@ -2,6 +2,7 @@
 title: Nowenna do św. Maksymiliana Marii Kolbego
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-maksymiliana-kolbego-5-13-sierpnia/
+rightsStatus: attributed
 ---
 
 *Nowenna odmawiana 5–13 sierpnia, przed uroczystością św. Maksymiliana Marii Kolbego (14 sierpnia).*

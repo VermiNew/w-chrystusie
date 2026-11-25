@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania za zmarłych
 source: https://niezbednik.niedziela.pl/artykul/287/Litania-za-zmarlych
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

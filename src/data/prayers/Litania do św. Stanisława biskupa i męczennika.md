@@ -2,6 +2,7 @@
 title: Litania do św. Stanisława biskupa i męczennika
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-sw-stanislawa-biskupa-i-meczennika/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

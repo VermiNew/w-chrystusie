@@ -2,6 +2,7 @@
 title: Wstańcie, wstańcie, wstańcie pasterze mili
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/156/Wstancie-wstancie-wstancie-pasterze-mili
+rightsStatus: attributed
 ---
 
 1. Wstańcie, wstańcie, wstańcie pasterze mili  

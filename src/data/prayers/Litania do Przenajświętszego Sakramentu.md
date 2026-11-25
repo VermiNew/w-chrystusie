@@ -2,6 +2,7 @@
 title: Litania do Przenajświętszego Sakramentu
 category: Litanie
 source: https://dolinamodlitwy.pl/litania-do-przenajswietszego-sakramentu/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Christe, eleison. Kyrie, eleison.

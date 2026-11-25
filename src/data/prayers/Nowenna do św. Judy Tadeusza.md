@@ -2,6 +2,7 @@
 title: Nowenna do św. Judy Tadeusza
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-judy-tadeusza/
+rightsStatus: attributed
 ---
 
 *Nowenna odmawiana 19–27 października, przed świętem Apostoła (28 października).*

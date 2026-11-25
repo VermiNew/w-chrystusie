@@ -2,6 +2,7 @@
 title: Akt poświęcenia rodzaju ludzkiego Najświętszemu Sercu Pana Jezusa
 category: Akty i ofiarowania
 source: http://parafia-linia.pl/292-akt-poswiecenia-rodzaju-ludzkiego-najswietszemu-sercu-pana-jezusa-artykul.html
+rightsStatus: attributed
 ---
 
 O Jezu najsłodszy, Odkupicielu rodzaju ludzkiego, wejrzyj na nas, korzących się u stóp Twego ołtarza. Twoją jesteśmy własnością i do Ciebie należeć chcemy. Oto dzisiaj każdy z nas oddaje się dobrowolnie Najświętszemu Sercu Twemu, aby jeszcze ściślej zjednoczyć się z Tobą.

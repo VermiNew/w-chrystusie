@@ -2,6 +2,7 @@
 title: Hymn ku czci Najświętszej Eucharystii — św. Faustyna
 category: Sakramenty
 source: https://dolinamodlitwy.pl/hymn-ku-czci-swietej-eucharystii/
+rightsStatus: attributed
 ---
 
 Jezu, rozkoszy mej duszy, Anielski Chlebie,

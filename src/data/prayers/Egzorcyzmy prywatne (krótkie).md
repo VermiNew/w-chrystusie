@@ -2,6 +2,7 @@
 category: Modlitwy osobiste
 title: Egzorcyzmy prywatne (krótkie)
 source: https://www.biblijni.pl/modlitwy/172_egzorcyzmy_krotkie.html
+rightsStatus: attributed
 ---
 
 Boże, Najwyższy nasz Panie,

@@ -2,6 +2,7 @@
 title: Już pochwalmy Króla tego
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/41/Juz-pochwalmy-Krola-tego
+rightsStatus: attributed
 ---
 
 Już pochwalmy Króla tego,  

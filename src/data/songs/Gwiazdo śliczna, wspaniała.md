@@ -2,6 +2,7 @@
 title: Gwiazdo śliczna, wspaniała
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1170/Gwiazdo-sliczna-wspaniala
+rightsStatus: attributed
 ---
 
 1. Gwiazdo śliczna, wspaniała,  

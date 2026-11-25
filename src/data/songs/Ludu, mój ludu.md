@@ -2,6 +2,7 @@
 title: Ludu, mój ludu
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/784/Ludu-moj-ludu
+rightsStatus: attributed
 ---
 
 1. Ludu mój ludu, cóżem ci uczynił  

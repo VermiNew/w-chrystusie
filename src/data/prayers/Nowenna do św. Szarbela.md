@@ -2,6 +2,7 @@
 title: Nowenna do św. Szarbela
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-szarbela/
+rightsStatus: attributed
 ---
 
 Nowennę do św. Szarbela odmawia się 19–27 lipca (wspomnienie 28 lipca).

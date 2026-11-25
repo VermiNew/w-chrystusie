@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Krwawych Łez Matki Bożej
 source: https://dolinamodlitwy.pl/koronka-do-krwawych-lez-matki-bozej/
+rightsStatus: attributed
 ---
 
 Koronkę odmawia się trzymając w ręku różaniec.

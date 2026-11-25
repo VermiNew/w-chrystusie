@@ -2,6 +2,7 @@
 title: Litania do Anioła Stróża
 category: Modlitwy codzienne
 source: https://dolinamodlitwy.pl/litania-do-aniola-stroza/
+rightsStatus: attributed
 ---
 
 Kyrie elejson. Chryste elejson. Kyrie elejson.

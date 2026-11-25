@@ -2,6 +2,7 @@
 category: Modlitwy do Matki Bożej Szkaplerznej
 source: https://maryjni.pl/modlitwy-do-matki-bozej-szkaplerznej/
 title: Królowa i Ozdoba Karmelu
+rightsStatus: attributed
 ---
 
 Matko Boga, Królowo i Ozdobo Karmelu,

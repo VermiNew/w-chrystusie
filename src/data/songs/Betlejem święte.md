@@ -2,6 +2,7 @@
 title: Betlejem święte
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/47/Betlejem-swiete
+rightsStatus: attributed
 ---
 
 Betlejem święte, miasteczko wsławione,  

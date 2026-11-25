@@ -2,6 +2,7 @@
 category: Modlitwy za rodzinę
 title: Modlitwa matki
 source: https://niezbednik.niedziela.pl/artykul/261/Modlitwa-matki
+rightsStatus: attributed
 ---
 
 O Niepokalana Dziewico, Ty, która jesteś Matką Jezusa i moją,

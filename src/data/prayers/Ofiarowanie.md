@@ -2,6 +2,7 @@
 category: Akty i ofiarowania
 title: Ofiarowanie
 source: https://niezbednik.niedziela.pl/artykul/180/Ofiarowanie
+rightsStatus: attributed
 ---
 
 Myśli, słowa, sprawy moje

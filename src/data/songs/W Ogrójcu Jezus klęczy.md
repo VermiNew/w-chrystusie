@@ -2,6 +2,7 @@
 title: W Ogrójcu Jezus klęczy
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/461/W-Ogrojcu-Jezus-kleczy
+rightsStatus: attributed
 ---
 
 1. W Ogrójcu Jezus klęczy, do Ojca modli się,  

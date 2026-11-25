@@ -2,6 +2,7 @@
 title: Gdy ja sobie to rozważam
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/468/Gdy-ja-sobie-to-rozwazam
+rightsStatus: attributed
 ---
 
 1. Gdy ja sobie to rozważam, mój Jezu,  

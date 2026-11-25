@@ -2,6 +2,7 @@
 title: Kłaniam się Tobie
 category: Pieśni mszalne
 source: https://musicamsacram.pl/spiewnik/317-klaniam-sie-tobie
+rightsStatus: attributed
 ---
 
 1. Kłaniam się Tobie, Przedwieczny Boże,  

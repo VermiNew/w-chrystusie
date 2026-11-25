@@ -2,6 +2,7 @@
 category: Modlitwy codzienne
 title: Nowy dzień dajesz mi, Panie
 source: https://niezbednik.niedziela.pl/artykul/174/Nowy-dzien-dajesz-mi-Panie
+rightsStatus: attributed
 ---
 
 Nowy dzień dajesz mi, Panie, a każdy jest jednakowo ważny przed Tobą.

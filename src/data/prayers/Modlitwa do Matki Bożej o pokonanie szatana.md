@@ -2,6 +2,7 @@
 category: Modlitwy maryjne
 title: Modlitwa do Matki Bożej o pokonanie szatana
 source: https://www.biblijni.pl/modlitwy/171_modlitwa_do_matki_bozej_o_pokonanie_szatana.html
+rightsStatus: attributed
 ---
 
 Dostojna Królowo Niebios, Najwyższa Pani Aniołów,

@@ -2,6 +2,7 @@
 category: Modlitwy do Matki Bożej Szkaplerznej
 source: https://maryjni.pl/modlitwy-do-matki-bozej-szkaplerznej/
 title: Mistrzyni Karmelu i Matka nasza
+rightsStatus: attributed
 ---
 
 Święta Maryjo, Mistrzyni Karmelu i Matko nasza, w dobroci ku nam nieprzebrana, błagamy Cię, przekształć dusze nasze na świątynie Boga żywego, by wielbiąc i miłując Boga, wiernie mu służyły.

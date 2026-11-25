@@ -2,6 +2,7 @@
 category: Akty i ofiarowania
 title: Modlitwa zawierzenia się Bożemu Miłosierdziu
 source: https://niezbednik.niedziela.pl/artykul/200/Modlitwa-zawierzenia-sie-Bozemu
+rightsStatus: attributed
 ---
 
 Jezu Najmiłosierniejszy, mój Panie i Zbawicielu.

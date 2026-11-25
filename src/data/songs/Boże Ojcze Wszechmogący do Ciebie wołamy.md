@@ -2,6 +2,7 @@
 title: Boże Ojcze Wszechmogący do Ciebie wołamy
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/648-boze-ojcze-wszechmogacy
+rightsStatus: attributed
 ---
 
 1. Boże, Ojcze Wszechmogący,

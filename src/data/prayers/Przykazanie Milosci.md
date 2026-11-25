@@ -2,6 +2,7 @@
 category: Katechizm
 title: Przykazanie Miłości
 source: https://niezbednik.niedziela.pl/artykul/183/Przykazanie-Milosci
+rightsStatus: attributed
 ---
 
 Będziesz miłował Pana Boga twego

@@ -2,6 +2,7 @@
 title: Modlitwa poranna VIII
 category: Modlitwy codzienne
 source: https://dolinamodlitwy.pl/modlitwa-poranna-viii/
+rightsStatus: attributed
 ---
 
 Panie i Boże mój, dozwoliłeś mi szczęśliwie powstać

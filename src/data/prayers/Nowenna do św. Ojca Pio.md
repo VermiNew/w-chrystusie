@@ -2,6 +2,7 @@
 title: Nowenna do św. Ojca Pio
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-ojca-pio/
+rightsStatus: attributed
 ---
 
 *Nowenna odmawiana 14–22 września, przed wspomnieniem św. Ojca Pio (23 września).*

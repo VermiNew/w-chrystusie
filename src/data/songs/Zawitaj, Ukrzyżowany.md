@@ -2,6 +2,7 @@
 title: Zawitaj, Ukrzyżowany
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/816/Zawitaj-Ukrzyzowany
+rightsStatus: attributed
 ---
 
 1. Zawitaj, Ukrzyżowany,  

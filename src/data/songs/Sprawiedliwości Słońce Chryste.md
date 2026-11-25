@@ -2,6 +2,7 @@
 title: Sprawiedliwości Słońce Chryste
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/2397-sprawiedliwosci-slonce-chryste
+rightsStatus: attributed
 ---
 
 1. Sprawiedliwości Słońce Chryste,

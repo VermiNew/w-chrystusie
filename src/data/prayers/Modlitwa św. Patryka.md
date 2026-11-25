@@ -2,6 +2,7 @@
 category: Modlitwy osobiste
 title: Modlitwa św. Patryka
 source: https://niezbednik.niedziela.pl/artykul/208/Modlitwa-sw-Patryka
+rightsStatus: attributed
 ---
 
 Chryste, bądź ze mną.

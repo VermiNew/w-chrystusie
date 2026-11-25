@@ -2,6 +2,7 @@
 title: Nowenna do bł. Ignacego Kłopotowskiego
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-bl-ignacego-klopotowskiego/
+rightsStatus: attributed
 ---
 
 Nowennę odmawia się 29 sierpnia – 6 września (wspomnienie 7 września).

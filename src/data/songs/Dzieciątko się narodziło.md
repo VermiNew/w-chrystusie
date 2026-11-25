@@ -2,6 +2,7 @@
 title: Dzieciątko się narodziło
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/61/Dzieciatko-sie-narodzilo
+rightsStatus: attributed
 ---
 
 1. Dzieciątko się narodziło, Wszystek świat uweseliło.  

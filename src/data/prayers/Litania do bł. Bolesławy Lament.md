@@ -2,6 +2,7 @@
 title: Litania do bł. Bolesławy Lament
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-bl-boleslawy/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

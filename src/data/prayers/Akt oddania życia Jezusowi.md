@@ -2,6 +2,7 @@
 category: Akty i ofiarowania
 title: Akt oddania życia Jezusowi
 source: https://niezbednik.niedziela.pl/artykul/206/Akt-oddania-zycia-Jezusowi
+rightsStatus: attributed
 ---
 
 Jezu, dziękuję Ci, że mnie kochasz!

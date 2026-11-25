@@ -2,6 +2,7 @@
 category: Modlitwy codzienne
 title: Suplikacje
 source: https://www.biblijni.pl/modlitwy/17_suplikacje_modlitwa.html
+rightsStatus: attributed
 ---
 
 Święty Boże, Święty mocny,

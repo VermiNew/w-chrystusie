@@ -2,6 +2,7 @@
 title: Akt ofiarowania — wieczorny
 category: Modlitwy codzienne
 source: https://dolinamodlitwy.pl/akt-ofiarowania-wieczorny/
+rightsStatus: attributed
 ---
 
 Uwielbiam Cię, o mój Boże, kocham z całego serca.

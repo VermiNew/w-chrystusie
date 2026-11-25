@@ -2,6 +2,7 @@
 title: Nowenna do św. Brata Alberta
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-brata-alberta-08-czerwca-16-czerwca/
+rightsStatus: attributed
 ---
 
 Nowennę odmawia się 8–16 czerwca (wspomnienie 17 czerwca).

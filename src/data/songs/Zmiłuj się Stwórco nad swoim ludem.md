@@ -2,6 +2,7 @@
 title: Zmiłuj się Stwórco nad swoim ludem
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/513-zmiluj-sie-stworco
+rightsStatus: attributed
 ---
 
 1. Zmiłuj się Stwórco, nad swoim ludem,

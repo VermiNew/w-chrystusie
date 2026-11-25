@@ -2,6 +2,7 @@
 title: Otrzyjcie już łzy płaczący
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/394-otrzyjcie-juz-lzy-placzacy
+rightsStatus: attributed
 ---
 
 1. Otrzyjcie już łzy, płaczący,

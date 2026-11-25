@@ -2,6 +2,7 @@
 title: Nowenna do Matki Bożej Wniebowziętej
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-matki-bozej-przed-uroczystoscia-wniebowziecia-nmp-6-15-sierpnia/
+rightsStatus: attributed
 ---
 
 *Nowenna odmawiana 6–14 sierpnia, przed Uroczystością Wniebowzięcia NMP (15 sierpnia).*

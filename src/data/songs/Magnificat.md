@@ -2,6 +2,7 @@
 title: Magnificat
 category: Pieśni Maryjne
 source: https://pl.wikipedia.org/wiki/Magnificat
+rightsStatus: attributed
 ---
 
 1. Uwielbiaj, duszo moja, sławę Pana mego,  

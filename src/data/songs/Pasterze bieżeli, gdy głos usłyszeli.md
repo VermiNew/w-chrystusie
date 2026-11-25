@@ -2,6 +2,7 @@
 title: Pasterze bieżeli, gdy głos usłyszeli
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/131/Pasterze-biezeli-gdy-glos-uslyszeli
+rightsStatus: attributed
 ---
 
 1. Pasterze bieżeli, gdy głos usłyszeli  

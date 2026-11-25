@@ -2,6 +2,7 @@
 title: Niebiosa, rosę spuście nam z góry
 category: Pieśni adwentowe
 source: https://niezbednik.niedziela.pl/artykul/29/Niebiosa-rose-spuscie-nam-z-gory
+rightsStatus: attributed
 ---
 
 1. Niebiosa, rosę spuśćcie nam z góry;  

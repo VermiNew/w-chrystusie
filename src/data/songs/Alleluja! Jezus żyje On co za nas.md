@@ -2,6 +2,7 @@
 title: Alleluja! Jezus żyje On co za nas
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/742-alleluja-jezus-zyje-on-co-za-nas-zycie-dal
+rightsStatus: attributed
 ---
 
 1. Alleluja! Jezus żyje,

@@ -2,6 +2,7 @@
 title: Gwiazdo złota promienista
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/67/Gwiazdo-zlota-promienista
+rightsStatus: attributed
 ---
 
 1. Gwiazdo złota promienista  

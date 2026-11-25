@@ -2,6 +2,7 @@
 title: Była cicha i piękna jak wiosna
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1157/Byla-cicha-i-piekna-jak-wiosna
+rightsStatus: attributed
 ---
 
 1. Była cicha i piękna jak wiosna,  

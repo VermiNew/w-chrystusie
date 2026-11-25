@@ -2,6 +2,7 @@
 title: Modlitwa o jedność w rodzinach
 category: Modlitwy za rodzinę
 source: https://dolinamodlitwy.pl/modlitwa-o-jednosc-w-rodzinach/
+rightsStatus: attributed
 ---
 
 Błogosławiony Michale Czartoryski, wstawiaj się za rodzinami. Ty sam wzrastałeś wśród licznego rodzeństwa, w rodzinie, której jedność zapewniali kochający się rodzice, którzy dbali szczególnie o kształtowanie charakteru i którzy przekazywali dzieciom wartości duchowe i patriotyczne.

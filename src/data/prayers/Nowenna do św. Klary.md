@@ -2,6 +2,7 @@
 title: Nowenna do św. Klary
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-klary-2-11-sierpnia/
+rightsStatus: attributed
 ---
 
 *Nowenna odmawiana 2–11 sierpnia, przed uroczystością św. Klary (11 sierpnia).*

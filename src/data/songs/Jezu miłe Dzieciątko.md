@@ -2,6 +2,7 @@
 title: Jezu miłe Dzieciątko
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/69/Jezu-mile-Dzieciatko
+rightsStatus: attributed
 ---
 
 1. Jezu, miłe Dzieciątko,  

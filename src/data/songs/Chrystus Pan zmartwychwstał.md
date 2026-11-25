@@ -2,6 +2,7 @@
 title: Chrystus Pan zmartwychwstał
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/749-chrystus-pan-zmartwychwstal
+rightsStatus: attributed
 ---
 
 1. Chrystus Pan zmartwychwstał,

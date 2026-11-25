@@ -2,6 +2,7 @@
 title: Z nieba wysokiego
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/162/Z-nieba-wysokiego
+rightsStatus: attributed
 ---
 
 1. Z nieba wysokiego Bóg zstąpił na ziemię,  

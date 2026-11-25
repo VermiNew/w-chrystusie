@@ -2,6 +2,7 @@
 title: Barka
 category: Pieśni papieskie
 source: https://www.tekstowo.pl/religijne/barka
+rightsStatus: attributed
 ---
 
 1. Pan kiedyś stanął nad brzegiem,  

@@ -2,6 +2,7 @@
 title: Biblijna Droga Krzyżowa
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/biblijna-droga-krzyzowa/
+rightsStatus: attributed
 ---
 
 ## Stacja I: Jezus w Ogrodzie Oliwnym

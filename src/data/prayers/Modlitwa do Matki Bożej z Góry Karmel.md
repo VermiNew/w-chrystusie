@@ -2,6 +2,7 @@
 category: Modlitwy do Matki Bożej Szkaplerznej
 source: https://maryjni.pl/modlitwy-do-matki-bozej-szkaplerznej/
 title: Modlitwa do Matki Bożej z Góry Karmel
+rightsStatus: attributed
 ---
 
 ## Maryja Matka i Pani Karmelu

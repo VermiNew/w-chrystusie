@@ -2,6 +2,7 @@
 title: Nowenna do świętej Faustyny
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-swietej-faustyny-26-wrzesnia-4-pazdziernika/
+rightsStatus: attributed
 ---
 
 *Nowenna odmawiana 26 września – 4 października, przed wspomnieniem świętej Faustyny (5 października).*

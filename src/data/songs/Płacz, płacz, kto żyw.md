@@ -2,6 +2,7 @@
 title: Płacz, płacz, kto żyw
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/805/Placz-placz-kto-zyw
+rightsStatus: attributed
 ---
 
 1. Płacz, płacz, kto żyw  

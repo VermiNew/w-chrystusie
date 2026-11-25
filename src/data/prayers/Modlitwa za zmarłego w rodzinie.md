@@ -2,6 +2,7 @@
 title: Modlitwa za zmarłego w rodzinie
 category: Modlitwy za zmarłych
 source: https://dolinamodlitwy.pl/modlitwa-za-zmarlego-w-rodzinie/
+rightsStatus: attributed
 ---
 
 Najświętszy Panie, wszechmogący Ojcze i wieczny Boże,

@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Najsłodszego Serca Jezusowego
 source: https://dolinamodlitwy.pl/koronka-do-najslodszego-serca-jezusowego/
+rightsStatus: attributed
 ---
 
 *Złota Koronka do Najsłodszego Serca Jezusowego. Odmawia się na koronce zwyczajnej z pięciu dziesiątków złożonej.*

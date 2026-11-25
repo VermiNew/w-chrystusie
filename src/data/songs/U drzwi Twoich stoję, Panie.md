@@ -2,6 +2,7 @@
 title: U drzwi Twoich stoję, Panie
 category: Pieśni mszalne
 source: https://musicamsacram.pl/spiewnik/324-u-drzwi-twoich-stoje-panie
+rightsStatus: attributed
 ---
 
 1. U drzwi Twoich stoję, Panie,  

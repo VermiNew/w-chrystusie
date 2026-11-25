@@ -2,6 +2,7 @@
 category: Katechizm
 title: Akt wiary
 source: https://pl.wikipedia.org/wiki/Akt_wiary
+rightsStatus: attributed
 ---
 
 Wierzę w Ciebie, Boże żywy,

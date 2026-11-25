@@ -2,6 +2,7 @@
 title: Bogurodzica
 category: Pieśni patriotyczne
 source: https://niezbednik.niedziela.pl/artykul/164/Bogurodzica
+rightsStatus: attributed
 ---
 
 1  

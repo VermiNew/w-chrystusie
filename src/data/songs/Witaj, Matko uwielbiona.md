@@ -2,6 +2,7 @@
 title: Witaj, Matko uwielbiona
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/825/Witaj-Matko-uwielbiona
+rightsStatus: attributed
 ---
 
 Witaj, Matko uwielbiona, Żalem serdecznym zraniona, Gdy Symeon sprawiedliwy Przepowiedział miecz straszliwy. O, Maryjo, o, Maryjo, Jak wielka Twa żałość była?

@@ -2,6 +2,7 @@
 category: Akty i ofiarowania
 title: Modlitwa wyrzeczenia
 source: https://niezbednik.niedziela.pl/artykul/2796/Modlitwa-wyrzeczenia
+rightsStatus: attributed
 ---
 
 *SOW/Apostolicum*

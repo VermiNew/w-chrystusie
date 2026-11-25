@@ -2,6 +2,7 @@
 category: Modlitwy za bliźnich
 title: Modlitwa o łaskę pełnienia miłosierdzia względem bliźnich
 source: https://www.biblijni.pl/modlitwy/29_modlitwa_o_laske_pelnienia_milosierdzia_wzgledem_bliznich.html
+rightsStatus: attributed
 ---
 
 Pragnę się cała przemienić w miłosierdzie Twoje i być żywym odbiciem Ciebie, o Panie; niech ten największy przymiot Boga, to jest niezgłębione miłosierdzie Jego, przejdzie przez serce i duszę moją do bliźnich.

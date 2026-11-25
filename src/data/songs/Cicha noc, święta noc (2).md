@@ -2,6 +2,7 @@
 title: Cicha noc, święta noc (2)
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/55/Cicha-noc-swieta-noc-2
+rightsStatus: attributed
 ---
 
 Cicha noc, święta noc,  

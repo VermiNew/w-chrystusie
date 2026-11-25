@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania do św. Rity
 source: https://niezbednik.niedziela.pl/artykul/278/Litania-do-sw-Rity
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

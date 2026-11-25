@@ -2,6 +2,7 @@
 title: Droga Krzyżowa z Aniołami
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/droga-krzyzowa-z-aniolami/
+rightsStatus: attributed
 ---
 
 Panie Jezu w przeddzień swojej męki zgromadziłeś Apostołów na uczcie Eucharystycznej. Pragnąłeś w ten sposób pozostać z nami na zawsze, byśmy w każdej chwili mogli szukać u Ciebie wsparcia i pomocy. Po uczcie, w ogrodzie Oliwnym, poddałeś się woli Ojca. Tam rozpoczęła się Twoja droga przez mękę. Tam też Bóg Ojciec posłał do Ciebie Anioła, aby Cię umacniał i pocieszał w śmiertelnym lęku. Posiadając świadomość wielkości grzechów całej ludzkości, z miłości do nas rozpocząłeś wypełnianie woli Ojca.

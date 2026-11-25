@@ -2,6 +2,7 @@
 title: Akt miłości — św. Jana Marii Vianneya
 category: Akty i ofiarowania
 source: https://dolinamodlitwy.pl/akt-milosci-sw-jana-marii-vianneya/
+rightsStatus: attributed
 ---
 
 Kocham Cię, o Boże nieskończenie godny miłości i wolałbym raczej umrzeć kochając Cię,

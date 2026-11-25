@@ -2,6 +2,7 @@
 title: Dzięki, o Panie, składamy dzięki
 category: Pieśni uwielbienia
 source: https://niezbednik.niedziela.pl/artykul/836/Dzieki-o-Panie-skladamy-dzieki
+rightsStatus: attributed
 ---
 
 ref: Dzięki, o Panie, składamy dzięki,  

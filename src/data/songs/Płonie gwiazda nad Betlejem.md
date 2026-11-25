@@ -2,6 +2,7 @@
 title: Płonie gwiazda nad Betlejem
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/125/Plonie-gwiazda-nad-Betlejem
+rightsStatus: attributed
 ---
 
 1. Płonie gwiazda nad Betlejem  

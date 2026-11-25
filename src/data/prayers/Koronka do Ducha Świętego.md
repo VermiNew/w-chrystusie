@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Ducha Świętego
 source: https://dolinamodlitwy.pl/koronka-do-ducha-swietego-ii/
+rightsStatus: attributed
 ---
 
 **Koronka do Ducha Świętego w intencjach Kościoła i odnowy świata**

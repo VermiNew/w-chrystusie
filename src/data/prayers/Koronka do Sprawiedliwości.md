@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Sprawiedliwości
 source: https://dolinamodlitwy.pl/koronka-do-sprawiedliwosci/
+rightsStatus: attributed
 ---
 
 Odmawiana na różańcu.

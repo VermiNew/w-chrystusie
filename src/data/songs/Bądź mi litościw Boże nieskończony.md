@@ -2,6 +2,7 @@
 title: Bądź mi litościw Boże nieskończony
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/393/Badz-mi-litosciw-Boze-nieskonczony
+rightsStatus: attributed
 ---
 
 Bądź mi litościw Boże nieskończony  

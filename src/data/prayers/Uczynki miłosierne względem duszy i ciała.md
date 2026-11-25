@@ -2,6 +2,7 @@
 category: Katechizm
 title: Uczynki miłosierne względem duszy i ciała
 source: https://www.ampolska.co/art-3583-Uczynki-milosierne-wzgledem-duszy.htm
+rightsStatus: attributed
 ---
 
 ## Uczynki miłosierne względem duszy

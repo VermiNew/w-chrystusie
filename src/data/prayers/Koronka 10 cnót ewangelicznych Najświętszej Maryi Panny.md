@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka 10 cnót ewangelicznych Najświętszej Maryi Panny
 source: https://dolinamodlitwy.pl/koronka-10-cnot-ewangelicznych-najswietszej-maryi-panny/
+rightsStatus: attributed
 ---
 
 *Modlitwa odmawiana przez marianów od czasu aprobaty Zgromadzenia przez papieża Innocentego XII w 1699 r. w oparciu o „Regułę Dziesięciu Cnót NMP". Św. Stanisław Papczyński, założyciel marianów, był pierwszym, który złożył na tę regułę uroczyste śluby zakonne w Warszawie 6 czerwca 1701 r.*

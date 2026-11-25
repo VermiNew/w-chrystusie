@@ -2,6 +2,7 @@
 category: Modlitwy za wstawiennictwem świętych
 title: Modlitwa do św. Charbela
 source: https://modlitwy24.pl/litania-do-sw-charbela/
+rightsStatus: attributed
 ---
 
 Święty ojcze Charbelu,

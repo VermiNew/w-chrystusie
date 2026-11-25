@@ -2,6 +2,7 @@
 title: Bóg się rodzi, moc truchleje
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/50/Bog-sie-rodzi-moc-truchleje
+rightsStatus: attributed
 ---
 
 Bóg się rodzi, moc truchleje,  

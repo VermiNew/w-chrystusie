@@ -2,6 +2,7 @@
 title: Jasnogórska można Pani, Maryjo
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1174/Jasnogorska-mozna-Pani-Maryjo
+rightsStatus: attributed
 ---
 
 1. Jasnogórska można Pani, Maryjo! – Święta Matko Chrystusowa, Maryjo! – My, Twe dzieci i  

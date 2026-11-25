@@ -2,6 +2,7 @@
 title: Pan Jezus już się zbliża
 category: Pieśni mszalne
 source: https://musicamsacram.pl/spiewnik/429-pan-jezus-juz-sie-zbliza
+rightsStatus: attributed
 ---
 
 1. Pan Jezus już się zbliża,  

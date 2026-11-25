@@ -2,6 +2,7 @@
 title: Nowenna przed Świętem Miłosierdzia Bożego
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-przed-swietem-milosierdzia-bozego/
+rightsStatus: attributed
 ---
 
 Nowennę odmawia się od Wielkiego Piątku przez 9 dni, przed Niedzielą Miłosierdzia Bożego (Niedziela Przewodnia).

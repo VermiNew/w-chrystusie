@@ -2,6 +2,7 @@
 title: Modlitwa poranna VI
 category: Modlitwy codzienne
 source: https://dolinamodlitwy.pl/modlitwa-poranna-vi/
+rightsStatus: attributed
 ---
 
 Boże mój! Nie wiem, co mnie dzisiaj spotka.

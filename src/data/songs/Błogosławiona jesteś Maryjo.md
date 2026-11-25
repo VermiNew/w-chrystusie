@@ -2,6 +2,7 @@
 title: Błogosławiona jesteś Maryjo
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1147/Blogoslawiona-jestes-Maryjo
+rightsStatus: attributed
 ---
 
 Błogosławiona jesteś Maryjo  

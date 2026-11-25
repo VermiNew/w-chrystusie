@@ -2,6 +2,7 @@
 title: Do Betlejem pełni radości
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/59/Do-Betlejem-pelni-radosci
+rightsStatus: attributed
 ---
 
 1. Do Betlejem pełni radości,  

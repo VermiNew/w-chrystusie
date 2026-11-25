@@ -2,6 +2,7 @@
 title: Litania do św. Urszuli Ledóchowskiej
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-sw-urszuli-ledochowskiej/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

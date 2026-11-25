@@ -2,6 +2,7 @@
 title: Droga Krzyżowa o czystość
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/droga-krzyzowa-o-czystosc/
+rightsStatus: attributed
 ---
 
 Już prawie dwa tysiące lat upłynęło od chwili, gdy na górze Golgocie postawiono krzyż. Na tym krzyżu umierał wówczas Bóg-Człowiek, Jezus Chrystus. Od tego czasu w stronę Chrystusowego krzyża patrzą wszyscy ludzie wszystkich wieków i narodów widząc Chrystusa — Jedynego Sprawiedliwego, Niewinnego, Czystego, który przetarł Drogę w kierunku nieba, abyśmy idąc ku niebu nie ulegali zmęczeniu i słabości grzechu, ale dźwigali nasze serca na wyżynę nieba.

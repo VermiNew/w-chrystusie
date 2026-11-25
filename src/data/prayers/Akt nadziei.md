@@ -2,6 +2,7 @@
 category: Katechizm
 title: Akt nadziei
 source: http://www.biblijni.pl/modlitwy/14_akt_nadziei.html
+rightsStatus: attributed
 ---
 
 Ufam Tobie, boś Ty wierny,

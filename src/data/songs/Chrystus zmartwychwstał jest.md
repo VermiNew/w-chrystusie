@@ -2,6 +2,7 @@
 title: Chrystus zmartwychwstał jest
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/748-chrystus-zmartwychwstal-jest
+rightsStatus: attributed
 ---
 
 1. Chrystus zmartwychwstał jest,

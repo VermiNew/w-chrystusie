@@ -2,6 +2,7 @@
 title: Nowenna do Trójcy Przenajświętszej za wstawiennictwem o. Wenantego Katarzyńca
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-trojcy-przenajswietszej-za-wstawiennictwem-slugi-bozego-o-wenantego-katarzynca/
+rightsStatus: attributed
 ---
 
 Odmawiać przez 9 kolejnych dni oraz przystąpić do Sakramentu Pojednania i Komunii świętej.

@@ -2,6 +2,7 @@
 title: Zwycięzca śmierci
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/395-zwyciezca-smierci
+rightsStatus: attributed
 ---
 
 1. Zwycięzca śmierci, piekła i szatana,

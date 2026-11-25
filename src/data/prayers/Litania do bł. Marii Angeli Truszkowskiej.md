@@ -2,6 +2,7 @@
 title: Litania do bł. Marii Angeli Truszkowskiej
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-bl-marii-angeli-truszkowskiej-2/
+rightsStatus: attributed
 ---
 
 Panie, zmiłuj się nad nami. Panie, zmiłuj się nad nami.

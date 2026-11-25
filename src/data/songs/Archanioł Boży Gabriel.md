@@ -2,6 +2,7 @@
 title: Archanioł Boży Gabriel
 category: Pieśni adwentowe
 source: https://niezbednik.niedziela.pl/artykul/1/Archaniol-Bozy-Gabriel
+rightsStatus: attributed
 ---
 
 1. Archanioł Boży, Gabriel,  

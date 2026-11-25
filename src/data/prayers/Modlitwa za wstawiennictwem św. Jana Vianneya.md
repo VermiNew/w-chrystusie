@@ -2,6 +2,7 @@
 category: Modlitwy za wstawiennictwem świętych
 title: Modlitwa za wstawiennictwem św. Jana Vianneya
 source: https://parafiazduny.pl/nasze-modlitwy/za-kaplanow
+rightsStatus: attributed
 ---
 
 Wszechmogący i miłosierny Boże,

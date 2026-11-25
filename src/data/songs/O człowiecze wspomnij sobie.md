@@ -2,6 +2,7 @@
 title: O człowiecze wspomnij sobie
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/390/O-czlowiecze-wspomnij-sobie
+rightsStatus: attributed
 ---
 
 O człowiecze wspomnij sobie,  

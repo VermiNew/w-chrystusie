@@ -2,6 +2,7 @@
 title: Attende Domine
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/620-attende-domine
+rightsStatus: attributed
 ---
 
 Ref. Attende Domine,

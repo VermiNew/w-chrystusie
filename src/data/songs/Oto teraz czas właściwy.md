@@ -2,6 +2,7 @@
 title: Oto teraz czas właściwy
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/2424-oto-teraz-czas-wlasciwy
+rightsStatus: attributed
 ---
 
 1. Oto teraz czas właściwy,

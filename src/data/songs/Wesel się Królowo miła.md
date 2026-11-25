@@ -2,6 +2,7 @@
 title: Wesel się Królowo miła
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/746-wesel-sie-krolowo-mila
+rightsStatus: attributed
 ---
 
 1. Wesel się, Królowo miła,

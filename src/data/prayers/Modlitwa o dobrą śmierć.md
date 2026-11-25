@@ -2,6 +2,7 @@
 title: Modlitwa o dobrą śmierć
 category: Modlitwy osobiste
 source: https://dolinamodlitwy.pl/modlitwa-o-dobra-smierc/
+rightsStatus: attributed
 ---
 
 Ojcze ukochany!

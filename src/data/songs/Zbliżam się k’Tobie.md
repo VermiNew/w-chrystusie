@@ -2,6 +2,7 @@
 title: Zbliżam się k’Tobie
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/817/Zblizam-sie-k%E2%80%99Tobie
+rightsStatus: attributed
 ---
 
 Zbliżam się k’Tobie, Jezu mój kochany,  

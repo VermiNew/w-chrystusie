@@ -2,6 +2,7 @@
 title: Jam gościem na tym świecie
 category: Pieśni okolicznościowe
 source: https://niezbednik.niedziela.pl/artykul/455/Jam-gosciem-na-tym-swiecie
+rightsStatus: attributed
 ---
 
 Jam gościem na tym świecie,  

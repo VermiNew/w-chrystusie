@@ -2,6 +2,7 @@
 category: Modlitwy do Ducha Świętego
 title: Modlitwa Jana Pawła II o dary Ducha Świętego
 source: https://niezbednik.niedziela.pl/artykul/197/Modlitwa-II-o-dary-Ducha-Swietego
+rightsStatus: attributed
 ---
 
 *Modlitwy tej Karol Wojtyła nauczył się od swojego ojca i odmawiał ją codziennie do końca życia.*

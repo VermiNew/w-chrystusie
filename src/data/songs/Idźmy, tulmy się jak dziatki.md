@@ -2,6 +2,7 @@
 title: Idźmy, tulmy się jak dziatki
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1172/Idzmy-tulmy-sie-jak-dziatki
+rightsStatus: attributed
 ---
 
 1. Idźmy, tulmy się jak dziatki,  

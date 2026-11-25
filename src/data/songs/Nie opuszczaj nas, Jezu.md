@@ -2,6 +2,7 @@
 title: Nie opuszczaj nas, Jezu
 category: Pieśni okolicznościowe
 source: https://niezbednik.niedziela.pl/artykul/458/Nie-opuszczaj-nas-Jezu
+rightsStatus: attributed
 ---
 
 1. Nie opuszczaj nas,  

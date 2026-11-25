@@ -2,6 +2,7 @@
 title: Przystąpię do ołtarza Bożego
 category: Pieśni mszalne
 source: https://niezbednik.niedziela.pl/artykul/830/Przystapie-do-oltarza-Bozego
+rightsStatus: attributed
 ---
 
 Ref. Przystąpię do ołtarza Bożego,  

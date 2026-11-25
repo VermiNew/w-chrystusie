@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania do Ducha Świętego
 source: https://niezbednik.niedziela.pl/artykul/282/Litania-do-Ducha-Swietego
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

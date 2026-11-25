@@ -2,6 +2,7 @@
 title: Wielbimy Krzyż Twój Panie
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/261-wielbimy-krzyz-twoj-panie
+rightsStatus: attributed
 ---
 
 Ant. Wielbimy Krzyż Twój, Panie Jezu,

@@ -2,6 +2,7 @@
 title: Śliczna Panienka Jezusa zrodziła
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/147/Sliczna-Panienka-Jezusa-zrodzila
+rightsStatus: attributed
 ---
 
 1. Śliczna Panienka Jezusa zrodziła.  

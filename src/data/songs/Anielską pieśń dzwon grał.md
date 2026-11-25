@@ -2,6 +2,7 @@
 title: Anielską pieśń dzwon grał
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1135/Anielska-piesn-dzwon-gral
+rightsStatus: attributed
 ---
 
 Anielską pieśń dzwon grał  

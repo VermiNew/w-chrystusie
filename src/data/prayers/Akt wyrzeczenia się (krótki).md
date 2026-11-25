@@ -2,6 +2,7 @@
 category: Akty i ofiarowania
 title: Akt wyrzeczenia się (krótki)
 source: https://www.biblijni.pl/modlitwy/170_akt_wyrzeczenia_sie.html
+rightsStatus: attributed
 ---
 
 Wyrzekam się Szatana i wszystkich jego dzieł i pokus,

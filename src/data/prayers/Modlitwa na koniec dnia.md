@@ -2,6 +2,7 @@
 title: Modlitwa na koniec dnia
 category: Modlitwy codzienne
 source: https://dolinamodlitwy.pl/modlitwa-na-koniec-dnia/
+rightsStatus: attributed
 ---
 
 Ojcze Niebieski, dziękuję Ci z całego serca za każde dobro, które dziś otrzymałem, i przepraszam za wszystko, czym Ciebie zasmuciłem. Kończąc ten dzień, proszę o błogosławieństwo na nadchodzącą noc i potrzebne łaski, aby dobrze przeżyć to wszystko, co mnie jutro spotka.

@@ -2,6 +2,7 @@
 title: Z pokorą wielką
 category: Pieśni za zmarłych
 source: https://musicamsacram.pl/spiewnik/2408-z-pokora-wielka
+rightsStatus: attributed
 ---
 
 1. Z pokorą wielką, skruszony żalem,

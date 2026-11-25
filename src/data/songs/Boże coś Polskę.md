@@ -2,6 +2,7 @@
 title: Boże coś Polskę
 category: Pieśni patriotyczne
 source: https://niezbednik.niedziela.pl/artykul/167/Boze-cos-Polske
+rightsStatus: attributed
 ---
 
 Boże coś Polskę przez tak długie wieki  

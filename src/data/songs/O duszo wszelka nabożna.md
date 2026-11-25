@@ -2,6 +2,7 @@
 title: O duszo wszelka nabożna
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/786/O-duszo-wszelka-nabozna
+rightsStatus: attributed
 ---
 
 1. O duszo wszelka nabożna, ku miłemu Bogu skłonna, wejrzyj na Syna Bożego, na Zbawiciela naszego.  

@@ -2,6 +2,7 @@
 title: Judzką krainę noc okryła
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/71/Judzka-kraine-noc-okryla
+rightsStatus: attributed
 ---
 
 1. Judzką krainę noc okryła  

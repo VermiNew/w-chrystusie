@@ -2,6 +2,7 @@
 title: Jak szczęśliwa Polska cała
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1173/Jak-szczesliwa-Polska-cala
+rightsStatus: attributed
 ---
 
 1. Jak szczęśliwa Polska cała,  

@@ -2,6 +2,7 @@
 title: Do Ciebie, Panie, pokornie wołamy
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/445/Do-Ciebie-Panie-pokornie-wolamy
+rightsStatus: attributed
 ---
 
 1. Do Ciebie, Panie, pokornie wołamy  

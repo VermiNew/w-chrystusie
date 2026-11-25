@@ -2,6 +2,7 @@
 category: Modlitwy za wstawiennictwem świętych
 title: Modlitwa za wdowy (do św. Rity)
 source: https://niezbednik.niedziela.pl/artykul/268/Modlitwa-za-wdowy-do-sw-Rity
+rightsStatus: attributed
 ---
 
 Święta Rito, przychodzę do Ciebie prosić za wdowy pełne bólu po śmierci tego,

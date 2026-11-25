@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka Jedności
 source: https://dolinamodlitwy.pl/koronka-jednosci/
+rightsStatus: attributed
 ---
 
 Odmawia się na różańcu.

@@ -2,6 +2,7 @@
 category: Modlitwy codzienne
 title: Panie Boże Wszechmogący
 source: https://niezbednik.niedziela.pl/artykul/177/Panie-Boze-Wszechmogacy
+rightsStatus: attributed
 ---
 
 Panie Boże Wszechmogący,

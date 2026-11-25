@@ -2,6 +2,7 @@
 category: Katechizm
 title: Siedem cnót głównych
 source: https://niezbednik.niedziela.pl/artykul/4842/Siedem-cnot-glownych
+rightsStatus: attributed
 ---
 
 1. Pokora

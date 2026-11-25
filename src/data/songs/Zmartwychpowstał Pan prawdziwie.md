@@ -2,6 +2,7 @@
 title: Zmartwychpowstał Pan prawdziwie
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/425-zmartwychpowstal-pan-prawdziwie
+rightsStatus: attributed
 ---
 
 Ref. Zmartwychpowstał Pan prawdziwie.

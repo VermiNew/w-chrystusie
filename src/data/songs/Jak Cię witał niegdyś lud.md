@@ -2,6 +2,7 @@
 title: Jak Cię witał niegdyś lud
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/470/Jak-Cie-wital-niegdys-lud
+rightsStatus: attributed
 ---
 
 1. Jak Cię witał niegdyś lud,  

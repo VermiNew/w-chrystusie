@@ -2,6 +2,7 @@
 title: W czasie świętym, adwentowym
 category: Pieśni adwentowe
 source: https://niezbednik.niedziela.pl/artykul/33/W-czasie-swietym-adwentowym
+rightsStatus: attributed
 ---
 
 W czasie świętym, adwentowym  

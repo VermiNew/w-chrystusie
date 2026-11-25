@@ -2,6 +2,7 @@
 title: Co dzień wieczorem, na odgłos dzwonu
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1161/Co-dzien-wieczorem-na-odglos-dzwonu
+rightsStatus: attributed
 ---
 
 1. Co dzień wieczorem, na odgłos dzwonu

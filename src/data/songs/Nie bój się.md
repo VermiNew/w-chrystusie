@@ -2,6 +2,7 @@
 title: Nie bój się
 category: Pieśni uwielbienia
 source: https://www.tekstowo.pl/religijne/nie-boj-sie-nie-lekaj-sie
+rightsStatus: attributed
 ---
 
 Nie bój się, nie lękaj się,  

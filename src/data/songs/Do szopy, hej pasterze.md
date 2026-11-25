@@ -2,6 +2,7 @@
 title: Do szopy, hej pasterze
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/60/Do-szopy-hej-pasterze
+rightsStatus: attributed
 ---
 
 1. Do szopy, hej pasterze,  

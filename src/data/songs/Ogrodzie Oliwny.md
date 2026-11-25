@@ -2,6 +2,7 @@
 title: Ogrodzie Oliwny
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/789/Ogrodzie-Oliwny
+rightsStatus: attributed
 ---
 
 1. Ogrodzie Oliwny, widok w tobie dziwny?  

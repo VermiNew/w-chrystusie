@@ -2,6 +2,7 @@
 title: O Boże mój o Zbawicielu mój
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/452-o-boze-moj-o-zbawicielu-moj
+rightsStatus: attributed
 ---
 
 Ref. O Boże mój, o Zbawicielu mój.

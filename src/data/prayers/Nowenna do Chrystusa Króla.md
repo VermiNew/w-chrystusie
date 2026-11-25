@@ -2,6 +2,7 @@
 title: Nowenna do Chrystusa Króla
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-chrystusa-krola/
+rightsStatus: attributed
 ---
 
 Nowenna do odprawiania przez 9 dni poprzedzających święto Chrystusa Króla.

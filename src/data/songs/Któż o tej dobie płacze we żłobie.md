@@ -2,6 +2,7 @@
 title: Któż o tej dobie płacze we żłobie
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/79/Ktoz-o-tej-dobie-placze-we-zlobie
+rightsStatus: attributed
 ---
 
 Któż o tej dobie płacze we żłobie! A gdzie, gdzie? W stajni ubogiej, lubo mróz srogi,  

@@ -2,6 +2,7 @@
 title: Dzień to jest dziś wesela
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/64/Dzien-to-jest-dzis-wesela
+rightsStatus: attributed
 ---
 
 1. Dzień to jest dziś wesela królewskiej rodziny,  

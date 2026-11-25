@@ -2,6 +2,7 @@
 category: Modlitwy osobiste
 title: Modlitwy w cierpieniu (św. Faustyna)
 source: https://www.biblijni.pl/modlitwy/31_modlitwy_w_cierpieniu.html
+rightsStatus: attributed
 ---
 
 O Hostio żywa, podtrzymuj mnie w tym wygnaniu, abym mogła iść wiernie śladami Zbawiciela. Nie proszę, abyś mnie, Panie, zdjął z krzyża, ale błagam, abyś mi dał siłę wytrwać na nim. Pragnę być rozciągnięta tak, jak Ty, Jezu, na krzyżu, pragnę wszystkich mąk i boleści, któreś Ty wycierpiał, pragnę wypić kielich goryczy do dna *(Dz. 1484)*.

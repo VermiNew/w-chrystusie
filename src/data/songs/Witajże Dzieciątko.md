@@ -2,6 +2,7 @@
 title: Witajże Dzieciątko
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/154/Witajze-Dzieciatko
+rightsStatus: attributed
 ---
 
 1. Witajże Dzieciątko z Panny narodzone,  

@@ -2,6 +2,7 @@
 category: Katechizm
 title: Akt miłości
 source: https://www.spm.org.pl/akt-wiary-nadziei-milosci-i-zalu
+rightsStatus: attributed
 ---
 
 Boże, choć Cię nie pojmuję,

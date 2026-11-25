@@ -2,6 +2,7 @@
 title: Wesoły nam dzień dziś nastał
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/751-wesoly-nam-dzien-dzis-nastal
+rightsStatus: attributed
 ---
 
 1. Wesoły nam dzień dziś nastał,

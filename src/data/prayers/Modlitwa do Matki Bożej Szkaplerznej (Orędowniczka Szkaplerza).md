@@ -2,6 +2,7 @@
 category: Modlitwy do Matki Bożej Szkaplerznej
 source: https://maryjni.pl/modlitwy-do-matki-bozej-szkaplerznej/
 title: Modlitwa do Matki Bożej Szkaplerznej (Orędowniczka Szkaplerza)
+rightsStatus: attributed
 ---
 
 ## Orędowniczka Szkaplerza świętego

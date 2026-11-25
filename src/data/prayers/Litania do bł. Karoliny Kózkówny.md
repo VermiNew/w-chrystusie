@@ -2,6 +2,7 @@
 title: Litania do bł. Karoliny Kózkówny
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-bl-karoliny-kozkowny/
+rightsStatus: attributed
 ---
 
 Kyrie elejson. Chryste elejson. Kyrie elejson.

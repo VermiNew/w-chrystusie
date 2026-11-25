@@ -2,6 +2,7 @@
 title: Gwiazdo zaranna, śliczna Jutrzenko
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1171/Gwiazdo-zaranna-sliczna-Jutrzenko
+rightsStatus: attributed
 ---
 
 1. Gwiazdo zaranna, śliczna Jutrzenko,  

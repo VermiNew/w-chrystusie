@@ -2,6 +2,7 @@
 title: Nowenna do św. Rafała Archanioła
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-rafala-archaniola-2/
+rightsStatus: attributed
 ---
 
 Nowennę odmawia się 20–28 września (wspomnienie 29 września).

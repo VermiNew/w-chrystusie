@@ -2,6 +2,7 @@
 title: Litania do Świętej Rodziny
 category: Modlitwy za rodzinę
 source: https://dolinamodlitwy.pl/litania-do-sw-rodziny/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

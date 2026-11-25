@@ -2,6 +2,7 @@
 title: Modlitwa za dzieci
 category: Modlitwy za rodzinę
 source: https://dolinamodlitwy.pl/modlitwa-za-dzieci/
+rightsStatus: attributed
 ---
 
 Panie Boże, w dzieciach odkrywamy radość Twojego królestwa:

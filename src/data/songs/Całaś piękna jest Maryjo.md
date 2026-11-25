@@ -2,6 +2,7 @@
 title: Całaś piękna jest Maryjo
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1158/Calas-piekna-jest-Maryjo
+rightsStatus: attributed
 ---
 
 Całaś piękna jest Maryjo!  

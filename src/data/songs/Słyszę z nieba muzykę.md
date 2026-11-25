@@ -2,6 +2,7 @@
 title: Słyszę z nieba muzykę
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/146/Slysze-z-nieba-muzyke
+rightsStatus: attributed
 ---
 
 1. Słyszę z nieba muzykę i anielskie pieśni,  

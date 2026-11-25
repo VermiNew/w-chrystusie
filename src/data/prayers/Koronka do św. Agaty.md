@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do św. Agaty
 source: https://dolinamodlitwy.pl/koronka-do-sw-agaty/
+rightsStatus: attributed
 ---
 
 **Na medaliku ze św. Agatą:**

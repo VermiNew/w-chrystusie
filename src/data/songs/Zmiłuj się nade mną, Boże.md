@@ -2,6 +2,7 @@
 title: Zmiłuj się nade mną, Boże
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/449/Zmiluj-sie-nade-mna-Boze
+rightsStatus: attributed
 ---
 
 1. Zmiłuj się nade mną ,Boże, w łaskawości swojej.  

@@ -2,6 +2,7 @@
 title: U stóp krzyża Matka stała
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/823/U-stop-krzyza-Matka-stala
+rightsStatus: attributed
 ---
 
 U stóp krzyża Matka stała,  

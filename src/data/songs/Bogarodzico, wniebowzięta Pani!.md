@@ -2,6 +2,7 @@
 title: Bogarodzico, wniebowzięta Pani!
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1155/Bogarodzico-wniebowzieta-Pani
+rightsStatus: attributed
 ---
 
 1. Bogarodzico, wniebowzięta Pani!

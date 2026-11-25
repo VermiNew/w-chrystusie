@@ -2,6 +2,7 @@
 title: Rozmyślajmy dziś, wierni chrześcijanie
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/809/Rozmyslajmy-dzis-wierni-chrzescijanie
+rightsStatus: attributed
 ---
 
 1. Rozmyślajmy dziś, wierni chrześcijanie,  

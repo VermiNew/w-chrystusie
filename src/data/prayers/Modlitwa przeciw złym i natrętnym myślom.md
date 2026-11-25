@@ -2,6 +2,7 @@
 category: Modlitwy osobiste
 title: Modlitwa przeciw złym i natrętnym myślom
 source: https://dolinamodlitwy.pl/modlitwa-przeciw-zlym-i-natretnym-myslom/
+rightsStatus: attributed
 ---
 
 O Panie, Jezu Chryste, ukochany mój i Wszechmocny Boże,

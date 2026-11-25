@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Jezusa Zmartwychwstałego
 source: https://dolinamodlitwy.pl/koronka-do-jezusa-zmartwychwstalego/
+rightsStatus: attributed
 ---
 
 *Do odmawiania na różańcu.*

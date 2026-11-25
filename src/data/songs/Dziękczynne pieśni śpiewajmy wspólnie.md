@@ -2,6 +2,7 @@
 title: Dziękczynne pieśni śpiewajmy wspólnie
 category: Pieśni uwielbienia
 source: https://musicamsacram.pl/spiewnik/38-dziekczynne-piesni-spiewajmy-wspolnie
+rightsStatus: attributed
 ---
 
 1. Dziękczynne pieśni śpiewajmy wspólnie

@@ -2,6 +2,7 @@
 title: Droga Krzyżowa ze św. Teresą od Jezusa
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/droga-krzyzowa-ze-sw-teresa-od-jezusa/
+rightsStatus: attributed
 ---
 
 **Modlitwa wstępna**

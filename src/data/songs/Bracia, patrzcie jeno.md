@@ -2,6 +2,7 @@
 title: Bracia, patrzcie jeno
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/52/Bracia-patrzcie-jeno
+rightsStatus: attributed
 ---
 
 Bracia, patrzcie jeno  

@@ -2,6 +2,7 @@
 title: Narodził się Jezus w stajni ubogi
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/87/Narodzil-sie-Jezus-w-stajni-ubogi
+rightsStatus: attributed
 ---
 
 1. Narodził się Jezus w stajni ubogi,  

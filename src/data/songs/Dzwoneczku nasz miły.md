@@ -2,6 +2,7 @@
 title: Dzwoneczku nasz miły
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1167/Dzwoneczku-nasz-mily
+rightsStatus: attributed
 ---
 
 Dzwoneczku nasz miły,  

@@ -2,6 +2,7 @@
 title: Nowenna Pompejańska
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-pompejanska/
+rightsStatus: attributed
 ---
 
 *Nowenna pompejańska nazywana jest modlitwą „nie do odparcia". Trwa 54 dni: 27 dni nowenny błagalnej i 27 dni nowenny dziękczynnej. Każdego dnia odmawia się cały różaniec (trzy części: radosną, bolesną i chwalebną).*

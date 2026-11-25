@@ -2,6 +2,7 @@
 title: Miserere mei Deus
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/2103-miserere-mei-deus
+rightsStatus: attributed
 ---
 
 Ant. Miserere mei, Deus,

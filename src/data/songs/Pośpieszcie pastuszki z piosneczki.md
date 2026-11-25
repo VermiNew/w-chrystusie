@@ -2,6 +2,7 @@
 title: Pośpieszcie pastuszki z piosneczki
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/126/Pospieszcie-pastuszki-z-piosneczki
+rightsStatus: attributed
 ---
 
 1. Pośpieszcie pastuszki z piosneczki!  

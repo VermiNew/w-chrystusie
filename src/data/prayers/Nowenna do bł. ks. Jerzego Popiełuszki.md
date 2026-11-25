@@ -2,6 +2,7 @@
 title: Nowenna do bł. ks. Jerzego Popiełuszki
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-bl-ks-jerzego-popieluszki/
+rightsStatus: attributed
 ---
 
 Nowennę odmawia się 10–18 października (wspomnienie 19 października).

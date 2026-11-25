@@ -2,6 +2,7 @@
 title: Litania do Miłosierdzia Bożego
 category: Litanie
 source: https://dolinamodlitwy.pl/litania-do-milosierdzia-bozego/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Christe, eleison. Kyrie, eleison.

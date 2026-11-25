@@ -2,6 +2,7 @@
 title: Panie, Ty widzisz, krzyża się nie lękam
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/804/Panie-Ty-widzisz-krzyza-sie-nie-lekam
+rightsStatus: attributed
 ---
 
 1. Panie, Ty widzisz, krzyża się nie lękam  

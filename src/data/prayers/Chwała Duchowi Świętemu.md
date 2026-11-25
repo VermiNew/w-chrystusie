@@ -2,6 +2,7 @@
 category: Modlitwy do Ducha Świętego
 title: Chwała Duchowi Świętemu
 source: https://dolinamodlitwy.pl/chwala-duchowi-swietemu/
+rightsStatus: attributed
 ---
 
 Chwała Tobie, Panie potężny,

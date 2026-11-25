@@ -2,6 +2,7 @@
 title: Panie, co mieszkasz na wysokim niebie
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/392/Panie-co-mieszkasz-na-wysokim-niebie
+rightsStatus: attributed
 ---
 
 **WEJŚCIE**  

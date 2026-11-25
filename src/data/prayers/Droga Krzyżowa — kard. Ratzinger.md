@@ -2,6 +2,7 @@
 title: Droga Krzyżowa — kard. Ratzinger
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/droga-krzyzowa-kard-ratzinger/
+rightsStatus: attributed
 ---
 
 ## Modlitwa wstępna

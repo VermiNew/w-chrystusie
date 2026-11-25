@@ -2,6 +2,7 @@
 title: Biedny, kto Ciebie nie zna od powicia
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1142/Biedny-kto-Ciebie-nie-zna-od-powicia
+rightsStatus: attributed
 ---
 
 Biedny, kto Ciebie nie zna od powicia  

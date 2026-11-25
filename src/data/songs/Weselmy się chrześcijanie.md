@@ -2,6 +2,7 @@
 title: Weselmy się chrześcijanie
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/753-weselmy-sie-chrzescijanie
+rightsStatus: attributed
 ---
 
 Na wejście

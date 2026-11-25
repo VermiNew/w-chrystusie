@@ -2,6 +2,7 @@
 title: Nowenna do św. Stanisława Papczyńskiego
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-o-stanislawa-papczynskiego-9-17-maja/
+rightsStatus: attributed
 ---
 
 Nowennę odmawia się 9–17 maja (wspomnienie 18 maja).

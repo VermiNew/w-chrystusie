@@ -2,6 +2,7 @@
 title: Noc ciemna i zimna
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/120/Noc-ciemna-i-zimna
+rightsStatus: attributed
 ---
 
 1. Noc ciemna i zimna rozlała się w krąg,  

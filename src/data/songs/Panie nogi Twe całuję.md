@@ -2,6 +2,7 @@
 title: Panie nogi Twe całuję
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/803/Panie-nogi-Twe-caluje
+rightsStatus: attributed
 ---
 
 1. Panie, nogi Twe całuję  

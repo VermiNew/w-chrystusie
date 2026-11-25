@@ -2,6 +2,7 @@
 title: Niech błogosławiony będzie Bóg i Ojciec
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/867-niech-blogoslawiony-bedzie-bog-i-ojciec
+rightsStatus: attributed
 ---
 
 Ref. Niech błogosławiony będzie Bóg i Ojciec

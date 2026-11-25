@@ -2,6 +2,7 @@
 category: Modlitwy za wstawiennictwem świętych
 title: Litania do św. Charbela
 source: https://modlitwy24.pl/litania-do-sw-charbela/
+rightsStatus: attributed
 ---
 
 Kyrie elejson, Chryste elejson, Kyrie elejson.

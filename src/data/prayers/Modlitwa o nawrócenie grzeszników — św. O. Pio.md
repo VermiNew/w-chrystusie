@@ -2,6 +2,7 @@
 title: Modlitwa o nawrócenie grzeszników — św. O. Pio
 category: Modlitwy za bliźnich
 source: https://dolinamodlitwy.pl/modlitwa-o-nawrocenie-grzesznikow-sw-o-pio/
+rightsStatus: attributed
 ---
 
 Pokornie proszę Cię, Panie, abyś ze względu na Twoją dobroć i miłosierdzie

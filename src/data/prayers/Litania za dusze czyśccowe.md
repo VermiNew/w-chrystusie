@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania za dusze czyśćcowe
 source: https://niezbednik.niedziela.pl/artykul/2818/Litania-za-dusze-czysccowe
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

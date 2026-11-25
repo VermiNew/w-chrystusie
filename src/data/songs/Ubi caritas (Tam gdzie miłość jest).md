@@ -2,6 +2,7 @@
 title: Ubi caritas (Tam gdzie miłość jest)
 source: https://wdobrymtonie.info/piesn/ubi-caritas-tam-gdzie-milosc-jest/
 category: Pieśni uwielbienia
+rightsStatus: attributed
 ---
 
 **Ubi caritas** et amor

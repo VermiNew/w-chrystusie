@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do św. Faustyny o wierne spełnianie Woli Bożej
 source: https://dolinamodlitwy.pl/koronka-do-sw-s-faustyny-kowalskiej-o-wierne-spelnianie-woli-bozej/
+rightsStatus: attributed
 ---
 
 *Odmawia się na różańcu. Wspomnienie św. Faustyny: 5 października.*

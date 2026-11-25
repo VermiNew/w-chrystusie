@@ -2,6 +2,7 @@
 title: Usłysz Panie dobrotliwy
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/448/Uslysz-Panie-dobrotliwy
+rightsStatus: attributed
 ---
 
 Usłysz Panie dobrotliwy  

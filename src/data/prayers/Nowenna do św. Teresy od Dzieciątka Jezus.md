@@ -2,6 +2,7 @@
 title: Nowenna do św. Teresy od Dzieciątka Jezus
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-teresy-od-dzieciatka-jezus-22-30-wrzesnia/
+rightsStatus: attributed
 ---
 
 *Nowenna odmawiana 22–30 września, przed uroczystością św. Teresy od Dzieciątka Jezus (1 października).*

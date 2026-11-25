@@ -2,6 +2,7 @@
 title: Dziękujemy Ci Ojcze nasz
 category: Pieśni uwielbienia
 source: https://musicamsacram.pl/spiewnik/123-dziekujemy-ci-ojcze-nasz
+rightsStatus: attributed
 ---
 
 1. Dziękujemy Ci, Ojcze nasz,

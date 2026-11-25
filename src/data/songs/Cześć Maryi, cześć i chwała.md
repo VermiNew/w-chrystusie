@@ -2,6 +2,7 @@
 title: Cześć Maryi, cześć i chwała
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1162/Czesc-Maryi-czesc-i-chwala
+rightsStatus: attributed
 ---
 
 Cześć Maryi, cześć i chwała,  

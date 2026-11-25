@@ -2,6 +2,7 @@
 category: Katechizm
 title: Grzechy wołające o pomstę do nieba
 source: https://www.ordo.pallotyni.pl/index.php/maly-katechizm/1061-grzechy-wolajace-o-pomste-do-nieba
+rightsStatus: attributed
 ---
 
 1. Umyślne zabójstwo  

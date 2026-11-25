@@ -2,6 +2,7 @@
 category: Modlitwy o zdrowie
 title: Modlitwa o zdrowie dla bliskich
 source: https://www.spm.org.pl/modlitwy-o-zdrowie
+rightsStatus: attributed
 ---
 
 Boże Wszechmogący, zwracam się do Ciebie z głęboką pokorą i miłością,

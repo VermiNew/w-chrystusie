@@ -2,6 +2,7 @@
 title: Rodziną Bożą jesteśmy
 category: Pieśni okolicznościowe
 source: https://niezbednik.niedziela.pl/artykul/277/Rodzina-Boza-jestesmy
+rightsStatus: attributed
 ---
 
 Rodziną Bożą jesteśmy;  

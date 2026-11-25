@@ -2,6 +2,7 @@
 category: Sakramenty
 title: Duszo Chrystusowa
 source: https://dolinamodlitwy.pl/duszo-chrystusowa/
+rightsStatus: attributed
 ---
 
 Duszo Chrystusowa, uświęć mnie.

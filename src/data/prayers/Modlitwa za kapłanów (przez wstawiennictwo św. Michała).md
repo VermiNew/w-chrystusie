@@ -2,6 +2,7 @@
 category: Modlitwy za bliźnich
 title: Modlitwa za kapłanów (przez wstawiennictwo św. Michała)
 source: https://parafiazduny.pl/nasze-modlitwy/za-kaplanow
+rightsStatus: attributed
 ---
 
 Boże, Ojcze Wszechmogący,

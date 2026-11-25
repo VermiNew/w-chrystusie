@@ -2,6 +2,7 @@
 title: Niechaj z nami będzie Pan
 category: Pieśni mszalne
 source: https://niezbednik.niedziela.pl/artykul/832/Niechaj-z-nami-bedzie-Pan
+rightsStatus: attributed
 ---
 
 1. Niechaj z nami będzie Pan, Alleluja!  

@@ -2,6 +2,7 @@
 title: Cierniami uwieńczoną
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/465/Cierniami-uwienczona
+rightsStatus: attributed
 ---
 
 1. Cierniami uwieńczoną głębokich pełno ran,  

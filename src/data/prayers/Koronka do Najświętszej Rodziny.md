@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Najświętszej Rodziny
 source: https://dolinamodlitwy.pl/koronka-do-najswietszej-rodziny/
+rightsStatus: attributed
 ---
 
 Odmawia się na różańcu.

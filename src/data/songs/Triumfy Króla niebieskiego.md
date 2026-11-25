@@ -2,6 +2,7 @@
 title: Triumfy Króla niebieskiego
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/148/Triumfy-Krola-niebieskiego
+rightsStatus: attributed
 ---
 
 Triumfy Króla niebieskiego  

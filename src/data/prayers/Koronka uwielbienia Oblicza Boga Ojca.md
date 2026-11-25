@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka uwielbienia Oblicza Boga Ojca
 source: https://dolinamodlitwy.pl/koronka-uwielbienia-oblicza-boga-ojca/
+rightsStatus: attributed
 ---
 
 *Odmawia się na Różańcu.*

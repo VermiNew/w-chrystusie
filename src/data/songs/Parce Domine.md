@@ -2,6 +2,7 @@
 title: Parce Domine
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/637-parce-domine
+rightsStatus: attributed
 ---
 
 Ref. Parce, Domine,

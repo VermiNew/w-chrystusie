@@ -2,6 +2,7 @@
 title: Litania do Dzieciątka Jezus
 category: Litanie
 source: https://dolinamodlitwy.pl/litania-do-dzieciatka-jezus/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

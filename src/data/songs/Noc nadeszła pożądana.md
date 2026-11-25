@@ -2,6 +2,7 @@
 title: Noc nadeszła pożądana
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/38/Noc-nadeszla-pozadana
+rightsStatus: attributed
 ---
 
 Noc nadeszła pożądana,  

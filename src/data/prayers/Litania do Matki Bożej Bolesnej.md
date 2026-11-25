@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania do Matki Bożej Bolesnej
 source: https://www.niedziela.pl/artykul/104927
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

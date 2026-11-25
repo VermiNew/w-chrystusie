@@ -2,6 +2,7 @@
 category: Modlitwy osobiste
 title: Modlitwa o. Tomasza Mertona
 source: https://niezbednik.niedziela.pl/artykul/210/Modlitwa-o-Tomasza-Mertona
+rightsStatus: attributed
 ---
 
 Panie, weź nareszcie życie moje w swoje ręce

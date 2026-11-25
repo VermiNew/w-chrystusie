@@ -2,6 +2,7 @@
 title: Modlitwa poranna III
 category: Modlitwy codzienne
 source: https://dolinamodlitwy.pl/modlitwa-poranna-iii/
+rightsStatus: attributed
 ---
 
 Panie, z serca Ci dziękuję

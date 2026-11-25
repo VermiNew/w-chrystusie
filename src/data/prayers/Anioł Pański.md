@@ -2,6 +2,7 @@
 category: Modlitwy maryjne
 title: Anioł Pański
 source: https://modlitwy24.pl/aniol-panski/
+rightsStatus: attributed
 ---
 
 *Odmawiana o wschodzie, południu i zachodzie słońca. Całą modlitwę odmawiamy w następujący sposób:*

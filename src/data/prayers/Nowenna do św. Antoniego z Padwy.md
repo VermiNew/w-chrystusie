@@ -2,6 +2,7 @@
 title: Nowenna do św. Antoniego z Padwy
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-antoniego-z-padwy/
+rightsStatus: attributed
 ---
 
 *Nowenna odmawiana 4–12 czerwca, przed uroczystością św. Antoniego (13 czerwca).*

@@ -2,6 +2,7 @@
 title: Cóż to proszę za nowina
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/58/Coz-to-prosze-za-nowina
+rightsStatus: attributed
 ---
 
 Cóż to proszę za nowina, narodził się Bóg-Dziecina!  

@@ -2,6 +2,7 @@
 title: Boscy posłowie, o święci Anieli
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/48/Boscy-poslowie-o-swieci-Anieli
+rightsStatus: attributed
 ---
 
 Boscy posłowie, o święci Anieli  

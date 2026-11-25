@@ -2,6 +2,7 @@
 title: Anioł pasterzom mówił
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/45/Aniol-pasterzom-mowil
+rightsStatus: attributed
 ---
 
 Anioł pasterzom mówił:  

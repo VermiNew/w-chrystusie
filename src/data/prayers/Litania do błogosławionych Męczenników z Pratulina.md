@@ -2,6 +2,7 @@
 title: Litania do błogosławionych Męczenników z Pratulina
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-blogoslawionych-meczennikow-z-pratulina/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

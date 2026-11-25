@@ -2,6 +2,7 @@
 title: Modlitwa poranna VII
 category: Modlitwy codzienne
 source: https://dolinamodlitwy.pl/modlitwa-poranna-vii/
+rightsStatus: attributed
 ---
 
 Wszechmogący Ojcze, który jesteś w niebie,

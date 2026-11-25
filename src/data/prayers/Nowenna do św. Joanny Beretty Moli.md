@@ -2,6 +2,7 @@
 title: Nowenna do św. Joanny Beretty Moli
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-joanny-beretty-mola-19-27-kwietnia/
+rightsStatus: attributed
 ---
 
 Nowennę odmawia się 19–27 kwietnia (wspomnienie 28 kwietnia).

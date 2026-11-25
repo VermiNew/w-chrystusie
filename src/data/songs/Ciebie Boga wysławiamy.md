@@ -2,6 +2,7 @@
 title: Ciebie, Boga, wysławiamy
 category: Pieśni uwielbienia
 source: https://musicamsacram.pl/spiewnik/187-ciebie-boga-wyslawiamy
+rightsStatus: attributed
 ---
 
 1. Ciebie, Boga, wysławiamy,

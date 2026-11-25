@@ -2,6 +2,7 @@
 title: Hej w dzień narodzenia
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/68/Hej-w-dzien-narodzenia
+rightsStatus: attributed
 ---
 
 1. Hej w dzień narodzenia Syna Jedynego  

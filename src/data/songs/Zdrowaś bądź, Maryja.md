@@ -2,6 +2,7 @@
 title: Zdrowaś bądź, Maryja
 category: Pieśni adwentowe
 source: https://niezbednik.niedziela.pl/artykul/34/Zdrowas-badz-Maryja
+rightsStatus: attributed
 ---
 
 Zdrowaś bądź, Maryja  

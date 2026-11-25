@@ -2,6 +2,7 @@
 title: Boże coś przyrzekł że me grzechy
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/634-boze-cos-przyrzekl
+rightsStatus: attributed
 ---
 
 1. Boże, coś przyrzekł, że choć me grzechy

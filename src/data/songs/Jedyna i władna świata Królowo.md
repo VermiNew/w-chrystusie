@@ -2,6 +2,7 @@
 title: Jedyna i władna świata Królowo
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1176/Jedyna-i-wladna-swiata-Krolowo
+rightsStatus: attributed
 ---
 
 Jedyna i władna świata Królowo, Narodów Najświętsza Monarchini.  

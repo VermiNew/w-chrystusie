@@ -2,6 +2,7 @@
 title: Nowenna do Matki Bożej rozwiązującej węzły
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-matki-bozej-rozwi%c4%85zujacej-wezly/
+rightsStatus: attributed
 ---
 
 ## Instrukcja na każdy dzień nowenny

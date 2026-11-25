@@ -2,6 +2,7 @@
 category: Modlitwy za bliźnich
 title: Modlitwa za ubogich świata
 source: https://niezbednik.niedziela.pl/artykul/5482/Modlitwa-za-ubogich-swiata
+rightsStatus: attributed
 ---
 
 *Raoul Follereau / tłum. Kazimierz Szałata*

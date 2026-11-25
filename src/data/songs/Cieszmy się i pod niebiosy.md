@@ -2,6 +2,7 @@
 title: Cieszmy się i pod niebiosy
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/57/Cieszmy-sie-i-pod-niebiosy
+rightsStatus: attributed
 ---
 
 Cieszmy się i pod niebiosy  

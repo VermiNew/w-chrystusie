@@ -2,6 +2,7 @@
 title: Modlitwa poranna — Kard. Suenens
 category: Modlitwy codzienne
 source: https://dolinamodlitwy.pl/modlitwa-poranna-kard-suenens/
+rightsStatus: attributed
 ---
 
 Panie, w ciszy wschodzącego dnia,

@@ -2,6 +2,7 @@
 category: Koronki
 title: Mała Koronka do Świętej Rodziny
 source: https://dolinamodlitwy.pl/mala-koronka-do-swietej-rodziny/
+rightsStatus: attributed
 ---
 
 W Imię Ojca, i Syna, i Ducha Świętego. Amen.

@@ -2,6 +2,7 @@
 title: Jezusa narodzonego wszyscy witajmy
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/153/Jezusa-narodzonego-wszyscy-witajmy
+rightsStatus: attributed
 ---
 
 Jezusa narodzonego wszyscy witajmy,  

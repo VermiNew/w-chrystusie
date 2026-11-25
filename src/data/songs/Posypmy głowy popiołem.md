@@ -2,6 +2,7 @@
 title: Posypmy głowy popiołem
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/391/Posypmy-glowy-popiolem
+rightsStatus: attributed
 ---
 
 Posypmy głowy popiołem,  

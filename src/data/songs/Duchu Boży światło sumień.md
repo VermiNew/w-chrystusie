@@ -2,6 +2,7 @@
 title: Duchu Boży światło sumień
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/2430-duchu-bozy-swiatlo-sumien
+rightsStatus: attributed
 ---
 
 1. Duchu Boży, światło sumień,

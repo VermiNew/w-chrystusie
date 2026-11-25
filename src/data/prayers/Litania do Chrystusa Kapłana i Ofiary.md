@@ -2,6 +2,7 @@
 category: Modlitwy za bliźnich
 title: Litania do Chrystusa Kapłana i Ofiary
 source: https://parafiazduny.pl/nasze-modlitwy/za-kaplanow
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

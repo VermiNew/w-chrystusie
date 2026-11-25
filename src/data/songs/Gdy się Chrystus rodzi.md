@@ -2,6 +2,7 @@
 title: Gdy się Chrystus rodzi
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/65/Gdy-sie-Chrystus-rodzi
+rightsStatus: attributed
 ---
 
 Gdy się Chrystus rodzi  

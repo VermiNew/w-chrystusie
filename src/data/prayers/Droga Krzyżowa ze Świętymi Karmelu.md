@@ -2,6 +2,7 @@
 title: Droga Krzyżowa ze Świętymi Karmelu
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/droga-krzyzowa-ze-swietymi-karmelu/
+rightsStatus: attributed
 ---
 
 Panie Jezu, nasz Zbawicielu, pragniemy podjąć rozważanie Twojej męki. Chcemy, aby w tym podążaniu za Tobą, obciążonym krzyżem, towarzyszyli nam święci, błogosławieni i kandydaci na ołtarze z Rodziny Karmelu, którzy w tym życiu, zgodnie z nakazem swej reguły zakonnej, „żyli w posłuszeństwie Tobie samemu i Tobie służyli z czystego serca i prawego sumienia". Ich życie ukazuje nam, jak w swej drodze na Górę Karmel jednoczyli się z Twoim chwalebnym krzyżem, a dzisiaj cieszą się Twoim na krzyżu zwycięstwem.

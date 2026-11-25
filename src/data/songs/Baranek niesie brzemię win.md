@@ -2,6 +2,7 @@
 title: Baranek niesie brzemię win
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/464/Baranek-niesie-brzemie-win
+rightsStatus: attributed
 ---
 
 1. Baranek niesie brzemię win i złości świata całego Ach, każdy zły, bezbożny czyn, przygniata plecy Jego. Omdlewa w drodze z braku sił, On co u Ojca wiecznie był Wyrzeka się radości, Przybiera sobie hańby znaki, krzyż, rany, śmierć, i mówi tak: "Chcę chętnie znieść te złości".

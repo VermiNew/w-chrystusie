@@ -2,6 +2,7 @@
 title: Wiwat dzisiaj Boskiej Istności
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/155/Wiwat-dzisiaj-Boskiej-Istnosci
+rightsStatus: attributed
 ---
 
 1. Wiwat dzisiaj Boskiej Istności  

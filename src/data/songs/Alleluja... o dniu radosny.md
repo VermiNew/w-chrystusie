@@ -2,6 +2,7 @@
 title: Alleluja... o dniu radosny
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/757-alleluja-o-dniu-radosny
+rightsStatus: attributed
 ---
 
 Refren: Alleluja, alleluja, alleluja!

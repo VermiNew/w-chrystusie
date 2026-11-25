@@ -2,6 +2,7 @@
 title: Litania do bł. Michała Czartoryskiego OP
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-bl-michala-czartoryskiego-op/
+rightsStatus: attributed
 ---
 
 Kyrie, eleison. Chryste, eleison. Kyrie, eleison.

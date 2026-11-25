@@ -2,6 +2,7 @@
 title: Litania do bł. Michała Sopoćki
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-bl-michala-sopocki/
+rightsStatus: attributed
 ---
 
 Kyrie elejson. Chryste elejson. Kyrie elejson.

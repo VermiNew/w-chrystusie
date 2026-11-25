@@ -2,6 +2,7 @@
 title: Ojcze Niebieski — modlitwa wieczorna
 category: Modlitwy codzienne
 source: https://dolinamodlitwy.pl/ojcze-niebieski-modlitwa-wieczorna/
+rightsStatus: attributed
 ---
 
 Gdy dzień dobiega końca, staję przed Tobą w pokorze. Wnet ogarnie mnie noc. Jeżeli w czasie dnia choć trochę podobałem się Tobie, jeśli zrobiłem coś dobrego dla bliźnich, jeśli z cierpliwością znosiłem cierpienie, dziękuję Ci za to, Panie.

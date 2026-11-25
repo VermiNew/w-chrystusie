@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Najświętszego Serca Pana Jezusa
 source: https://dolinamodlitwy.pl/koronka-do-najswietszego-serca-pana-jezusa/
+rightsStatus: attributed
 ---
 
 **1.** O mój Jezu, Ty powiedziałeś: „Zaprawdę powiadam wam: proście, a otrzymacie, szukajcie, a znajdziecie, pukajcie, a będzie wam otworzone”. Wysłuchaj mnie, gdyż pukam, szukam i proszę o łaskę...

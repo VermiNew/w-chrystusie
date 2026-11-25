@@ -2,6 +2,7 @@
 title: Nowenna do św. Wojciecha, patrona Polski
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-wojciecha-patrona-polski/
+rightsStatus: attributed
 ---
 
 *Nowenna odmawiana 14–22 kwietnia, przed uroczystością św. Wojciecha (23 kwietnia).*

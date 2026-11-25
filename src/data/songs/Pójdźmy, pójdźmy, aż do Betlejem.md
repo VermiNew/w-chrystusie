@@ -2,6 +2,7 @@
 title: Pójdźmy, pójdźmy, aż do Betlejem
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/133/Pojdzmy-pojdzmy-az-do-Betlejem
+rightsStatus: attributed
 ---
 
 1. Pójdźmy, pójdźmy, aż do Betlejem  

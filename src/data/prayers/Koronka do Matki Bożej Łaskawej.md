@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Matki Bożej Łaskawej
 source: https://dolinamodlitwy.pl/koronka-do-matki-bozej-laskawej/
+rightsStatus: attributed
 ---
 
 *Koronkę odmawia się na różańcu. Koronka do prywatnego odmawiania wedle uznania.*

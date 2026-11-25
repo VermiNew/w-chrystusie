@@ -2,6 +2,7 @@
 category: Nabożeństwa
 title: Nabożeństwo Pierwszego Czwartku miesiąca
 source: https://niezbednik.niedziela.pl/artykul/2174/Nabozenstwo-Pierwszy-Czwartek-miesiaca
+rightsStatus: attributed
 ---
 
 *Nabożeństwo Pierwszego Czwartku miesiąca poświęcone jest modlitwie o nowe powołania kapłańskie i zakonne oraz o wytrwałość dla wszystkich już powołanych.*

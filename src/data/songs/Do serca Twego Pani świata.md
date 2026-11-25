@@ -2,6 +2,7 @@
 title: Do serca Twego Pani świata
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1166/Do-serca-Twego-Pani-swiata
+rightsStatus: attributed
 ---
 
 Do serca Twego Pani świata  

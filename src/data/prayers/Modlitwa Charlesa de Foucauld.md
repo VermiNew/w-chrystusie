@@ -2,6 +2,7 @@
 category: Modlitwy osobiste
 title: Modlitwa Charlesa de Foucauld
 source: https://niezbednik.niedziela.pl/artykul/213/Modlitwa-Charlesa-de-Foucauld
+rightsStatus: attributed
 ---
 
 Ojcze, oddaję się w Twoje ręce.

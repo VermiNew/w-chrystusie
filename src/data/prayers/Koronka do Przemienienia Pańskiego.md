@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Przemienienia Pańskiego
 source: https://dolinamodlitwy.pl/koronka-do-przemienienia-panskiego/
+rightsStatus: attributed
 ---
 
 **1.** Jezu, jakoś się przemienił, będąc Bogiem, stając się człowiekiem — tak racz przemienić wszystkie smutki moje w pożądane i zbawienne pociechy.

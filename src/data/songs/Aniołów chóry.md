@@ -2,6 +2,7 @@
 title: Aniołów chóry
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1138/Aniolow-chory
+rightsStatus: attributed
 ---
 
 1. Aniołów chóry i mieszkańcy ziemi,  

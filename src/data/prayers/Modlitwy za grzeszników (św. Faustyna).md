@@ -2,6 +2,7 @@
 category: Modlitwy za bliźnich
 title: Modlitwy za grzeszników (św. Faustyna)
 source: https://www.biblijni.pl/modlitwy/30_modlitwy_za_grzesznikow.html
+rightsStatus: attributed
 ---
 
 Boże wielkiego miłosierdzia, któryś raczył nam zesłać Syna swego jednorodzonego jak największy dowód niezgłębionej miłości i miłosierdzia, nie odrzucasz grzeszników, ale z niezgłębionego miłosierdzia swego otworzyłeś i im skarb, z którego czerpać mogą w obfitości nie tylko usprawiedliwienie, ale wszelką świętość, do jakiej dusza dojść może. Ojcze wielkiego miłosierdzia, pragnę, aby wszystkie serca zwróciły się z ufnością w nieskończone miłosierdzie Twoje. Nikt się nie usprawiedliwi przed Tobą, jeżeli nie towarzyszyć mu będzie niezgłębione miłosierdzie Twoje. Kiedy nam odsłonisz tajemnicę swego miłosierdzia, wieczności będzie za mało, aby Ci za to należycie podziękować *(Dz. 1122)*.

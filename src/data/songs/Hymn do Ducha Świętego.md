@@ -2,6 +2,7 @@
 title: Hymn do Ducha Świętego
 category: Pieśni do Ducha Świętego
 source: https://niezbednik.niedziela.pl/artykul/339/Hymn-do-Ducha-Swietego
+rightsStatus: attributed
 ---
 
 O Stworzycielu, Duchu, przyjdź,  

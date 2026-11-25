@@ -2,6 +2,7 @@
 title: Krzyżu Chrystusa, bądźże pochwalony
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/474/Krzyzu-Chrystusa-badzze-pochwalony
+rightsStatus: attributed
 ---
 
 1. Krzyżu Chrystusa, bądźże pochwalony,  

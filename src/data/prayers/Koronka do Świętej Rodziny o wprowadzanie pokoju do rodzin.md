@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Świętej Rodziny o wprowadzanie pokoju do rodzin
 source: https://dolinamodlitwy.pl/koronka-do-swietej-rodziny-o-wprowadzanie-pokoju-do-rodzin/
+rightsStatus: attributed
 ---
 
 *Odmawia się na Różańcu.*

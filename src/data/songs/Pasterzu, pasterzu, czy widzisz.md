@@ -2,6 +2,7 @@
 title: Pasterzu, pasterzu, czy widzisz
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/124/Pasterzu-pasterzu-czy-widzisz
+rightsStatus: attributed
 ---
 
 1. Pasterzu, pasterzu, czy widzisz tam, o tam, o tam?  

@@ -2,6 +2,7 @@
 category: Modlitwy codzienne
 title: Codzienne ofiarowanie
 source: https://niezbednik.niedziela.pl/artykul/168/Codzienne-ofiarowanie
+rightsStatus: attributed
 ---
 
 Boskie Serce Jezusa,

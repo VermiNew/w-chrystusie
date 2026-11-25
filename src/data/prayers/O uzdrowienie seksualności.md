@@ -2,6 +2,7 @@
 category: Modlitwy osobiste
 title: O uzdrowienie seksualności
 source: https://dolinamodlitwy.pl/o-uzdrowienie-seksualnosci/
+rightsStatus: attributed
 ---
 
 Panie Jezu, powołałeś mnie do życia jako istotę seksualną

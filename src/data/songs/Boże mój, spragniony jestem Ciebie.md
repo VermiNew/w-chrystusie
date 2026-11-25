@@ -2,6 +2,7 @@
 title: Boże mój, spragniony jestem Ciebie
 category: Pieśni mszalne
 source: https://niezbednik.niedziela.pl/artykul/827/Boze-moj-spragniony-jestem-Ciebie
+rightsStatus: attributed
 ---
 
 1. Boże mój, spragniony jestem Ciebie,  

@@ -2,6 +2,7 @@
 title: Nowenna do Jezusa w Najświętszej Eucharystii
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-jezusa-w-najswietszej-eucharystii/
+rightsStatus: attributed
 ---
 
 **Modlitwa wstępna (na każdy dzień nowenny)**

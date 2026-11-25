@@ -2,6 +2,7 @@
 title: Co nam nakazuje nasza wiara
 category: Pieśni mszalne
 source: https://musicamsacram.pl/spiewnik/212-co-nam-nakazuje-nasza-wiara
+rightsStatus: attributed
 ---
 
 Na wejście

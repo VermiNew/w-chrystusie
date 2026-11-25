@@ -2,6 +2,7 @@
 title: Chwała i dziękczynienie
 category: Pieśni mszalne
 source: https://musicamsacram.pl/spiewnik/839-Chwala-i-dziekczynienie
+rightsStatus: attributed
 ---
 
 Chwała i dziękczynienie,  

@@ -2,6 +2,7 @@
 title: Boże litościwy, zmiłuj się nade mną
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/444/Boze-litosciwy-zmiluj-sie-nade-mna
+rightsStatus: attributed
 ---
 
 1. Boże litościwy, zmiłuj się nade mną,  

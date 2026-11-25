@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka na cześć św. Józefa
 source: https://dolinamodlitwy.pl/koronka-na-czesc-sw-jozefa/
+rightsStatus: attributed
 ---
 
 **Na krzyżyku:**

@@ -2,6 +2,7 @@
 title: Niepojęte dary
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/118/Niepojete-dary
+rightsStatus: attributed
 ---
 
 1. Niepojęte dary dla nas daje  

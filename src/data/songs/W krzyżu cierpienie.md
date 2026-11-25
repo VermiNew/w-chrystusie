@@ -2,6 +2,7 @@
 title: W krzyżu cierpienie
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/815/W-krzyzu-cierpienie
+rightsStatus: attributed
 ---
 
 1. W krzyżu cierpienie, w krzyżu zbawienie,  

@@ -2,6 +2,7 @@
 title: Rodzino Święta, wśród rodzin jedyna
 category: Pieśni okolicznościowe
 source: https://niezbednik.niedziela.pl/artykul/275/Rodzino-Swieta-wsrod-rodzin-jedyna
+rightsStatus: attributed
 ---
 
 1. Rodzino święta, wśród rodzin jedyna,  

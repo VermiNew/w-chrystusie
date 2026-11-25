@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Najświętszej Trójcy
 source: https://dolinamodlitwy.pl/koronka-do-najswietszej-trojcy/
+rightsStatus: attributed
 ---
 
 Odmawia się na różańcu.

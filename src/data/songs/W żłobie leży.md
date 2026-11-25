@@ -2,6 +2,7 @@
 title: W żłobie leży
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/157/W-zlobie-lezy
+rightsStatus: attributed
 ---
 
 W żłobie leży, któż pobieży  

@@ -2,6 +2,7 @@
 category: Modlitwy do Matki Bożej Szkaplerznej
 source: https://maryjni.pl/modlitwy-do-matki-bozej-szkaplerznej/
 title: Modlitwa codzienna do Matki Bożej Szkaplerznej
+rightsStatus: attributed
 ---
 
 ## Najchwalebniejsza Królowa Niebios

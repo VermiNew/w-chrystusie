@@ -7,7 +7,10 @@ const collections = [
   { name: 'Modlitwy', directory: 'prayers' },
   { name: 'Pieśni', directory: 'songs' },
 ]
+// attributed — traditional or widely shared text published non-commercially with an
+// exact source link; removed on request of the rights holder (see CONTENT_NOTICE.md).
 const knownRightsStatuses = new Set([
+  'attributed',
   'licensed',
   'original',
   'permission-required',

@@ -2,6 +2,7 @@
 category: Litanie
 title: Litania do św. Ekspedyta
 source: https://niezbednik.niedziela.pl/artykul/3451/Litania-do-sw-Ekspedyta
+rightsStatus: attributed
 ---
 
 Kyrie eleison. Chryste eleison. Kyrie eleison.

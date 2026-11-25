@@ -2,6 +2,7 @@
 title: Akt miłosierdzia za dusze w czyśćcu cierpiące
 category: Modlitwy za zmarłych
 source: https://dolinamodlitwy.pl/akt-milosierdzia-za-dusze-w-czysccu-cierpiace/
+rightsStatus: attributed
 ---
 
 O Niepokalana Maryjo, Matko Miłosierdzia,

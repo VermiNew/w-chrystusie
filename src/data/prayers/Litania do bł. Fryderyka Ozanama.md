@@ -2,6 +2,7 @@
 title: Litania do bł. Fryderyka Ozanama
 category: Modlitwy za wstawiennictwem świętych
 source: https://dolinamodlitwy.pl/litania-do-bl-fryderyka-ozanama/
+rightsStatus: attributed
 ---
 
 Chryste, usłysz nas. Chryste, wysłuchaj nas.

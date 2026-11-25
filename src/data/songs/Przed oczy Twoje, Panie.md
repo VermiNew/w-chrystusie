@@ -2,6 +2,7 @@
 title: Przed oczy Twoje, Panie
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/446/Przed-oczy-Twoje-Panie
+rightsStatus: attributed
 ---
 
 Przed oczy Twoje, Panie, winy nasze składamy,  

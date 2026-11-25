@@ -2,6 +2,7 @@
 category: Modlitwy osobiste
 title: Akty ufności (św. Faustyna)
 source: https://www.biblijni.pl/modlitwy/27_akty_ufnosci.html
+rightsStatus: attributed
 ---
 
 O Boże mój, nadziejo moja jedyna, w Tobie położyłam ufność całą i wiem, że nie będę zawiedziona *(Dz. 317)*.

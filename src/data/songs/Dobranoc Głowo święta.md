@@ -2,6 +2,7 @@
 title: Dobranoc Głowo święta
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/467/Dobranoc-Glowo-swieta
+rightsStatus: attributed
 ---
 
 1. Dobranoc, Głowo święta Jezusa mojego,  

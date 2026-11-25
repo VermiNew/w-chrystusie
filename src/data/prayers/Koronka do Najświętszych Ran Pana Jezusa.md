@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do Najświętszych Ran Pana Jezusa
 source: https://dolinamodlitwy.pl/koronka-do-najswietszych-ran-pana-jezusa/
+rightsStatus: attributed
 ---
 
 Koronka ułożona z aktów strzelistych, podanych w objawieniu przez Pana Jezusa Siostrze Marii Marcie Chambon, zmarłej w opinii świętości w klasztorze Sióstr Wizytek w Chambéry.

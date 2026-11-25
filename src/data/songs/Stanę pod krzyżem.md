@@ -2,6 +2,7 @@
 title: Stanę pod krzyżem
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/811/Stane-pod-krzyzem
+rightsStatus: attributed
 ---
 
 1. Stanę pod krzyżem, bo krzyż moja wiara  

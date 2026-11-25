@@ -2,6 +2,7 @@
 title: Cały świat niech śpiewa
 category: Pieśni uwielbienia
 source: https://niezbednik.niedziela.pl/artykul/834/Caly-swiat-niech-spiewa
+rightsStatus: attributed
 ---
 
 Ref.: Cały świat niech śpiewa tę pieśń:  

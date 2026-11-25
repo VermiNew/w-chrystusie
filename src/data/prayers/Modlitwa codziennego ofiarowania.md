@@ -2,6 +2,7 @@
 category: Modlitwy codzienne
 title: Modlitwa codziennego ofiarowania
 source: https://niezbednik.niedziela.pl/artykul/201/Modlitwa-codziennego-ofiarowania
+rightsStatus: attributed
 ---
 
 *Modlitwa Apostolstwa Modlitwy.*

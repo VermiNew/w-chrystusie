@@ -2,6 +2,7 @@
 title: Czego chcesz od nas Panie
 category: Pieśni uwielbienia
 source: https://musicamsacram.pl/spiewnik/73-czego-chcesz-od-nas-panie
+rightsStatus: attributed
 ---
 
 1. Czego chcesz od nas Panie, za Twe hojne dary?

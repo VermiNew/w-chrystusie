@@ -2,6 +2,7 @@
 title: Daj mi Jezusa, o Matko moja
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1163/Daj-mi-Jezusa-o-Matko-moja
+rightsStatus: attributed
 ---
 
 1. Daj mi Jezusa, o Matko moja,  

@@ -2,6 +2,7 @@
 category: Modlitwy za zmarłych
 title: Modlitwa za zmarłych kapłanów
 source: https://niezbednik.niedziela.pl/artykul/257/Modlitwa-za-zmarlych-kaplanow
+rightsStatus: attributed
 ---
 
 Boże, Ty powołałeś kapłanów do swojej służby i uczyniłeś ich pasterzami naszych dusz,

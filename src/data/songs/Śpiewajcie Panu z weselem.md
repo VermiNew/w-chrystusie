@@ -2,6 +2,7 @@
 title: Śpiewajcie Panu z weselem
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/40/Spiewajcie-Panu-z-weselem
+rightsStatus: attributed
 ---
 
 Śpiewajcie Panu z weselem,  

@@ -2,6 +2,7 @@
 title: Nie było miejsca dla Ciebie
 category: Kolędy
 source: https://niezbednik.niedziela.pl/artykul/117/Nie-bylo-miejsca-dla-Ciebie
+rightsStatus: attributed
 ---
 
 1. Nie było miejsca dla Ciebie,  

@@ -2,6 +2,7 @@
 title: Krzyżu święty, nade wszystko
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/475/Krzyzu-swiety-nade-wszystko
+rightsStatus: attributed
 ---
 
 1. Krzyżu święty, nade wszystko,  

@@ -2,6 +2,7 @@
 title: Pan Jezus grzechy nasze
 category: Pieśni pokutne
 source: https://musicamsacram.pl/spiewnik/679-pan-jezus-grzechy-nasze
+rightsStatus: attributed
 ---
 
 1. Pan Jezus grzechy nasze na krzyż ze sobą wziął

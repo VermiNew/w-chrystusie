@@ -2,6 +2,7 @@
 category: Modlitwy w podróży
 title: Modlitwa pielgrzyma
 source: https://niezbednik.niedziela.pl/artykul/191/Modlitwa-pielgrzyma
+rightsStatus: attributed
 ---
 
 Boże, Ty jesteś Drogą, Prawdą i Życiem.

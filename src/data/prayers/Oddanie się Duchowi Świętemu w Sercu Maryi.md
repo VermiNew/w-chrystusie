@@ -2,6 +2,7 @@
 category: Modlitwy do Matki Bożej Szkaplerznej
 source: https://maryjni.pl/modlitwy-do-matki-bozej-szkaplerznej/
 title: Oddanie się Duchowi Świętemu w Sercu Maryi
+rightsStatus: attributed
 ---
 
 *Modlitwa odmawiana przed ikoną Matki Bożej Przewodniczki (klasztor karmelitanek bosych - Szczecin).*

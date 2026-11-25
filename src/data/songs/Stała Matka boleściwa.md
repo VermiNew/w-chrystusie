@@ -2,6 +2,7 @@
 title: Stała Matka boleściwa
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/822/Stala-Matka-bolesciwa
+rightsStatus: attributed
 ---
 
 Stała Matka boleściwa  

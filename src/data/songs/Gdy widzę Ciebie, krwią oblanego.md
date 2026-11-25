@@ -2,6 +2,7 @@
 title: Gdy widzę Ciebie, krwią oblanego
 category: Pieśni wielkopostne
 source: https://niezbednik.niedziela.pl/artykul/469/Gdy-widze-Ciebie-krwia-oblanego
+rightsStatus: attributed
 ---
 
 1. Gdy widzę Ciebie, krwią oblanego  

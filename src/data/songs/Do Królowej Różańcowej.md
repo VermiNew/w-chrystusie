@@ -2,6 +2,7 @@
 title: Do Królowej Różańcowej
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1165/Do-Krolowej-Rozancowej
+rightsStatus: attributed
 ---
 
 1. Do Królowej Różańcowej

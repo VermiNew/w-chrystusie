@@ -2,6 +2,7 @@
 title: Ciebie na wieki wychwalać będziemy
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/1160/Ciebie-na-wieki-wychwalac-bedziemy
+rightsStatus: attributed
 ---
 
 Ciebie na wieki wychwalać będziemy, Królowo nieba, Maryja; W Twojej opiece niechaj zostajemy, Śliczna bez zmazy lilija! Wdzięczna Estero, o Panienko święta! Tyś przez Aniołów, jest do nieba wzięta, Niepokalanie poczęta!

@@ -2,6 +2,7 @@
 title: Nowenna do św. Apostołów Piotra i Pawła
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-apostolow-piotra-i-pawla-20-28-czerwca/
+rightsStatus: attributed
 ---
 
 Nowennę odmawia się 20–28 czerwca (wspomnienie 29 czerwca).

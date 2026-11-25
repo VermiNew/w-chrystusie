@@ -2,6 +2,7 @@
 title: Modlitwa poranna II
 category: Modlitwy codzienne
 source: https://dolinamodlitwy.pl/modlitwa-poranna-ii/
+rightsStatus: attributed
 ---
 
 Przyjdź, Duchu Święty, a poranek dzisiejszy i dzień cały stanie się jasny.

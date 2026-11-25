@@ -2,6 +2,7 @@
 title: Rota
 category: Pieśni patriotyczne
 source: https://niezbednik.niedziela.pl/artykul/166/Rota
+rightsStatus: attributed
 ---
 
 Nie rzucim ziemi, skąd nasz ród.  

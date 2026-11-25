@@ -2,6 +2,7 @@
 category: Koronki
 title: Koronka do św. Michała Archanioła i chórów anielskich
 source: https://dolinamodlitwy.pl/koronka-do-sw-michala-archaniola-i-chorow-anielskich/
+rightsStatus: attributed
 ---
 
 W. Boże, wejrzyj ku wspomożeniu memu.

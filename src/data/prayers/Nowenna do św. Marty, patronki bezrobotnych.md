@@ -2,6 +2,7 @@
 title: Nowenna do św. Marty, patronki bezrobotnych
 category: Nabożeństwa
 source: https://dolinamodlitwy.pl/nowenna-do-sw-marty-patronki-bezrobotnych/
+rightsStatus: attributed
 ---
 
 Nowennę do św. Marty odmawia się przez dziewięć kolejnych dni w trudnej sytuacji związanej z bezrobociem. Wspomnienie: 29 lipca.

@@ -2,6 +2,7 @@
 title: Alleluja! Jezus żyje już
 category: Pieśni wielkanocne
 source: https://musicamsacram.pl/spiewnik/741-alleluja-jezus-zyje
+rightsStatus: attributed
 ---
 
 1. Alleluja! Jezus żyje,

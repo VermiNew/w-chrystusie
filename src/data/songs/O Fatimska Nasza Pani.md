@@ -2,6 +2,7 @@
 title: O Fatimska Nasza Pani
 category: Pieśni Maryjne
 source: https://niezbednik.niedziela.pl/artykul/308/O-Fatimska-Nasza-Pani
+rightsStatus: attributed
 ---
 
 1. O Fatimska nasza Pani,  

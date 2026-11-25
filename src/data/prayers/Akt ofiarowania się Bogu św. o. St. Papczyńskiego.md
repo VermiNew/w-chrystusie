@@ -2,6 +2,7 @@
 category: Modlitwy za wstawiennictwem świętych
 title: Akt ofiarowania się Bogu św. o. St. Papczyńskiego
 source: https://niezbednik.niedziela.pl/artykul/205/Akt-ofiarowania-sie-Bogu-sw-o-St
+rightsStatus: attributed
 ---
 
 Panie, mój Boże, ofiaruję Ci moje serce, aby Ciebie jedynie miłowało i niczego oprócz Ciebie.
