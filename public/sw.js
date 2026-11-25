@@ -64,7 +64,86 @@ self.addEventListener('message', (event) => {
     return
   }
 
+  // Settings panel: report how much of the offline copy is stored.
+  const port = event.ports?.[0]
+  if (!port) return
+
+  if (message.type === 'GET_OFFLINE_STATUS') {
+    event.waitUntil(
+      getOfflineStatus()
+        .then((status) => port.postMessage({ type: 'status', ...status }))
+        .catch(() => port.postMessage({ type: 'error' })),
+    )
+    return
+  }
+
+  // Settings panel: download every offline file again, bypassing the HTTP cache.
+  if (message.type === 'REFRESH_OFFLINE') {
+    event.waitUntil(
+      refreshOfflineCopy((done, total) => port.postMessage({ type: 'progress', done, total }))
+        .then((status) => port.postMessage({ type: 'status', ...status }))
+        .catch(() => port.postMessage({ type: 'error' })),
+    )
+  }
 })
+
+// Every path the offline copy should contain: the shell plus the build manifest.
+async function getOfflinePaths() {
+  const cache = await caches.open(STATIC_CACHE)
+  let manifestResponse = await cache.match('/asset-manifest.json')
+  if (!manifestResponse) {
+    // The manifest is missing only if install was interrupted; fetch it again.
+    const fresh = await fetch('/asset-manifest.json', { cache: 'no-store' })
+    if (fresh.ok) {
+      await cache.put('/asset-manifest.json', fresh.clone())
+      manifestResponse = fresh
+    }
+  }
+  const manifest = manifestResponse ? await manifestResponse.json().catch(() => []) : []
+  const manifestPaths = Array.isArray(manifest)
+    ? manifest.filter((assetPath) => typeof assetPath === 'string' && assetPath.startsWith('/'))
+    : []
+  return [...new Set([...APP_SHELL, ...manifestPaths])]
+}
+
+async function getOfflineStatus() {
+  const paths = await getOfflinePaths()
+  const cache = await caches.open(STATIC_CACHE)
+  const present = await Promise.all(paths.map((assetPath) => cache.match(assetPath)))
+  const missing = paths.filter((_, index) => !present[index])
+  return {
+    version: CACHE_VERSION,
+    total: paths.length,
+    cached: paths.length - missing.length,
+    missing: missing.slice(0, 20),
+  }
+}
+
+async function refreshOfflineCopy(onProgress) {
+  const paths = await getOfflinePaths()
+  const cache = await caches.open(STATIC_CACHE)
+  let done = 0
+  let nextIndex = 0
+  onProgress(0, paths.length)
+
+  // A few parallel downloads keep it fast without flooding slow connections.
+  const worker = async () => {
+    while (nextIndex < paths.length) {
+      const assetPath = paths[nextIndex]
+      nextIndex += 1
+      try {
+        const response = await fetch(assetPath, { cache: 'reload' })
+        if (response.ok) await cache.put(assetPath, response)
+      } catch {
+        // Offline or a failed file: the status below shows what is still missing.
+      }
+      done += 1
+      if (done % 10 === 0 || done === paths.length) onProgress(done, paths.length)
+    }
+  }
+  await Promise.all(Array.from({ length: 6 }, worker))
+  return getOfflineStatus()
+}
 
 // Fetch strategy:
 //   - Navigation (HTML)        → network-first, fallback to cached app shell

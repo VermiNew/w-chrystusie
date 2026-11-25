@@ -15,8 +15,8 @@ udostępniona na licencji [CC BY-SA 4.0](https://creativecommons.org/licenses/by
 pliki `src/data/generated/*-wujek.json` podlegają tej licencji. Każdy rozdział
 wskazuje dokładny adres źródłowy.
 
-Aplikacja jest projektem niekomercyjnym, nie wyświetla reklam i wskazuje źródła
-wykorzystywanych materiałów. Treści opracowane specjalnie dla projektu są
+Aplikacja jest projektem niekomercyjnym i zawsze pozostanie w pełni darmowa:
+nie wyświetla reklam, nie pobiera opłat i wskazuje źródła wykorzystywanych materiałów. Treści opracowane specjalnie dla projektu są
 oznaczane jako własne.
 
 Prośby dotyczące uzupełnienia atrybucji, korekty źródła albo dostępności

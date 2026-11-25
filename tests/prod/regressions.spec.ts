@@ -74,6 +74,7 @@ test('kopia zapasowa przenosi ulubione na inne urządzenie', async ({ browser },
   await sourcePage.locator('.nav-toggle').click()
   await sourcePage.locator('.nav-about-btn').click()
   await expect(sourcePage.locator('dialog.about-dialog')).toBeVisible()
+  await sourcePage.getByRole('tab', { name: 'Dane' }).click()
   const [download] = await Promise.all([
     sourcePage.waitForEvent('download'),
     sourcePage.getByRole('button', { name: 'Zapisz kopię' }).click(),
@@ -89,6 +90,7 @@ test('kopia zapasowa przenosi ulubione na inne urządzenie', async ({ browser },
   await targetPage.locator('.nav-toggle').click()
   await targetPage.locator('.nav-about-btn').click()
   await expect(targetPage.locator('dialog.about-dialog')).toBeVisible()
+  await targetPage.getByRole('tab', { name: 'Dane' }).click()
   // Dismissing the file picker fires a bubbling "cancel"; it must not close the dialog
   await targetPage.locator('.about-data input[type=file]').dispatchEvent('cancel', { bubbles: true })
   await expect(targetPage.locator('dialog.about-dialog')).toBeVisible()
