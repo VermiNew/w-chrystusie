@@ -27,7 +27,8 @@ body[data-nav-menu='open'] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1280px;
+  /* Wide enough for every link in one row; below the breakpoint further down the menu collapses. */
+  max-width: 1400px;
   margin: 0 auto;
   height: var(--header-height);
 }
@@ -171,7 +172,7 @@ body[data-nav-menu='open'] {
   display: none;
 }
 
-@media (max-width: 1340px) {
+@media (max-width: 1470px) {
   .nav-overlay {
     display: block;
     position: fixed;

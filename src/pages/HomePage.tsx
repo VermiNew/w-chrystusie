@@ -4,6 +4,7 @@ import { FaArrowRight, FaCross, FaBookBible, FaMusic, FaHandsPraying, FaBullhorn
 import DevotionChoiceDialog from '../components/DevotionChoiceDialog'
 import LiturgyToday from '../components/LiturgyToday'
 import { getIndexPrayerOfDay, prayerIndex, songIndex } from '../data/contentIndex'
+import { getHourForTime, hourNames } from '../data/breviaryHours'
 import { scriptureCatalog } from '../data/scriptureCatalog'
 import { useContentLibrary, type RecentContent } from '../hooks/useContentLibrary'
 
@@ -85,6 +86,13 @@ export default function HomePage() {
           <span>
             <small>Modlitwa dnia</small>
             <strong>{prayerOfDay.title}</strong>
+          </span>
+          <FaArrowRight aria-hidden="true" />
+        </Link>
+        <Link className="home-shortcut" to="/liturgia-godzin">
+          <span>
+            <small>Liturgia Godzin — teraz</small>
+            <strong>{hourNames[getHourForTime()]}</strong>
           </span>
           <FaArrowRight aria-hidden="true" />
         </Link>
