@@ -7,7 +7,10 @@ const outputFile = path.join(projectRoot, 'src', 'data', 'generated', 'psalms-wu
 const sourcePagePrefix = 'Biblia_Wujka_(1923)/Księga_Psalmów_'
 const sourceUrlPrefix =
   'https://pl.wikisource.org/wiki/Biblia_Wujka_%281923%29/Ksi%C4%99ga_Psalm%C3%B3w_'
-const apiUrl = 'https://pl.wikisource.org/w/api.php'
+// index.php?action=render returns the same rendered page as the API, but is not
+// subject to the API's strict per-IP rate limit.
+const renderUrl = 'https://pl.wikisource.org/w/index.php'
+const requestDelayMs = 700
 const userAgent = 'WChrystusieContentImporter/1.0 (https://w-chrystusie.pages.dev)'
 const psalmsWithContinuedSourceNumbering = new Set([115, 147])
 
@@ -44,8 +47,8 @@ function decodeHtml(value) {
 function textFromHtml(value) {
   return decodeHtml(
     value
-      .replace(/<span><span class="ws-pagenum[\s\S]*?<\/span><\/span>/gi, '')
-      .replace(/<sup[^>]*class="reference"[^>]*>[\s\S]*?<\/sup>/gi, '')
+      .replace(/<span[^>]*><span class="ws-pagenum[\s\S]*?<\/span><\/span>/gi, '')
+      .replace(/<sup[^>]*class="[^"]*\breference\b[^"]*"[^>]*>[\s\S]*?<\/sup>/gi, '')
       .replace(/<style[\s\S]*?<\/style>/gi, '')
       .replace(/<[^>]+>/g, ''),
   )
@@ -63,7 +66,7 @@ function normalizeVerseNumbers(numbers, continueFromPreviousPsalm) {
 }
 
 function parsePsalm(number, html) {
-  const verseParagraphPattern = /<p>([\s\S]*?)<\/p>/gi
+  const verseParagraphPattern = /<p\b[^>]*>([\s\S]*?)<\/p>/gi
   const markerPattern = /<span[^>]*id="\d+:(\d+)\.?"[^>]*>[\s\S]*?<\/span>/i
   const sourceMarkerPattern = /id="\d+:(\d+)\.?"/g
   const rawVerses = []
@@ -71,7 +74,16 @@ function parsePsalm(number, html) {
   for (const paragraphMatch of html.matchAll(verseParagraphPattern)) {
     const paragraph = paragraphMatch[1]
     const marker = paragraph.match(markerPattern)
-    if (!marker) continue
+    if (!marker) {
+      // In psalms with a superscription, verse 1 is printed as two paragraphs:
+      // the title ("Psalm Dawidowi.") with the verse marker, then the opening words
+      // (with a drop cap) without one. Without this the psalm would lose its first line.
+      const continuation = textFromHtml(paragraph)
+      if (continuation && rawVerses.length > 0) {
+        rawVerses.at(-1).text = `${rawVerses.at(-1).text} ${continuation}`
+      }
+      continue
+    }
 
     const markerEnd = marker.index + marker[0].length
     const text = textFromHtml(paragraph.slice(markerEnd))
@@ -89,7 +101,7 @@ function parsePsalm(number, html) {
   }))
 
   const summaryMatch = html.match(
-    /<div class="center"[^>]*><b><span[^>]*>PSALM<\/span>[\s\S]*?<\/div>\s*<div[^>]*font-size:85%[^>]*>([\s\S]*?)<\/div>/i,
+    /<div class="center"[^>]*><b[^>]*><span[^>]*>PSALM<\/span>[\s\S]*?<\/div>\s*(?:<span[^>]*>\s*<\/span>\s*)?<div[^>]*font-size:85%[^>]*>([\s\S]*?)<\/div>/i,
   )
 
   if (verses.length === 0) {
@@ -138,27 +150,24 @@ function parsePsalm(number, html) {
 
 async function fetchPsalm(number) {
   const parameters = new URLSearchParams({
-    action: 'parse',
-    page: `${sourcePagePrefix}${number}`,
-    prop: 'text',
-    format: 'json',
-    formatversion: '2',
+    title: `${sourcePagePrefix}${number}`,
+    action: 'render',
   })
-  const response = await fetch(`${apiUrl}?${parameters}`, {
+  const response = await fetch(`${renderUrl}?${parameters}`, {
     headers: { 'User-Agent': userAgent },
   })
 
   if (!response.ok) {
-    throw new Error(`Psalm ${number}: API zwróciło HTTP ${response.status}.`)
+    throw new Error(`Psalm ${number}: Wikiźródła zwróciły HTTP ${response.status}.`)
   }
 
-  const payload = await response.json()
-  if (payload.error || !payload.parse?.text) {
-    throw new Error(`Psalm ${number}: API nie zwróciło renderowanego tekstu.`)
-  }
-
-  return parsePsalm(number, payload.parse.text)
+  const html = await response.text()
+  // Only the psalm itself: the page ends with the footnote list.
+  const referencesStart = html.indexOf('class="refsection"')
+  return parsePsalm(number, referencesStart >= 0 ? html.slice(0, referencesStart) : html)
 }
+
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
 async function readExistingPsalms() {
   try {
@@ -174,6 +183,7 @@ const { from, to } = parseRange(process.argv.slice(2))
 const imported = []
 
 for (let number = from; number <= to; number += 1) {
+  if (number > from) await wait(requestDelayMs)
   imported.push(await fetchPsalm(number))
   console.log(`[psalms] Pobrano Psalm ${number} (${imported.at(-1).verses.length} wersetów).`)
 }
